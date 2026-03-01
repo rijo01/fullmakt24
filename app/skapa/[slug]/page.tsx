@@ -38,10 +38,8 @@ export default function SkapaPage() {
   const t = templates.find(tp => tp.slug === slug)
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState<Record<string, string>>({})
-  const [downloading, setDownloading] = useState(false)
-  const [downloaded, setDownloaded] = useState(false)
+  const [paying, setPaying] = useState(false)
 
-  // Auto-save to localStorage
   useEffect(() => {
     if (typeof window !== 'undefined' && slug) {
       const saved = localStorage.getItem(`draft_${slug}`)
@@ -57,59 +55,37 @@ export default function SkapaPage() {
     }
   }, [formData, slug])
 
-  const handleDownload = useCallback(async (withWatermark: boolean) => {
+  const handlePayment = useCallback(async () => {
     if (!t) return
-    setDownloading(true)
+    setPaying(true)
 
     try {
-      // Dynamic import to avoid SSR issues
-      const { downloadPdf } = await import('@/lib/pdf-generator')
+      const res = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          templateSlug: t.slug,
+          templateName: t.name,
+          formData,
+        }),
+      })
 
-      const cat = categories.find(c => c.slug === t.categorySlug)
+      const data = await res.json()
 
-      downloadPdf({
-        templateName: t.name,
-        categoryName: cat?.name || '',
-        givare: {
-          namn: formData.givare_namn || '',
-          personnummer: formData.givare_pnr || '',
-          adress: formData.givare_adress || '',
-          epost: formData.givare_epost,
-          telefon: formData.givare_telefon,
-        },
-        havare: {
-          namn: formData.havare_namn || '',
-          personnummer: formData.havare_pnr || '',
-          relation: formData.havare_relation || '',
-          adress: formData.havare_adress,
-        },
-        detaljer: {
-          giltigFran: formData.giltig_fran,
-          giltigTill: formData.giltig_till,
-          syfte: formData.syfte,
-          begransningar: formData.begransningar,
-          barn_namn: formData.barn_namn,
-          barn_pnr: formData.barn_pnr,
-          vardgivare: formData.vardgivare,
-          fastighet: formData.fastighet,
-          forening: formData.forening,
-          tjanst: formData.tjanst,
-          djur_namn: formData.djur_namn,
-          djur_art: formData.djur_art,
-          myndighet: formData.myndighet,
-        },
-        watermark: withWatermark,
-      }, `fullmakt-${t.slug}.pdf`)
-
-      setDownloaded(true)
-      setTimeout(() => setDownloaded(false), 4000)
+      if (data.url) {
+        // Save form data before redirecting
+        localStorage.setItem(`draft_${slug}`, JSON.stringify(formData))
+        window.location.href = data.url
+      } else {
+        alert('Något gick fel. Försök igen.')
+      }
     } catch (err) {
-      console.error('PDF generation failed:', err)
-      alert('Något gick fel vid PDF-generering. Försök igen.')
+      console.error('Payment error:', err)
+      alert('Kunde inte starta betalningen. Försök igen.')
     } finally {
-      setDownloading(false)
+      setPaying(false)
     }
-  }, [t, formData])
+  }, [t, formData, slug])
 
   if (!t) {
     return (
@@ -129,9 +105,8 @@ export default function SkapaPage() {
     setFormData(prev => ({ ...prev, [id]: value }))
   }
 
-  const stepTitles = ['Parter', 'Detaljer', 'Granska', 'Ladda ner']
+  const stepTitles = ['Parter', 'Detaljer', 'Granska', 'Betala & Ladda ner']
 
-  // Validation
   const requiredGivare = givareFields.filter(f => f.required).every(f => formData[f.id]?.trim())
   const requiredHavare = havareFields.filter(f => f.required).every(f => formData[f.id]?.trim())
   const requiredDetaljer = detaljFields.filter(f => f.required).every(f => formData[f.id]?.trim())
@@ -146,21 +121,13 @@ export default function SkapaPage() {
               <span className="text-lg">{cat?.icon}</span>
               <h1 className="font-heading font-bold text-navy-500 text-sm lg:text-base truncate">{t.name}</h1>
             </div>
-            <Link href={`/mallar/${t.categorySlug}/${t.slug}`} className="text-xs text-navy-400 hover:text-navy-600">
-              ← Tillbaka
-            </Link>
+            <Link href={`/mallar/${t.categorySlug}/${t.slug}`} className="text-xs text-navy-400 hover:text-navy-600">← Tillbaka</Link>
           </div>
           <div className="flex gap-2">
             {stepTitles.map((s, i) => (
-              <button
-                key={s}
-                onClick={() => i + 1 <= step && setStep(i + 1)}
-                className="flex-1 group"
-              >
+              <button key={s} onClick={() => i + 1 <= step && setStep(i + 1)} className="flex-1 group">
                 <div className={`h-1.5 rounded-full transition-colors ${i + 1 <= step ? 'bg-gold-500' : 'bg-navy-100'}`} />
-                <span className={`text-[10px] mt-1 block ${i + 1 === step ? 'text-navy-600 font-semibold' : 'text-navy-300'}`}>
-                  {i + 1}. {s}
-                </span>
+                <span className={`text-[10px] mt-1 block ${i + 1 === step ? 'text-navy-600 font-semibold' : 'text-navy-300'}`}>{i + 1}. {s}</span>
               </button>
             ))}
           </div>
@@ -170,9 +137,8 @@ export default function SkapaPage() {
       <div className="section-padding py-8 lg:py-12">
         <div className="max-w-4xl mx-auto">
           <div className="lg:grid lg:grid-cols-[1fr_340px] gap-8">
-            {/* Form area */}
             <div>
-              {/* Step 1: Parties */}
+              {/* Step 1 */}
               {step === 1 && (
                 <div className="space-y-8">
                   <div className="card p-6">
@@ -184,7 +150,6 @@ export default function SkapaPage() {
                           <label className="text-sm font-medium text-navy-600 mb-1.5 block">
                             {f.label} {f.required && <span className="text-red-400">*</span>}
                           </label>
-                          {f.helpText && <p className="text-xs text-navy-400 mb-1">{f.helpText}</p>}
                           <FormField field={f} value={formData[f.id] || ''} onChange={v => updateField(f.id, v)} />
                           {f.required && formData[f.id]?.trim() && (
                             <div className="flex items-center gap-1 mt-1">
@@ -216,17 +181,14 @@ export default function SkapaPage() {
                       ))}
                     </div>
                   </div>
-                  <button
-                    onClick={() => setStep(2)}
-                    disabled={!requiredGivare || !requiredHavare}
-                    className={`w-full py-4 rounded-xl font-semibold transition-all ${requiredGivare && requiredHavare ? 'btn-primary' : 'bg-navy-100 text-navy-300 cursor-not-allowed'}`}
-                  >
+                  <button onClick={() => setStep(2)} disabled={!requiredGivare || !requiredHavare}
+                    className={`w-full py-4 rounded-xl font-semibold transition-all ${requiredGivare && requiredHavare ? 'btn-primary' : 'bg-navy-100 text-navy-300 cursor-not-allowed'}`}>
                     Nästa: Specificera uppdraget →
                   </button>
                 </div>
               )}
 
-              {/* Step 2: Details */}
+              {/* Step 2 */}
               {step === 2 && (
                 <div className="space-y-8">
                   <div className="card p-6">
@@ -245,11 +207,8 @@ export default function SkapaPage() {
                   </div>
                   <div className="flex gap-3">
                     <button onClick={() => setStep(1)} className="btn-secondary flex-1">← Tillbaka</button>
-                    <button
-                      onClick={() => setStep(3)}
-                      disabled={!requiredDetaljer}
-                      className={`flex-1 py-3 rounded-xl font-semibold transition-all ${requiredDetaljer ? 'btn-primary' : 'bg-navy-100 text-navy-300 cursor-not-allowed'}`}
-                    >
+                    <button onClick={() => setStep(3)} disabled={!requiredDetaljer}
+                      className={`flex-1 py-3 rounded-xl font-semibold transition-all ${requiredDetaljer ? 'btn-primary' : 'bg-navy-100 text-navy-300 cursor-not-allowed'}`}>
                       Nästa: Granska →
                     </button>
                   </div>
@@ -299,83 +258,75 @@ export default function SkapaPage() {
                   </div>
                   <div className="flex gap-3">
                     <button onClick={() => setStep(2)} className="btn-secondary flex-1">← Ändra</button>
-                    <button onClick={() => setStep(4)} className="btn-gold flex-1">Bekräfta & Fortsätt →</button>
+                    <button onClick={() => setStep(4)} className="btn-gold flex-1">Bekräfta & Betala →</button>
                   </div>
                 </div>
               )}
 
-              {/* Step 4: Download */}
+              {/* Step 4: Pay & Download */}
               {step === 4 && (
                 <div className="space-y-6">
                   <div className="card p-8 text-center">
-                    <div className="w-20 h-20 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" className="text-success">
-                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" strokeWidth="2"/>
-                        <path d="M22 4L12 14.01l-3-3" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <div className="w-16 h-16 bg-navy-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-navy-400">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
                       </svg>
                     </div>
-                    <h2 className="font-heading font-bold text-navy-500 text-2xl mb-2">Din fullmakt är klar!</h2>
-                    <p className="text-navy-400 mb-8">Välj hur du vill ladda ner ditt dokument.</p>
+                    <h2 className="font-heading font-bold text-navy-500 text-2xl mb-2">Slutför ditt köp</h2>
+                    <p className="text-navy-400 mb-2">Betala tryggt med kort, Apple Pay eller Klarna.</p>
 
-                    <div className="space-y-3 max-w-sm mx-auto">
-                      {/* Free download with watermark */}
-                      <button
-                        onClick={() => handleDownload(true)}
-                        disabled={downloading}
-                        className="btn-secondary w-full !py-4 relative"
-                      >
-                        {downloading ? (
-                          <span className="flex items-center justify-center gap-2">
-                            <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/></svg>
-                            Genererar PDF...
-                          </span>
-                        ) : downloaded ? (
-                          '✓ PDF nedladdad!'
-                        ) : (
-                          <>↓ Ladda ner PDF (gratis med vattenstämpel)</>
-                        )}
-                      </button>
+                    {/* Price */}
+                    <div className="bg-navy-50 rounded-xl p-5 max-w-sm mx-auto mb-6 text-left">
+                      <div className="flex justify-between items-center mb-3">
+                        <span className="text-sm text-navy-500">Fullmakt: {t.name}</span>
+                      </div>
+                      <div className="flex justify-between items-center pt-3 border-t border-navy-200">
+                        <span className="font-semibold text-navy-600">Totalt</span>
+                        <span className="text-2xl font-heading font-bold text-navy-600">49 kr</span>
+                      </div>
+                    </div>
 
-                      {/* Paid download without watermark */}
-                      <button
-                        onClick={() => handleDownload(false)}
-                        disabled={downloading}
-                        className="btn-gold w-full !py-4"
-                      >
-                        ↓ Ladda ner ren PDF – 49 kr
-                      </button>
+                    <button
+                      onClick={handlePayment}
+                      disabled={paying}
+                      className="btn-gold w-full max-w-sm mx-auto !py-4 text-lg"
+                    >
+                      {paying ? (
+                        <span className="flex items-center justify-center gap-2">
+                          <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/></svg>
+                          Omdirigerar till betalning...
+                        </span>
+                      ) : (
+                        'Betala 49 kr →'
+                      )}
+                    </button>
 
-                      {/* BankID */}
-                      <button
-                        className="btn-primary w-full !py-4 opacity-90"
-                        onClick={() => alert('BankID-signering kommer snart! Registrera dig för att bli meddelad.')}
-                      >
-                        🔐 Signera med BankID
-                        <span className="ml-2 text-[10px] bg-gold-500/30 px-2 py-0.5 rounded-full">Kommer snart</span>
-                      </button>
+                    {/* Payment methods */}
+                    <div className="flex items-center justify-center gap-4 mt-4 text-navy-300">
+                      <span className="text-xs">Betala med:</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs font-semibold bg-navy-50 px-2 py-1 rounded">💳 Kort</span>
+                        <span className="text-xs font-semibold bg-navy-50 px-2 py-1 rounded"> Apple Pay</span>
+                        <span className="text-xs font-semibold bg-navy-50 px-2 py-1 rounded">Klarna</span>
+                      </div>
+                    </div>
 
-                      {/* Print */}
-                      <button className="btn-secondary w-full" onClick={() => window.print()}>
-                        🖨️ Skriv ut
-                      </button>
+                    {/* Trust signals */}
+                    <div className="flex items-center justify-center gap-4 mt-6 text-xs text-navy-400">
+                      <span className="flex items-center gap-1">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-success"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2"/></svg>
+                        SSL-krypterad
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-success"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" strokeWidth="2"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        Säker betalning via Stripe
+                      </span>
                     </div>
                   </div>
 
-                  {/* Info box */}
-                  <div className="bg-gold-50 border border-gold-200 rounded-xl p-5">
-                    <h3 className="font-semibold text-gold-800 text-sm mb-2">💡 Vad är skillnaden?</h3>
-                    <div className="text-sm text-gold-700 space-y-1">
-                      <p><strong>Gratis:</strong> Fullständigt dokument med vattenstämpel &quot;FÖRHANDSGRANSKNING&quot;.</p>
-                      <p><strong>49 kr:</strong> Ren, professionell PDF utan vattenstämpel – klar att signera.</p>
-                    </div>
-                  </div>
-
-                  {/* Create another */}
-                  <div className="text-center pt-4">
-                    <Link href="/mallar" className="text-sm font-semibold text-gold-600 hover:text-gold-700">
-                      ← Skapa en till fullmakt
-                    </Link>
-                  </div>
+                  <button onClick={() => setStep(3)} className="btn-secondary w-full">
+                    ← Gå tillbaka och ändra
+                  </button>
                 </div>
               )}
             </div>
@@ -420,30 +371,18 @@ export default function SkapaPage() {
                     )}
                     <hr className="border-navy-100" />
                     <div className="flex justify-between pt-2">
-                      <div>
-                        <div className="w-20 h-4 bg-navy-100 rounded mb-1" />
-                        <div className="text-[8px] text-navy-300">Underskrift</div>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-navy-400">Datum: ________</div>
-                        <div className="text-navy-400">Ort: ________</div>
-                      </div>
+                      <div><div className="w-20 h-4 bg-navy-100 rounded mb-1" /><div className="text-[8px] text-navy-300">Underskrift</div></div>
+                      <div className="text-right"><div className="text-navy-400">Datum: ________</div></div>
                     </div>
-                    <div className="text-center pt-4 text-[8px] text-navy-300">
-                      Genererad via Fullmakt24.se
-                    </div>
+                    <div className="text-center pt-4 text-[8px] text-navy-300">Genererad via Fullmakt24.se</div>
                   </div>
                 </div>
 
-                {/* Quick download from sidebar */}
-                {step >= 3 && (
-                  <button
-                    onClick={() => handleDownload(true)}
-                    className="mt-4 btn-secondary w-full text-sm"
-                  >
-                    ↓ Snabbnedladdning (gratis)
-                  </button>
-                )}
+                {/* Price reminder */}
+                <div className="mt-4 bg-gold-50 border border-gold-200 rounded-xl p-4 text-center">
+                  <div className="text-2xl font-heading font-bold text-navy-600 mb-1">49 kr</div>
+                  <div className="text-xs text-gold-700">Engångsbetalning · Ingen prenumeration</div>
+                </div>
               </div>
             </div>
           </div>

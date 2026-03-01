@@ -14,7 +14,8 @@
     "react-dom": "^19.0.0",
     "lucide-react": "^0.468.0",
     "framer-motion": "^11.15.0",
-    "jspdf": "^2.5.2"
+    "jspdf": "^2.5.2",
+    "stripe": "^17.5.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
