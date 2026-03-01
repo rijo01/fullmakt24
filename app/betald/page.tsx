@@ -5,7 +5,9 @@ import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { templates, categories } from '@/data/templates'
 
-export default function BetaldPage() {
+import { Suspense } from 'react'
+
+function BetaldContent() {
   const searchParams = useSearchParams()
   const slug = searchParams.get('slug')
   const sessionId = searchParams.get('session_id')
@@ -186,5 +188,14 @@ export default function BetaldPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+
+export default function BetaldPage() {
+  return (
+    <Suspense fallback={<div className="section-padding py-20 text-center"><p className="text-navy-400">Laddar...</p></div>}>
+      <BetaldContent />
+    </Suspense>
   )
 }
