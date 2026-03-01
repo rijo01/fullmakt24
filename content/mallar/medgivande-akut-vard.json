@@ -1,0 +1,34 @@
+{
+  "slug": "medgivande-akut-vard",
+  "seo": {
+    "title": "Medgivande för akut vård – Mall 2025 | Fullmakt24.se",
+    "metaDescription": "Skapa medgivande för akut vård gratis. Juridisk mall för att ge någon annan rätt att ta medicinska beslut vid akutsituation. Accepterat av svenska sjukhus och ambulanser.",
+    "h1": "Medgivande för akut vård – Mall 2025",
+    "keywords": ["akut vård medgivande", "medicinskt medgivande", "sjukhus medgivande", "akutmottagning medgivande", "livräddning medgivande"]
+  },
+  "content": {
+    "introduction": "Ett medgivande för akut vård är ett dokument som säger att en annan person får ta medicinska beslut åt dig om du blir allvarligt sjuk eller skadad och inte kan kommunicera själv. Det kan spara ditt liv genom att ge sjukvården klara instruktioner om vad du vill vid nödsituationer.\n\nDetta är särskilt viktigt om du är ofta ensam, reser mycket, eller har en kronisk sjukdom. En akutmedgivande säkerställer att din familj och sjukvården vet vad du vill – även om du inte kan säga det själv.",
+    "legalValidity": "Akutmedgivande är giltigt enligt patientlagen och hälso- och sjukvårdslagen. Svenska sjukhus och ambulanstjänster accepterar detta dokument vid akutsituationer. Medgivandet är särskilt viktigt för att guida sjukvården i livsfarliga situationer. Vi rekommenderar att bevitna dokumentet och lämna kopior till sjukvården.",
+    "howToGuide": "Steg 1: Ange dina personuppgifter – namn, personnummer och adress.\n\nSteg 2: Ange uppgifter om den person som får fatta medicinska beslut åt dig – namn, personnummer, relation till dig (familjemedlem, partner) och kontaktuppgifter.\n\nSteg 3: Beskriv dina medicinska önskemål vid akutsituation. T.ex: Vill du återupplivning? Önskar du respirator (andningsmaskin)? Vilka mediciner är du allergisk mot?\n\nSteg 4: Ange vilka medicinska behandlingar du godkänner eller inte godkänner (nej till blodtransfusion, nej till dialys, etc).\n\nSteg 5: Specificera om medgivandet också gäller för organdonation (vid dödsfall).\n\nSteg 6: Underteckna medgivandet. Två vittnen rekommenderas starkt.\n\nSteg 7: Ge kopior till din läkare, närmaste sjukhus och din familj.",
+    "commonMistakes": "1. Inte tydliga instruktioner – Var specific: Vill du återupplivning ja/nej?\n\n2. Glömmer allergier – Lista alla mediciner/substanser du är allergisk mot.\n\n3. Vittnen saknas – Två vittnen ger större rättsäkerhet vid akutsituation.\n\n4. Inte uppdaterad – Uppdatera var 2-3 år eller när dina önskemål ändras.\n\n5. Familjen vet inte om dokumentet – Berätta för närmaste anhörig var det finns.",
+    "faq": [
+      {"question": "Är detta dokument juridiskt bindande?", "answer": "Ja, akutmedgivande är juridiskt bindande och sjukvården måste respektera det enligt patientlagen."},
+      {"question": "Vad om jag ändrar mig senare?", "answer": "Du kan uppdatera eller återkalla medgivandet när som helst. Ge ny version till sjukvården."},
+      {"question": "Behöver läkaren godkänna det?", "answer": "Det är bra att diskutera dina önskemål med din läkare, men läkarens godkännande krävs inte juridiskt."},
+      {"question": "Gäller det vid psykiatrisk vård?", "answer": "Ja, medgivandet kan även gälla psykiatriska situationer om du specificerar det."},
+      {"question": "Kan jag ge det till sjukhuset?", "answer": "Ja, det är bra att ge en kopia till din hemsjukvård eller närmaste sjukhus så att de har det registrerat."}
+    ],
+    "relatedSearchTerms": ["livstestamente", "akutmedgivande mall", "medicinskt medgivande", "sjukhus medgivande", "vårddirektiv"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Fullmakt för sjukvård", "href": "/mallar/vard-omsorg/fullmakt-sjukvard"},
+    {"text": "Fullmakt för barnets sjukvård", "href": "/mallar/vard-omsorg/fullmakt-barns-sjukvard"},
+    {"text": "Medgivande för organdonation", "href": "/mallar/vard-omsorg/medgivande-organdonation"}
+  ],
+  "lastUpdated": "2025-02-27"
+}

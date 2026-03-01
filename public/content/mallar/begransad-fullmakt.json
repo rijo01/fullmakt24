@@ -1,0 +1,34 @@
+{
+  "slug": "begransad-fullmakt",
+  "seo": {
+    "title": "Begränsad fullmakt – Mall 2025 | Fullmakt24.se",
+    "metaDescription": "Skapa begränsad fullmakt gratis. Juridisk mall för att ge någon rätt till specifika uppgifter eller tidsperioder. Perfekt för enstaka ärenden eller projekt.",
+    "h1": "Begränsad fullmakt – Mall 2025",
+    "keywords": ["begränsad fullmakt", "specifik fullmakt", "tidsbestämd fullmakt", "uppdragsfullmakt", "projektfullmakt"]
+  },
+  "content": {
+    "introduction": "En begränsad fullmakt ger någon annan rätt att agera för din räkning – men bara för **specifika uppgifter** eller under en **begränsad tid**. Det är perfekt när du vill ge en person begränsat mandat att hantera ett ärende utan att ge dem allmän fullmakt.\n\nDet finns många situationer där en begränsad fullmakt är praktisk. Kanske vill du att en vän ska kunna sköta en specifik försäljning, eller att en familjemedlem bara får agera under några veckor medan du är på resa. En begränsad fullmakt ger dig kontroll och säkerhet.",
+    "legalValidity": "En begränsad fullmakt är juridiskt bindande enligt avtalslagen (1915:218). Den accepteras av banker, myndigheter och företag för de ärenden som specificeras. Fullmakten måste vara helt tydlig om vad den omfattar – ju mer specifik, desto starkare är den juridiska skyddet.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn, personnummer och adress.\n\nSteg 2: Ange fullmaktshavarens uppgifter – namn, personnummer och relation till dig.\n\nSteg 3: SPECIFICERA EXAKT vilka uppgifter fullmakten gäller för. Exempel: 'Att sälja min bil Volvo XC60' eller 'Att representera mig på ett enstaka möte med X'\n\nSteg 4: Ange vilka institutioner eller mottagare fullmakten gäller för (bank, advokat, företag, myndighet).\n\nSteg 5: ANGE SLUTDATUM. Exempel: '31 mars 2025' eller 'när bilen är såld'.\n\nSteg 6: Klargör vad fullmaktsgivaren INTE får göra. Exempel: 'Fullmaktshavaren får INTE ta nya lån eller sälja andra tillgångar'\n\nSteg 7: Underteckna tillsammans med två vittnen.",
+    "commonMistakes": "1. För vag formulering – 'Att sköta mitt försäljning' är för vag. Var specifik: 'Att sälja min röd Volvo, reg.nr ABC123'\n\n2. Inget slutdatum – En fullmakt utan slutdatum kan användas långt längre än du avsåg.\n\n3. Glömmer begränsningar – Ange tydligt vad fullmaktsgivaren INTE får göra.\n\n4. För långt slutdatum – Begränsa till rimlig tid (några veckor till några månader).\n\n5. Vittnen saknas – Två vittnen ökar rättsäkerheten.",
+    "faq": [
+      {"question": "Accepteras denna fullmakt av banker?", "answer": "Ja, om den är tillräckligt specifik och tydlig accepteras den av de flesta banker för de ärenden som anges."},
+      {"question": "Kan jag ändra fullmakten senare?", "answer": "Ja, du kan när som helst ge en ny version eller återkalla den tidigare fullmakten skriftligt."},
+      {"question": "Vad händer om slutdatum passeras?", "answer": "Fullmakten är då inte längre giltig. Den kan endast användas för ärenden före slutdatum."},
+      {"question": "Kan fullmaktsgivaren delegera uppgiften vidare?", "answer": "Normalt inte – fullmakten gäller bara för den specificerade personen om inte annat sägs."},
+      {"question": "Behöver mottagaren godkänna fullmakten?", "answer": "Nej, men mottagaren (t.ex. banken) kan kräva att fullmakten är skriftlig och undertecknad."}
+    ],
+    "relatedSearchTerms": ["begränsad fullmakt mall", "specifik fullmakt", "uppdrag fullmakt", "tidsbestämd fullmakt"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Generell fullmakt", "href": "/mallar/ekonomi-myndigheter/generell-fullmakt"},
+    {"text": "Fullmakt för bankärenden", "href": "/mallar/ekonomi-myndigheter/fullmakt-bank"},
+    {"text": "Fullmakt för ägarbyte bil", "href": "/mallar/resa-transport/fullmakt-agarbyte-bil"}
+  ],
+  "lastUpdated": "2025-02-27"
+}

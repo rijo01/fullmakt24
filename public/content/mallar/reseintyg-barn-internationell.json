@@ -1,0 +1,34 @@
+{
+  "slug": "reseintyg-barn-internationell",
+  "seo": {
+    "title": "Reseintyg för barn – Internationell resa 2025 | Fullmakt24.se",
+    "metaDescription": "Skapa reseintyg för barn gratis. Juridisk mall för internationell resa utan förälder. Accepterat av gränskontroll och flygbolag. Ladda ner direkt som PDF.",
+    "h1": "Reseintyg för barn – Internationell resa 2025",
+    "keywords": ["reseintyg barn", "barn internationell resa", "gränsövergang barn", "reseintyg flyg barn", "barn resa intyg"]
+  },
+  "content": {
+    "introduction": "Ett reseintyg för barn är ett juridiskt dokument som bekräftar att en minderårig har tillåtelse att resa utomlands – oftast utan båda föräldrarna närvarande. Det är viktigt för gränsövergang, flygkontroll och möjliggör att barnet kan identifieras vid eventuell kontroll.\n\nDet finns många situationer där denna intyg är nödvändig. Kanske reser barnet med enbart en förälder, eller tillsammans med en annan familjemedlem eller vän. En internationell resa för barn kräver ofta denna dokumentation – särskilt när barnet reser utan båda vårdnadshavare närvarande.",
+    "legalValidity": "Reseintyget för barn är godkänt enligt EU:s regler för barnresor över gränser och Schengen-avtalet. De flesta länder accepterar ett väl utfyllt reseintyg tillsammans med barnets pass. Många gränskontroller och flygbolag kräver detta dokument. Vi rekommenderar att ha både original och kopia av intyget.",
+    "howToGuide": "Steg 1: Ange barnets personuppgifter – namn, personnummer (eller födelsedatum om inte personnummer finns), och passnummer.\n\nSteg 2: Ange uppgifter om båda vårdnadshavare – namn, personnummer och kontaktuppgifter (telefon, e-post).\n\nSteg 3: Ange vem som reser med barnet – förälder, släkting eller annan vuxen och deras relation till barnet.\n\nSteg 4: Specificera resedetaljer – destination(er), transportmedel (flyg, bil, buss), och resans tidsperiod.\n\nSteg 5: Båda vårdnadshavare undertecknar intyget. Vid gemensam vårdnad måste BÅDA underteckna.\n\nSteg 6: Två vittnen undertecknar för att bekräfta att båda föräldrar undertecknade frivilligt.",
+    "commonMistakes": "1. Bara en förälder undertecknar – Vid gemensam vårdnad MÅSTE båda föräldrar underteckna.\n\n2. Vittnen saknas – Resekontroller kan vägra dokumentet utan vittnen.\n\n3. Barnets personnummer är fel – Dubbel-kontrollera alla siffror.\n\n4. Otydliga destinationer – Ange exakt vilka länder barnet besöker.\n\n5. Inte daterat – Intyget måste ha aktuellt datum.",
+    "faq": [
+      {"question": "Accepteras denna intyg vid gränsövergang?", "answer": "Ja, denna intyg accepteras av EU-gränskontroller och de flesta icke-EU-länder tillsammans med barnets pass."},
+      {"question": "Behöver intyget vara notariebevittnat?", "answer": "Inte juridiskt krav, men två vittnen rekommenderas starkt för att förstärka acceptansen vid gränskontroll."},
+      {"question": "Hur länge är intyget giltigt?", "answer": "Intyget är vanligtvis giltigt under en resa. Vi rekommenderar att uppdatera det årligen för säkerhet."},
+      {"question": "Vad gör jag om föräldrarna är oeniga?", "answer": "Om en förälder inte vill skriva under kan barnet inte få reseintyget. Kontakta en jurist om det finns vårdnadstvister."},
+      {"question": "Behövs detta för EU-resor?", "answer": "EU-gränskontroller accepterar det, men många svenska gränser (flyg) kräver detta för att barnet ska få resa."}
+    ],
+    "relatedSearchTerms": ["reseintyg barn EU", "barn resa utomlands intyg", "gränsövergang barn intyg", "flyg barn reseintyg"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Föräldramedgivande – resa med annan vuxen", "href": "/mallar/foraldrar-barn/foraldraredgivande-resa-annan-vuxen"},
+    {"text": "Medgivande för passansökan", "href": "/mallar/foraldrar-barn/medgivande-passansokan"},
+    {"text": "Medgivande vid ensam resa för minderårig", "href": "/mallar/foraldrar-barn/medgivande-ensam-resa-minderarig"}
+  ],
+  "lastUpdated": "2025-02-27"
+}
