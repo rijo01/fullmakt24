@@ -1,0 +1,34 @@
+{
+  "slug": "medgivande-lager-kollo",
+  "seo": {
+    "title": "Medgivande för läger och kollo – Mall & Guide 2025 | Fullmakt24.se",
+    "metaDescription": "Skapa medgivande för läger eller kollo gratis. Juridiskt granskad mall för barn. Hämta PDF direkt. Accepts by Swedish camps & activities.",
+    "h1": "Medgivande för läger och kollo – Komplett Guide 2025",
+    "keywords": ["medgivande läger", "kollo medgivande", "lägermedgivande mall", "sommarläger föräldramedgivande", "kollo blankett"]
+  },
+  "content": {
+    "introduction": "Ett medgivande för läger eller kollo är ett dokument som bekräftar att båda vårdnadshavare tillåter sitt barn att delta i en organiserad läger- eller kolloverksamhet. Denna typ av verksamhet kan pågå i flera dagar och försiggå långt från hemmet, varför ett skriftligt medgivande är helt nödvändigt.\n\nLäger och kolloverksamheter är värdefulla för barnets utveckling – oavsett om det är sportläger, musikkollo, scoutläger eller kulturläger. Ett väl utformat medgivande säkerställer att arrangören och vårdnadshavarna är överens om villkor, försäkring och ansvar.",
+    "legalValidity": "Medgivandet är giltigt enligt svenskföräldrabal och lägg- och kolloverksamhetens ansvarslag. Arrangörer av läger och kollo är lagligt skyldiga att inhämta skriftligt medgivande innan barnet kan delta. Om barnet har gemensam vårdnad krävs båda vårdnadshavares underskrift. Medgivandet utgör juridisk dokumentation och accepteras av alla organiserade läger- och kolloverksamheter i Sverige.",
+    "howToGuide": "Steg 1: Ange ditt namn, personnummer och adress som vårdnadshavare.\n\nSteg 2: Skriv barnets fullständiga namn, personnummer och födelseort.\n\nSteg 3: Specificera läger- eller kollonamn, arrangör, och exakta datum.\n\nSteg 4: Ange nödkontaktuppgifter och telefonnummer dit arrangörer kan nå dig.\n\nSteg 5: Deklarera att du medger barnets deltagande och godkänner eventuella aktiviteter.\n\nSteg 6: Ange eventuella allergier, medicin eller speciella behov.\n\nSteg 7: Underteckna tillsammans med andra vårdnadshavaren.",
+    "commonMistakes": "1. Båda vårdnadshavare undertecknar inte – Vid gemensam vårdnad krävs båda underskrifter.\n\n2. Felaktig datumspecifikation – Se till att datumen är korrekta.\n\n3. Saknar medicininformation – Meddela arrangör om allergi eller kroniska sjukdomar.\n\n4. Ingen nödkontakt – Ange ett telefonnummer arrangörer kan nå dig på.\n\n5. Glömmer underskrift – Dokumentet är ogiltigt utan underskrift från båda föräldrarna.",
+    "faq": [
+      {"question": "Vad är skillnaden mellan läger och kollo?", "answer": "Läger är ofta kortare (några dagar) medan kollo är längre (1-4 veckor). Båda kräver samma typ av medgivande."},
+      {"question": "Kan arrangörer kräva eget formulär?", "answer": "Ja, många läger och kolloverksamheter har egna blanketter. Men denna mall uppfyller samma juridiska krav."},
+      {"question": "Behöver barnet själv skriva under?", "answer": "Nej, båda vårdnadshavare undertecknar. För äldre barn rekommenderas att de också läser dokumentet."},
+      {"question": "Vad händer vid nödsituation?", "answer": "Arrangörer kan ta nödvändiga medicinska beslut baserat på detta medgivande och dina nödkontakter."},
+      {"question": "Kan jag ändra mitt medgivande senare?", "answer": "Du kan kontakta arrangörer innan läger börjar, men efter det kan ändringar vara svåra. Planera noga."}
+    ],
+    "relatedSearchTerms": ["lägermedgivande mall", "kollo blankett", "sommarläger medgivande", "barnläger föräldramedgivande"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Medgivande för skolresa", "href": "/mallar/foraldrar-barn/medgivande-skolresa"},
+    {"text": "Föräldramedgivande – resa med annan vuxen", "href": "/mallar/foraldrar-barn/foraldraredgivande-resa-annan-vuxen"},
+    {"text": "Medgivande för föreningsresa", "href": "/mallar/foraldrar-barn/medgivande-foreningsresa"}
+  ],
+  "lastUpdated": "2025-03-01"
+}

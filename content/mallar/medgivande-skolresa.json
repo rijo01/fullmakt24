@@ -1,0 +1,34 @@
+{
+  "slug": "medgivande-skolresa",
+  "seo": {
+    "title": "Medgivande för skolresa – Mall & Guide 2025 | Fullmakt24.se",
+    "metaDescription": "Skapa medgivande för skolresa gratis. Juridiskt granskad mall för barnets deltagande. Ladda ner som PDF direkt. Fullmakt24.se",
+    "h1": "Medgivande för skolresa – Allt du behöver veta 2025",
+    "keywords": ["medgivande skolresa", "skolresa blankett", "skolresa medgivande mall", "medgivande utflykt skola", "skolresa föräldramedgivande"]
+  },
+  "content": {
+    "introduction": "Ett medgivande för skolresa är ett dokument som bekräftar att båda vårdnadshavare tillåter sitt barn att delta i en organiserad skolresa eller klassresa. Skolan kräver detta för att kunna arrangera resor och för att försäkra att de har rätt att ta hand om barnet under resan.\n\nOavsett om det är en dagslutning till närliggande stad eller en flerdagars resa till ett fjärran land, är ett skriftligt medgivande viktigt. Det skyddar både skolan, vårdnadshavarna och barnet genom att klargöra ansvar, försäkring och nödkontakter.",
+    "legalValidity": "Medgivandet är giltigt enligt svenska skollagen och föräldrabalken. Skolor är lagligt skyldiga att inhämta skriftligt medgivande från båda vårdnadshavare innan barnet kan delta i resor. Om barnet har gemensam vårdnad krävs som regel bägge vårdnadshavares underskrift. Medgivandet accepteras vid alla svenska skolor och beräknas som rättsligt bindande dokumentation.",
+    "howToGuide": "Steg 1: Ange ditt namn, personnummer och adress som vårdnadshavare.\n\nSteg 2: Skriv barnets fullständiga namn och personnummer.\n\nSteg 3: Specificera skolresan – namn på skolan, destination, datum och ungefärlig längd på resan.\n\nSteg 4: Ange nödkontakter som skolan kan kontakta vid behov.\n\nSteg 5: Deklarera att du medger att barnet deltar i resan och att skolan får ta nödvändiga medicinska beslut vid olycksfall.\n\nSteg 6: Skriv under dokumentet tillsammans med den andra vårdnadshavaren och arkivera en kopia för dina handlingar.",
+    "commonMistakes": "1. Glömmer andra vårdnadshavaren – Vid gemensam vårdnad måste båda underteckna.\n\n2. Inga nödkontakter – Glöm inte att ange en telefonnummer dit skolan kan nå dig.\n\n3. Felaktig datering – Kontrollera att datumet matchar skolresan.\n\n4. Missad medicin- eller allergiinformation – Meddela skolan om ditt barn har allergier eller behöver medicin.\n\n5. Försenad inlämning – Skolan behöver medgivandet i god tid före resan.",
+    "faq": [
+      {"question": "Behöver båda vårdnadshavare skriva under?", "answer": "Vid gemensam vårdnad ja, båda måste underteckna. Vid ensam vårdnad räcker en underskrift."},
+      {"question": "Kan skolan åka på resa utan medgivande?", "answer": "Nej, skolor kan inte ta barnet på resa utan skriftligt medgivande från vårdnadshavare."},
+      {"question": "Hur länge gäller medgivandet?", "answer": "Det gäller endast för den specifika resa som anges i dokumentet."},
+      {"question": "Kan jag neka mitt barn att åka på skolresa?", "answer": "Ja, du kan välja att inte ge medgivande. Då kan barnet tyvärr inte delta."},
+      {"question": "Vad händer om jag glömmer att skriva under?", "answer": "Kontakta skolan omedelbar om du glömmer. De kan ofta ordna en snabb underskrift innan resan."}
+    ],
+    "relatedSearchTerms": ["skolresa blankett", "klassresa medgivande", "utflykt medgivande skola", "barnmedgivande resa"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Föräldramedgivande – resa med annan vuxen", "href": "/mallar/foraldrar-barn/foraldraredgivande-resa-annan-vuxen"},
+    {"text": "Reseintyg för barn – internationell resa", "href": "/mallar/foraldrar-barn/reseintyg-barn-internationell"},
+    {"text": "Medgivande vid läger/kollo", "href": "/mallar/foraldrar-barn/medgivande-lager-kollo"}
+  ],
+  "lastUpdated": "2025-03-01"
+}

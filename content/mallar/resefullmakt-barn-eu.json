@@ -1,0 +1,34 @@
+{
+  "slug": "resefullmakt-barn-eu",
+  "seo": {
+    "title": "Resefullmakt för barn inom EU – Mall & Guide 2025 | Fullmakt24.se",
+    "metaDescription": "Skapa resefullmakt för barn inom EU gratis. Juridiskt granskad mall för resor med annan vuxen. Accepteras vid gränskontroller. Ladda ner som PDF.",
+    "h1": "Resefullmakt för barn inom EU – Juridisk Guide 2025",
+    "keywords": ["resefullmakt barn EU", "fullmakt barn resa", "barn resa annan vuxen", "EU resa barn", "resefullmakt mall gratis"]
+  },
+  "content": {
+    "introduction": "En resefullmakt för barn inom EU är en juridisk handling som bekräftar att vårdnadshavaren godkänner att barnet reser med en annan vuxen person, såsom en släkting eller vän. När ett barn reser utan sina föräldrar behövs ofta denna dokumentation vid gränser och flygplatser för att säkerställa att barnet inte kidnappas eller olovligen förts ut ur landet.\n\nEU-resor med barn är vanliga och en väl utformad fullmakt kan rädda en resa från att försvåras av gränskontroller. Detta är särskilt viktigt för ensamresor med barn eller när barnet reser med endast en förälder.",
+    "legalValidity": "Resefullmakten är giltig enligt EU:s regler och svenska lag. De flesta EU-länder accepterar denna typ av fullmakt vid gränser och flygplatser. Det rekommenderas att ta med en officiell översättning till engelska eller landets språk för extra säkerhet. Fullmakten utgör juridisk dokumentation om barnets vårdnadshavare godkänner resan och kan presenteras vid gränsor, poliskontroller eller flygbolags krav.",
+    "howToGuide": "Steg 1: Ange ditt namn, personnummer och adress som vårdnadshavare.\n\nSteg 2: Ange den vuxne persons namn och personnummer som ska åka med barnet.\n\nSteg 3: Ange barnets fullständiga namn, personnummer och födelseort.\n\nSteg 4: Specificera exakt vilka länder resan gäller för – exempelvis Sverige→Tyskland→Italien.\n\nSteg 5: Ange precisreisedatum från och till.\n\nSteg 6: Underteckna och få ev vittnen. Skanna och ha med på resan.\n\nSteg 7: Rekommenderat: Få översättning till engelska eller mållandets språk.",
+    "commonMistakes": "1. Vag datumspecifikation – Ange exakta datum, inte bara \"sommar\".\n\n2. Saknar personnummer – Båda barnets och den vuxnes personnummer måste anges.\n\n3. Inte med på resan – Ha alltid medgivandet med dig på resan.\n\n4. Bara engelska – Många länder föredrar ursprråk plus engelska.\n\n5. Ej vittnat – Två vittnen ger fullmakten extra kraft vid gränskontroller.",
+    "faq": [
+      {"question": "Behöver fullmakten vara vittnad?", "answer": "Det är starkt rekommenderat att få två vittnen. Det ökar acceptansen vid gränser."},
+      {"question": "Gäller denna vid flygresor?", "answer": "Ja, de flesta flygbolag accepterar denna typ av fullmakt för barn utan förälder."},
+      {"question": "Behöver jag engelsk översättning?", "answer": "Det är starkt rekommenderat att ha en engelsk version med, särskilt vid EU-resor."},
+      {"question": "Hur länge är fullmakten giltig?", "answer": "Den gäller under de datum som anges. Du kan skapa en ny om resan förlängs."},
+      {"question": "Vad händer om gränsen neka resan?", "answer": "Mycket sällan med en komplett fullmakt, men ha kontaktuppgifter redo ifall problem uppstår."}
+    ],
+    "relatedSearchTerms": ["barn resa utan förälder", "reseintyg EU", "fullmakt barn resa annan vuxen", "gränskontroll barn"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Föräldramedgivande – resa med annan vuxen", "href": "/mallar/foraldrar-barn/foraldraredgivande-resa-annan-vuxen"},
+    {"text": "Reseintyg för barn – internationell resa", "href": "/mallar/foraldrar-barn/reseintyg-barn-internationell"},
+    {"text": "Medgivande för skolresa", "href": "/mallar/foraldrar-barn/medgivande-skolresa"}
+  ],
+  "lastUpdated": "2025-03-01"
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "medgivande-foreningsresa",
+  "seo": {
+    "title": "Medgivande för föreningsresa – Mall & Guide 2025 | Fullmakt24.se",
+    "metaDescription": "Skapa medgivande för föreningsresa gratis. Juridiskt granskad mall. Accepteras av idrottsföreningar och ungdomsorganisationer. Ladda ner som PDF.",
+    "h1": "Medgivande för föreningsresa – Juridisk Guide 2025",
+    "keywords": ["medgivande föreningsresa", "förenings resa blankett", "ungdomsförenings resa", "idrotts föreningsresa", "medgivande ungdomsföretag"]
+  },
+  "content": {
+    "introduction": "Ett medgivande för föreningsresa är ett dokument som bekräftar att vårdnadshavaren godkänner att barnet får delta i en organiserad resa anordnad av en ungdoms- eller idrottsförening. Från fotbollslag till scoutkår, från musikband till dansgrupp – föreningar arrangerar ofta resor och tävlingar som kräver ett skriftligt medgivande.\n\nOavsett om det är en dagslang till en tävling i närheten eller en helgresa till utlandet, är ett tydligt medgivande viktigt för att säkerställa att föreningen kan ta hand om barnet på ett säkert sätt.",
+    "legalValidity": "Medgivandet är giltigt enligt svensk lag och föråldratal. Ungdoms- och idrottsföreningar är skyldiga att inhämta skriftligt medgivande från vårdnadshavare innan barnet kan delta i resor. Vid gemensam vårdnad krävs båda föräldraarnas underskrift. Medgivandet accepteras av alla organiserade föreningar i Sverige och utgör juridisk dokumentation.",
+    "howToGuide": "Steg 1: Ange ditt namn, personnummer och adress.\n\nSteg 2: Ange barnets namn, personnummer och födelseort.\n\nSteg 3: Ange föreningens namn, typ av verksamhet och resans destination.\n\nSteg 4: Specificera resan datum från-till och ungefärlig längd.\n\nSteg 5: Ange nödkontaktinformation – telefonnummer dit föreningen kan nå dig.\n\nSteg 6: Deklarera att du medger barnets deltagande i resan.\n\nStep 7: Underteckna tillsammans med andra vårdnadshavaren.",
+    "commonMistakes": "1. Endast en vårdnadshavare undertecknar – Vid gemensam vårdnad måste båda underteckna.\n\n2. Saknas nödkontakter – Föreningen behöver minst ett telefonnummer till dig.\n\n3. Felaktig datering – Kontrollera att datumen matchar resans tider.\n\n4. Ingen meddelelse om allergier – Berätta om barnet har någon allergi.\n\n5. Försenad inlämning – Skicka in medgivandet i tid innan resan.",
+    "faq": [
+      {"question": "Kan föreningen åka utan medgivande?", "answer": "Nej, föreningen kan inte ta barnet på resa utan ett skriftligt medgivande från vårdnadshavare."},
+      {"question": "Vad gör föreningen om något blir sjukt under resan?", "answer": "Med detta medgivande kan föreningen ge första hjälpen och kontakta sjukvård vid nödsituation. Du anges som nödkontakt."},
+      {"question": "Är detta samma som skolresans medgivande?", "answer": "Liknade, men detta är specifikt för föreningsresor. Båda följer samma juridiska principer."},
+      {"question": "Behöver barnet själv skriva något?", "answer": "Nej, vårdnadshavarna undertecknar. Äldre barn kan läsa tillsammans med föräldrarna."},
+      {"question": "Kan resan förlängas efter att jag signerat?", "answer": "Du bör kontakta föreningen först. Stora ändringar kan kräva ett nytt medgivande."}
+    ],
+    "relatedSearchTerms": ["förenings resa blankett", "ungdomsförenings resa", "idrottsförenings resa medgivande", "resan ungdom"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Medgivande för läger och kollo", "href": "/mallar/foraldrar-barn/medgivande-lager-kollo"},
+    {"text": "Föräldramedgivande – resa med annan vuxen", "href": "/mallar/foraldrar-barn/foraldraredgivande-resa-annan-vuxen"},
+    {"text": "Medgivande för skolresa", "href": "/mallar/foraldrar-barn/medgivande-skolresa"}
+  ],
+  "lastUpdated": "2025-03-01"
+}
