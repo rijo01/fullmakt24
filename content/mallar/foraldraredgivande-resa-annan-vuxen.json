@@ -1,0 +1,30 @@
+{
+  "slug": "foraldraredgivande-resa-annan-vuxen",
+  "seo": {
+    "title": "Föräldramedgivande resa – Mall för barn som reser 2025",
+    "metaDescription": "Skapa medgivande för barn att resa med annan vuxen. Gratis mall, godkänd vid gränskontroll. Klar på 3 min. Ladda ner PDF direkt.",
+    "h1": "Föräldramedgivande resa med annan vuxen – Mall 2025",
+    "keywords": ["föräldramedgivande resa", "medgivande barn resa", "resefullmakt barn", "barn resa utan förälder", "fullmakt barn resa"]
+  },
+  "content": {
+    "introduction": "När ditt barn ska resa med en annan vuxen – till exempel en mor- eller farförälder, en vän eller en idrottsledare – behöver den vuxne ofta kunna visa att du som vårdnadshavare har gett ditt medgivande. Detta gäller särskilt vid flygresor och vid passage av nationsgränser.\n\nEtt skriftligt föräldramedgivande skyddar både dig, ditt barn och den vuxne som reser med barnet. Gränspolisen i flera länder kan kräva dokumentation, och flygbolag kan neka ombordstigning om inget medgivande finns. Med vår mall skapar du ett professionellt medgivande som uppfyller internationella krav – på bara några minuter.",
+    "legalValidity": "Ett föräldramedgivande för resa är inte reglerat i en specifik svensk lag, men det stöds av föräldrabalkens bestämmelser om vårdnadshavarens ansvar. Vid gemensam vårdnad rekommenderas att bägge vårdnadshavare skriver under. Dokumentet accepteras av svenska och internationella flygbolag, Polismyndigheten och gränskontroller inom EU och Schengen. För resor utanför EU kan ytterligare dokumentation krävas – kontrollera med destinationslandets ambassad.",
+    "howToGuide": "Steg 1: Fyll i vårdnadshavarens uppgifter – namn, personnummer och kontaktuppgifter. Vid gemensam vårdnad ska bägge föräldrar anges.\n\nSteg 2: Ange uppgifter om den vuxne som reser med barnet – fullständigt namn, personnummer och relation till barnet.\n\nSteg 3: Fyll i barnets uppgifter – namn, personnummer och eventuellt passnummer.\n\nSteg 4: Specificera resan – destination, resedatum och hur barnet kan nås under resan.\n\nSteg 5: Granska och ladda ner. Vi rekommenderar att ha medgivandet på både svenska och engelska vid utlandsresor.\n\nSteg 6: Bägge vårdnadshavare skriver under. Ta med en kopia av föräldrarnas legitimation.",
+    "commonMistakes": "1. Bara en vårdnadshavare skriver under vid gemensam vårdnad – Gränspolisen kan kräva bägge föräldrars medgivande.\n\n2. Saknar barnets passnummer – Vid utlandsresor bör passnumret anges i medgivandet.\n\n3. Ingen kontaktinformation – Ange alltid hur föräldrarna kan nås under resan.\n\n4. Bara på svenska – Vid utlandsresor behövs ofta en engelsk version. Använd vår tvåspråkiga tillval.\n\n5. Glömmer kopia av föräldrarnas ID – Gränskontroller kan vilja verifiera föräldrarnas identitet.",
+    "faq": [
+      {"question": "Behöver barnet medgivande för att flyga inrikes?", "answer": "De flesta svenska flygbolag kräver inte medgivande för inrikesresor, men det rekommenderas ändå – särskilt om barnet reser med en person som inte delar efternamn med barnet."},
+      {"question": "Kräver alla länder föräldramedgivande?", "answer": "Nej, men många länder kan be om det vid gränskontroll. Länder som Sydafrika, Brasilien och Kanada har strikta regler. Kontrollera alltid med destinationslandets ambassad."},
+      {"question": "Vad händer om den andra föräldern inte vill skriva under?", "answer": "Vid gemensam vårdnad kan det bli problematiskt. Kontakta familjerätten i din kommun för rådgivning. Vid ensam vårdnad räcker din underskrift."},
+      {"question": "Kan morföräldrar resa med barnet utan medgivande?", "answer": "Det rekommenderas alltid att ha ett skriftligt medgivande, oavsett relation. Gränskontroller gör ingen skillnad på morföräldrar och andra vuxna."},
+      {"question": "Hur länge gäller medgivandet?", "answer": "Medgivandet gäller för den specifika resa och tidsperiod du anger. Skapa ett nytt medgivande för varje resa."}
+    ],
+    "relatedSearchTerms": ["medgivande barn resa utomlands", "fullmakt barn flyga", "föräldramedgivande mall", "barn resa utan förälder regler"]
+  },
+  "schema": { "faqSchema": true, "howToSchema": true, "breadcrumbSchema": true },
+  "internalLinks": [
+    {"text": "Reseintyg barn internationell resa", "href": "/mallar/foraldrar-barn/reseintyg-barn-internationell"},
+    {"text": "Fullmakt till släkting vid resa", "href": "/mallar/foraldrar-barn/fullmakt-slakting-resa"},
+    {"text": "Fullmakt till bonusförälder", "href": "/mallar/foraldrar-barn/fullmakt-bonusforalder"}
+  ],
+  "lastUpdated": "2025-06-15"
+}

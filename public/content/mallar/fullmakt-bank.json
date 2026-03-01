@@ -1,0 +1,34 @@
+{
+  "slug": "fullmakt-bank",
+  "seo": {
+    "title": "Fullmakt för bankärenden – Mall & Guide 2025 | Fullmakt24.se",
+    "metaDescription": "Skapa fullmakt för bankärenden gratis. Juridiskt granskad mall anpassad för svenska banker. Klar på 3 minuter. Ladda ner som PDF direkt.",
+    "h1": "Fullmakt för bankärenden – Mall & Guide 2025",
+    "keywords": ["fullmakt bank", "bankfullmakt", "fullmakt bankärenden mall", "fullmakt bank gratis", "bankfullmakt mall"]
+  },
+  "content": {
+    "introduction": "En fullmakt för bankärenden ger en annan person rätt att agera för din räkning hos banken. Det kan handla om allt från att hämta ut kontoutdrag och göra överföringar till att avsluta konton eller teckna nya tjänster.\n\nDet finns många situationer där en bankfullmakt blir nödvändig. Kanske befinner du dig utomlands och behöver någon som hanterar dina bankärenden hemma, eller så hjälper du en äldre förälder som har svårt att ta sig till bankkontoret. Oavsett anledning är det viktigt att fullmakten är korrekt utformad – annars riskerar banken att neka den. Med vår mall skapar du en juridiskt korrekt bankfullmakt på bara några minuter.",
+    "legalValidity": "En fullmakt för bankärenden är giltig enligt avtalslagen och accepteras av de flesta svenska banker, inklusive Handelsbanken, SEB, Swedbank och Nordea. Observera att vissa banker kan ha egna fullmaktsformulär som de föredrar. Vi rekommenderar att kontakta din bank i förväg för att säkerställa att de accepterar fullmakten. Fullmaktshavaren behöver alltid visa giltig legitimation tillsammans med fullmakten vid besök på bankkontoret.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – fullständigt namn, personnummer och folkbokföringsadress.\n\nSteg 2: Fyll i uppgifterna om den person som ska företräda dig hos banken, inklusive personnummer och relation.\n\nSteg 3: Specificera exakt vilka bankärenden fullmakten omfattar. Var så detaljerad som möjligt – det minskar risken att banken nekar.\n\nSteg 4: Ange giltighetstid med start- och slutdatum. Vi rekommenderar att alltid sätta ett slutdatum för ökad säkerhet.\n\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\n\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
+    "commonMistakes": "1. För vag formulering – Banker nekar ofta fullmakter som är för generella. Skriv exakt vilka ärenden det gäller istället för \"alla bankärenden\".\n\n2. Saknar personnummer – Båda parters fullständiga personnummer måste anges. Utan dessa godkänner ingen bank fullmakten.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem och vissa banker kräver tidsbegränsning.\n\n4. Glömmer att kontakta banken – Vissa banker har egna blanketter. Ring och fråga innan du skriver ut.\n\n5. Saknar vittnens underskrifter – Även om det inte är ett lagkrav stärker vittnen fullmaktens trovärdighet avsevärt.",
+    "faq": [
+      {"question": "Accepterar alla banker en fullmakt?", "answer": "De flesta svenska banker accepterar en korrekt utformad fullmakt, men vissa banker som Handelsbanken och SEB har egna blanketter som de föredrar. Kontakta din bank i förväg för att vara säker."},
+      {"question": "Kan jag ge fullmakt för Swish?", "answer": "Nej, Swish är kopplat till ditt personliga BankID och kan inte överlåtas via fullmakt. Fullmakten gäller för traditionella bankärenden som överföringar, kontoutdrag och kontohantering."},
+      {"question": "Hur länge gäller en bankfullmakt?", "answer": "Fullmakten gäller under den period du anger i dokumentet. Du kan när som helst återkalla fullmakten genom att meddela banken och fullmaktshavaren skriftligt."},
+      {"question": "Behöver bankfullmakten bevittnas?", "answer": "Det är inte ett lagkrav, men vi rekommenderar starkt att två vittnen undertecknar. Det ger fullmakten extra juridisk tyngd och gör det lättare att få den godkänd."},
+      {"question": "Kan jag ge fullmakt för att ta lån i mitt namn?", "answer": "Ja, men det kräver en mycket specifik och detaljerad fullmakt. Vid lånerelaterade ärenden rekommenderar vi alltid att du konsulterar en jurist för att säkerställa att allt är korrekt."}
+    ],
+    "relatedSearchTerms": ["bankfullmakt mall gratis", "fullmakt handelsbanken", "fullmakt swedbank", "fullmakt bank pdf"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Fullmakt för kontoutdrag", "href": "/mallar/ekonomi-myndigheter/fullmakt-kontoutdrag"},
+    {"text": "Generell fullmakt", "href": "/mallar/ekonomi-myndigheter/generell-fullmakt"},
+    {"text": "Fullmakt för Skatteverket", "href": "/mallar/ekonomi-myndigheter/fullmakt-skatteverket"}
+  ],
+  "lastUpdated": "2025-06-15"
+}
