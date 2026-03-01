@@ -1,0 +1,34 @@
+{
+  "slug": "fullmakt-bostadsforening",
+  "seo": {
+    "title": "Fullmakt för bostadsförening – Mall & Guide 2025 | Fullmakt24.se",
+    "metaDescription": "Skapa fullmakt för bostadsförening gratis. Juridisk mall för att rösta på stämma eller representera dig i föreningens ärenden. Ladda ner direkt.",
+    "h1": "Fullmakt för bostadsförening – Mall & Guide 2025",
+    "keywords": ["fullmakt bostadsförening", "bostadsföreningsfullmakt", "föreningsstämma fullmakt", "röstfullmakt bostadsrätt", "brf fullmakt"]
+  },
+  "content": {
+    "introduction": "En fullmakt för bostadsförening ger någon annan rätt att representera dig på bostadsföreningens stämma eller i föreningens ärenden. Det kan handla om att rösta på stämman, ta del i beslut, eller företräda dig i frågor om bostadsrätten.\n\nDet finns många skäl att använda denna fullmakt. Kanske kan du inte närvära på stämman, eller så behöver du en familjemedlem att företräda dig vid viktiga beslut. En korrekt utformad fullmakt säkerställer att föreningen accepterar representationen.",
+    "legalValidity": "En fullmakt för bostadsförening är giltig enligt bostadsrättslagen (1991:614) och föreningslagen. Bostadsföreningar måste respektera giltiga fullmakter för röstning och representation. Fullmakten måste vara skriftlig och kan begränsas till specifika frågor eller vara generell för alla föreningsärenden. Många föreningar har egna blanketter men accepterar också allmänna fullmakter.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som bostadsrättsägare – namn, personnummer och adress.\n\nSteg 2: Ange uppgifter om fullmaktshavaren – namn, personnummer och relation till dig (familjemedlem, vän, etc.).\n\nSteg 3: Ange bostadsföreningens namn och eventuella föreningsnummer.\n\nSteg 4: Specificera vad fullmakten gäller för: röstning på stämma, hantering av föreningsärenden, reklamationer, etc.\n\nSteg 5: Klargör om fullmakten gäller för en specifik stämma eller för en längre tidsperiod.\n\nSteg 6: Ange giltighetstid – kan vara för en stämma eller flera år framöver.\n\nSteg 7: Granska och ladda ner som PDF.\n\nSteg 8: Underteckna fullmakten. Två vittnen rekommenderas.",
+    "commonMistakes": "1. Alltför vag formulering – Specificera vad fullmakten gäller för: endast röstning, eller även andra föreningsärenden?\n\n2. Glömmer föreningens namn – Ange tydligt vilken bostadsförening det gäller för.\n\n3. Inte tydlig begränsning – Om fullmakten endast gäller för en specifik stämma, ange datum tydligt.\n\n4. För lång giltighetstid – Sätt ett rimligt slutdatum för fullmakten.\n\n5. Glömmer vittnen – Två vittnen stärker fullmaktens giltighet när föreningsstyrelsen granskar den.",
+    "faq": [
+      {"question": "Accepterar bostadsföreningen denna fullmakt?", "answer": "De flesta bostadsföreningar accepterar en korrekt utformad skriftlig fullmakt. Vissa föreningar har egna blanketter som de föredrar."},
+      {"question": "Kan jag ge fullmakt bara för röstning på stämma?", "answer": "Ja, du kan begränsa fullmakten till endast röstning på en specifik stämma."},
+      {"question": "Kan fullmaktsgivaren säga åt mig hur jag ska rösta?", "answer": "Ja, du kan instruera fullmaktshavaren hur hen ska rösta i specifika frågor, men hen kan också ha eget omdöme."},
+      {"question": "Behöver föreningens styrelse godkänna fullmakten?", "answer": "Nej, föreningens medlemmar måste acceptera fullmakten enligt föreningens stadgar."},
+      {"question": "Gäller fullmakten för flera stämmor?", "answer": "Det beror på vad du anger. Du kan göra den begränsad till en stämma eller gällande för flera år."}
+    ],
+    "relatedSearchTerms": ["bostadsföreningsfullmakt gratis", "röstfullmakt brf", "stämmofullmakt bostadsrätt", "bostadsförening fullmakt mall"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Fullmakt för föreningsstämma", "href": "/mallar/forening-skola/fullmakt-foreningsstamma"},
+    {"text": "Generell fullmakt", "href": "/mallar/ekonomi-myndigheter/generell-fullmakt"},
+    {"text": "Fullmakt för hyreskontrakt", "href": "/mallar/boende-vardag/fullmakt-hyreskontrakt"}
+  ],
+  "lastUpdated": "2025-02-27"
+}

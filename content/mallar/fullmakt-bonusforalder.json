@@ -1,0 +1,34 @@
+{
+  "slug": "fullmakt-bonusforalder",
+  "seo": {
+    "title": "Fullmakt till bonusförälder – Mall & Guide 2025 | Fullmakt24.se",
+    "metaDescription": "Skapa fullmakt till bonusförälder gratis. Juridisk mall för att ge bonusförälder rätt att agera för barnets räkning. Accepterad av svenska myndigheter och institutioner.",
+    "h1": "Fullmakt till bonusförälder – Mall & Guide 2025",
+    "keywords": ["fullmakt bonusförälder", "bonusfullmakt", "fullmakt till sams", "sambo fullmakt barn", "fullmakt styvförälder"]
+  },
+  "content": {
+    "introduction": "En fullmakt till bonusförälder ger denna person rätt att representera barnet i praktiska och juridiska ärenden. Det kan handla om läkarkontakter, skolärenden, bokningar, eller annat som en vårdnadshavare normalt sköter.\n\nDenna fullmakt är viktig när barn tillbringar mycket tid hos sin föräldras sambo eller ny partner. Den ger bonusföräldern möjlighet att agera snabbt vid behov – från att boka läkartid till att kommunicera med skolan. En juridiskt korrekt fullmakt säkerställer att institutioner respekterar representationen.",
+    "legalValidity": "En fullmakt till bonusförälder är giltig enligt avtalslagen (1915:218) och föräldrabalken. Den ersätter inte vårdnaden men ger rättslig befogenhet att agera i praktiska ärenden. Svenska skolor, sjukhus och andra institutioner accepterar denna typ av fullmakt. Vid gemensam vårdnad krävs båda vårdnadshavarnas medgivande för att ge bonusföräldern denna fullmakt.",
+    "howToGuide": "Steg 1: Ange båda vårdnadshavarnas namn och personnummer (båda måste normalt underteckna).\n\nSteg 2: Ange barnets namn, personnummer och aktuell adress.\n\nSteg 3: Ange bonusfödralders namn, personnummer och relation till barnet.\n\nSteg 4: Specificera vad fullmakten omfattar: läkarkontakter, skolärenden, bokningar, allt eller något begränsat?\n\nSteg 5: Klargör vilka institutioner fullmakten är avsedd för (skola, sjukvård, fritidsaktiviteter, etc.).\n\nSteg 6: Ange giltighetstid – ofta ett till två år för bonusfullmakter.\n\nStep 7: Granska och ladda ner som PDF.\n\nSteg 8: Båda vårdnadshavare undertecknar, helst med två vittnen.",
+    "commonMistakes": "1. Bara en vårdnadshavare undertecknar – Vid gemensam vårdnad krävs normalt båda föräldrars underskrift.\n\n2. För vag formulering – Specificera exakt vad bonusföräldern får göra (läkarkontakter, skolkontakter, etc.).\n\n3. Glömmer barnets personnummer – Det måste anges för att institutioner ska kunna identifiera barnet.\n\n4. Inte tydligt begränsning – Klargör vilka institutioner eller ärenden fullmakten gäller för.\n\n5. För lång giltighetstid – Ange ett rimligt slutdatum, ofta ett till två år.",
+    "faq": [
+      {"question": "Ersätter denna fullmakt vårdnaden?", "answer": "Nej, denna fullmakt ersätter inte vårdnaden. Den ger bara rätt att agera i praktiska ärenden."},
+      {"question": "Kan jag ge denna fullmakt utan samtyck från den andra vårdnaden?", "answer": "Vid gemensam vårdnad krävs normalt båda vårdnadshavarnas medgivande."},
+      {"question": "Vad händer vid större medicinska beslut?", "answer": "För större medicinska ingrepp krävs normalt vårdnadshavarens godkännande, inte bara bonusfödralders."},
+      {"question": "Accepteras denna av skolan?", "answer": "Ja, de flesta svenska skolor accepterar denna typ av fullmakt för praktiska ärenden."},
+      {"question": "Kan jag begränsa fullmakten till bara läkarkontakter?", "answer": "Ja, du kan specificera exakt vilket eller vilka ärenden fullmakten gäller för."}
+    ],
+    "relatedSearchTerms": ["bonusförälder fullmakt gratis", "sambo fullmakt barn", "styvförälder fullmakt", "bonusfullmakt mall"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Fullmakt för barnets sjukvård", "href": "/mallar/vard-omsorg/fullmakt-barns-sjukvard"},
+    {"text": "Fullmakt för skolärenden", "href": "/mallar/forening-skola/fullmakt-skolarenden"},
+    {"text": "Föräldramedgivande – resa med annan vuxen", "href": "/mallar/foraldrar-barn/foraldraredgivande-resa-annan-vuxen"}
+  ],
+  "lastUpdated": "2025-02-27"
+}

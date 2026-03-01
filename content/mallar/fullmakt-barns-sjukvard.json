@@ -1,0 +1,34 @@
+{
+  "slug": "fullmakt-barns-sjukvard",
+  "seo": {
+    "title": "Fullmakt för barnets sjukvård – Mall & Guide 2025 | Fullmakt24.se",
+    "metaDescription": "Skapa fullmakt för barnets sjukvård gratis. Juridisk mall för att ge annan vuxen rätt att hantera läkarkontakter och medicinsk vård. Accepterad av svenska sjukhus.",
+    "h1": "Fullmakt för barnets sjukvård – Mall & Guide 2025",
+    "keywords": ["fullmakt barns sjukvård", "sjukvårdsfullmakt barn", "läkarfullmakt barn", "medicin barn fullmakt", "sjukhus barn fullmakt"]
+  },
+  "content": {
+    "introduction": "En fullmakt för barnets sjukvård ger en annan vuxen rätt att företräda ditt barn i sjukvårdskontakter och medicinsk vård. Det kan handla om att boka läkartider, inhämta journalhandlingar, eller agera på barnets vägnar vid läkarbehandling.\n\nDet finns många situationer där denna fullmakt är praktisk. Kanske arbetar du långt borta och behöver att en släkting eller bästa vän kan föra barnet till läkaren, eller så ska barnet tillbringa tid hos en annan vårdnadshavare som behöver tillgång till medicinsk information. En juridiskt korrekt fullmakt säkerställer att sjukvården respekterar representationen.",
+    "legalValidity": "En fullmakt för barnets sjukvård är giltig enligt patientlagen (2014:821) och föräldrabalken. Vid gemensam vårdnad behövs normalt båda vårdnadshavarnas medgivande för att ge en tredje part rätt att agera i medicinska ärenden. Svenska sjukvårdsproviders accepterar skriftliga fullmakter för barns sjukvård. Fullmakten kan begränsas till specifik typ av vård eller vara mer generell.",
+    "howToGuide": "Steg 1: Ange båda föräldrarnas/vårdnadshavarnas namn och personnummer (båda måste normalt underteckna).\n\nSteg 2: Ange barnets namn, personnummer och aktuell adress.\n\nSteg 3: Ange uppgifter om den person som ska representera barnet – namn, personnummer och relation till barnet (släkting, vän, etc.).\n\nSteg 4: Specificera omfattningen av fullmakten: gäller den för all sjukvård eller begränsas den till specifik typ (tandvård, psykiatri, fysioterapi, etc.)?\n\nSteg 5: Klargör om fullmakten också omfattar rätt att ta medicinska beslut, eller endast att boka tider och inhämta information.\n\nSteg 6: Ange giltighetstid – ofta ett till två år för barnets sjukvårdsfullmakter.\n\nSteg 7: Granska och ladda ner som PDF.\n\nSteg 8: Båda vårdnadshavare undertecknar, gärna med två vittnen.",
+    "commonMistakes": "1. Bara en vårdnadshavare undertecknar – Vid gemensam vårdnad krävs normalt båda föräldrars underskrift.\n\n2. För vag formulering – Specificera vilken type sjukvård det gäller (tandvård, psykiatri, allmänläkare, etc.).\n\n3. Saknar barnet personnummer – Det måste anges tydligt för att sjukvården ska kunna identifiera barnet.\n\n4. Glömmer giltighetstid – Ange alltid när fullmakten upphör att gälla.\n\n5. Inte tydligt vad fullmakten gäller – Klargör om representanten får ta medicinska beslut eller endast informera sig.",
+    "faq": [
+      {"question": "Behövs båda föräldrarnas underskrift?", "answer": "Vid gemensam vårdnad krävs normalt båda föräldrars medgivande för att ge en tredje part rätt att agera i medicinska ärenden för barnet."},
+      {"question": "Kan fullmakten begränsas till en specifik läkarmottagning?", "answer": "Ja, du kan specificera att fullmakten gäller endast för viss sjukhus eller mottagning."},
+      {"question": "Kan fulhamaktsgivaren ta medicinska beslut för barnet?", "answer": "Det beror på vad fullmakten säger. Du kan begränsa det till endast informationshämtning och tidsbokning, eller ge rätt till medicinska beslut."},
+      {"question": "Vad händer om föräldrarna inte är överens?", "answer": "Vid oenighet mellan föräldrar kan det krävas domstolsbeslut. Vi rekommenderar att konsultera en jurist."},
+      {"question": "Gäller fullmakten vid akutsituationer?", "answer": "Vid livsfarlig sjukdom kan sjukvården agera utan fullmakt, men fullmakten underlättar normala medicinska kontakter."}
+    ],
+    "relatedSearchTerms": ["barnets sjukvård fullmakt", "läkarfullmakt barn gratis", "medicinsk fullmakt barn", "sjukhus barn fullmakt"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Fullmakt för sjukvård", "href": "/mallar/vard-omsorg/fullmakt-sjukvard"},
+    {"text": "Fullmakt för apotek", "href": "/mallar/vard-omsorg/fullmakt-apotek"},
+    {"text": "Föräldramedgivande – resa med annan vuxen", "href": "/mallar/foraldrar-barn/foraldraredgivande-resa-annan-vuxen"}
+  ],
+  "lastUpdated": "2025-02-27"
+}
