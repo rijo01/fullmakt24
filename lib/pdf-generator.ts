@@ -271,7 +271,6 @@ export function generatePdf(data: PdfData): jsPDF {
     doc.setFont('helvetica', 'bold')
     doc.setFontSize(50)
     doc.setTextColor(200, 200, 200)
-    // @ts-expect-error jsPDF GState types
     const gstate015 = new (doc as any).GState({ opacity: 0.15 });
     doc.setGState(gstate015);
 
@@ -282,7 +281,6 @@ export function generatePdf(data: PdfData): jsPDF {
     })
 
     // Reset opacity
-    // @ts-expect-error jsPDF GState types
     const gstate1 = new (doc as any).GState({ opacity: 1 });
     doc.setGState(gstate1);
   }
