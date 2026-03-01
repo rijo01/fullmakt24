@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 import { templates, categories } from '@/data/templates'
@@ -38,6 +38,7 @@ export default function SkapaPage() {
   const t = templates.find(tp => tp.slug === slug)
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState<Record<string, string>>({})
+  const [downloading, setDownloading] = useState(false)
   const [downloaded, setDownloaded] = useState(false)
 
   // Auto-save to localStorage
@@ -45,7 +46,7 @@ export default function SkapaPage() {
     if (typeof window !== 'undefined' && slug) {
       const saved = localStorage.getItem(`draft_${slug}`)
       if (saved) {
-        try { setFormData(JSON.parse(saved)) } catch {}
+        try { setFormData(JSON.parse(saved)) } catch { /* ignore */ }
       }
     }
   }, [slug])
@@ -55,6 +56,60 @@ export default function SkapaPage() {
       localStorage.setItem(`draft_${slug}`, JSON.stringify(formData))
     }
   }, [formData, slug])
+
+  const handleDownload = useCallback(async (withWatermark: boolean) => {
+    if (!t) return
+    setDownloading(true)
+
+    try {
+      // Dynamic import to avoid SSR issues
+      const { downloadPdf } = await import('@/lib/pdf-generator')
+
+      const cat = categories.find(c => c.slug === t.categorySlug)
+
+      downloadPdf({
+        templateName: t.name,
+        categoryName: cat?.name || '',
+        givare: {
+          namn: formData.givare_namn || '',
+          personnummer: formData.givare_pnr || '',
+          adress: formData.givare_adress || '',
+          epost: formData.givare_epost,
+          telefon: formData.givare_telefon,
+        },
+        havare: {
+          namn: formData.havare_namn || '',
+          personnummer: formData.havare_pnr || '',
+          relation: formData.havare_relation || '',
+          adress: formData.havare_adress,
+        },
+        detaljer: {
+          giltigFran: formData.giltig_fran,
+          giltigTill: formData.giltig_till,
+          syfte: formData.syfte,
+          begransningar: formData.begransningar,
+          barn_namn: formData.barn_namn,
+          barn_pnr: formData.barn_pnr,
+          vardgivare: formData.vardgivare,
+          fastighet: formData.fastighet,
+          forening: formData.forening,
+          tjanst: formData.tjanst,
+          djur_namn: formData.djur_namn,
+          djur_art: formData.djur_art,
+          myndighet: formData.myndighet,
+        },
+        watermark: withWatermark,
+      }, `fullmakt-${t.slug}.pdf`)
+
+      setDownloaded(true)
+      setTimeout(() => setDownloaded(false), 4000)
+    } catch (err) {
+      console.error('PDF generation failed:', err)
+      alert('Något gick fel vid PDF-generering. Försök igen.')
+    } finally {
+      setDownloading(false)
+    }
+  }, [t, formData])
 
   if (!t) {
     return (
@@ -76,11 +131,10 @@ export default function SkapaPage() {
 
   const stepTitles = ['Parter', 'Detaljer', 'Granska', 'Ladda ner']
 
-  const handleDownload = () => {
-    setDownloaded(true)
-    // In production: generate PDF here
-    setTimeout(() => setDownloaded(false), 3000)
-  }
+  // Validation
+  const requiredGivare = givareFields.filter(f => f.required).every(f => formData[f.id]?.trim())
+  const requiredHavare = havareFields.filter(f => f.required).every(f => formData[f.id]?.trim())
+  const requiredDetaljer = detaljFields.filter(f => f.required).every(f => formData[f.id]?.trim())
 
   return (
     <div className="min-h-screen bg-surface">
@@ -132,6 +186,12 @@ export default function SkapaPage() {
                           </label>
                           {f.helpText && <p className="text-xs text-navy-400 mb-1">{f.helpText}</p>}
                           <FormField field={f} value={formData[f.id] || ''} onChange={v => updateField(f.id, v)} />
+                          {f.required && formData[f.id]?.trim() && (
+                            <div className="flex items-center gap-1 mt-1">
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-success"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" strokeWidth="2"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                              <span className="text-xs text-success">OK</span>
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
@@ -146,11 +206,23 @@ export default function SkapaPage() {
                             {f.label} {f.required && <span className="text-red-400">*</span>}
                           </label>
                           <FormField field={f} value={formData[f.id] || ''} onChange={v => updateField(f.id, v)} />
+                          {f.required && formData[f.id]?.trim() && (
+                            <div className="flex items-center gap-1 mt-1">
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-success"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" strokeWidth="2"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                              <span className="text-xs text-success">OK</span>
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
                   </div>
-                  <button onClick={() => setStep(2)} className="btn-primary w-full">Nästa: Specificera uppdraget →</button>
+                  <button
+                    onClick={() => setStep(2)}
+                    disabled={!requiredGivare || !requiredHavare}
+                    className={`w-full py-4 rounded-xl font-semibold transition-all ${requiredGivare && requiredHavare ? 'btn-primary' : 'bg-navy-100 text-navy-300 cursor-not-allowed'}`}
+                  >
+                    Nästa: Specificera uppdraget →
+                  </button>
                 </div>
               )}
 
@@ -173,7 +245,13 @@ export default function SkapaPage() {
                   </div>
                   <div className="flex gap-3">
                     <button onClick={() => setStep(1)} className="btn-secondary flex-1">← Tillbaka</button>
-                    <button onClick={() => setStep(3)} className="btn-primary flex-1">Nästa: Granska →</button>
+                    <button
+                      onClick={() => setStep(3)}
+                      disabled={!requiredDetaljer}
+                      className={`flex-1 py-3 rounded-xl font-semibold transition-all ${requiredDetaljer ? 'btn-primary' : 'bg-navy-100 text-navy-300 cursor-not-allowed'}`}
+                    >
+                      Nästa: Granska →
+                    </button>
                   </div>
                 </div>
               )}
@@ -208,7 +286,7 @@ export default function SkapaPage() {
                       </div>
                       <div>
                         <h3 className="text-xs font-bold text-navy-400 uppercase tracking-wider mb-3">Detaljer</h3>
-                        <div className="bg-gold-50 rounded-xl p-4 space-y-1 border border-gold-200/50">
+                        <div className="bg-gold-50 rounded-xl p-4 space-y-2 border border-gold-200/50">
                           {detaljFields.map(f => formData[f.id] && (
                             <div key={f.id} className="text-sm">
                               <span className="text-navy-400 block text-xs mb-0.5">{f.label}:</span>
@@ -221,7 +299,7 @@ export default function SkapaPage() {
                   </div>
                   <div className="flex gap-3">
                     <button onClick={() => setStep(2)} className="btn-secondary flex-1">← Ändra</button>
-                    <button onClick={() => setStep(4)} className="btn-gold flex-1">Bekräfta & Ladda ner →</button>
+                    <button onClick={() => setStep(4)} className="btn-gold flex-1">Bekräfta & Fortsätt →</button>
                   </div>
                 </div>
               )}
@@ -237,26 +315,65 @@ export default function SkapaPage() {
                       </svg>
                     </div>
                     <h2 className="font-heading font-bold text-navy-500 text-2xl mb-2">Din fullmakt är klar!</h2>
-                    <p className="text-navy-400 mb-8">Ladda ner som PDF eller signera digitalt med BankID.</p>
+                    <p className="text-navy-400 mb-8">Välj hur du vill ladda ner ditt dokument.</p>
 
                     <div className="space-y-3 max-w-sm mx-auto">
-                      <button onClick={handleDownload} className="btn-gold w-full !py-4">
-                        {downloaded ? '✓ Nedladdad!' : '↓ Ladda ner PDF (gratis)'}
+                      {/* Free download with watermark */}
+                      <button
+                        onClick={() => handleDownload(true)}
+                        disabled={downloading}
+                        className="btn-secondary w-full !py-4 relative"
+                      >
+                        {downloading ? (
+                          <span className="flex items-center justify-center gap-2">
+                            <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/></svg>
+                            Genererar PDF...
+                          </span>
+                        ) : downloaded ? (
+                          '✓ PDF nedladdad!'
+                        ) : (
+                          <>↓ Ladda ner PDF (gratis med vattenstämpel)</>
+                        )}
                       </button>
-                      <button className="btn-primary w-full !py-4 opacity-90" onClick={() => alert('BankID-signering kräver Premium-abonnemang. Se /priser för mer info.')}>
+
+                      {/* Paid download without watermark */}
+                      <button
+                        onClick={() => handleDownload(false)}
+                        disabled={downloading}
+                        className="btn-gold w-full !py-4"
+                      >
+                        ↓ Ladda ner ren PDF – 49 kr
+                      </button>
+
+                      {/* BankID */}
+                      <button
+                        className="btn-primary w-full !py-4 opacity-90"
+                        onClick={() => alert('BankID-signering kommer snart! Registrera dig för att bli meddelad.')}
+                      >
                         🔐 Signera med BankID
-                        <span className="ml-2 text-[10px] bg-gold-500/30 px-2 py-0.5 rounded-full">Premium</span>
+                        <span className="ml-2 text-[10px] bg-gold-500/30 px-2 py-0.5 rounded-full">Kommer snart</span>
                       </button>
-                      <button className="btn-secondary w-full">📧 Skicka via e-post</button>
-                      <button className="btn-secondary w-full" onClick={() => window.print()}>🖨️ Skriv ut</button>
+
+                      {/* Print */}
+                      <button className="btn-secondary w-full" onClick={() => window.print()}>
+                        🖨️ Skriv ut
+                      </button>
                     </div>
                   </div>
 
-                  <div className="bg-navy-50 rounded-xl p-5 text-center">
-                    <p className="text-sm text-navy-500 font-medium mb-2">Vill du spara dokumentet?</p>
-                    <p className="text-xs text-navy-400 mb-3">Skapa ett gratis konto för att spara och hantera dina dokument.</p>
-                    <Link href="/mina-dokument" className="text-sm font-semibold text-gold-600 hover:text-gold-700">
-                      Skapa konto →
+                  {/* Info box */}
+                  <div className="bg-gold-50 border border-gold-200 rounded-xl p-5">
+                    <h3 className="font-semibold text-gold-800 text-sm mb-2">💡 Vad är skillnaden?</h3>
+                    <div className="text-sm text-gold-700 space-y-1">
+                      <p><strong>Gratis:</strong> Fullständigt dokument med vattenstämpel &quot;FÖRHANDSGRANSKNING&quot;.</p>
+                      <p><strong>49 kr:</strong> Ren, professionell PDF utan vattenstämpel – klar att signera.</p>
+                    </div>
+                  </div>
+
+                  {/* Create another */}
+                  <div className="text-center pt-4">
+                    <Link href="/mallar" className="text-sm font-semibold text-gold-600 hover:text-gold-700">
+                      ← Skapa en till fullmakt
                     </Link>
                   </div>
                 </div>
@@ -317,6 +434,16 @@ export default function SkapaPage() {
                     </div>
                   </div>
                 </div>
+
+                {/* Quick download from sidebar */}
+                {step >= 3 && (
+                  <button
+                    onClick={() => handleDownload(true)}
+                    className="mt-4 btn-secondary w-full text-sm"
+                  >
+                    ↓ Snabbnedladdning (gratis)
+                  </button>
+                )}
               </div>
             </div>
           </div>
