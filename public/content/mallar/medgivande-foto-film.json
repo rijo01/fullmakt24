@@ -1,0 +1,34 @@
+{
+  "slug": "medgivande-foto-film",
+  "seo": {
+    "title": "Medgivande för foto och film – Mall & Guide 2025 | Fullmakt24.se",
+    "metaDescription": "Skapa medgivande för foto och film gratis. Juridisk mall för att fotografera/filma barn och vuxna. Respekterar GDPR och personuppgifter. Ladda ner direkt.",
+    "h1": "Medgivande för foto och film – Mall & Guide 2025",
+    "keywords": ["medgivande foto film", "fotografieringsmedgivande", "filmningsmedgivande", "foto barn medgivande", "fotograf fullmakt"]
+  },
+  "content": {
+    "introduction": "Ett medgivande för foto och film ger tillåtelse att fotografera eller filma en person för ett specifikt ändamål. Det kan handla om barnfotografering vid skolevenement, föreningsaktiviteter, eller professionell fotografering för privat bruk.\n\nGDPR-reglerna kring bilder och video är strikta, särskilt när det gäller barn. Ett korrekt utformat medgivande säkerställer att både fotografen och den fotograferade respekterar personuppgifterna och använder bilden endast för överenskommet ändamål. Detta medgivande är viktigt för alla från föreningsledare till privata fotografer.",
+    "legalValidity": "Ett medgivande för foto och film är juridiskt bindande enligt GDPR (Dataskyddsförordningen 2016/679) och svensk personuppgiftslag. Föräldrars medgivande krävs alltid när barn fotograferas eller filmas. Medgivandet måste vara informerat – det vill säga att fotografen tydligt förklarar vad bilderna ska användas till. Medgivandet kan specificera exakt hur bilderna får användas (privat bruk, publicering på hemsida, sociala medier, etc.).",
+    "howToGuide": "Steg 1: Ange fotograferens eller filmstarens namn och kontaktuppgifter (den som tar bilden).\n\nSteg 2: Ange uppgifter om personen som ska fotograferas – namn, personnummer (eller endast namn för barn), och relation till fotografen.\n\nSteg 3: För barn: Ange förälderns/vårdnadshavarens namn och personnummer.\n\nSteg 4: Specificera exakt vad medgivandet gäller: vilka händelser, aktiviteter eller tillfällen som fotograferingen omfattar.\n\nSteg 5: Beskriv hur bilderna får användas: privat arkiv, publicering på hemsida, sociala medier, tryckta material, etc.\n\nSteg 6: Ange om bilderna får redigeras eller retuscheras.\n\nSteg 7: Ange giltighetstid för medgivandet.\n\nSteg 8: Underteckna medgivandet.",
+    "commonMistakes": "1. För vagt syfte – Specificera exakt vad fotograferingen är för (skolvent, föreningsaktivitet, professionell session, etc.).\n\n2. Inte tydlig användning – Klargör hur bilderna får användas. Många tror att fotografering betyder allt från privat bruk till publicering på nätet.\n\n3. Glömmer förälderns underskrift – Vid barn under 18 år måste båda vårdnadshavare normalt underteckna.\n\n4. Ingen slutdatum – Ange alltid en giltighetstid för medgivandet.\n\n5. Saknar information om redigering – Klargör om fotografen får redigera eller retuschera bilderna.\n\n6. Glömmer rättighet till att dra tillbaka – Påpeka att medgivandet kan återkallas när som helst.",
+    "faq": [
+      {"question": "Behövs medgivande för att fotografera barn?", "answer": "Ja, enligt GDPR och svensk lag måste föräldrars medgivande inhämtas innan barn fotograferas eller filmas."},
+      {"question": "Gäller medgivandet bara för en gång?", "answer": "Det beror på vad som överenskommits. Du kan ange ett specifikt tillfälle eller säga att det gäller under en längre period."},
+      {"question": "Kan jag förbinda fotografen att inte publicera bilden?", "answer": "Ja, du kan helt klart säga att bilderna endast är för privat bruk och får inte publiceras på nätet eller i tryckade material."},
+      {"question": "Gäller medgivandet även sociala medier?", "answer": "Nej, om du vill att fotografen får publicera på sociala medier måste det uttryckligen anges i medgivandet."},
+      {"question": "Hur länge gäller medgivandet?", "answer": "Det beror på vad du anger. Rekomenderas att sätta ett slutdatum, oftast ett till två år."}
+    ],
+    "relatedSearchTerms": ["fotografieringsmedgivande mall", "gdpr foto barn", "medgivande fotografering", "foto medgivande gratis"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Föräldramedgivande – resa med annan vuxen", "href": "/mallar/foraldrar-barn/foraldraredgivande-resa-annan-vuxen"},
+    {"text": "Medgivande vid skolresa", "href": "/mallar/foraldrar-barn/medgivande-skolresa"},
+    {"text": "Medgivande för passansökan", "href": "/mallar/foraldrar-barn/medgivande-passansokan"}
+  ],
+  "lastUpdated": "2025-02-27"
+}

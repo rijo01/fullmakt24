@@ -1,0 +1,34 @@
+{
+  "slug": "fullmakt-paket-post",
+  "seo": {
+    "title": "Fullmakt för paket och post – Mall & Guide 2025 | Fullmakt24.se",
+    "metaDescription": "Skapa fullmakt för paket och post gratis. Juridiskt korrekt mall för att hämta ut paket och brev. Fungerar hos PostNord, DHL och andra. Ladda ner direkt.",
+    "h1": "Fullmakt för paket och post – Mall & Guide 2025",
+    "keywords": ["fullmakt paket", "fullmakt post", "fullmakt hämta paket", "postnord fullmakt", "fullmakt brev"]
+  },
+  "content": {
+    "introduction": "En fullmakt för paket och post ger någon annan rätt att hämta ut dina paket och brev för din räkning. Det är praktiskt när du är bortrest, på sjukhus, eller helt enkelt behöver någon att hämta på posten eller pakethisspunkten.\n\nAllt från små paket till större försändelser kan hämtas med denna fullmakt. De flesta postföretag som PostNord, DHL och andra leverantörer accepterar en korrekt utformad fullmakt. Med denna mall säkerställer du att fullmakten uppfyller kraven.",
+    "legalValidity": "En fullmakt för paket och post är giltig enligt avtalslagen (1915:218). PostNord, DHL och andra postoperatörer accepterar skriftliga fullmakter för hämtning av försändelser. Fullmachtshavaren måste visa giltig legitimation tillsammans med fullmakten vid hämtning. Fullmakten kan gälla för en specifik försändelse eller generellt för alla paket och brev under en tidsperiod.",
+    "howToGuide": "Steg 1: Ange dina personuppgifter som fullmaktsgivare – namn, personnummer och adress.\n\nSteg 2: Ange fullmaktshavarens namn och personnummer (den som ska hämta paketet).\n\nSteg 3: Ange vilken postoperatör fullmakten gäller för (PostNord, DHL, GLS, etc.) eller lämna det generellt.\n\nSteg 4: Specificera om fullmakten gäller för ett specifikt paket (ange referensnummer eller datum) eller för alla paket under en tidsperiod.\n\nSteg 5: Ange giltighetstid – ofta räcker ett par veckor till ett par månader.\n\nSteg 6: Granska och ladda ner som PDF.\n\nSteg 7: Underteckna fullmakten. Två vittnen rekommenderas men är inte alltid nödvändigt.",
+    "commonMistakes": "1. Glömmer referensnummer – Om du hämtar ett specifikt paket, ange spårningsnummeret tydligt.\n\n2. Inte aktuell legitimation – Fullmachtshavaren måste ha giltig ID-handling när hen hämtar.\n\n3. För lång giltighetstid – Sätt en rimlig slutdatum för fullmakten, normalt några veckor till någon månad.\n\n4. Skriver inte under – Fullmakten måste undertecknas av fullmaktsgivaren för att vara giltig.\n\n5. Glömmer personnummer – Båda parter personnummer måste anges tydligt.",
+    "faq": [
+      {"question": "Accepterar PostNord denna fullmakt?", "answer": "Ja, PostNord accepterar skriftliga fullmakter för hämtning av paket och brev. Fullmachtshavaren måste visa giltig legitimation."},
+      {"question": "Kan jag ge fullmakt för ett specifikt paket?", "answer": "Ja, du kan specificera ett enskilt paket med referensnummer, eller göra fullmakten generell för alla paket."},
+      {"question": "Gäller fullmakten hos alla postoperatörer?", "answer": "De flesta större operatörer som PostNord, DHL och GLS accepterar fullmakten. Kontakta din operatör om du är osäker."},
+      {"question": "Behöver fullmakten bevittnas?", "answer": "Det är inte ett lagkrav men rekommenderas för att stärka dess giltighet, särskilt för dyrare paket."},
+      {"question": "Kan jag ge fullmakt för brevlådan hemma?", "answer": "En generell paketfullmakt ger rätt att hämta paket på posten. För hemleveranser rekommenderas att meddela adressen."}
+    ],
+    "relatedSearchTerms": ["paketfullmakt", "postnord fullmakt mall", "hämta paket fullmakt", "dhl fullmakt gratis"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Fullmakt för bankärenden", "href": "/mallar/ekonomi-myndigheter/fullmakt-bank"},
+    {"text": "Generell fullmakt", "href": "/mallar/ekonomi-myndigheter/generell-fullmakt"},
+    {"text": "Fullmakt för elbolag", "href": "/mallar/boende-vardag/fullmakt-elbolag"}
+  ],
+  "lastUpdated": "2025-02-27"
+}

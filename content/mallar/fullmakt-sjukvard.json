@@ -1,0 +1,34 @@
+{
+  "slug": "fullmakt-sjukvard",
+  "seo": {
+    "title": "Fullmakt för sjukvård – Mall & Guide 2025 | Fullmakt24.se",
+    "metaDescription": "Skapa fullmakt för sjukvård gratis. Juridiskt granskad mall för att representera dig vid sjukvårdskontakter. Accepterad av svenska sjukhus och kliniker. Ladda ner direkt.",
+    "h1": "Fullmakt för sjukvård – Mall & Guide 2025",
+    "keywords": ["fullmakt sjukvård", "medicinska fullmakt", "sjukvårdsfullmakt", "fullmakt sjukhus", "fullmakt läkare"]
+  },
+  "content": {
+    "introduction": "En fullmakt för sjukvård ger någon annan rätt att representera dig i kontakter med sjukvården och framställa information om din hälsa. Det kan handla om att få journalhandlingar, boka tider, kommunicera med läkare, eller agera på ditt vägnar vid sjukvårdskontakter.\n\nDet finns många situationer där en sjukvårdsfullmakt är praktisk. Kanske är du långtidssjuk och behöver någon anhörig att hantera bokningar och läkarkontakter, eller så ska du genomgå ett ingrepp och vill att någon kan få information om ditt tillstånd. En juridiskt korrekt fullmakt säkerställer att sjukvården respekterar representationen.",
+    "legalValidity": "En fullmakt för sjukvård är giltig enligt patientlagen (2014:821) och hälso- och sjukvårdslagen. Svenska vårdgivare är skyldiga att respektera giltiga fullmakter och ge fullmaktshavaren åtkomst till information om patientens vård. Fullmakten kan begränsas till specifik vårdgivare eller vara generell. Vi rekommenderar att bevitna fullmakten för att säkerställa acceptansen.",
+    "howToGuide": "Steg 1: Ange dina personuppgifter som fullmaktsgivare – namn, personnummer och adress.\n\nSteg 2: Ange fullmaktshavarens namn och personnummer (den som ska företräda dig).\n\nSteg 3: Specificera omfattningen av fullmakten. Ska den gälla för alla sjukvårdskontakter eller begränsas till specifik typ av vård (sjukhus, tandläkare, psykiatri, etc.)?\n\nSteg 4: Ange om fullmakten också ger rätt att ta medicinska beslut, eller endast att inhämta information och boka tider.\n\nSteg 5: Ange giltighetstid. Sjukvårdsfullmakter är ofta tidsbegränsade till exempel ett till två år.\n\nSteg 6: Granska dokumentet och ladda ner som PDF.\n\nSteg 7: Underteckna fullmakten. Det är viktigt att två vittnen också undertecknar för att stärka giltigheten.",
+    "commonMistakes": "1. För vag formulering – Sjukvården kan neka om fullmakten är alltför generell. Specificera vilken typ av vård eller vilka läkarkontakter det gäller.\n\n2. Inte tydlig gränsättning – Klargör om fullmakten gäller bara informationshämtning eller även medicinska beslut.\n\n3. Glömmer personnummer – Både patientens och fullmaktshavarens personnummer måste anges.\n\n4. För lång giltighetstid – En sjukvårdsfullmakt bör normalt förnya varje ett till två år.\n\n5. Vittnen undertecknar före fullmaktsgivaren – Se till att du undertecknar först, sedan vittnen.",
+    "faq": [
+      {"question": "Accepteras denna fullmakt av svenska sjukhus?", "answer": "Ja, svenska sjukhus och vårdgivare är skyldiga att respektera giltiga fullmakter enligt patientlagen."},
+      {"question": "Kan fullmakten begränsas till en specifik vårdgivare?", "answer": "Ja, du kan specificera att fullmakten gäller endast för viss sjukhus eller läkarmottagning."},
+      {"question": "Ger fullmakten rätt att ta medicinska beslut?", "answer": "Grundfullmakten ger rätt att inhämta information och boka tider. För medicinska beslut krävs ett särskilt medgivande."},
+      {"question": "Hur länge gäller sjukvårdsfullmakten?", "answer": "Det beror på vad du anger. Vi rekommenderar ett till två år innan förnyelse behövs."},
+      {"question": "Kan jag begränsa tillgången till viss sjukdom eller behandling?", "answer": "Ja, du kan vara mycket specifik. Till exempel kan fullmakten gälla bara för en viss behandling eller diagnos."}
+    ],
+    "relatedSearchTerms": ["sjukvårdsfullmakt mall", "medicin fullmakt", "sjukhus fullmakt gratis", "läkarfullmakt"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Fullmakt för apotek", "href": "/mallar/vard-omsorg/fullmakt-apotek"},
+    {"text": "Fullmakt för tandvård", "href": "/mallar/vard-omsorg/fullmakt-tandvard"},
+    {"text": "Fullmakt för Försäkringskassan", "href": "/mallar/ekonomi-myndigheter/fullmakt-forsikringskassan"}
+  ],
+  "lastUpdated": "2025-02-27"
+}
