@@ -271,7 +271,8 @@ export function generatePdf(data: PdfData): jsPDF {
     doc.setFont('helvetica', 'bold')
     doc.setFontSize(50)
     doc.setTextColor(200, 200, 200)
-    doc.setGState(new doc.GState({ opacity: 0.15 }))
+    // @ts-ignore
+    doc.setGState(new (doc as any).GState({ opacity: 0.15 }))
 
     // Diagonal watermark
     doc.text('FÖRHANDSGRANSKNING', pageWidth / 2, 150, {
@@ -280,7 +281,8 @@ export function generatePdf(data: PdfData): jsPDF {
     })
 
     // Reset opacity
-    doc.setGState(new doc.GState({ opacity: 1 }))
+    // @ts-ignore
+    doc.setGState(new (doc as any).GState({ opacity: 1 }))
   }
 
   return doc
