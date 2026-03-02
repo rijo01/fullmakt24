@@ -54,9 +54,8 @@ export default function KontaktPage() {
         </div>
 
         <div className="mt-10 bg-navy-50 rounded-xl p-6 text-sm text-navy-500 space-y-1">
-          <p><strong>Företag:</strong> Rickard Johansson Invest AB</p>
-          <p><strong>Organisationsnummer:</strong> 559369-0416</p>
-          <p><strong>E-post:</strong> info@fullmakt24.se</p>
+          <p><strong>Företag:</strong> Fullmakt24</p>
+                    <p><strong>E-post:</strong> info@fullmakt24.se</p>
         </div>
       </div>
     </div>

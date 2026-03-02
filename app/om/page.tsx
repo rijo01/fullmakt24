@@ -45,9 +45,8 @@ export default function OmPage() {
 
           <h2 className="font-heading font-bold text-navy-500 text-xl mt-10 mb-4">Företagsinformation</h2>
           <div className="bg-navy-50 rounded-xl p-6 text-sm text-navy-500 space-y-1">
-            <p><strong>Företag:</strong> Rickard Johansson Invest AB</p>
-            <p><strong>Organisationsnummer:</strong> 559369-0416</p>
-            <p><strong>Webbplats:</strong> fullmakt24.se</p>
+            <p><strong>Företag:</strong> Fullmakt24</p>
+                        <p><strong>Webbplats:</strong> fullmakt24.se</p>
             <p><strong>E-post:</strong> info@fullmakt24.se</p>
           </div>
         </div>

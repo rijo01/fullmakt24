@@ -16,7 +16,7 @@ export default function VillkorPage() {
           <section>
             <h2 className="font-heading font-bold text-navy-500 text-xl mb-3">1. Allmänt</h2>
             <p className="text-navy-400 leading-relaxed">
-              Dessa allmänna villkor gäller för alla tjänster som tillhandahålls av Rickard Johansson Invest AB (org.nr 559369-0416) via webbplatsen fullmakt24.se. Genom att använda tjänsten godkänner du dessa villkor.
+              Dessa allmänna villkor gäller för alla tjänster som tillhandahålls av Fullmakt24 via webbplatsen fullmakt24.se. Genom att använda tjänsten godkänner du dessa villkor.
             </p>
           </section>
 
@@ -66,7 +66,7 @@ export default function VillkorPage() {
           <section>
             <h2 className="font-heading font-bold text-navy-500 text-xl mb-3">6. Immateriella rättigheter</h2>
             <p className="text-navy-400 leading-relaxed">
-              Allt innehåll på fullmakt24.se, inklusive malltexter, design och logotyper, är skyddat av upphovsrätt och tillhör Rickard Johansson Invest AB. Du får använda nedladdade dokument för personligt bruk men får inte vidaredistribuera, sälja eller kopiera mallarna.
+              Allt innehåll på fullmakt24.se, inklusive malltexter, design och logotyper, är skyddat av upphovsrätt och tillhör Fullmakt24. Du får använda nedladdade dokument för personligt bruk men får inte vidaredistribuera, sälja eller kopiera mallarna.
             </p>
           </section>
 
@@ -97,9 +97,8 @@ export default function VillkorPage() {
           <section>
             <h2 className="font-heading font-bold text-navy-500 text-xl mb-3">10. Kontakt</h2>
             <div className="bg-navy-50 rounded-xl p-6 text-sm text-navy-500 space-y-1">
-              <p><strong>Företag:</strong> Rickard Johansson Invest AB</p>
-              <p><strong>Organisationsnummer:</strong> 559369-0416</p>
-              <p><strong>E-post:</strong> info@fullmakt24.se</p>
+              <p><strong>Företag:</strong> Fullmakt24</p>
+                            <p><strong>E-post:</strong> info@fullmakt24.se</p>
               <p><strong>Support:</strong> support@fullmakt24.se</p>
             </div>
           </section>

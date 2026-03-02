@@ -16,7 +16,7 @@ export default function IntegritetPage() {
           <section>
             <h2 className="font-heading font-bold text-navy-500 text-xl mb-3">1. Personuppgiftsansvarig</h2>
             <p className="text-navy-400 leading-relaxed">
-              Rickard Johansson Invest AB (org.nr 559369-0416), nedan kallat &quot;vi&quot; eller &quot;Fullmakt24.se&quot;, är personuppgiftsansvarig för behandlingen av dina personuppgifter på fullmakt24.se.
+              Fullmakt24, nedan kallat &quot;vi&quot; eller &quot;Fullmakt24.se&quot;, är personuppgiftsansvarig för behandlingen av dina personuppgifter på fullmakt24.se.
             </p>
             <p className="text-navy-400 leading-relaxed mt-2">Kontakt: info@fullmakt24.se</p>
           </section>
