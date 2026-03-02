@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   description: '100+ juridiskt korrekta mallar för fullmakter och medgivanden. Anpassade för svenska förhållanden. Klara att skriva ut eller signera digitalt.',
   keywords: ['fullmakt', 'medgivande', 'fullmakt mall', 'fullmakt gratis', 'fullmakt barn', 'fullmakt bank', 'juridiskt dokument', 'Sverige'],
   authors: [{ name: 'Fullmakt24.se' }],
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
+      { url: '/icon.png', sizes: '192x192', type: 'image/png' },
+    ],
+    apple: '/apple-icon.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'sv_SE',
