@@ -1,0 +1,34 @@
+{
+  "id": 110,
+  "slug": "fullmakt-digital-brevlada",
+  "name": "Fullmakt för digital brevlåda",
+  "category": "Seniorer & Digital Omsorg",
+  "categorySlug": "seniorer-omsorg",
+  "description": "Fullmakt att hantera Kivra/e-Boks åt annan.",
+  "longDescription": "En fullmakt för digital brevlåda är viktig när du behöver låta någon annan hantera dina digitala brev och meddelanden från myndigheter, banker och försäkringsbolag. Genom tjänster som Kivra eller e-Boks kan du få officiella brev digitalt. Med denna fullmakt ger du en betrodd person (ofta familjemedlem, vårdare eller äldreomsorg) befogenhet att läsa och förvalta dina digitala brev när du inte kan göra det själv.",
+  "badge": "gratis",
+  "usageCount": 4321,
+  "fields": [
+    { "id": "givare_namn", "label": "Brevlådans ägare – namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "tjanst", "label": "Digital brevlådans tjänst", "type": "select", "options": ["Kivra", "e-Boks", "Båda Kivra och e-Boks"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation till ägaren", "type": "select", "options": ["Barn", "Familjemedlem", "Äldreomsorg", "Hemtjänst", "Juridiskt ombud", "Annan"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Läsa brev", "Läsa och vidarebefordra brev", "Läsa, besvara och arkivera brev", "Full behörighet"], "required": true, "group": "detaljer" },
+    { "id": "specialinstruktioner", "label": "Speciella instruktioner", "type": "textarea", "placeholder": "T.ex. måste informera ägaren före vidarebefordran", "required": false, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Kan en digital brevlåda nås från utlandet?", "a": "Ja, både Kivra och e-Boks kan nås globalt via internet. Fullmaktstagaren kan logga in från var som helst." },
+    { "q": "Hur registrerar man en digital brevlåda?", "a": "Du registrerar dig direkt på Kivra.se eller e-Boks webbplats. Du behöver e-legitimation eller bank-ID för att logga in." },
+    { "q": "Vilka brev kommer till digital brevlåda?", "a": "De flesta svenska myndigheter, banker och försäkringsbolag skickar officiella brev till Kivra/e-Boks när du är registrerad. Du kan välja vilka organisationer som ska skicka dit." },
+    { "q": "Kan fullmakten begränsas till specifika avsändare?", "a": "Med denna fullmakt kan du ange vilka organisationers brev fullmaktstagaren får se och hantera. Du kontrollerar omfattningen." },
+    { "q": "Vad händer om jag drar tillbaka fullmakten?", "a": "Fullmaktstagaren förlorar omedelbar åtkomst. Det är bra att informera denne och se till att inga viktiga ärenden är oavslutade." }
+  ],
+  "relatedIds": [67, 75, 87],
+  "legalInfo": "En fullmakt för digital brevlåda bör dokumenteras skriftligt och sparas säkert. Både Kivra och e-Boks kan kräva identifiering och att fullmakten registreras i deras system.",
+  "keywords": ["digital brevlåda", "Kivra", "e-Boks", "senior", "myndighet", "fullmakt"]
+}

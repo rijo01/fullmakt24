@@ -1,0 +1,35 @@
+{
+  "id": 21,
+  "slug": "fullmakt-hamta-ut-fordon",
+  "name": "Fullmakt att hämta ut fordon",
+  "category": "Resa & Transport",
+  "categorySlug": "resa-transport",
+  "description": "Fullmakt för att hämta ut annans fordon från verkstad eller parkering.",
+  "longDescription": "En fullmakt att hämta ut fordon är praktisk när du behöver ge någon annan behörighet att hämta din bil från verkstad, bilgarage, eller parkeringshus. Detta är en särskilt viktig dokument om du inte själv kan vara närvarande, eller om flera personer behöver kunna hämta fordonet i din avsaknad. Fullmakten bekräftar för verkstaden eller parkeringsbolaget att personen är auktoriserad att hämta fordonet på ditt vägnar.",
+  "badge": "gratis",
+  "usageCount": 4532,
+  "fields": [
+    { "id": "givare_namn", "label": "Fordonets ägare – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "fordon_registreringsnummer", "label": "Fordonets registreringsnummer", "type": "text", "placeholder": "ABC 123", "required": true, "group": "detaljer" },
+    { "id": "fordon_typ", "label": "Fordonets typ", "type": "select", "options": ["Personbil", "Lastbil", "Motorcykel", "Husbil", "Traktor", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_adress", "label": "Adress", "type": "address", "placeholder": "Lillgatan 5, 222 33 Göteborg", "required": false, "group": "havare" },
+    { "id": "andamal", "label": "Ändamål för hämtningen", "type": "textarea", "placeholder": "T.ex. att hämta bil från verkstad efter service", "required": true, "group": "detaljer" },
+    { "id": "plats_hämtning", "label": "Var fordonet hämtas", "type": "text", "placeholder": "Bengtssons Bil AB, Stockholm", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad behövs för att hämta ut ett fordon med fullmakt?", "a": "Fullmaktstagaren behöver denna skrivna fullmakt, sitt ID-handlingar och ofta ett personbekräftelse från verkstaden. Kontakta verkstaden i förväg för att se deras krav." },
+    { "q": "Kan jag hämta ut en annans bil från bensinmacken?", "a": "För enkla ärenden kan en fullmakt räcka, men de flesta mackar kan kräva att registrerade ägaren är närvarande. Kontakta macken i förväg." },
+    { "q": "Hur länge ska fullmakten vara giltig?", "a": "Sätt ett rimligt slutdatum. För engångshämtningar kan några dagar eller veckor räcka. För återkommande behov kan du sätta ett längre datum." },
+    { "q": "Behövs vittnen för att fullmakten ska gälla?", "a": "Två vittnen är rekommenderat för att styrka dokumentets äkthet, men inte alltid lagligt obligatoriskt. Kontakta verkstaden för deras krav." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, du kan när som helst dra tillbaka fullmakten genom att skriva ett meddelande till verkstaden eller den aktuella parten." }
+  ],
+  "relatedIds": [33, 39, 53],
+  "legalInfo": "Denna fullmakt är ett juridiskt bindande dokument mellan dig och fullmaktstagaren, och mellan fullmaktstagaren och verkstaden/parkeringshuset.",
+  "keywords": ["fordon", "bil", "hämta", "verkstad", "parkering", "fullmakt"]
+}

@@ -1,0 +1,36 @@
+{
+  "id": 43,
+  "slug": "fullmakt-djurforsakring",
+  "name": "Fullmakt för djurförsäkring",
+  "category": "Djur & Husdjur",
+  "categorySlug": "djur-husdjur",
+  "description": "Fullmakt för att hantera djurförsäkring för husdjuret.",
+  "longDescription": "En fullmakt för djurförsäkring ger en annan person befogenhet att hantera din hunds-, katts- eller andra husdjurs försäkring. Det kan gälla att göra anspråk på veterinärkostnaderna, uppdatera försäkringen eller ge information till försäkringsbolaget. Detta är särskilt användbart om du är sjuk eller ej tillgänglig när djuret behöver vård.",
+  "badge": "gratis",
+  "usageCount": 765,
+  "fields": [
+    { "id": "givare_namn", "label": "Försäkringstagarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "djur_namn", "label": "Djurets namn", "type": "text", "placeholder": "Fluffy", "required": true, "group": "detaljer" },
+    { "id": "djur_typ", "label": "Djurtyp", "type": "select", "options": ["Hund", "Katt", "Häst", "Kanin", "Fågel", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "forsaking_bolaget", "label": "Försäkringsbolag", "type": "select", "options": ["If Djurförsäkring", "Länsförsäkringar", "Folksam", "Trygg-Hansa", "Annan"], "required": true, "group": "detaljer" },
+    { "id": "police_nummer", "label": "Försäkringsnummer", "type": "text", "placeholder": "9876543210", "required": false, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Make/Maka", "Son/Dotter", "Förälder", "Vän", "Djurvårdare", "Veterinär"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Veterinärkostnader och anspråk", "Information om försäkringen", "All hantering"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Kan fullmaktstagaren betala veterinärkostnader direkt?", "a": "Det beror på försäkringsbolaget och fullmaktens omfattning. Många kräver att ägaren godkänner kostnaderna först." },
+    { "q": "Behövs denna fullmakt för att djuret ska få vård?", "a": "Nej, veterinären kan behandla djuret utan fullmakt. Men fullmakten behövs för att göra försäkringsanspråk." },
+    { "q": "Vilka kostnader täcker djurförsäkring?", "a": "Det beror på försäkringstyp och bolag. Oftast täcks akut sjukvård och behandling, men inte prevention eller tandvård." },
+    { "q": "Kan fullmaktstagaren välja veterinär?", "a": "Normalt ja, om veterinären är godkänd av försäkringsbolaget. Kontakta bolaget för lista över godkända veterinärer." },
+    { "q": "Kan jag dra tillbaka fullmakten?", "a": "Ja, informera försäkringsbolaget skriftligt att fullmakten är återkallad. Informera också fullmaktstagaren." }
+  ],
+  "relatedIds": [45, 52, 64],
+  "legalInfo": "Denna fullmakt gäller mellan dig och försäkringsbolaget. Försäkringsbolaget kan begära originalet eller en attesterad kopia.",
+  "keywords": ["djur", "husdjur", "försäkring", "veterinär", "hund", "katt", "fullmakt"]
+}

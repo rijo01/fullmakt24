@@ -1,0 +1,35 @@
+{
+  "id": 26,
+  "slug": "fullmakt-aktiebolag",
+  "name": "Fullmakt för aktiebolag",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att representera aktieägare eller styrelseledamöter i bolagsärenden.",
+  "longDescription": "En fullmakt för aktiebolag är nödvändig när du inte kan själv närvara vid bolagsstämmor eller behöver ge någon befogenhet att hantera bolagsärenden på din räkning. Det kan gälla att representera dig som aktieägare vid stämmor, rösta på dina aktier, eller agera för bolaget i ärendet framför Bolagsverket och andra myndigheter.",
+  "badge": "premium",
+  "usageCount": 1234,
+  "fields": [
+    { "id": "givare_namn", "label": "Aktieägarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "bolagsnamn", "label": "Bolagets namn", "type": "text", "placeholder": "Anderssons AB", "required": true, "group": "detaljer" },
+    { "id": "orgamr", "label": "Organisationsnummer", "type": "text", "placeholder": "556000-1234", "required": true, "group": "detaljer" },
+    { "id": "aktieandel", "label": "Aktieandel", "type": "text", "placeholder": "100% eller särskilt antal aktier", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation/Titel", "type": "text", "placeholder": "T.ex. Revisor, Juridiskt ombud, Styrelseledamot", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Närvaro och röstning vid stämmor", "Hantering av Bolagsverket-ärenden", "Ekonomisk förvaltning", "Full representativ"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Kan en fullmaktstagare underteckna dokument för aktieägaren?", "a": "Det beror på omfattningen av fullmakten och vad dokumenten rör. Vid större operationer kan Bolagsverket kräva originalunderskrift." },
+    { "q": "Behövs vittnen för bolagsfullmakt?", "a": "Två vittnen rekommenderas för att styrka äkthet, särskilt för viktiga bolagsärenden." },
+    { "q": "Kan en styrelseledamot ge fullmakt?", "a": "Ja, en styrelseledamot kan ge fullmakt för sina styrelseuppdrag om det inte strider mot bolagsordningen." },
+    { "q": "Hur registreras fullmakten hos Bolagsverket?", "a": "Kontakta Bolagsverket direkt för hur de hanterar fullmakter. En skriftlig fullmakt är ofta tillräcklig, men kopior kan behövas." },
+    { "q": "Kan fullmakten vara tidsbegränsad?", "a": "Ja, sätt ett slutdatum eller knyt fullmakten till en särskild bolagsstämma eller händelse." }
+  ],
+  "relatedIds": [31, 42, 56],
+  "legalInfo": "En aktiebolagsfullmakt måste följa aktiebolagslagen och eventuella regler i bolagsordningen. Konsultera ett juridiskt ombud för större bolag.",
+  "keywords": ["aktiebolag", "stämma", "röstning", "Bolagsverket", "fullmakt", "aktieägare"]
+}

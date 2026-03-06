@@ -1,0 +1,35 @@
+{
+  "id": 30,
+  "slug": "fullmakt-bat-registrering",
+  "name": "Fullmakt för båtregistrering",
+  "category": "Resa & Transport",
+  "categorySlug": "resa-transport",
+  "description": "Fullmakt för att registrera och hantera båt hos Sjöverket.",
+  "longDescription": "En fullmakt för båtregistrering ger någon annan befogenhet att registrera din båt hos Sjöverket eller att hantera ändringar i registreringen. Detta är praktiskt när du köper eller säljer en båt, eller när du behöver uppdatera registreringsinformation men inte kan göra det själv.",
+  "badge": "gratis",
+  "usageCount": 945,
+  "fields": [
+    { "id": "givare_namn", "label": "Båtägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "bat_namn", "label": "Båtens namn", "type": "text", "placeholder": "Aurora", "required": true, "group": "detaljer" },
+    { "id": "bat_langd", "label": "Båtens längd (m)", "type": "text", "placeholder": "8,5", "required": true, "group": "detaljer" },
+    { "id": "bat_typ", "label": "Båttyp", "type": "select", "options": ["Motorbåt", "Segelåt", "Jetski", "Annan"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_roll", "label": "Fullmakstagers roll", "type": "select", "options": ["Båtförsäljare", "Juridiskt ombud", "Båtägares representant", "Annat"], "required": true, "group": "havare" },
+    { "id": "omfang", "label": "Omfattning", "type": "select", "options": ["Ny registrering", "Ändringar av registrering", "Avregistrering", "All båthantering"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Hur registrerar man en båt hos Sjöverket?", "a": "Du ansöker via Sjöverkets webbplats eller skickar ett registreringsformulär. En fullmakt för detta kan göra processen smidig om du inte kan göra det själv." },
+    { "q": "Vad kostar båtregistrering?", "a": "Registreringen hos Sjöverket är kostnadsfri, men båtförsäkring och fartygsavgifter kan krävas beroende på båtens typ." },
+    { "q": "Kan denna fullmakt användas vid båtförsäljning?", "a": "Ja, en båtförsäljare kan ofta kräva en fullmakt för att registrera båten hos Sjöverket när du säljer." },
+    { "q": "Behövs vittnen?", "a": "Två vittnen rekommenderas för att styrka fullmaktens äkthet, men inte alltid lagligt obligatoriskt." },
+    { "q": "Hur länge är registreringen giltig?", "a": "Båtregistreringen är giltig tills den aktivt avregistreras eller båten säljs till ny ägare." }
+  ],
+  "relatedIds": [39, 53, 62],
+  "legalInfo": "Denna fullmakt måste följa Sjöverkets krav och instruktioner. Kontakta Sjöverket direkt för deras procedurer.",
+  "keywords": ["båt", "registrering", "Sjöverket", "segelåt", "motorbåt", "fullmakt"]
+}

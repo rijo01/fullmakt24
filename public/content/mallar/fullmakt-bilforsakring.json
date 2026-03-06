@@ -1,0 +1,35 @@
+{
+  "id": 37,
+  "slug": "fullmakt-bilforsakring",
+  "name": "Fullmakt för bilförsäkring",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att hantera bilförsäkring åt annan.",
+  "longDescription": "En fullmakt för bilförsäkring ger en person befogenhet att hantera din bilförsäkring. Det kan gälla att få information om försäkringen, göra ändringar, hantera skador, eller kommunicera med försäkringsbolaget. Detta är praktiskt när du är skadad, sjuk eller ej tillgänglig.",
+  "badge": "gratis",
+  "usageCount": 1876,
+  "fields": [
+    { "id": "givare_namn", "label": "Försäkringstagarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "forsaking_bolaget", "label": "Försäkringsbolag", "type": "select", "options": ["Folksam", "If", "Länsförsäkringar", "Trygg-Hansa", "HDI", "Annan"], "required": true, "group": "detaljer" },
+    { "id": "police_nummer", "label": "Försäkringsnummer", "type": "text", "placeholder": "1234567890", "required": false, "group": "detaljer" },
+    { "id": "fordon_registrering", "label": "Fordonets registreringsnummer", "type": "text", "placeholder": "ABC 123", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Make/Maka", "Son/Dotter", "Förälder", "Juridiskt ombud", "Annan"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Information om försäkringen", "Ändringar av försäkringen", "Skadeanmälan och ersättningsärenden", "All hantering"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Kan fullmaktstagaren ändra försäkringen utan mitt samtycke?", "a": "Det beror på omfattningen av fullmakten. Du kan precisera att fullmaktstagaren endast får göra vissa ändringar." },
+    { "q": "Vad behöver fullmaktstagaren för att kontakta försäkringsbolaget?", "a": "Denna skrivna fullmakt och sitt ID. Försäkringsbolaget kan också behöva verifiera identiteten." },
+    { "q": "Kan jag ha flera fullmaktstagare?", "a": "Ja, du kan ge fullmakt till flera personer för samma försäkring." },
+    { "q": "Behövs vittnen för denna fullmakt?", "a": "Två vittnen rekommenderas för att styrka äkthet, men inte alltid lagligt obligatoriskt." },
+    { "q": "Kan fullmakten återkallas?", "a": "Ja, du kan när som helst skriftligt informera försäkringsbolaget att fullmakten är återkallad." }
+  ],
+  "relatedIds": [33, 38, 51],
+  "legalInfo": "Denna fullmakt är bindande och gäller mellan dig och försäkringsbolaget. Försäkringsbolaget har rätt att verifiera fullmakten innan den godtas.",
+  "keywords": ["bilförsäkring", "försäkring", "skada", "fullmakt", "fordon"]
+}

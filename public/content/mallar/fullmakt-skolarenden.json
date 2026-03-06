@@ -1,0 +1,37 @@
+{
+  "id": 16,
+  "slug": "fullmakt-skolarenden",
+  "name": "Fullmakt för skolärenden",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Fullmakt för annan person att hantera barnets skolärenden.",
+  "longDescription": "En fullmakt för skolärenden ger en vald person behörighet att agera för barnet i skol­relaterade frågor. Det kan gälla möten med lärare, hälsovård på skolan, läxläsning, terminaler och annat som normalt är en vårdnadshavares ansvar. Denna fullmakt är särskilt användbar när båda vårdnadshavare arbetar och barn spenderar tid hos annan betrodd vuxen – en släkting, familjevän eller dagbarnsvårdare.",
+  "badge": "popular",
+  "usageCount": 6543,
+  "fields": [
+    { "id": "givare_namn", "label": "Vårdnadshavares namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "barn_namn", "label": "Barnets namn", "type": "text", "placeholder": "Maja Andersson", "required": true, "group": "detaljer" },
+    { "id": "barn_pnr", "label": "Barnets personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "detaljer" },
+    { "id": "barn_skola", "label": "Barnets skola", "type": "text", "placeholder": "Storgatan Grundskola", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation till barnet", "type": "select", "options": ["Mormor", "Morfar", "Farmor", "Farfar", "Faster", "Farbror", "Moster", "Mosterbror", "Annan släkting", "Familjevän", "Nanny/Dagbarnsvårdare"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Klasslärarsamtal och utvecklingssamtal", "All skolkontakt (lärare, rektor, hälsovård)", "Läxläsning och lektionsbesök", "Medicin och hälsovård på skolan", "All skolarenden"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": false, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": false, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vem kan teckna en fullmakt för skolärenden?", "a": "Båda vårdnadshavare bör normalt underteckna fullmakten gemensamt. Om det finns gemensam vårdnad krävs båda vårdnadshavarnas samtycke och underskrift." },
+    { "q": "Vilka behörigheter får fullmaktstagaren?", "a": "Fullmaktstagaren får befogenhet att representera barnet i skolärenden såsom att närvara på lärarsamtal, möta rektor, ta emot information om barnets utveckling och skolgång." },
+    { "q": "Hur länge är fullmakten giltig?", "a": "Fullmakten är giltig under den tidsperiod du anger – ofta ett läsår eller tills barnet slutar på skolan. Du kan förnya eller dra tillbaka fullmakten när som helst." },
+    { "q": "Kan man ha flera fullmaktstagare samtidigt?", "a": "Ja, du kan utfärda fullmakt till flera personer för samma eller olika ärenden. Många föräldrar utfärdar den både till föräldrarna och till andra betrodda vuxna." },
+    { "q": "Behövs vittnen?", "a": "Två vittnen är rekommenderat för att styrka dokumentets äkthet, men inte alltid lagligt obligatoriskt. Kontakta skolan för deras krav." }
+  ],
+  "relatedIds": [9, 11, 12, 50, 60],
+  "legalInfo": "En fullmakt för skolärenden är ett juridiskt bindande dokument. Det är viktigt att båda vårdnadshavare är överens. Skolan måste informeras om fullmakten.",
+  "keywords": ["skola", "barn", "fullmakt", "lärarsamtal", "utvecklingssamtal", "skolärenden"]
+}

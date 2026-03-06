@@ -1,0 +1,35 @@
+{
+  "id": 48,
+  "slug": "medgivande-delad-journalinfo",
+  "name": "Medgivande för delad journalinformation",
+  "category": "Vård & Omsorg",
+  "categorySlug": "vard-omsorg",
+  "description": "Medgivande att dela journalinformation med annan part.",
+  "longDescription": "Ett medgivande för delad journalinformation ger en annan person – ofta en familjemedlem, vårdare eller närstående – rätt att få tillgång till din medicinska journal från sjukvården. Detta är viktigt när någon närstående behöver stödja dig i dina medicinska ärenden, följa din läkningstid eller förvalta din vård. Utan detta medgivande är journalen skyddad av sekretess.",
+  "badge": "gratis",
+  "usageCount": 1567,
+  "fields": [
+    { "id": "givare_namn", "label": "Patientens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "havare_namn", "label": "Mottagarens namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation till patienten", "type": "select", "options": ["Make/Maka", "Son/Dotter", "Förälder", "Syskon", "Annan närstående", "Vårdare", "Hemtjänst"], "required": true, "group": "havare" },
+    { "id": "sjukvardsenhet", "label": "Sjukvårdsenhet", "type": "text", "placeholder": "T.ex. Karolinska sjukhuset, Läkarhuset, Huslägare Dr. X", "required": true, "group": "detaljer" },
+    { "id": "omfattning", "label": "Journalns omfattning", "type": "select", "options": ["All journalinformation", "Endast särskild diagnos", "Endast medicineringsinformation", "Undersökningsresultat"], "required": true, "group": "detaljer" },
+    { "id": "andamal", "label": "Ändamål för delningen", "type": "textarea", "placeholder": "T.ex. stöd vid läkningstid, medicinöversikt, vårdbeslut", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": false, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vem kan få tillgång till min medicinska journal?", "a": "Endast den person du utfärdar medgivande för kan få tillgång. Du kan också säga att sjukvården bara får dela viss information." },
+    { "q": "Kan jag begränsa vilken information som delas?", "a": "Ja, du kan precisera exakt vilken typ av information som får delas – till exempel bara receptinformation, bara en viss diagnos, etc." },
+    { "q": "Hur long tar det för medgivandet att bli giltigt?", "a": "Det beror på sjukvårdsenheten. Kontakta dem för att se hur de registrerar medgivandet. Några dagar är normalt." },
+    { "q": "Kan jag dra tillbaka medgivandet?", "a": "Ja, du kan när som helst dra tillbaka medgivandet genom att skriftligt informera sjukvården. Du kan också säga att det bara är giltigt under en viss period." },
+    { "q": "Behövs vittnen för ett medgivande?", "a": "Ett vittne gör medgivandet starkare, särskilt om patienten senare ifrågasätts. Men ett vittne är ofta inte lagligt obligatoriskt." }
+  ],
+  "relatedIds": [47, 68, 70],
+  "legalInfo": "Patientdatan är skyddad av sekretess enligt Patientsäkerhetslag och GDPR. Detta medgivande måste sparas säkert och presenteras för sjukvården när behov uppstår.",
+  "keywords": ["journal", "sjukvård", "medicin", "sekretess", "medgivande", "patient"]
+}

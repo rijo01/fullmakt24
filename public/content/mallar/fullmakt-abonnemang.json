@@ -1,0 +1,34 @@
+{
+  "id": 24,
+  "slug": "fullmakt-abonnemang",
+  "name": "Fullmakt för telefon- och internetabonnemang",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att hantera telefon- och internetabonnemang åt annan.",
+  "longDescription": "En fullmakt för telefon- och internetabonnemang låter en betrodd person agera för din räkning gentemot telejournaloperatörer och internetleverantörer. Detta kan behövas när du inte kan personligen kontakta leverantören för att ändra abonnemang, betala fakturor eller lösa tekniska problem.",
+  "badge": "gratis",
+  "usageCount": 2145,
+  "fields": [
+    { "id": "givare_namn", "label": "Kundnamn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "abonnementnummer", "label": "Abonnementnummer (om känt)", "type": "text", "placeholder": "1234 5678", "required": false, "group": "detaljer" },
+    { "id": "leverantor", "label": "Leverantör", "type": "select", "options": ["Telia", "Vodafone", "Telenor", "Com Hem", "Viasat", "Allt.nu", "Annan"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Barn", "Förälder", "Make/Maka", "Annan närstående", "Juridiskt ombud"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Teknisk support", "Prisförhandlingar", "Fakturering och betalning", "All kontakt"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Kan jag ge fullmakt för flera leverantörer samtidigt?", "a": "Ja, du kan skriva en generell fullmakt eller separata för varje leverantör. Kontakta varje leverantör för deras krav." },
+    { "q": "Vilka åtgärder kan fullmaktstagaren genomföra?", "a": "Det beror på omfattningen av fullmakten. Du kan begränsa den till teknisk support, eller tillåta prisförhandlingar och fakturering." },
+    { "q": "Behöver leverantören registrera fullmakten?", "a": "De flesta leverantörer accepterar en skriftlig fullmakt, men fråga dem om deras procedurer. Några kan vilja ha originalet eller en kopia." },
+    { "q": "Kan jag dra tillbaka fullmakten?", "a": "Ja, skicka ett skriftligt meddelande till leverantören om att fullmakten är återkallad. Informera också fullmaktstagaren." },
+    { "q": "Vad behövs för att använda fullmakten?", "a": "Fullmaktstagaren behöver denna skrivna fullmakt och sitt ID när han eller hon kontaktar leverantören." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt gäller mellan dig och leverantören. Leverantören avgör slutligen om de accepterar fullmakten enligt sina villkor.",
+  "keywords": ["telefon", "internet", "abonnemang", "leverantör", "fullmakt"]
+}

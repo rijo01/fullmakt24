@@ -1,0 +1,36 @@
+{
+  "id": 91,
+  "slug": "medgivande-hyrbil",
+  "name": "Medgivande för hyrbil",
+  "category": "Resa & Transport",
+  "categorySlug": "resa-transport",
+  "description": "Medgivande för att annan person kan hyra bil på ditt namn.",
+  "longDescription": "Ett medgivande för hyrbil ger någon annan rätt att hyra en bil på ditt namn. Detta kan behövas när du är skadad, sjuk eller inte själv kan köra. Biluthyrningsföretag kräver ofta ett originaldokument eller medgivande från bilägaren för att tillåta detta.",
+  "badge": "gratis",
+  "usageCount": 1432,
+  "fields": [
+    { "id": "givare_namn", "label": "Bilägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "givare_korkort", "label": "Körkortsnummer (om känt)", "type": "text", "placeholder": "1234567890", "required": false, "group": "givare" },
+    { "id": "hyrbils_foretag", "label": "Biluthyrningsföretag", "type": "select", "options": ["Hertz", "Avis", "Budget", "Enterprise", "Europcar", "Sixt", "Annan"], "required": true, "group": "detaljer" },
+    { "id": "bil_typ", "label": "Biltyp (om känt)", "type": "text", "placeholder": "T.ex. kompakt, mellanklassad", "required": false, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Hyrbilstagarens namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_korkort", "label": "Körkortsnummer", "type": "text", "placeholder": "0987654321", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation till bilägaren", "type": "select", "options": ["Make/Maka", "Son/Dotter", "Förälder", "Syskon", "Vän", "Familjemedlem"], "required": true, "group": "havare" },
+    { "id": "andamal", "label": "Ändamål för hyres", "type": "textarea", "placeholder": "T.ex. att kunna hämta familjemedlem från flygplatsen", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Behövs denna medgivande om jag hyrer bil själv?", "a": "Nej, detta medgivande behövs endast om någon annan ska hyra bil på ditt namn utan att du själv är närvarande." },
+    { "q": "Vad behöver biluthyrningsföretaget se?", "a": "De behöver denna medgivande, samt hyrbilstagarens personbekräftelse och körkort." },
+    { "q": "Vem betalar för hyrbilen?", "a": "Det beror på vad du och fullmaktstagaren är överens om. Ofta betalar biluthyrningsföretaget från en kreditkort som du anger." },
+    { "q": "Är hyrbilstakaren försäkrad?", "a": "Hyrbilsföretaget erbjuder normalt försäkring. Se till att dessa försäkringsdetaljer är klara innan medgivandet används." },
+    { "q": "Kan medgivandet användas för större hyrbiler?", "a": "För större fordon eller långtidsuthyrning kan biluthyrningsföretaget ha extra krav. Kontakta dem i förväg." }
+  ],
+  "relatedIds": [39, 53, 62],
+  "legalInfo": "Denna medgivande är ett avtal mellan dig, hyrbilstakaren och biluthyrningsföretaget. Biluthyrningsföretaget accepterar eller avslår medgivandet enligt deras villkor.",
+  "keywords": ["hyrbil", "biluthyrning", "medgivande", "resa", "transport"]
+}
