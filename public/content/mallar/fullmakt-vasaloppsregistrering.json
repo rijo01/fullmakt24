@@ -1,0 +1,31 @@
+{
+  "id": 107,
+  "slug": "fullmakt-vasaloppsregistrering",
+  "name": "Fullmakt för Vasaloppet",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Fullmakt för att registrera sig för Vasaloppet.",
+  "longDescription": "En fullmakt för Vasaloppet ger en person befogenhet att registrera sig för skidloppet Vasaloppet.",
+  "badge": "gratis",
+  "usageCount": 432,
+  "fields": [
+    { "id": "givare_namn", "label": "Deltagaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "klass", "label": "Loppklass", "type": "select", "options": ["Standard", "Elit", "Juniorer", "Veteraner"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Registrering", "Betalning", "Utrustningsbeställning", "Full hantering"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är Vasaloppet?", "a": "Sveriges största skidlopp - 90 km långt från Sälen till Mora." },
+    { "q": "Vad kostar det?", "a": "Startavgift är normalt 300-500 SEK beroende på klass." },
+    { "q": "Vad behövs för att delta?", "a": "God kondition, skidor, stavar och pjäxor. Träning rekommenderas." },
+    { "q": "Kan fullmaktstagaren välja klass?", "a": "Normalt ja, men ge instruktioner om din önskad klass." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan betald anmälning kan få avbeställningsavgift." }
+  ],
+  "relatedIds": [50, 60, 71],
+  "legalInfo": "Denna fullmakt gäller mellan dig och Vasaloppet-organisationen.",
+  "keywords": ["Vasaloppet", "skidlopp", "idrott", "tävling", "registrering", "fullmakt"]
+}

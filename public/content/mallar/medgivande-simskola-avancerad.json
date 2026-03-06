@@ -1,0 +1,30 @@
+{
+  "id": 123,
+  "slug": "medgivande-simskola-avancerad",
+  "name": "Medgivande för simskola avancerad",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Medgivande för avancerad simundervisning.",
+  "longDescription": "Ett medgivande för avancerad simundervisning bekräftar att barnet kan deltaga i djupare vattenverksamhet.",
+  "badge": "gratis",
+  "usageCount": 543,
+  "fields": [
+    { "id": "givare_namn", "label": "Föräldrens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "barn_namn", "label": "Barnets namn", "type": "text", "placeholder": "Erik Andersson", "required": true, "group": "detaljer" },
+    { "id": "barn_alder", "label": "Barnets ålder", "type": "text", "placeholder": "8 år", "required": true, "group": "detaljer" },
+    { "id": "simhall", "label": "Simhall", "type": "text", "placeholder": "Simhallen Stockholm", "required": true, "group": "detaljer" },
+    { "id": "aktivitet", "label": "Aktivitet", "type": "select", "options": ["Dykning", "Både", "Snorkling", "Tävlingssimnig"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är avancerad simning?", "a": "Teknik för simning, tävlingssimnig eller specifika strök som butterfly." },
+    { "q": "Vilken nivå behövs?", "a": "Normalt bör barnet kunna simma minst 200 meter innan avancerad träning." },
+    { "q": "Vad kostar det?", "a": "Normalt 1000-2000 SEK per termin för avancerad simnig." },
+    { "q": "Kan barnet skadas?", "a": "Det är ovanligt men simhallen bör ha försäkring och tränade instruktörer." },
+    { "q": "Behövs ett medgivande?", "a": "Ja, för att bekräfta att barnet har tillräcklig nivå och din samtycke." }
+  ],
+  "relatedIds": [50, 60, 71],
+  "legalInfo": "Detta medgivande måste signeras av båda vårdnadshavare.",
+  "keywords": ["simning", "avancerad", "barn", "simhall", "medgivande"]
+}

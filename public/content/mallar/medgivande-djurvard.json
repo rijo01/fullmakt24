@@ -1,0 +1,30 @@
+{
+  "id": 119,
+  "slug": "medgivande-djurvard",
+  "name": "Medgivande för djurvård",
+  "category": "Djur & Husdjur",
+  "categorySlug": "djur-husdjur",
+  "description": "Medgivande för veterinär behandling.",
+  "longDescription": "Ett medgivande för djurvård tillåter veterinären att behandla ditt djur.",
+  "badge": "gratis",
+  "usageCount": 543,
+  "fields": [
+    { "id": "givare_namn", "label": "Djurägarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "djur_namn", "label": "Djurets namn", "type": "text", "placeholder": "Fluffy", "required": true, "group": "detaljer" },
+    { "id": "djur_typ", "label": "Djurtyp", "type": "select", "options": ["Hund", "Katt", "Häst", "Kanin", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "behandling", "label": "Behandling", "type": "select", "options": ["Operation", "Läkemedel", "Tänder", "Alla"], "required": true, "group": "detaljer" },
+    { "id": "veterinar", "label": "Veterinärklinik", "type": "text", "placeholder": "Drakenbergs Veterinärklinik", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad kostar veterinär?", "a": "Från 500 SEK för undersökning till 5000+ SEK för operationer." },
+    { "q": "Behövs försäkring för djur?", "a": "Det rekommenderas för att täcka oväntade veterinärkostnader." },
+    { "q": "Vad är en tandkleaning?", "a": "Professionell tandstädning som kan kosta 1000-3000 SEK." },
+    { "q": "Kan veterinären operera utan medgivande?", "a": "Normalt krävs medgivande, utom i akuta nödsituationer." },
+    { "q": "Kan jag begränsa behandlingen?", "a": "Ja, säg vilka behandlingar du godkänner och vilka som behöver förfrågan." }
+  ],
+  "relatedIds": [45, 52, 64],
+  "legalInfo": "Detta medgivande tillåter veterinären att behandla ditt djur.",
+  "keywords": ["djur", "veterinär", "vård", "behandling", "medgivande"]
+}

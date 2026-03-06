@@ -1,0 +1,35 @@
+{
+  "id": 103,
+  "slug": "fullmakt-utbytesstudent",
+  "name": "Fullmakt för utbytesstudent",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Fullmakt för att arrangera utbytesår.",
+  "longDescription": "En fullmakt för utbytesår ger en person befogenhet att arrangera och hantera ett utbytesår för ungdomar.",
+  "badge": "premium",
+  "usageCount": 432,
+  "fields": [
+    { "id": "givare_namn", "label": "Föräldrerns namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "ungdom_namn", "label": "Ungdomens namn", "type": "text", "placeholder": "Erik Andersson", "required": true, "group": "detaljer" },
+    { "id": "destination", "label": "Destinationsland", "type": "select", "options": ["USA", "Australien", "Brasilien", "Japan", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "organisation", "label": "Utbytesorganisation", "type": "text", "placeholder": "AFS", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Skolval", "Värdfattning", "Resor", "Kostnadshantering"], "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad kostar ett utbytesår?", "a": "Normalt 200 000-400 000 SEK för ett år beroende på destination." },
+    { "q": "Vilka organisationer finns?", "a": "AFS, YFU, SLI och många andra arrangemang svenska ungdomsutbyten." },
+    { "q": "Kan ungdomen välja skola?", "a": "Det beror på destinationen och värdland." },
+    { "q": "Behövs två vittnen?", "a": "Två vittnen rekommenderas för större beslut." },
+    { "q": "Vad gör jag vid problem?", "a": "Kontakta utbytesorganisationen. De har stöd för ungdomar och familjer." }
+  ],
+  "relatedIds": [50, 60, 71],
+  "legalInfo": "Denna fullmakt är juridisk och kräver två vittnen.",
+  "keywords": ["utbytes", "student", "ungdom", "utomland", "skola", "fullmakt"]
+}

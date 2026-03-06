@@ -1,0 +1,32 @@
+{
+  "id": 108,
+  "slug": "fullmakt-vaxjo-kommun",
+  "name": "Fullmakt för kommunärenden",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att representera i kommunärenden.",
+  "longDescription": "En fullmakt för kommun ger en person befogenhet att representera dig i kommunala ärenden.",
+  "badge": "gratis",
+  "usageCount": 654,
+  "fields": [
+    { "id": "givare_namn", "label": "Invånaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "kommun", "label": "Kommun", "type": "select", "options": ["Stockholm", "Göteborg", "Malmö", "Växjö", "Annan"], "required": true, "group": "detaljer" },
+    { "id": "arende_typ", "label": "Ärendetyp", "type": "select", "options": ["Bygglov", "Socialtjänst", "Skolärende", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Information", "Ansökan", "Överklagande", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad hanterar kommunen?", "a": "Skola, vård, bygglov, socialtjänst, miljö och lokala vägar." },
+    { "q": "Behövs denna fullmakt?", "a": "Många kommuner accepterar fullmakt för att hantera ärenden åt dig." },
+    { "q": "Vad gör jag vid fel beslut?", "a": "Du kan överklaga till högre instans inom de tidsfrister som gäller." },
+    { "q": "Vad kostar kommunala tjänster?", "a": "De flesta kommunala tjänster är gratis eller låga avgifter." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, informera kommunen skriftligt." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt gäller mellan dig och kommunen.",
+  "keywords": ["kommun", "kommunal", "bygglov", "socialtjänst", "fullmakt"]
+}

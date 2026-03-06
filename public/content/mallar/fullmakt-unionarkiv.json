@@ -1,0 +1,31 @@
+{
+  "id": 104,
+  "slug": "fullmakt-unionarkiv",
+  "name": "Fullmakt för fackföreningsärenden",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att hantera fackföreningsärenden.",
+  "longDescription": "En fullmakt för fackförening ger en person befogenhet att representera dig i fackföreningsärenden och medlemsbeslut.",
+  "badge": "gratis",
+  "usageCount": 654,
+  "fields": [
+    { "id": "givare_namn", "label": "Medlemmens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "forbund", "label": "Fackförening", "type": "select", "options": ["LO", "TCO", "Saco", "Akademikerna", "Annan"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Möte", "Röstning", "Klagomål", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är skillnaden mellan LO, TCO och Saco?", "a": "LO är arbetarorganisationen, TCO för tjänstemän, Saco för akademiker." },
+    { "q": "Vad kostar medlemskap?", "a": "Normalt 200-500 SEK per månad beroende på forbund." },
+    { "q": "Vilka tjänster erbjuds?", "a": "Avtalsförhandlingar, juridisk hjälp, försäkringar och utbildning." },
+    { "q": "Kan fullmaktstagaren rösta åt mig?", "a": "Ja, om fullmakten täcker 'röstning'." },
+    { "q": "Vad gör jag vid diskriminering?", "a": "Kontakta fackföreningen - de hjälper med juridisk stöd." }
+  ],
+  "relatedIds": [24, 38, 75],
+  "legalInfo": "Denna fullmakt gäller mellan dig och fackföreningen.",
+  "keywords": ["fackförening", "LO", "TCO", "Saco", "medlemskap", "fullmakt"]
+}

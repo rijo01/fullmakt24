@@ -1,0 +1,31 @@
+{
+  "id": 112,
+  "slug": "intyg-digital-arvshandling",
+  "name": "Intyg för digital arvshandling",
+  "category": "Juridik",
+  "categorySlug": "juridik",
+  "description": "Intyg för digital arvshandling.",
+  "longDescription": "Ett intyg för digital arvshandling bekräftar att en person är behörig att hantera arv digitalt.",
+  "badge": "premium",
+  "usageCount": 543,
+  "fields": [
+    { "id": "givare_namn", "label": "Arvingen – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "avled_namn", "label": "Den avlidnes namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "avled_dod", "label": "Avlidningsdatum", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "arvingsgrad", "label": "Arvingsgrad", "type": "select", "options": ["Barn", "Förälder", "Syskon", "Annan"], "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är digital arvshandling?", "a": "Hantering av digitala tillgångar efter dödsfall - e-post, sociala medier, konton." },
+    { "q": "Vilka digital tillgångar finns?", "a": "E-postkonton, sociala medier, onlinebanking, webbplatser, digitala filer." },
+    { "q": "Behövs två vittnen?", "a": "Två vittnen rekommenderas för att bekräfta arvingarnas identitet." },
+    { "q": "Vad gör jag med sociala medier?", "a": "Du kan ofta skapa ett minneskonto eller låta lösenordsåtkomst överföras." },
+    { "q": "Hur länge håller detta intyg?", "a": "Normalt är det giltigt en tid efter dödsfall men kan behöva uppdateras." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Detta intyg är juridisk och kräver två vittnen.",
+  "keywords": ["arv", "digital", "dödsfall", "intyg", "arvinge", "fullmakt"]
+}

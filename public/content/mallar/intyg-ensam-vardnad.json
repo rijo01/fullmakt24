@@ -1,0 +1,32 @@
+{
+  "id": 115,
+  "slug": "intyg-ensam-vardnad",
+  "name": "Intyg för ensam vårdnad",
+  "category": "Juridik",
+  "categorySlug": "juridik",
+  "description": "Intyg för ensam vårdnad av barn.",
+  "longDescription": "Ett intyg för ensam vårdnad bekräftar att du är ensam vårdnadshavare för ett barn.",
+  "badge": "premium",
+  "usageCount": 876,
+  "fields": [
+    { "id": "givare_namn", "label": "Föräldrerns namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "barn_namn", "label": "Barnets namn", "type": "text", "placeholder": "Erik Andersson", "required": true, "group": "detaljer" },
+    { "id": "barn_pnr", "label": "Barnets personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "detaljer" },
+    { "id": "domstol", "label": "Domstol", "type": "text", "placeholder": "Stockholms tingsrätt", "required": true, "group": "detaljer" },
+    { "id": "domar_datum", "label": "Domardatum", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är ensam vårdnad?", "a": "När endast en förälder har vårdnaden, ofta efter domstolsbeslut." },
+    { "q": "Vad gör jag om den andra föräldern inte samtycker?", "a": "Du måste ansöka till tingsrätten för domstolsbeslut." },
+    { "q": "Behövs detta intyg?", "a": "Ja, ofta vid resor med barnet, skolanmälan och andra ärenden." },
+    { "q": "Vad kostar en vårdnadstvist?", "a": "Advokatkostnader kan bli höga - normalt 10 000-50 000+ SEK." },
+    { "q": "Kan vårdnaden ändras senare?", "a": "Ja, om omständigheterna förändras kan tingsrätten ändra beslutet." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Detta intyg är juridisk och ofta utgiven av domstol.",
+  "keywords": ["vårdnad", "barn", "förälder", "domstol", "intyg", "juridik"]
+}

@@ -1,0 +1,29 @@
+{
+  "id": 122,
+  "slug": "medgivande-minnessida",
+  "name": "Medgivande för minnessida",
+  "category": "Digitalt & Dödsbo",
+  "categorySlug": "digitalt-dodsbo",
+  "description": "Medgivande för att skapa minnessida.",
+  "longDescription": "Ett medgivande för minnessida tillåter att en minnessida skapas för en avliden person.",
+  "badge": "gratis",
+  "usageCount": 432,
+  "fields": [
+    { "id": "givare_namn", "label": "Närståndes namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "avliden_namn", "label": "Den avlidnes namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "avliden_dod", "label": "Avlidningsdatum", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "plattform", "label": "Plattform", "type": "select", "options": ["Facebook", "Instagram", "Webbsida", "Annan"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är en minnessida?", "a": "En dedikerad sida på sociala medier eller webben för att hedra en avliden person." },
+    { "q": "Vad kan man dela?", "a": "Minnen, fotografier, kondoländring och gemensamt delfatandet av sorg." },
+    { "q": "Kan sidan förandras senare?", "a": "Ja, du kan uppdatera den, radera dålig innehål och kontrollera vem som kan delta." },
+    { "q": "Är minnessidor säkra?", "a": "Det är ganska säkert men kontrollera privatinställningarna." },
+    { "q": "Vad gör jag vid inappropriate innehål?", "a": "Du kan rapportera och radera olämpligt innehål från minnessidan." }
+  ],
+  "relatedIds": [24, 38, 75],
+  "legalInfo": "Detta medgivande bekräftar att du är närstånd och kan skapa minnessidan.",
+  "keywords": ["minnessida", "dödsfall", "minne", "sociala medier", "medgivande"]
+}

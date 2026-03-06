@@ -1,0 +1,29 @@
+{
+  "id": 118,
+  "slug": "medgivande-digital-halsoapp",
+  "name": "Medgivande för hälsoapp",
+  "category": "Vård & Omsorg",
+  "categorySlug": "vard-omsorg",
+  "description": "Medgivande för att använda digital hälsoapp.",
+  "longDescription": "Ett medgivande för hälsoapp bekräftar att du godkänner att din hälsodata samlas i en app.",
+  "badge": "gratis",
+  "usageCount": 432,
+  "fields": [
+    { "id": "givare_namn", "label": "Användaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "app_namn", "label": "App", "type": "select", "options": ["1177", "Min vårdcentral", "Doktor.se", "Annan"], "required": true, "group": "detaljer" },
+    { "id": "datatyp", "label": "Datatyp", "type": "select", "options": ["Journaluppgifter", "Läkemedel", "Tester", "Все"], "required": true, "group": "detaljer" },
+    { "id": "samtycke", "label": "Jag godkänner", "type": "select", "options": ["Ja", "Nej"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Är hälsoappar säkra?", "a": "De flesta är säkra men kontrollera datasäkerhetspolicyn." },
+    { "q": "Vad gör jag med mina data?", "a": "Du kan normalt neka vissa data eller radera appen när som helst." },
+    { "q": "Kan Min vårdcentral app delade uppgifter?", "a": "Data är normalt mellan dig och vårdcentralen, inte med tredje part." },
+    { "q": "Vilka hälsoappar rekommenderas?", "a": "1177, Min vårdcentral och Doktor.se är populära officiella appar." },
+    { "q": "Kan jag ta tillbaka mitt samtycke?", "a": "Ja, du kan radera appen eller uppdatera samtyckesinställningarna." }
+  ],
+  "relatedIds": [68, 70, 84],
+  "legalInfo": "Detta medgivande gäller mellan dig och appens operatör.",
+  "keywords": ["hälso", "app", "digital", "medicin", "data", "medgivande"]
+}

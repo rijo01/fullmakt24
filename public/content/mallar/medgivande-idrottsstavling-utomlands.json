@@ -1,0 +1,30 @@
+{
+  "id": 121,
+  "slug": "medgivande-idrottsstavling-utomlands",
+  "name": "Medgivande för idöttstävling utomlands",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Medgivande för att deltaga i utlandstävling.",
+  "longDescription": "Ett medgivande för utlandstävling tillåter ett barn att deltaga i idöttstävling utomlands.",
+  "badge": "gratis",
+  "usageCount": 543,
+  "fields": [
+    { "id": "givare_namn", "label": "Föräldrens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "barn_namn", "label": "Barnets namn", "type": "text", "placeholder": "Erik Andersson", "required": true, "group": "detaljer" },
+    { "id": "idrott", "label": "Idört", "type": "select", "options": ["Fotboll", "Ishockey", "Friidrott", "Segling", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "land", "label": "Land", "type": "text", "placeholder": "Tyskland", "required": true, "group": "detaljer" },
+    { "id": "datum", "label": "Tävlingsdatum", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad behövs för att resa utomlands?", "a": "Pass, försäkring och detta medgivande från båda föräldrarna." },
+    { "q": "Vad kostar tävlingen?", "a": "Det varierar enormt - från 1000 kr till 20 000+ beroende på tävlingen." },
+    { "q": "Behöver båda föräldrarna godkänna?", "a": "Ja, normalt båda vårdnadshavare måste skriva under." },
+    { "q": "Vad gör jag vid olycka?", "a": "Reseledningen bör ha försäkring och kontakter för nödsituationer." },
+    { "q": "Kan medgivandet dras tillbaka?", "a": "Ja, men redan betalda resor kan få avbeställningsavgift." }
+  ],
+  "relatedIds": [50, 60, 71],
+  "legalInfo": "Detta medgivande måste undertecknas av båda vårdnadshavare.",
+  "keywords": ["idört", "tävling", "barn", "utomland", "resor", "medgivande"]
+}

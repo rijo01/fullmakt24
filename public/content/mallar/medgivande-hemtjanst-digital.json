@@ -1,0 +1,29 @@
+{
+  "id": 120,
+  "slug": "medgivande-hemtjanst-digital",
+  "name": "Medgivande för digital hemtjänst",
+  "category": "Vård & Omsorg",
+  "categorySlug": "vard-omsorg",
+  "description": "Medgivande för digital hemtjänstövervakning.",
+  "longDescription": "Ett medgivande för digital hemtjänst tillåter övervakning och loggning av hemtjänsten digitalt.",
+  "badge": "gratis",
+  "usageCount": 432,
+  "fields": [
+    { "id": "givare_namn", "label": "Användaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "hemtjanst", "label": "Hemtjänstleverantör", "type": "text", "placeholder": "Nyckelklar Hemservice", "required": true, "group": "detaljer" },
+    { "id": "tjänster", "label": "Tjänster", "type": "select", "options": ["Städning", "Mat", "Medicin", "Personlig hygien", "Alla"], "required": true, "group": "detaljer" },
+    { "id": "digital_loggning", "label": "Tillåt digital loggning", "type": "select", "options": ["Ja", "Nej"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad innebär digital loggning?", "a": "Hemtjänsten registrerar när de besökte dig och vilka uppgifter som gjordes." },
+    { "q": "Är det säkert?", "a": "Ja, data är normalt krypterad och endast tillgänglig för behörig personal." },
+    { "q": "Kan jag se loggarna?", "a": "Ja, normalt kan du få insyn i vilka besök och uppgifter som utförts." },
+    { "q": "Vad gör jag om något är felregistrerat?", "a": "Kontakta hemtjänstleverantören för att korrigera loggen." },
+    { "q": "Kan jag neka digital loggning?", "a": "Ja, men då är det svårare att bevisa vilka tjänster som utförts." }
+  ],
+  "relatedIds": [68, 70, 84],
+  "legalInfo": "Detta medgivande gäller mellan dig och hemtjänstleverantören.",
+  "keywords": ["hemtjänst", "digital", "loggning", "vård", "medgivande"]
+}

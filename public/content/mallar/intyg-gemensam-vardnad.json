@@ -1,0 +1,30 @@
+{
+  "id": 116,
+  "slug": "intyg-gemensam-vardnad",
+  "name": "Intyg för gemensam vårdnad",
+  "category": "Juridik",
+  "categorySlug": "juridik",
+  "description": "Intyg för gemensam vårdnad av barn.",
+  "longDescription": "Ett intyg för gemensam vårdnad bekräftar att båda föräldrarna är vårdnadshavare för ett barn.",
+  "badge": "gratis",
+  "usageCount": 543,
+  "fields": [
+    { "id": "givare_namn", "label": "Föräldrern 1 – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "foralder2_namn", "label": "Föräldern 2 namn", "type": "text", "placeholder": "Sven Andersson", "required": true, "group": "detaljer" },
+    { "id": "foralder2_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "detaljer" },
+    { "id": "barn_namn", "label": "Barnets namn", "type": "text", "placeholder": "Erik Andersson", "required": true, "group": "detaljer" },
+    { "id": "barn_pnr", "label": "Barnets personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är gemensam vårdnad?", "a": "När båda föräldrarna delar på vårdnaden och de stora besluten om barnet." },
+    { "q": "Skiljer på delade vårdnaden och del av året?", "a": "Gemensam vårdnad = båda har beslutanderätt. Växelvis framfart = barnet växlar mellan föräldrarna." },
+    { "q": "Behövs detta intyg?", "a": "Ja, ofta för resor med barnet, skolanmälan och läkarbesök." },
+    { "q": "Kan gemensam vårdnad ändras?", "a": "Ja, om båda föräldrarna samtycker eller genom domstolsbeslut." },
+    { "q": "Vad gör jag vid meningskiljaktigheter?", "a": "Försök komma överens först, annars kan mekling eller domstol hjälpa." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Detta intyg bekräftar vårdnadsförhållandena för barnet.",
+  "keywords": ["vårdnad", "barn", "förälder", "gemensam", "intyg"]
+}

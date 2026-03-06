@@ -1,0 +1,31 @@
+{
+  "id": 114,
+  "slug": "intyg-djur-resa-utomlands",
+  "name": "Intyg för djurresa utomlands",
+  "category": "Djur & Husdjur",
+  "categorySlug": "djur-husdjur",
+  "description": "Intyg för att ta djur utomlands.",
+  "longDescription": "Ett intyg för djurresa bekräftar att ditt djur är vaccinnerat och friskt för resa.",
+  "badge": "gratis",
+  "usageCount": 543,
+  "fields": [
+    { "id": "givare_namn", "label": "Djurägarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "djur_namn", "label": "Djurets namn", "type": "text", "placeholder": "Fluffy", "required": true, "group": "detaljer" },
+    { "id": "djur_typ", "label": "Djurtyp", "type": "select", "options": ["Hund", "Katt", "Häst", "Kanin", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "destination", "label": "Destinationsland", "type": "text", "placeholder": "Danmark", "required": true, "group": "detaljer" },
+    { "id": "veterinar", "label": "Veterinärklinik", "type": "text", "placeholder": "Drakenbergs Veterinärklinik", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltigt till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vilka vacciner behövs?", "a": "Det beror på destinationen. Rabies är ofta obligatorisk." },
+    { "q": "Vad kostar ett resebesök på veterinär?", "a": "Normalt 500-1500 SEK för ett resebesök inkl. vaccination." },
+    { "q": "Behövs microchip?", "a": "Ja, många länder kräver microchip för inresa." },
+    { "q": "Vad gör jag vid sjukdom under resan?", "a": "Sök lokal veterinär omedelbar. Försäkring kan täcka kostnaderna." },
+    { "q": "Hur länge är intyget giltigt?", "a": "Normalt 1 år från utfärdandet." }
+  ],
+  "relatedIds": [45, 52, 64],
+  "legalInfo": "Detta intyg måste utfärdas av veterinär.",
+  "keywords": ["djur", "resa", "utomlands", "vaccination", "intyg", "veterinär"]
+}

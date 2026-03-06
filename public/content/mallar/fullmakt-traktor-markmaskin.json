@@ -1,0 +1,34 @@
+{
+  "id": 102,
+  "slug": "fullmakt-traktor-markmaskin",
+  "name": "Fullmakt för traktor och maskiner",
+  "category": "Jordbruk & Ägande",
+  "categorySlug": "jordbruk",
+  "description": "Fullmakt för att köpa eller sälja traktor.",
+  "longDescription": "En fullmakt för traktor ger en person befogenhet att köpa eller sälja jordbruksmaskin på din räkning.",
+  "badge": "premium",
+  "usageCount": 543,
+  "fields": [
+    { "id": "givare_namn", "label": "Jordbrukarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "maskin_typ", "label": "Maskintyp", "type": "select", "options": ["Traktor", "Skördare", "Plogning", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "arende", "label": "Ärendetyp", "type": "select", "options": ["Köp", "Försäljning", "Byte"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "max_pris", "label": "Max pris (vid köp)", "type": "text", "placeholder": "500 000 kr", "required": false, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad kostar en traktor?", "a": "Från 100 000 kr för begagnad upp till 1 000 000+ för ny toppmodell." },
+    { "q": "Vilka märken finns?", "a": "John Deere, Case IH, Kubota, Massey Ferguson och många andra." },
+    { "q": "Behövs två vittnen?", "a": "Två vittnen rekommenderas för större maskininköp." },
+    { "q": "Vad är traktorns livslängd?", "a": "En bra traktor kan hålla 20-30 år med rätt underhål." },
+    { "q": "Vilka försäkringar finns?", "a": "Ansvar, maskinskydd och omfattande försäkringar erbjuds av försäkringsbolag." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt är juridisk och kräver två vittnen.",
+  "keywords": ["traktor", "maskin", "jordbruk", "köp", "försäljning", "fullmakt"]
+}

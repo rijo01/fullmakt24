@@ -1,0 +1,32 @@
+{
+  "id": 109,
+  "slug": "fullmakt-vitnesmal",
+  "name": "Fullmakt för vittnesberg",
+  "category": "Juridik",
+  "categorySlug": "juridik",
+  "description": "Fullmakt för vittnesbok.",
+  "longDescription": "En fullmakt för vittnesbok ger en person befogenhet att underteckna som vittne på dina juridiska dokument.",
+  "badge": "premium",
+  "usageCount": 432,
+  "fields": [
+    { "id": "givare_namn", "label": "Vittnesaktersnamn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "dokument_typ", "label": "Dokumenttyp", "type": "select", "options": ["Testament", "Fullmakt", "Gåvobrev", "Avttal"], "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne1_pnr", "label": "Vittne 1 personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_pnr", "label": "Vittne 2 personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vilka kan vara vittne?", "a": "Normalt personer över 18 år som förstår dokumentets innehål." },
+    { "q": "Kan familjemedlemmar vara vittne?", "a": "Normalt nej - vittnen bör vara opåverkade parter." },
+    { "q": "Vad är vittnesplikt?", "a": "Vittnen kan åtalas för mened om de ljuger under vittnesmannaed." },
+    { "q": "Behövs två vittnen?", "a": "Ja, två vittnen är obligatoriska för juridiska dokument." },
+    { "q": "Vad gör vittnen?", "a": "De bekräftar att de sett dokumentet undertecknas och att det verkar frivilligt." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt kräver två vittnen. Vittnen kan åtalas för mened.",
+  "keywords": ["vittne", "vittnesbok", "juridik", "dokument", "fullmakt"]
+}

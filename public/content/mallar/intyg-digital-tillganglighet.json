@@ -1,0 +1,29 @@
+{
+  "id": 113,
+  "slug": "intyg-digital-tillganglighet",
+  "name": "Intyg för digital tillgänglighet",
+  "category": "Juridik",
+  "categorySlug": "juridik",
+  "description": "Intyg för att bekräfta digital tillgänglighet.",
+  "longDescription": "Ett intyg för digital tillgänglighet bekräftar att du har tillgång till vissa digitala tjänster.",
+  "badge": "gratis",
+  "usageCount": 432,
+  "fields": [
+    { "id": "givare_namn", "label": "Personens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "tjänst", "label": "Tjänst", "type": "select", "options": ["E-bank", "E-legitimation", "Myndighetsservice", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "vittne_namn", "label": "Vittne namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne_pnr", "label": "Vittne personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är digital tillgänglighet?", "a": "Förmågan att använda digitala tjänster med hjälp av dator, mobil eller identifikation." },
+    { "q": "Vilka tjänster kräver detta intyg?", "a": "E-bank, E-legitimation, myndighetsservice och många privata tjänster." },
+    { "q": "Vad gör jag om jag inte kan nå tjänsten?", "a": "Kontakta tjänsteleverantören. De kan ofta ge alternativ." },
+    { "q": "Vilka behöver detta intyg?", "a": "Äldre, personer utan datorkunskap eller de som behöver bekräftelse." },
+    { "q": "Hur länge är intyget giltigt?", "a": "Normalt 1-2 år beroende på tjänsten." }
+  ],
+  "relatedIds": [24, 38, 75],
+  "legalInfo": "Detta intyg gäller mellan dig och tjänsteleverantören.",
+  "keywords": ["digital", "tillgänglighet", "e-tjänster", "intyg", "online", "fullmakt"]
+}

@@ -1,0 +1,31 @@
+{
+  "id": 117,
+  "slug": "medgivande-byte-skola",
+  "name": "Medgivande för skolbyte",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Medgivande för att byta skola.",
+  "longDescription": "Ett medgivande för skolbyte bekräftar att båda vårdnadshavare godkänner att barnet byter skola.",
+  "badge": "gratis",
+  "usageCount": 654,
+  "fields": [
+    { "id": "givare_namn", "label": "Föräldern – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "barn_namn", "label": "Barnets namn", "type": "text", "placeholder": "Erik Andersson", "required": true, "group": "detaljer" },
+    { "id": "barn_klass", "label": "Klass", "type": "text", "placeholder": "4A", "required": true, "group": "detaljer" },
+    { "id": "gammal_skola", "label": "Nuvarande skola", "type": "text", "placeholder": "Skolan i Stockholm", "required": true, "group": "detaljer" },
+    { "id": "ny_skola", "label": "Ny skola", "type": "text", "placeholder": "Friskolan", "required": true, "group": "detaljer" },
+    { "id": "datum", "label": "Startdatum på ny skola", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vilka skolor kan jag välja?", "a": "Kommunala skolorna och privata friskolor är alternativ." },
+    { "q": "Behöver båda föräldrarna godkänna?", "a": "Ja, normalt båda vårdnadshavare måste godkänna." },
+    { "q": "Vad kostar friskola?", "a": "Många friskolor är gratis. Privata kan kosta 100 000-300 000 SEK/år." },
+    { "q": "Vad gör jag vid dålig miljö på skolan?", "a": "Kontakta skolledningen, rektorn eller skolinspektionen." },
+    { "q": "Kan barnet gå på två skolor?", "a": "Normalt nej - ett barn tillhör en skola åt gången." }
+  ],
+  "relatedIds": [50, 60, 71],
+  "legalInfo": "Detta medgivande bekräftar båda föräldrars godkännande.",
+  "keywords": ["skola", "byte", "barn", "medgivande", "skolval", "utbildning"]
+}

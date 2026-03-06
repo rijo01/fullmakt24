@@ -1,0 +1,30 @@
+{
+  "id": 124,
+  "slug": "medgivande-tavling-deltager",
+  "name": "Medgivande för tävlingsdeltagar",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Medgivande för att deltaga i tävling.",
+  "longDescription": "Ett medgivande för tävling bekräftar att barnet kan deltaga i en idötts- eller andra tävlingar.",
+  "badge": "gratis",
+  "usageCount": 876,
+  "fields": [
+    { "id": "givare_namn", "label": "Föräldrens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "barn_namn", "label": "Barnets namn", "type": "text", "placeholder": "Erik Andersson", "required": true, "group": "detaljer" },
+    { "id": "tavling", "label": "Tävling", "type": "text", "placeholder": "Stockholm Junior Cup", "required": true, "group": "detaljer" },
+    { "id": "datum", "label": "Tävlingsdatum", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "ansvarare", "label": "Tävlingarrangör", "type": "text", "placeholder": "Stockholm FC", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vilka tävlingar kan barn deltaga i?", "a": "Nästan alla idötter och många andra aktiviteter har tävlingar för barn." },
+    { "q": "Vad kostar att deltaga?", "a": "Normalt 100-500 SEK beroende på tävlingen." },
+    { "q": "Behövs detta medgivande?", "a": "Ja, de flesta tävlingar kräver medgivande från båda vårdnadshavare." },
+    { "q": "Vad gör jag om barnet är skrämmt?", "a": "Det är normalt att vara nervös. Uppmuntra och låt barnet bestämma." },
+    { "q": "Vad händer efter tävlingen?", "a": "Normalt priser och diplom delas ut. Ofta seguito team-event afterwards." }
+  ],
+  "relatedIds": [50, 60, 71],
+  "legalInfo": "Detta medgivande ska signeras av båda vårdnadshavare.",
+  "keywords": ["tävling", "idrött", "barn", "deltager", "medgivande", "aktivitet"]
+}

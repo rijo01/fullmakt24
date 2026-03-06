@@ -1,0 +1,33 @@
+{
+  "id": 105,
+  "slug": "fullmakt-vaccin-halsodagar",
+  "name": "Fullmakt för vaccinering",
+  "category": "Vård & Omsorg",
+  "categorySlug": "vard-omsorg",
+  "description": "Fullmakt för att skriva in på vaccinering.",
+  "longDescription": "En fullmakt för vaccinering ger en person befogenhet att skriva in barn eller äldre för vaccinering.",
+  "badge": "gratis",
+  "usageCount": 876,
+  "fields": [
+    { "id": "givare_namn", "label": "Föräldrern/Vårdgivaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "person_namn", "label": "Personens namn (barn/äldre)", "type": "text", "placeholder": "Erik Andersson", "required": true, "group": "detaljer" },
+    { "id": "person_pnr", "label": "Personens personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "detaljer" },
+    { "id": "vaccin_typ", "label": "Vaccin", "type": "select", "options": ["Influensa", "COVID-19", "BCG", "Bältemässling", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Mormor", "Morfar", "Farmor", "Farfar", "Vän"], "required": true, "group": "havare" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Är vaccinering gratis?", "a": "Ja, det är kostnadsfritt i Sverige för barn och vissa vuxna grupper." },
+    { "q": "Vad är det nationella vaccinationsprogrammet?", "a": "Ett program från Folkhälsomyndigheten som omfattar viktiga vaccinationer." },
+    { "q": "Behövs denna fullmakt?", "a": "Ja, hälso- och sjukvården behöver fullmakt från förälder/vårdgivare." },
+    { "q": "Vilka vacciner ges barn?", "a": "BCG, rotavirus, stelkramp, difteri, pertussis, mässling och många fler." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan givna vacciner kan inte återges." }
+  ],
+  "relatedIds": [68, 70, 84],
+  "legalInfo": "Denna fullmakt gäller mellan dig och hälso- och sjukvården.",
+  "keywords": ["vaccin", "vaccination", "hälsa", "barn", "medicin", "fullmakt"]
+}

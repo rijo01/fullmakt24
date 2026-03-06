@@ -1,0 +1,32 @@
+{
+  "id": 111,
+  "slug": "fullmakt-zool-handelsgarden",
+  "name": "Fullmakt för djurhandel",
+  "category": "Djur & Husdjur",
+  "categorySlug": "djur-husdjur",
+  "description": "Fullmakt för att köpa djur och tillbehör.",
+  "longDescription": "En fullmakt för djurhandel ger en person befogenhet att köpa djur och djurutrustning på din räkning.",
+  "badge": "gratis",
+  "usageCount": 432,
+  "fields": [
+    { "id": "givare_namn", "label": "Djurägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "djurtyp", "label": "Djurtyp", "type": "select", "options": ["Hund", "Katt", "Fågel", "Fisk", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "affar", "label": "Djuraffär", "type": "text", "placeholder": "Zooplus", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "max_belopp", "label": "Max utgift", "type": "text", "placeholder": "5 000 kr", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad säljer djuraffärer?", "a": "Mat, leksaker, bäddar, skötselutrustning och ofta djur själva." },
+    { "q": "Vilka djuraffärer finns?", "a": "Zooplus, Förenta Petshops, lokala affärer och online-butiker." },
+    { "q": "Kan jag köpa djur online?", "a": "Ja, många Online-affärer kan leverera djur med speciell transport." },
+    { "q": "Vilka krav finns för att äga husdjur?", "a": "Det beror på djurtyp men generellt behövs mat, vårdutrymme och tid." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan köpta djur kan inte retureras normalt." }
+  ],
+  "relatedIds": [45, 52, 64],
+  "legalInfo": "Denna fullmakt gäller mellan dig och djuraffären.",
+  "keywords": ["djur", "husdjur", "affär", "köp", "tillbehör", "fullmakt"]
+}

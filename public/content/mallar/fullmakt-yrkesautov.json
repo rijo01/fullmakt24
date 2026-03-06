@@ -1,0 +1,31 @@
+{
+  "id": 110,
+  "slug": "fullmakt-yrkesautov",
+  "name": "Fullmakt för yrkesautomation",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att hantera yrkesrelaterad automation.",
+  "longDescription": "En fullmakt för yrkesautomation ger en person befogenhet att hantera automatiserade verktyg för ditt yrke.",
+  "badge": "premium",
+  "usageCount": 543,
+  "fields": [
+    { "id": "givare_namn", "label": "Användaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "typ", "label": "Automationstyp", "type": "select", "options": ["RPA-robot", "AI-system", "Workflow", "Integration"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Maintenance", "Uppdateringar", "Konfiguration", "Full admin"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är RPA?", "a": "Robotic Process Automation - automatisering av repetitiva arbetsbördan." },
+    { "q": "Vad är en AI-system?", "a": "Artificial Intelligence-system som kan lära sig och fatta beslut själv." },
+    { "q": "Vilka företagsnytta finns?", "a": "Effektivitet, kostnadsbesparingar, färre misstag och snabbare processer." },
+    { "q": "Behövs två vittnen?", "a": "För större system rekommenderas två vittnen." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan körande automationer kan behöva avslutning." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt är IT-relaterad och kräver två vittnen för större system.",
+  "keywords": ["automation", "RPA", "AI", "workflow", "yrkesverktyg", "fullmakt"]
+}

@@ -1,0 +1,32 @@
+{
+  "id": 106,
+  "slug": "fullmakt-vardcentral",
+  "name": "Fullmakt för vårdcentral",
+  "category": "Vård & Omsorg",
+  "categorySlug": "vard-omsorg",
+  "description": "Fullmakt för att besöka vårdcentral.",
+  "longDescription": "En fullmakt för vårdcentral ger en person befogenhet att representera dig vid läkarbesök på vårdcentral.",
+  "badge": "gratis",
+  "usageCount": 987,
+  "fields": [
+    { "id": "givare_namn", "label": "Patientens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "vardcentral", "label": "Vårdcentral", "type": "text", "placeholder": "Vårdcentralen Stockholm City", "required": true, "group": "detaljer" },
+    { "id": "anledning", "label": "Anledning (frivilligt)", "type": "text", "placeholder": "Regelbunden hälsokontroll", "required": false, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Make/Maka", "Barn", "Förälder", "Vän"], "required": true, "group": "havare" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad gör en vårdcentral?", "a": "De erbjuder läkarbesök, sjukskrivning, vaccinering, och första linjens sjukvård." },
+    { "q": "Behöver vårdcentralen denna fullmakt?", "a": "De flesta accepterar fullmakt för läkarbesök." },
+    { "q": "Kan fullmaktstagaren få min journaluppgifter?", "a": "Ja, de måste ha åtkomst för att stödja dig vid besöket." },
+    { "q": "Vad kostar läkarbesök?", "a": "De flesta är kostnadsfria eller låga patientavgifter (100-300 SEK)." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, när som helst genom att informera vårdcentralen." }
+  ],
+  "relatedIds": [68, 70, 84],
+  "legalInfo": "Denna fullmakt gäller mellan dig och vårdcentralen.",
+  "keywords": ["vårdcentral", "läkare", "medicin", "hälsa", "sjukvård", "fullmakt"]
+}
