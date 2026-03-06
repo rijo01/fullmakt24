@@ -1,0 +1,36 @@
+{
+  "id": 93,
+  "slug": "generell-fullmakt",
+  "name": "Generell fullmakt",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Generell fullmakt för att hantera alla ärenden åt annan.",
+  "longDescription": "En generell fullmakt är en bred fullmakt som ger en annan person behörighet att agera för dig i de flesta juridiska och ekonomiska ärenden. Det är en omfattande fullmakt som ofta används när någon behöver fullständig representativ befogenhet.",
+  "badge": "premium",
+  "usageCount": 3456,
+  "fields": [
+    { "id": "givare_namn", "label": "Fullmaktsgivarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Make/Maka", "Barn", "Förälder", "Juridiskt ombud", "Annan"], "required": true, "group": "havare" },
+    { "id": "ej_omfattat", "label": "Vad är INTE omfattat (valfritt)", "type": "textarea", "placeholder": "T.ex. 'Kan inte sälja fastigheter utan mitt samtycke'", "required": false, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne1_pnr", "label": "Vittne 1 personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_pnr", "label": "Vittne 2 personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad kan fullmaktstagaren göra med generell fullmakt?", "a": "En generell fullmakt ger befogenhet att agera i nästan alla ekonomiska och juridiska ärenden utom det som uttryckligen är uteslutit." },
+    { "q": "Vilka begränsningar kan jag sätta?", "a": "Du kan begränsa fullmakten genom att ange vad den INTE omfattar, t.ex. 'Kan inte sälja fastigheter' eller 'Kan inte uppta lån'." },
+    { "q": "Är två vittnen obligatoriska?", "a": "Två vittnen rekommenderas starkt för en generell fullmakt för att styrka äkthet och att du är vid ditt klara samvete." },
+    { "q": "Vad kostar det att upprättar generell fullmakt?", "a": "Det är gratis att upprätta denna fullmakt själv. En juridisk motsvar kan kosta 1000-3000 kr." },
+    { "q": "Kan fullmakten ändras senare?", "a": "Ja, du kan dra tillbaka den helt eller upprättar en ny med andra begränsningar när som helst." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "En generell fullmakt är ett mycket kraftfullt juridiskt instrument. Två vittnen är starkt rekommenderat. Spara originalet på säker plats.",
+  "keywords": ["generell fullmakt", "representant", "juridisk fullmakt", "fullständig"]
+}

@@ -1,0 +1,35 @@
+{
+  "id": 51,
+  "slug": "fullmakt-elbolag",
+  "name": "Fullmakt för elbolag",
+  "category": "Boende & Vardag",
+  "categorySlug": "boende-vardag",
+  "description": "Fullmakt för att hantera elkontraktoch avtal med elbolaget.",
+  "longDescription": "En fullmakt för elbolag ger en annan person befogenhet att hantera dina elkontakt och avtal. Det kan gälla att ändra el­leverantör, hantera avläsningar, ta emot fakturor eller lösa problem med elöverföringen. Detta är praktiskt när du är borta långt eller när någon närstående behöver ta över hanteringen.",
+  "badge": "gratis",
+  "usageCount": 876,
+  "fields": [
+    { "id": "givare_namn", "label": "Kundnamn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "elbolag_namn", "label": "Elbolag", "type": "text", "placeholder": "T.ex. Vattenfall, E.ON", "required": true, "group": "detaljer" },
+    { "id": "matarstation", "label": "Mätarpunktnummer (om känt)", "type": "text", "placeholder": "123456789012", "required": false, "group": "detaljer" },
+    { "id": "bostad_adress", "label": "Bostadsadress för elkontraktet", "type": "address", "placeholder": "Lillgatan 5, 222 33 Göteborg", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Familjemedlem", "Juridiskt ombud", "Fastighetsförvaltare", "Annan"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Märavläsningar", "Ändringar av avtal", "Byte av leverantör", "All hantering"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Kan fullmaktstagaren byta elbolag åt mig?", "a": "Det beror på fullmaktens omfattning. Om den täcker 'byte av leverantör' kan det göras, men kontakta elbolaget för deras krav." },
+    { "q": "Vad behövs för att använda fullmakten hos elbolaget?", "a": "Denna skrivna fullmakt och fullmaktstagares ID. Elbolaget kan också kräva att kundnumret anges." },
+    { "q": "Kan jag begränsa fullmakten till endast märavläsningar?", "a": "Ja, du kan precisera att fullmakten endast täcker märavläsningar, inte ekonomiska beslut." },
+    { "q": "Hur lång tid tar det för fullmakten att gälla?", "a": "Det beror på elbolaget. Kontakta dem för att registrera fullmakten. Det kan ta några arbetsdagar." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, informera elbolaget skriftligt att fullmakten är återkallad. Gör det omedelbar om det är brådskande." }
+  ],
+  "relatedIds": [52, 63, 71],
+  "legalInfo": "Denna fullmakt gäller mellan dig och elbolaget. Elbolaget kan kräva originalet eller en attesterad kopia.",
+  "keywords": ["el", "elbolag", "mätare", "leverantör", "fullmakt"]
+}

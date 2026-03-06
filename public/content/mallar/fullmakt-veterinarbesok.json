@@ -1,0 +1,35 @@
+{
+  "id": 86,
+  "slug": "fullmakt-veterinarbesok",
+  "name": "Fullmakt för veterinärbesök",
+  "category": "Djur & Husdjur",
+  "categorySlug": "djur-husdjur",
+  "description": "Fullmakt för att ta djuret till veterinär åt annan.",
+  "longDescription": "En fullmakt för veterinärbesök ger en annan person befogenhet att ta ditt djur till veterinären och godkänna behandling. Detta är praktiskt när du är sjuk, bortrest eller har begränsad mobilitet.",
+  "badge": "gratis",
+  "usageCount": 1098,
+  "fields": [
+    { "id": "givare_namn", "label": "Djurägarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "djur_namn", "label": "Djurets namn", "type": "text", "placeholder": "Fluffy", "required": true, "group": "detaljer" },
+    { "id": "djur_typ", "label": "Djurtyp", "type": "select", "options": ["Hund", "Katt", "Häst", "Kanin", "Fågel", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "djur_mikrochip", "label": "Mikrochip-nummer (om känt)", "type": "text", "placeholder": "123 456 789 012 345", "required": false, "group": "detaljer" },
+    { "id": "veterinar", "label": "Veterinärklinik", "type": "text", "placeholder": "Djurkliniken Stockholm", "required": false, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Familjemedlem", "Vän", "Djurvårdare", "Granne"], "required": true, "group": "havare" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Kan veterinären acceptera fullmakten?", "a": "De flesta veterinärkliniker accepterar fullmakt för akut vård. Kontakta kliniken i förväg för deras procedur." },
+    { "q": "Vad kostar ett veterinärbesök?", "a": "Det varierar mycket beroende på undersökning och behandling. En undersökning kan kosta 300-800 kr." },
+    { "q": "Vem betalar för veterinärvården?", "a": "Det beror på vad du är överens om med fullmaktstagaren. Ofta betalar djurägarens kreditkort eller försäkring." },
+    { "q": "Behöver veterinären denna fullmakt?", "a": "För akut vård kan många veterinärer göra det utan fullmakt. Men fullmakten är bra för att godkänna dyra ingrepp." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, informera veterinärkliniken omedelbar. Informera också fullmaktstagaren." }
+  ],
+  "relatedIds": [45, 52, 64],
+  "legalInfo": "Denna fullmakt är ett avtal mellan dig och veterinärkliniken. Kliniken kan kräva ursprungdokument.",
+  "keywords": ["veterinär", "djur", "hund", "katt", "fullmakt"]
+}

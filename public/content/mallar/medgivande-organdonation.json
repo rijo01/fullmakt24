@@ -1,0 +1,34 @@
+{
+  "id": 100,
+  "slug": "medgivande-organdonation",
+  "name": "Medgivande för organdonation",
+  "category": "Vård & Omsorg",
+  "categorySlug": "vard-omsorg",
+  "description": "Medgivande till anhörig att donera organ efter döden.",
+  "longDescription": "Ett medgivande för organdonation tillåter en familjemedlem att auktorisera organdonation om du blir hjärndöd eller avlider. Det är ett viktigt dokument för att se till att dina önskemål respekteras.",
+  "badge": "premium",
+  "usageCount": 876,
+  "fields": [
+    { "id": "givare_namn", "label": "Donatorns namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "organ_val", "label": "Vilka organ/vävnader?", "type": "select", "options": ["Alla organ och vävnader", "Endast specifika organ", "Endast vävnader"], "required": true, "group": "detaljer" },
+    { "id": "specifika_organ", "label": "Specifika organ (om valt ovan)", "type": "textarea", "placeholder": "T.ex. njurar, lever, hjärta", "required": false, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Familjemedlemmens namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Make/Maka", "Son/Dotter", "Förälder", "Syskon", "Annan närstående"], "required": true, "group": "havare" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Hur registreras organdonation i Sverige?", "a": "Du kan registrera dig på Donationsregistret på socialstyrelsen.se. Detta medgivande stödjer den registreringen." },
+    { "q": "Kan organdonation ändras senare?", "a": "Ja, du kan när som helst uppdatera ditt Donationsregistret eller dra tillbaka denna fullmakt." },
+    { "q": "Vilka organ kan doneras?", "a": "Njurar, lever, hjärta, lungor, bukspottkörtel och tjockoch tunntarm. Även vävnader som hornhinnor och ben." },
+    { "q": "Måste det vara två vittnen?", "a": "Två vittnen rekommenderas för juridisk styrka. De bör inte vara familjemedlemmar." },
+    { "q": "Vad händer om jag inte vill donera?", "a": "Du kan då inte signera detta medgivande. Du kan registrera dig som icke-donator istället." }
+  ],
+  "relatedIds": [68, 70, 75],
+  "legalInfo": "Organdonation är helt frivillig. Detta medgivande kan kombineras med registrering i Donationsregistret.",
+  "keywords": ["organ", "donation", "dödsfall", "medgivande", "vävnad"]
+}

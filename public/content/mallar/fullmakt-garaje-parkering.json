@@ -1,0 +1,34 @@
+{
+  "id": 54,
+  "slug": "fullmakt-garage-parkering",
+  "name": "Fullmakt för garage och parkering",
+  "category": "Boende & Vardag",
+  "categorySlug": "boende-vardag",
+  "description": "Fullmakt för att hantera garage- och parkeringsärenden.",
+  "longDescription": "En fullmakt för garage och parkering ger en annan person befogenhet att hantera din parkering eller garage. Det kan gälla att betala parkeringsavgifter, registrera nya fordon, eller lösa dispyter med parkeringsbolag.",
+  "badge": "gratis",
+  "usageCount": 654,
+  "fields": [
+    { "id": "givare_namn", "label": "Fastighetsägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "parkering_adress", "label": "Garagens/Parkeringens adress", "type": "address", "placeholder": "Lillgatan 5 B1, 222 33 Göteborg", "required": true, "group": "detaljer" },
+    { "id": "plats_nummer", "label": "Plats-/Garagenummer", "type": "text", "placeholder": "B1 eller P123", "required": false, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Familjemedlem", "Fastighetsskötar", "Juridiskt ombud"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Betalning av avgifter", "Registrering av fordon", "Underhål och reparation", "All hantering"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vem betalar parkeringsavgifter?", "a": "Normalt du själv, men fullmaktstagaren kan auktoriseras att betala på ditt vägnar om det är avtalt." },
+    { "q": "Kan fullmaktstagaren registrera nya fordon?", "a": "Det beror på fullmaktens omfattning. En begränsad fullmakt kan bara täcka betalning, inte registrering." },
+    { "q": "Vad gör jag om jag får en parkeringsbiljett?", "a": "Du kan ge fullmaktstagaren befogenhet att hantera protesterna. Men beslut om överklagande måste godkännas av dig." },
+    { "q": "Kan garage stängas utan fullmakt?", "a": "En parkeringsplats kan inte stängas utan att de först försöker kontakta ägaren. Fullmakten är viktig för att undvika problemställ." },
+    { "q": "Vad kostar en parkeringsplats i genomsnitt?", "a": "Det varierar mycket mellan städer. I Stockholm kan det vara 1000-3000 kr/månad, i mindre städer mindre." }
+  ],
+  "relatedIds": [52, 62, 71],
+  "legalInfo": "Denna fullmakt gäller mellan dig och parkeringsbolaget/fastighetsägaren. Bolagets regler gäller.",
+  "keywords": ["parkering", "garage", "bilplats", "fullmakt"]
+}

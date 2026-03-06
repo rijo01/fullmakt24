@@ -1,0 +1,34 @@
+{
+  "id": 65,
+  "slug": "fullmakt-mobiloperator-senior",
+  "name": "Fullmakt för mobiloperatör (senior)",
+  "category": "Seniorer & Digital Omsorg",
+  "categorySlug": "seniorer-omsorg",
+  "description": "Fullmakt för att hantera mobil- och telefonkontakt åt senior.",
+  "longDescription": "En fullmakt för mobiloperatör ger en familjemedlem eller vårdare befogenhet att hantera mobiltelefon- och telefonkontakt för en äldre person. Det kan gälla betalning, att aktivera/deaktivera tjänster, eller att lösa tekniska problem.",
+  "badge": "gratis",
+  "usageCount": 1543,
+  "fields": [
+    { "id": "givare_namn", "label": "Kundens namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_telefon", "label": "Telefonnummer", "type": "phone", "placeholder": "070-123 45 67", "required": true, "group": "givare" },
+    { "id": "operatoor", "label": "Mobiloperatör", "type": "select", "options": ["Telia", "Vodafone", "Telenor", "Tre", "Fiberby", "Annan"], "required": true, "group": "detaljer" },
+    { "id": "kundomrade", "label": "Kundnummer (om känt)", "type": "text", "placeholder": "1234567890", "required": false, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Son/Dotter", "Barnbarn", "Hemtjänst", "Kurator"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Betalning", "Teknik och störningar", "Ändringar av abonnemang", "All hantering"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Kan fullmaktstagaren ändra lösenordet?", "a": "Det beror på operatören. Några tillåter lösenordsändringar för fullmaktstagare, andra inte." },
+    { "q": "Behöver operatören registrera fullmakten?", "a": "De flesta operatörer accepterar en skriftlig fullmakt, men kontakta dem för deras procedur." },
+    { "q": "Kan jag begränsa fullmakten till endast teknisk support?", "a": "Ja, du kan precisera att fullmakten endast gäller tekniska frågor, inte ekonomiska beslut." },
+    { "q": "Vad gör jag om jag förlorar mobiltelefonen?", "a": "Kontakta omedelbar operatören och informera fullmaktstagaren. Operatören kan temporärt blockera tjänsten." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, informera operatören skriftligt och fullmakten återkallas." }
+  ],
+  "relatedIds": [24, 51, 75],
+  "legalInfo": "Denna fullmakt gäller mellan dig och mobiloperatören. Operatören kan kräva identifikation från fullmaktstagaren.",
+  "keywords": ["mobil", "telefon", "senior", "operatör", "fullmakt"]
+}
