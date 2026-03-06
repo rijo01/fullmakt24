@@ -1,0 +1,34 @@
+{
+  "id": 74,
+  "slug": "fullmakt-lampotjekladministration",
+  "name": "Fullmakt för företagsjuridik",
+  "category": "Företagsjuridik",
+  "categorySlug": "foretagsjuridik",
+  "description": "Fullmakt för att administrera företaget.",
+  "longDescription": "En fullmakt för företagsjuridik ger en person befogenhet att administrera ditt företag och hantera juridiska ärenden.",
+  "badge": "premium",
+  "usageCount": 1234,
+  "fields": [
+    { "id": "givare_namn", "label": "Företagets namn", "type": "text", "placeholder": "Anderssons AB", "required": true, "group": "givare" },
+    { "id": "givare_orgnr", "label": "Organisationsnummer", "type": "text", "placeholder": "556000-1234", "required": true, "group": "givare" },
+    { "id": "bolagstyp", "label": "Bolagstyp", "type": "select", "options": ["AB", "Handelsbolag", "Aktiebolag", "AB", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Styrelseledamot", "VD", "Juridiskt ombud"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Bolagsregistrering", "Möten", "Kontrakt", "Full admin"], "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är ett aktiebolag?", "a": "En juridisk enhet ägs av aktieägare och styrs av styrelse och VD." },
+    { "q": "Behövs två vittnen?", "a": "Två vittnen rekommenderas för företagsfullmakter." },
+    { "q": "Kan fullmaktstagaren underteckna kontrakt?", "a": "Ja, om fullmakten täcker 'kontrakt'." },
+    { "q": "Vad gör jag vid konflikter?", "a": "Kontakta en affärsadvokat för att skydda dina intressen." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan undertecknade kontrakt kan inte återkallas." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt är juridisk och kräver två vittnen. En advokat rekommenderas.",
+  "keywords": ["företag", "bolag", "juridik", "administration", "aktiebolag", "fullmakt"]
+}

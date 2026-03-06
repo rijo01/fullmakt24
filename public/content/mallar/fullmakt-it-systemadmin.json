@@ -1,0 +1,31 @@
+{
+  "id": 67,
+  "slug": "fullmakt-it-systemadmin",
+  "name": "Fullmakt för IT-systemadmin",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för IT-systemadministration.",
+  "longDescription": "En fullmakt för IT-systemadministration ger en person befogenhet att administrera dina IT-system och nätverk.",
+  "badge": "premium",
+  "usageCount": 765,
+  "fields": [
+    { "id": "givare_namn", "label": "Systemägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "system", "label": "System", "type": "select", "options": ["Windows Server", "Linux", "Mac", "Nätverk", "Cloud"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Läsa data", "Ändra inställningar", "User management", "Full admin"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är en systemadministratör?", "a": "En person som administrerar IT-system, nätverk och användare." },
+    { "q": "Kan fullmaktstagaren se all min data?", "a": "Ja, om de är admin. Var försiktig med vem du ger denna fullmakt till." },
+    { "q": "Hur skyddar jag mina system?", "a": "Använd sterka lösenord, tvåfaktorsautentisering och uppdatera regelbundet." },
+    { "q": "Vad gör jag vid dataintrång?", "a": "Kontakta omedelbar en IT-säkerhetexpert och anmäl till dataskyddsmyndigheten." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, genom att ändra lösenord och åtkomsträttigheter." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt är IT-relaterad och mycket känslig. Ge den endast till personer du absolut litar på.",
+  "keywords": ["IT", "systemadministration", "nätverk", "server", "admin", "fullmakt"]
+}

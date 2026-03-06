@@ -1,0 +1,33 @@
+{
+  "id": 80,
+  "slug": "fullmakt-namnbytesfullmakt",
+  "name": "Fullmakt för namnbyte",
+  "category": "Juridik",
+  "categorySlug": "juridik",
+  "description": "Fullmakt för att ansöka om namnbyte.",
+  "longDescription": "En fullmakt för namnbyte ger en person befogenhet att ansöka om namnbyte på Skatteverket åt dig.",
+  "badge": "premium",
+  "usageCount": 654,
+  "fields": [
+    { "id": "givare_namn", "label": "Det gamla namnet", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "nytt_namn", "label": "Det nya namn du vill ha", "type": "text", "placeholder": "Anna Svensson", "required": true, "group": "detaljer" },
+    { "id": "orsak", "label": "Orsak till namnbyte", "type": "select", "options": ["Äktenskap", "Skilsmässa", "Personligt val", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad kostar namnbyte?", "a": "Det kostar omkring 200-400 SEK beroende på typ av namnbyte." },
+    { "q": "Hur lång tid tar det?", "a": "Normalt 2-4 veckor från ansökning till godkännande." },
+    { "q": "Kan jag byta till vilken namn som helst?", "a": "De flesta namn accepteras, men extrema namn kan nekas." },
+    { "q": "Behövs två vittnen?", "a": "Två vittnen rekommenderas för namnbyten." },
+    { "q": "Vad gör jag när namnbyte är klart?", "a": "Du får ett namnbytesbevis. Uppdatera alla myndigheter och banker." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt är juridisk och kräver två vittnen.",
+  "keywords": ["namnbyte", "namn", "Skatteverket", "juridik", "fullmakt"]
+}

@@ -1,0 +1,33 @@
+{
+  "id": 72,
+  "slug": "fullmakt-katsofoskolan",
+  "name": "Fullmakt för katederala skolan",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Fullmakt för att representera på katedral skolan.",
+  "longDescription": "En fullmakt för katedral skolan ger en person befogenhet att representera ditt barn på en religiös skola.",
+  "badge": "gratis",
+  "usageCount": 543,
+  "fields": [
+    { "id": "givare_namn", "label": "Föräldrerns namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "barn_namn", "label": "Barnets namn", "type": "text", "placeholder": "Erik Andersson", "required": true, "group": "detaljer" },
+    { "id": "barn_klass", "label": "Klass", "type": "text", "placeholder": "4A", "required": true, "group": "detaljer" },
+    { "id": "skola", "label": "Skola", "type": "text", "placeholder": "Uppsala Domkyrkoskola", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Mormor", "Morfar", "Farmor", "Farfar", "Vän"], "required": true, "group": "havare" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vilka katedral skolor finns?", "a": "Uppsala Domkyrkoskola och andra religiösa gymnasier i Sverige." },
+    { "q": "Vad gör en katedral skola?", "a": "De kombinerar skolundervisning med religiös utbildning." },
+    { "q": "Behöver skolan denna fullmakt?", "a": "De flesta accepterar fullmakt för hämtning och möten." },
+    { "q": "Kan jag ge instruktioner?", "a": "Ja, säg vilka begränsningar som gäller (t.ex. endast hämtning, inte undervisning)." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, informera skolan omedelbar." }
+  ],
+  "relatedIds": [50, 60, 71],
+  "legalInfo": "Denna fullmakt gäller mellan dig och skolan.",
+  "keywords": ["skola", "katedral", "religiös", "barn", "education", "fullmakt"]
+}

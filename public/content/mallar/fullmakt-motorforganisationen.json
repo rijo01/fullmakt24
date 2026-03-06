@@ -1,0 +1,32 @@
+{
+  "id": 79,
+  "slug": "fullmakt-motorforganisationen",
+  "name": "Fullmakt för motorföreningens",
+  "category": "Resa & Transport",
+  "categorySlug": "resa-transport",
+  "description": "Fullmakt för motorföreningen.",
+  "longDescription": "En fullmakt för motorföreningen ger en person befogenhet att representera dig vid föreningen.",
+  "badge": "gratis",
+  "usageCount": 765,
+  "fields": [
+    { "id": "givare_namn", "label": "Medlemmens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "forening", "label": "Förening", "type": "select", "options": ["M", "KMF", "Lokalförening", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "bil_registrering", "label": "Bilens registreringsnummer (frivilligt)", "type": "text", "placeholder": "ABC 123", "required": false, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Möte", "Röstning", "Försäljning av fordonen", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vilka är motorföreningarna?", "a": "M, KMF och många lokala föreningar erbjuder försäkring, service och möten." },
+    { "q": "Behövs medlemskap?", "a": "Normalt ja. Medlemskapen kostar 500-1500 SEK per år." },
+    { "q": "Vilka tjänster erbjuds?", "a": "Försäkring, pannhjälp, juridisk rådgivning, tidskrifter och möten." },
+    { "q": "Kan jag ge instruktioner för mötet?", "a": "Ja, säg vilket sätt fullmaktstagaren ska rösta." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, innan mötet startar." }
+  ],
+  "relatedIds": [39, 53, 62],
+  "legalInfo": "Denna fullmakt gäller mellan dig och motorföreningen.",
+  "keywords": ["motorförening", "M", "KMF", "försäkring", "bil", "fullmakt"]
+}

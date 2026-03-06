@@ -1,0 +1,32 @@
+{
+  "id": 77,
+  "slug": "fullmakt-modersmalsundervisning",
+  "name": "Fullmakt för modersmålsundervisning",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Fullmakt för modersmålsundervisning.",
+  "longDescription": "En fullmakt för modersmålsundervisning ger en person befogenhet att anmäla ditt barn till modersmålsundervisning.",
+  "badge": "gratis",
+  "usageCount": 432,
+  "fields": [
+    { "id": "givare_namn", "label": "Föräldrerns namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "barn_namn", "label": "Barnets namn", "type": "text", "placeholder": "Erik Andersson", "required": true, "group": "detaljer" },
+    { "id": "modersmal", "label": "Modersmål", "type": "select", "options": ["Arabiska", "Kinesiska", "Engelska", "Spanska", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Mormor", "Morfar", "Farmor", "Farfar", "Vän"], "required": true, "group": "havare" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är modersmålsundervisning?", "a": "Undervisning i barnets förstaspråk som hålls ofta på kvällstid." },
+    { "q": "Vilka språk erbjuds?", "a": "Det beror på kommunen, men många erbjuder arabiska, kinesiska, spanska och andra." },
+    { "q": "Kostar modersmålsundervisning?", "a": "Det är normalt gratis för barn som har rätt till det." },
+    { "q": "Behöver skolan denna fullmakt?", "a": "Ja, de flesta behöver skriftlig fullmakt för anmälan." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, informera skolan omedelbar." }
+  ],
+  "relatedIds": [50, 60, 71],
+  "legalInfo": "Denna fullmakt gäller mellan dig och skolan.",
+  "keywords": ["modersmål", "språk", "undervisning", "barn", "fullmakt"]
+}

@@ -1,0 +1,35 @@
+{
+  "id": 69,
+  "slug": "fullmakt-juridisk-ombud",
+  "name": "Fullmakt för juridisk ombud",
+  "category": "Juridik",
+  "categorySlug": "juridik",
+  "description": "Fullmakt för juridisk representation.",
+  "longDescription": "En fullmakt för juridisk ombud ger en advokat eller juridisk expert befogenhet att representera dig i domstol och myndighetsärenden.",
+  "badge": "premium",
+  "usageCount": 3456,
+  "fields": [
+    { "id": "givare_namn", "label": "Klientens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "domstol", "label": "Domstol/Myndighet", "type": "text", "placeholder": "Stockholms tingsrätt", "required": true, "group": "detaljer" },
+    { "id": "arende", "label": "Ärendetyp", "type": "select", "options": ["Civilmål", "Brottmål", "Myndighetsärende", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Ombudets namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_titel", "label": "Titel", "type": "select", "options": ["Advokat", "Jurist", "Juridisk konsult"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Processledning", "Förhandling", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är skillnaden mellan advokat och jurist?", "a": "Advokater är licensierade och kan representera i domstol. Jurister kan ge juridisk rådgivning." },
+    { "q": "Vad kostar en advokat?", "a": "Advokater tar normalt 1000-3000 SEK per timme. Många tar kontingentavtal (% av vinsten)." },
+    { "q": "Behövs två vittnen?", "a": "Två vittnen är starkt rekommenderat för juridiska fullmakter." },
+    { "q": "Kan jag ge instruktioner?", "a": "Ja, säg åt ombudet vilka gränser du vill ha för förhandling och krav." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan gjorda uttalanden kan inte återkallas utan nya förutsättningar." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt är juridik och kräver två vittnen. Två vittnen är obligatoriska.",
+  "keywords": ["advokat", "jurist", "juridik", "domstol", "representation", "fullmakt"]
+}

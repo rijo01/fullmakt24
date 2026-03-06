@@ -1,0 +1,34 @@
+{
+  "id": 76,
+  "slug": "fullmakt-lanehandlare",
+  "name": "Fullmakt för lånehandlare",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att söka lån.",
+  "longDescription": "En fullmakt för lånehandlare ger en person befogenhet att söka och underteckna låneavtal på din räkning.",
+  "badge": "premium",
+  "usageCount": 1876,
+  "fields": [
+    { "id": "givare_namn", "label": "Lånetagarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "lanetyp", "label": "Låntyp", "type": "select", "options": ["Personlån", "Bolån", "Bilfinans", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "max_belopp", "label": "Max lånebelopp", "type": "text", "placeholder": "500 000 kr", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Söka lån", "Underteckna avtal", "Förhandla villkor", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är räntesats?", "a": "Den procentsats du betalar i intresse på lånet. Låg ränta är bra." },
+    { "q": "Vad är en kreditkontroll?", "a": "Långivaren checkar din betalningshistoria och skuldbörda." },
+    { "q": "Kan jag få lån utan jobb?", "a": "Det är svårare. Du kan behöva en borgenär eller säkerhet." },
+    { "q": "Vad är ett bolån?", "a": "Ett lån för att köpa en fastighet. Ofta låga räntor men lång löptid." },
+    { "q": "Behövs två vittnen?", "a": "Två vittnen rekommenderas för lånefinansiella fullmakter." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt är finansiell och kräver två vittnen.",
+  "keywords": ["lån", "lånehandlare", "bolån", "personlån", "finansiering", "fullmakt"]
+}

@@ -1,0 +1,32 @@
+{
+  "id": 66,
+  "slug": "fullmakt-idrottsforbund",
+  "name": "Fullmakt för idrottsklubb",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Fullmakt för att representera idöttsklubb.",
+  "longDescription": "En fullmakt för idöttsklubb ger en person befogenhet att representera klubben vid möten och tävlingar.",
+  "badge": "gratis",
+  "usageCount": 1234,
+  "fields": [
+    { "id": "givare_namn", "label": "Medlemmens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "klubb", "label": "Klubb", "type": "text", "placeholder": "Stockholm FC", "required": true, "group": "detaljer" },
+    { "id": "sport", "label": "Sport", "type": "select", "options": ["Fotboll", "Ishockey", "Friidrott", "Segling", "Annan"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Möte", "Tävling", "Registrering", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vilka idöttförbund finns?", "a": "Sveriges Idrott är paraply för många förbund - fotboll, ishockey, friidrott, etc." },
+    { "q": "Kan fullmaktstagaren deltaga i tävling?", "a": "Ja, om fullmakten täcker 'tävling'." },
+    { "q": "Vad kostar idöttmedlemskap?", "a": "Normalt 100-500 kr per år beroende på sport och klubb." },
+    { "q": "Kan jag ge instruktioner för tävlingen?", "a": "Ja, berätta för fullmaktstagaren vilka instruktioner du vill ge." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, innan tävlingen startar." }
+  ],
+  "relatedIds": [50, 60, 71],
+  "legalInfo": "Denna fullmakt gäller mellan dig och idöttklubben.",
+  "keywords": ["idött", "sport", "klubb", "tävling", "fullmakt"]
+}

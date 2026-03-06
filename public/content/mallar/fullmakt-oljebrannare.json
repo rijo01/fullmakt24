@@ -1,0 +1,33 @@
+{
+  "id": 82,
+  "slug": "fullmakt-oljebrannare",
+  "name": "Fullmakt för oljebränsle",
+  "category": "Boende & Vardag",
+  "categorySlug": "boende-vardag",
+  "description": "Fullmakt för att beställa och betala för oljebränsle.",
+  "longDescription": "En fullmakt för oljebränsle ger en person befogenhet att beställa och betala för oljebränsle till din fastighet.",
+  "badge": "gratis",
+  "usageCount": 543,
+  "fields": [
+    { "id": "givare_namn", "label": "Fastighetsägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "fastighet", "label": "Fastighetens adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "detaljer" },
+    { "id": "leverantor", "label": "Oljebränsleleverantör", "type": "text", "placeholder": "Preem", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Beställning", "Betalning", "Service", "All hantering"], "required": true, "group": "detaljer" },
+    { "id": "max_kostnad", "label": "Max kostnad per leverans", "type": "text", "placeholder": "20 000 kr", "required": false, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad kostar olja?", "a": "Priset varierar mycket. Normalt 4-8 SEK per liter beroende på marknad." },
+    { "q": "Hur ofta beställer jag?", "a": "Beroende på förbrukning. De flesta beställer 1-2 gånger per år." },
+    { "q": "Kan fullmaktstagaren välja leveranstid?", "a": "Normalt ja, men det är smart att ge direkta instruktioner." },
+    { "q": "Vad gör jag vid frost i systemet?", "a": "Kontakta leverantören omedelbar för servicepersonal." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, informera leverantören skriftligt." }
+  ],
+  "relatedIds": [24, 38, 75],
+  "legalInfo": "Denna fullmakt gäller mellan dig och oljebränsleleverantören.",
+  "keywords": ["olja", "bränsle", "värme", "hem", "fullmakt"]
+}

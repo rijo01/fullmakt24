@@ -1,0 +1,33 @@
+{
+  "id": 73,
+  "slug": "fullmakt-konsumentklagomaal",
+  "name": "Fullmakt för konsumentklagomål",
+  "category": "Juridik",
+  "categorySlug": "juridik",
+  "description": "Fullmakt för att hantera konsumentklagomål.",
+  "longDescription": "En fullmakt för konsumentklagomål ger en person befogenhet att klaga på en köp eller tjänst på dina rättigheter.",
+  "badge": "gratis",
+  "usageCount": 876,
+  "fields": [
+    { "id": "givare_namn", "label": "Konsumentens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "produkt", "label": "Produkt/Tjänst", "type": "text", "placeholder": "Möbel från möbelaffär", "required": true, "group": "detaljer" },
+    { "id": "försäljare", "label": "Försäljare", "type": "text", "placeholder": "Möbelaffären AB", "required": true, "group": "detaljer" },
+    { "id": "köpsdatum", "label": "Köpsdatum", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Klagomål", "Reparation", "Pengaråterbetalning", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vilka är konsumenträttigheterna?", "a": "Du har rätt till vara utan fel i 3 år, kunna reklamera, och få ersättning." },
+    { "q": "Vad är ångerrätten?", "a": "Du kan ånga köp gjort på distans inom 14 dagar." },
+    { "q": "Vad gör jag vid fel?", "a": "Reklamera genast. Försäljaren måste åtgärda eller ge pengar tillbaka." },
+    { "q": "Vad kostar konsumentklagomål?", "a": "Ofta gratis. Du kan kontakta ARN (Allmänna Reklamationsnämnden) för hjälp." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan lämnade klagomål kan inte återkallas." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt gäller mellan dig och försäljaren eller ARN.",
+  "keywords": ["konsument", "klagomål", "reklamation", "köprättigheter", "fullmakt"]
+}
