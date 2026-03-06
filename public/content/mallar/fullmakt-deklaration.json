@@ -1,34 +1,33 @@
 {
+  "id": 40,
   "slug": "fullmakt-deklaration",
-  "seo": {
-    "title": "Fullmakt för deklaration – Mall & Guide 2025 | Fullmakt24.se",
-    "metaDescription": "Skapa fullmakt för deklaration gratis. Juridisk mall för att låta revisor eller bokförare lämna in din deklaration. Accepterad av Skatteverket 2025.",
-    "h1": "Fullmakt för deklaration – Mall & Guide 2025",
-    "keywords": ["fullmakt deklaration", "deklarationsfullmakt", "revisor fullmakt", "bokförare fullmakt", "inkomstdeklaration fullmakt"]
-  },
-  "content": {
-    "introduction": "En fullmakt för deklaration ger någon annan – oftast en revisor, bokförare eller revisorföretag – rätt att lämna in din inkomstdeklaration åt dig på Skatteverket. Det sparar tid och säkerställer att allt blir korrekt ifyllt.\n\nMånga egenföretagare och privatpersoner använder denna fullmakt för att låta professionella hantera deklarationen. Det tar bort stressen från papperarbetet och säkerställer att Skatteverket får in allt i rätt tid. En korrekt utformad fullmakt säkerställer att Skatteverket accepterar representationen.",
-    "legalValidity": "En fullmakt för deklaration är giltig enligt skatteförvaltningslagen och avtalslagen (1915:218). Skatteverket accepterar skriftliga fullmakter för deklarationsärenden. Fullmakten kan vara både tidsbegränsad och generell. Fullmaktshavaren måste kunna legitimera sig vid kontakt med Skatteverket. Vi rekommenderar att bevitna fullmakten för att säkerställa att Skatteverket utan problem accepterar representationen.",
-    "howToGuide": "Steg 1: Ange dina personuppgifter som fullmaktsgivare – namn, personnummer och adress.\n\nSteg 2: Ange revsorns eller bokförarens namn och organisationsnummer (eller personnummer vid privatperson).\n\nSteg 3: Specificera vilka deklarationer fullmakten gäller för: inkomstdeklaration, företagsdecklaration, mervärdesskatteredovisning, etc.\n\nSteg 4: Ange vilka år fullmakten gäller för – kan vara en specifik deklaration eller flera år framöver.\n\nSteg 5: Klargör vad fullmakten omfattar: endast deklarationsinlämning, eller även kommunikation med Skatteverket vid frågor?\n\nSteg 6: Ange giltighetstid – ofta ett till tre år för deklarationsfullmakter.\n\nSteg 7: Granska och ladda ner som PDF.\n\nSteg 8: Underteckna fullmakten, helst med två vittnen.",
-    "commonMistakes": "1. För vag formulering – Specificera exakt vilka deklarationer fullmakten gäller för och för vilka år.\n\n2. Inte tydligt vilka åtgärder – Klargör om fullmakten gäller endast inlämning eller även kommunikation med Skatteverket.\n\n3. För kort giltighetstid – Sätt ett rimligt slutdatum, oftast ett till tre år.\n\n4. Glömmer organisationsnummer – För företag måste organisationsnumret anges.\n\n5. Vittnen undertecknar före fullmaktsgivaren – Se till att du undertecknar först.",
-    "faq": [
-      {"question": "Accepterar Skatteverket denna fullmakt?", "answer": "Ja, en korrekt utformad skriftlig fullmakt accepteras av Skatteverket enligt skatteförvaltningslagen."},
-      {"question": "Kan jag ge fullmakt bara för en specifik deklaration?", "answer": "Ja, du kan begränsa fullmakten till en specifik deklaration eller ett visst år."},
-      {"question": "Vad händer om jag ändrar revisor?", "answer": "Du kan ge en ny fullmakt till den nya revisorn och återkalla den gamla. Skatteverket accepterar båda."},
-      {"question": "Gäller fullmakten för mervärdesskatt och andra redovisningar?", "answer": "Du kan specificera vilket det gäller för. Denna mall kan användas för alla typer av skattedeklarationer och redovisningar."},
-      {"question": "Behöver fullmakten revideras varje år?", "answer": "Det rekommenderas att granska fullmakten årligen, men en giltig fullmakt kan användas flera år om så överenskommits."}
-    ],
-    "relatedSearchTerms": ["deklarationsfullmakt gratis", "revisor fullmakt", "bokförare fullmakt mall", "inkomstdeklaration fullmakt"]
-  },
-  "schema": {
-    "faqSchema": true,
-    "howToSchema": true,
-    "breadcrumbSchema": true
-  },
-  "internalLinks": [
-    {"text": "Fullmakt för Skatteverket", "href": "/mallar/ekonomi-myndigheter/fullmakt-skatteverket"},
-    {"text": "Fullmakt för bankärenden", "href": "/mallar/ekonomi-myndigheter/fullmakt-bank"},
-    {"text": "Fullmakt för bokföring och revision", "href": "/mallar/ekonomi-myndigheter/fullmakt-bolagsverket"}
+  "name": "Fullmakt för deklaration",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att hantera deklarationen åt Skatteverket.",
+  "longDescription": "En fullmakt för deklaration ger en person befogenhet att representera dig vid deklaration av inkomster till Skatteverket. Det kan gälla företagardeklaration eller privatperson.",
+  "badge": "gratis",
+  "usageCount": 1543,
+  "fields": [
+    { "id": "givare_namn", "label": "Deklarantens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "deklarationstyp", "label": "Deklarationstyp", "type": "select", "options": ["Privatperson", "Företagare", "Fristående", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "ar", "label": "Deklarationsår", "type": "text", "placeholder": "2025", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Revisor", "Redovisningskonsult", "Familjemedlem", "Juridiskt ombud"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Inlämning av deklaration", "Kommunikation med Skatteverket", "Ändringsyrkande", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
   ],
-  "lastUpdated": "2025-02-27"
+  "faq": [
+    { "q": "Når är deklarationsfristen?", "a": "2 maj varje år är sista dagen för deklaration på webben. För brev är det tidigare." },
+    { "q": "Vad gör jag om jag inte vet vad jag ska deklarera?", "a": "En revisor eller redovisningskonsult kan hjälpa dig. Denna fullmakt låter dem göra det åt dig." },
+    { "q": "Kan jag få böter för sen deklaration?", "a": "Ja, Skatteverket kan ta ut dröjsmålsavgift vid sen inlämning." },
+    { "q": "Behöver jag deklarera om jag inte hade inkomst?", "a": "Normalt nej, men kontakta Skatteverket för ditt specifika fall." },
+    { "q": "Kan fullmaktstagaren se mina skattedetaljer?", "a": "Ja, för att göra deklarationen måste de ha tillgång till dina inkomster och kostnader." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt gäller mellan dig och Skatteverket. Skatteverket kan kräva verifikation.",
+  "keywords": ["deklaration", "skatt", "Skatteverket", "inkomst", "fullmakt"]
 }

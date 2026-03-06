@@ -1,34 +1,32 @@
 {
+  "id": 78,
   "slug": "fullmakt-skatteverket",
-  "seo": {
-    "title": "Fullmakt för Skatteverket – Mall & Guide 2025 | Fullmakt24.se",
-    "metaDescription": "Skapa fullmakt för Skatteverket gratis. Juridiskt granskad mall för deklaration, skatterevision och myndighetskontakt. Ladda ner som PDF direkt.",
-    "h1": "Fullmakt för Skatteverket – Mall & Guide 2025",
-    "keywords": ["fullmakt skatteverket", "fullmakt deklaration", "skattefullamakt", "fullmakt skatterevision", "fullmakt skatteverket mall"]
-  },
-  "content": {
-    "introduction": "En fullmakt för Skatteverket ger någon annan rätt att företräda dig i skatteärenden. Det kan handla om att lämna in deklaration, kommunicera vid skatterevision, eller hantera övriga myndighetskontakter med Skatteverket.\n\nDet finns många situationer där en skattefullamakt är praktisk. Kanske är du egenföretagare och behöver din revisor eller bokförare att hanterar skattekontakter, eller så behöver du någon familjemedlem eller vän att representera dig under en tidsperiod. En korrekt utformad fullmakt säkerställer att Skatteverket accepterar representationen.",
-    "legalValidity": "En fullmakt för Skatteverket är giltig enligt avtalslagen (1915:218) och regleras av skatteförvaltningslagen. Skatteverket kräver att fullmakten är skriftlig och undertecknad av fullmaktsgivaren. Fullmaktshavaren måste kunna identifiera sig med giltig legitimation vid kontakt med myndigheten. Vi rekommenderar att bevitna fullmakten för att stärka dess juridiska giltighet.",
-    "howToGuide": "Steg 1: Ange dina personuppgifter som fullmaktsgivare – namn, personnummer och adress.\n\nSteg 2: Ange uppgifter om fullmaktshavaren (den person som ska representera dig) – namn och personnummer.\n\nSteg 3: Precisera vilket eller vilka skatteärenden fullmakten gäller. Var specifik: deklaration, skatterevision, mervärdesskatt, preliminär skatt, etc.\n\nSteg 4: Ange giltighetstid. Skatteverket accepterar både tidsbegränsad fullmakt och fullmakt tills vidare.\n\nSteg 5: Granska dokumentet noggrant och ladda ner som PDF.\n\nSteg 6: Skriv under fullmakten. Det är starkt rekommenderat att två vittnen också undertecknar.",
-    "commonMistakes": "1. Alltför vag formulering – Skatteverket kan neka fullmakter som är för generella. Specificera exakt vilka skatteärenden det gäller.\n\n2. Saknar personnummer – Både fullmaktsgivarens och fullmaktshavarens personnummer måste anges tydligt.\n\n3. Inget slutdatum – En tidsobestämd fullmakt kan skapa problem. Ange alltid en giltighetstid eller datum när den upphör.\n\n4. Glömmer att uppdatera – En gammal fullmakt kan inte accepteras. Se till att fullmakten är aktuell.\n\n5. Skriver inte under innan bevittning – Vittnen ska underteckna EFTER att fullmaktsgivaren undertecknat.",
-    "faq": [
-      {"question": "Accepterar Skatteverket denna fullmakt?", "answer": "Ja, en korrekt utformad skriftlig fullmakt accepteras av Skatteverket enligt skatteförvaltningslagen."},
-      {"question": "Kan en revisor eller bokförare ha fullmakt?", "answer": "Ja, många egenföretagare ger sin revisor eller bokförare fullmakt att hantara skattekontakter och deklaration."},
-      {"question": "Gäller fullmakten för både privatperson och företag?", "answer": "Denna mall är för privatpersoner. För aktiebolag eller andra juridiska personer krävs annan fullmakt."},
-      {"question": "Kan jag begränsa fullmakten till bara deklaration?", "answer": "Ja, du kan specificera exakt vilka ärenden fullmakten gäller för – det är ofta rekommenderat för säkerhet."},
-      {"question": "Hur återkallar jag fullmakten?", "answer": "Meddela Skatteverket skriftligt om att fullmakten är återkallad. Skicka även meddelande till fullmaktshavaren."}
-    ],
-    "relatedSearchTerms": ["skatteverket fullmakt mall", "deklaration fullmakt", "skattefullamakt gratis", "skatterevision fullmakt"]
-  },
-  "schema": {
-    "faqSchema": true,
-    "howToSchema": true,
-    "breadcrumbSchema": true
-  },
-  "internalLinks": [
-    {"text": "Fullmakt för deklaration", "href": "/mallar/ekonomi-myndigheter/fullmakt-deklaration"},
-    {"text": "Generell fullmakt", "href": "/mallar/ekonomi-myndigheter/generell-fullmakt"},
-    {"text": "Fullmakt för bankärenden", "href": "/mallar/ekonomi-myndigheter/fullmakt-bank"}
+  "name": "Fullmakt för Skatteverket",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att representera vid Skatteverkets ärenden.",
+  "longDescription": "En fullmakt för Skatteverket ger en person befogenhet att representera dig i ärenden hos Skatteverket, såsom skattetillägg, överklaganden och övriga skattärenden.",
+  "badge": "premium",
+  "usageCount": 1234,
+  "fields": [
+    { "id": "givare_namn", "label": "Skattebelastades namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "arende_typ", "label": "Ärendetyp", "type": "select", "options": ["Skattetillägg", "Överklagande", "Bokföringskontroll", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Revisor", "Skattejurist", "Familjemedlem", "Juridiskt ombud"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Kommunikation", "Överklagande", "Förhandling", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
   ],
-  "lastUpdated": "2025-02-27"
+  "faq": [
+    { "q": "Vad är ett skattetillägg?", "a": "En påföring av extra skatt om Skatteverket anser att du har gjort fel i din deklaration." },
+    { "q": "Kan jag överklaga en skatteomfattning?", "a": "Ja, du har normalt en månad på dig att överklaga. Denna fullmakt kan låta någon göra det åt dig." },
+    { "q": "Hur mycket kostar en skattejurist?", "a": "En skattejurist kan ta mellan 1000-3000 kr/timme beroende på komplexitet." },
+    { "q": "Vad gör Skatteverket vid bokföringskontroll?", "a": "De granskar dina bokslut och inkomster för att säkerställa att de är korrekta." },
+    { "q": "Behöver jag denna fullmakt?", "a": "För enkla skatteärenden kanske inte, men vid tvister rekommenderas juridisk representation." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt gäller mellan dig och Skatteverket. Två vittnen är rekommenderat för större ärenden.",
+  "keywords": ["Skatteverket", "skatt", "skattetillägg", "överklagande", "fullmakt"]
 }

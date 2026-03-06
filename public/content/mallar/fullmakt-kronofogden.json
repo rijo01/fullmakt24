@@ -1,0 +1,33 @@
+{
+  "id": 64,
+  "slug": "fullmakt-kronofogden",
+  "name": "Fullmakt för Kronofogden",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att representera vid Kronofogdens ärenden.",
+  "longDescription": "En fullmakt för Kronofogden ger en person befogenhet att representera dig i ärenden relaterade till skulder, betalningsförelägganden och tvångsexekution.",
+  "badge": "premium",
+  "usageCount": 1234,
+  "fields": [
+    { "id": "givare_namn", "label": "Gäldenärens namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "arende_typ", "label": "Ärendetyp", "type": "select", "options": ["Skuldsaldo", "Betalningsföreläggande", "Tvångsexekution", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Juridiskt ombud", "Familjemedlem", "Bolagsrepresentant"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Information", "Betalningsuppgörelser", "Motsägelser", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad gör Kronofogden?", "a": "Kronofogden hanterar tvångsexekution av skulder, löneavräkning och indrivning av skatter." },
+    { "q": "Kan jag motsäga ett betalningsföreläggande?", "a": "Ja, du har två veckor på dig att motsäga. Fullmaktstagaren kan göra detta åt dig." },
+    { "q": "Vad kostar Kronofogden?", "a": "Kronofogdens tjänster är kostnadsfria för gäldenären." },
+    { "q": "Kan jag avsluta tvångsexekutionen?", "a": "Ja, om du betalar hela skulden inkl. dröjsmålsränta och Kronofogdens kostnader." },
+    { "q": "Behöver Kronofogden denna fullmakt?", "a": "Kontakta dem direkt. De flesta accepterar skriftlig fullmakt med identifikation." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt gäller mellan dig och Kronofogden. Två vittnen rekommenderas.",
+  "keywords": ["Kronofogden", "skuld", "exekution", "betalningsföreläggande", "fullmakt"]
+}

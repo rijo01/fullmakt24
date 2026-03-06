@@ -1,0 +1,34 @@
+{
+  "id": 56,
+  "slug": "fullmakt-fritidsaktivitet",
+  "name": "Fullmakt för fritidsaktivitet",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Fullmakt för att anmäla barn till fritidsaktivitet.",
+  "longDescription": "En fullmakt för fritidsaktivitet ger en annan vuxen befogenhet att anmäla ditt barn till fritidsverksamhet, såsom fotboll, dans eller musik. Det kan behövas när du inte kan närvara vid registreringen.",
+  "badge": "gratis",
+  "usageCount": 765,
+  "fields": [
+    { "id": "givare_namn", "label": "Förälderns namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "barn_namn", "label": "Barnets namn", "type": "text", "placeholder": "Maja Andersson", "required": true, "group": "detaljer" },
+    { "id": "barn_pnr", "label": "Barnets personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "detaljer" },
+    { "id": "aktivitet", "label": "Fritidsaktivitet", "type": "text", "placeholder": "Fotboll", "required": true, "group": "detaljer" },
+    { "id": "organisation", "label": "Organisation/Förening", "type": "text", "placeholder": "Stockholms FK", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Mormor", "Morfar", "Farmor", "Farfar", "Vän", "Familjemedlem"], "required": true, "group": "havare" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Behöver föreningen original eller kopia?", "a": "Kontakta föreningen. De flesta accepterar kopia, men vissa kan vilja se original." },
+    { "q": "Vad gör jag om föreningen kräver läkarintyg?", "a": "Du kan be läkaren att skriva intyget, eller fullmaktstagaren kan presentera detta tillsammans med fullmakten." },
+    { "q": "Kan jag begränsa fullmakten?", "a": "Ja, du kan säga att fullmakten endast gäller för en specifik aktivitet." },
+    { "q": "Vad kostar fritidsaktiviteter?", "a": "Det varierar mycket. Föreningar kan ta mellan 500-2000 kr per termin." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, informera föreningen omedelbar om du drar tillbaka fullmakten." }
+  ],
+  "relatedIds": [50, 60, 71],
+  "legalInfo": "Denna fullmakt gäller mellan dig och föreningen. Föreningen accepterar eller avslår den enligt deras regler.",
+  "keywords": ["fritid", "aktivitet", "barn", "förening", "fullmakt", "sport"]
+}

@@ -1,0 +1,33 @@
+{
+  "id": 25,
+  "slug": "fullmakt-andrahandsuthyrning",
+  "name": "Fullmakt för andrahandsuthyrning",
+  "category": "Boende & Vardag",
+  "categorySlug": "boende-vardag",
+  "description": "Fullmakt för att representera vid andrahandsuthyrning.",
+  "longDescription": "En fullmakt för andrahandsuthyrning ger en person befogenhet att underteckna hyresavtal för andrahandsuthyrning. Det är när du hyr ut din lägenhet vidare till någon annan medan du själv är hyresgäst.",
+  "badge": "gratis",
+  "usageCount": 543,
+  "fields": [
+    { "id": "givare_namn", "label": "Primär hyresgästens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "fastighet_adress", "label": "Fastighetens adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "detaljer" },
+    { "id": "hyra_andrahand", "label": "Andrahandshuran", "type": "text", "placeholder": "8 500 kr", "required": true, "group": "detaljer" },
+    { "id": "hyrstid", "label": "Hyresperiod", "type": "select", "options": ["3 månader", "6 månader", "1 år", "2 år"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Underteckning av kontrakt", "Förhandling", "Mottagning av hyra", "All hantering"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Får jag hyra ut min lägenhet vidare?", "a": "Det beror på ditt hyresavtal. Många hyresvärdar tillåter andrahandsuthyrning med skriftligt medgivande." },
+    { "q": "Kan jag ta högre hyra vid andrahandsuthyrning?", "a": "Du kan inte ta väsentligt högre hyra än du själv betalar. Det finns lagliga gränser." },
+    { "q": "Behöver hyresvärden godkänna andrahandsuthyrningen?", "a": "Ja, normalt måste du få skriftligt medgivande från hyresvärden." },
+    { "q": "Vad gör jag om andrahandsuthyraren slutar betala?", "a": "Du är ansvarig gentemot hyresvärden. Du kan säga upp andrahandshyresgästen enligt avtalet." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan undertecknade kontrakt kan inte återkallas." }
+  ],
+  "relatedIds": [52, 62, 71],
+  "legalInfo": "Denna fullmakt måste respektera hyresvärderns rättigheter. Kontakta hyresvärden för tillåtelse.",
+  "keywords": ["andrahandsuthyrning", "andrahandshyra", "uthyrning", "hyreskontrakt", "fullmakt"]
+}

@@ -1,0 +1,33 @@
+{
+  "id": 23,
+  "slug": "fullmakt-arbetsformedlingen",
+  "name": "Fullmakt för Arbetsförmedlingen",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att representera vid Arbetsförmedlingens ärenden.",
+  "longDescription": "En fullmakt för Arbetsförmedlingen ger en person befogenhet att representera dig i ärenden relaterade till arbetslöshetsförsäkring, jobbsökning och arbetsmarknadsprogram.",
+  "badge": "gratis",
+  "usageCount": 1098,
+  "fields": [
+    { "id": "givare_namn", "label": "Arbetssökarens namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "arende_typ", "label": "Ärendetyp", "type": "select", "options": ["Arbetslöshetsförsäkring", "Jobbmatchning", "Arbetsmarknadsprogram", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Juridiskt ombud", "Familjemedlem", "Arbetscoach"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Information", "Ansökan av arbetsmarknadsprogram", "Överklagande", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vilka kan söka arbetslöshetsförsäkring?", "a": "Du måste vara medlem i en arbetslöshetskassa och uppfylla vissa arbets- och inkomstkrav." },
+    { "q": "Hur mycket är arbetslöshetsförsäkringen?", "a": "Den täcker upp till 80% av din tidigare lön, med ett maxbelopp." },
+    { "q": "Hur länge kan jag få arbetslöshetsersättning?", "a": "Normalt 450 dagar om du är arbetsfull och jobbar på att hitta ny sysselsättning." },
+    { "q": "Vad är arbetsmarknadsprogram?", "a": "Program för att förbereda dig för arbete, såsom praktik, utbildning eller coaching." },
+    { "q": "Kan jag överklaga ett negativt beslut?", "a": "Ja, du kan överklaga till Arbetsmarknadsstyrelsen. Denna fullmakt kan låta någon göra det åt dig." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt måste följa Arbetsförmedlingens procedurer. Kontakta dem för krav.",
+  "keywords": ["Arbetsförmedlingen", "arbetslöshet", "försäkring", "jobbsökning", "fullmakt"]
+}
