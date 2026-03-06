@@ -1,0 +1,31 @@
+{
+  "id": 38,
+  "slug": "fullmakt-bredbandsleverantor",
+  "name": "Fullmakt för bredbandsleverantör",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att hantera bredbandskontakt.",
+  "longDescription": "En fullmakt för bredbandsleverantör ger en person befogenhet att hantera ditt bredbands- eller internetkontrakt.",
+  "badge": "gratis",
+  "usageCount": 765,
+  "fields": [
+    { "id": "givare_namn", "label": "Kundnamn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "leverantor", "label": "Leverantör", "type": "select", "options": ["Telia", "Telenor", "Vodafone", "Bredbandsbolaget", "Annan"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Teknik och support", "Ändring av abonnemang", "Betalning", "All hantering"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vilka leverantörer finns i Sverige?", "a": "Huvudleverantörer är Telia, Vodafone, Telenor och Bredbandsbolaget, plus flera lokala." },
+    { "q": "Kan jag byta leverantör med fullmakt?", "a": "Ja, om fullmakten täcker 'byte av abonnemang' kan fullmaktstagaren göra det åt dig." },
+    { "q": "Vad är fiberkabel vs. koppar?", "a": "Fiberkabel är snabbare men mindre tillgänglig. Koppar är äldre men finns överallt." },
+    { "q": "Hur snabbt internet behövs?", "a": "Det beror på vad du gör. Gaming/streaming behöver 20+ Mbps, kontorsarbete 10+ Mbps." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, informera leverantören skriftligt." }
+  ],
+  "relatedIds": [24, 51, 75],
+  "legalInfo": "Denna fullmakt gäller mellan dig och bredbandsleverantören.",
+  "keywords": ["bredbands", "internet", "leverantör", "fiber", "fullmakt"]
+}

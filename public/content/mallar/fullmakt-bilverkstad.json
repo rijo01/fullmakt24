@@ -1,0 +1,33 @@
+{
+  "id": 36,
+  "slug": "fullmakt-bilverkstad",
+  "name": "Fullmakt för bilverkstad",
+  "category": "Resa & Transport",
+  "categorySlug": "resa-transport",
+  "description": "Fullmakt för att lämna in och hämta bil på verkstad.",
+  "longDescription": "En fullmakt för bilverkstad ger en person befogenhet att lämna in och hämta din bil på verkstad, samt godkänna reparationer.",
+  "badge": "gratis",
+  "usageCount": 1543,
+  "fields": [
+    { "id": "givare_namn", "label": "Bilägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "fordon_registrering", "label": "Registreringsnummer", "type": "text", "placeholder": "ABC 123", "required": true, "group": "detaljer" },
+    { "id": "verkstad", "label": "Verkstad", "type": "text", "placeholder": "Bengtssons Bil AB", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Lämna in och hämta", "Godkänna reparationer", "All hantering"], "required": true, "group": "detaljer" },
+    { "id": "max_kostnad", "label": "Max reparationskostnad", "type": "text", "placeholder": "20 000 kr", "required": false, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Behöver verkstaden denna fullmakt?", "a": "De flesta verkstäder accepterar fullmakt. Kontakta dem för deras procedur." },
+    { "q": "Kan jag sätta en max-gräns?", "a": "Ja, det är smart att säga att fullmaktstagaren måste fråga innan större reparationer." },
+    { "q": "Vad kostar bilreparation?", "a": "Det varierar mycket - från 500 kr för små saker till 10 000+ för större ingrepp." },
+    { "q": "Kan fullmaktstagaren ta bilen utan reparation?", "a": "Det beror på verkstaden. Kontakta dem innan du ger fullmakten." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, när som helst genom att informera verkstaden." }
+  ],
+  "relatedIds": [39, 53, 62],
+  "legalInfo": "Denna fullmakt gäller mellan dig och verkstaden.",
+  "keywords": ["bil", "verkstad", "reparation", "service", "fullmakt"]
+}

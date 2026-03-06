@@ -1,0 +1,32 @@
+{
+  "id": 62,
+  "slug": "fullmakt-hundhandel",
+  "name": "Fullmakt för hundköp",
+  "category": "Djur & Husdjur",
+  "categorySlug": "djur-husdjur",
+  "description": "Fullmakt för att köpa eller sälja hund.",
+  "longDescription": "En fullmakt för hundköp ger en person befogenhet att köpa eller sälja hund på din räkning.",
+  "badge": "gratis",
+  "usageCount": 654,
+  "fields": [
+    { "id": "givare_namn", "label": "Hundägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "hundras", "label": "Hundras", "type": "text", "placeholder": "Labrador Retriever", "required": true, "group": "detaljer" },
+    { "id": "arende", "label": "Ärendetyp", "type": "select", "options": ["Köp", "Försäljning", "Utbyte"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "max_pris", "label": "Max pris (vid köp)", "type": "text", "placeholder": "15 000 kr", "required": false, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad kostar en hund?", "a": "Rasthundar kostar normalt 5000-25000 kr beroende på ras och uppfödare." },
+    { "q": "Behövs denna fullmakt verkligen?", "a": "Inte nödvändigt, men den ger full befogenhet för hundköp åt någon du litar på." },
+    { "q": "Kan fullmaktstagaren välja vilket kön?", "a": "Det beror på dina instruktioner. Ge detaljerade anvisningar om möjligt." },
+    { "q": "Vad gör jag vid köp från utlandet?", "a": "Försäkra dig om att hundar är vaccinerade och har passhandlingar från EU." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan genomförda köp kan inte återkallas." }
+  ],
+  "relatedIds": [45, 52, 64],
+  "legalInfo": "Denna fullmakt är enkel och handlar om husdjursaffärer.",
+  "keywords": ["hund", "köp", "försäljning", "hunduppfödare", "fullmakt"]
+}

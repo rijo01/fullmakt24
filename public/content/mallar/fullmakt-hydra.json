@@ -1,0 +1,32 @@
+{
+  "id": 65,
+  "slug": "fullmakt-hydra",
+  "name": "Fullmakt för vattenskatt",
+  "category": "Boende & Vardag",
+  "categorySlug": "boende-vardag",
+  "description": "Fullmakt för att hantera vattenskatt.",
+  "longDescription": "En fullmakt för vattenskatt ger en person befogenhet att hantera vattenskatter och vattenledningsärenden.",
+  "badge": "gratis",
+  "usageCount": 432,
+  "fields": [
+    { "id": "givare_namn", "label": "Fastighetsägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "fastighet", "label": "Fastighetens adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "detaljer" },
+    { "id": "kommun", "label": "Kommun", "type": "text", "placeholder": "Stockholms stad", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Information", "Betalning", "Reklamation", "Full hantering"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är vattenskatt?", "a": "En skatt på vatten- och avloppsanvändning som betalas till kommunen." },
+    { "q": "Hur mycket kostar vattnet?", "a": "Det varierar mellan kommuner. Normalt 20-50 SEK per kubikmeter." },
+    { "q": "Kan jag spara vatten?", "a": "Ja, genom att installera vattensnål armaturer kan du sänka kostnaden." },
+    { "q": "Vad gör jag vid läcka?", "a": "Reparera omedelbar och kontakta kommunen - du kan få rabatt på vattenräkningen." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, informera kommunen skriftligt." }
+  ],
+  "relatedIds": [24, 38, 75],
+  "legalInfo": "Denna fullmakt gäller mellan dig och kommunen.",
+  "keywords": ["vatten", "vattenskatt", "avlopp", "kommunal skatt", "fullmakt"]
+}

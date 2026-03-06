@@ -1,0 +1,35 @@
+{
+  "id": 58,
+  "slug": "fullmakt-halsochsjukvard",
+  "name": "Fullmakt för hälso- och sjukvård",
+  "category": "Vård & Omsorg",
+  "categorySlug": "vard-omsorg",
+  "description": "Fullmakt för att representera vid hälso- och sjukvårdsärenden.",
+  "longDescription": "En fullmakt för hälso- och sjukvård ger en person befogenhet att representera dig vid läkarbesök, operationer och andra sjukvårdsärenden.",
+  "badge": "premium",
+  "usageCount": 1876,
+  "fields": [
+    { "id": "givare_namn", "label": "Patientens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "sjukhus", "label": "Sjukhus/Klinik", "type": "text", "placeholder": "Karolinska sjukhuset", "required": false, "group": "detaljer" },
+    { "id": "sjukdom", "label": "Sjukdom/Skada (frivilligt)", "type": "text", "placeholder": "T.ex. Hjärtproblem", "required": false, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Make/Maka", "Barn", "Förälder", "Juridiskt ombud"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Information om sjukdom", "Medicinsk behandling", "Operationsbeslut", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Kan fullmaktstagaren bestämma om operation?", "a": "Ja, om fullmakten täcker 'operationsbeslut'. Men helst enig med läkaren." },
+    { "q": "Vad gör jag vid omedvetenhet?", "a": "Denna fullmakt ger full befogenhet vid omedvetenhet. Kritisk för allvarlig sjukdom." },
+    { "q": "Behövs två vittnen?", "a": "Två vittnen är starkt rekommenderat för medicinska fullmakter." },
+    { "q": "Kan läkaren vägra att acceptera fullmakten?", "a": "De kan ställa frågor, men ska normalt respektera den." },
+    { "q": "Kan jag begränsa behandlingar?", "a": "Ja, du kan säga nej till vissa behandlingar eller mediciner." }
+  ],
+  "relatedIds": [68, 70, 84],
+  "legalInfo": "Denna fullmakt är kritisk. Två vittnen är obligatoriska. Patientjournalen skyddas av sekretess.",
+  "keywords": ["hälsa", "sjukvård", "läkare", "operation", "medicin", "fullmakt"]
+}

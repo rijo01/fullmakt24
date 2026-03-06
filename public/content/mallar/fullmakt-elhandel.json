@@ -1,0 +1,32 @@
+{
+  "id": 48,
+  "slug": "fullmakt-elhandel",
+  "name": "Fullmakt för elhandel",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att hantera elkontrakt.",
+  "longDescription": "En fullmakt för elhandel ger en person befogenhet att hantera ditt elkontrakt och energiärenden.",
+  "badge": "gratis",
+  "usageCount": 987,
+  "fields": [
+    { "id": "givare_namn", "label": "Kundens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "fastighet", "label": "Fastighetsadress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "detaljer" },
+    { "id": "leverantor", "label": "Elhandlare", "type": "text", "placeholder": "Vattenfall", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Information", "Byte av avtal", "Fakturering", "All hantering"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Kan jag byta elhandlare med denna fullmakt?", "a": "Ja, om fullmaktstagaren har tillåtelse att byta avtal kan de göra det åt dig." },
+    { "q": "Vad kostar el?", "a": "Elpriserna varierar mycket. Kontakta din handlare för aktuellt pris." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, informera elhandlaren skriftligt." },
+    { "q": "Vilka är de största elhandlarna?", "a": "Vattenfall, Eon, Fortum och många lokala handlare." },
+    { "q": "Hur ofta kan jag byta handlare?", "a": "Du kan normalt byta varje månad, men vissa avtal har uppsägningstider." }
+  ],
+  "relatedIds": [24, 38, 75],
+  "legalInfo": "Denna fullmakt gäller mellan dig och elhandlaren.",
+  "keywords": ["el", "elkontrakt", "energi", "strömhandel", "fullmakt"]
+}

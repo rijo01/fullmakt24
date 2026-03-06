@@ -1,0 +1,32 @@
+{
+  "id": 46,
+  "slug": "fullmakt-domanhantering",
+  "name": "Fullmakt för domänhantering",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att hantera internetdomän.",
+  "longDescription": "En fullmakt för domänhantering ger en person befogenhet att administrera din internetdomän, inklusive DNS-inställningar och förnyelse.",
+  "badge": "premium",
+  "usageCount": 432,
+  "fields": [
+    { "id": "givare_namn", "label": "Domänägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "doman", "label": "Domännamn", "type": "text", "placeholder": "exempel.se", "required": true, "group": "detaljer" },
+    { "id": "registrator", "label": "Registrator", "type": "text", "placeholder": "T.ex. Loopia", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["DNS-ändringar", "Förnyelse", "Överlåtelse", "Full admin"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är DNS?", "a": "DNS (Domain Name System) mappar domännamn till IP-adresser så att webbplatsen kan nås." },
+    { "q": "Kan fullmaktstagaren sälja domänen?", "a": "Ja, om fullmakten täcker 'överlåtelse'. Var försiktig med detta!" },
+    { "q": "Vad kostar en domän?", "a": "Svenska domäner kostar normalt 79-199 SEK/år beroende på registrator." },
+    { "q": "Hur förnyar jag en domän?", "a": "Registratorn förnyar automatiskt innan domänen går ut, eller du kan förnya manuellt." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, genom registratorn eller direkt på deras hemsida." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt är IT-relaterad och bör ges endast till personer du absolut litar på.",
+  "keywords": ["domän", "DNS", "internet", "webbplats", "fullmakt"]
+}

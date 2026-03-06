@@ -1,0 +1,32 @@
+{
+  "id": 44,
+  "slug": "fullmakt-djurtransport",
+  "name": "Fullmakt för djurtransport",
+  "category": "Djur & Husdjur",
+  "categorySlug": "djur-husdjur",
+  "description": "Fullmakt för att transportera djur åt någon.",
+  "longDescription": "En fullmakt för djurtransport ger en person befogenhet att transportera ditt djur till veterinär eller annat ändamål.",
+  "badge": "gratis",
+  "usageCount": 543,
+  "fields": [
+    { "id": "givare_namn", "label": "Djurägarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "djur_namn", "label": "Djurets namn", "type": "text", "placeholder": "Fluffy", "required": true, "group": "detaljer" },
+    { "id": "djur_typ", "label": "Djurtyp", "type": "select", "options": ["Hund", "Katt", "Häst", "Kanin", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "destinasjon", "label": "Transportens ändamål", "type": "text", "placeholder": "Veterinärklinik", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Behövs denna fullmakt verkligen?", "a": "Veterinären behöver bara att djuret hämtas upp och transporteras säkert." },
+    { "q": "Vad kostar djurtransport?", "a": "Privat transport är gratis. Professionell transport kan kosta 500-1500 kr beroende på avstånd." },
+    { "q": "Behöver djuret försäkring under transport?", "a": "Det beror på transportören. Egen försäkring täcker normalt transport." },
+    { "q": "Vad gör jag vid nödsituation?", "a": "Ge fullmaktstagaren instruktioner om närmaste veterinär och akuttillfället." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, när som helst genom att meddela fullmaktstagaren." }
+  ],
+  "relatedIds": [45, 52, 64],
+  "legalInfo": "Denna fullmakt är personlig och handlar om djurens välfärd.",
+  "keywords": ["djur", "transport", "veterinär", "hund", "katt", "fullmakt"]
+}

@@ -1,0 +1,32 @@
+{
+  "id": 63,
+  "slug": "fullmakt-hundklubben",
+  "name": "Fullmakt för hundklubben",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Fullmakt för att representera hundklubben.",
+  "longDescription": "En fullmakt för hundklubben ger en person befogenhet att representera hundens ägare vid hundklubbtävlingar eller möten.",
+  "badge": "gratis",
+  "usageCount": 543,
+  "fields": [
+    { "id": "givare_namn", "label": "Hundägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "hund_namn", "label": "Hundens namn", "type": "text", "placeholder": "Rex", "required": true, "group": "detaljer" },
+    { "id": "hundklubben", "label": "Hundklubb", "type": "text", "placeholder": "Svenska Hundklubbens Stockholm", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Tävling", "Möte", "Registrering", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vilka hundklubbar finns?", "a": "Sveriges hundklubb och Svenska Hundsportförbundet är två stora förbund." },
+    { "q": "Vad gör en hundklubb?", "a": "De arrangerarador tävlingar, utbildning och möten för hundsport." },
+    { "q": "Hur mycket kostar medlemskap?", "a": "Normalt 200-500 kr per år för hundklubbsmedlemskap." },
+    { "q": "Kan fullmaktstagaren tävla med min hund?", "a": "Ja, om fullmakten täcker 'tävling' och klubben accepterar." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, när som helst genom att meddela klubben." }
+  ],
+  "relatedIds": [45, 52, 64],
+  "legalInfo": "Denna fullmakt gäller mellan dig och hundklubben.",
+  "keywords": ["hundklubb", "hundtävling", "hundsport", "SVK", "fullmakt"]
+}

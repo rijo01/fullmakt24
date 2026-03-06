@@ -1,30 +1,32 @@
 {
+  "id": 22,
   "slug": "fullmakt-apotek",
-  "seo": {
-    "title": "Fullmakt för apotek – Hämta ut recept åt annan 2025",
-    "metaDescription": "Skapa fullmakt för att hämta ut recept på apotek. Gratis mall, juridiskt granskad. Klar på 3 minuter. Ladda ner PDF direkt.",
-    "h1": "Fullmakt för apotek – Hämta ut recept åt annan 2025",
-    "keywords": ["fullmakt apotek", "hämta ut recept åt annan", "apoteksfullmakt", "fullmakt recept", "fullmakt apotek mall"]
-  },
-  "content": {
-    "introduction": "Behöver du hämta ut medicin åt någon annan på apoteket? Då behöver du en fullmakt. En apoteksfullmakt ger dig rätt att hämta ut receptbelagd medicin för en annan persons räkning – till exempel en sjuk familjemedlem, en äldre förälder eller en granne som inte kan ta sig till apoteket själv.\n\nSedan 2020 har reglerna skärpts kring uthämtning av recept åt andra. Apoteken kräver idag nästan alltid en skriftlig fullmakt eller att uthämtningen görs via den andra personens e-legitimation. Med vår mall skapar du en giltig apoteksfullmakt som accepteras av Apotek Hjärtat, Apotea, Kronans Apotek och alla andra svenska apotek.",
-    "legalValidity": "En fullmakt för apoteksärenden är giltig enligt Läkemedelsverkets föreskrifter och avtalslagen. Alla svenska apotek är skyldiga att acceptera en korrekt utformad fullmakt för uthämtning av receptbelagda läkemedel. Undantag gäller för narkotikaklassade preparat och vissa särskilda läkemedel där uthämtning måste ske personligen. Fullmaktshavaren måste alltid visa giltig legitimation.",
-    "howToGuide": "Steg 1: Fyll i den sjukes/patientens uppgifter som fullmaktsgivare – namn, personnummer och adress.\n\nSteg 2: Fyll i dina uppgifter som den som ska hämta ut medicinen.\n\nSteg 3: Ange vilka läkemedel eller typer av recept fullmakten gäller för. Du kan skriva \"alla receptbelagda läkemedel\" eller specificera.\n\nSteg 4: Välj giltighetstid – vi rekommenderar max 6 månader åt gången.\n\nSteg 5: Ladda ner PDF:en, låt fullmaktsgivaren skriva under och ta med fullmakten till apoteket tillsammans med din legitimation.",
-    "commonMistakes": "1. Glömmer legitimation – Du måste alltid visa din egen legitimation när du hämtar ut åt annan.\n\n2. Saknar personnummer – Apoteket måste kunna identifiera både fullmaktsgivare och fullmaktshavare.\n\n3. Försöker hämta narkotikaklassade preparat – Vissa läkemedel kan inte hämtas ut via fullmakt.\n\n4. Utgången fullmakt – Kontrollera att fullmakten fortfarande gäller innan du går till apoteket.\n\n5. Muntlig fullmakt – Apoteken kräver numera skriftlig fullmakt. En muntlig överenskommelse räcker inte.",
-    "faq": [
-      {"question": "Kan jag hämta ut alla typer av medicin med fullmakt?", "answer": "De flesta receptbelagda läkemedel kan hämtas ut med fullmakt. Undantag gäller för narkotikaklassade preparat och vissa särskilda läkemedel som kräver personlig uthämtning."},
-      {"question": "Accepterar alla apotek fullmakten?", "answer": "Ja, alla svenska apotek inklusive Apotek Hjärtat, Kronans Apotek och Apoteket AB är skyldiga att acceptera en korrekt utformad skriftlig fullmakt."},
-      {"question": "Behöver jag ta med mig legitimation?", "answer": "Ja, du måste alltid visa din egen giltiga legitimation när du hämtar ut recept åt en annan person. Apoteket kontrollerar att du är den person som anges i fullmakten."},
-      {"question": "Hur länge gäller en apoteksfullmakt?", "answer": "Fullmakten gäller under den period du anger. Vi rekommenderar max 6 månader åt gången, sedan kan du enkelt skapa en ny."},
-      {"question": "Kan jag använda fullmakten på nätapotek?", "answer": "Nätapotek som Apotea och Meds hanterar detta annorlunda – de kräver ofta att uthämtningen görs via fullmaktsgivarens BankID eller e-legitimation. Vår fullmakt fungerar bäst vid fysiska apoteksbesök."}
-    ],
-    "relatedSearchTerms": ["fullmakt apotek mall", "hämta medicin åt annan", "apoteksfullmakt pdf", "fullmakt recept gratis"]
-  },
-  "schema": { "faqSchema": true, "howToSchema": true, "breadcrumbSchema": true },
-  "internalLinks": [
-    {"text": "Fullmakt för sjukvård", "href": "/mallar/vard-omsorg/fullmakt-sjukvard"},
-    {"text": "Fullmakt för barnets sjukvård", "href": "/mallar/foraldrar-barn/fullmakt-barns-sjukvard"},
-    {"text": "Fullmakt för hemtjänst", "href": "/mallar/vard-omsorg/fullmakt-hemtjanst"}
+  "name": "Fullmakt för apotek",
+  "category": "Vård & Omsorg",
+  "categorySlug": "vard-omsorg",
+  "description": "Fullmakt för att hämta och hantera medicin på apotek.",
+  "longDescription": "En fullmakt för apotek ger en annan person befogenhet att hämta recept och medicin på apoteket åt dig.",
+  "badge": "gratis",
+  "usageCount": 1876,
+  "fields": [
+    { "id": "givare_namn", "label": "Patientens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "apotek", "label": "Apotek (om känt)", "type": "text", "placeholder": "Apoteket Kronorna", "required": false, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Make/Maka", "Son/Dotter", "Förälder", "Vän", "Hemtjänst"], "required": true, "group": "havare" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
   ],
-  "lastUpdated": "2025-06-15"
+  "faq": [
+    { "q": "Kan apoteket acceptera denna fullmakt?", "a": "De flesta apotek accepterar fullmakt för receputhämtning. Kontakta apoteket för deras procedur." },
+    { "q": "Behövs ID-handling?", "a": "Ja, fullmaktstagaren måste ha sitt ID när han/hon hämtar medicinen." },
+    { "q": "Vad är ett elektroniskt recept?", "a": "Ett recept som läkaren skickar direkt till apoteket. Du hämtar det direkt utan pappersrecept." },
+    { "q": "Kan fullmaktstagaren välja medicin?", "a": "Nej, apoteket ger det som läkaren förskrivit, eller billigare generika med ditt samtycke." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, när som helst genom att informera apoteket eller fullmaktstagaren." }
+  ],
+  "relatedIds": [68, 70, 84],
+  "legalInfo": "Denna fullmakt är personlig och gäller mellan dig och apoteket.",
+  "keywords": ["apotek", "medicin", "recept", "hämta", "fullmakt"]
 }

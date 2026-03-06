@@ -1,0 +1,30 @@
+{
+  "id": 54,
+  "slug": "fullmakt-florist",
+  "name": "Fullmakt för blomsterleverans",
+  "category": "Boende & Vardag",
+  "categorySlug": "boende-vardag",
+  "description": "Fullmakt för att beställa och ta emot blomsterleveranser.",
+  "longDescription": "En fullmakt för blomsterleverans ger en person befogenhet att beställa och betala för blomster på din räkning.",
+  "badge": "gratis",
+  "usageCount": 345,
+  "fields": [
+    { "id": "givare_namn", "label": "Beställarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "max_belopp", "label": "Max kostnad per beställning", "type": "text", "placeholder": "1 000 kr", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Varför skulle jag ge denna fullmakt?", "a": "Om du vill att någon kan beställa blomster åt dig till eventos eller dödsfall." },
+    { "q": "Vilka floristor finns i Sverige?", "a": "Landet är fullt av lokala floristor. Online kan du också använda Interflora eller liknande." },
+    { "q": "Vad kostar blomsterleverans?", "a": "En bukett kostar normalt 200-500 kr, leverans 50-150 kr." },
+    { "q": "Kan fullmaktstagaren välja vilka blomster?", "a": "Ja, men det är bra att ge vägledning om vilka du föredrar." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, när som helst genom att meddela fullmaktstagaren." }
+  ],
+  "relatedIds": [24, 38, 75],
+  "legalInfo": "Denna fullmakt är enkel och personlig.",
+  "keywords": ["blomster", "florist", "leverans", "beställning", "fullmakt"]
+}

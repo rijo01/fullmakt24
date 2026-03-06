@@ -1,0 +1,35 @@
+{
+  "id": 50,
+  "slug": "fullmakt-fastighetsmal",
+  "name": "Fullmakt för fastighetsärenden",
+  "category": "Boende & Vardag",
+  "categorySlug": "boende-vardag",
+  "description": "Fullmakt för att representera vid fastighetsköp eller försäljning.",
+  "longDescription": "En fullmakt för fastighetsärenden ger en person befogenhet att representera dig vid köp eller försäljning av fastighet.",
+  "badge": "premium",
+  "usageCount": 2345,
+  "fields": [
+    { "id": "givare_namn", "label": "Fastighetsägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "fastighet", "label": "Fastighetens adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "detaljer" },
+    { "id": "arende", "label": "Ärendetyp", "type": "select", "options": ["Köp", "Försäljning", "Belåning", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Juridiskt ombud", "Mäklare", "Familjemedlem"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Förhandling", "Underteckning av avtal", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Behövs två vittnen?", "a": "Ja, två vittnen är obligatoriska för fastighetsärendet." },
+    { "q": "Vad gör en mäklare?", "a": "Mäklare hjälper till med värdering, visningar och marknadsfört av fastigheten." },
+    { "q": "Hur mycket kostar en mäklare?", "a": "Normalt 1-2% av försäljningssumman." },
+    { "q": "Vad gör en advokat?", "a": "Advokaten ser till att kontrakten är juridiska korrekta och dina rättigheter skyddas." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan undertecknade kontrakt kan inte återkallas." }
+  ],
+  "relatedIds": [52, 62, 71],
+  "legalInfo": "Denna fullmakt är juridisk och kräver två vittnen. En advokat rekommenderas starkt.",
+  "keywords": ["fastighet", "köp", "försäljning", "bostad", "fullmakt"]
+}

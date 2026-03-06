@@ -1,34 +1,30 @@
 {
+  "id": 34,
   "slug": "fullmakt-besiktning",
-  "seo": {
-    "title": "Fullmakt för besiktning – Mall 2025 | Fullmakt24.se",
-    "metaDescription": "Skapa fullmakt för besiktning gratis. Juridisk mall för att låta någon annan besikta ditt fordon hos bilbesiktningskontor. Accepterad av alla besiktningsstationer i Sverige.",
-    "h1": "Fullmakt för besiktning – Mall 2025",
-    "keywords": ["fullmakt besiktning", "besiktningsfullmakt", "bilbesiktning fullmakt", "besiktning fullmakt mall", "fordon besiktning ombud"]
-  },
-  "content": {
-    "introduction": "En fullmakt för besiktning ger någon annan rätt att ta ditt fordon till besiktningen för dig. Det kan handla om en familjemedlem, vän eller mekaniker som sköter besiktningen när du inte kan vara närvarande själv.\n\nDet finns många skäl att använda denna fullmakt. Kanske jobbar du långt borta och kan inte ta tid för besiktningen, eller så behöver du att mekanikern på verkstaden hanterar det praktiska arbetet. En fullmakt för besiktning gör processen smidig och juridiskt korrekt.",
-    "legalValidity": "En fullmakt för besiktning är accepterad av alla svenska bilbesiktningskontor (Apptis, ATG, Dekra och andra). Fullmakten måste vara skriftlig och undertecknad av fordonsägaren. Fullmaktshavaren måste visa giltigt körkort och en kopia av fullmakten vid besiktningen. Trafikverket och besiktningsstationerna accepterar denna typ av fullmakt enligt trafikskadestadgan.",
-    "howToGuide": "Steg 1: Ange dina uppgifter som fordonsägare – namn, personnummer och adress.\n\nSteg 2: Ange uppgifter om den person som ska besikta fordonet – namn, personnummer och relation till dig (mekaniker, familjemedlem, vän).\n\nSteg 3: Beskriv fordonet noggrant – märke, modell, registreringsnummer och chassinummer (finns på fordonet eller försäkringsbrevet).\n\nSteg 4: Ange vilket besiktningskontor eller stad besiktningen ska genomföras på.\n\nSteg 5: Specificera att fullmakten gäller för periodisk besiktning (synk) eller förbesiktning.\n\nSteg 6: Ange giltighetstid – oftast räcker några veckor till en månad.\n\nSteg 7: Underteckna fullmakten. Två vittnen rekommenderas.",
-    "commonMistakes": "1. Glömmer registreringsnummer – Besiktningen kräver exakt fordonsidentitet.\n\n2. Inte tydlig destination – Specificera vilken besiktningsstation.\n\n3. För långt slutdatum – Begränsa giltighetstiden till ett par veckor eller en månad.\n\n4. Glömmer fordonsägares personnummer – Måste anges tydligt.\n\n5. Vittnen undertecknar före ägaren – Ägaren måste underteckna först.",
-    "faq": [
-      {"question": "Accepterar alla besiktningsstationer denna fullmakt?", "answer": "Ja, alla svenska besiktningskontor (Apptis, ATG, Dekra) accepterar denna fullmakt för periodisk besiktning."},
-      {"question": "Behövs två vittnen?", "answer": "Det är inte ett lagkrav men rekommenderas för att stärka fullmaktens giltighet."},
-      {"question": "Kan mekanikern göra reparationer med denna fullmakt?", "answer": "Denna fullmakt gäller endast besiktningen. För reparationer behövs en separat fullmakt till verkstaden."},
-      {"question": "Hur länge kan fullmakten gälla?", "answer": "Vi rekommenderar 1-4 veckor. Efter besiktningen är fullmakten inte längre nödvändig."},
-      {"question": "Vad gör jag om besiktningen misslyckas?", "answer": "Du kan låta fullmaktshavaren fixa eventuella brister eller åta dig själv att göra reparationerna innan ny besiktning."}
-    ],
-    "relatedSearchTerms": ["besiktningsfullmakt gratis", "bilbesiktning ombud", "fullmakt besiktning mall", "fordon besiktning fullmakt"]
-  },
-  "schema": {
-    "faqSchema": true,
-    "howToSchema": true,
-    "breadcrumbSchema": true
-  },
-  "internalLinks": [
-    {"text": "Fullmakt för ägarbyte bil", "href": "/mallar/resa-transport/fullmakt-agarbyte-bil"},
-    {"text": "Fullmakt för bilverkstad", "href": "/mallar/resa-transport/fullmakt-bilverkstad"},
-    {"text": "Fullmakt för Transportstyrelsen", "href": "/mallar/resa-transport/fullmakt-transportstyrelsen"}
+  "name": "Fullmakt för bilbesiktning",
+  "category": "Resa & Transport",
+  "categorySlug": "resa-transport",
+  "description": "Fullmakt för att ta bilen på besiktning åt någon.",
+  "longDescription": "En fullmakt för bilbesiktning ger en person befogenhet att ta din bil på besiktning. Detta kan behövas när du inte kan närvara själv.",
+  "badge": "gratis",
+  "usageCount": 1234,
+  "fields": [
+    { "id": "givare_namn", "label": "Bilägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "fordon_registrering", "label": "Registreringsnummer", "type": "text", "placeholder": "ABC 123", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
   ],
-  "lastUpdated": "2025-02-27"
+  "faq": [
+    { "q": "Vad kollas vid bilbesiktning?", "a": "Bremsar, belysning, däck, rostskador, säkerhetsbälten och att fordonet är säkert att köra." },
+    { "q": "Hur ofta behöver bilen besiktas?", "a": "Normalt var tredje år, men vissa bilar årligen. Kontrollera ditt körkort." },
+    { "q": "Kan fullmaktstagaren ta bilen utan att fråga?", "a": "Ja, men det är bra att informera honom/henne om när besiktningen är planerad." },
+    { "q": "Vad gör jag om besiktningen inte går?", "a": "Du måste reparera bilens brister och omboka nästa besiktning." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men inte om besiktningen redan är bokad och genomförd." }
+  ],
+  "relatedIds": [39, 53, 62],
+  "legalInfo": "Denna fullmakt gäller mellan dig och besiktningsplatsen.",
+  "keywords": ["besiktning", "bil", "fordon", "säkerhet", "fullmakt"]
 }

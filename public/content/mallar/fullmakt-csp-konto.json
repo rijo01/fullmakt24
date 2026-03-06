@@ -1,0 +1,30 @@
+{
+  "id": 41,
+  "slug": "fullmakt-csp-konto",
+  "name": "Fullmakt för CSP-konto",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att hantera CSP-konto åt arbetsgivare.",
+  "longDescription": "En fullmakt för CSP-konto (Cloud Solution Provider-konto) ger en person befogenhet att hantera Microsoft-tjänster på arbetsgivarens räkning.",
+  "badge": "premium",
+  "usageCount": 432,
+  "fields": [
+    { "id": "givare_namn", "label": "Företagsnamn", "type": "text", "placeholder": "Anderssons AB", "required": true, "group": "givare" },
+    { "id": "givare_orgnr", "label": "Organisationsnummer", "type": "text", "placeholder": "556000-1234", "required": true, "group": "givare" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Läsa data", "Ändra inställningar", "Lägga till användare", "Full admin"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är CSP?", "a": "Cloud Solution Provider - Microsoft partners som säljer och hanterar molntjänster." },
+    { "q": "Vilka tjänster omfattas?", "a": "Office 365, Dynamics, Azure och andra Microsoft-tjänster." },
+    { "q": "Kan jag begränsa åtkomst?", "a": "Ja, du kan ge admin-rättigheter endast för vissa tjänster." },
+    { "q": "Är denna fullmakt säker?", "a": "Du bör bara ge den till betrodda personer med säkerhetsclearance." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, via Microsoft-portalen eller genom att kontakta CSP." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt är IT-relaterad och bör hanteras med försiktighet.",
+  "keywords": ["CSP", "Microsoft", "molntjänst", "admin", "fullmakt"]
+}

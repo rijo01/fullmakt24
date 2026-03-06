@@ -1,0 +1,32 @@
+{
+  "id": 60,
+  "slug": "fullmakt-hemforsamlingen",
+  "name": "Fullmakt för hemförsamlingen",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Fullmakt för att representera hemförsamlingen.",
+  "longDescription": "En fullmakt för hemförsamlingen ger en person befogenhet att representera en religös hemförsamling vid myndighetskontakter eller möten.",
+  "badge": "gratis",
+  "usageCount": 432,
+  "fields": [
+    { "id": "givare_namn", "label": "Försam medlemmens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "forsamling", "label": "Hemförsam namn", "type": "text", "placeholder": "Guds Mörkaste Hemförsamling", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_roll", "label": "Roll i hemförsamlingen", "type": "select", "options": ["Pastor", "Ledare", "Kassör", "Medlem"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Myndighetskontakter", "Möten", "Finansiering", "Hela förvaltningen"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Är hemförsam detsamma som kyrkan?", "a": "Nej, hemförsam är ofta mindre grupper utan egen kyrkobyggnad." },
+    { "q": "Behöver hemförsamling registreras?", "a": "Många hemförsam är informella, men kan registreras hos skattemyndigheten." },
+    { "q": "Kan hemförsamlingen få skattefinansiering?", "a": "Ja, om de är registrerade som ideell förening eller trossamfund." },
+    { "q": "Vilka arenden behöver denna fullmakt?", "a": "Kontakter med myndigheter, möten med politiker, eller finansiella ärenden." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, genom att informera hemförsamlingsledningen." }
+  ],
+  "relatedIds": [24, 38, 75],
+  "legalInfo": "Denna fullmakt gäller mellan dig och hemförsamlingen.",
+  "keywords": ["hemförsamling", "religion", "kyrka", "tro", "fullmakt"]
+}
