@@ -1,0 +1,34 @@
+{
+  "id": 99,
+  "slug": "medgivande-medicinsk-behandling",
+  "name": "Medgivande för medicinsk behandling",
+  "category": "Vård & Omsorg",
+  "categorySlug": "vard-omsorg",
+  "description": "Medgivande för att annan person kan godkänna medicinsk behandling åt dig.",
+  "longDescription": "Ett medgivande för medicinsk behandling ger en närstående befogenhet att godkänna vård eller behandling åt dig om du inte själv kan göra det. Detta är särskilt viktigt i nödsituationer eller när du är omedveten.",
+  "badge": "premium",
+  "usageCount": 2345,
+  "fields": [
+    { "id": "givare_namn", "label": "Patientens namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "behandling_typ", "label": "Behandlingstyp", "type": "select", "options": ["Kirurgiska ingrepp", "Medicinering", "Tandbehandling", "Alla medicinska behandlingar"], "required": true, "group": "detaljer" },
+    { "id": "ej_godkand", "label": "Jag accepterar INTE följande behandlingar", "type": "textarea", "placeholder": "T.ex. 'Amputation endast om livet är i fara'", "required": false, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Beslutfattarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Make/Maka", "Son/Dotter", "Förälder", "Syskon", "Annan"], "required": true, "group": "havare" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Är denna medgivande juridiskt bindande?", "a": "Den är en viktig indikation på dina önskemål. Sjukvården försöker respektera den, men kan göra undantag i akuta situationer för att rädda livet." },
+    { "q": "Vad är skillnaden mellan 'framtidsfullmakt' och denna?", "a": "Denna är en specifik medgivande. En framtidsfullmakt är bredare och kan gälla alla beslut." },
+    { "q": "Behöver jag läkarutlåtande?", "a": "För denna medgivande behövs inte läkarutlåtande, men det kan stärka dokumentet." },
+    { "q": "Kan sjukvården bortse från denna medgivande?", "a": "I akut livsfarlig situation kan sjukvården prioritera att rädda ditt liv, även om det strider mot denna medgivande." },
+    { "q": "Hur länge är denna medgivande giltig?", "a": "Den är giltig tills du ändrar eller återkallar den skriftligt." }
+  ],
+  "relatedIds": [68, 70, 84],
+  "legalInfo": "Denna medgivande är viktig för sjukvården. Två vittnen rekommenderas. Spara original på säker plats och informera sjukvården.",
+  "keywords": ["medicinsk behandling", "vård", "godkännande", "patient", "medgivande"]
+}

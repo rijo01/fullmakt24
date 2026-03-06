@@ -1,0 +1,35 @@
+{
+  "id": 68,
+  "slug": "fullmakt-migrationsverket",
+  "name": "Fullmakt för Migrationsverket",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att representera vid Migrationsverkets ärenden.",
+  "longDescription": "En fullmakt för Migrationsverket ger en person befogenhet att representera dig vid ärendet rörande visum, uppehållstillstånd, medborgarskap och andra invandring­särenden. Denna fullmakt kan behövas när du inte kan personligen närvara vid möten eller intervjuer.",
+  "badge": "premium",
+  "usageCount": 1543,
+  "fields": [
+    { "id": "givare_namn", "label": "Sökandens namn", "type": "text", "placeholder": "Maria Garcia", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer/Passnummer", "type": "text", "placeholder": "XXXXXX-XXXX eller passnummer", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "arende_typ", "label": "Ärendetyp", "type": "select", "options": ["Visum", "Uppehållstillstånd", "Arbetstillstånd", "Medborgarskap", "Annat migrationsärende"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Juridiskt ombud", "Familjemedlem", "Arbetsgivare", "Annan"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Mottagande av brev", "Närvaro vid möten", "Kommunikation med Migrationsverket", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": false, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": false, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Kan fullmaktstagaren närvara vid intervjun åt mig?", "a": "Migrationsverket kan kräva att du personligen deltar i intervjun. Fullmakten hjälper för administrativt arbete." },
+    { "q": "Behöver jag juridiskt ombud för migrationsärenden?", "a": "Du kan hantera det själv, men för komplicerade ärenden är en juridiskt ombud rekommenderat." },
+    { "q": "Hur länge tar ett visum­ärende?", "a": "Det varierar mycket - från några veckor till flera månader beroende på typ av ärende." },
+    { "q": "Vad kostar en fullmakt för Migrationsverket?", "a": "Denna fullmakt är gratis att upprätta. Ett juridiskt ombud kan kosta 2000-5000 kr." },
+    { "q": "Kan fullmakten användas för familjemedlemmar?", "a": "En fullmakt är personlig. Varje familjemedlem behöver sin egen fullmakt." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Migrationsverket kan kräva att denna fullmakt presenteras tillsammans med ID-handling. Spara original på säker plats.",
+  "keywords": ["Migrationsverket", "visum", "uppehållstillstånd", "medborgarskap", "fullmakt"]
+}

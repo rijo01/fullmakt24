@@ -1,0 +1,36 @@
+{
+  "id": 32,
+  "slug": "fullmakt-bostadskop",
+  "name": "Fullmakt för bostadsköp",
+  "category": "Boende & Vardag",
+  "categorySlug": "boende-vardag",
+  "description": "Fullmakt för att representera vid bostadsköp.",
+  "longDescription": "En fullmakt för bostadsköp ger en annan person befogenhet att representera dig vid köpet av en bostad. Detta kan inkludera att underteckna kontrakt, hantera finansieringen och kommunicera med mäklare och juridiska ombud.",
+  "badge": "premium",
+  "usageCount": 2134,
+  "fields": [
+    { "id": "givare_namn", "label": "Köparens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "fastighet_adress", "label": "Fastighetens adress", "type": "address", "placeholder": "Lillgatan 5, 222 33 Göteborg", "required": true, "group": "detaljer" },
+    { "id": "prisgrans", "label": "Ungefärligt köpeskilling", "type": "text", "placeholder": "3 500 000 kr", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Make/Maka", "Juridiskt ombud", "Fastighetsmäklare", "Annan betrodd"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Underteckning av kontrakt", "Finansieringssamtal", "Förhandling av pris", "All representation"], "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Kan fullmaktstagaren underteckna köpekontrakt åt mig?", "a": "Ja, om fullmakten uttryckligt tillåter det. Men många juridiska ombud föredrar att du är närvarande vid underteckning." },
+    { "q": "Behöver långivaren godkänna fullmakten?", "a": "Oftast ja. Banken kan behöva original eller attesterad kopia för att låna ut pengar." },
+    { "q": "Kan jag dra tillbaka fullmakten?", "a": "Ja, men om kontraktet redan är undertecknat kan det inte dras tillbaka. Kontakta omedelbar juridisk ombud." },
+    { "q": "Vad gör jag om jag inte är nöjd med förhandlingen?", "a": "Om fullmakten inte har resulterat i undertecknad kontrakt kan du dra tillbaka den. Då måste nya förhandlingar genomföras." },
+    { "q": "Är två vittnen obligatoriska?", "a": "För en bostadsköpfullmakt rekommenderas två vittnen starkt för att styrka äkthet." }
+  ],
+  "relatedIds": [33, 52, 62],
+  "legalInfo": "En bostadsköpfullmakt är juridiskt bindande. Två vittnen är starkt rekommenderat. Spara originalet på säker plats.",
+  "keywords": ["bostadsköp", "fastighet", "köpkontrakt", "köpare", "fullmakt"]
+}

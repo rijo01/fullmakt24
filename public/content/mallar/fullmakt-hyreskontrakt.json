@@ -1,0 +1,35 @@
+{
+  "id": 59,
+  "slug": "fullmakt-hyreskontrakt",
+  "name": "Fullmakt för hyreskontrakt",
+  "category": "Boende & Vardag",
+  "categorySlug": "boende-vardag",
+  "description": "Fullmakt för att representera vid hyreskontrakt.",
+  "longDescription": "En fullmakt för hyreskontrakt ger en person befogenhet att underteckna hyresavtal på din räkning. Det kan gälla vid uthyrning eller förminskad egen möjlighet att närvara vid kontraktssignering.",
+  "badge": "gratis",
+  "usageCount": 876,
+  "fields": [
+    { "id": "givare_namn", "label": "Fastighetsägarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "fastighet_adress", "label": "Fastighetens adress", "type": "address", "placeholder": "Lillgatan 5, 222 33 Göteborg", "required": true, "group": "detaljer" },
+    { "id": "hyra", "label": "Månadshyra", "type": "text", "placeholder": "8 000 kr", "required": true, "group": "detaljer" },
+    { "id": "hyrstid", "label": "Hyresperiod", "type": "select", "options": ["1 år", "2 år", "3 år", "Obegränsad"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Juridiskt ombud", "Fastighetsförvaltare", "Familjemedlem", "Annan"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Underteckning av kontrakt", "Förhandling", "Hyresbyteavtal", "All hyreshantering"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Kan fullmaktstagaren underteckna hyreskontrakt åt mig?", "a": "Ja, om fullmakten uttryckligt tillåter det. Men många hyresgäster förväntar sig att utmanaren är närvarande." },
+    { "q": "Kan fullmakten begränsas?", "a": "Ja, du kan säga att fullmakten endast gäller för vissa fastigheter eller hyresgäster." },
+    { "q": "Vilka är hyresgästens rättigheter?", "a": "Hyresgästen har rätt till driftskostnadstransparens, tidiga uppsägning vid fel, och kontakt med hyresvärden." },
+    { "q": "Kan hyran ändras?", "a": "Ja, med hyresgästens samtycke. Utan samtycke kan hyran normalt endast höjas enligt indexering." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan undertecknade kontrakt kan inte återkallas. Kontakta juridisk ombud om detta är ett problem." }
+  ],
+  "relatedIds": [52, 62, 71],
+  "legalInfo": "Denna fullmakt gäller mellan dig och fullmaktstagaren. Hyresgästen är inte bindad av fullmakten.",
+  "keywords": ["hyra", "hyreskontrakt", "lägenhetsuthyrning", "fastighetägare", "fullmakt"]
+}

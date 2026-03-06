@@ -1,0 +1,37 @@
+{
+  "id": 33,
+  "slug": "fullmakt-bostadsforsaljning",
+  "name": "Fullmakt för bostadsförsäljning",
+  "category": "Boende & Vardag",
+  "categorySlug": "boende-vardag",
+  "description": "Fullmakt för att representera vid bostadsförsäljning.",
+  "longDescription": "En fullmakt för bostadsförsäljning ger en person befogenhet att representera dig vid försäljningen av en bostad. Det kan inkludera att hantera försäljningsprocessen, underteckna kontrakt och kommunicera med köpare och mäklare.",
+  "badge": "premium",
+  "usageCount": 2876,
+  "fields": [
+    { "id": "givare_namn", "label": "Säljarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "fastighet_adress", "label": "Fastighetens adress", "type": "address", "placeholder": "Lillgatan 5, 222 33 Göteborg", "required": true, "group": "detaljer" },
+    { "id": "forsaljningspris", "label": "Ungefärligt försäljningspris", "type": "text", "placeholder": "3 500 000 kr", "required": true, "group": "detaljer" },
+    { "id": "maklare", "label": "Mäklares namn (om känd)", "type": "text", "placeholder": "Göta Fastighetsmäklare", "required": false, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Make/Maka", "Juridiskt ombud", "Fastighetsmäklare", "Annan betrodd"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Underteckning av kontrakt", "Förhandling av pris", "Hantering av inspektioner", "All representation"], "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Kan fullmaktstagaren underteckna försäljningskontraktet?", "a": "Ja, om fullmakten uttryckligt tillåter det. Många köpare förväntar sig att säljaren är närvarande dock." },
+    { "q": "Vem får pengarna från försäljningen?", "a": "Du bestämmer vad du är överens om med fullmaktstagaren. Normalt går pengarna till ditt bankkonto." },
+    { "q": "Behöver mäklaren godkänna fullmakten?", "a": "Kontakta mäklaren. De flesta accepterar fullmakter, men kan vilja att säljaren är närvarande vid visningar." },
+    { "q": "Kan jag dra tillbaka fullmakten?", "a": "Ja, men om kontraktet redan är undertecknat kan det inte dras tillbaka. Det är då en juridisk bindande försäljning." },
+    { "q": "Vad gör jag om köpet faller igenom?", "a": "Om fullmaktstagaren har undertecknat kan du inte enkelt ångra. Kontakta juridisk ombud omedelbar." }
+  ],
+  "relatedIds": [32, 52, 62],
+  "legalInfo": "En försäljningsfullmakt är juridiskt bindande. Två vittnen är starkt rekommenderat. Spara originalet säkert.",
+  "keywords": ["bostadsförsäljning", "fastighetsförsäljning", "försäljningskontrakt", "säljare", "fullmakt"]
+}

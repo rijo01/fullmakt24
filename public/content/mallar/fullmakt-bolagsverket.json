@@ -1,0 +1,36 @@
+{
+  "id": 31,
+  "slug": "fullmakt-bolagsverket",
+  "name": "Fullmakt för Bolagsverket",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att representera ett bolag vid Bolagsverket.",
+  "longDescription": "En fullmakt för Bolagsverket ger en person befogenhet att representera ditt bolag i ärenden hos Bolagsverket, som registrering, ändringar i bolagsuppgifter, eller årsredovisning.",
+  "badge": "premium",
+  "usageCount": 1654,
+  "fields": [
+    { "id": "givare_namn", "label": "Bolaget namn", "type": "text", "placeholder": "Anderssons AB", "required": true, "group": "givare" },
+    { "id": "givare_orgnr", "label": "Organisationsnummer", "type": "text", "placeholder": "556000-1234", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Bolagets adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "givare_styrelseledamot", "label": "Ditt namn och titel", "type": "text", "placeholder": "Anna Andersson, Styrelseordförande", "required": true, "group": "givare" },
+    { "id": "arende_typ", "label": "Ärendetyp", "type": "select", "options": ["Registrering", "Ändringar av uppgifter", "Årsredovisning", "Annat Bolagsverketärende"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_roll", "label": "Roll i bolag", "type": "select", "options": ["Revisor", "Juridiskt ombud", "Styrelseled", "Bolagsman", "Annan"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Informationshämtning", "Inlämning av dokument", "Ändringar av uppgifter", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Kan en revisor presentera denna fullmakt?", "a": "Ja, revisorer har ofta befogenhet att representera bolag vid Bolagsverket." },
+    { "q": "Vad är Bolagsverkets webtjänster?", "a": "Bolagsverket erbjuder en webbtjänst där man kan göra många ärenden digitalt." },
+    { "q": "Behövs två vittnen?", "a": "Två vittnen rekommenderas starkt för en Bolagsverketfullmakt." },
+    { "q": "Vad är en årsredovisning?", "a": "En årsredovisning är ett juridiskt dokument som visar bolagets resultat för året. Den ska inlämnas till Bolagsverket." },
+    { "q": "Kan fullmakten begränsas?", "a": "Ja, du kan säga att fullmakten endast gäller viss typ av ärenden." }
+  ],
+  "relatedIds": [26, 56, 62],
+  "legalInfo": "Denna fullmakt måste följa bolagsjuridiken. Två vittnen är starkt rekommenderat. Bolagsverket kan kräva originalet.",
+  "keywords": ["Bolagsverket", "bolag", "registrering", "årsredovisning", "fullmakt"]
+}

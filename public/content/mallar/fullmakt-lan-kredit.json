@@ -1,0 +1,35 @@
+{
+  "id": 66,
+  "slug": "fullmakt-lan-kredit",
+  "name": "Fullmakt för lån och kredit",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att ansöka om och hantera lån och kreditärenden.",
+  "longDescription": "En fullmakt för lån och kredit ger en annan person befogenhet att ansöka om lån, kreditkort och andra kreditprodukter på dina vegnar. Detta kan behövas när du är sjuk, bortrest, eller inte kan hantera kreditprocessen själv.",
+  "badge": "premium",
+  "usageCount": 1567,
+  "fields": [
+    { "id": "givare_namn", "label": "Låntagarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_inkomst", "label": "Ungefärlig årsinkomst", "type": "text", "placeholder": "400 000 kr", "required": false, "group": "givare" },
+    { "id": "bank", "label": "Bank/Kreditgivare", "type": "text", "placeholder": "SEB", "required": true, "group": "detaljer" },
+    { "id": "lantyp", "label": "Låntyp", "type": "select", "options": ["Personligt lån", "Kreditkort", "Bostadslån", "Billån", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "max_belopp", "label": "Max lånebelopp", "type": "text", "placeholder": "200 000 kr", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Make/Maka", "Son/Dotter", "Juridiskt ombud"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Ansökan", "Förhandlingar", "Underteckning", "Full hantering"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Kan fullmaktstagaren ta upp ett lån utan mitt samtycke?", "a": "Nej, fullmakten måste precisera att detta är tillåtet. Du kan begränsa det till att bara ansöka, och du måste godkänna innan underteckning." },
+    { "q": "Vad gör banken om fullmakten presenteras?", "a": "De flesta banker accepterar fullmakter för lånansökningar. De kommer att verifiera identiteten för både givare och fullmaktstager." },
+    { "q": "Kan jag sätta en max-gräns?", "a": "Ja, det är smart att sätta en max-gräns för lånebeloppet så fullmaktstagaren inte kan ta upp större lån än du tillåter." },
+    { "q": "Vad händer om jag drar tillbaka fullmakten?", "a": "Informera banken omedelbar. Pågående ansökningar kan behöva avslutas eller behandlas separat." },
+    { "q": "Behövs två vittnen?", "a": "Två vittnen rekommenderas för denna typ av fullmakt för att styrka äkthet." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "En kreditfullmakt bör sparas säkert. Banken kan kräva originalet eller attesterad kopia.",
+  "keywords": ["lån", "kredit", "bank", "kreditkort", "fullmakt"]
+}
