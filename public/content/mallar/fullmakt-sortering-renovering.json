@@ -1,0 +1,35 @@
+{
+  "id": 96,
+  "slug": "fullmakt-sortering-renovering",
+  "name": "Fullmakt för renovering",
+  "category": "Boende & Vardag",
+  "categorySlug": "boende-vardag",
+  "description": "Fullmakt för att organisera renovering.",
+  "longDescription": "En fullmakt för renovering ger en person befogenhet att organisera och betala för renoveringsarbete på din fastighet.",
+  "badge": "premium",
+  "usageCount": 654,
+  "fields": [
+    { "id": "givare_namn", "label": "Fastighetsägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "fastighet", "label": "Fastighetens adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "detaljer" },
+    { "id": "renovering", "label": "Renoveringstyp", "type": "select", "options": ["Målning", "Tak", "VVS", "Elektricitet", "Övergripande"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "max_kostnad", "label": "Max renoveringskostnad", "type": "text", "placeholder": "500 000 kr", "required": true, "group": "detaljer" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Offertöversikande", "Offertgivande", "Arbetsledning", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad kostar renovering?", "a": "Det varierar enormt - från 10 000 kr för målning till 500 000+ för övergripande." },
+    { "q": "Behövs offert?", "a": "Ja, alltid få minst 3 offerter innan du bestämmer dig." },
+    { "q": "Vilka krav finns på byggnationen?", "a": "Större renoveringar kräver bygglov och motsvarar byggnormerna." },
+    { "q": "Behövs två vittnen?", "a": "Två vittnen rekommenderas för större renoveringsfullmakter." },
+    { "q": "Kan fullmaktstagaren välja entreprenör?", "a": "Normalt ja, men med dina instruktioner om budget och kvalitet." }
+  ],
+  "relatedIds": [52, 62, 71],
+  "legalInfo": "Denna fullmakt är juridisk och kräver två vittnen. Rekommenderat att få juridisk hjälp.",
+  "keywords": ["renovering", "fastigheid", "bygg", "underhål", "reparation", "fullmakt"]
+}

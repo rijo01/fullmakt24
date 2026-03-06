@@ -1,0 +1,31 @@
+{
+  "id": 99,
+  "slug": "fullmakt-tdh-barn",
+  "name": "Fullmakt för barnverksamhet TDH",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Fullmakt för Tillsammans för Barnens hälsa.",
+  "longDescription": "En fullmakt för Tillsammans för Barnens hälsa ger en person befogenhet att representera barnprojekt.",
+  "badge": "gratis",
+  "usageCount": 432,
+  "fields": [
+    { "id": "givare_namn", "label": "Aktivisten – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "projekt", "label": "Projekt", "type": "text", "placeholder": "TDH Barnhälsa Stockholm", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Möte", "Representering", "Donationsinsamling", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är TDH?", "a": "Tillsammans för Barnens hälsa är en NGO som arbetar för barns välfärd globalt." },
+    { "q": "Vilka barnprojekt stöder TDH?", "a": "Fokus på utbildning, nutrition, sjukvård och skydd för utsatta barn." },
+    { "q": "Behöver organisationen denna fullmakt?", "a": "Normalt ja för representering på möten." },
+    { "q": "Kan fullmaktstagaren samla in donationer?", "a": "Ja, om fullmakten täcker 'donationsinsamling'." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan insamlade medel kan inte återges." }
+  ],
+  "relatedIds": [24, 38, 75],
+  "legalInfo": "Denna fullmakt gäller mellan dig och TDH.",
+  "keywords": ["TDH", "barn", "välgörenhet", "organisation", "hjälp", "fullmakt"]
+}

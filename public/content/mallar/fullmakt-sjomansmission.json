@@ -1,0 +1,32 @@
+{
+  "id": 94,
+  "slug": "fullmakt-sjomansmission",
+  "name": "Fullmakt för Sjömanskyrkan",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Fullmakt för att representera Sjömanskyrkan.",
+  "longDescription": "En fullmakt för Sjömanskyrkan ger en person befogenhet att representera dig vid möten och kyrkoärenden.",
+  "badge": "gratis",
+  "usageCount": 432,
+  "fields": [
+    { "id": "givare_namn", "label": "Medlemmens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "kyrka", "label": "Sjömanskyrka", "type": "text", "placeholder": "Sjömanskyrkan Stockholm", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Familjemedlem", "Vän", "Kyrkoledare"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Möte", "Röstning", "Donationer", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är Sjömanskyrkan?", "a": "En luthersk kyrka som betjänar sjöfarare och maritime samhällor." },
+    { "q": "Behöver kyrkan denna fullmakt?", "a": "Normalt ja för möten och representations årenden." },
+    { "q": "Kan fullmaktstagaren donera?", "a": "Ja, om fullmakten täcker 'donationer'." },
+    { "q": "Vilka kyrkor finns?", "a": "Sjömanskyrkan har kapell i större hamnar runt Sverige." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, innan mötet eller kyrkoarrangement." }
+  ],
+  "relatedIds": [24, 38, 75],
+  "legalInfo": "Denna fullmakt gäller mellan dig och kyrkan.",
+  "keywords": ["kyrka", "sjöman", "religiös", "kyrkoarrangemang", "fullmakt"]
+}

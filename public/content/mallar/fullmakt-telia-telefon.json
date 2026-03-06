@@ -1,0 +1,32 @@
+{
+  "id": 100,
+  "slug": "fullmakt-telia-telefon",
+  "name": "Fullmakt för teleoperatör",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att hantera telefonabonnemang.",
+  "longDescription": "En fullmakt för teleoperatör ger en person befogenhet att hantera ditt mobil- eller fasttelefonsabonnemang.",
+  "badge": "gratis",
+  "usageCount": 1234,
+  "fields": [
+    { "id": "givare_namn", "label": "Kundens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "operatör", "label": "Teleoperatör", "type": "select", "options": ["Telia", "Telenor", "Vodafone", "Tre", "Annan"], "required": true, "group": "detaljer" },
+    { "id": "telefonnummer", "label": "Telefonnummer", "type": "text", "placeholder": "070-123 45 67", "required": false, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Support och information", "Abonnemang ändringar", "Byteshantering", "All administration"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vilka är de största operatörerna?", "a": "Telia, Telenor, Vodafone och Tre är de största. Många MVNO också." },
+    { "q": "Vad kostar en mobilabonnemang?", "a": "Normalt 199-699 SEK per månad beroende på databehov." },
+    { "q": "Kan jag byta operatör?", "a": "Ja, med två veckors uppsägningstid kan du byta till annan operatör." },
+    { "q": "Vad gör jag vid hemlig debiterng?", "a": "Kontakta operatören omedelbar och anmäl till konsumentnämnden." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, informera operatören skriftligt." }
+  ],
+  "relatedIds": [24, 38, 75],
+  "legalInfo": "Denna fullmakt gäller mellan dig och teleoperatören.",
+  "keywords": ["telefon", "mobil", "abonnemang", "operatör", "telia", "fullmakt"]
+}

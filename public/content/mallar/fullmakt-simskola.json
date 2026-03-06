@@ -1,0 +1,33 @@
+{
+  "id": 93,
+  "slug": "fullmakt-simskola",
+  "name": "Fullmakt för simskola",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Fullmakt för att anmäla barn till simskola.",
+  "longDescription": "En fullmakt för simskola ger en person befogenhet att anmäla barnet till simundervisning.",
+  "badge": "gratis",
+  "usageCount": 765,
+  "fields": [
+    { "id": "givare_namn", "label": "Föräldrerns namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "barn_namn", "label": "Barnets namn", "type": "text", "placeholder": "Erik Andersson", "required": true, "group": "detaljer" },
+    { "id": "simhall", "label": "Simhall", "type": "text", "placeholder": "Simhallen Stockholm", "required": true, "group": "detaljer" },
+    { "id": "nivå", "label": "Simningnivå", "type": "select", "options": ["Nybörjare", "Lättare", "Medel", "Avancerad"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Mormor", "Morfar", "Farmor", "Farfar", "Vän"], "required": true, "group": "havare" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad kostar simskola?", "a": "Normalt 500-1500 SEK per termin för barns simundervisning." },
+    { "q": "Vid vilket ålder börjar barn simma?", "a": "De flesta börjar från 3-4 års ålder." },
+    { "q": "Behöver simhallen denna fullmakt?", "a": "Ja, för anmälan och nödsituationer." },
+    { "q": "Vad lär barnen?", "a": "Från vattenvanande till simteknik beroende på nivå." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan betald term kan kräva avgift." }
+  ],
+  "relatedIds": [50, 60, 71],
+  "legalInfo": "Denna fullmakt gäller mellan dig och simhallen.",
+  "keywords": ["simskola", "simning", "barn", "idrott", "aktivitet", "fullmakt"]
+}

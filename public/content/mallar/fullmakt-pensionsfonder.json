@@ -1,0 +1,31 @@
+{
+  "id": 85,
+  "slug": "fullmakt-pensionsfonder",
+  "name": "Fullmakt för pensionsfonder",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att hantera pensionsfonder.",
+  "longDescription": "En fullmakt för pensionsfonder ger en person befogenhet att hantera dina pensionsfonder och investeringar.",
+  "badge": "premium",
+  "usageCount": 876,
+  "fields": [
+    { "id": "givare_namn", "label": "Fondägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "fondtyp", "label": "Fondtyp", "type": "select", "options": ["PPM", "Privat pensionssparande", "Blandad", "Annat"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Läsa information", "Ändra placering", "Uttag", "Full admin"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är PPM?", "a": "Premiepensionsmyndigheten hanterar pensionspengar. Du väljer själv fonder." },
+    { "q": "Kan fullmaktstagaren ta ut pengarna?", "a": "Ja, om fullmakten täcker 'uttag'. Var försiktig med detta!" },
+    { "q": "Vad är räntesats på pensioner?", "a": "Det varierar mycket beroende på fond. Normalt 2-8% per år långsiktigt." },
+    { "q": "Kan jag få tillbaka min pension?", "a": "Normalt kan du bara uttaga från 61 års ålder." },
+    { "q": "Behövs två vittnen?", "a": "Två vittnen rekommenderas för pensionsfullmakter." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt är finansiell och bör ges endast till mycket betrodda personer.",
+  "keywords": ["pension", "PPM", "fonder", "sparande", "ekonomi", "fullmakt"]
+}

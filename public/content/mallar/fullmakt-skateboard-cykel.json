@@ -1,0 +1,32 @@
+{
+  "id": 91,
+  "slug": "fullmakt-skateboard-cykel",
+  "name": "Fullmakt för cykelaffär",
+  "category": "Boende & Vardag",
+  "categorySlug": "boende-vardag",
+  "description": "Fullmakt för att köpa och sälja cykel.",
+  "longDescription": "En fullmakt för cykelaffär ger en person befogenhet att köpa eller sälja cykel på din räkning.",
+  "badge": "gratis",
+  "usageCount": 432,
+  "fields": [
+    { "id": "givare_namn", "label": "Cykelägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "cykeltyp", "label": "Cykeltyp", "type": "select", "options": ["Mountainbike", "Roadbike", "Citybike", "Elcykel", "Annan"], "required": true, "group": "detaljer" },
+    { "id": "arende", "label": "Ärendetyp", "type": "select", "options": ["Köp", "Försäljning", "Byte"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "max_pris", "label": "Max pris (vid köp)", "type": "text", "placeholder": "10 000 kr", "required": false, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad kostar en cykel?", "a": "Vanlig cykel 1500-5000 SEK, mountainbike 2000-10000 SEK, elcykel 5000-30000 SEK." },
+    { "q": "Behövs denna fullmakt?", "a": "Inte nödvändigt men praktisk om du inte kan närvara." },
+    { "q": "Kan fullmaktstagaren välja cykel?", "a": "De bör fråga dig först. Ge tydliga instruktioner." },
+    { "q": "Vilka märken rekommenderas?", "a": "Försäljaren kan rekommendera populära märken som Trek, Specialized, Giant." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan köpt cykel kan bara returneras enligt returpolicyn." }
+  ],
+  "relatedIds": [24, 38, 75],
+  "legalInfo": "Denna fullmakt gäller mellan dig och cykelaffären.",
+  "keywords": ["cykel", "bike", "köp", "försäljning", "sport", "fullmakt"]
+}

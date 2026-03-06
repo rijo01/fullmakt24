@@ -1,0 +1,30 @@
+{
+  "id": 86,
+  "slug": "fullmakt-postnord",
+  "name": "Fullmakt för PostNord",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att hämta paket och brev.",
+  "longDescription": "En fullmakt för PostNord ger en person befogenhet att hämta paket och brev på PostNord åt dig.",
+  "badge": "gratis",
+  "usageCount": 1098,
+  "fields": [
+    { "id": "givare_namn", "label": "Mottagarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "poststation", "label": "PostNord station", "type": "text", "placeholder": "PostNord Stockholm City", "required": false, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Behöver PostNord denna fullmakt?", "a": "De flesta PostNord stationer accepterar fullmakt om fullmaktstagaren har ID." },
+    { "q": "Vad gör jag vid paket som är för stort?", "a": "PostNord kan lagra det. Kontakta dem för info." },
+    { "q": "Vad kostar PostNord?", "a": "Brev är normalt gratis. Paket kostar beroende på vikt och destination." },
+    { "q": "Hur länge kan PostNord lagra paket?", "a": "Normalt 5-10 dagar innan de skickas tillbaka." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan mottagna paket kan inte återges." }
+  ],
+  "relatedIds": [24, 38, 75],
+  "legalInfo": "Denna fullmakt gäller mellan dig och PostNord.",
+  "keywords": ["PostNord", "paket", "brev", "post", "leverans", "fullmakt"]
+}

@@ -1,0 +1,31 @@
+{
+  "id": 83,
+  "slug": "fullmakt-parkeringsavtal",
+  "name": "Fullmakt för parkeringsavtal",
+  "category": "Boende & Vardag",
+  "categorySlug": "boende-vardag",
+  "description": "Fullmakt för att underteckna parkeringsavtal.",
+  "longDescription": "En fullmakt för parkeringsavtal ger en person befogenhet att underteckna parkeringsavtal på din räkning.",
+  "badge": "gratis",
+  "usageCount": 654,
+  "fields": [
+    { "id": "givare_namn", "label": "Avtalstagaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "parkeringsplats", "label": "Parkeringsplats", "type": "address", "placeholder": "Storgatan 1, Garaget", "required": true, "group": "detaljer" },
+    { "id": "registrering", "label": "Bilens registreringsnummer", "type": "text", "placeholder": "ABC 123", "required": false, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad kostar parkering?", "a": "Det varierar mycket - från gratis till 2000+ SEK per månad i city." },
+    { "q": "Vad ingår i parkeringsavtal?", "a": "Normalt bara platsen. Försäkring och service är separat." },
+    { "q": "Kan fullmaktstagaren välja plats?", "a": "De flesta garageägare har begränsade platser. Ge instruktioner." },
+    { "q": "Kan jag ändra bil?", "a": "Ja, informera garageägaren om registreringsnumret." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan undertecknat avtal kräver uppsägning." }
+  ],
+  "relatedIds": [29, 35, 51],
+  "legalInfo": "Denna fullmakt gäller mellan dig och garageägaren.",
+  "keywords": ["parkering", "garage", "avtal", "plats", "fullmakt"]
+}

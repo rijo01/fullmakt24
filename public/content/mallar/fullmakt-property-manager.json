@@ -1,0 +1,34 @@
+{
+  "id": 88,
+  "slug": "fullmakt-property-manager",
+  "name": "Fullmakt för fastighetsförvaltning",
+  "category": "Boende & Vardag",
+  "categorySlug": "boende-vardag",
+  "description": "Fullmakt för fastighetsförvaltning.",
+  "longDescription": "En fullmakt för fastighetsförvaltning ger en person befogenhet att förvalta din fastighet och ta hyresbeslut.",
+  "badge": "premium",
+  "usageCount": 1234,
+  "fields": [
+    { "id": "givare_namn", "label": "Fastighetsägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "fastighet", "label": "Fastighetens adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "detaljer" },
+    { "id": "enheter", "label": "Antal enheter", "type": "text", "placeholder": "3", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Hyresfärsamling", "Underhållsbeslutenande", "Försäljning av enheter", "Full förvaltning"], "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad gör en fastighetsförvaltare?", "a": "De hanterar hyresinkasso, underhåll, hyresgästkontakt och ekonomi." },
+    { "q": "Hur mycket kostar förvaltning?", "a": "Normalt 8-12% av hyresintäkterna per år." },
+    { "q": "Kan fullmaktstagaren sälja enheter?", "a": "Ja, om fullmakten täcker det. Var försiktig med denna befogenhet!" },
+    { "q": "Behövs två vittnen?", "a": "Två vittnen rekommenderas för fastighetsärenden." },
+    { "q": "Kan fullmakten begränsas?", "a": "Ja, du kan ge instruktioner om maxkostnader och gränser." }
+  ],
+  "relatedIds": [52, 62, 71],
+  "legalInfo": "Denna fullmakt är juridisk och kräver två vittnen.",
+  "keywords": ["fastighet", "förvaltning", "hyra", "ägare", "underhål", "fullmakt"]
+}

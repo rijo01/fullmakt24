@@ -1,0 +1,31 @@
+{
+  "id": 89,
+  "slug": "fullmakt-reseforsaljning",
+  "name": "Fullmakt för reseförsäljning",
+  "category": "Resa & Transport",
+  "categorySlug": "resa-transport",
+  "description": "Fullmakt för att boka och betala resor.",
+  "longDescription": "En fullmakt för reseförsäljning ger en person befogenhet att boka och betala resor på din räkning.",
+  "badge": "gratis",
+  "usageCount": 876,
+  "fields": [
+    { "id": "givare_namn", "label": "Resenärens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "resetyp", "label": "Resetyp", "type": "select", "options": ["Flyg", "Tåg", "Buss", "Hotell", "Paket"], "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "max_belopp", "label": "Max bokningskostnad", "type": "text", "placeholder": "50 000 kr", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad kostar en resa?", "a": "Det varierar enormt - från 500 SEK för lokalbuss till 100 000+ för utlandsflyg." },
+    { "q": "Kan fullmaktstagaren välja destination?", "a": "De kan välja inom rimliga gränser. Ge instruktioner om budget och preferenser." },
+    { "q": "Vad gör jag vid inställld flyg?", "a": "Flyg och tåg erbjuder normalt ersättning. Kontakta leverantören." },
+    { "q": "Behövs reseförsäkring?", "a": "Ja, det är smart att ha försäkring för inställd resa, sjukdom etc." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan bokad resa kan kräva avbeställningsavgift." }
+  ],
+  "relatedIds": [39, 53, 62],
+  "legalInfo": "Denna fullmakt gäller mellan dig och reseleverantören.",
+  "keywords": ["resa", "flyg", "tåg", "hotell", "bokining", "fullmakt"]
+}

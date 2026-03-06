@@ -1,0 +1,32 @@
+{
+  "id": 98,
+  "slug": "fullmakt-svenska-kyrkan",
+  "name": "Fullmakt för Svenska kyrkan",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Fullmakt för att representera Svenska kyrkan.",
+  "longDescription": "En fullmakt för Svenska kyrkan ger en person befogenhet att representera dig vid kyrkomöten och kyrkoärenden.",
+  "badge": "gratis",
+  "usageCount": 876,
+  "fields": [
+    { "id": "givare_namn", "label": "Medlemmens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "kyrka", "label": "Kyrkan", "type": "text", "placeholder": "Storkyrkan Stockholm", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Familjemedlem", "Vän", "Kyrkoledare"], "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Kyrkomöte", "Röstning", "Donationer", "Full representation"], "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är Svenska kyrkan?", "a": "Den största kyrkliga organisationen i Sverige, luthersk trosbekännelse." },
+    { "q": "Behöver kyrkan denna fullmakt?", "a": "Normalt ja för kyrkomöten och representations årenden." },
+    { "q": "Kan jag välja att inte betala kyrkoskatt?", "a": "Ja, du kan anmäla utträde från kyrkan och slippa kyrkoskatt." },
+    { "q": "Vilka tjänster erbjuder kyrkan?", "a": "Gudstjänster, dop, vigsel, begravningar, konfirmation och mycket mera." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, innan kyrkomötet eller arrangementet." }
+  ],
+  "relatedIds": [24, 38, 75],
+  "legalInfo": "Denna fullmakt gäller mellan dig och kyrkan.",
+  "keywords": ["kyrka", "Svenska kyrkan", "religiös", "kyrkomöte", "fullmakt"]
+}

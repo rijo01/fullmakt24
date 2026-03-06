@@ -1,0 +1,35 @@
+{
+  "id": 87,
+  "slug": "fullmakt-privat-hamtjanst",
+  "name": "Fullmakt för privat hemtjänst",
+  "category": "Vård & Omsorg",
+  "categorySlug": "vard-omsorg",
+  "description": "Fullmakt för att använda privat hemtjänst.",
+  "longDescription": "En fullmakt för privat hemtjänst ger en person befogenhet att använda privata hemtjänster på din räkning.",
+  "badge": "premium",
+  "usageCount": 765,
+  "fields": [
+    { "id": "givare_namn", "label": "Tjänstetagarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "givare_adress", "label": "Hemadress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
+    { "id": "tjanster", "label": "Tjänster behövda", "type": "select", "options": ["Städning", "Mat", "Personlig hygien", "Medicin", "All omvårdnad"], "required": true, "group": "detaljer" },
+    { "id": "leverantor", "label": "Hemtjänstleverantör", "type": "text", "placeholder": "T.ex. Nyckelklar Hemservice", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Beställning", "Betalning", "Schemaläggnig", "Full hantering"], "required": true, "group": "detaljer" },
+    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
+    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad kostar privat hemtjänst?", "a": "Det varierar mycket - från 300-1000+ SEK per timme beroende på tjänst och region." },
+    { "q": "Vilka tjänster erbjuds?", "a": "Allt från städning till personlig hygien och medicin." },
+    { "q": "Kan jag välja vem som arbetar?", "a": "Många leverantörer erbjuder samma personal om möjligt." },
+    { "q": "Behövs två vittnen?", "a": "Två vittnen rekommenderas för vårdfullmakter." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, men redan påbörjad tjänst kan kräva uppsägningstid." }
+  ],
+  "relatedIds": [68, 70, 84],
+  "legalInfo": "Denna fullmakt är vårdfokuserad. Två vittnen rekommenderas.",
+  "keywords": ["hemtjänst", "privat", "vård", "service", "omsorg", "fullmakt"]
+}

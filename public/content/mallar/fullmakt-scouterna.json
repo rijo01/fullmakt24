@@ -1,0 +1,32 @@
+{
+  "id": 92,
+  "slug": "fullmakt-scouterna",
+  "name": "Fullmakt för Scouterna",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Fullmakt för att representera på scoutmöte.",
+  "longDescription": "En fullmakt för Scouterna ger en person befogenhet att representera dig på scoutmöten och aktiviteter.",
+  "badge": "gratis",
+  "usageCount": 654,
+  "fields": [
+    { "id": "givare_namn", "label": "Scoutens förälder – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "scout_namn", "label": "Scoutens namn", "type": "text", "placeholder": "Erik Andersson", "required": true, "group": "detaljer" },
+    { "id": "scoutkår", "label": "Scoutkår", "type": "text", "placeholder": "Scoutkåren Måsen", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Mormor", "Morfar", "Farmor", "Farfar", "Vän"], "required": true, "group": "havare" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vilka är Scouterna?", "a": "En ungdomsorganisation för barn och ungdomar från 6-25 år som fokuserar på utomhusverksamhet." },
+    { "q": "Vad kostar Scouterna?", "a": "Normalt 500-1500 SEK per år beroende på ålder och kår." },
+    { "q": "Behöver kåren denna fullmakt?", "a": "Ja, för framtagning och nödsituationer." },
+    { "q": "Vad gör man på scoutmöten?", "a": "Lekar, utomhusverksamhet, lärtillfällen och äventyr." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, informera kåren omedelbar." }
+  ],
+  "relatedIds": [50, 60, 71],
+  "legalInfo": "Denna fullmakt gäller mellan dig och scoutkåren.",
+  "keywords": ["scouterna", "scout", "ungdom", "utomhus", "aktivitet", "fullmakt"]
+}

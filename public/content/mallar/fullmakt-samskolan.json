@@ -1,0 +1,32 @@
+{
+  "id": 90,
+  "slug": "fullmakt-samskolan",
+  "name": "Fullmakt för samskolan",
+  "category": "Förening, Skola & Fritid",
+  "categorySlug": "forening-skola",
+  "description": "Fullmakt för att representera barnet på samskolan.",
+  "longDescription": "En fullmakt för samskolan ger en person befogenhet att hämta och hantera barnet på samskolan.",
+  "badge": "gratis",
+  "usageCount": 543,
+  "fields": [
+    { "id": "givare_namn", "label": "Föräldrerns namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
+    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
+    { "id": "barn_namn", "label": "Barnets namn", "type": "text", "placeholder": "Erik Andersson", "required": true, "group": "detaljer" },
+    { "id": "samskola", "label": "Samskola", "type": "text", "placeholder": "Samskolan Stockholm", "required": true, "group": "detaljer" },
+    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "havare" },
+    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
+    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Mormor", "Morfar", "Farmor", "Farfar", "Vän"], "required": true, "group": "havare" },
+    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
+    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  ],
+  "faq": [
+    { "q": "Vad är en samskola?", "a": "En samskola kombinerar ordinär skolundervisning med internationell fördjupning." },
+    { "q": "Behöver samskolan denna fullmakt?", "a": "Ja, för hämtning av barn och nödsituationer." },
+    { "q": "Vilka språk fokuseras?", "a": "Det varierar - många samskolor fokuserar på engelska och andra språk." },
+    { "q": "Kan fullmaktstagaren ta mediciner?", "a": "Nej, föräldrar måste instruera personalen direkt." },
+    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, informera samskolan omedelbar." }
+  ],
+  "relatedIds": [50, 60, 71],
+  "legalInfo": "Denna fullmakt gäller mellan dig och samskolan.",
+  "keywords": ["samskola", "barn", "skola", "hämtning", "fullmakt"]
+}
