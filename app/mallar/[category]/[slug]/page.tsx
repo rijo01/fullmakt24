@@ -45,7 +45,7 @@ export default function TemplateDetailPage() {
 
   const cat = categories.find(c => c.slug === t.categorySlug)
   const related = getTemplatesByCategory(t.categorySlug).filter(r => r.id !== t.id).slice(0, 4)
-  const allFaqs = seoContent?.content.faq || t.faq
+  const allFaqs = (seoContent?.content?.faq || t?.faq || []) as Array<Record<string, string>>
 
   return (
     <div className="section-padding py-10 lg:py-16">
@@ -69,7 +69,7 @@ export default function TemplateDetailPage() {
           </div>
 
           <h1 className="text-3xl lg:text-4xl font-heading font-bold text-navy-500 mb-4">
-            {seoContent?.seo.h1 || t.name}
+            {seoContent?.seo?.h1 || t.name}
           </h1>
 
           {/* Steps indicator */}
@@ -84,7 +84,7 @@ export default function TemplateDetailPage() {
           </div>
 
           {/* ═══ SEO CONTENT: Introduction ═══ */}
-          {seoContent?.content.introduction ? (
+          {seoContent?.content?.introduction ? (
             <div className="card p-6 mb-8">
               <h2 className="font-heading font-bold text-navy-500 text-xl mb-4">Vad är {t.name.toLowerCase()}?</h2>
               {seoContent.content.introduction.split('\n').filter(Boolean).map((p, i) => (
@@ -223,7 +223,7 @@ export default function TemplateDetailPage() {
             </div>
 
             {/* SEO keywords as tags */}
-            {seoContent?.seo.keywords && (
+            {seoContent?.seo?.keywords && (
               <div className="bg-navy-50 rounded-xl p-5">
                 <div className="text-xs font-semibold text-navy-500 mb-3">Relaterade sökord</div>
                 <div className="flex flex-wrap gap-1.5">
