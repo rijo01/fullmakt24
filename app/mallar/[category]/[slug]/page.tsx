@@ -87,7 +87,7 @@ export default function TemplateDetailPage() {
           {seoContent?.content?.introduction ? (
             <div className="card p-6 mb-8">
               <h2 className="font-heading font-bold text-navy-500 text-xl mb-4">Vad är {t.name.toLowerCase()}?</h2>
-              {seoContent.content.introduction.split('\n').filter(Boolean).map((p, i) => (
+              {seoContent?.content?.introduction?.split('\n').filter(Boolean).map((p, i) => (
                 <p key={i} className="text-navy-500 leading-relaxed mb-3 last:mb-0">{p}</p>
               ))}
             </div>
@@ -105,18 +105,18 @@ export default function TemplateDetailPage() {
               <div>
                 <h3 className="font-semibold text-emerald-800 mb-2">Juridisk giltighet</h3>
                 <p className="text-sm text-emerald-700 leading-relaxed">
-                  {seoContent?.content.legalValidity || t.legalInfo}
+                  {seoContent?.content?.legalValidity || t?.legalInfo || ''}
                 </p>
               </div>
             </div>
           </div>
 
           {/* ═══ SEO CONTENT: How-to guide ═══ */}
-          {seoContent?.content.howToGuide && (
+          {seoContent?.content?.howToGuide && (
             <div className="card p-6 mb-8">
               <h2 className="font-heading font-bold text-navy-500 text-xl mb-4">Så fyller du i fullmakten – steg för steg</h2>
               <div className="space-y-4">
-                {seoContent.content.howToGuide.split('\n').filter(Boolean).map((step, i) => (
+                {seoContent?.content?.howToGuide?.split('\n').filter(Boolean).map((step, i) => (
                   <div key={i} className="flex gap-3">
                     {step.match(/^Steg \d/) && (
                       <div className="w-7 h-7 bg-gold-100 text-gold-700 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
@@ -133,11 +133,11 @@ export default function TemplateDetailPage() {
           )}
 
           {/* ═══ SEO CONTENT: Common mistakes ═══ */}
-          {seoContent?.content.commonMistakes && (
+          {seoContent?.content?.commonMistakes && (
             <div className="card p-6 mb-8 border-l-4 border-gold-400">
               <h2 className="font-heading font-bold text-navy-500 text-xl mb-4">⚠️ Vanliga misstag att undvika</h2>
               <div className="space-y-3">
-                {seoContent.content.commonMistakes.split('\n').filter(Boolean).map((mistake, i) => (
+                {seoContent?.content?.commonMistakes?.split('\n').filter(Boolean).map((mistake, i) => (
                   <p key={i} className="text-navy-500 text-sm leading-relaxed">{mistake}</p>
                 ))}
               </div>
@@ -169,7 +169,7 @@ export default function TemplateDetailPage() {
             <div className="mb-8">
               <h3 className="font-heading font-bold text-navy-500 text-lg mb-3">Relaterade fullmakter</h3>
               <div className="flex flex-wrap gap-2">
-                {seoContent.internalLinks.map(link => (
+                {seoContent?.internalLinks?.map(link => (
                   <Link key={link.href} href={link.href} className="px-4 py-2 bg-navy-50 text-navy-600 rounded-lg text-sm font-medium hover:bg-gold-50 hover:text-gold-700 transition-colors">
                     {link.text} →
                   </Link>
@@ -227,7 +227,7 @@ export default function TemplateDetailPage() {
               <div className="bg-navy-50 rounded-xl p-5">
                 <div className="text-xs font-semibold text-navy-500 mb-3">Relaterade sökord</div>
                 <div className="flex flex-wrap gap-1.5">
-                  {seoContent.seo.keywords.map(kw => (
+                  {seoContent?.seo?.keywords?.map(kw => (
                     <span key={kw} className="px-2 py-1 bg-white text-navy-400 rounded text-[10px]">{kw}</span>
                   ))}
                 </div>
