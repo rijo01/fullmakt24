@@ -479,6 +479,10 @@ function generateTemplates(): Template[] {
     { id: 122, slug: 'intyg-digital-arvshandling', name: 'Intyg för digital arvshandling', description: 'Intyg avseende digitalt arv.', badge: 'premium', usageCount: 1234 },
     { id: 123, slug: 'fullmakt-epostarkiv', name: 'Fullmakt för e-postarkiv/molntjänster', description: 'Fullmakt att hantera e-post och molntjänster.', badge: 'gratis', usageCount: 987 },
     { id: 124, slug: 'medgivande-digital-minnessida', name: 'Medgivande för digital minnessida', description: 'Medgivande att skapa och hantera digital minnessida.', badge: 'gratis', usageCount: 876 },
+    // === TILLAGDA 2026-04-22 ===
+    { id: 125, slug: 'framtidsfullmakt-komplett-2026', name: 'Framtidsfullmakt 2026 – komplett mall', description: 'Komplett framtidsfullmakt som träder i kraft om du blir oförmögen att fatta beslut. Täcker ekonomi, vård och bostad.', badge: 'popular', usageCount: 14520 },
+    { id: 126, slug: 'generalfullmakt-privatperson-2026', name: 'Generalfullmakt för privatperson', description: 'Bred fullmakt som täcker de flesta rättshandlingar. Lämplig när du behöver en person att agera i ditt ställe.', badge: 'premium', usageCount: 8932 },
+    { id: 127, slug: 'dodsbo-fullmakt-arvinge-2026', name: 'Dödsbo – fullmakt för arvinge', description: 'Fullmakt som gör det möjligt för en arvinge att agera för dödsboets räkning i kontakter med banker, myndigheter och fastighetsbolag.', badge: 'popular', usageCount: 11240 },
   ];
 
   digitaltTemplates.forEach(t => {
@@ -503,6 +507,107 @@ function generateTemplates(): Template[] {
       keywords: ['fullmakt dödsbo', 'digitalt arv', 'kryptovaluta', 'sociala medier'],
     } as Template);
   });
+
+
+  // Framtidsfullmakt 2026
+  templates.push({
+    id: 125,
+    slug: 'framtidsfullmakt-komplett-2026',
+    name: 'Framtidsfullmakt 2026 – komplett mall',
+    category: 'Seniorer & Omsorg',
+    categorySlug: 'seniorer-omsorg',
+    description: 'Komplett framtidsfullmakt som träder i kraft om du blir oförmögen att fatta beslut. Täcker ekonomi, vård och bostad.',
+    longDescription: 'En framtidsfullmakt är ett av de viktigaste juridiska dokumenten du kan upprätta. Till skillnad från en vanlig fullmakt träder den i kraft automatiskt om du drabbas av sjukdom, demens eller olycka och inte längre kan fatta egna beslut. Täcker ekonomiska beslut, fastighetsförvaltning, sjukvårdskontakter och personliga frågor.',
+    badge: 'popular',
+    usageCount: 14520,
+    fields: [
+      { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
+      { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'fullmaktsgivare_adress', label: 'Adress', type: 'address', placeholder: 'Gatuadress, postnummer, ort', required: true, group: 'givare' },
+      { id: 'fullmaktshavare_namn', label: 'Fullmaktshavarens fullständiga namn', type: 'text', placeholder: 'Erik Svensson', required: true, group: 'havare' },
+      { id: 'fullmaktshavare_pnr', label: 'Personnummer (fullmaktshavare)', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'havare' },
+      { id: 'fullmaktshavare_relation', label: 'Relation till fullmaktsgivaren', type: 'text', placeholder: 'T.ex. make/maka, barn, syskon', required: true, group: 'havare' },
+      { id: 'ersattare_namn', label: 'Ersättare (valfritt)', type: 'text', placeholder: 'Person som träder in om fullmaktshavaren inte kan', required: false, group: 'havare' },
+      { id: 'ekonomi_belopp', label: 'Max engångsbelopp för ekonomiska beslut', type: 'text', placeholder: 'T.ex. 500 000 kr, obegränsat', required: false, group: 'detaljer' },
+      { id: 'fastigheter', label: 'Fastigheter som ingår', type: 'textarea', placeholder: 'Fastighetsbeteckning eller "alla ägda fastigheter"', required: false, group: 'detaljer' },
+      { id: 'bevittnad_ort', label: 'Ort för bevittning', type: 'text', placeholder: 'Stockholm', required: true, group: 'detaljer' },
+    ],
+    faq: [
+      { q: 'Vad är skillnaden på framtidsfullmakt och vanlig fullmakt?', a: 'En vanlig fullmakt gäller medan du kan fatta egna beslut. Framtidsfullmakten träder i kraft JUST NÄR du inte längre kan – vid demens, olycka eller allvarlig sjukdom. Den kräver bevittning av två vittnen.' },
+      { q: 'Måste en framtidsfullmakt bevittnas?', a: 'Ja. En framtidsfullmakt måste bevittnas av två vuxna vittnen som inte är nära släktingar och inte är fullmaktshavare. Utan korrekt bevittning är den ogiltig.' },
+      { q: 'Kan jag ångra en framtidsfullmakt?', a: 'Ja, du kan återkalla framtidsfullmakten när du fortfarande har rättslig handlingsförmåga. Meddela fullmaktshavaren och eventuell ersättare skriftligen.' },
+      { q: 'Vad händer om jag inte har en framtidsfullmakt?', a: 'Utan framtidsfullmakt kan domstolen utse en god man eller förvaltare – en process som tar tid och kan leda till att en okänd person hanterar din ekonomi.' },
+      { q: 'Gäller framtidsfullmakten utomlands?', a: 'En svensk framtidsfullmakt gäller primärt i Sverige. För ärenden i andra länder kan lokala krav tillkomma – kontakta det landets myndigheter.' },
+    ],
+    relatedIds: [126, 127],
+    legalInfo: 'Regleras av Lag (2017:310) om framtidsfullmakter. Kräver bevittning av två vittnen.',
+    keywords: ['framtidsfullmakt', 'fullmakt vid demens', 'fullmakt sjukdom', 'framtidsfullmakt mall', 'lagen om framtidsfullmakter'],
+  } as Template);
+
+  // Generalfullmakt 2026
+  templates.push({
+    id: 126,
+    slug: 'generalfullmakt-privatperson-2026',
+    name: 'Generalfullmakt för privatperson',
+    category: 'Ekonomi & Myndigheter',
+    categorySlug: 'ekonomi-myndigheter',
+    description: 'Bred fullmakt som täcker de flesta rättshandlingar. Lämplig när du behöver en person att agera i ditt ställe.',
+    longDescription: 'En generalfullmakt ger fullmaktshavaren befogenhet att agera på dina vägnar i de flesta situationer – bank, myndigheter, fastighetsaffärer och avtal. Till skillnad från specialfullmakter är den inte begränsad till ett specifikt ärende. Används ofta vid långvarig utlandsresa, sjukdom eller när du av praktiska skäl inte kan närvara.',
+    badge: 'premium',
+    usageCount: 8932,
+    fields: [
+      { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
+      { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'fullmaktsgivare_adress', label: 'Adress', type: 'address', placeholder: 'Gatuadress, postnummer, ort', required: true, group: 'givare' },
+      { id: 'fullmaktshavare_namn', label: 'Fullmaktshavarens fullständiga namn', type: 'text', placeholder: 'Erik Svensson', required: true, group: 'havare' },
+      { id: 'fullmaktshavare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'havare' },
+      { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['1 månad', '3 månader', '6 månader', '1 år', 'Tillsvidare'], required: true, group: 'detaljer' },
+      { id: 'undantag', label: 'Undantag (vad ingår INTE)', type: 'textarea', placeholder: 'T.ex. ej rätt att sälja fast egendom, ej rätt att ge bort egendom', required: false, group: 'detaljer' },
+    ],
+    faq: [
+      { q: 'Vad kan en generalfullmakt användas till?', a: 'En generalfullmakt ger fullmaktshavaren rätt att hantera bankärenden, skriva avtal, företräda dig hos myndigheter, sälja eller köpa lös egendom och mycket mer – om du inte specifikt undantar något.' },
+      { q: 'Kan generalfullmakten ge rätt att sälja min bostad?', a: 'Ja, om inget undantag anges kan fullmaktshavaren i princip sälja fast egendom. Vill du förhindra detta, lägg till ett undantag i fullmakten.' },
+      { q: 'Måste en generalfullmakt registreras?', a: 'Nej, det finns ingen obligatorisk registrering. Vissa banker och myndigheter kan kräva att fullmakten är bevittnad eller notariellt bekräftad.' },
+      { q: 'Hur återkallar man en generalfullmakt?', a: 'Meddela fullmaktshavaren skriftligen och informera berörda institutioner (bank, myndigheter). Generalfullmakten upphör automatiskt om du förlorar rättslig handlingsförmåga – då behövs framtidsfullmakt istället.' },
+      { q: 'Är en generalfullmakt giltig efter dödsfall?', a: 'Nej. En fullmakt upphör alltid vid fullmaktsgivarens dödsfall. Dödsboet hanteras av dödsbodelägarna gemensamt eller via boutredningsman.' },
+    ],
+    relatedIds: [125, 127],
+    legalInfo: 'Regleras av avtalslagen (1915:218). Bevittning rekommenderas men krävs ej i alla situationer.',
+    keywords: ['generalfullmakt', 'fullmakt privatperson', 'bred fullmakt', 'fullmakt bank', 'fullmakt myndigheter'],
+  } as Template);
+
+  // Dödsbo-fullmakt 2026
+  templates.push({
+    id: 127,
+    slug: 'dodsbo-fullmakt-arvinge-2026',
+    name: 'Dödsbo – fullmakt för arvinge',
+    category: 'Digitalt & Dödsbo',
+    categorySlug: 'digitalt-dodsbo',
+    description: 'Fullmakt som gör det möjligt för en arvinge att agera för dödsboets räkning i kontakter med banker, myndigheter och fastighetsbolag.',
+    longDescription: 'När en närstående går bort behöver dödsboet ofta agera snabbt – avsluta hyresavtal, kontakta banken, avboka abonnemang och sköta fastighetsärenden. Denna fullmakt ger en utsedd arvinge eller anhörig rätt att agera på dödsboets vägnar. Den kräver att alla dödsbodelägare undertecknar om inget annat avtalas.',
+    badge: 'popular',
+    usageCount: 11240,
+    fields: [
+      { id: 'avliden_namn', label: 'Den avlidnes fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
+      { id: 'avliden_pnr', label: 'Personnummer (avliden)', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'dodsdatum', label: 'Dödsdatum', type: 'date', required: true, group: 'givare' },
+      { id: 'fullmaktshavare_namn', label: 'Fullmaktshavarens fullständiga namn', type: 'text', placeholder: 'Erik Svensson', required: true, group: 'havare' },
+      { id: 'fullmaktshavare_pnr', label: 'Personnummer (fullmaktshavare)', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'havare' },
+      { id: 'fullmaktshavare_relation', label: 'Relation till den avlidne', type: 'text', placeholder: 'T.ex. son, dotter, make/maka', required: true, group: 'havare' },
+      { id: 'uppdrag', label: 'Specifikt uppdrag', type: 'textarea', placeholder: 'T.ex. avsluta bankkonton, hantera hyreskontrakt, sköta fastighetsförsäljning', required: true, group: 'detaljer' },
+      { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['3 månader', '6 månader', '1 år', 'Till arvskifte slutförs'], required: true, group: 'detaljer' },
+    ],
+    faq: [
+      { q: 'Behöver alla arvingar skriva under dödsbo-fullmakten?', a: 'Som regel ja. Dödsboet ägs gemensamt av alla dödsbodelägare och beslut kräver samtycke. En enskild arvinge kan inte ensam utfärda fullmakt på dödsboets vägnar utan de andras godkännande.' },
+      { q: 'Vilka handlingar kan fullmaktshavaren utföra?', a: 'Fullmaktshavaren kan kontakta banker, avsluta abonnemang, hantera hyreskontrakt, kommunicera med Skatteverket och sköta fastighetsärenden – beroende på vad som specificerats i fullmakten.' },
+      { q: 'Hur länge gäller dödsbo-fullmakten?', a: 'Den gäller den period som anges i fullmakten, normalt tills arvskiftet är klart. Den upphör automatiskt när dödsboet avvecklats och alla tillgångar fördelats.' },
+      { q: 'Kan man ha en boutredningsman istället?', a: 'Ja, om dödsbodelägarna inte är eniga kan tingsrätten utse en boutredningsman som förvaltar dödsboet oberoende. Det är dyrare men löser konflikter.' },
+      { q: 'Räcker dödsfallsintyget istället för fullmakt?', a: 'Dödsfallsintyget bevisar dödsfallet men ger inte automatiskt befogenhet att agera. Fullmakt krävs för att en specifik person ska kunna agera för dödsboet.' },
+    ],
+    relatedIds: [125, 126],
+    legalInfo: 'Grundas på ärvdabalken (1958:637). Kräver samtycke från samtliga dödsbodelägare.',
+    keywords: ['dödsbo fullmakt', 'fullmakt arvinge', 'hantera dödsbo', 'dödsbodelägare fullmakt', 'arvinge fullmakt bank'],
+  } as Template);
 
   return templates;
 }
