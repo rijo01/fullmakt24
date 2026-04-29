@@ -509,6 +509,106 @@ function generateTemplates(): Template[] {
   });
 
 
+
+  // Fullmakt för lägenhetförsäljning 2026
+  templates.push({
+    id: 128,
+    slug: 'fullmakt-hyreslagenh-forsalj-2026',
+    name: 'Fullmakt för försäljning av lägenhet',
+    category: 'Boende & Vardag',
+    categorySlug: 'boende-vardag',
+    description: 'Fullmakt för en ombud att sälja din bostadsrätt eller hyresrätt åt dig, inklusive signera köpekontrakt.',
+    longDescription: 'Kan du inte närvara vid en bostadsrättsförsäljning? Denna fullmakt ger ditt ombud rätten att underteckna köpekontrakt, sköta kontakter med mäklare och köpare, och hantera allt kring försäljningen. Används vid sjukdom, utlandsvistelse eller om du av andra skäl inte kan vara på plats. Notera: Säljfullmakt för fast egendom (villa) kräver notariell bekräftelse – denna mall avser bostadsrätt.',
+    badge: 'premium',
+    usageCount: 6780,
+    fields: [
+      { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
+      { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'fullmaktsgivare_adress', label: 'Din nuvarande adress', type: 'address', placeholder: 'Gatuadress, postnummer, ort', required: true, group: 'givare' },
+      { id: 'fullmaktshavare_namn', label: 'Ombudets fullständiga namn', type: 'text', placeholder: 'Erik Svensson', required: true, group: 'havare' },
+      { id: 'fullmaktshavare_pnr', label: 'Ombudets personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'havare' },
+      { id: 'objekt', label: 'Bostaden som ska säljas', type: 'textarea', placeholder: 'T.ex. Bostadsrätt lägenhet nr 42, BRF Solsidan, Storgatan 5, 111 22 Stockholm', required: true, group: 'detaljer' },
+      { id: 'pris_min', label: 'Lägsta accepterade pris (kr)', type: 'text', placeholder: 'T.ex. 3 500 000', required: false, group: 'detaljer' },
+      { id: 'giltighetstid', label: 'Fullmaktens giltighetstid', type: 'select', options: ['3 månader', '6 månader', '1 år', 'Till försäljning genomförd'], required: true, group: 'detaljer' },
+    ],
+    faq: [
+      { q: 'Kan jag ge någon fullmakt att sälja min bostadsrätt?', a: 'Ja. Fullmakt för bostadsrättsförsäljning är juridiskt giltig. Ombudet kan underteckna köpekontrakt och överlåtelsehandlingar. Mäklaren och BRF:en måste godkänna fullmakten och ombudet.' },
+      { q: 'Krävs notarie för säljfullmakt?', a: 'För bostadsrätt: normalt nej – en bevittnad fullmakt räcker. För fast egendom (villa, tomt): ja, säljfullmakt kräver bevittning av två vittnen och ska notariellt bekräftas hos domstol.' },
+      { q: 'Kan jag ange ett lägsta pris i fullmakten?', a: 'Ja, och det rekommenderas. Ange ett minimipris – ombudet kan inte acceptera ett bud under det utan att kontakta dig. Det skyddar dig mot oönskad försäljning till underpris.' },
+      { q: 'Hur lång ska fullmaktens giltighetstid vara?', a: 'Välj "Till försäljning genomförd" om du inte vet hur lång tid det tar. Välj en fast period om du vill ha kontroll – då löper uppdraget ut om försäljningen inte genomförts.' },
+      { q: 'Vad händer om ombudet missköter sig?', a: 'Ombudet ansvarar för handlingar utförda med stöd av fullmakten. Har ombudet handlat utanför fullmaktens befogenhet kan du bestrida handlingen. Anlita alltid någon du litar på.' },
+    ],
+    relatedIds: [126, 127],
+    legalInfo: 'Gäller för bostadsrätt. Fast egendom kräver notariell bekräftelse (JB 4 kap. 3 §).',
+    keywords: ['fullmakt lägenhet', 'sälja bostadsrätt fullmakt', 'fullmakt mäklare', 'fullmakt bostad'],
+  } as Template);
+
+  // Bankfullmakt 2026
+  templates.push({
+    id: 129,
+    slug: 'fullmakt-bankkonto-uttag-2026',
+    name: 'Fullmakt för bankkonto och uttag',
+    category: 'Ekonomi & Myndigheter',
+    categorySlug: 'ekonomi-myndigheter',
+    description: 'Fullmakt för annan person att utföra banktransaktioner, ta ut pengar och hantera ditt konto.',
+    longDescription: 'En bankfullmakt ger din utvalda person rätt att sköta dina bankärenden – ta ut pengar, göra betalningar, kontrollera saldo och kommunicera med banken. Varje bank har egna regler för hur bankfullmakter ska vara utformade – vissa kräver en blankett i bankens eget format. Denna mall ger en juridisk grund som komplement.',
+    badge: 'popular',
+    usageCount: 9340,
+    fields: [
+      { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
+      { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'bank', label: 'Bank och kontonummer', type: 'text', placeholder: 'T.ex. Swedbank, konto 8123-1234567', required: true, group: 'givare' },
+      { id: 'fullmaktshavare_namn', label: 'Fullmaktshavarens fullständiga namn', type: 'text', placeholder: 'Erik Svensson', required: true, group: 'havare' },
+      { id: 'fullmaktshavare_pnr', label: 'Personnummer (fullmaktshavare)', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'havare' },
+      { id: 'befoggenheter', label: 'Befogenheter', type: 'select', options: ['Uttag och insättningar', 'Betalningar och överföringar', 'Kontroll av saldo och transaktioner', 'Alla ovanstående'], required: true, group: 'detaljer' },
+      { id: 'maxbelopp', label: 'Max belopp per transaktion (kr)', type: 'text', placeholder: 'T.ex. 10 000, eller "Obegränsat"', required: false, group: 'detaljer' },
+      { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['1 månad', '3 månader', '6 månader', '1 år', 'Tillsvidare'], required: true, group: 'detaljer' },
+    ],
+    faq: [
+      { q: 'Accepterar banker denna fullmakt?', a: 'De flesta svenska banker accepterar externa bankfullmakter men kan kräva kompletterande dokument eller en intern bankblankett. Kontakta alltid banken i förväg och fråga vad de kräver.' },
+      { q: 'Kan fullmaktshavaren ta ut hur mycket som helst?', a: 'Ange ett maxbelopp per transaktion om du vill begränsa dispositionsrätten. Utan begränsning kan fullmaktshavaren i princip hantera hela kontot.' },
+      { q: 'Kan jag ge bankfullmakt till ett barn?', a: 'Fullmaktshavaren måste vara myndig (18+) för att ha rättskapacitet att agera som ombud. Omyndiga kan inte vara fullmaktshavare.' },
+      { q: 'Hur återkallar jag en bankfullmakt?', a: 'Meddela banken skriftligen och meddela fullmaktshavaren. Banken upphör att respektera fullmakten omedelbart. Be om bekräftelse från banken att fullmakten är återkallad.' },
+      { q: 'Gäller bankfullmakten vid dödsfall?', a: 'Nej. En fullmakt upphör alltid vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna eller en boutredningsman.' },
+    ],
+    relatedIds: [126, 127, 128],
+    legalInfo: 'Komplement till bankens egna blanketter. Varje bank har egna krav – kontakta banken i förväg.',
+    keywords: ['bankfullmakt', 'fullmakt bank', 'uttag fullmakt', 'kontohantering fullmakt'],
+  } as Template);
+
+  // Fordonsfullmakt 2026
+  templates.push({
+    id: 130,
+    slug: 'fullmakt-fordon-forsaljning-2026',
+    name: 'Fullmakt för fordonsförsäljning',
+    category: 'Resa & Transport',
+    categorySlug: 'resa-transport',
+    description: 'Fullmakt för att sälja, registrera eller avregistrera ett fordon åt dig hos Transportstyrelsen.',
+    longDescription: 'Ska någon annan sälja din bil åt dig, registrera ett fordon eller hantera ägarbytet hos Transportstyrelsen? Denna fullmakt ger ombudet rätt att agera för dig i alla fordonsrelaterade ärenden. Krävs av köpare eller mäklare om du inte kan närvara vid ägarbytet.',
+    badge: 'gratis',
+    usageCount: 7210,
+    fields: [
+      { id: 'agare_namn', label: 'Fordonsägarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
+      { id: 'agare_pnr', label: 'Personnummer (ägaren)', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'regnr', label: 'Fordonets registreringsnummer', type: 'text', placeholder: 'ABC 123', required: true, group: 'detaljer' },
+      { id: 'fordonstyp', label: 'Fordonstyp', type: 'select', options: ['Personbil', 'Lastbil', 'Motorcykel', 'Husbil', 'Husvagn', 'Släpvagn', 'Annat'], required: true, group: 'detaljer' },
+      { id: 'ombud_namn', label: 'Ombudets fullständiga namn', type: 'text', placeholder: 'Erik Svensson', required: true, group: 'havare' },
+      { id: 'ombud_pnr', label: 'Personnummer (ombudet)', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'havare' },
+      { id: 'uppdrag', label: 'Uppdragets art', type: 'select', options: ['Försäljning och ägarbyte', 'Avregistrering', 'Registrering', 'Alla fordonsärenden'], required: true, group: 'detaljer' },
+      { id: 'min_pris', label: 'Lägsta accepterade pris vid försäljning (kr)', type: 'text', placeholder: 'T.ex. 85 000', required: false, group: 'detaljer' },
+    ],
+    faq: [
+      { q: 'Kan jag ge någon fullmakt att sälja min bil?', a: 'Ja. En fordonsfullmakt ger ombudet rätt att underteckna köpeavtalet och anmäla ägarbytet till Transportstyrelsen. Ange ett minimipris om du vill ha kontroll på prisnivån.' },
+      { q: 'Hur anmäler man ägarbyte till Transportstyrelsen?', a: 'Via Transportstyrelsens e-tjänst (transportstyrelsen.se) med BankID, eller per post. Ombudet med fullmakt kan göra detta åt dig. Ägarbytet ska anmälas inom 3 dagar.' },
+      { q: 'Behöver jag bevittna fordonsfullmakten?', a: 'Rekommenderas men är inte ett lagkrav för lös egendom som bilar. Transportstyrelsen och köparen kan kräva bevittning för extra säkerhet – kontrollera i förväg.' },
+      { q: 'Gäller fullmakten för export av fordon?', a: 'En exportfullmakt kan kräva ytterligare dokument (tullhandlingar, registreringsbevis). Kontakta Transportstyrelsen och Tullverket för exakta krav vid export.' },
+      { q: 'Vad händer om bilen säljs under minimipriset?', a: 'Om du angett ett minimipris och ombudet accepterar ett lägre bud utan din tillåtelse handlar ombudet utanför fullmaktens befogenhet. Köpeavtalet kan i så fall angripas juridiskt.' },
+    ],
+    relatedIds: [126, 130],
+    legalInfo: 'Avser lös egendom (fordon). Transportstyrelsen kan ha specifika krav – kontrollera på transportstyrelsen.se.',
+    keywords: ['fordonsfullmakt', 'fullmakt sälja bil', 'ägarbyte fullmakt', 'transportstyrelsen fullmakt'],
+  } as Template);
+
   // Framtidsfullmakt 2026
   templates.push({
     id: 125,
