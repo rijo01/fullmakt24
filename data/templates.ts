@@ -728,6 +728,96 @@ export function getPopularTemplates(count = 8): Template[] {
 
 export function searchTemplates(query: string): Template[] {
   const q = query.toLowerCase();
+
+  // === TILLAGDA 2026-05-06 ===
+  templates.push({
+    id: 131, slug: 'fullmakt-hyresratt-overlatelse-2026',
+    name: 'Fullmakt hyresrätt överlåtelse',
+    category: 'Boende & Vardag', categorySlug: 'boende-vardag',
+    description: 'Fullmakt för att ansöka om byte eller överlåtelse av hyresrätt hos hyresvärden.',
+    longDescription: 'Ger ditt ombud rätt att ansöka om andrahandsuthyrning, lägenhetsbyte och överlåtelse. Hyresvärden kommuniceras via ombudet.',
+    badge: 'gratis', usageCount: 5890,
+    fields: [
+      { id: 'fullmaktsgivare_namn', label: 'Hyresgaestens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
+      { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'lagenhet', label: 'Lägenhetens adress', type: 'address', placeholder: 'Gatuadress, våning', required: true, group: 'givare' },
+      { id: 'ombud_namn', label: 'Ombudets fullständiga namn', type: 'text', placeholder: 'Erik Svensson', required: true, group: 'havare' },
+      { id: 'ombud_pnr', label: 'Personnummer (ombudet)', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'havare' },
+      { id: 'uppdrag', label: 'Uppdragets art', type: 'select', options: ['Ansökan om andrahandsuthyrning', 'Ansökan om lägenhetsbyte', 'Överlåtelse till närstående', 'Alla hyresrättsärenden'], required: true, group: 'detaljer' },
+      { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['3 månader', '6 månader', '1 år', 'Tillsvidare'], required: true, group: 'detaljer' },
+    ],
+    faq: [
+      { q: 'Kan man ge fullmakt att ansöka om andrahandsuthyrning?', a: 'Ja. Ombudet kan ansöka och kommunicera med hyresvärden. Vissa hyresvärdar kräver egna blanketter – kontrollera i förväg.' },
+      { q: 'Godkänner alla hyresvärdar externa fullmakter?', a: 'De flesta godkänner det. Större fastighetsbolag kan ha egna krav. Kontakta alltid hyresvärden först.' },
+      { q: 'Kan ombudet skriva under ett hyreskontrakt?', a: 'Ja, om fullmakten specificerar detta. Ange att ombudet får underteckna hyresrelaterade handlingar.' },
+      { q: 'Måste fullmakten bevittnas?', a: 'Rekommenderas men är inte lagkrav. Några hyresvärdar kan kräva det – fråga i förväg.' },
+      { q: 'Vad händer om hyresvärden nekar trots fullmakt?', a: 'Fullmakten ger representationsrätt, inte rätt att få ansökan bifören. Vid felaktigt avslag: vänd dig till Hyresnämnden.' },
+    ],
+    relatedIds: [128, 130],
+    legalInfo: 'Hyreslägen (JB 12 kap.) reglerar hyresgästens rättigheter.',
+    keywords: ['fullmakt hyresrätt', 'lägenhetsbyte fullmakt', 'andrahandsuthyrning fullmakt'],
+  } as Template);
+
+  templates.push({
+    id: 132, slug: 'fullmakt-sjukvard-behandling-2026',
+    name: 'Fullmakt för sjukvård och behandling',
+    category: 'Vård & Omsorg', categorySlug: 'vard-omsorg',
+    description: 'Fullmakt för närstående att företräda dig vid sjukvårdskontakter, hämta ut medicin och ta del av journaler.',
+    longDescription: 'Ger ditt ombud rätt att kommunicera med vårdgivare, boka/avboka tider, hämta ut medicin och ta del av journal. Används vid kortvarig sjukdom, ålderdom eller planerad operation.',
+    badge: 'popular', usageCount: 9870,
+    fields: [
+      { id: 'patient_namn', label: 'Patientens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
+      { id: 'patient_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'ombud_namn', label: 'Ombudets fullständiga namn', type: 'text', placeholder: 'Erik Svensson', required: true, group: 'havare' },
+      { id: 'ombud_pnr', label: 'Personnummer (ombudet)', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'havare' },
+      { id: 'ombud_relation', label: 'Relation till patienten', type: 'text', placeholder: 'T.ex. make/maka, barn', required: true, group: 'havare' },
+      { id: 'befogenheter', label: 'Befögenheter', type: 'select', options: ['Boka och avboka vårdtider', 'Hämta ut medicin på apotek', 'Ta del av journalanteckningar', 'Kommunicera med vårdpersonal', 'Alla ovanstående'], required: true, group: 'detaljer' },
+      { id: 'vardgivare', label: 'Vårdgivare (om specifik)', type: 'text', placeholder: 'T.ex. Karolinska Vårdcentral', required: false, group: 'detaljer' },
+      { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['1 månad', '3 månader', '6 månader', '1 år', 'Tillsvidare'], required: true, group: 'detaljer' },
+    ],
+    faq: [
+      { q: 'Accepterar vårdcentraler sjukvårdsfullmakter?', a: 'Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter. Visa fullmakten vid varje besök.' },
+      { q: 'Kan ombudet ta del av min journal?', a: 'Om det anges i fullmakten: ja, för de delar du specificerat.' },
+      { q: 'Vad skiljer sjukvårdsfullmakt från framtidsfullmakt?', a: 'Sjukvårdsfullmakt gäller när du är beslutskompetent. Framtidsfullmakt aktiveras när du INTE längre kan fatta egna beslut.' },
+      { q: 'Kan ombudet fatta medicinska beslut?', a: 'Ombudet kan kommunicera och informeras. Medicinska beslut kräver din samtycke så länge du är beslutskompetent.' },
+      { q: 'Måste fullmakten bevittnas för sjukvård?', a: 'Rekommenderas. För känsliga uppgifter kan vårdgivaren kräva bevittning.' },
+    ],
+    relatedIds: [125, 126],
+    legalInfo: 'Regleras av Patientlagen (2014:821) och patientdatalagen (2008:355).',
+    keywords: ['sjukvårdsfullmakt', 'fullmakt vård', 'fullmakt apotek'],
+  } as Template);
+
+  templates.push({
+    id: 133, slug: 'medgivande-barn-ensamresa-flyg-2026',
+    name: 'Medgivande barn ensam flyresa',
+    category: 'Föräldrar & Barn', categorySlug: 'foraldrar-barn',
+    description: 'Medgivande för minderarigt barn att flyga ensamt. Specificerar flygbolag, ruttinformation och nödkontakt.',
+    longDescription: 'De flesta flygbolag kräver vårdnadshavares skriftliga medgivande när barn under 15–18 år flyger ensamt. Denna mall uppfyller kraven från SAS, Norwegian och Ryanair.',
+    badge: 'popular', usageCount: 8340,
+    fields: [
+      { id: 'barn_namn', label: 'Barnets fullständiga namn', type: 'text', placeholder: 'Maja Svensson', required: true, group: 'givare' },
+      { id: 'barn_foddatum', label: 'Barnets födelsedatum', type: 'date', required: true, group: 'givare' },
+      { id: 'vardnadshavare1_namn', label: 'Vårdnadshavare 1 (namn)', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
+      { id: 'vardnadshavare1_pnr', label: 'Vårdnadshavare 1 (personnummer)', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'vardnadshavare2_namn', label: 'Vårdnadshavare 2 (valfritt)', type: 'text', placeholder: 'Erik Svensson', required: false, group: 'givare' },
+      { id: 'flygbolag', label: 'Flygbolag', type: 'text', placeholder: 'T.ex. SAS, Norwegian', required: true, group: 'detaljer' },
+      { id: 'avgangsplats', label: 'Avgångsplats och datum', type: 'text', placeholder: 'Stockholm Arlanda, 2026-07-15', required: true, group: 'detaljer' },
+      { id: 'destination', label: 'Destination', type: 'text', placeholder: 'T.ex. Barcelona El Prat', required: true, group: 'detaljer' },
+      { id: 'motande_vuxen', label: 'Mötande vuxen vid destination', type: 'text', placeholder: 'Namn, telefon och relation', required: true, group: 'detaljer' },
+      { id: 'nodkontakt', label: 'Nödkontakt under resan', type: 'phone', placeholder: '+46701234567', required: true, group: 'detaljer' },
+    ],
+    faq: [
+      { q: 'Kräver alla flygbolag detta medgivande?', a: 'De flesta europeiska flygbolag kräver det för barn under 15–16 år. SAS kräver det för barn under 18 vid internationella flyg. Kontrollera flygbolagets policy.' },
+      { q: 'Måste båda vårdnadshavarna signera?', a: 'Vid gemensam vårdnad rekommenderas att båda signerar. Vid ensam vårdnad räcker en underskrift.' },
+      { q: 'Behövs medgivande inom Schengen?', a: 'Schengenländer kräver normalt inte inresehandlingar, men flygbolagen har egna regler. Kontrollera alltid.' },
+      { q: 'Hur överlämnas medgivandet?', a: 'Ge originalet till barnet. Skicka digital kopia till mötande vuxen och nödkontakt. Incheckningspersonalen kan begära att se det.' },
+      { q: 'Vad är Unaccompanied Minor-tjänst?', a: 'UM är en betald tjänst där flygbolaget säkerställer att barnet följs och överlämnas korrekt. Kräver bokning och extra avgift men rekommenderas för yngre barn.' },
+    ],
+    relatedIds: [1, 2, 14],
+    legalInfo: 'Krav varierar per flygbolag. Kontrollera aktuell policy.',
+    keywords: ['medgivande ensam resa barn', 'barn flyga ensamt', 'flygresemedgivande'],
+  } as Template);
+
   return templates.filter(t =>
     t.name.toLowerCase().includes(q) ||
     t.description.toLowerCase().includes(q) ||
