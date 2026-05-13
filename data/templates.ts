@@ -818,6 +818,94 @@ export function searchTemplates(query: string): Template[] {
     keywords: ['medgivande ensam resa barn', 'barn flyga ensamt', 'flygresemedgivande'],
   } as Template);
 
+
+  // Pensionsärenden fullmakt 2026
+  templates.push({
+    id: 134, slug: 'fullmakt-pensionsarenden-2026',
+    name: 'Fullmakt för pensionsärenden',
+    category: 'Seniorer & Omsorg', categorySlug: 'seniorer-omsorg',
+    description: 'Fullmakt för att hantera pensionsärenden hos Försäkringskassan, Pensionsmyndigheten och tjänstefond.',
+    longDescription: 'Ger ditt ombud rätt att kommunicera med Pensionsmyndigheten, Försäkringskassan och din tjänstepensionsleverantör. Används av äldre som behöver hjälp att navigera pensionssystemet, eller av personer som är sjuka eller bor utomlands.',
+    badge: 'popular', usageCount: 7650,
+    fields: [
+      { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
+      { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'ombud_namn', label: 'Ombudets fullständiga namn', type: 'text', placeholder: 'Erik Svensson', required: true, group: 'havare' },
+      { id: 'ombud_pnr', label: 'Personnummer (ombudet)', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'havare' },
+      { id: 'myndigheter', label: 'Berörda myndigheter/företag', type: 'select', options: ['Pensionsmyndigheten', 'Försäkringskassan', 'Tjänstepensionsleverantör', 'Alla ovanstående'], required: true, group: 'detaljer' },
+      { id: 'befogenheter', label: 'Befögenheter', type: 'select', options: ['Begära information och kontoutdrag', 'Göra ändringar i pensionsuttag', 'Ansöka om ersättningar', 'Alla ovanstående'], required: true, group: 'detaljer' },
+      { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['6 månader', '1 år', '2 år', 'Tillsvidare'], required: true, group: 'detaljer' },
+    ],
+    faq: [
+      { q: 'Accepterar Pensionsmyndigheten externa fullmakter?', a: 'Ja, Pensionsmyndigheten accepterar fullmakter. De kan ha egna blanketter som komplement – kontakta dem i förväg för att få veta vad de kräver.' },
+      { q: 'Kan ombudet ändra mina pensionsuttag?', a: 'Bara om det anges i fullmakten. Specificera tydligt vilka befögenheter ombudet har – informationsätkomst eller även rätt att göra ändringar.' },
+      { q: 'Kan jag ge fullmakt för tjänstepension?', a: 'Ja, varje tjänstepensionsleverantör (AMF, SPP, Alecta etc.) hanterar fullmakter. Kontakta din leverantör för deras specifika krav.' },
+      { q: 'Måste fullmakten bevittnas för pensionsärenden?', a: 'Rekommenderas men krävs inte alltid. Pensionsmyndigheten kan kräva legalisering vid större ändringar. Fråga myndigheten i förväg.' },
+      { q: 'Vad gör jag om Pensionsmyndigheten nekar ombudet?', a: 'Kontakta Pensionsmyndigheten direkt och fråga vad de kräver. De kan ha en intern blankett som komplement till fullmakten.' },
+    ],
+    relatedIds: [125, 126],
+    legalInfo: 'Pensionsmyndigheten och Försäkringskassan kan ha specifika krav. Kontakta respektive myndighet.',
+    keywords: ['pensionsfullmakt', 'fullmakt pensionsmyndigheten', 'fullmakt försäkringskassan'],
+  } as Template);
+
+  // BRF-stämmefullmakt 2026
+  templates.push({
+    id: 135, slug: 'fullmakt-bostadsratt-stamma-2026',
+    name: 'Fullmakt till BRF-stämma',
+    category: 'Boende & Vardag', categorySlug: 'boende-vardag',
+    description: 'Fullmakt för en representant att rösta och agera på bostadsrättsföreningens årliga eller extra stämma.',
+    longDescription: 'Kan du inte delta på årsstämman eller extrastämman i din BRF? Denna fullmakt ger en annan bostadsrättshavare eller anhörig rätt att rösta och agera i ditt ställe. Bostadsrättslagen reglerar vem som kan vara fullmaktshavare.',
+    badge: 'gratis', usageCount: 4320,
+    fields: [
+      { id: 'fullmaktsgivare_namn', label: 'Bostadsrättshavaren (du)', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
+      { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'lagenhet_nr', label: 'Lägenhetsnummer', type: 'text', placeholder: 'T.ex. 1201', required: true, group: 'givare' },
+      { id: 'forening', label: 'BRF:ens namn', type: 'text', placeholder: 'BRF Solsidan', required: true, group: 'givare' },
+      { id: 'ombud_namn', label: 'Ombudets fullständiga namn', type: 'text', placeholder: 'Erik Svensson', required: true, group: 'havare' },
+      { id: 'stamma_datum', label: 'Stämmans datum', type: 'date', required: true, group: 'detaljer' },
+      { id: 'stammatyp', label: 'Typ av stämma', type: 'select', options: ['Årsstämma', 'Extrastämma', 'Båda'], required: true, group: 'detaljer' },
+    ],
+    faq: [
+      { q: 'Kan vem som helst vara mitt ombud på BRF-stämman?', a: 'Nej. Enligt bostadsrättslagen måste ombudet vara en annan bostadsrättshavare i föreningen, en make/maka/sambo, eller en juridisk representant. Grannens barn (om de inte bor i föreningen) kan inte vara ombud.' },
+      { q: 'Kan ett ombud representera fler än en lägenhetsägare?', a: 'Ja, men normalt max en person per ombud. Kontrollera föreningens stadgar – de kan sätta egna gränser.' },
+      { q: 'Måste fullmakten visas upp på stämman?', a: 'Ja, alltid. Ta med originalet eller en bevittnad kopia. Styrelsen/mötesordföranden kan kräva att se det.' },
+      { q: 'Kan ombudet rösta hur det vill?', a: 'Ja, om du inte specificerat hur. Du kan ange röstningsinstruktioner i fullmakten (t.ex. "rösta ja på alla förslag" eller "rösta nej till årsbudgeten").' },
+      { q: 'Vad händer om fullmakten inte godkänns av styrelsen?', a: 'Om styrelsen anser att fullmakten är ogiltigt utställd (fel person, fel form) kan de neka ombudet att delta. Överklaga mötesbeslutet via styrelsen eller hänskjut till hyresnämnden.' },
+    ],
+    relatedIds: [126, 131],
+    legalInfo: 'Bostadsrättslagen (1991:614) 9 kap. 14 § reglerar rätten att använda ombud vid föreningsstämma.',
+    keywords: ['fullmakt BRF stämma', 'årsstämma fullmakt', 'bostadsrättsförening fullmakt'],
+  } as Template);
+
+  // Skatteverket fullmakt 2026
+  templates.push({
+    id: 136, slug: 'fullmakt-skatt-deklaration-2026',
+    name: 'Fullmakt för skatt och deklaration',
+    category: 'Ekonomi & Myndigheter', categorySlug: 'ekonomi-myndigheter',
+    description: 'Fullmakt för ombud att hantera dina skattedeklarationer, ändra uppgifter och kommunicera med Skatteverket.',
+    longDescription: 'Denna fullmakt ger ditt ombud rätt att kommunicera med Skatteverket, göra ändringar i deklarationen, överklaga beslut och hantera skattefrågor i ditt ställe. Används av privatpersoner som är utomlands, sjuka eller av företagare som låter en redovisningskonsult söta sina ärenden.',
+    badge: 'premium', usageCount: 6780,
+    fields: [
+      { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
+      { id: 'fullmaktsgivare_pnr', label: 'Personnummer / Organisationsnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'ombud_namn', label: 'Ombudets fullständiga namn', type: 'text', placeholder: 'Redovisningskonsult AB', required: true, group: 'havare' },
+      { id: 'ombud_pnr', label: 'Ombudets personnummer/orgnr', type: 'text', placeholder: 'ÅÅMMDD-XXXX eller XXXXXX-XXXX', required: true, group: 'havare' },
+      { id: 'befogenheter', label: 'Befögenheter', type: 'select', options: ['Kommunicera med Skatteverket', 'Lämna och ändra deklaration', 'Överklaga Skatteverkets beslut', 'Alla ovanstående'], required: true, group: 'detaljer' },
+      { id: 'arstal', label: 'Taxeringsår', type: 'text', placeholder: 'T.ex. 2025 och 2026, eller Alla år', required: true, group: 'detaljer' },
+      { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['1 år', '2 år', '3 år', 'Tillsvidare'], required: true, group: 'detaljer' },
+    ],
+    faq: [
+      { q: 'Kan Skatteverket kräva en specifik blankett istället för denna fullmakt?', a: 'Ja. Skatteverket har en egen ombudsregistrering (ombudstjänsten) via Mina sidor. External fullmakt fungerar vid telefon och besök men för digital åtkomst behöver ombudet registreras i Skatteverkets e-tjänst.' },
+      { q: 'Kan ett bokföringsbolag använda denna fullmakt?', a: 'Ja. Redovisningskonsulter och revisorer använder ofta externa fullmakter. Men för full digital åtkomst via Skatteverkets API:er behövs också e-legitimation-auktorisering.' },
+      { q: 'Gäller fullmakten för både privatperson och företag?', a: 'Ja, men specificera personnummer eller organisationsnummer tydligt. Företagets deklarationer kräver att ombudet är registrerat som företagets ombud hos Skatteverket.' },
+      { q: 'Kan ombudet överklaga ett Skatteverket-beslut?', a: 'Ja, om det anges i fullmakten. Överklaganden ska lämnas inom 60 dagar från Skatteverkets beslutsdatum. Ombudet kan förberedä och lämna in överklagandet.' },
+      { q: 'Hur långe bör skattefullmakten gälla?', a: 'För löpande redovisning: tillsvidare eller 3 år med årlig förnyelse. För ett specifikt ärende: 1 år räcker normalt.' },
+    ],
+    relatedIds: [126, 129],
+    legalInfo: 'Komplement till Skatteverkets ombudsregistrering. Kontakta Skatteverket för digital åtkomst via e-tjänster.',
+    keywords: ['skattefullmakt', 'fullmakt skatteverket', 'deklaration fullmakt', 'redovisningskonsult fullmakt'],
+  } as Template);
+
   return templates.filter(t =>
     t.name.toLowerCase().includes(q) ||
     t.description.toLowerCase().includes(q) ||
