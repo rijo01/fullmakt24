@@ -1,0 +1,132 @@
+{
+  "id": 137,
+  "slug": "fullmakt-firmateckning-ensam",
+  "name": "Fullmakt firmateckning ensam",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för en person att teckna firma ensam för aktiebolaget.",
+  "longDescription": "Med denna fullmakt får ombudet rätt att ensam teckna firma för bolagets räkning – t.ex. underteckna avtal, betalningar och officiella handlingar. Lämplig när VD eller styrelseledamot inte är tillgänglig.",
+  "badge": "premium",
+  "usageCount": 4520,
+  "fields": [
+    {
+      "id": "foretag_namn",
+      "label": "Företagets namn",
+      "type": "text",
+      "placeholder": "Exempel AB",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "orgnr",
+      "label": "Organisationsnummer",
+      "type": "text",
+      "placeholder": "556677-1122",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "foretradare_namn",
+      "label": "Behörig företrädares namn",
+      "type": "text",
+      "placeholder": "Anna Svensson",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "foretradare_pnr",
+      "label": "Företrädarens personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "foretradare_roll",
+      "label": "Roll i bolaget",
+      "type": "select",
+      "options": [
+        "VD",
+        "Styrelseledamot",
+        "Ordförande",
+        "Firmatecknare",
+        "Prokurist"
+      ],
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "ombud_namn",
+      "label": "Ombudets fullständiga namn",
+      "type": "text",
+      "placeholder": "Erik Svensson",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "ombud_pnr",
+      "label": "Ombudets personnummer/orgnr",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "befogenheter",
+      "label": "Befogenheter",
+      "type": "textarea",
+      "placeholder": "Specificera vilka rättshandlingar ombudet får utföra...",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "giltighetstid",
+      "label": "Giltighetstid",
+      "type": "select",
+      "options": [
+        "3 månader",
+        "6 månader",
+        "1 år",
+        "2 år",
+        "Tillsvidare"
+      ],
+      "required": true,
+      "group": "detaljer"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Vem får utfärda fullmakt för ett aktiebolag?",
+      "a": "Endast styrelseledamot, VD eller annan firmatecknare har rätt att utfärda fullmakt för bolagets räkning."
+    },
+    {
+      "q": "Behöver fullmakten registreras hos Bolagsverket?",
+      "a": "Generellt inte, men vissa typer av fullmakter (t.ex. prokura) ska registreras enligt prokuralagen."
+    },
+    {
+      "q": "Kan fullmakten gälla flera år?",
+      "a": "Ja. Företagsfullmakter gäller ofta tillsvidare eller flera år. Specificera dock alltid en tidsgräns för säkerhets skull."
+    },
+    {
+      "q": "Hur återkallas en företagsfullmakt?",
+      "a": "Beslut om återkallelse fattas av samma organ som utfärdade fullmakten. Skriftlig återkallelse skickas till ombudet och berörda parter."
+    },
+    {
+      "q": "Gäller fullmakten vid VD-byte?",
+      "a": "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte."
+    }
+  ],
+  "relatedIds": [
+    138,
+    139,
+    144
+  ],
+  "legalInfo": "Regleras av aktiebolagslagen (2005:551) och prokuralagen (1974:158). Behörig företrädare ska utfärda fullmakten.",
+  "keywords": [
+    "firmateckning",
+    "fullmakt företag",
+    "firmateckningsrätt",
+    "aktiebolag fullmakt",
+    "fullmakt VD"
+  ]
+}

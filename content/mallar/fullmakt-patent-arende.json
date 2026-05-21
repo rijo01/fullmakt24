@@ -1,0 +1,66 @@
+{
+  "slug": "fullmakt-patent-arende",
+  "seo": {
+    "title": "Fullmakt patentärende – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Fullmakt för patentombud att hantera patentansökan. Juridiskt granskad mall. Klar på 3 minuter. Ladda ner som PDF för 49 kr.",
+    "h1": "Fullmakt patentärende – Mall & Guide 2026",
+    "keywords": [
+      "fullmakt patent",
+      "patentombud",
+      "PRV fullmakt",
+      "patentansökan ombud"
+    ]
+  },
+  "content": {
+    "introduction": "Ger patentombudet (auktoriserat patentkonsult) rätt att lämna in patentansökan, kommunicera med PRV och företräda dig i patentärenden.\n\nDenna mall är granskad av jurister och uppfyller svenska formkrav. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
+    "legalValidity": "Regleras av patentlagen (1967:837) och Patent- och registreringsverkets (PRV) föreskrifter.",
+    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
+    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "faq": [
+      {
+        "question": "Vem får utfärda fullmakt för ett aktiebolag?",
+        "answer": "Endast styrelseledamot, VD eller annan firmatecknare har rätt att utfärda fullmakt för bolagets räkning."
+      },
+      {
+        "question": "Behöver fullmakten registreras hos Bolagsverket?",
+        "answer": "Generellt inte, men vissa typer av fullmakter (t.ex. prokura) ska registreras enligt prokuralagen."
+      },
+      {
+        "question": "Kan fullmakten gälla flera år?",
+        "answer": "Ja. Företagsfullmakter gäller ofta tillsvidare eller flera år. Specificera dock alltid en tidsgräns för säkerhets skull."
+      },
+      {
+        "question": "Hur återkallas en företagsfullmakt?",
+        "answer": "Beslut om återkallelse fattas av samma organ som utfärdade fullmakten. Skriftlig återkallelse skickas till ombudet och berörda parter."
+      },
+      {
+        "question": "Gäller fullmakten vid VD-byte?",
+        "answer": "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte."
+      }
+    ],
+    "relatedSearchTerms": [
+      "fullmakt patent",
+      "patentombud",
+      "PRV fullmakt",
+      "patentansökan ombud",
+      "fullmakt patentärende pdf",
+      "fullmakt patentärende mall gratis"
+    ]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {
+      "text": "Alla mallar",
+      "href": "/mallar"
+    },
+    {
+      "text": "Mallar i Ekonomi, Bank & Myndigheter",
+      "href": "/mallar?category=ekonomi-myndigheter"
+    }
+  ],
+  "lastUpdated": "2026-05-21"
+}

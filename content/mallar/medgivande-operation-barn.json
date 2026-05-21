@@ -1,0 +1,64 @@
+{
+  "slug": "medgivande-operation-barn",
+  "seo": {
+    "title": "Medgivande operation barn – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Vårdnadshavares medgivande för planerad operation av minderårig. Juridiskt granskad mall. Klar på 3 minuter. Ladda ner som PDF för 49 kr.",
+    "h1": "Medgivande operation barn – Mall & Guide 2026",
+    "keywords": [
+      "medgivande operation barn",
+      "operation barn samtycke",
+      "kirurgi barn fullmakt"
+    ]
+  },
+  "content": {
+    "introduction": "Skriftligt medgivande från båda vårdnadshavare för icke-akut operation. Krävs av sjukhuset innan ingreppet kan genomföras.\n\nDenna mall är granskad av jurister och uppfyller svenska formkrav. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
+    "legalValidity": "Patientlagen (2014:821) 4 kap. om samråd och samtycke.",
+    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
+    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "faq": [
+      {
+        "question": "Krävs båda vårdnadshavares underskrift?",
+        "answer": "Vid gemensam vårdnad krävs båda vårdnadshavares samtycke för väsentliga beslut. För vardagliga beslut räcker en."
+      },
+      {
+        "question": "Hur länge gäller medgivandet?",
+        "answer": "Under den tid du anger. Vi rekommenderar att specificera ett konkret slutdatum för säkerhet."
+      },
+      {
+        "question": "Kan medgivandet återkallas?",
+        "answer": "Ja, när som helst. Meddela mottagaren och berörda parter skriftligt så slutar medgivandet att gälla omedelbart."
+      },
+      {
+        "question": "Behöver medgivandet bevittnas?",
+        "answer": "Inte enligt lag, men många mottagare (skolor, vårdgivare) föredrar det. Två vittnen rekommenderas."
+      },
+      {
+        "question": "Vad om vårdnadshavarna är osams?",
+        "answer": "Vid oenighet kan saken avgöras av tingsrätten. Familjerätten kan också medla via socialnämnden."
+      }
+    ],
+    "relatedSearchTerms": [
+      "medgivande operation barn",
+      "operation barn samtycke",
+      "kirurgi barn fullmakt",
+      "medgivande operation barn pdf",
+      "medgivande operation barn mall gratis"
+    ]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {
+      "text": "Alla mallar",
+      "href": "/mallar"
+    },
+    {
+      "text": "Mallar i Vård & Omsorg",
+      "href": "/mallar?category=vard-omsorg"
+    }
+  ],
+  "lastUpdated": "2026-05-21"
+}

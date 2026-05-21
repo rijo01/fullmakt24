@@ -1,0 +1,66 @@
+{
+  "slug": "fullmakt-prokura",
+  "seo": {
+    "title": "Prokura – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Bred näringsrättslig fullmakt enligt prokuralagen. Juridiskt granskad mall. Klar på 3 minuter. Ladda ner som PDF för 49 kr.",
+    "h1": "Prokura – Mall & Guide 2026",
+    "keywords": [
+      "prokura",
+      "fullmakt prokura",
+      "näringsfullmakt",
+      "prokuralagen"
+    ]
+  },
+  "content": {
+    "introduction": "Prokura är en omfattande näringsfullmakt som ger ombudet rätt att utföra alla rättshandlingar inom näringsverksamheten – med undantag för fastighetsförsäljning och pantsättning. Ska registreras hos Bolagsverket.\n\nDenna mall är granskad av jurister och uppfyller svenska formkrav. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
+    "legalValidity": "Regleras av prokuralagen (1974:158). Ska registreras hos Bolagsverket för att vara fullt gällande mot tredje man.",
+    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
+    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "faq": [
+      {
+        "question": "Vem får utfärda fullmakt för ett aktiebolag?",
+        "answer": "Endast styrelseledamot, VD eller annan firmatecknare har rätt att utfärda fullmakt för bolagets räkning."
+      },
+      {
+        "question": "Behöver fullmakten registreras hos Bolagsverket?",
+        "answer": "Generellt inte, men vissa typer av fullmakter (t.ex. prokura) ska registreras enligt prokuralagen."
+      },
+      {
+        "question": "Kan fullmakten gälla flera år?",
+        "answer": "Ja. Företagsfullmakter gäller ofta tillsvidare eller flera år. Specificera dock alltid en tidsgräns för säkerhets skull."
+      },
+      {
+        "question": "Hur återkallas en företagsfullmakt?",
+        "answer": "Beslut om återkallelse fattas av samma organ som utfärdade fullmakten. Skriftlig återkallelse skickas till ombudet och berörda parter."
+      },
+      {
+        "question": "Gäller fullmakten vid VD-byte?",
+        "answer": "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte."
+      }
+    ],
+    "relatedSearchTerms": [
+      "prokura",
+      "fullmakt prokura",
+      "näringsfullmakt",
+      "prokuralagen",
+      "prokura pdf",
+      "prokura mall gratis"
+    ]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {
+      "text": "Alla mallar",
+      "href": "/mallar"
+    },
+    {
+      "text": "Mallar i Ekonomi, Bank & Myndigheter",
+      "href": "/mallar?category=ekonomi-myndigheter"
+    }
+  ],
+  "lastUpdated": "2026-05-21"
+}

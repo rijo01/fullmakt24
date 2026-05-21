@@ -1,0 +1,124 @@
+{
+  "id": 190,
+  "slug": "medgivande-estetisk-behandling",
+  "name": "Medgivande estetisk behandling",
+  "category": "Vård & Omsorg",
+  "categorySlug": "vard-omsorg",
+  "description": "Medgivande till estetisk eller kosmetisk behandling.",
+  "longDescription": "Informerat samtycke till estetiska ingrepp – t.ex. botox, fillers eller plastikkirurgi. Bekräftar att du fått information om risker och alternativ.",
+  "badge": "gratis",
+  "usageCount": 1670,
+  "fields": [
+    {
+      "id": "patient_namn",
+      "label": "Patientens fullständiga namn",
+      "type": "text",
+      "placeholder": "Anna Svensson",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "patient_pnr",
+      "label": "Patientens personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "patient_adress",
+      "label": "Patientens adress",
+      "type": "address",
+      "placeholder": "Gatuadress, ort",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "ombud_namn",
+      "label": "Ombudets fullständiga namn",
+      "type": "text",
+      "placeholder": "Erik Svensson",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "ombud_pnr",
+      "label": "Ombudets personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "ombud_relation",
+      "label": "Relation till patienten",
+      "type": "text",
+      "placeholder": "T.ex. make/maka, barn, vårdnadshavare",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "vardgivare",
+      "label": "Vårdgivare (om specifik)",
+      "type": "text",
+      "placeholder": "T.ex. Karolinska Universitetssjukhuset",
+      "required": false,
+      "group": "detaljer"
+    },
+    {
+      "id": "behandling",
+      "label": "Specifik behandling/ärende",
+      "type": "textarea",
+      "placeholder": "Beskriv vad medgivandet/fullmakten gäller...",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "giltighetstid",
+      "label": "Giltighetstid",
+      "type": "select",
+      "options": [
+        "1 månad",
+        "3 månader",
+        "6 månader",
+        "1 år",
+        "Tillsvidare"
+      ],
+      "required": true,
+      "group": "detaljer"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Accepterar svensk vård ombud?",
+      "a": "Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter enligt patientlagen (2014:821)."
+    },
+    {
+      "q": "Kan ombudet fatta medicinska beslut?",
+      "a": "Endast om patienten saknar beslutsförmåga och fullmakten uttryckligen ger denna rätt. Annars krävs patientens samtycke."
+    },
+    {
+      "q": "Får ombudet ta del av journalen?",
+      "a": "Ja, om det anges i fullmakten. Vårdgivaren bedömer i varje enskilt fall enligt patientdatalagen (2008:355)."
+    },
+    {
+      "q": "Behöver fullmakten bevittnas?",
+      "a": "Rekommenderas starkt vid känsliga uppgifter eller större ingrepp. Bevittning ger fullmakten extra juridisk tyngd."
+    },
+    {
+      "q": "Vad är skillnaden mot en framtidsfullmakt?",
+      "a": "En vanlig fullmakt gäller medan du är beslutskompetent. Framtidsfullmakten träder i kraft först när du inte längre kan fatta beslut."
+    }
+  ],
+  "relatedIds": [
+    178,
+    179,
+    184
+  ],
+  "legalInfo": "Patientsäkerhetslagen (2010:659) och Inspektionen för vård och omsorgs (IVO) tillsyn.",
+  "keywords": [
+    "medgivande estetisk behandling",
+    "samtycke skönhetsbehandling",
+    "plastikkirurgi samtycke"
+  ]
+}

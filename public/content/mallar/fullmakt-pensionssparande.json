@@ -1,0 +1,116 @@
+{
+  "id": 223,
+  "slug": "fullmakt-pensionssparande",
+  "name": "Fullmakt pensionssparande",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för rådgivare att hantera ditt pensionssparande.",
+  "longDescription": "Ger ombudet rätt att förvalta IPS, traditionell pension eller tjänstepensionen via diskretionär förvaltning eller specifika instruktioner.",
+  "badge": "premium",
+  "usageCount": 2340,
+  "fields": [
+    {
+      "id": "fullmaktsgivare_namn",
+      "label": "Fullmaktsgivarens namn",
+      "type": "text",
+      "placeholder": "Anna Svensson",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "fullmaktsgivare_pnr",
+      "label": "Personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "ombud_namn",
+      "label": "Ombudets fullständiga namn",
+      "type": "text",
+      "placeholder": "Erik Svensson eller Rådgivare AB",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "ombud_pnr",
+      "label": "Ombudets personnummer/orgnr",
+      "type": "text",
+      "placeholder": "ÅÅMMDD-XXXX eller XXXXXX-XXXX",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "institution",
+      "label": "Berörd bank/institution",
+      "type": "text",
+      "placeholder": "T.ex. Avanza, SEB, Handelsbanken",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "befogenheter",
+      "label": "Befogenheter",
+      "type": "textarea",
+      "placeholder": "Beskriv vilka transaktioner och ärenden som ingår...",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "maxbelopp",
+      "label": "Max engångsbelopp (om begränsning önskas)",
+      "type": "text",
+      "placeholder": "T.ex. 100 000 kr eller \"Obegränsat\"",
+      "required": false,
+      "group": "detaljer"
+    },
+    {
+      "id": "giltighetstid",
+      "label": "Giltighetstid",
+      "type": "select",
+      "options": [
+        "1 månad",
+        "3 månader",
+        "6 månader",
+        "1 år",
+        "Tillsvidare"
+      ],
+      "required": true,
+      "group": "detaljer"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Accepterar alla banker fullmakten?",
+      "a": "De flesta banker accepterar en korrekt utformad fullmakt, men vissa har egna blanketter. Kontakta banken i förväg."
+    },
+    {
+      "q": "Kan ombudet ta lån i mitt namn?",
+      "a": "Bara om fullmakten uttryckligen anger detta. Lånebeslut är ofta personliga och kräver din uttryckliga rätt."
+    },
+    {
+      "q": "Hur skyddas jag mot missbruk?",
+      "a": "Ange tydliga begränsningar, max-belopp och giltighetstid. Återkalla fullmakten när uppdraget är slutfört."
+    },
+    {
+      "q": "Måste bankfullmakten bevittnas?",
+      "a": "Inte enligt lag, men många banker kräver eller starkt rekommenderar två vittnen."
+    },
+    {
+      "q": "Gäller fullmakten utomlands?",
+      "a": "Den gäller primärt i Sverige. För utlandsbruk kan apostille eller legalisering krävas."
+    }
+  ],
+  "relatedIds": [
+    218,
+    221,
+    142
+  ],
+  "legalInfo": "Inkomstskattelagen (1999:1229) och pensionsmyndighetens regelverk.",
+  "keywords": [
+    "fullmakt pension",
+    "pensionssparande ombud",
+    "PPM fullmakt"
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "id": 139,
+  "slug": "fullmakt-bolagsstamma",
+  "name": "Fullmakt till bolagsstämma",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för ombud att rösta åt aktieägare vid bolagsstämma.",
+  "longDescription": "Ger ombudet rätt att rösta för dina aktier vid årsstämma eller extra bolagsstämma. Du kan ge ombudet fria händer eller specifika röstinstruktioner per punkt.",
+  "badge": "popular",
+  "usageCount": 8920,
+  "fields": [
+    {
+      "id": "fullmaktsgivare_namn",
+      "label": "Fullmaktsgivarens fullständiga namn",
+      "type": "text",
+      "placeholder": "Anna Svensson",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "fullmaktsgivare_pnr",
+      "label": "Personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "fullmaktsgivare_adress",
+      "label": "Adress",
+      "type": "address",
+      "placeholder": "Gatuadress, postnummer, ort",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "ombud_namn",
+      "label": "Ombudets fullständiga namn",
+      "type": "text",
+      "placeholder": "Erik Svensson",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "ombud_pnr",
+      "label": "Ombudets personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "ombud_relation",
+      "label": "Relation till fullmaktsgivaren",
+      "type": "text",
+      "placeholder": "T.ex. make/maka, barn, vän",
+      "required": false,
+      "group": "havare"
+    },
+    {
+      "id": "uppdrag",
+      "label": "Specifikt uppdrag",
+      "type": "textarea",
+      "placeholder": "Beskriv vad fullmakten omfattar...",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "giltighetstid",
+      "label": "Giltighetstid",
+      "type": "select",
+      "options": [
+        "1 månad",
+        "3 månader",
+        "6 månader",
+        "1 år",
+        "Tillsvidare"
+      ],
+      "required": true,
+      "group": "detaljer"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Måste fullmakten visas upp på stämman?",
+      "a": "Ja, ombudet ska visa original eller styrkt kopia av fullmakten samt giltig ID-handling vid inregistreringen."
+    },
+    {
+      "q": "Kan ombudet rösta som det vill?",
+      "a": "Ja, om du inte angett röstningsinstruktioner. För att skydda dina intressen kan du specificera röstning per punkt."
+    },
+    {
+      "q": "Behöver fullmakten bevittnas?",
+      "a": "Aktiebolagslagen kräver det inte, men många bolagsordningar gör det. Kontrollera bolagets stadgar."
+    },
+    {
+      "q": "Hur länge gäller stämmofullmakten?",
+      "a": "Som regel max ett år från utfärdandet. Bolagsordningen kan ange annat."
+    },
+    {
+      "q": "Kan ett ombud representera flera aktieägare?",
+      "a": "Ja, det är vanligt med samlade ombud (depåförvaltare) som röstar för många aktieägare."
+    }
+  ],
+  "relatedIds": [
+    137,
+    138,
+    143
+  ],
+  "legalInfo": "Regleras av aktiebolagslagen (2005:551) 7 kap. om bolagsstämma och rösträtt.",
+  "keywords": [
+    "fullmakt bolagsstämma",
+    "fullmakt aktieägare",
+    "årsstämma fullmakt",
+    "rösta för aktier"
+  ]
+}

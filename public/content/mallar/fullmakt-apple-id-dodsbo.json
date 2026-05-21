@@ -1,0 +1,124 @@
+{
+  "id": 202,
+  "slug": "fullmakt-apple-id-dodsbo",
+  "name": "Fullmakt Apple ID dödsbo",
+  "category": "Digitalt & Dödsbo",
+  "categorySlug": "digitalt-dodsbo",
+  "description": "Fullmakt för att hantera den avlidnes Apple ID och iCloud.",
+  "longDescription": "Ger ombudet rätt att begära åtkomst till den avlidnes Apple ID via Apples \"Legacy Contact\"-process. Krävs ofta även domstolsbeslut.",
+  "badge": "popular",
+  "usageCount": 2870,
+  "fields": [
+    {
+      "id": "kontoinnehavare_namn",
+      "label": "Kontoinnehavarens namn",
+      "type": "text",
+      "placeholder": "Anna Svensson",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "kontoinnehavare_pnr",
+      "label": "Personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "kontoinnehavare_epost",
+      "label": "E-postadress (kopplad till tjänsten)",
+      "type": "email",
+      "placeholder": "anna@exempel.se",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "ombud_namn",
+      "label": "Ombudets fullständiga namn",
+      "type": "text",
+      "placeholder": "Erik Svensson",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "ombud_pnr",
+      "label": "Ombudets personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "ombud_relation",
+      "label": "Relation till kontoinnehavaren",
+      "type": "text",
+      "placeholder": "T.ex. make/maka, arvinge, barn",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "tjanst",
+      "label": "Digital tjänst",
+      "type": "text",
+      "placeholder": "T.ex. Google, Apple, Spotify, Microsoft",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "syfte",
+      "label": "Vad ska göras med kontot",
+      "type": "textarea",
+      "placeholder": "T.ex. avsluta, övertaga, ladda ner data...",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "giltighetstid",
+      "label": "Giltighetstid",
+      "type": "select",
+      "options": [
+        "1 månad",
+        "3 månader",
+        "6 månader",
+        "1 år"
+      ],
+      "required": true,
+      "group": "detaljer"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Accepterar Google eller Apple svenska fullmakter?",
+      "a": "Internationella tjänster har egna processer. Fullmakten är ett komplement – men de kan kräva engelsk översättning och dödsfallsintyg."
+    },
+    {
+      "q": "Vad händer med en avliden persons konto?",
+      "a": "Många tjänster erbjuder en \"legacy\"-process. Fullmakt och dödsfallsintyg krävs ofta. Vissa konton raderas automatiskt efter inaktivitet."
+    },
+    {
+      "q": "Kan jag ge ombud rätt att se min mejl?",
+      "a": "Ja, om det anges i fullmakten. Notera att tjänsteleverantörens egna regler också gäller och kan kräva extra verifiering."
+    },
+    {
+      "q": "Behövs översättning?",
+      "a": "För utländska tjänster: ja, en auktoriserad översättning till engelska rekommenderas starkt."
+    },
+    {
+      "q": "Hur lång tid tar det att avsluta ett digitalt konto?",
+      "a": "Från några dagar till flera månader beroende på leverantör. Google har en särskild \"Inactive Account Manager\"-process."
+    }
+  ],
+  "relatedIds": [
+    201,
+    203,
+    204
+  ],
+  "legalInfo": "Saknar enhetlig svensk reglering. Tjänsteleverantörers villkor och internationella riktlinjer gäller parallellt.",
+  "keywords": [
+    "fullmakt Apple ID",
+    "Apple legacy contact",
+    "iCloud dödsbo",
+    "Apple konto avliden"
+  ]
+}

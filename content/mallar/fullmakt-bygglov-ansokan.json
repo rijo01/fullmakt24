@@ -1,0 +1,64 @@
+{
+  "slug": "fullmakt-bygglov-ansokan",
+  "seo": {
+    "title": "Fullmakt bygglov – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Fullmakt för arkitekt eller ombud att ansöka om bygglov. Juridiskt granskad mall. Klar på 3 minuter. Ladda ner som PDF för 49 kr.",
+    "h1": "Fullmakt bygglov – Mall & Guide 2026",
+    "keywords": [
+      "fullmakt bygglov",
+      "bygglov ombud",
+      "arkitekt fullmakt bygglov"
+    ]
+  },
+  "content": {
+    "introduction": "Ger ombudet (arkitekt, byggfirma) rätt att lämna in bygglovsansökan, kommunicera med byggnadsnämnden och fatta beslut om mindre justeringar.\n\nDenna mall är granskad av jurister och uppfyller svenska formkrav. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
+    "legalValidity": "Plan- och bygglagen (2010:900).",
+    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
+    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "faq": [
+      {
+        "question": "Måste fullmakten bevittnas?",
+        "answer": "Det är inte ett lagkrav men rekommenderas starkt. Två vittnen som inte är jäviga gör fullmakten lättare att få godkänd av motparten."
+      },
+      {
+        "question": "Hur återkallar jag fullmakten?",
+        "answer": "Meddela fullmaktshavaren skriftligt och informera berörda parter (bank, myndighet etc.). Fullmakten upphör omedelbart."
+      },
+      {
+        "question": "Vad händer vid dödsfall?",
+        "answer": "En vanlig fullmakt upphör automatiskt vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna."
+      },
+      {
+        "question": "Kan ombudet ge fullmakten vidare?",
+        "answer": "Bara om det uttryckligen anges. Som standard har ombudet inte rätt att utse en annan person (substitution)."
+      },
+      {
+        "question": "Behöver fullmakten registreras?",
+        "answer": "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar."
+      }
+    ],
+    "relatedSearchTerms": [
+      "fullmakt bygglov",
+      "bygglov ombud",
+      "arkitekt fullmakt bygglov",
+      "fullmakt bygglov pdf",
+      "fullmakt bygglov mall gratis"
+    ]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {
+      "text": "Alla mallar",
+      "href": "/mallar"
+    },
+    {
+      "text": "Mallar i Boende & Vardag",
+      "href": "/mallar?category=boende-vardag"
+    }
+  ],
+  "lastUpdated": "2026-05-21"
+}
