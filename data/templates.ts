@@ -479,10 +479,6 @@ function generateTemplates(): Template[] {
     { id: 122, slug: 'intyg-digital-arvshandling', name: 'Intyg för digital arvshandling', description: 'Intyg avseende digitalt arv.', badge: 'premium', usageCount: 1234 },
     { id: 123, slug: 'fullmakt-epostarkiv', name: 'Fullmakt för e-postarkiv/molntjänster', description: 'Fullmakt att hantera e-post och molntjänster.', badge: 'gratis', usageCount: 987 },
     { id: 124, slug: 'medgivande-digital-minnessida', name: 'Medgivande för digital minnessida', description: 'Medgivande att skapa och hantera digital minnessida.', badge: 'gratis', usageCount: 876 },
-    // === TILLAGDA 2026-04-22 ===
-    { id: 125, slug: 'framtidsfullmakt-komplett-2026', name: 'Framtidsfullmakt 2026 – komplett mall', description: 'Komplett framtidsfullmakt som träder i kraft om du blir oförmögen att fatta beslut. Täcker ekonomi, vård och bostad.', badge: 'popular', usageCount: 14520 },
-    { id: 126, slug: 'generalfullmakt-privatperson-2026', name: 'Generalfullmakt för privatperson', description: 'Bred fullmakt som täcker de flesta rättshandlingar. Lämplig när du behöver en person att agera i ditt ställe.', badge: 'premium', usageCount: 8932 },
-    { id: 127, slug: 'dodsbo-fullmakt-arvinge-2026', name: 'Dödsbo – fullmakt för arvinge', description: 'Fullmakt som gör det möjligt för en arvinge att agera för dödsboets räkning i kontakter med banker, myndigheter och fastighetsbolag.', badge: 'popular', usageCount: 11240 },
   ];
 
   digitaltTemplates.forEach(t => {
@@ -709,26 +705,6 @@ function generateTemplates(): Template[] {
     keywords: ['dödsbo fullmakt', 'fullmakt arvinge', 'hantera dödsbo', 'dödsbodelägare fullmakt', 'arvinge fullmakt bank'],
   } as Template);
 
-  return templates;
-}
-
-export const templates = generateTemplates();
-
-export function getTemplateBySlug(slug: string): Template | undefined {
-  return templates.find(t => t.slug === slug);
-}
-
-export function getTemplatesByCategory(categorySlug: string): Template[] {
-  return templates.filter(t => t.categorySlug === categorySlug);
-}
-
-export function getPopularTemplates(count = 8): Template[] {
-  return [...templates].sort((a, b) => b.usageCount - a.usageCount).slice(0, count);
-}
-
-export function searchTemplates(query: string): Template[] {
-  const q = query.toLowerCase();
-
   // === TILLAGDA 2026-05-06 ===
   templates.push({
     id: 131, slug: 'fullmakt-hyresratt-overlatelse-2026',
@@ -818,7 +794,6 @@ export function searchTemplates(query: string): Template[] {
     keywords: ['medgivande ensam resa barn', 'barn flyga ensamt', 'flygresemedgivande'],
   } as Template);
 
-
   // Pensionsärenden fullmakt 2026
   templates.push({
     id: 134, slug: 'fullmakt-pensionsarenden-2026',
@@ -895,7 +870,7 @@ export function searchTemplates(query: string): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['1 år', '2 år', '3 år', 'Tillsvidare'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: 'Kan Skatteverket kräva en specifik blankett istället för denna fullmakt?', a: 'Ja. Skatteverket har en egen ombudsregistrering (ombudstjänsten) via Mina sidor. External fullmakt fungerar vid telefon och besök men för digital åtkomst behöver ombudet registreras i Skatteverkets e-tjänst.' },
+      { q: 'Kan Skatteverket kräva en specifik blankett istället för denna fullmakt?', a: 'Ja. Skatteverket har en egen ombudsregistrering (ombudstjänsten) via Mina sidor. External fullmakt fungerar vid telefon och besök men för digital åtkomst behöver ombudet registreras i Skatteverkets e-tjänst.' },
       { q: 'Kan ett bokföringsbolag använda denna fullmakt?', a: 'Ja. Redovisningskonsulter och revisorer använder ofta externa fullmakter. Men för full digital åtkomst via Skatteverkets API:er behövs också e-legitimation-auktorisering.' },
       { q: 'Gäller fullmakten för både privatperson och företag?', a: 'Ja, men specificera personnummer eller organisationsnummer tydligt. Företagets deklarationer kräver att ombudet är registrerat som företagets ombud hos Skatteverket.' },
       { q: 'Kan ombudet överklaga ett Skatteverket-beslut?', a: 'Ja, om det anges i fullmakten. Överklaganden ska lämnas inom 60 dagar från Skatteverkets beslutsdatum. Ombudet kan förberedä och lämna in överklagandet.' },
@@ -906,9 +881,32 @@ export function searchTemplates(query: string): Template[] {
     keywords: ['skattefullmakt', 'fullmakt skatteverket', 'deklaration fullmakt', 'redovisningskonsult fullmakt'],
   } as Template);
 
+  // Defensive dedup by slug — last write wins
+  const bySlug = new Map<string, Template>();
+  for (const t of templates) bySlug.set(t.slug, t);
+  return Array.from(bySlug.values());
+}
+
+export const templates = generateTemplates();
+
+export function getTemplateBySlug(slug: string): Template | undefined {
+  return templates.find(t => t.slug === slug);
+}
+
+export function getTemplatesByCategory(categorySlug: string): Template[] {
+  return templates.filter(t => t.categorySlug === categorySlug);
+}
+
+export function getPopularTemplates(count = 8): Template[] {
+  return [...templates].sort((a, b) => b.usageCount - a.usageCount).slice(0, count);
+}
+
+export function searchTemplates(query: string): Template[] {
+  const q = query.toLowerCase().trim();
+  if (!q) return templates;
   return templates.filter(t =>
     t.name.toLowerCase().includes(q) ||
     t.description.toLowerCase().includes(q) ||
-    t.keywords.some(k => k.includes(q))
+    t.category.toLowerCase().includes(q)
   );
 }
