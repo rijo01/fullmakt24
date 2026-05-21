@@ -1,14 +1,23 @@
 'use client'
 
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo, useEffect, Suspense } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { categories, templates, searchTemplates } from '@/data/templates'
 import { trackEvent } from '@/components/GoogleAnalytics'
 
-export default function MallarPage() {
+function MallarContent() {
+  const searchParams = useSearchParams()
   const [search, setSearch] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [sortBy, setSortBy] = useState<'popular' | 'az' | 'new'>('popular')
+
+  useEffect(() => {
+    const urlSearch = searchParams.get('search')
+    const urlCategory = searchParams.get('category')
+    if (urlSearch) setSearch(urlSearch)
+    if (urlCategory) setSelectedCategory(urlCategory)
+  }, [searchParams])
 
   const filtered = useMemo(() => {
     let result = search.length > 1 ? searchTemplates(search) : templates
@@ -191,5 +200,13 @@ export default function MallarPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function MallarPage() {
+  return (
+    <Suspense fallback={<div className="section-padding py-20 text-center text-navy-400">Laddar mallar...</div>}>
+      <MallarContent />
+    </Suspense>
   )
 }
