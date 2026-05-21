@@ -38,8 +38,18 @@ function MallarContent() {
     return () => clearTimeout(handle)
   }, [search])
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Hem', item: 'https://fullmakt24.se' },
+      { '@type': 'ListItem', position: 2, name: 'Alla mallar', item: 'https://fullmakt24.se/mallar' },
+    ],
+  }
+
   return (
     <div className="section-padding py-10 lg:py-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-navy-400 mb-8">
         <Link href="/" className="hover:text-navy-600 transition-colors">Hem</Link>
