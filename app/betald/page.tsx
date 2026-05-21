@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { templates, categories } from '@/data/templates'
+import { trackEvent } from '@/components/GoogleAnalytics'
 
 import { Suspense } from 'react'
 
@@ -82,6 +83,12 @@ function BetaldContent() {
   // Auto-download on page load
   useEffect(() => {
     if (t && sessionId) {
+      trackEvent('purchase', {
+        transaction_id: sessionId,
+        currency: 'SEK',
+        value: 49,
+        items: [{ item_id: t.slug, item_name: t.name, item_category: t.category, price: 49, quantity: 1 }],
+      })
       const timer = setTimeout(() => handleDownload(), 1500)
       return () => clearTimeout(timer)
     }

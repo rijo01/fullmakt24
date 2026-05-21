@@ -1,8 +1,9 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import { categories, templates, searchTemplates } from '@/data/templates'
+import { trackEvent } from '@/components/GoogleAnalytics'
 
 export default function MallarPage() {
   const [search, setSearch] = useState('')
@@ -19,6 +20,14 @@ export default function MallarPage() {
       default: return result
     }
   }, [search, selectedCategory, sortBy])
+
+  useEffect(() => {
+    if (search.length < 2) return
+    const handle = setTimeout(() => {
+      trackEvent('search', { search_term: search })
+    }, 500)
+    return () => clearTimeout(handle)
+  }, [search])
 
   return (
     <div className="section-padding py-10 lg:py-16">
@@ -149,6 +158,7 @@ export default function MallarPage() {
               <Link
                 key={t.id}
                 href={`/mallar/${t.categorySlug}/${t.slug}`}
+                onClick={() => trackEvent('select_content', { content_type: 'template', item_id: t.slug, item_name: t.name, item_category: t.category })}
                 className="card-interactive p-5 group flex flex-col"
               >
                 <div className="flex items-center gap-2 mb-3">
