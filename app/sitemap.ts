@@ -3,28 +3,42 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://fullmakt24.se'
+  const now = new Date()
 
-  const staticPages = [
-    { url: baseUrl, lastModified: new Date(), changeFrequency: 'daily' as const, priority: 1 },
-    { url: `${baseUrl}/mallar`, lastModified: new Date(), changeFrequency: 'daily' as const, priority: 0.9 },
-    { url: `${baseUrl}/priser`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${baseUrl}/blogg`, lastModified: new Date(), changeFrequency: 'daily' as const, priority: 0.7 },
-    { url: `${baseUrl}/api-docs`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.5 },
+  const staticPages: MetadataRoute.Sitemap = [
+    { url: baseUrl, lastModified: now, changeFrequency: 'daily', priority: 1.0 },
+    { url: `${baseUrl}/mallar`, lastModified: now, changeFrequency: 'daily', priority: 0.9 },
+    { url: `${baseUrl}/priser`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/blogg`, lastModified: now, changeFrequency: 'daily', priority: 0.7 },
+    { url: `${baseUrl}/om`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/kontakt`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/villkor`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${baseUrl}/integritet`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${baseUrl}/cookies`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${baseUrl}/api-docs`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
   ]
 
-  const categoryPages = categories.map(cat => ({
+  const categoryPages: MetadataRoute.Sitemap = categories.map(cat => ({
     url: `${baseUrl}/mallar?category=${cat.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
+    lastModified: now,
+    changeFrequency: 'weekly',
     priority: 0.8,
   }))
 
-  const templatePages = templates.map(t => ({
-    url: `${baseUrl}/mallar/${t.categorySlug}/${t.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.7,
-  }))
+  const templatePages: MetadataRoute.Sitemap = templates.flatMap(t => [
+    {
+      url: `${baseUrl}/mallar/${t.categorySlug}/${t.slug}`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/skapa/${t.slug}`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+  ])
 
   return [...staticPages, ...categoryPages, ...templatePages]
 }
