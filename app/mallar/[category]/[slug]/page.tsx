@@ -68,7 +68,6 @@ export default function TemplateDetailPage() {
     })),
   } : null
 
-  const reviewCount = Math.max(5, Math.floor(t.usageCount / 100))
   const productUrl = `https://fullmakt24.se/mallar/${t.categorySlug}/${t.slug}`
   const productSchema = {
     '@context': 'https://schema.org',
@@ -79,39 +78,6 @@ export default function TemplateDetailPage() {
     image: 'https://fullmakt24.se/og-image.png',
     sku: `mall-${t.id}`,
     brand: { '@type': 'Brand', name: 'Fullmakt24.se' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      bestRating: '5',
-      worstRating: '1',
-      reviewCount: String(reviewCount),
-    },
-    review: [
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Anna Lindberg' },
-        datePublished: '2025-09-14',
-        reviewBody: `Smidig och tydlig mall för ${t.name.toLowerCase()}. Allt blev klart på några minuter och PDF:en såg professionell ut. Rekommenderas!`,
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-          worstRating: '1',
-        },
-      },
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Erik Sandström' },
-        datePublished: '2025-11-02',
-        reviewBody: 'Snabbt, enkelt och juridiskt korrekt. Slapp gå till jurist och sparade både tid och pengar.',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-          worstRating: '1',
-        },
-      },
-    ],
     offers: {
       '@type': 'Offer',
       price: '49',
