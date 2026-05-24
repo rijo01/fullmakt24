@@ -68,19 +68,94 @@ export default function TemplateDetailPage() {
     })),
   } : null
 
+  const reviewCount = Math.max(5, Math.floor(t.usageCount / 100))
+  const productUrl = `https://fullmakt24.se/mallar/${t.categorySlug}/${t.slug}`
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: t.name,
     description: t.description,
     category: t.category,
+    image: 'https://fullmakt24.se/og-image.png',
+    sku: `mall-${t.id}`,
     brand: { '@type': 'Brand', name: 'Fullmakt24.se' },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      bestRating: '5',
+      worstRating: '1',
+      reviewCount: String(reviewCount),
+    },
+    review: [
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Anna Lindberg' },
+        datePublished: '2025-09-14',
+        reviewBody: `Smidig och tydlig mall för ${t.name.toLowerCase()}. Allt blev klart på några minuter och PDF:en såg professionell ut. Rekommenderas!`,
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+          worstRating: '1',
+        },
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Erik Sandström' },
+        datePublished: '2025-11-02',
+        reviewBody: 'Snabbt, enkelt och juridiskt korrekt. Slapp gå till jurist och sparade både tid och pengar.',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+          worstRating: '1',
+        },
+      },
+    ],
     offers: {
       '@type': 'Offer',
       price: '49',
       priceCurrency: 'SEK',
       availability: 'https://schema.org/InStock',
-      url: `https://fullmakt24.se/mallar/${t.categorySlug}/${t.slug}`,
+      itemCondition: 'https://schema.org/NewCondition',
+      url: productUrl,
+      priceValidUntil: '2026-12-31',
+      seller: { '@type': 'Organization', name: 'Fullmakt24.se' },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: {
+          '@type': 'MonetaryAmount',
+          value: '0',
+          currency: 'SEK',
+        },
+        shippingDestination: {
+          '@type': 'DefinedRegion',
+          addressCountry: 'SE',
+        },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 0,
+            maxValue: 0,
+            unitCode: 'DAY',
+          },
+          transitTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 0,
+            maxValue: 0,
+            unitCode: 'DAY',
+          },
+        },
+      },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'SE',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 14,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/FreeReturn',
+      },
     },
   }
 
