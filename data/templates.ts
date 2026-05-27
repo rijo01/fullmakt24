@@ -906,6 +906,106 @@ export function searchTemplates(query: string): Template[] {
     keywords: ['skattefullmakt', 'fullmakt skatteverket', 'deklaration fullmakt', 'redovisningskonsult fullmakt'],
   } as Template);
 
+  // === TILLAGDA 2026-05-27 ===
+
+  // Fullmakt för arbetsgivarintyg och löneinformation
+  templates.push({
+    id: 137, slug: 'fullmakt-arbetsgivarintyg-lon-2026',
+    name: 'Fullmakt för arbetsgivarintyg och löneinformation',
+    category: 'Ekonomi & Myndigheter', categorySlug: 'ekonomi-myndigheter',
+    description: 'Ger ombud rätt att hämta arbetsgivarintyg, lönespecifikationer och anställningsuppgifter från arbetsgivaren.',
+    longDescription: 'Denna fullmakt ger ditt ombud rätt att hämta ut arbetsgivarintyg, lönespecifikationer, anställningsbevis och övriga anställningsuppgifter direkt från din arbetsgivare. Används av personer som är sjukskrivna, föräldralediga, bor utomlands eller söker bolån och behöver dokumentation utan att själva kunna närvara. Ombudet kan agera gentemot HR-avdelning, lönekontor och Försäkringskassan.',
+    badge: 'popular', usageCount: 6540,
+    fields: [
+      { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
+      { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'arbetsgivare', label: 'Arbetsgivare (företagsnamn)', type: 'text', placeholder: 'T.ex. Volvo AB', required: true, group: 'givare' },
+      { id: 'ombud_namn', label: 'Ombudets fullständiga namn', type: 'text', placeholder: 'Erik Svensson', required: true, group: 'havare' },
+      { id: 'ombud_pnr', label: 'Personnummer (ombudet)', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'havare' },
+      { id: 'ombud_relation', label: 'Relation till fullmaktsgivaren', type: 'text', placeholder: 'T.ex. make/maka, förälder, bank', required: true, group: 'havare' },
+      { id: 'befogenheter', label: 'Handlingar att hämta', type: 'select', options: ['Arbetsgivarintyg', 'Lönespecifikationer', 'Anställningsbevis', 'Alla ovanstående'], required: true, group: 'detaljer' },
+      { id: 'andamal', label: 'Ändamål', type: 'select', options: ['Bolåneansökan', 'Försäkringskassans krav', 'A-kasseansökan', 'Övrigt'], required: true, group: 'detaljer' },
+      { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['1 månad', '3 månader', '6 månader', '1 år'], required: true, group: 'detaljer' },
+    ],
+    faq: [
+      { q: 'Kan ett ombud hämta mitt arbetsgivarintyg?', a: 'Ja. Med en giltig fullmakt kan ombudet vända sig till arbetsgivarens HR-avdelning eller lönekontor och begära ut de angivna handlingarna. Arbetsgivaren är skyldig att utfärda arbetsgivarintyg enligt LAS.' },
+      { q: 'Vad innehåller ett arbetsgivarintyg?', a: 'Arbetsgivarintyget innehåller uppgifter om anställningstid, tjänstgöringsgrad, löneinformation och anställningsform. Det krävs bland annat av a-kassan och banker vid bolåneansökan.' },
+      { q: 'Måste arbetsgivaren godkänna fullmakten?', a: 'Arbetsgivaren är skyldig att utfärda arbetsgivarintyg på begäran. Fullmakten visar att ombudet har rätt att agera för din räkning. Kontakta HR-avdelningen i förväg för att kontrollera eventuella rutiner.' },
+      { q: 'Gäller fullmakten även för lönespecifikationer?', a: 'Ja, om det anges i fullmakten. Lönespecifikationer innehåller personuppgifter och skyddas av GDPR. Specificera tydligt vilka handlingar och vilken tidsperiod ombudet har rätt att ta del av.' },
+      { q: 'Kan en bank använda fullmakten vid bolåneansökan?', a: 'Ja. Banker accepterar fullmakter för att hämta löneinformation och arbetsgivarintyg vid kreditprövning. Kontrollera med din bank vilken form av dokumentation de accepterar – en del kräver stämplad kopia.' },
+    ],
+    relatedIds: [126, 136],
+    legalInfo: 'Lagen (1982:80) om anställningsskydd (LAS) och GDPR (EU 2016/679) reglerar rätten till arbetsgivarintyg och hantering av personuppgifter.',
+    keywords: ['fullmakt arbetsgivarintyg', 'hämta arbetsgivarintyg ombud', 'fullmakt löneinformation', 'arbetsgivarintyg bolån fullmakt'],
+  } as Template);
+
+  // Fullmakt för försäkringsskadeanmälan
+  templates.push({
+    id: 138, slug: 'fullmakt-forsakring-skadesanmalan-2026',
+    name: 'Fullmakt för försäkringsskadeanmälan',
+    category: 'Ekonomi & Myndigheter', categorySlug: 'ekonomi-myndigheter',
+    description: 'Ger ombud rätt att anmäla skada, följa upp ärendet och ta emot ersättning från försäkringsbolag.',
+    longDescription: 'Denna fullmakt ger ditt ombud rätt att anmäla skada, kommunicera med försäkringsbolaget, följa upp ärenden och ta emot skadeersättning för din räkning. Täcker bil-, hem- och olycksfallsförsäkring. Används när du är skadad, utomlands, sjuk eller av annan anledning inte kan hantera skadeanmälan själv. Ombudet kan agera gentemot försäkringsbolagets skadehanteringsavdelning.',
+    badge: 'gratis', usageCount: 5210,
+    fields: [
+      { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
+      { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'forsakringsbolag', label: 'Försäkringsbolag', type: 'text', placeholder: 'T.ex. Folksam, If, Trygg-Hansa', required: true, group: 'givare' },
+      { id: 'forsakringsnummer', label: 'Försäkringsnummer (om känt)', type: 'text', placeholder: 'T.ex. 123456-7', required: false, group: 'givare' },
+      { id: 'ombud_namn', label: 'Ombudets fullständiga namn', type: 'text', placeholder: 'Erik Svensson', required: true, group: 'havare' },
+      { id: 'ombud_pnr', label: 'Personnummer (ombudet)', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'havare' },
+      { id: 'forsakringstyp', label: 'Typ av försäkring', type: 'select', options: ['Bilförsäkring', 'Hemförsäkring', 'Olycksfallsförsäkring', 'Alla försäkringar'], required: true, group: 'detaljer' },
+      { id: 'befogenheter', label: 'Befögenheter', type: 'select', options: ['Anmäla skada', 'Följa upp skadeärende', 'Ta emot ersättning', 'Alla ovanstående'], required: true, group: 'detaljer' },
+      { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['3 månader', '6 månader', '1 år', 'Tillsvidare'], required: true, group: 'detaljer' },
+    ],
+    faq: [
+      { q: 'Kan ett ombud anmäla en försäkringsskada åt mig?', a: 'Ja. Med en giltig fullmakt kan ombudet kontakta försäkringsbolaget, fylla i skadeanmälan och kommunicera med skadehandläggaren. De flesta försäkringsbolag accepterar fullmakter om de är korrekt utformade.' },
+      { q: 'Kan ombudet ta emot skadeersättning?', a: 'Ja, om det anges tydligt i fullmakten. Observera att försäkringsbolag ofta kräver att ersättning betalas ut till den försäkrades bankkonto. Ange detta i fullmakten och kontrollera med försäkringsbolaget i förväg.' },
+      { q: 'Vad gäller för bilförsäkring och skadeanmälan?', a: 'Försäkringsavtalslagen 7 kap. reglerar rätten att företrädas av ombud. Ombudet kan anmäla vagnskada, stöld och trafikskada. Vid tredjepartsskada kan polisrapport krävas.' },
+      { q: 'Gäller fullmakten för hemförsäkring och inbrott?', a: 'Ja. Ombudet kan anmäla stöld, vattenskada och brandskada, kommunicera med värderare och följa upp utbetalningar. Försäkringsbolagets egna rutiner kan kräva kompletterande dokumentation.' },
+      { q: 'Kan jag använda en fullmakt om jag befinner mig utomlands?', a: 'Ja, det är ett vanligt användningsfall. Se till att fullmakten är undertecknad med vittne och att ombudet har tillgång till relevanta försäkringsdokument. Kontakta försäkringsbolaget på förhand för att informera om fullmakten.' },
+    ],
+    relatedIds: [126, 131],
+    legalInfo: 'Försäkringsavtalslagen (2005:104) 7 kap. reglerar försäkringstagarens rätt att företrädas av ombud vid skadereglering.',
+    keywords: ['fullmakt försäkring', 'skadeanmälan fullmakt', 'fullmakt försäkringsbolag', 'ombud försäkringsskada'],
+  } as Template);
+
+  // Medgivande för medicinsk behandling utomlands (minderårig)
+  templates.push({
+    id: 139, slug: 'medgivande-medicinsk-behandling-utomlands-2026',
+    name: 'Medgivande för medicinsk behandling utomlands (minderårig)',
+    category: 'Barn & Familj', categorySlug: 'barn-familj',
+    description: 'Medgivande från vårdnadshavare att annan vuxen kan ge tillstånd för medicinsk behandling av barn under 18 år vid akut behov utomlands.',
+    longDescription: 'Detta medgivande ger en angiven vuxen person (t.ex. lärare, ledare eller annan anhörig) rätt att ge tillstånd för medicinsk behandling av ett minderårigt barn vid akut behov utomlands. Viktigt vid skolresor, lägerverksamhet och längre utlandsvistelse utan vårdnadshavare. Utländsk sjukvård kräver ofta skriftligt medgivande från vårdnadshavare vid behandling av minderåriga. Dokumentet är avfattat på svenska och engelska för att fungera i internationella sammanhang.',
+    badge: 'popular', usageCount: 7120,
+    fields: [
+      { id: 'barn_namn', label: 'Barnets fullständiga namn', type: 'text', placeholder: 'Maja Svensson', required: true, group: 'givare' },
+      { id: 'barn_foddatum', label: 'Barnets födelsedatum', type: 'date', required: true, group: 'givare' },
+      { id: 'barn_personnummer', label: 'Barnets personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'vardnadshavare1_namn', label: 'Vårdnadshavare 1 (namn)', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
+      { id: 'vardnadshavare1_pnr', label: 'Vårdnadshavare 1 (personnummer)', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'vardnadshavare1_telefon', label: 'Vårdnadshavare 1 (telefon)', type: 'phone', placeholder: '+46701234567', required: true, group: 'givare' },
+      { id: 'vardnadshavare2_namn', label: 'Vårdnadshavare 2 (valfritt)', type: 'text', placeholder: 'Erik Svensson', required: false, group: 'givare' },
+      { id: 'ansvarig_vuxen_namn', label: 'Ansvarig vuxens fullständiga namn', type: 'text', placeholder: 'Maria Lindgren', required: true, group: 'havare' },
+      { id: 'ansvarig_vuxen_pnr', label: 'Ansvarig vuxens personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'havare' },
+      { id: 'ansvarig_vuxen_relation', label: 'Relation till barnet', type: 'text', placeholder: 'T.ex. klasslärare, reseledare, moster', required: true, group: 'havare' },
+      { id: 'destination', label: 'Land/destination', type: 'text', placeholder: 'T.ex. Italien, Spanien', required: true, group: 'detaljer' },
+      { id: 'period', label: 'Vistelsens period', type: 'text', placeholder: 'T.ex. 2026-06-10 till 2026-06-17', required: true, group: 'detaljer' },
+      { id: 'kanda_allergier', label: 'Kända allergier/medicinska tillstånd', type: 'text', placeholder: 'T.ex. penicillinallergi, diabetes', required: false, group: 'detaljer' },
+      { id: 'nodkontakt', label: 'Nödkontakt (utöver vårdnadshavare)', type: 'phone', placeholder: '+46701234567', required: false, group: 'detaljer' },
+    ],
+    faq: [
+      { q: 'Varför behövs medgivande för medicinsk behandling utomlands?', a: 'Sjukvården i många länder kräver skriftligt tillstånd från vårdnadshavare för att behandla minderåriga. Utan medgivande kan ett barn i nödsituationer nekas behandling eller att behandlingen fördröjs. Medgivandet löser denna situation när vårdnadshavare inte är på plats.' },
+      { q: 'Vilka länder kräver detta medgivande?', a: 'Krav varierar. EU-länder som Spanien, Italien och Frankrike tillämpar ofta striktare regler för minderåriga utan föräldrar. USA kräver i regel skriftligt medgivande vid icke-akut behandling. Vid akut livsfara kan behandling alltid ges utan tillstånd.' },
+      { q: 'Kan en lärare använda detta medgivande?', a: 'Ja. Medgivandet är utformat för att kunna användas av skolpersonal, reseledare och andra vuxna som ansvarar för barn utomlands. Lärarens eller ledarens fullständiga namn och relation till barnet anges i dokumentet.' },
+      { q: 'Behöver medgivandet vara på engelska?', a: 'Rekommenderas starkt. Mallen producerar ett dokument på svenska och engelska. Vid vistelse utanför Norden är en engelsk version i princip nödvändig för att sjukvårdspersonal ska förstå dokumentet.' },
+      { q: 'Vad är skillnaden mot en fullmakt för sjukvård?', a: 'En sjukvårdsfullmakt (mall 132) gäller i Sverige och aktiveras när du som vuxen inte kan besluta själv. Detta medgivande är specifikt för att låta en annan vuxen ge tillstånd för behandling av ett BARN utomlands, och grundar sig i Föräldrabalken 6 kap. och Patientlagen 4 kap. 3 §.' },
+    ],
+    relatedIds: [133, 132],
+    legalInfo: 'Grundat på Patientlagen (2014:821) 4 kap. 3 § om informerat samtycke och Föräldrabalken (1949:381) 6 kap. om vårdnadshavarens ansvar.',
+    keywords: ['medgivande medicinsk behandling barn', 'tillstånd behandling utomlands minderårig', 'skolresa medgivande sjukvård', 'vårdnadshavare medgivande utomlands'],
+  } as Template);
+
   return templates.filter(t =>
     t.name.toLowerCase().includes(q) ||
     t.description.toLowerCase().includes(q) ||
