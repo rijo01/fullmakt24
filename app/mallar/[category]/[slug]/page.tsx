@@ -47,8 +47,91 @@ export default function TemplateDetailPage() {
   const related = getTemplatesByCategory(t.categorySlug).filter(r => r.id !== t.id).slice(0, 4)
   const allFaqs = (seoContent?.content?.faq || t?.faq || []) as Array<Record<string, string>>
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Hem', item: 'https://fullmakt24.se' },
+      { '@type': 'ListItem', position: 2, name: 'Mallar', item: 'https://fullmakt24.se/mallar' },
+      { '@type': 'ListItem', position: 3, name: cat?.name || '', item: `https://fullmakt24.se/mallar?category=${t.categorySlug}` },
+      { '@type': 'ListItem', position: 4, name: t.name, item: `https://fullmakt24.se/mallar/${t.categorySlug}/${t.slug}` },
+    ],
+  }
+
+  const faqSchema = allFaqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: allFaqs.map(f => ({
+      '@type': 'Question',
+      name: ('question' in f ? f.question : f.q) as string,
+      acceptedAnswer: { '@type': 'Answer', text: ('answer' in f ? f.answer : f.a) as string },
+    })),
+  } : null
+
+  const productUrl = `https://fullmakt24.se/mallar/${t.categorySlug}/${t.slug}`
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: t.name,
+    description: t.description,
+    category: t.category,
+    image: 'https://fullmakt24.se/og-image.png',
+    sku: `mall-${t.id}`,
+    brand: { '@type': 'Brand', name: 'Fullmakt24.se' },
+    offers: {
+      '@type': 'Offer',
+      price: '49',
+      priceCurrency: 'SEK',
+      availability: 'https://schema.org/InStock',
+      itemCondition: 'https://schema.org/NewCondition',
+      url: productUrl,
+      priceValidUntil: '2026-12-31',
+      seller: { '@type': 'Organization', name: 'Fullmakt24.se' },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: {
+          '@type': 'MonetaryAmount',
+          value: '0',
+          currency: 'SEK',
+        },
+        shippingDestination: {
+          '@type': 'DefinedRegion',
+          addressCountry: 'SE',
+        },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 0,
+            maxValue: 0,
+            unitCode: 'DAY',
+          },
+          transitTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 0,
+            maxValue: 0,
+            unitCode: 'DAY',
+          },
+        },
+      },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'SE',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 14,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/FreeReturn',
+      },
+    },
+  }
+
   return (
     <div className="section-padding py-10 lg:py-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      {faqSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      )}
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-navy-400 mb-8 flex-wrap">
         <Link href="/" className="hover:text-navy-600">Hem</Link><span>/</span>

@@ -1,0 +1,123 @@
+{
+  "id": 213,
+  "slug": "fullmakt-utlandsflytt-myndighet",
+  "name": "Fullmakt utlandsflytt",
+  "category": "Ekonomi, Bank & Myndigheter",
+  "categorySlug": "ekonomi-myndigheter",
+  "description": "Fullmakt för att hantera utlandsflytt – Skatteverket, FK, kommun.",
+  "longDescription": "Ger ombudet rätt att anmäla utflyttning hos Skatteverket, hantera ärenden hos Försäkringskassan och avsluta löpande abonnemang.",
+  "badge": "gratis",
+  "usageCount": 1670,
+  "fields": [
+    {
+      "id": "fullmaktsgivare_namn",
+      "label": "Fullmaktsgivarens namn",
+      "type": "text",
+      "placeholder": "Anna Svensson",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "fullmaktsgivare_pnr",
+      "label": "Personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "fullmaktsgivare_pass",
+      "label": "Passnummer",
+      "type": "text",
+      "placeholder": "12345678",
+      "required": false,
+      "group": "givare"
+    },
+    {
+      "id": "ombud_namn",
+      "label": "Ombudets fullständiga namn",
+      "type": "text",
+      "placeholder": "Erik Svensson",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "ombud_pnr",
+      "label": "Ombudets personnummer eller utländskt ID",
+      "type": "text",
+      "placeholder": "ÅÅMMDD-XXXX eller utländskt ID-nummer",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "land",
+      "label": "Berört land",
+      "type": "text",
+      "placeholder": "T.ex. Spanien, Tyskland, USA",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "myndighet",
+      "label": "Berörd myndighet eller dokument",
+      "type": "text",
+      "placeholder": "T.ex. Apostille, Konsulat, Notarius Publicus",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "uppdrag",
+      "label": "Detaljerat uppdrag",
+      "type": "textarea",
+      "placeholder": "Beskriv vad fullmakten avser...",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "giltighetstid",
+      "label": "Giltighetstid",
+      "type": "select",
+      "options": [
+        "1 månad",
+        "3 månader",
+        "6 månader",
+        "1 år"
+      ],
+      "required": true,
+      "group": "detaljer"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Vad är en apostille?",
+      "a": "En apostille är ett intyg från Notarius Publicus som bekräftar att en svensk myndighets eller notaries underskrift är äkta. Krävs för många utländska myndigheter."
+    },
+    {
+      "q": "Var ansöker jag om apostille?",
+      "a": "Hos Notarius Publicus i Sverige. Listan finns på regeringen.se. Avgift tas ut per dokument."
+    },
+    {
+      "q": "Behöver fullmakten översättas?",
+      "a": "Ja, oftast krävs auktoriserad översättning till mottagarlandets språk eller engelska."
+    },
+    {
+      "q": "Vad är skillnaden mellan apostille och legalisering?",
+      "a": "Apostille gäller för länder som undertecknat Haagkonventionen (1961). För andra länder krävs legalisering via UD och landets ambassad."
+    },
+    {
+      "q": "Kan svensk fullmakt användas direkt utomlands?",
+      "a": "Ibland, men oftast krävs apostille eller legalisering plus översättning. Kontakta landets ambassad i förväg."
+    }
+  ],
+  "relatedIds": [
+    162,
+    178,
+    209
+  ],
+  "legalInfo": "Haagkonventionen (1961) om apostille gäller mellan medlemsländer. Notarius Publicus utfärdar apostille i Sverige.",
+  "keywords": [
+    "fullmakt utlandsflytt",
+    "fullmakt utvandring",
+    "utflyttningsanmälan ombud"
+  ]
+}

@@ -1,13 +1,23 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect, Suspense } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { categories, templates, searchTemplates } from '@/data/templates'
+import { trackEvent } from '@/components/GoogleAnalytics'
 
-export default function MallarPage() {
+function MallarContent() {
+  const searchParams = useSearchParams()
   const [search, setSearch] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [sortBy, setSortBy] = useState<'popular' | 'az' | 'new'>('popular')
+
+  useEffect(() => {
+    const urlSearch = searchParams.get('search')
+    const urlCategory = searchParams.get('category')
+    if (urlSearch) setSearch(urlSearch)
+    if (urlCategory) setSelectedCategory(urlCategory)
+  }, [searchParams])
 
   const filtered = useMemo(() => {
     let result = search.length > 1 ? searchTemplates(search) : templates
@@ -20,8 +30,26 @@ export default function MallarPage() {
     }
   }, [search, selectedCategory, sortBy])
 
+  useEffect(() => {
+    if (search.length < 2) return
+    const handle = setTimeout(() => {
+      trackEvent('search', { search_term: search })
+    }, 500)
+    return () => clearTimeout(handle)
+  }, [search])
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Hem', item: 'https://fullmakt24.se' },
+      { '@type': 'ListItem', position: 2, name: 'Alla mallar', item: 'https://fullmakt24.se/mallar' },
+    ],
+  }
+
   return (
     <div className="section-padding py-10 lg:py-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-navy-400 mb-8">
         <Link href="/" className="hover:text-navy-600 transition-colors">Hem</Link>
@@ -149,6 +177,7 @@ export default function MallarPage() {
               <Link
                 key={t.id}
                 href={`/mallar/${t.categorySlug}/${t.slug}`}
+                onClick={() => trackEvent('select_content', { content_type: 'template', item_id: t.slug, item_name: t.name, item_category: t.category })}
                 className="card-interactive p-5 group flex flex-col"
               >
                 <div className="flex items-center gap-2 mb-3">
@@ -181,5 +210,13 @@ export default function MallarPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function MallarPage() {
+  return (
+    <Suspense fallback={<div className="section-padding py-20 text-center text-navy-400">Laddar mallar...</div>}>
+      <MallarContent />
+    </Suspense>
   )
 }

@@ -1,0 +1,124 @@
+{
+  "id": 233,
+  "slug": "fullmakt-konst-vardering-arvskifte",
+  "name": "Fullmakt konstvärdering vid arvskifte",
+  "category": "Digitalt & Dödsbo",
+  "categorySlug": "digitalt-dodsbo",
+  "description": "Fullmakt för värderingsman att värdera konst eller antikviteter inför arvskifte.",
+  "longDescription": "Ger en auktoriserad värderingsman rätt att värdera konstverk, antikviteter eller andra dyrbarheter i dödsboet.",
+  "badge": "gratis",
+  "usageCount": 540,
+  "fields": [
+    {
+      "id": "avliden_namn",
+      "label": "Den avlidnes namn (om relevant)",
+      "type": "text",
+      "placeholder": "Anna Svensson",
+      "required": false,
+      "group": "givare"
+    },
+    {
+      "id": "avliden_pnr",
+      "label": "Avlidens personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": false,
+      "group": "givare"
+    },
+    {
+      "id": "utstallare_namn",
+      "label": "Utställarens namn",
+      "type": "text",
+      "placeholder": "Anna Svensson",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "utstallare_pnr",
+      "label": "Utställarens personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "ombud_namn",
+      "label": "Utseddes namn",
+      "type": "text",
+      "placeholder": "Erik Svensson",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "ombud_pnr",
+      "label": "Utseddes personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "ombud_relation",
+      "label": "Relation",
+      "type": "text",
+      "placeholder": "T.ex. barn, vän, advokat",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "uppdrag",
+      "label": "Detaljerat uppdrag",
+      "type": "textarea",
+      "placeholder": "Beskriv ansvarsområden och uppdragets omfattning...",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "giltighetstid",
+      "label": "Giltighetstid",
+      "type": "select",
+      "options": [
+        "6 månader",
+        "1 år",
+        "2 år",
+        "Tills arvskifte slutfört",
+        "Tillsvidare"
+      ],
+      "required": true,
+      "group": "detaljer"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Vem kan utses till testamentsexekutor?",
+      "a": "En myndig och rättskapabel person, ofta en familjemedlem, advokat eller revisor. Personen ska kunna ta uppdraget utan jävsproblem."
+    },
+    {
+      "q": "Måste bouppteckning göras?",
+      "a": "Ja, vid varje dödsfall ska bouppteckning upprättas inom 3 månader och lämnas till Skatteverket inom 4 månader."
+    },
+    {
+      "q": "Vem är dödsbodelägare?",
+      "a": "Make/maka, sambo med gemensamma barn, barn (bröstarvingar) och eventuella testamentstagare. Universella testamentstagare räknas också in."
+    },
+    {
+      "q": "Kan jag bestämma min egen begravning?",
+      "a": "Ja, genom skriftliga önskemål i förväg. Det är inte bindande men respekteras vanligtvis av anhöriga."
+    },
+    {
+      "q": "Hur länge gäller fullmakt för dödsboet?",
+      "a": "Vanligen tills arvskiftet är slutfört och dödsboet upplöst."
+    }
+  ],
+  "relatedIds": [
+    230,
+    231,
+    232
+  ],
+  "legalInfo": "Ärvdabalken (1958:637) 23 kap. om arvskifte.",
+  "keywords": [
+    "fullmakt värdering konst",
+    "arvskifte värderingsman",
+    "fullmakt antikviteter"
+  ]
+}

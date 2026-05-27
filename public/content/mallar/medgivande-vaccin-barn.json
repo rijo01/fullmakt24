@@ -1,0 +1,132 @@
+{
+  "id": 187,
+  "slug": "medgivande-vaccin-barn",
+  "name": "Medgivande vaccination barn",
+  "category": "Vård & Omsorg",
+  "categorySlug": "vard-omsorg",
+  "description": "Vårdnadshavares medgivande för vaccination av minderårig.",
+  "longDescription": "Specificerar vilka vacciner barnet får ta och under vilka omständigheter. Användbart när annan vuxen följer med barnet till vården.",
+  "badge": "gratis",
+  "usageCount": 6540,
+  "fields": [
+    {
+      "id": "barn_namn",
+      "label": "Barnets fullständiga namn",
+      "type": "text",
+      "placeholder": "Maja Svensson",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "barn_pnr",
+      "label": "Barnets personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "vh1_namn",
+      "label": "Vårdnadshavare 1 (namn)",
+      "type": "text",
+      "placeholder": "Anna Svensson",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "vh1_pnr",
+      "label": "Vårdnadshavare 1 (personnummer)",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "vh2_namn",
+      "label": "Vårdnadshavare 2 (om gemensam vårdnad)",
+      "type": "text",
+      "placeholder": "Erik Svensson",
+      "required": false,
+      "group": "givare"
+    },
+    {
+      "id": "vh2_pnr",
+      "label": "Vårdnadshavare 2 (personnummer)",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": false,
+      "group": "givare"
+    },
+    {
+      "id": "ombud_namn",
+      "label": "Ombudets/utförarens namn",
+      "type": "text",
+      "placeholder": "T.ex. mor- eller farförälder, läkare",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "ombud_pnr",
+      "label": "Ombudets personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": false,
+      "group": "havare"
+    },
+    {
+      "id": "syfte",
+      "label": "Syfte/specifikt uppdrag",
+      "type": "textarea",
+      "placeholder": "Beskriv ändamålet...",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "giltighetstid",
+      "label": "Giltighetstid",
+      "type": "select",
+      "options": [
+        "1 vecka",
+        "1 månad",
+        "3 månader",
+        "6 månader",
+        "1 år"
+      ],
+      "required": true,
+      "group": "detaljer"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Krävs båda vårdnadshavares underskrift?",
+      "a": "Vid gemensam vårdnad krävs båda vårdnadshavares samtycke för väsentliga beslut. För vardagliga beslut räcker en."
+    },
+    {
+      "q": "Hur länge gäller medgivandet?",
+      "a": "Under den tid du anger. Vi rekommenderar att specificera ett konkret slutdatum för säkerhet."
+    },
+    {
+      "q": "Kan medgivandet återkallas?",
+      "a": "Ja, när som helst. Meddela mottagaren och berörda parter skriftligt så slutar medgivandet att gälla omedelbart."
+    },
+    {
+      "q": "Behöver medgivandet bevittnas?",
+      "a": "Inte enligt lag, men många mottagare (skolor, vårdgivare) föredrar det. Två vittnen rekommenderas."
+    },
+    {
+      "q": "Vad om vårdnadshavarna är osams?",
+      "a": "Vid oenighet kan saken avgöras av tingsrätten. Familjerätten kan också medla via socialnämnden."
+    }
+  ],
+  "relatedIds": [
+    181,
+    182,
+    184
+  ],
+  "legalInfo": "Smittskyddslagen (2004:168) och patientlagen (2014:821).",
+  "keywords": [
+    "medgivande vaccin barn",
+    "vaccination samtycke",
+    "fullmakt vaccinera barn"
+  ]
+}

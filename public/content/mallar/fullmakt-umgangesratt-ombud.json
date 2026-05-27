@@ -1,0 +1,116 @@
+{
+  "id": 154,
+  "slug": "fullmakt-umgangesratt-ombud",
+  "name": "Fullmakt umgängesrätt",
+  "category": "Föräldrar & Barn",
+  "categorySlug": "foraldrar-barn",
+  "description": "Fullmakt för ombud i umgängesrättstvister.",
+  "longDescription": "Ger advokat eller annat ombud rätt att företräda en vårdnadshavare i tvister om umgänge, vårdnad eller boende. Kommunicerar med tingsrätt, socialnämnd och motparten.",
+  "badge": "premium",
+  "usageCount": 3210,
+  "fields": [
+    {
+      "id": "fullmaktsgivare_namn",
+      "label": "Fullmaktsgivarens fullständiga namn",
+      "type": "text",
+      "placeholder": "Anna Svensson",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "fullmaktsgivare_pnr",
+      "label": "Personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "fullmaktsgivare_adress",
+      "label": "Adress",
+      "type": "address",
+      "placeholder": "Gatuadress, postnummer, ort",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "ombud_namn",
+      "label": "Ombudets fullständiga namn",
+      "type": "text",
+      "placeholder": "Erik Svensson",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "ombud_pnr",
+      "label": "Ombudets personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "ombud_relation",
+      "label": "Relation till fullmaktsgivaren",
+      "type": "text",
+      "placeholder": "T.ex. make/maka, barn, vän",
+      "required": false,
+      "group": "havare"
+    },
+    {
+      "id": "uppdrag",
+      "label": "Specifikt uppdrag",
+      "type": "textarea",
+      "placeholder": "Beskriv vad fullmakten omfattar...",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "giltighetstid",
+      "label": "Giltighetstid",
+      "type": "select",
+      "options": [
+        "1 månad",
+        "3 månader",
+        "6 månader",
+        "1 år",
+        "Tillsvidare"
+      ],
+      "required": true,
+      "group": "detaljer"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Måste fullmakten bevittnas?",
+      "a": "Det är inte ett lagkrav men rekommenderas starkt. Två vittnen som inte är jäviga gör fullmakten lättare att få godkänd av motparten."
+    },
+    {
+      "q": "Hur återkallar jag fullmakten?",
+      "a": "Meddela fullmaktshavaren skriftligt och informera berörda parter (bank, myndighet etc.). Fullmakten upphör omedelbart."
+    },
+    {
+      "q": "Vad händer vid dödsfall?",
+      "a": "En vanlig fullmakt upphör automatiskt vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna."
+    },
+    {
+      "q": "Kan ombudet ge fullmakten vidare?",
+      "a": "Bara om det uttryckligen anges. Som standard har ombudet inte rätt att utse en annan person (substitution)."
+    },
+    {
+      "q": "Behöver fullmakten registreras?",
+      "a": "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar."
+    }
+  ],
+  "relatedIds": [
+    150,
+    151,
+    154
+  ],
+  "legalInfo": "Föräldrabalken (1949:381) 6 kap. om vårdnad, boende och umgänge.",
+  "keywords": [
+    "fullmakt umgänge",
+    "fullmakt vårdnadstvist",
+    "umgängesrätt ombud"
+  ]
+}

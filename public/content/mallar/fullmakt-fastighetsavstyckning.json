@@ -1,0 +1,123 @@
+{
+  "id": 179,
+  "slug": "fullmakt-fastighetsavstyckning",
+  "name": "Fullmakt fastighetsavstyckning",
+  "category": "Boende & Vardag",
+  "categorySlug": "boende-vardag",
+  "description": "Fullmakt för ombud att ansöka om avstyckning hos Lantmäteriet.",
+  "longDescription": "Ger ombudet rätt att begära avstyckning, sammanläggning eller klyvning av fastighet hos Lantmäteriet.",
+  "badge": "premium",
+  "usageCount": 1120,
+  "fields": [
+    {
+      "id": "agare_namn",
+      "label": "Fastighetsägarens namn",
+      "type": "text",
+      "placeholder": "Anna Svensson",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "agare_pnr",
+      "label": "Personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "fastighetsbeteckning",
+      "label": "Fastighetsbeteckning",
+      "type": "text",
+      "placeholder": "T.ex. Stockholm Vasastaden 1:23",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "fastighet_adress",
+      "label": "Fastighetens adress",
+      "type": "address",
+      "placeholder": "Gatuadress, ort",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "ombud_namn",
+      "label": "Ombudets fullständiga namn",
+      "type": "text",
+      "placeholder": "Erik Svensson",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "ombud_pnr",
+      "label": "Ombudets personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "uppdrag",
+      "label": "Uppdragets art",
+      "type": "textarea",
+      "placeholder": "Beskriv uppdraget – t.ex. försäljning, lagfart, inteckning...",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "min_pris",
+      "label": "Lägsta accepterade pris (om relevant)",
+      "type": "text",
+      "placeholder": "T.ex. 4 500 000 kr",
+      "required": false,
+      "group": "detaljer"
+    },
+    {
+      "id": "giltighetstid",
+      "label": "Giltighetstid",
+      "type": "select",
+      "options": [
+        "3 månader",
+        "6 månader",
+        "1 år",
+        "Till uppdrag slutfört"
+      ],
+      "required": true,
+      "group": "detaljer"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Krävs bevittning för fastighetsfullmakt?",
+      "a": "Vid försäljning av fast egendom krävs två vittnen och notariell bekräftelse enligt jordabalken (JB 4 kap. 3 §)."
+    },
+    {
+      "q": "Kan ombudet skriva under köpekontrakt?",
+      "a": "Ja, om fullmakten specifikt anger detta och är korrekt bevittnad. Banker och Lantmäteriet kan ställa egna krav."
+    },
+    {
+      "q": "Hur länge gäller fastighetsfullmakten?",
+      "a": "Den kan gälla en bestämd tid eller tills uppdraget är slutfört. För säkerhet rekommenderas en uttrycklig tidsgräns."
+    },
+    {
+      "q": "Vad händer om priset blir lägre än önskat?",
+      "a": "Ange ett minimipris i fullmakten. Ombudet kan inte gå under utan ditt godkännande – annars handlar de utanför fullmakten."
+    },
+    {
+      "q": "Behöver fullmakten lagföras?",
+      "a": "Lantmäteriet kräver ofta att fullmakten lämnas in i original eller som styrkt kopia vid registreringsärenden."
+    }
+  ],
+  "relatedIds": [
+    169,
+    172,
+    170
+  ],
+  "legalInfo": "Fastighetsbildningslagen (1970:988).",
+  "keywords": [
+    "fullmakt avstyckning",
+    "fastighetsbildning fullmakt",
+    "fullmakt Lantmäteriet"
+  ]
+}

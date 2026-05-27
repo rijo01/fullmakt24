@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useParams } from 'next/navigation'
 import { templates, categories } from '@/data/templates'
 import type { TemplateField } from '@/data/templates'
+import { trackEvent } from '@/components/GoogleAnalytics'
 
 function FormField({ field, value, onChange }: { field: TemplateField; value: string; onChange: (v: string) => void }) {
   const base = "input-field text-sm"
@@ -58,6 +59,12 @@ export default function SkapaPage() {
   const handlePayment = useCallback(async () => {
     if (!t) return
     setPaying(true)
+
+    trackEvent('begin_checkout', {
+      currency: 'SEK',
+      value: 49,
+      items: [{ item_id: t.slug, item_name: t.name, item_category: t.category, price: 49, quantity: 1 }],
+    })
 
     try {
       const res = await fetch('/api/checkout', {

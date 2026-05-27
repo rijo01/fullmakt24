@@ -1,0 +1,130 @@
+{
+  "id": 196,
+  "slug": "fullmakt-epa-traktor",
+  "name": "Fullmakt EPA-traktor",
+  "category": "Resa & Transport",
+  "categorySlug": "resa-transport",
+  "description": "Fullmakt för EPA-traktor (A-traktor) – ägarbyte och registrering.",
+  "longDescription": "Ger ombudet rätt att hantera EPA-traktor / A-traktor-ärenden hos Transportstyrelsen. Vanligt för förälder som hjälper ungdom.",
+  "badge": "popular",
+  "usageCount": 3450,
+  "fields": [
+    {
+      "id": "agare_namn",
+      "label": "Fordonsägarens namn",
+      "type": "text",
+      "placeholder": "Anna Svensson",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "agare_pnr",
+      "label": "Personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "givare"
+    },
+    {
+      "id": "regnr",
+      "label": "Registreringsnummer",
+      "type": "text",
+      "placeholder": "ABC 123",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "fordon_beskrivning",
+      "label": "Fordonsmodell och årsmodell",
+      "type": "text",
+      "placeholder": "T.ex. Volvo XC60 2020",
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "ombud_namn",
+      "label": "Ombudets fullständiga namn",
+      "type": "text",
+      "placeholder": "Erik Svensson",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "ombud_pnr",
+      "label": "Ombudets personnummer",
+      "type": "personnummer",
+      "placeholder": "ÅÅMMDD-XXXX",
+      "required": true,
+      "group": "havare"
+    },
+    {
+      "id": "uppdrag",
+      "label": "Uppdragets art",
+      "type": "select",
+      "options": [
+        "Försäljning och ägarbyte",
+        "Registrering",
+        "Avregistrering",
+        "Besiktning",
+        "Alla fordonsärenden"
+      ],
+      "required": true,
+      "group": "detaljer"
+    },
+    {
+      "id": "min_pris",
+      "label": "Lägsta pris vid försäljning (om relevant)",
+      "type": "text",
+      "placeholder": "T.ex. 75 000 kr",
+      "required": false,
+      "group": "detaljer"
+    },
+    {
+      "id": "giltighetstid",
+      "label": "Giltighetstid",
+      "type": "select",
+      "options": [
+        "1 månad",
+        "3 månader",
+        "6 månader",
+        "1 år",
+        "Tills uppdrag slutfört"
+      ],
+      "required": true,
+      "group": "detaljer"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Var anmäls ägarbyte?",
+      "a": "Hos Transportstyrelsen via deras e-tjänst eller via post. Ägarbyte ska anmälas inom 10 dagar från övergången."
+    },
+    {
+      "q": "Behöver fordonsfullmakten bevittnas?",
+      "a": "Inte enligt lag, men det rekommenderas. Köparen och Transportstyrelsen kan kräva det."
+    },
+    {
+      "q": "Kan ombudet sälja fordonet under marknadsvärde?",
+      "a": "Bara om du tillåter det. Ange ett minimipris i fullmakten för att skydda dig."
+    },
+    {
+      "q": "Vad behövs vid besiktning?",
+      "a": "Fullmakten i original, ombudets ID-handling samt fordonets registreringsbevis del 2."
+    },
+    {
+      "q": "Gäller fullmakten för export utomlands?",
+      "a": "Vid export krävs ofta separat exportfullmakt och tullhandlingar. Kontakta Transportstyrelsen och Tullverket."
+    }
+  ],
+  "relatedIds": [
+    194,
+    191,
+    190
+  ],
+  "legalInfo": "Transportstyrelsen reglerar ägarbyte och registrering. Fullmakten kompletterar formell anmälan.",
+  "keywords": [
+    "fullmakt EPA-traktor",
+    "A-traktor fullmakt",
+    "EPA-traktor ägarbyte"
+  ]
+}
