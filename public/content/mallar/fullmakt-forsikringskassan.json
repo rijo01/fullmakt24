@@ -1,33 +1,34 @@
 {
-  "id": 55,
   "slug": "fullmakt-forsikringskassan",
-  "name": "Fullmakt för Försäkringskassan",
-  "category": "Ekonomi, Bank & Myndigheter",
-  "categorySlug": "ekonomi-myndigheter",
-  "description": "Fullmakt för att representera vid Försäkringskassans ärenden.",
-  "longDescription": "En fullmakt för Försäkringskassan ger en person befogenhet att representera dig i ärenden relaterade till sjukpenning, föräldrapenning, sjukersättning och andra försäkringsärenden.",
-  "badge": "premium",
-  "usageCount": 1876,
-  "fields": [
-    { "id": "givare_namn", "label": "Försäkrads namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "givare" },
-    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
-    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
-    { "id": "arende_typ", "label": "Ärendetyp", "type": "select", "options": ["Sjukpenning", "Föräldrapenning", "Sjukersättning", "Rehabiliteringspenning", "Andra FK-ärenden"], "required": true, "group": "detaljer" },
-    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "havare" },
-    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
-    { "id": "havare_relation", "label": "Relation", "type": "select", "options": ["Make/Maka", "Juridiskt ombud", "Familjemedlem", "Annan"], "required": true, "group": "havare" },
-    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Informationshämtning", "Ansökan", "Klagomål", "All representation"], "required": true, "group": "detaljer" },
-    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
-    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  "seo": {
+    "title": "Fullmakt för Försäkringskassan – Mall & Guide 2025 | Fullmakt24.se",
+    "metaDescription": "Skapa fullmakt för Försäkringskassan gratis. Juridisk mall för att representera dig i ärenden om sjukpenning, föräldrapenning och försäkringsärenden. Accepterad av FK.",
+    "h1": "Fullmakt för Försäkringskassan – Mall & Guide 2025",
+    "keywords": ["fullmakt försäkringskassan", "fk fullmakt", "sjukpenning fullmakt", "föräldrapenning fullmakt", "försäkringskassan ärende fullmakt"]
+  },
+  "content": {
+    "introduction": "En fullmakt för Försäkringskassan ger någon annan rätt att företräda dig i ärenden om sjukpenning, föräldrapenning, sjukersättning och andra försäkringsärenden. Det kan handla om att ansöka, kommunicera eller överklaga beslut från Försäkringskassan.\n\nDet finns många situationer där denna fullmakt är praktisk. Kanske är du långtidssjuk och behöver någon anhörig att hantara ansökningar, eller så vill du att en vän eller familjemedlem ska kunna kommunicera med Försäkringskassan på dina vägnar. En juridiskt korrekt fullmakt säkerställer att FK accepterar representationen.",
+    "legalValidity": "En fullmakt för Försäkringskassan är giltig enligt socialförsäkringsbalken och avtalslagen. Försäkringskassan är skyldiga att respektera giltiga fullmakter och ge fullmaktsgivaren åtkomst till information om dina försäkringsärenden. Fullmakten måste vara skriftlig och kan begränsas till specifika ärenden eller vara generell. Vi rekommenderar att bevitna fullmakten för att säkerställa acceptansen.",
+    "howToGuide": "Steg 1: Ange dina personuppgifter som fullmaktsgivare – namn, personnummer och adress.\n\nSteg 2: Ange fullmaktshavarens namn och personnummer (eller organisationsnummer om det är ett företag/advokatbyrå).\n\nSteg 3: Specificera vilka försäkringsärenden fullmakten gäller för: sjukpenning, föräldrapenning, sjukersättning, aktivitetsersättning, etc.\n\nSteg 4: Klargör vad fullmakten omfattar: endast informationshämtning, ansökning, överklagan, eller allt det övannämnda?\n\nSteg 5: Ange giltighetstid – ofta ett till två år för Försäkringskassan-fullmakter.\n\nSteg 6: Granska och ladda ner som PDF.\n\nSteg 7: Underteckna fullmakten, helst med två vittnen.",
+    "commonMistakes": "1. För vag formulering – Specificera exakt vilka försäkringsärenden fullmakten gäller för.\n\n2. Saknar personnummer – Både din och fullmaktshavarens personnummer måste anges.\n\n3. Inte tydlig omfattning – Klargör om fullmakten gäller för ansökan, informationshämtning, överklagan eller allt.\n\n4. För lång giltighetstid – En Försäkringskassan-fullmakt bör normalt förnya varje ett till två år.\n\n5. Glömmer vittnen – Två vittnen stärker fullmaktens giltighet.",
+    "faq": [
+      {"question": "Accepterar Försäkringskassan denna fullmakt?", "answer": "Ja, Försäkringskassan accepterar skriftliga fullmakter enligt socialförsäkringsbalken."},
+      {"question": "Kan jag ge fullmakt bara för sjukpenning?", "answer": "Ja, du kan specificera exakt vilka försäkringsärenden fullmakten gäller för."},
+      {"question": "Kan en advokat eller jurist få denna fullmakt?", "answer": "Ja, många använder denna fullmakt för att låta juridiska ombud representera dem gentemot Försäkringskassan."},
+      {"question": "Gäller fullmakten för överklagan?", "answer": "Det beror på vad du anger. Du kan specificera om fullmakten omfattar överklagan av FK:s beslut."},
+      {"question": "Hur länge gäller fullmakten?", "answer": "Det beror på vad du anger. Vi rekommenderar ett till två år innan förnyelse."}
+    ],
+    "relatedSearchTerms": ["försäkringskassan fullmakt gratis", "fk fullmakt mall", "sjukpenning fullmakt", "föräldrapenning fullmakt försäkringskassan"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Fullmakt för sjukvård", "href": "/mallar/vard-omsorg/fullmakt-sjukvard"},
+    {"text": "Fullmakt för pensionsärenden", "href": "/mallar/ekonomi-myndigheter/fullmakt-pension"},
+    {"text": "Fullmakt för Skatteverket", "href": "/mallar/ekonomi-myndigheter/fullmakt-skatteverket"}
   ],
-  "faq": [
-    { "q": "Vilka förmåner hanterar Försäkringskassan?", "a": "Sjukpenning, föräldrapenning, sjukersättning, rehabiliteringspenning, och flera andra försäkringsärenden." },
-    { "q": "Behöver jag läkarvårdat intyg?", "a": "För sjukpenning och sjukersättning ja, men detta är redan inlämnat när du ansöker." },
-    { "q": "Hur länge kan man få sjukpenning?", "a": "Normalt upp till 14 dagar utan läkarvårdat intyg, därefter behövs läkarintyg." },
-    { "q": "Kan jag behålla fullmakten?", "a": "Du kan sätta ett slutdatum eller behålla den obegränsad så länge Försäkringskassan är överens." },
-    { "q": "Vad gör jag vid ändring i min situation?", "a": "Informera Försäkringskassan omedelbar om ändringar som kan påverka din ersättning." }
-  ],
-  "relatedIds": [29, 35, 51],
-  "legalInfo": "Denna fullmakt måste följa Försäkringskassans procedurer. Kontakta dem för krav på verifikation.",
-  "keywords": ["Försäkringskassan", "sjukpenning", "föräldrapenning", "försäkring", "fullmakt"]
+  "lastUpdated": "2025-02-27"
 }

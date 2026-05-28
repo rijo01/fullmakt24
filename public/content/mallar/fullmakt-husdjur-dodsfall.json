@@ -1,124 +1,64 @@
 {
-  "id": 234,
   "slug": "fullmakt-husdjur-dodsfall",
-  "name": "Fullmakt husdjur vid dödsfall",
-  "category": "Digitalt & Dödsbo",
-  "categorySlug": "digitalt-dodsbo",
-  "description": "Önskemål och fullmakt om vad som ska hända med husdjuren vid dödsfall.",
-  "longDescription": "Specificerar vem som ska ta över husdjur, hur mycket pengar som avsätts för vård och eventuella veterinärinstruktioner.",
-  "badge": "gratis",
-  "usageCount": 1230,
-  "fields": [
+  "seo": {
+    "title": "Fullmakt husdjur vid dödsfall – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Önskemål och fullmakt om vad som ska hända med husdjuren vid dödsfall. Utformad enligt svensk lag. Klar på 3 minuter. Ladda ner som PDF för 49 kr.",
+    "h1": "Fullmakt husdjur vid dödsfall – Mall & Guide 2026",
+    "keywords": [
+      "fullmakt husdjur dödsfall",
+      "husdjur vid dödsfall",
+      "fullmakt hund katt"
+    ]
+  },
+  "content": {
+    "introduction": "Specificerar vem som ska ta över husdjur, hur mycket pengar som avsätts för vård och eventuella veterinärinstruktioner.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
+    "legalValidity": "Djurskyddslagen (2018:1192) och ärvdabalken (1958:637).",
+    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
+    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "faq": [
+      {
+        "question": "Vem kan utses till testamentsexekutor?",
+        "answer": "En myndig och rättskapabel person, ofta en familjemedlem, advokat eller revisor. Personen ska kunna ta uppdraget utan jävsproblem."
+      },
+      {
+        "question": "Måste bouppteckning göras?",
+        "answer": "Ja, vid varje dödsfall ska bouppteckning upprättas inom 3 månader och lämnas till Skatteverket inom 4 månader."
+      },
+      {
+        "question": "Vem är dödsbodelägare?",
+        "answer": "Make/maka, sambo med gemensamma barn, barn (bröstarvingar) och eventuella testamentstagare. Universella testamentstagare räknas också in."
+      },
+      {
+        "question": "Kan jag bestämma min egen begravning?",
+        "answer": "Ja, genom skriftliga önskemål i förväg. Det är inte bindande men respekteras vanligtvis av anhöriga."
+      },
+      {
+        "question": "Hur länge gäller fullmakt för dödsboet?",
+        "answer": "Vanligen tills arvskiftet är slutfört och dödsboet upplöst."
+      }
+    ],
+    "relatedSearchTerms": [
+      "fullmakt husdjur dödsfall",
+      "husdjur vid dödsfall",
+      "fullmakt hund katt",
+      "fullmakt husdjur vid dödsfall pdf",
+      "fullmakt husdjur vid dödsfall mall gratis"
+    ]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
     {
-      "id": "avliden_namn",
-      "label": "Den avlidnes namn (om relevant)",
-      "type": "text",
-      "placeholder": "Anna Svensson",
-      "required": false,
-      "group": "givare"
+      "text": "Alla mallar",
+      "href": "/mallar"
     },
     {
-      "id": "avliden_pnr",
-      "label": "Avlidens personnummer",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": false,
-      "group": "givare"
-    },
-    {
-      "id": "utstallare_namn",
-      "label": "Utställarens namn",
-      "type": "text",
-      "placeholder": "Anna Svensson",
-      "required": true,
-      "group": "givare"
-    },
-    {
-      "id": "utstallare_pnr",
-      "label": "Utställarens personnummer",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": true,
-      "group": "givare"
-    },
-    {
-      "id": "ombud_namn",
-      "label": "Utseddes namn",
-      "type": "text",
-      "placeholder": "Erik Svensson",
-      "required": true,
-      "group": "havare"
-    },
-    {
-      "id": "ombud_pnr",
-      "label": "Utseddes personnummer",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": true,
-      "group": "havare"
-    },
-    {
-      "id": "ombud_relation",
-      "label": "Relation",
-      "type": "text",
-      "placeholder": "T.ex. barn, vän, advokat",
-      "required": true,
-      "group": "havare"
-    },
-    {
-      "id": "uppdrag",
-      "label": "Detaljerat uppdrag",
-      "type": "textarea",
-      "placeholder": "Beskriv ansvarsområden och uppdragets omfattning...",
-      "required": true,
-      "group": "detaljer"
-    },
-    {
-      "id": "giltighetstid",
-      "label": "Giltighetstid",
-      "type": "select",
-      "options": [
-        "6 månader",
-        "1 år",
-        "2 år",
-        "Tills arvskifte slutfört",
-        "Tillsvidare"
-      ],
-      "required": true,
-      "group": "detaljer"
+      "text": "Mallar i Digitalt & Dödsbo",
+      "href": "/mallar?category=digitalt-dodsbo"
     }
   ],
-  "faq": [
-    {
-      "q": "Vem kan utses till testamentsexekutor?",
-      "a": "En myndig och rättskapabel person, ofta en familjemedlem, advokat eller revisor. Personen ska kunna ta uppdraget utan jävsproblem."
-    },
-    {
-      "q": "Måste bouppteckning göras?",
-      "a": "Ja, vid varje dödsfall ska bouppteckning upprättas inom 3 månader och lämnas till Skatteverket inom 4 månader."
-    },
-    {
-      "q": "Vem är dödsbodelägare?",
-      "a": "Make/maka, sambo med gemensamma barn, barn (bröstarvingar) och eventuella testamentstagare. Universella testamentstagare räknas också in."
-    },
-    {
-      "q": "Kan jag bestämma min egen begravning?",
-      "a": "Ja, genom skriftliga önskemål i förväg. Det är inte bindande men respekteras vanligtvis av anhöriga."
-    },
-    {
-      "q": "Hur länge gäller fullmakt för dödsboet?",
-      "a": "Vanligen tills arvskiftet är slutfört och dödsboet upplöst."
-    }
-  ],
-  "relatedIds": [
-    229,
-    230,
-    234
-  ],
-  "legalInfo": "Djurskyddslagen (2018:1192) och ärvdabalken (1958:637).",
-  "keywords": [
-    "fullmakt husdjur dödsfall",
-    "husdjur vid dödsfall",
-    "fullmakt hund katt"
-  ]
+  "lastUpdated": "2026-05-21"
 }

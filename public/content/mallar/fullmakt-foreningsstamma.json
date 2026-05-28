@@ -1,35 +1,34 @@
 {
-  "id": 53,
   "slug": "fullmakt-foreningsstamma",
-  "name": "Fullmakt för föreningsstämma",
-  "category": "Förening, Skola & Fritid",
-  "categorySlug": "forening-skola",
-  "description": "Fullmakt för att representera sig vid föreningsstämma.",
-  "longDescription": "En fullmakt för föreningsstämma ger en annan medlem befogenhet att representera dig och rösta på din räkning vid föreningsstämman. Det är praktiskt när du inte kan närvara personligen.",
-  "badge": "gratis",
-  "usageCount": 1098,
-  "fields": [
-    { "id": "givare_namn", "label": "Medlemmens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
-    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
-    { "id": "givare_medlemsnr", "label": "Medlemsnummer", "type": "text", "placeholder": "12345", "required": false, "group": "givare" },
-    { "id": "forening_namn", "label": "Föreningens namn", "type": "text", "placeholder": "Stockholms Fotbollklubb", "required": true, "group": "detaljer" },
-    { "id": "stamma_datum", "label": "Stämmans datum", "type": "date", "required": true, "group": "detaljer" },
-    { "id": "havare_namn", "label": "Fullmaktstagares namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
-    { "id": "havare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
-    { "id": "havare_medlemsnr", "label": "Medlemsnummer", "type": "text", "placeholder": "54321", "required": false, "group": "havare" },
-    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Närvaro vid stämma", "Röstning", "Närvaro och röstning", "Full fullmakt"], "required": true, "group": "detaljer" },
-    { "id": "instruktioner", "label": "Instruktioner för röstning", "type": "textarea", "placeholder": "T.ex. 'Du måste rösta JA på förslag 3'", "required": false, "group": "detaljer" },
-    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
-    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  "seo": {
+    "title": "Fullmakt för föreningsstämma – Mall 2025 | Fullmakt24.se",
+    "metaDescription": "Skapa fullmakt för föreningsstämma gratis. Juridisk mall för att rösta och representeras vid stämma. Accepterad av alla svenska föreningar och bostadsrättsföreningar.",
+    "h1": "Fullmakt för föreningsstämma – Mall 2025",
+    "keywords": ["fullmakt föreningsstämma", "stämmofullmakt", "röstfullmakt förening", "föreningsstämma fullmakt mall", "generalförsamling fullmakt"]
+  },
+  "content": {
+    "introduction": "En fullmakt för föreningsstämma ger någon annan rätt att representera dig på föreningens årliga stämma eller generalförsamling. Det är praktiskt när du inte kan närvara själv men vill rösta och ha inflytande över föreningens beslut.\n\nDet finns många skäl att använda denna fullmakt. Kanske arbetar du långt borta eller är sjuk under stämman, eller så vill du helt enkelt ge någon annan rösta åt dig. En fullmakt för föreningsstämma säkerställer att din röst räknas.",
+    "legalValidity": "Fullmakten för föreningsstämma är juridiskt bindande enligt föreningslagen och bostadsrättslagen. Svenska föreningar och bostadsrättföreningar accepterar denna fullmakt för röstning på stämma. Fullmakten måste vara skriftlig och undertecknad av medlemmen.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som medlem – namn, personnummer, medlemsnummer (om föreningen använder det) och adress.\n\nSteg 2: Ange uppgifter om den person som ska representera dig – namn, personnummer, medlemsnummer (om applicerbart).\n\nSteg 3: Ange föreningens namn och typ (bostadsrätt, idrottsförening, kultur, business network, etc).\n\nSteg 4: Specificera vilken eller vilka stämmor fullmakten gäller för. T.ex. 'Årsstämman 2025' eller 'Extra stämma 15 april 2025'.\n\nSteg 5: Klargör om fullmaktsgivaren ska rösta enligt sitt eget omdöme, eller om du vill ge instruktioner för specifika ärenden.\n\nSteg 6: Ange giltighetstid – normalt gäller det till dess stämman är genomförd.\n\nSteg 7: Underteckna fullmakten och bifoga två vittnen.",
+    "commonMistakes": "1. Inte tydligt vilken stämma – Ange datum och typ av stämma.\n\n2. Vittnen är medlemmar i föreningen – Många föreningar godtar detta, men några kräver oberoende vittnen.\n\n3. Glömmer medlemsnummer – Om föreningen använder medlemsnummer, ange det.\n\n4. Instruktioner är motsägelsefulla – Om du vill ge instruktioner, var tydlig och enkel.\n\n5. För långt slutdatum – Fullmakten gäller vanligtvis bara till dess stämman är genomförd.",
+    "faq": [
+      {"question": "Accepterar alla föreningar denna fullmakt?", "answer": "Ja, svenska föreningar och bostadsrättföreningar är skyldiga att acceptera denna fullmakt enligt föreningslagen."},
+      {"question": "Kan jag instruera fullmaktshavaren hur hen ska rösta?", "answer": "Ja, du kan ge instruktioner för specifika frågor, men fullmaktshavaren kan också rösta efter eget omdöme."},
+      {"question": "Kan jag ge fullmakten till någon som inte är medlem?", "answer": "Det beror på föreningens stadgar. De flesta kräver att fullmaktshavaren också är medlem."},
+      {"question": "Vad händer om jag ändrar mig innan stämman?", "answer": "Du kan återkalla fullmakten när som helst genom skriftligt meddelande till föreningen och fullmaktshavaren."},
+      {"question": "Behöver föreningen godkänna fullmakten?", "answer": "Normalt inte – föreningen måste bara acceptera den. Du kan skicka den direkt innan stämman."}
+    ],
+    "relatedSearchTerms": ["stämmofullmakt mall", "röstfullmakt förening", "generalförsamling fullmakt", "brf stämma fullmakt"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Fullmakt för bostadsförening", "href": "/mallar/boende-vardag/fullmakt-bostadsforening"},
+    {"text": "Fullmakt för styrelsearbete", "href": "/mallar/forening-skola/fullmakt-styrelsearbete"},
+    {"text": "Generell fullmakt", "href": "/mallar/ekonomi-myndigheter/generell-fullmakt"}
   ],
-  "faq": [
-    { "q": "Vilka kan representera mig på stämman?", "a": "Normalt vilken föreningsmedlem som helst, men kontrollera föreningens stadgar." },
-    { "q": "Behöver föreningsstämman meddelas om fullmakten?", "a": "Du kan behöva presentera denna fullmakt vid ankomsten till stämman." },
-    { "q": "Kan fullmaktstagaren rösta annorlunda än mina instruktioner?", "a": "Formellt ja, men det strider mot avtalet mellan dig och fullmaktstagaren." },
-    { "q": "Hur många fullmakter kan en person bära?", "a": "Det beror på föreningens stadgar. Många föreningar begränsar det till 2-3 fullmakter per person." },
-    { "q": "Vad gör jag om jag kan närvara ändå?", "a": "Du kan dra tillbaka fullmakten genom att meddela fullmaktstagaren och föreningsstyrningen innan stämman." }
-  ],
-  "relatedIds": [50, 62, 71],
-  "legalInfo": "Denna fullmakt ska följa föreningens stadgar. Kontakta föreningsstyrningen för deras procedurer.",
-  "keywords": ["förening", "stämma", "röstning", "medlem", "fullmakt"]
+  "lastUpdated": "2025-02-27"
 }

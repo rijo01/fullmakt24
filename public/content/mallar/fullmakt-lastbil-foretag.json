@@ -1,130 +1,64 @@
 {
-  "id": 199,
   "slug": "fullmakt-lastbil-foretag",
-  "name": "Fullmakt lastbil företag",
-  "category": "Resa & Transport",
-  "categorySlug": "resa-transport",
-  "description": "Fullmakt för företag att låta anställd hantera lastbils-ärenden.",
-  "longDescription": "Ger anställd eller speditör rätt att hantera lastbil/tunga fordon hos Transportstyrelsen – registrering, ägarbyte, kontrollbesiktning.",
-  "badge": "premium",
-  "usageCount": 670,
-  "fields": [
+  "seo": {
+    "title": "Fullmakt lastbil företag – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Fullmakt för företag att låta anställd hantera lastbils-ärenden. Utformad enligt svensk lag. Klar på 3 minuter. Ladda ner som PDF för 49 kr.",
+    "h1": "Fullmakt lastbil företag – Mall & Guide 2026",
+    "keywords": [
+      "fullmakt lastbil",
+      "lastbil företag",
+      "tunga fordon ombud"
+    ]
+  },
+  "content": {
+    "introduction": "Ger anställd eller speditör rätt att hantera lastbil/tunga fordon hos Transportstyrelsen – registrering, ägarbyte, kontrollbesiktning.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
+    "legalValidity": "Yrkestrafiklagen (2012:210) och Transportstyrelsens föreskrifter.",
+    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
+    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "faq": [
+      {
+        "question": "Vem får utfärda fullmakt för ett aktiebolag?",
+        "answer": "Endast styrelseledamot, VD eller annan firmatecknare har rätt att utfärda fullmakt för bolagets räkning."
+      },
+      {
+        "question": "Behöver fullmakten registreras hos Bolagsverket?",
+        "answer": "Generellt inte, men vissa typer av fullmakter (t.ex. prokura) ska registreras enligt prokuralagen."
+      },
+      {
+        "question": "Kan fullmakten gälla flera år?",
+        "answer": "Ja. Företagsfullmakter gäller ofta tillsvidare eller flera år. Specificera dock alltid en tidsgräns för säkerhets skull."
+      },
+      {
+        "question": "Hur återkallas en företagsfullmakt?",
+        "answer": "Beslut om återkallelse fattas av samma organ som utfärdade fullmakten. Skriftlig återkallelse skickas till ombudet och berörda parter."
+      },
+      {
+        "question": "Gäller fullmakten vid VD-byte?",
+        "answer": "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte."
+      }
+    ],
+    "relatedSearchTerms": [
+      "fullmakt lastbil",
+      "lastbil företag",
+      "tunga fordon ombud",
+      "fullmakt lastbil företag pdf",
+      "fullmakt lastbil företag mall gratis"
+    ]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
     {
-      "id": "foretag_namn",
-      "label": "Företagets namn",
-      "type": "text",
-      "placeholder": "Exempel AB",
-      "required": true,
-      "group": "givare"
+      "text": "Alla mallar",
+      "href": "/mallar"
     },
     {
-      "id": "orgnr",
-      "label": "Organisationsnummer",
-      "type": "text",
-      "placeholder": "556677-1122",
-      "required": true,
-      "group": "givare"
-    },
-    {
-      "id": "foretradare_namn",
-      "label": "Behörig företrädares namn",
-      "type": "text",
-      "placeholder": "Anna Svensson",
-      "required": true,
-      "group": "givare"
-    },
-    {
-      "id": "foretradare_pnr",
-      "label": "Företrädarens personnummer",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": true,
-      "group": "givare"
-    },
-    {
-      "id": "foretradare_roll",
-      "label": "Roll i bolaget",
-      "type": "select",
-      "options": [
-        "VD",
-        "Styrelseledamot",
-        "Ordförande",
-        "Firmatecknare",
-        "Prokurist"
-      ],
-      "required": true,
-      "group": "givare"
-    },
-    {
-      "id": "ombud_namn",
-      "label": "Ombudets fullständiga namn",
-      "type": "text",
-      "placeholder": "Erik Svensson",
-      "required": true,
-      "group": "havare"
-    },
-    {
-      "id": "ombud_pnr",
-      "label": "Ombudets personnummer/orgnr",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": true,
-      "group": "havare"
-    },
-    {
-      "id": "befogenheter",
-      "label": "Befogenheter",
-      "type": "textarea",
-      "placeholder": "Specificera vilka rättshandlingar ombudet får utföra...",
-      "required": true,
-      "group": "detaljer"
-    },
-    {
-      "id": "giltighetstid",
-      "label": "Giltighetstid",
-      "type": "select",
-      "options": [
-        "3 månader",
-        "6 månader",
-        "1 år",
-        "2 år",
-        "Tillsvidare"
-      ],
-      "required": true,
-      "group": "detaljer"
+      "text": "Mallar i Resa & Transport",
+      "href": "/mallar?category=resa-transport"
     }
   ],
-  "faq": [
-    {
-      "q": "Vem får utfärda fullmakt för ett aktiebolag?",
-      "a": "Endast styrelseledamot, VD eller annan firmatecknare har rätt att utfärda fullmakt för bolagets räkning."
-    },
-    {
-      "q": "Behöver fullmakten registreras hos Bolagsverket?",
-      "a": "Generellt inte, men vissa typer av fullmakter (t.ex. prokura) ska registreras enligt prokuralagen."
-    },
-    {
-      "q": "Kan fullmakten gälla flera år?",
-      "a": "Ja. Företagsfullmakter gäller ofta tillsvidare eller flera år. Specificera dock alltid en tidsgräns för säkerhets skull."
-    },
-    {
-      "q": "Hur återkallas en företagsfullmakt?",
-      "a": "Beslut om återkallelse fattas av samma organ som utfärdade fullmakten. Skriftlig återkallelse skickas till ombudet och berörda parter."
-    },
-    {
-      "q": "Gäller fullmakten vid VD-byte?",
-      "a": "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte."
-    }
-  ],
-  "relatedIds": [
-    191,
-    141,
-    196
-  ],
-  "legalInfo": "Yrkestrafiklagen (2012:210) och Transportstyrelsens föreskrifter.",
-  "keywords": [
-    "fullmakt lastbil",
-    "lastbil företag",
-    "tunga fordon ombud"
-  ]
+  "lastUpdated": "2026-05-21"
 }

@@ -1,123 +1,64 @@
 {
-  "id": 176,
   "slug": "fullmakt-servitut-anlaggning",
-  "name": "Fullmakt servitut",
-  "category": "Boende & Vardag",
-  "categorySlug": "boende-vardag",
-  "description": "Fullmakt för ombud att förhandla eller registrera servitut.",
-  "longDescription": "Ger ombudet rätt att förhandla servitutsavtal och ansöka om officialservitut hos Lantmäteriet.",
-  "badge": "gratis",
-  "usageCount": 850,
-  "fields": [
+  "seo": {
+    "title": "Fullmakt servitut – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Fullmakt för ombud att förhandla eller registrera servitut. Utformad enligt svensk lag. Klar på 3 minuter. Ladda ner som PDF för 49 kr.",
+    "h1": "Fullmakt servitut – Mall & Guide 2026",
+    "keywords": [
+      "fullmakt servitut",
+      "officialservitut fullmakt",
+      "servitut Lantmäteriet"
+    ]
+  },
+  "content": {
+    "introduction": "Ger ombudet rätt att förhandla servitutsavtal och ansöka om officialservitut hos Lantmäteriet.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
+    "legalValidity": "Jordabalken (1970:994) 14 kap. om servitut och fastighetsbildningslagen.",
+    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
+    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "faq": [
+      {
+        "question": "Krävs bevittning för fastighetsfullmakt?",
+        "answer": "En fullmakt att sälja fast egendom måste enligt avtalslagen (1915:218) 27 § 2 st vara skriftlig. Själva köpehandlingen ska uppfylla formkraven i jordabalken 4 kap. 1 § (skriftlig, underskriven av säljare och köpare, med köpeskilling och överlåtelseförklaring). Någon notariell bekräftelse förekommer inte i svensk fastighetsrätt. För att lagfart ska beviljas ska säljarens underskrift på köpehandlingen bevittnas av två personer (jordabalken 20 kap. 7 §)."
+      },
+      {
+        "question": "Kan ombudet skriva under köpekontrakt?",
+        "answer": "Ja, om fullmakten specifikt anger detta och är korrekt bevittnad. Banker och Lantmäteriet kan ställa egna krav."
+      },
+      {
+        "question": "Hur länge gäller fastighetsfullmakten?",
+        "answer": "Den kan gälla en bestämd tid eller tills uppdraget är slutfört. För säkerhet rekommenderas en uttrycklig tidsgräns."
+      },
+      {
+        "question": "Vad händer om priset blir lägre än önskat?",
+        "answer": "Ange ett minimipris i fullmakten. Ombudet kan inte gå under utan ditt godkännande – annars handlar de utanför fullmakten."
+      },
+      {
+        "question": "Behöver fullmakten lagföras?",
+        "answer": "Lantmäteriet kräver ofta att fullmakten lämnas in i original eller som styrkt kopia vid registreringsärenden."
+      }
+    ],
+    "relatedSearchTerms": [
+      "fullmakt servitut",
+      "officialservitut fullmakt",
+      "servitut Lantmäteriet",
+      "fullmakt servitut pdf",
+      "fullmakt servitut mall gratis"
+    ]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
     {
-      "id": "agare_namn",
-      "label": "Fastighetsägarens namn",
-      "type": "text",
-      "placeholder": "Anna Svensson",
-      "required": true,
-      "group": "givare"
+      "text": "Alla mallar",
+      "href": "/mallar"
     },
     {
-      "id": "agare_pnr",
-      "label": "Personnummer",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": true,
-      "group": "givare"
-    },
-    {
-      "id": "fastighetsbeteckning",
-      "label": "Fastighetsbeteckning",
-      "type": "text",
-      "placeholder": "T.ex. Stockholm Vasastaden 1:23",
-      "required": true,
-      "group": "detaljer"
-    },
-    {
-      "id": "fastighet_adress",
-      "label": "Fastighetens adress",
-      "type": "address",
-      "placeholder": "Gatuadress, ort",
-      "required": true,
-      "group": "detaljer"
-    },
-    {
-      "id": "ombud_namn",
-      "label": "Ombudets fullständiga namn",
-      "type": "text",
-      "placeholder": "Erik Svensson",
-      "required": true,
-      "group": "havare"
-    },
-    {
-      "id": "ombud_pnr",
-      "label": "Ombudets personnummer",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": true,
-      "group": "havare"
-    },
-    {
-      "id": "uppdrag",
-      "label": "Uppdragets art",
-      "type": "textarea",
-      "placeholder": "Beskriv uppdraget – t.ex. försäljning, lagfart, inteckning...",
-      "required": true,
-      "group": "detaljer"
-    },
-    {
-      "id": "min_pris",
-      "label": "Lägsta accepterade pris (om relevant)",
-      "type": "text",
-      "placeholder": "T.ex. 4 500 000 kr",
-      "required": false,
-      "group": "detaljer"
-    },
-    {
-      "id": "giltighetstid",
-      "label": "Giltighetstid",
-      "type": "select",
-      "options": [
-        "3 månader",
-        "6 månader",
-        "1 år",
-        "Till uppdrag slutfört"
-      ],
-      "required": true,
-      "group": "detaljer"
+      "text": "Mallar i Boende & Vardag",
+      "href": "/mallar?category=boende-vardag"
     }
   ],
-  "faq": [
-    {
-      "q": "Krävs bevittning för fastighetsfullmakt?",
-      "a": "Vid försäljning av fast egendom krävs två vittnen och notariell bekräftelse enligt jordabalken (JB 4 kap. 3 §)."
-    },
-    {
-      "q": "Kan ombudet skriva under köpekontrakt?",
-      "a": "Ja, om fullmakten specifikt anger detta och är korrekt bevittnad. Banker och Lantmäteriet kan ställa egna krav."
-    },
-    {
-      "q": "Hur länge gäller fastighetsfullmakten?",
-      "a": "Den kan gälla en bestämd tid eller tills uppdraget är slutfört. För säkerhet rekommenderas en uttrycklig tidsgräns."
-    },
-    {
-      "q": "Vad händer om priset blir lägre än önskat?",
-      "a": "Ange ett minimipris i fullmakten. Ombudet kan inte gå under utan ditt godkännande – annars handlar de utanför fullmakten."
-    },
-    {
-      "q": "Behöver fullmakten lagföras?",
-      "a": "Lantmäteriet kräver ofta att fullmakten lämnas in i original eller som styrkt kopia vid registreringsärenden."
-    }
-  ],
-  "relatedIds": [
-    169,
-    172,
-    174
-  ],
-  "legalInfo": "Jordabalken (1970:994) 14 kap. om servitut och fastighetsbildningslagen.",
-  "keywords": [
-    "fullmakt servitut",
-    "officialservitut fullmakt",
-    "servitut Lantmäteriet"
-  ]
+  "lastUpdated": "2026-05-21"
 }

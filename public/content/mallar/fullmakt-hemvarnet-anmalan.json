@@ -1,116 +1,64 @@
 {
-  "id": 170,
   "slug": "fullmakt-hemvarnet-anmalan",
-  "name": "Fullmakt hemvärnet anmälan",
-  "category": "Ekonomi, Bank & Myndigheter",
-  "categorySlug": "ekonomi-myndigheter",
-  "description": "Fullmakt för anhörig vid anmälan eller avanmälan från hemvärnet.",
-  "longDescription": "Ger ombudet rätt att kommunicera med Försvarsmakten/hemvärnet om tjänstgöring, avanmälan eller praktiska frågor.",
-  "badge": "gratis",
-  "usageCount": 540,
-  "fields": [
+  "seo": {
+    "title": "Fullmakt hemvärnet anmälan – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Fullmakt för anhörig vid anmälan eller avanmälan från hemvärnet. Utformad enligt svensk lag. Klar på 3 minuter. Ladda ner som PDF för 49 kr.",
+    "h1": "Fullmakt hemvärnet anmälan – Mall & Guide 2026",
+    "keywords": [
+      "fullmakt hemvärnet",
+      "fullmakt Försvarsmakten",
+      "hemvärnsärende ombud"
+    ]
+  },
+  "content": {
+    "introduction": "Ger ombudet rätt att kommunicera med Försvarsmakten/hemvärnet om tjänstgöring, avanmälan eller praktiska frågor.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
+    "legalValidity": "Förordning (1997:147) med instruktion för Försvarsmakten och Hemvärnsförordningen (1997:146).",
+    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
+    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "faq": [
+      {
+        "question": "Måste fullmakten bevittnas?",
+        "answer": "Det är inte ett lagkrav men rekommenderas starkt. Två vittnen som inte är jäviga gör fullmakten lättare att få godkänd av motparten."
+      },
+      {
+        "question": "Hur återkallar jag fullmakten?",
+        "answer": "Meddela fullmaktshavaren skriftligt och informera berörda parter (bank, myndighet etc.). Fullmakten upphör omedelbart."
+      },
+      {
+        "question": "Vad händer vid dödsfall?",
+        "answer": "En vanlig fullmakt upphör automatiskt vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna."
+      },
+      {
+        "question": "Kan ombudet ge fullmakten vidare?",
+        "answer": "Bara om det uttryckligen anges. Som standard har ombudet inte rätt att utse en annan person (substitution)."
+      },
+      {
+        "question": "Behöver fullmakten registreras?",
+        "answer": "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar."
+      }
+    ],
+    "relatedSearchTerms": [
+      "fullmakt hemvärnet",
+      "fullmakt Försvarsmakten",
+      "hemvärnsärende ombud",
+      "fullmakt hemvärnet anmälan pdf",
+      "fullmakt hemvärnet anmälan mall gratis"
+    ]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
     {
-      "id": "fullmaktsgivare_namn",
-      "label": "Fullmaktsgivarens fullständiga namn",
-      "type": "text",
-      "placeholder": "Anna Svensson",
-      "required": true,
-      "group": "givare"
+      "text": "Alla mallar",
+      "href": "/mallar"
     },
     {
-      "id": "fullmaktsgivare_pnr",
-      "label": "Personnummer",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": true,
-      "group": "givare"
-    },
-    {
-      "id": "fullmaktsgivare_adress",
-      "label": "Adress",
-      "type": "address",
-      "placeholder": "Gatuadress, postnummer, ort",
-      "required": true,
-      "group": "givare"
-    },
-    {
-      "id": "ombud_namn",
-      "label": "Ombudets fullständiga namn",
-      "type": "text",
-      "placeholder": "Erik Svensson",
-      "required": true,
-      "group": "havare"
-    },
-    {
-      "id": "ombud_pnr",
-      "label": "Ombudets personnummer",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": true,
-      "group": "havare"
-    },
-    {
-      "id": "ombud_relation",
-      "label": "Relation till fullmaktsgivaren",
-      "type": "text",
-      "placeholder": "T.ex. make/maka, barn, vän",
-      "required": false,
-      "group": "havare"
-    },
-    {
-      "id": "uppdrag",
-      "label": "Specifikt uppdrag",
-      "type": "textarea",
-      "placeholder": "Beskriv vad fullmakten omfattar...",
-      "required": true,
-      "group": "detaljer"
-    },
-    {
-      "id": "giltighetstid",
-      "label": "Giltighetstid",
-      "type": "select",
-      "options": [
-        "1 månad",
-        "3 månader",
-        "6 månader",
-        "1 år",
-        "Tillsvidare"
-      ],
-      "required": true,
-      "group": "detaljer"
+      "text": "Mallar i Ekonomi, Bank & Myndigheter",
+      "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "faq": [
-    {
-      "q": "Måste fullmakten bevittnas?",
-      "a": "Det är inte ett lagkrav men rekommenderas starkt. Två vittnen som inte är jäviga gör fullmakten lättare att få godkänd av motparten."
-    },
-    {
-      "q": "Hur återkallar jag fullmakten?",
-      "a": "Meddela fullmaktshavaren skriftligt och informera berörda parter (bank, myndighet etc.). Fullmakten upphör omedelbart."
-    },
-    {
-      "q": "Vad händer vid dödsfall?",
-      "a": "En vanlig fullmakt upphör automatiskt vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna."
-    },
-    {
-      "q": "Kan ombudet ge fullmakten vidare?",
-      "a": "Bara om det uttryckligen anges. Som standard har ombudet inte rätt att utse en annan person (substitution)."
-    },
-    {
-      "q": "Behöver fullmakten registreras?",
-      "a": "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar."
-    }
-  ],
-  "relatedIds": [
-    167,
-    170,
-    168
-  ],
-  "legalInfo": "Förordning (1997:147) med instruktion för Försvarsmakten och Hemvärnsförordningen (1997:146).",
-  "keywords": [
-    "fullmakt hemvärnet",
-    "fullmakt Försvarsmakten",
-    "hemvärnsärende ombud"
-  ]
+  "lastUpdated": "2026-05-21"
 }

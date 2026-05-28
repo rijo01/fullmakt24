@@ -1,132 +1,64 @@
 {
-  "id": 183,
   "slug": "medgivande-tandreglering-barn",
-  "name": "Medgivande tandreglering barn",
-  "category": "Vård & Omsorg",
-  "categorySlug": "vard-omsorg",
-  "description": "Vårdnadshavares medgivande för tandreglering av barn under 18.",
-  "longDescription": "Medgivande som krävs av tandläkaren innan tandreglering (ortodontisk behandling) påbörjas för minderårig. Specificerar behandling, omfattning och kostnad.",
-  "badge": "gratis",
-  "usageCount": 4320,
-  "fields": [
+  "seo": {
+    "title": "Medgivande tandreglering barn – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Vårdnadshavares medgivande för tandreglering av barn under 18. Utformad enligt svensk lag. Klar på 3 minuter. Ladda ner som PDF för 49 kr.",
+    "h1": "Medgivande tandreglering barn – Mall & Guide 2026",
+    "keywords": [
+      "medgivande tandreglering",
+      "tandreglering barn fullmakt",
+      "ortodonti barn samtycke"
+    ]
+  },
+  "content": {
+    "introduction": "Medgivande som krävs av tandläkaren innan tandreglering (ortodontisk behandling) påbörjas för minderårig. Specificerar behandling, omfattning och kostnad.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
+    "legalValidity": "Tandvårdslagen (1985:125) och patientlagen (2014:821).",
+    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
+    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "faq": [
+      {
+        "question": "Krävs båda vårdnadshavares underskrift?",
+        "answer": "Vid gemensam vårdnad krävs båda vårdnadshavares samtycke för väsentliga beslut. För vardagliga beslut räcker en."
+      },
+      {
+        "question": "Hur länge gäller medgivandet?",
+        "answer": "Under den tid du anger. Vi rekommenderar att specificera ett konkret slutdatum för säkerhet."
+      },
+      {
+        "question": "Kan medgivandet återkallas?",
+        "answer": "Ja, när som helst. Meddela mottagaren och berörda parter skriftligt så slutar medgivandet att gälla omedelbart."
+      },
+      {
+        "question": "Behöver medgivandet bevittnas?",
+        "answer": "Inte enligt lag, men många mottagare (skolor, vårdgivare) föredrar det. Två vittnen rekommenderas."
+      },
+      {
+        "question": "Vad om vårdnadshavarna är osams?",
+        "answer": "Vid oenighet kan saken avgöras av tingsrätten. Familjerätten kan också medla via socialnämnden."
+      }
+    ],
+    "relatedSearchTerms": [
+      "medgivande tandreglering",
+      "tandreglering barn fullmakt",
+      "ortodonti barn samtycke",
+      "medgivande tandreglering barn pdf",
+      "medgivande tandreglering barn mall gratis"
+    ]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
     {
-      "id": "barn_namn",
-      "label": "Barnets fullständiga namn",
-      "type": "text",
-      "placeholder": "Maja Svensson",
-      "required": true,
-      "group": "givare"
+      "text": "Alla mallar",
+      "href": "/mallar"
     },
     {
-      "id": "barn_pnr",
-      "label": "Barnets personnummer",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": true,
-      "group": "givare"
-    },
-    {
-      "id": "vh1_namn",
-      "label": "Vårdnadshavare 1 (namn)",
-      "type": "text",
-      "placeholder": "Anna Svensson",
-      "required": true,
-      "group": "givare"
-    },
-    {
-      "id": "vh1_pnr",
-      "label": "Vårdnadshavare 1 (personnummer)",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": true,
-      "group": "givare"
-    },
-    {
-      "id": "vh2_namn",
-      "label": "Vårdnadshavare 2 (om gemensam vårdnad)",
-      "type": "text",
-      "placeholder": "Erik Svensson",
-      "required": false,
-      "group": "givare"
-    },
-    {
-      "id": "vh2_pnr",
-      "label": "Vårdnadshavare 2 (personnummer)",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": false,
-      "group": "givare"
-    },
-    {
-      "id": "ombud_namn",
-      "label": "Ombudets/utförarens namn",
-      "type": "text",
-      "placeholder": "T.ex. mor- eller farförälder, läkare",
-      "required": true,
-      "group": "havare"
-    },
-    {
-      "id": "ombud_pnr",
-      "label": "Ombudets personnummer",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": false,
-      "group": "havare"
-    },
-    {
-      "id": "syfte",
-      "label": "Syfte/specifikt uppdrag",
-      "type": "textarea",
-      "placeholder": "Beskriv ändamålet...",
-      "required": true,
-      "group": "detaljer"
-    },
-    {
-      "id": "giltighetstid",
-      "label": "Giltighetstid",
-      "type": "select",
-      "options": [
-        "1 vecka",
-        "1 månad",
-        "3 månader",
-        "6 månader",
-        "1 år"
-      ],
-      "required": true,
-      "group": "detaljer"
+      "text": "Mallar i Vård & Omsorg",
+      "href": "/mallar?category=vard-omsorg"
     }
   ],
-  "faq": [
-    {
-      "q": "Krävs båda vårdnadshavares underskrift?",
-      "a": "Vid gemensam vårdnad krävs båda vårdnadshavares samtycke för väsentliga beslut. För vardagliga beslut räcker en."
-    },
-    {
-      "q": "Hur länge gäller medgivandet?",
-      "a": "Under den tid du anger. Vi rekommenderar att specificera ett konkret slutdatum för säkerhet."
-    },
-    {
-      "q": "Kan medgivandet återkallas?",
-      "a": "Ja, när som helst. Meddela mottagaren och berörda parter skriftligt så slutar medgivandet att gälla omedelbart."
-    },
-    {
-      "q": "Behöver medgivandet bevittnas?",
-      "a": "Inte enligt lag, men många mottagare (skolor, vårdgivare) föredrar det. Två vittnen rekommenderas."
-    },
-    {
-      "q": "Vad om vårdnadshavarna är osams?",
-      "a": "Vid oenighet kan saken avgöras av tingsrätten. Familjerätten kan också medla via socialnämnden."
-    }
-  ],
-  "relatedIds": [
-    182,
-    184,
-    183
-  ],
-  "legalInfo": "Tandvårdslagen (1985:125) och patientlagen (2014:821).",
-  "keywords": [
-    "medgivande tandreglering",
-    "tandreglering barn fullmakt",
-    "ortodonti barn samtycke"
-  ]
+  "lastUpdated": "2026-05-21"
 }

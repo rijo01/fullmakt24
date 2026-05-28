@@ -1,123 +1,64 @@
 {
-  "id": 205,
   "slug": "fullmakt-e-legitimation",
-  "name": "Fullmakt e-legitimation",
-  "category": "Digitalt & Dödsbo",
-  "categorySlug": "digitalt-dodsbo",
-  "description": "Fullmakt rörande e-legitimation / Mobilt BankID.",
-  "longDescription": "Klargör att Mobilt BankID och Freja eID inte kan överlåtas – fullmakten reglerar istället att ombudet kan göra ärenden på fullmaktsgivarens vägnar mot myndigheter och banker.",
-  "badge": "gratis",
-  "usageCount": 1780,
-  "fields": [
+  "seo": {
+    "title": "Fullmakt e-legitimation – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Fullmakt rörande e-legitimation / Mobilt BankID. Utformad enligt svensk lag. Klar på 3 minuter. Ladda ner som PDF för 49 kr.",
+    "h1": "Fullmakt e-legitimation – Mall & Guide 2026",
+    "keywords": [
+      "fullmakt e-legitimation",
+      "fullmakt BankID",
+      "Freja eID fullmakt"
+    ]
+  },
+  "content": {
+    "introduction": "Klargör att Mobilt BankID och Freja eID inte kan överlåtas – fullmakten reglerar istället att ombudet kan göra ärenden på fullmaktsgivarens vägnar mot myndigheter och banker.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
+    "legalValidity": "BankID-koden är personlig enligt avtal med utfärdaren. Fullmakter ersätter inte e-legitimation utan kompletterar.",
+    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
+    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "faq": [
+      {
+        "question": "Accepterar Google eller Apple svenska fullmakter?",
+        "answer": "Internationella tjänster har egna processer. Fullmakten är ett komplement – men de kan kräva engelsk översättning och dödsfallsintyg."
+      },
+      {
+        "question": "Vad händer med en avliden persons konto?",
+        "answer": "Många tjänster erbjuder en \"legacy\"-process. Fullmakt och dödsfallsintyg krävs ofta. Vissa konton raderas automatiskt efter inaktivitet."
+      },
+      {
+        "question": "Kan jag ge ombud rätt att se min mejl?",
+        "answer": "Ja, om det anges i fullmakten. Notera att tjänsteleverantörens egna regler också gäller och kan kräva extra verifiering."
+      },
+      {
+        "question": "Behövs översättning?",
+        "answer": "För utländska tjänster: ja, en auktoriserad översättning till engelska rekommenderas starkt."
+      },
+      {
+        "question": "Hur lång tid tar det att avsluta ett digitalt konto?",
+        "answer": "Från några dagar till flera månader beroende på leverantör. Google har en särskild \"Inactive Account Manager\"-process."
+      }
+    ],
+    "relatedSearchTerms": [
+      "fullmakt e-legitimation",
+      "fullmakt BankID",
+      "Freja eID fullmakt",
+      "fullmakt e-legitimation pdf",
+      "fullmakt e-legitimation mall gratis"
+    ]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
     {
-      "id": "kontoinnehavare_namn",
-      "label": "Kontoinnehavarens namn",
-      "type": "text",
-      "placeholder": "Anna Svensson",
-      "required": true,
-      "group": "givare"
+      "text": "Alla mallar",
+      "href": "/mallar"
     },
     {
-      "id": "kontoinnehavare_pnr",
-      "label": "Personnummer",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": true,
-      "group": "givare"
-    },
-    {
-      "id": "kontoinnehavare_epost",
-      "label": "E-postadress (kopplad till tjänsten)",
-      "type": "email",
-      "placeholder": "anna@exempel.se",
-      "required": true,
-      "group": "givare"
-    },
-    {
-      "id": "ombud_namn",
-      "label": "Ombudets fullständiga namn",
-      "type": "text",
-      "placeholder": "Erik Svensson",
-      "required": true,
-      "group": "havare"
-    },
-    {
-      "id": "ombud_pnr",
-      "label": "Ombudets personnummer",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": true,
-      "group": "havare"
-    },
-    {
-      "id": "ombud_relation",
-      "label": "Relation till kontoinnehavaren",
-      "type": "text",
-      "placeholder": "T.ex. make/maka, arvinge, barn",
-      "required": true,
-      "group": "havare"
-    },
-    {
-      "id": "tjanst",
-      "label": "Digital tjänst",
-      "type": "text",
-      "placeholder": "T.ex. Google, Apple, Spotify, Microsoft",
-      "required": true,
-      "group": "detaljer"
-    },
-    {
-      "id": "syfte",
-      "label": "Vad ska göras med kontot",
-      "type": "textarea",
-      "placeholder": "T.ex. avsluta, övertaga, ladda ner data...",
-      "required": true,
-      "group": "detaljer"
-    },
-    {
-      "id": "giltighetstid",
-      "label": "Giltighetstid",
-      "type": "select",
-      "options": [
-        "1 månad",
-        "3 månader",
-        "6 månader",
-        "1 år"
-      ],
-      "required": true,
-      "group": "detaljer"
+      "text": "Mallar i Digitalt & Dödsbo",
+      "href": "/mallar?category=digitalt-dodsbo"
     }
   ],
-  "faq": [
-    {
-      "q": "Accepterar Google eller Apple svenska fullmakter?",
-      "a": "Internationella tjänster har egna processer. Fullmakten är ett komplement – men de kan kräva engelsk översättning och dödsfallsintyg."
-    },
-    {
-      "q": "Vad händer med en avliden persons konto?",
-      "a": "Många tjänster erbjuder en \"legacy\"-process. Fullmakt och dödsfallsintyg krävs ofta. Vissa konton raderas automatiskt efter inaktivitet."
-    },
-    {
-      "q": "Kan jag ge ombud rätt att se min mejl?",
-      "a": "Ja, om det anges i fullmakten. Notera att tjänsteleverantörens egna regler också gäller och kan kräva extra verifiering."
-    },
-    {
-      "q": "Behövs översättning?",
-      "a": "För utländska tjänster: ja, en auktoriserad översättning till engelska rekommenderas starkt."
-    },
-    {
-      "q": "Hur lång tid tar det att avsluta ett digitalt konto?",
-      "a": "Från några dagar till flera månader beroende på leverantör. Google har en särskild \"Inactive Account Manager\"-process."
-    }
-  ],
-  "relatedIds": [
-    204,
-    164,
-    169
-  ],
-  "legalInfo": "BankID-koden är personlig enligt avtal med utfärdaren. Fullmakter ersätter inte e-legitimation utan kompletterar.",
-  "keywords": [
-    "fullmakt e-legitimation",
-    "fullmakt BankID",
-    "Freja eID fullmakt"
-  ]
+  "lastUpdated": "2026-05-21"
 }

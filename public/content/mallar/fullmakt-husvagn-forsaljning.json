@@ -1,130 +1,64 @@
 {
-  "id": 193,
   "slug": "fullmakt-husvagn-forsaljning",
-  "name": "Fullmakt husvagn försäljning",
-  "category": "Resa & Transport",
-  "categorySlug": "resa-transport",
-  "description": "Fullmakt för försäljning eller registrering av husvagn.",
-  "longDescription": "Ger ombudet rätt att sälja, anmäla ägarbyte och registrera/avregistrera husvagn hos Transportstyrelsen.",
-  "badge": "gratis",
-  "usageCount": 1560,
-  "fields": [
+  "seo": {
+    "title": "Fullmakt husvagn försäljning – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Fullmakt för försäljning eller registrering av husvagn. Utformad enligt svensk lag. Klar på 3 minuter. Ladda ner som PDF för 49 kr.",
+    "h1": "Fullmakt husvagn försäljning – Mall & Guide 2026",
+    "keywords": [
+      "fullmakt husvagn",
+      "husvagn försäljning",
+      "husvagn ägarbyte"
+    ]
+  },
+  "content": {
+    "introduction": "Ger ombudet rätt att sälja, anmäla ägarbyte och registrera/avregistrera husvagn hos Transportstyrelsen.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
+    "legalValidity": "Transportstyrelsen reglerar ägarbyte och registrering. Fullmakten kompletterar formell anmälan.",
+    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
+    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "faq": [
+      {
+        "question": "Var anmäls ägarbyte?",
+        "answer": "Hos Transportstyrelsen via deras e-tjänst eller via post. Ägarbyte ska anmälas inom 10 dagar från övergången."
+      },
+      {
+        "question": "Behöver fordonsfullmakten bevittnas?",
+        "answer": "Inte enligt lag, men det rekommenderas. Köparen och Transportstyrelsen kan kräva det."
+      },
+      {
+        "question": "Kan ombudet sälja fordonet under marknadsvärde?",
+        "answer": "Bara om du tillåter det. Ange ett minimipris i fullmakten för att skydda dig."
+      },
+      {
+        "question": "Vad behövs vid besiktning?",
+        "answer": "Fullmakten i original, ombudets ID-handling samt fordonets registreringsbevis del 2."
+      },
+      {
+        "question": "Gäller fullmakten för export utomlands?",
+        "answer": "Vid export krävs ofta separat exportfullmakt och tullhandlingar. Kontakta Transportstyrelsen och Tullverket."
+      }
+    ],
+    "relatedSearchTerms": [
+      "fullmakt husvagn",
+      "husvagn försäljning",
+      "husvagn ägarbyte",
+      "fullmakt husvagn försäljning pdf",
+      "fullmakt husvagn försäljning mall gratis"
+    ]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
     {
-      "id": "agare_namn",
-      "label": "Fordonsägarens namn",
-      "type": "text",
-      "placeholder": "Anna Svensson",
-      "required": true,
-      "group": "givare"
+      "text": "Alla mallar",
+      "href": "/mallar"
     },
     {
-      "id": "agare_pnr",
-      "label": "Personnummer",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": true,
-      "group": "givare"
-    },
-    {
-      "id": "regnr",
-      "label": "Registreringsnummer",
-      "type": "text",
-      "placeholder": "ABC 123",
-      "required": true,
-      "group": "detaljer"
-    },
-    {
-      "id": "fordon_beskrivning",
-      "label": "Fordonsmodell och årsmodell",
-      "type": "text",
-      "placeholder": "T.ex. Volvo XC60 2020",
-      "required": true,
-      "group": "detaljer"
-    },
-    {
-      "id": "ombud_namn",
-      "label": "Ombudets fullständiga namn",
-      "type": "text",
-      "placeholder": "Erik Svensson",
-      "required": true,
-      "group": "havare"
-    },
-    {
-      "id": "ombud_pnr",
-      "label": "Ombudets personnummer",
-      "type": "personnummer",
-      "placeholder": "ÅÅMMDD-XXXX",
-      "required": true,
-      "group": "havare"
-    },
-    {
-      "id": "uppdrag",
-      "label": "Uppdragets art",
-      "type": "select",
-      "options": [
-        "Försäljning och ägarbyte",
-        "Registrering",
-        "Avregistrering",
-        "Besiktning",
-        "Alla fordonsärenden"
-      ],
-      "required": true,
-      "group": "detaljer"
-    },
-    {
-      "id": "min_pris",
-      "label": "Lägsta pris vid försäljning (om relevant)",
-      "type": "text",
-      "placeholder": "T.ex. 75 000 kr",
-      "required": false,
-      "group": "detaljer"
-    },
-    {
-      "id": "giltighetstid",
-      "label": "Giltighetstid",
-      "type": "select",
-      "options": [
-        "1 månad",
-        "3 månader",
-        "6 månader",
-        "1 år",
-        "Tills uppdrag slutfört"
-      ],
-      "required": true,
-      "group": "detaljer"
+      "text": "Mallar i Resa & Transport",
+      "href": "/mallar?category=resa-transport"
     }
   ],
-  "faq": [
-    {
-      "q": "Var anmäls ägarbyte?",
-      "a": "Hos Transportstyrelsen via deras e-tjänst eller via post. Ägarbyte ska anmälas inom 10 dagar från övergången."
-    },
-    {
-      "q": "Behöver fordonsfullmakten bevittnas?",
-      "a": "Inte enligt lag, men det rekommenderas. Köparen och Transportstyrelsen kan kräva det."
-    },
-    {
-      "q": "Kan ombudet sälja fordonet under marknadsvärde?",
-      "a": "Bara om du tillåter det. Ange ett minimipris i fullmakten för att skydda dig."
-    },
-    {
-      "q": "Vad behövs vid besiktning?",
-      "a": "Fullmakten i original, ombudets ID-handling samt fordonets registreringsbevis del 2."
-    },
-    {
-      "q": "Gäller fullmakten för export utomlands?",
-      "a": "Vid export krävs ofta separat exportfullmakt och tullhandlingar. Kontakta Transportstyrelsen och Tullverket."
-    }
-  ],
-  "relatedIds": [
-    191,
-    192,
-    194
-  ],
-  "legalInfo": "Transportstyrelsen reglerar ägarbyte och registrering. Fullmakten kompletterar formell anmälan.",
-  "keywords": [
-    "fullmakt husvagn",
-    "husvagn försäljning",
-    "husvagn ägarbyte"
-  ]
+  "lastUpdated": "2026-05-21"
 }
