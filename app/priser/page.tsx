@@ -5,96 +5,37 @@ import Link from 'next/link'
 export default function PriserPage() {
   const plans = [
     {
-      name: 'Gratis',
+      name: 'Förhandsgranska',
       price: '0',
       unit: 'kr',
-      description: 'Testa och förhandsgranska',
+      description: 'Fyll i och se ditt dokument',
       badge: null,
       features: [
-        'Fyll i och förhandsgranska',
-        'Alla 124 mallar tillgängliga',
-        'PDF med vattenstämpel',
+        'Fyll i alla uppgifter',
+        'Alla mallar tillgängliga',
+        'Förhandsgranska innan du betalar',
       ],
-      limitations: ['Vattenstämpel på dokumentet'],
+      limitations: ['Nedladdning kräver köp'],
       cta: 'Kom igång gratis',
       ctaStyle: 'btn-secondary',
       href: '/mallar',
     },
     {
-      name: 'Enskilt dokument',
+      name: 'Ladda ner PDF',
       price: '49',
-      unit: 'kr',
-      description: 'Perfekt när du behöver en fullmakt',
-      badge: 'Mest populär',
+      unit: 'kr / mall',
+      description: 'Betala per mall – inget abonnemang',
+      badge: 'Allt du behöver',
       features: [
-        '1 professionell PDF',
-        'Ingen vattenstämpel',
-        'Ren och klar att skriva ut',
+        'Professionell PDF utan vattenstämpel',
+        'Klar att skriva ut och skriva under',
         'Ladda ner obegränsat antal gånger',
-        'Redigera i 7 dagar',
+        'Engångsköp – ingen bindningstid',
       ],
       limitations: [],
       cta: 'Skapa dokument – 49 kr',
       ctaStyle: 'btn-gold',
       href: '/mallar',
-    },
-    {
-      name: 'Paket – 5 dokument',
-      price: '149',
-      unit: 'kr',
-      description: 'Spara 30% – perfekt för familjen',
-      badge: 'Bäst värde',
-      features: [
-        '5 professionella PDF:er',
-        'Ingen vattenstämpel',
-        'Blanda valfria mallar',
-        'Gäller i 12 månader',
-        'Redigera i 30 dagar',
-        '29,80 kr per dokument',
-      ],
-      limitations: [],
-      cta: 'Köp 5-pack – 149 kr',
-      ctaStyle: 'btn-primary',
-      href: '/mallar',
-    },
-    {
-      name: 'Obegränsat 30 dagar',
-      price: '199',
-      unit: 'kr / 30 dagar',
-      description: 'Dödsbo, flytt eller andra storprojekt',
-      badge: null,
-      features: [
-        'Obegränsade dokument i 30 dagar',
-        'Alla 124 mallar',
-        'Ingen vattenstämpel',
-        'Redigera fritt under perioden',
-        'Perfekt vid dödsbo eller flytt',
-      ],
-      limitations: [],
-      cta: 'Starta 30 dagar – 199 kr',
-      ctaStyle: 'btn-primary',
-      href: '/mallar',
-    },
-  ]
-
-  const addons = [
-    {
-      name: 'BankID-signering',
-      price: '+29 kr',
-      desc: 'Digital signering med BankID för extra juridisk tyngd.',
-      icon: '🔐',
-    },
-    {
-      name: 'Tvåspråkig version (SV + EN)',
-      price: '+19 kr',
-      desc: 'Få dokumentet på både svenska och engelska – perfekt vid utlandsresor.',
-      icon: '🌍',
-    },
-    {
-      name: 'Juridisk snabbgranskning',
-      price: '+149 kr',
-      desc: 'En jurist granskar ditt dokument inom 24 timmar.',
-      icon: '⚖️',
     },
   ]
 
@@ -115,7 +56,7 @@ export default function PriserPage() {
       </div>
 
       {/* Pricing grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto mb-20">
+      <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto mb-20">
         {plans.map(plan => (
           <div key={plan.name} className={`card p-6 flex flex-col ${plan.badge ? 'border-gold-400 border-2 relative' : ''}`}>
             {plan.badge && (
@@ -154,34 +95,16 @@ export default function PriserPage() {
         ))}
       </div>
 
-      {/* Addons */}
-      <div className="max-w-4xl mx-auto mb-20">
-        <div className="text-center mb-10">
-          <span className="inline-block px-3 py-1 bg-gold-50 text-gold-600 text-sm font-semibold rounded-full mb-4">Tillval</span>
-          <h2 className="text-2xl lg:text-3xl font-heading font-bold text-navy-500">Lägg till extra funktioner</h2>
-        </div>
-        <div className="grid md:grid-cols-3 gap-5">
-          {addons.map(addon => (
-            <div key={addon.name} className="card p-6">
-              <div className="text-3xl mb-3">{addon.icon}</div>
-              <h3 className="font-heading font-bold text-navy-500 mb-1">{addon.name}</h3>
-              <p className="text-sm text-navy-400 mb-3">{addon.desc}</p>
-              <div className="text-lg font-heading font-bold text-gold-600">{addon.price}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* FAQ */}
       <div className="max-w-2xl mx-auto mb-20">
         <h2 className="text-2xl font-heading font-bold text-navy-500 text-center mb-8">Vanliga frågor om priser</h2>
         <div className="card p-6 space-y-0 divide-y divide-navy-50">
           {[
             { q: 'Behöver jag skapa ett konto?', a: 'Nej, du kan betala och ladda ner direkt utan konto. Vill du spara dokumentet för framtida redigering kan du skapa ett gratis konto.' },
-            { q: 'Vilka betalmetoder accepteras?', a: 'Vi accepterar Swish, kort (Visa/Mastercard) och faktura via Klarna.' },
-            { q: 'Kan jag redigera dokumentet efteråt?', a: 'Ja! Enskilda dokument kan redigeras i 7 dagar, paket i 30 dagar och obegränsat under hela 30-dagarsperioden.' },
-            { q: 'Vad är skillnaden mot gratisversionen?', a: 'Gratisversionen låter dig fylla i och förhandsgranska dokumentet, men PDF:en har en vattenstämpel. Betalversionen ger en ren, professionell PDF.' },
-            { q: 'Erbjuder ni företagspriser?', a: 'Ja! Kontakta oss på enterprise@fullmakt24.se för volympriser och API-åtkomst.' },
+            { q: 'Vilka betalmetoder accepteras?', a: 'Vi accepterar kort (Visa/Mastercard) och faktura via Klarna.' },
+            { q: 'Kan jag redigera dokumentet efteråt?', a: 'Ja, du kan när som helst gå tillbaka och skapa en ny version av ditt dokument.' },
+            { q: 'Vad är skillnaden mot förhandsgranskningen?', a: 'Du kan fylla i och förhandsgranska ditt dokument gratis. För att ladda ner den färdiga PDF:en betalar du 49 kr per mall.' },
+            { q: 'Erbjuder ni företagspriser?', a: 'Priset är 49 kr per mall för alla – inga volympriser eller abonnemang. Ett API för företag är under utveckling.' },
           ].map(f => (
             <details key={f.q} className="group">
               <summary className="flex items-center justify-between py-4 cursor-pointer list-none">
@@ -200,8 +123,8 @@ export default function PriserPage() {
           <div className="absolute top-0 right-0 w-48 h-48 bg-gold-500/10 rounded-full blur-3xl" />
           <div className="relative">
             <h2 className="font-heading font-bold text-white text-2xl mb-3">Företag eller organisation?</h2>
-            <p className="text-navy-200 mb-6">API-åtkomst, volympriser, white-label och teamkonton. Kontakta oss för en anpassad lösning.</p>
-            <a href="mailto:enterprise@fullmakt24.se" className="btn-gold">Kontakta oss →</a>
+            <p className="text-navy-200 mb-6">Vi utvecklar ett API för att skapa fullmakter programmatiskt. Det är inte släppt än – läs mer om vad som är på gång.</p>
+            <Link href="/api-docs" className="btn-gold">Läs om vårt kommande API →</Link>
           </div>
         </div>
       </div>

@@ -6,7 +6,6 @@ const blogPosts = [
   { slug: 'bankfullmakt-guide', title: 'Bankfullmakt – steg för steg', excerpt: 'Behöver någon annan hantera dina bankärenden? Vi går igenom allt om bankfullmakter.', date: '2025-06-05', category: 'Ekonomi', readTime: '5 min' },
   { slug: 'framtidsfullmakt', title: 'Framtidsfullmakt – planera för framtiden', excerpt: 'En framtidsfullmakt ger trygghet om du blir sjuk eller oförmögen att fatta beslut. Så skriver du en.', date: '2025-06-01', category: 'Juridik', readTime: '10 min' },
   { slug: 'fullmakt-dodsbo', title: 'Fullmakt vid dödsbo – vad gäller?', excerpt: 'När en närstående går bort behövs ofta fullmakter för att hantera den avlidnes ärenden.', date: '2025-05-28', category: 'Dödsbo', readTime: '7 min' },
-  { slug: 'digital-signering-bankid', title: 'Digital signering med BankID – så fungerar det', excerpt: 'BankID-signering ger dina dokument extra juridisk tyngd. Vi förklarar hur det fungerar.', date: '2025-05-25', category: 'Digital', readTime: '4 min' },
 ]
 
 export default function BloggPage() {

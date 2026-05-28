@@ -16,18 +16,16 @@ export default function MinaDokumentPage() {
             <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
           </svg>
         </div>
-        <h1 className="text-2xl font-heading font-bold text-navy-500 mb-3">Logga in för att se dina dokument</h1>
-        <p className="text-navy-400 mb-8">Skapa ett konto för att spara, hantera och återkomma till dina fullmakter.</p>
+        <h1 className="text-2xl font-heading font-bold text-navy-500 mb-3">Så når du dina dokument</h1>
+        <p className="text-navy-400 mb-8">När du har betalat laddar du ner din färdiga PDF direkt på bekräftelsesidan. Spara filen lokalt så har du den kvar.</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <button className="btn-primary">Logga in med BankID</button>
-          <button className="btn-secondary">Skapa konto med e-post</button>
+          <Link href="/mallar" className="btn-gold">Skapa en fullmakt</Link>
         </div>
 
-        <div className="mt-16 grid sm:grid-cols-3 gap-6 text-left">
+        <div className="mt-16 grid sm:grid-cols-2 gap-6 text-left">
           {[
-            { title: 'Spara dokument', desc: 'Alla dina fullmakter samlade på ett ställe.' },
-            { title: 'Redigera senare', desc: 'Gå tillbaka och uppdatera befintliga dokument.' },
-            { title: 'Dokumenthistorik', desc: 'Se alla versioner och nedladdningar.' },
+            { title: 'Ladda ner direkt', desc: 'Efter betalning får du din PDF på en gång – ingen inloggning krävs.' },
+            { title: 'Utkast sparas lokalt', desc: 'Medan du fyller i sparas dina uppgifter i din webbläsare så att du kan fortsätta senare.' },
           ].map(f => (
             <div key={f.title} className="card p-5">
               <h3 className="font-heading font-bold text-navy-500 text-sm mb-1">{f.title}</h3>
