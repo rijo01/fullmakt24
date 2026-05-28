@@ -62,7 +62,7 @@ function MallarContent() {
           Alla fullmaktsmallar
         </h1>
         <p className="text-navy-400 text-lg">
-          {templates.length} juridiskt granskade mallar för fullmakter och medgivanden.
+          {templates.length} mallar enligt svensk lag för fullmakter och medgivanden.
         </p>
       </div>
 

@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const title = seoTitle || `${t.name} – Mall & Guide 2025 | Fullmakt24.se`
-  const description = seoDescription || `${t.name}: ${t.description} Juridiskt granskad mall för ${cat?.name?.toLowerCase() || 'svenska förhållanden'}. Skapa och ladda ner som PDF.`
+  const description = seoDescription || `${t.name}: ${t.description} Mall enligt svensk lag för ${cat?.name?.toLowerCase() || 'svenska förhållanden'}. Skapa och ladda ner som PDF.`
 
   return {
     title,

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: `Skapa ${t.name.toLowerCase()} online. Fyll i formuläret, granska och ladda ner som PDF. ${cat?.name || ''} – klar på 3 minuter.`,
     openGraph: {
       title: `Skapa ${t.name} | Fullmakt24.se`,
-      description: `Skapa ${t.name.toLowerCase()} online. Juridiskt granskad mall – klar på 3 minuter.`,
+      description: `Skapa ${t.name.toLowerCase()} online. Mall enligt svensk lag – klar på 3 minuter.`,
     },
   }
 }
