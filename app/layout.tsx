@@ -3,13 +3,14 @@ import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { templates } from '@/data/templates'
 
 export const metadata: Metadata = {
   title: {
     default: 'Fullmakt24.se – Din fullmakt klar på 3 minuter',
     template: '%s | Fullmakt24.se',
   },
-  description: '100+ juridiskt korrekta mallar för fullmakter och medgivanden. Anpassade för svenska förhållanden. Klara att skriva ut eller signera digitalt.',
+  description: `${templates.length} juridiskt korrekta mallar för fullmakter och medgivanden. Anpassade för svenska förhållanden. Klara att skriva ut och skriva under.`,
   keywords: ['fullmakt', 'medgivande', 'fullmakt mall', 'fullmakt gratis', 'fullmakt barn', 'fullmakt bank', 'juridiskt dokument', 'Sverige'],
   authors: [{ name: 'Fullmakt24.se' }],
   icons: {

@@ -115,19 +115,13 @@ export default function HomePage() {
 
   const faqs = [
     { q: 'Är fullmakterna juridiskt giltiga?', a: 'Ja, alla våra mallar är utformade enligt gällande svensk lagstiftning, bland annat avtalslagen (1915:218). De uppfyller formkraven för giltiga fullmakter enligt svensk lag.' },
-    { q: 'Kostar det att skapa en fullmakt?', a: 'Du kan skapa upp till 3 dokument per månad helt gratis med vattenstämpel. För obegränsade dokument utan vattenstämpel finns Standard (149 kr/mån) och Premium (299 kr/mån).' },
-    { q: 'Kan jag signera med BankID?', a: 'Ja, BankID-signering är tillgängligt i vårt Premium-abonnemang. Det ger dokumentet extra juridisk tyngd och gör det enklare att verifiera identiteten.' },
+    { q: 'Vad kostar det?', a: 'Varje mall kostar 49 kr som engångsköp. Du betalar per dokument och laddar ner det direkt som PDF – inga abonnemang och inga månadsavgifter.' },
+    { q: 'Hur signerar jag dokumentet?', a: 'Du laddar ner dokumentet som PDF, skriver ut det och skriver under för hand – tillsammans med eventuella vittnen. Dokumentet är klart att signera direkt.' },
     { q: 'Hur lång tid tar det att skapa ett dokument?', a: 'De flesta användare skapar sitt dokument på under 3 minuter. Vår guidade ifyllning gör processen snabb och enkel.' },
     { q: 'Sparas mina personuppgifter?', a: 'Vi följer GDPR strikt. Dina uppgifter lagras krypterat och används bara för att generera ditt dokument. Du kan när som helst radera dina data.' },
     { q: 'Kan jag redigera dokumentet efter nedladdning?', a: 'Du kan ladda ner som PDF för utskrift. Om du behöver göra ändringar kan du alltid gå tillbaka och skapa en ny version via ditt konto.' },
     { q: 'Accepteras fullmakten av banker och myndigheter?', a: 'Ja, våra mallar är utformade enligt de krav som ställs av svenska banker, Skatteverket, Försäkringskassan och andra myndigheter. Vissa banker har dock egna blanketter.' },
-    { q: 'Kan jag använda tjänsten som företag?', a: 'Absolut! Med vårt Premium-abonnemang får du API-åtkomst, teamkonton för upp till 5 användare och white-label PDF utan vår logotyp.' },
-  ]
-
-  const testimonials = [
-    { name: 'Maria L.', role: 'Förälder, Stockholm', text: 'Behövde en resefullmakt för barnen akut. Hade dokumentet klart på under 5 minuter. Fantastisk tjänst!', rating: 5 },
-    { name: 'Anders K.', role: 'Företagare, Göteborg', text: 'Använder Fullmakt24 för alla våra företagsfullmakter. Sparar timmar varje vecka jämfört med att göra dem manuellt.', rating: 5 },
-    { name: 'Sofia R.', role: 'God man, Uppsala', text: 'Ovärderligt verktyg som god man. Alla mallar jag behöver finns här och de är juridiskt korrekta.', rating: 5 },
+    { q: 'Kan jag använda tjänsten som företag?', a: 'Ja, vem som helst kan skapa och köpa enskilda mallar för 49 kr per dokument. Du betalar per mall du laddar ner – det finns inga abonnemang eller teamkonton.' },
   ]
 
   const trustSignals = [
@@ -140,7 +134,7 @@ export default function HomePage() {
   const steps = [
     { num: '01', title: 'Välj mall', desc: `Välj bland ${templates.length} mallar utformade enligt svensk lag, anpassade för ditt behov.`, iconPath: 'M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z' },
     { num: '02', title: 'Fyll i uppgifter', desc: 'Guidad ifyllning med validering. Dina uppgifter sparas automatiskt.', iconPath: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z' },
-    { num: '03', title: 'Ladda ner PDF', desc: 'Ladda ner direkt, signera med BankID eller skicka via e-post.', iconPath: 'M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z' },
+    { num: '03', title: 'Ladda ner PDF', desc: 'Ladda ner dokumentet direkt som PDF – klart att skriva ut och skriva under.', iconPath: 'M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z' },
   ]
 
   const organizationSchema = {
@@ -200,7 +194,7 @@ export default function HomePage() {
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-gold-300 text-sm font-medium mb-6 backdrop-blur-sm border border-white/10">
                 <span className="w-2 h-2 rounded-full bg-success animate-pulse" />
-                Ny: BankID-signering tillgänglig
+                49 kr per mall – inget abonnemang
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white leading-[1.1] mb-6">
@@ -212,7 +206,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-lg sm:text-xl text-navy-200 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-                {templates.length} juridiskt korrekta mallar. Anpassade för dig. Klara att skriva ut eller signera digitalt.
+                {templates.length} juridiskt korrekta mallar. Anpassade för dig. Klara att skriva ut och skriva under.
               </p>
 
               <HeroSearch />
@@ -227,7 +221,7 @@ export default function HomePage() {
               </div>
 
               <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center lg:justify-start text-sm text-navy-200">
-                {['Enligt svensk lag', 'GDPR-säker', '50 000+ svenskar', 'BankID-kompatibel'].map(b => (
+                {['Enligt svensk lag', 'GDPR-säker', 'PDF direkt', '49 kr per mall'].map(b => (
                   <span key={b} className="flex items-center gap-1.5">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-success"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" strokeWidth="2.5"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                     {b}
@@ -391,27 +385,6 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* ═══ TESTIMONIALS ═══ */}
-      <section className="section-padding py-20 lg:py-28 bg-white">
-        <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 bg-gold-50 text-gold-600 text-sm font-semibold rounded-full mb-4">Recensioner</span>
-          <h2 className="text-3xl lg:text-4xl font-heading font-bold text-navy-500">Vad våra användare säger</h2>
-        </div>
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
-          {testimonials.map(t => (
-            <div key={t.name} className="card p-6">
-              <div className="flex gap-0.5 mb-4">
-                {Array.from({ length: t.rating }).map((_, i) => (
-                  <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#E8A020"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                ))}
-              </div>
-              <p className="text-navy-500 text-sm leading-relaxed mb-4">&ldquo;{t.text}&rdquo;</p>
-              <div><div className="font-semibold text-navy-600 text-sm">{t.name}</div><div className="text-xs text-navy-400">{t.role}</div></div>
-            </div>
           ))}
         </div>
       </section>
