@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att kommunicera med a-kassan, Arbetsförmedlingen och hantera ersättningsfrågor. Lämpligt vid utlandsvistelse eller sjukdom.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Lag om arbetslöshetsförsäkring (1997:238).",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för a-kasseärende ger ett ombud rätt att hjälpa dig i kontakten med din arbetslöshetskassa, exempelvis att lämna uppgifter, följa upp ett ärende eller ta emot besked. Det kan vara till hjälp om du behöver stöd av en närstående.\n\nMallen anger vilket ärende och vilken a-kassa det gäller och vad ombudet får göra. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att vissa uppgifter, som tidrapportering, kan vara knutna till dig personligen.",
+    "legalValidity": "Arbetslöshetsförsäkringen regleras av lagen (1997:238) om arbetslöshetsförsäkring och administreras av arbetslöshetskassorna. Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. och ger ombudet rätt att sköta kontakten inom angivna ramar. A-kassan har egna rutiner och gör en egen prövning av din rätt till ersättning.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn, personnummer och adress.\nSteg 2: Fyll i ombudets namn, personnummer och relation till dig.\nSteg 3: Ange vilken a-kassa och vilket ärende fullmakten gäller.\nSteg 4: Beskriv vad ombudet får göra – lämna uppgifter, följa upp och ta emot besked.\nSteg 5: Ange en giltighetstid.\nSteg 6: Skriv under och lämna fullmakten till a-kassan.",
+    "commonMistakes": "1. Tror att ombudet kan tidrapportera åt dig – Vissa uppgifter kan vara knutna till dig personligen.\n\n2. Otydlig a-kassa – Ange vilken kassa ärendet gäller.\n\n3. För bred fullmakt – Avgränsa till det aktuella ärendet.\n\n4. Glömmer a-kassans rutiner – Kassan kan ha egna fullmaktskrav.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Måste fullmakten bevittnas?",
-        "answer": "Det är inte ett lagkrav men rekommenderas starkt. Två vittnen som inte är jäviga gör fullmakten lättare att få godkänd av motparten."
+        "question": "Kan ombudet tidrapportera åt mig?",
+        "answer": "Vissa uppgifter kan vara knutna till dig personligen. Kontrollera med a-kassan vad som kan skötas av ombud."
       },
       {
-        "question": "Hur återkallar jag fullmakten?",
-        "answer": "Meddela fullmaktshavaren skriftligt och informera berörda parter (bank, myndighet etc.). Fullmakten upphör omedelbart."
+        "question": "Beviljas ersättning automatiskt?",
+        "answer": "Nej. A-kassan gör alltid en egen prövning av din rätt till ersättning."
       },
       {
-        "question": "Vad händer vid dödsfall?",
-        "answer": "En vanlig fullmakt upphör automatiskt vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna."
+        "question": "Vilken a-kassa gäller fullmakten?",
+        "answer": "Ange tydligt vilken kassa du tillhör; ärendet sköts av just den kassan."
       },
       {
-        "question": "Kan ombudet ge fullmakten vidare?",
-        "answer": "Bara om det uttryckligen anges. Som standard har ombudet inte rätt att utse en annan person (substitution)."
+        "question": "Har a-kassan egna blanketter?",
+        "answer": "Många kassor har egna fullmaktsrutiner. Kontakta din kassa i förväg."
       },
       {
-        "question": "Behöver fullmakten registreras?",
-        "answer": "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar."
+        "question": "Kan jag återkalla fullmakten?",
+        "answer": "Ja, genom att meddela a-kassan och ombudet skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

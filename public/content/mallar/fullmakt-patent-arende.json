@@ -12,30 +12,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger patentombudet (auktoriserat patentkonsult) rätt att lämna in patentansökan, kommunicera med PRV och företräda dig i patentärenden.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Regleras av patentlagen (1967:837) och Patent- och registreringsverkets (PRV) föreskrifter.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för patentärende ger ett patentombud rätt att företräda dig eller bolaget i en patentansökan och i kontakten med Patent- och registreringsverket (PRV) eller andra patentmyndigheter. Patentprocesser är ofta tekniskt och juridiskt komplexa, och ombud anlitas regelbundet.\n\nMallen anger sökanden, ombudet och vilka befogenheter fullmakten omfattar. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att PRV och internationella patentmyndigheter kan ha egna krav på ombudsfullmakter.",
+    "legalValidity": "Patent regleras av patentlagen (1967:837) och ansökningar i Sverige hanteras av Patent- och registreringsverket (PRV). Fullmakten bygger på avtalslagen (1915:218) 2 kap. och ger patentombudet rätt att företräda dig i ärendet. PRV och internationella patentorgan kan ha egna formkrav för ombudsfullmakter. Sökanden ansvarar för att avgifter betalas och frister hålls.",
+    "howToGuide": "Steg 1: Ange sökandens namn och organisations- eller personnummer.\nSteg 2: Ange vem som utfärdar fullmakten och dennes behörighet.\nSteg 3: Fyll i patentombudets namn och uppgifter samt eventuell byrå.\nSteg 4: Ange vilken patentansökan eller vilket ärende fullmakten avser.\nSteg 5: Avgränsa befogenheterna och ange en giltighetstid.\nSteg 6: Skriv under och kontrollera PRV:s eller den internationella myndighetens krav.",
+    "commonMistakes": "1. Missar myndighetens formkrav – PRV och internationella organ kan ha egna krav på ombudsfullmakter.\n\n2. Otydligt ärende – Ange vilken ansökan eller vilket ärende fullmakten avser.\n\n3. Glömmer fristerna – Patentärenden har viktiga tidsfrister; sökanden ansvarar för att de hålls.\n\n4. För bred fullmakt – Avgränsa till det aktuella ärendet om så önskas.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Vem får utfärda fullmakt för ett aktiebolag?",
-        "answer": "Endast styrelseledamot, VD eller annan firmatecknare har rätt att utfärda fullmakt för bolagets räkning."
+        "question": "Behöver jag patentombud?",
+        "answer": "Det är inget krav, men patentprocesser är komplexa och ombud anlitas ofta för att hantera ansökan och frister."
       },
       {
-        "question": "Behöver fullmakten registreras hos Bolagsverket?",
-        "answer": "Generellt inte, men vissa typer av fullmakter (t.ex. prokura) ska registreras enligt prokuralagen."
+        "question": "Var ansöker jag om patent i Sverige?",
+        "answer": "Hos Patent- och registreringsverket (PRV), enligt patentlagen."
       },
       {
-        "question": "Kan fullmakten gälla flera år?",
-        "answer": "Ja. Företagsfullmakter gäller ofta tillsvidare eller flera år. Specificera dock alltid en tidsgräns för säkerhets skull."
+        "question": "Gäller fullmakten internationellt?",
+        "answer": "Internationella patentmyndigheter kan ha egna krav på ombudsfullmakter. Kontrollera vad som gäller."
       },
       {
-        "question": "Hur återkallas en företagsfullmakt?",
-        "answer": "Beslut om återkallelse fattas av samma organ som utfärdade fullmakten. Skriftlig återkallelse skickas till ombudet och berörda parter."
+        "question": "Vem ansvarar för avgifter och frister?",
+        "answer": "Sökanden ansvarar för att avgifter betalas och frister hålls, även om ett ombud anlitas."
       },
       {
-        "question": "Gäller fullmakten vid VD-byte?",
-        "answer": "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, genom att meddela ombudet och myndigheten skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -62,5 +62,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

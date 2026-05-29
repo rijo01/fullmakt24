@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet (ofta arbetsgivare eller jurist) rätt att hantera EES- eller EU-blå kort-ansökan hos Migrationsverket.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Utlänningslagen (2005:716) och EU:s direktiv om EU-blå kort (2009/50/EG).",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Den här fullmakten avser kontakt med Migrationsverket i frågor om arbete och vistelse i Sverige. Det är viktigt att veta att EU- och EES-medborgare som regel inte behöver arbetstillstånd för att arbeta i Sverige, medan medborgare utanför EES normalt behöver uppehålls- och arbetstillstånd.\n\nMallen anger vilket ärende och vilket land det gäller och vad ombudet får göra. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att vissa moment, som biometri och personliga uppgifter, kan kräva sökandens egen medverkan.",
+    "legalValidity": "EU- och EES-medborgare har fri rörlighet och behöver som regel inte arbetstillstånd för att arbeta i Sverige. För medborgare utanför EES krävs normalt uppehålls- och arbetstillstånd, som regleras av utlänningslagen (2005:716) och prövas av Migrationsverket. Fullmakten bygger på avtalslagen (1915:218) 2 kap. och ger ett ombud rätt att biträda i kontakten; vissa moment kan kräva sökandens egen medverkan.",
+    "howToGuide": "Steg 1: Ange sökandens uppgifter – namn, personnummer eller utländskt ID och eventuellt passnummer.\nSteg 2: Fyll i ombudets namn och uppgifter.\nSteg 3: Ange vilket ärende och vilket medborgarskap som är aktuellt.\nSteg 4: Beskriv vad ombudet får göra – lämna in handlingar, komplettera och ta emot besked.\nSteg 5: Ange en giltighetstid.\nSteg 6: Skriv under och kontrollera Migrationsverkets krav.",
+    "commonMistakes": "1. Tror att EES-medborgare behöver arbetstillstånd – Som regel behövs inget arbetstillstånd för EU/EES-medborgare.\n\n2. Otydligt medborgarskap – Reglerna skiljer sig åt; ange medborgarskap och ärende.\n\n3. Glömmer biometri – Vissa moment kan kräva sökandens egen inställelse.\n\n4. För bred fullmakt – Avgränsa till det aktuella ärendet.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Vad är en apostille?",
-        "answer": "En apostille är ett intyg från Notarius Publicus som bekräftar att en svensk myndighets eller notaries underskrift är äkta. Krävs för många utländska myndigheter."
+        "question": "Behöver en EES-medborgare arbetstillstånd?",
+        "answer": "Som regel nej. EU- och EES-medborgare har fri rörlighet och behöver normalt inte arbetstillstånd för att arbeta i Sverige."
       },
       {
-        "question": "Var ansöker jag om apostille?",
-        "answer": "Hos Notarius Publicus i Sverige. Listan finns på regeringen.se. Avgift tas ut per dokument."
+        "question": "Vad gäller för medborgare utanför EES?",
+        "answer": "De behöver normalt uppehålls- och arbetstillstånd, som prövas av Migrationsverket enligt utlänningslagen."
       },
       {
-        "question": "Behöver fullmakten översättas?",
-        "answer": "Ja, oftast krävs auktoriserad översättning till mottagarlandets språk eller engelska."
+        "question": "Kan ett ombud sköta hela ärendet?",
+        "answer": "Ombudet kan biträda i kontakten, men vissa moment som biometri kan kräva sökandens egen medverkan."
       },
       {
-        "question": "Vad är skillnaden mellan apostille och legalisering?",
-        "answer": "Apostille gäller för länder som undertecknat Haagkonventionen (1961). För andra länder krävs legalisering via UD och landets ambassad."
+        "question": "Vem prövar ansökan?",
+        "answer": "Migrationsverket prövar ansökningar om uppehålls- och arbetstillstånd."
       },
       {
-        "question": "Kan svensk fullmakt användas direkt utomlands?",
-        "answer": "Ibland, men oftast krävs apostille eller legalisering plus översättning. Kontakta landets ambassad i förväg."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, genom att meddela Migrationsverket och ombudet skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

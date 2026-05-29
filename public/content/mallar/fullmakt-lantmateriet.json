@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att ansöka om lagfart, inteckningar, fastighetsbildning och andra Lantmäteri-ärenden. Vanligt vid bostadsköp där köparen inte kan närvara.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Jordabalken (1970:994) och fastighetsbildningslagen (1970:988).",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för Lantmäteriet ger ett ombud rätt att företräda dig i ärenden hos Lantmäteriet, exempelvis fastighetsbildning, lagfart, inteckning eller andra fastighetsrelaterade ärenden. Det kan vara en mäklare, jurist eller annan medhjälpare.\n\nMallen anger fastigheten, vilket ärende det gäller och vad ombudet får göra. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att vissa fastighetsärenden har formkrav och att Lantmäteriet gör en egen prövning.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Fastighetsbildning regleras av fastighetsbildningslagen (1970:988) och frågor om lagfart och inteckning av jordabalken (1970:994); ärendena hanteras av Lantmäteriet. Vid överlåtelse av fast egendom gäller formkrav, och en fullmakt att sälja fastighet bör vara skriftlig och tydlig. Lantmäteriet gör en egen prövning.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fastighetsägare och fullmaktsgivare – namn och personnummer.\nSteg 2: Ange fastighetsbeteckning och adress.\nSteg 3: Fyll i ombudets namn och personnummer.\nSteg 4: Ange vilket ärende fullmakten avser – fastighetsbildning, lagfart, inteckning m.m.\nSteg 5: Avgränsa befogenheterna och ange en giltighetstid.\nSteg 6: Skriv under och lämna fullmakten till Lantmäteriet.",
+    "commonMistakes": "1. Otydlig fastighet – Ange fastighetsbeteckning så att ärendet inte kan förväxlas.\n\n2. Oklart ärende – Ange vilken typ av lantmäteriärende fullmakten avser.\n\n3. Glömmer formkrav – Vid överlåtelse av fast egendom gäller särskilda formkrav.\n\n4. För bred fullmakt – Avgränsa till det aktuella ärendet.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Krävs bevittning för fastighetsfullmakt?",
-        "answer": "En fullmakt att sälja fast egendom måste enligt avtalslagen (1915:218) 27 § 2 st vara skriftlig. Själva köpehandlingen ska uppfylla formkraven i jordabalken 4 kap. 1 § (skriftlig, underskriven av säljare och köpare, med köpeskilling och överlåtelseförklaring). Någon notariell bekräftelse förekommer inte i svensk fastighetsrätt. För att lagfart ska beviljas ska säljarens underskrift på köpehandlingen bevittnas av två personer (jordabalken 20 kap. 7 §)."
+        "question": "Vad gör Lantmäteriet?",
+        "answer": "Lantmäteriet hanterar bland annat fastighetsbildning, lagfart och inteckningar enligt fastighetsbildningslagen och jordabalken."
       },
       {
-        "question": "Kan ombudet skriva under köpekontrakt?",
-        "answer": "Ja, om fullmakten specifikt anger detta och är korrekt bevittnad. Banker och Lantmäteriet kan ställa egna krav."
+        "question": "Kan ombudet sälja min fastighet?",
+        "answer": "En fullmakt att sälja fast egendom bör vara skriftlig och tydlig. Ange uttryckligen om försäljning ingår."
       },
       {
-        "question": "Hur länge gäller fastighetsfullmakten?",
-        "answer": "Den kan gälla en bestämd tid eller tills uppdraget är slutfört. För säkerhet rekommenderas en uttrycklig tidsgräns."
+        "question": "Gäller särskilda formkrav?",
+        "answer": "Ja, vid överlåtelse av fast egendom gäller formkrav enligt jordabalken; var noga med dokumentationen."
       },
       {
-        "question": "Vad händer om priset blir lägre än önskat?",
-        "answer": "Ange ett minimipris i fullmakten. Ombudet kan inte gå under utan ditt godkännande – annars handlar de utanför fullmakten."
+        "question": "Gör Lantmäteriet en egen prövning?",
+        "answer": "Ja. Myndigheten prövar alltid ärendet enligt gällande regler."
       },
       {
-        "question": "Behöver fullmakten lagföras?",
-        "answer": "Lantmäteriet kräver ofta att fullmakten lämnas in i original eller som styrkt kopia vid registreringsärenden."
+        "question": "Kan jag återkalla fullmakten?",
+        "answer": "Ja, genom att meddela Lantmäteriet och ombudet skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

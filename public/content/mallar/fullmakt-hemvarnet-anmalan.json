@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att kommunicera med Försvarsmakten/hemvärnet om tjänstgöring, avanmälan eller praktiska frågor.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Förordning (1997:147) med instruktion för Försvarsmakten och Hemvärnsförordningen (1997:146).",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för hemvärnsärende ger en anhörig eller ett ombud rätt att hjälpa dig i kontakten med Försvarsmakten kring anmälan eller avanmälan från hemvärnet. Det kan vara praktiskt om du behöver stöd att sköta administrationen.\n\nMallen anger vilket ärende det gäller och vad ombudet får göra. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att engagemang i hemvärnet bygger på ett personligt åtagande och att vissa beslut är knutna till dig själv.",
+    "legalValidity": "Hemvärnet är en del av Försvarsmakten. Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. och ger ombudet rätt att sköta kontakten inom angivna ramar. Engagemang i hemvärnet är ett personligt åtagande; ett ombud kan hjälpa till med administration och kontakt, men själva åtagandet är knutet till dig.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn, personnummer och adress.\nSteg 2: Fyll i ombudets namn, personnummer och relation till dig.\nSteg 3: Ange om fullmakten avser anmälan eller avanmälan och vilket förband det gäller.\nSteg 4: Beskriv vad ombudet får göra – lämna uppgifter och ta emot besked.\nSteg 5: Ange en giltighetstid.\nSteg 6: Skriv under och lämna fullmakten till berörd instans.",
+    "commonMistakes": "1. Tror att åtagandet kan delegeras – Engagemang i hemvärnet är ett personligt åtagande.\n\n2. Otydligt ärende – Ange om det gäller anmälan eller avanmälan.\n\n3. För bred fullmakt – Avgränsa till det aktuella ärendet.\n\n4. Glömmer förbandsuppgift – Ange vilket förband eller vilken enhet det gäller.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Måste fullmakten bevittnas?",
-        "answer": "Det är inte ett lagkrav men rekommenderas starkt. Två vittnen som inte är jäviga gör fullmakten lättare att få godkänd av motparten."
+        "question": "Kan ett ombud anmäla mig till hemvärnet?",
+        "answer": "Ett ombud kan hjälpa till med administration och kontakt, men åtagandet är personligt och knutet till dig."
       },
       {
-        "question": "Hur återkallar jag fullmakten?",
-        "answer": "Meddela fullmaktshavaren skriftligt och informera berörda parter (bank, myndighet etc.). Fullmakten upphör omedelbart."
+        "question": "Gäller fullmakten för avanmälan?",
+        "answer": "Ange uttryckligen om fullmakten avser anmälan, avanmälan eller båda."
       },
       {
-        "question": "Vad händer vid dödsfall?",
-        "answer": "En vanlig fullmakt upphör automatiskt vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna."
+        "question": "Vilken instans hanterar ärendet?",
+        "answer": "Hemvärnet är en del av Försvarsmakten; ange vilket förband eller vilken enhet det gäller."
       },
       {
-        "question": "Kan ombudet ge fullmakten vidare?",
-        "answer": "Bara om det uttryckligen anges. Som standard har ombudet inte rätt att utse en annan person (substitution)."
+        "question": "Behöver fullmakten bevittnas?",
+        "answer": "Det är inget generellt krav, men berörd instans kan ha egna rutiner."
       },
       {
-        "question": "Behöver fullmakten registreras?",
-        "answer": "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar."
+        "question": "Kan jag återkalla fullmakten?",
+        "answer": "Ja, genom att meddela berörd instans och ombudet skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

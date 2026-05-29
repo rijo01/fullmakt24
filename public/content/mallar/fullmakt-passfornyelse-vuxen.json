@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att hjälpa till med passansökan i begränsade fall – t.ex. vid sjukdom. Notera att passansökan kräver personlig inställelse för fingeravtryck och foto.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Passlagen (1978:302). Observera: passansökan kräver normalt personlig inställelse.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Det här dokumentet är tänkt som en fullmakt kring en vuxens passförnyelse. Det är dock viktigt att känna till att en vuxen som regel måste ansöka om och hämta ut sitt pass personligen, eftersom passansökan innebär att foto och fingeravtryck tas på plats. En fullmakt kan därför inte ersätta din egen inställelse.\n\nMallen kan användas för att utse någon som hjälper dig med kringuppgifter och kontakt med Polismyndigheten. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Kontrollera alltid vad som gäller hos Polismyndigheten innan du förlitar dig på ett ombud.",
+    "legalValidity": "Pass regleras av passlagen (1978:302) och utfärdas av Polismyndigheten. Ett vanligt pass är en personlig handling, och vid ansökan tas biometriska uppgifter (foto och fingeravtryck), vilket kräver att den sökande inställer sig personligen. En fullmakt enligt avtalslagen (1915:218) 2 kap. kan därför inte ersätta din egen medverkan vid ansökan; den har i passärenden ett begränsat användningsområde.",
+    "howToGuide": "Steg 1: Kontrollera hos Polismyndigheten vad som kan skötas av någon annan – ansökan och biometri kräver normalt personlig inställelse.\nSteg 2: Ange dina uppgifter som fullmaktsgivare – namn, personnummer och adress.\nSteg 3: Fyll i ombudets namn, personnummer och relation till dig.\nSteg 4: Ange vilka kringuppgifter ombudet får hjälpa till med, t.ex. kontakt och förfrågningar.\nSteg 5: Ange en giltighetstid.\nSteg 6: Skriv under; planera för att själv inställa dig vid ansökan.",
+    "commonMistakes": "1. Tror att ombudet kan ansöka om passet – En vuxen måste normalt ansöka personligen eftersom biometri tas på plats.\n\n2. Räknar med att slippa inställa sig – Foto och fingeravtryck kräver din egen närvaro.\n\n3. Förlitar sig på fullmakten utan att kontrollera – Kontrollera alltid Polismyndighetens aktuella krav.\n\n4. Otydligt uppdrag – Ange vilka kringuppgifter ombudet faktiskt får hjälpa till med.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Måste fullmakten bevittnas?",
-        "answer": "Det är inte ett lagkrav men rekommenderas starkt. Två vittnen som inte är jäviga gör fullmakten lättare att få godkänd av motparten."
+        "question": "Kan någon annan förnya mitt pass åt mig?",
+        "answer": "Som vuxen måste du normalt ansöka personligen, eftersom foto och fingeravtryck tas på plats. En fullmakt kan inte ersätta det."
       },
       {
-        "question": "Hur återkallar jag fullmakten?",
-        "answer": "Meddela fullmaktshavaren skriftligt och informera berörda parter (bank, myndighet etc.). Fullmakten upphör omedelbart."
+        "question": "Vad kan ombudet då hjälpa till med?",
+        "answer": "Främst kringuppgifter som kontakt och förfrågningar. Själva ansökan och biometrin kräver din egen inställelse."
       },
       {
-        "question": "Vad händer vid dödsfall?",
-        "answer": "En vanlig fullmakt upphör automatiskt vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna."
+        "question": "Var ansöker jag om pass?",
+        "answer": "Hos Polismyndigheten, som utfärdar pass enligt passlagen."
       },
       {
-        "question": "Kan ombudet ge fullmakten vidare?",
-        "answer": "Bara om det uttryckligen anges. Som standard har ombudet inte rätt att utse en annan person (substitution)."
+        "question": "Måste jag hämta passet själv?",
+        "answer": "Kontrollera Polismyndighetens aktuella rutiner; uthämtning av pass har särskilda krav."
       },
       {
-        "question": "Behöver fullmakten registreras?",
-        "answer": "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar."
+        "question": "Kan jag återkalla fullmakten?",
+        "answer": "Ja, genom att meddela ombudet skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

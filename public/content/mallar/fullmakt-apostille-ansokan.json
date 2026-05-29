@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att lämna in handlingar för apostille (intyg om dokumentens äkthet) hos Notarius Publicus. Krävs ofta vid utlandsstudier, arbete eller affärer.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Haagkonventionen (1961) om apostille gäller mellan medlemsländer. Notarius Publicus utfärdar apostille i Sverige.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för apostille ger ett ombud rätt att ansöka om apostille på dina handlingar hos Notarius Publicus. En apostille intygar att en underskrift på en svensk handling är äkta och behövs ofta för att handlingen ska godtas i ett annat land.\n\nMallen anger vilka handlingar och vilket land det gäller och vad ombudet får göra. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att apostille bara gäller mellan länder som anslutit sig till Haagkonventionen.",
+    "legalValidity": "Apostille bygger på Haagkonventionen (1961) om slopande av kravet på legalisering av utländska allmänna handlingar. I Sverige utfärdas apostille av Notarius Publicus. Fullmakten bygger på avtalslagen (1915:218) 2 kap. och ger ombudet rätt att ansöka för din räkning. För länder som inte är anslutna till konventionen krävs i stället legalisering via Utrikesdepartementet och landets ambassad.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn, personnummer och eventuellt passnummer.\nSteg 2: Fyll i ombudets namn och person- eller utländskt ID.\nSteg 3: Ange vilka handlingar som ska förses med apostille och i vilket land de ska användas.\nSteg 4: Beskriv vad ombudet får göra – lämna in handlingar och hämta ut dem.\nSteg 5: Ange en giltighetstid.\nSteg 6: Skriv under och låt ombudet vända sig till Notarius Publicus.",
+    "commonMistakes": "1. Förväxlar apostille och legalisering – Apostille gäller Haag-länder; andra länder kräver legalisering.\n\n2. Otydliga handlingar – Ange exakt vilka handlingar som ska förses med apostille.\n\n3. Glömmer mottagarlandet – Ange vilket land handlingen ska användas i.\n\n4. Missar översättning – Många länder kräver även auktoriserad översättning.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
         "question": "Vad är en apostille?",
-        "answer": "En apostille är ett intyg från Notarius Publicus som bekräftar att en svensk myndighets eller notaries underskrift är äkta. Krävs för många utländska myndigheter."
+        "answer": "Ett intyg, normalt från Notarius Publicus, som bekräftar att en underskrift på en svensk handling är äkta så att den godtas utomlands."
       },
       {
-        "question": "Var ansöker jag om apostille?",
-        "answer": "Hos Notarius Publicus i Sverige. Listan finns på regeringen.se. Avgift tas ut per dokument."
+        "question": "Var ansöker man om apostille?",
+        "answer": "Hos Notarius Publicus i Sverige. En förteckning finns på regeringen.se."
       },
       {
-        "question": "Behöver fullmakten översättas?",
-        "answer": "Ja, oftast krävs auktoriserad översättning till mottagarlandets språk eller engelska."
+        "question": "Gäller apostille i alla länder?",
+        "answer": "Bara i länder som anslutit sig till Haagkonventionen (1961). Övriga länder kräver legalisering."
       },
       {
-        "question": "Vad är skillnaden mellan apostille och legalisering?",
-        "answer": "Apostille gäller för länder som undertecknat Haagkonventionen (1961). För andra länder krävs legalisering via UD och landets ambassad."
+        "question": "Behövs översättning?",
+        "answer": "Ofta. Många länder kräver auktoriserad översättning av handlingen."
       },
       {
-        "question": "Kan svensk fullmakt användas direkt utomlands?",
-        "answer": "Ibland, men oftast krävs apostille eller legalisering plus översättning. Kontakta landets ambassad i förväg."
+        "question": "Kan jag återkalla fullmakten?",
+        "answer": "Ja, genom att meddela ombudet skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

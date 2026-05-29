@@ -12,30 +12,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att rösta för dina aktier vid årsstämma eller extra bolagsstämma. Du kan ge ombudet fria händer eller specifika röstinstruktioner per punkt.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Regleras av aktiebolagslagen (2005:551) 7 kap. om bolagsstämma och rösträtt.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt till bolagsstämma ger ett ombud rätt att företräda dig som aktieägare och rösta för dina aktier vid en bolagsstämma. Det är vanligt när du inte själv kan närvara men vill att din röst ändå räknas.\n\nMallen anger bolaget, ombudet och eventuella röstinstruktioner. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att aktiebolagslagen ställer krav på att stämmofullmakten är skriftlig, undertecknad och daterad.",
+    "legalValidity": "Aktieägares rätt att rösta genom ombud regleras av aktiebolagslagen (2005:551) 7 kap. Fullmakten ska vara skriftlig, undertecknad och daterad. En stämmofullmakt gäller högst ett år från utfärdandet, om det inte i fullmakten anges en längre giltighetstid, dock högst fem år. Bolaget kan ha egna anvisningar inför stämman, exempelvis om anmälan och fullmaktsformulär.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som aktieägare och fullmaktsgivare – namn och personnummer.\nSteg 2: Ange bolagets namn och organisationsnummer.\nSteg 3: Fyll i ombudets namn och personnummer.\nSteg 4: Ange vilken stämma fullmakten gäller och eventuella röstinstruktioner.\nSteg 5: Datera fullmakten och ange giltighetstid (högst ett år, om inte annat anges, dock högst fem år).\nSteg 6: Skriv under och lämna fullmakten enligt bolagets anvisningar.",
+    "commonMistakes": "1. Saknar datering – En stämmofullmakt ska vara daterad för att vara giltig.\n\n2. Glömmer giltighetstiden – Fullmakten gäller högst ett år om inte längre tid anges, dock högst fem år.\n\n3. Otydlig stämma – Ange vilken bolagsstämma fullmakten gäller.\n\n4. Missar bolagets anvisningar – Bolaget kan ha krav på anmälan och eget formulär.\n\n5. Glömmer underskrift – Fullmakten måste vara skriftlig och undertecknad.",
     "faq": [
       {
-        "question": "Måste fullmakten visas upp på stämman?",
-        "answer": "Ja, ombudet ska visa original eller styrkt kopia av fullmakten samt giltig ID-handling vid inregistreringen."
+        "question": "Kan jag rösta via ombud på bolagsstämman?",
+        "answer": "Ja. Enligt aktiebolagslagen får en aktieägare rösta genom ombud med skriftlig, daterad och undertecknad fullmakt."
       },
       {
-        "question": "Kan ombudet rösta som det vill?",
-        "answer": "Ja, om du inte angett röstningsinstruktioner. För att skydda dina intressen kan du specificera röstning per punkt."
+        "question": "Hur länge gäller en stämmofullmakt?",
+        "answer": "Högst ett år från utfärdandet, om inte en längre tid anges i fullmakten, dock högst fem år."
       },
       {
-        "question": "Behöver fullmakten bevittnas?",
-        "answer": "Aktiebolagslagen kräver det inte, men många bolagsordningar gör det. Kontrollera bolagets stadgar."
+        "question": "Kan jag ge röstinstruktioner?",
+        "answer": "Ja, du kan ange hur ombudet ska rösta i olika frågor."
       },
       {
-        "question": "Hur länge gäller stämmofullmakten?",
-        "answer": "Som regel max ett år från utfärdandet. Bolagsordningen kan ange annat."
+        "question": "Har bolaget egna krav?",
+        "answer": "Ofta. Bolaget kan ha anvisningar om anmälan och ett eget fullmaktsformulär inför stämman."
       },
       {
-        "question": "Kan ett ombud representera flera aktieägare?",
-        "answer": "Ja, det är vanligt med samlade ombud (depåförvaltare) som röstar för många aktieägare."
+        "question": "Kan jag återkalla fullmakten?",
+        "answer": "Ja, genom att meddela ombudet och bolaget skriftligt före stämman."
       }
     ],
     "relatedSearchTerms": [
@@ -62,5 +62,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

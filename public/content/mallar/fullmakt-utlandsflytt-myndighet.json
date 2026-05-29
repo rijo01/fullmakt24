@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att anmäla utflyttning hos Skatteverket, hantera ärenden hos Försäkringskassan och avsluta löpande abonnemang.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Haagkonventionen (1961) om apostille gäller mellan medlemsländer. Notarius Publicus utfärdar apostille i Sverige.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för utlandsflytt ger ett ombud rätt att hjälpa dig med myndighetskontakter i samband med en flytt utomlands, exempelvis hos Skatteverket, Försäkringskassan och kommunen. Det kan handla om anmälan om flytt, avregistrering och andra ärenden.\n\nMallen anger vilka ärenden och myndigheter det gäller och vad ombudet får göra. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att olika myndigheter kan ha egna rutiner och att vissa uppgifter är personliga.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. En flytt utomlands ska normalt anmälas till Skatteverket, och folkbokföringen regleras av folkbokföringslagen (1991:481). Enligt förvaltningslagen (2017:900) får en part anlita ombud. Varje myndighet gör en egen prövning och kan ha särskilda rutiner; vissa uppgifter kan kräva din egen medverkan.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn, personnummer och eventuellt passnummer.\nSteg 2: Fyll i ombudets namn och uppgifter.\nSteg 3: Ange vilket land du flyttar till och vilka myndigheter fullmakten gäller.\nSteg 4: Beskriv vad ombudet får göra – anmäla flytt, lämna uppgifter och ta emot besked.\nSteg 5: Ange en giltighetstid.\nSteg 6: Skriv under och lämna fullmakten till berörda myndigheter.",
+    "commonMistakes": "1. Otydliga myndigheter – Ange vilka myndigheter fullmakten omfattar (Skatteverket, FK, kommun).\n\n2. Glömmer anmälan om flytt – Flytt utomlands ska normalt anmälas till Skatteverket.\n\n3. Tror att allt kan skötas av ombud – Vissa uppgifter kan kräva din egen medverkan.\n\n4. För bred fullmakt – Avgränsa till de ärenden som är aktuella.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Vad är en apostille?",
-        "answer": "En apostille är ett intyg från Notarius Publicus som bekräftar att en svensk myndighets eller notaries underskrift är äkta. Krävs för många utländska myndigheter."
+        "question": "Måste jag anmäla flytt utomlands?",
+        "answer": "Ja, en flytt utomlands ska normalt anmälas till Skatteverket, som hanterar folkbokföringen."
       },
       {
-        "question": "Var ansöker jag om apostille?",
-        "answer": "Hos Notarius Publicus i Sverige. Listan finns på regeringen.se. Avgift tas ut per dokument."
+        "question": "Kan ett ombud sköta mina myndighetskontakter?",
+        "answer": "Ja, inom ramen för fullmakten. Varje myndighet kan dock ha egna rutiner."
       },
       {
-        "question": "Behöver fullmakten översättas?",
-        "answer": "Ja, oftast krävs auktoriserad översättning till mottagarlandets språk eller engelska."
+        "question": "Vilka myndigheter berörs?",
+        "answer": "Ofta Skatteverket, Försäkringskassan och kommunen. Ange vilka fullmakten omfattar."
       },
       {
-        "question": "Vad är skillnaden mellan apostille och legalisering?",
-        "answer": "Apostille gäller för länder som undertecknat Haagkonventionen (1961). För andra länder krävs legalisering via UD och landets ambassad."
+        "question": "Påverkas mina socialförsäkringar?",
+        "answer": "En utlandsflytt kan påverka rätten till svenska förmåner. Kontrollera med Försäkringskassan."
       },
       {
-        "question": "Kan svensk fullmakt användas direkt utomlands?",
-        "answer": "Ibland, men oftast krävs apostille eller legalisering plus översättning. Kontakta landets ambassad i förväg."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, genom att meddela berörda myndigheter och ombudet skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

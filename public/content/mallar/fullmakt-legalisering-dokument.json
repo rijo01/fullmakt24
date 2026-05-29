@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Krävs när dokument ska användas i länder som INTE undertecknat Haagkonventionen. Ombudet hanterar processen via Sveriges UD och mottagarlandets ambassad.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Haagkonventionen (1961) om apostille gäller mellan medlemsländer. Notarius Publicus utfärdar apostille i Sverige.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för legalisering ger ett ombud rätt att legalisera dina handlingar hos Utrikesdepartementet eller en ambassad, så att de godtas i ett annat land. Legalisering används för länder som inte är anslutna till Haagkonventionen och därmed inte godtar apostille.\n\nMallen anger vilka handlingar och vilket land det gäller och vad ombudet får göra. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att legaliseringsprocessen kan ha flera steg och ofta kräver översättning.",
+    "legalValidity": "Legalisering används för handlingar som ska användas i länder som inte omfattas av Haagkonventionen (1961) om apostille. Legalisering sker via Utrikesdepartementet och, i flera fall, det aktuella landets ambassad. Fullmakten bygger på avtalslagen (1915:218) 2 kap. och ger ombudet rätt att hantera processen för din räkning. Ofta krävs även auktoriserad översättning.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn, personnummer och eventuellt passnummer.\nSteg 2: Fyll i ombudets namn och person- eller utländskt ID.\nSteg 3: Ange vilka handlingar som ska legaliseras och i vilket land de ska användas.\nSteg 4: Beskriv vad ombudet får göra – lämna in, hämta ut och ordna översättning.\nSteg 5: Ange en giltighetstid.\nSteg 6: Skriv under och låt ombudet hantera legaliseringen.",
+    "commonMistakes": "1. Förväxlar legalisering och apostille – Apostille gäller Haag-länder; legalisering används för övriga.\n\n2. Glömmer flera steg – Legalisering kan kräva både Utrikesdepartementet och ambassaden.\n\n3. Saknar översättning – Många länder kräver auktoriserad översättning.\n\n4. Otydliga handlingar – Ange exakt vilka handlingar som ska legaliseras.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Vad är en apostille?",
-        "answer": "En apostille är ett intyg från Notarius Publicus som bekräftar att en svensk myndighets eller notaries underskrift är äkta. Krävs för många utländska myndigheter."
+        "question": "Vad är legalisering?",
+        "answer": "Ett sätt att få en handling godtagen i ett land som inte omfattas av Haagkonventionen, via Utrikesdepartementet och ofta landets ambassad."
       },
       {
-        "question": "Var ansöker jag om apostille?",
-        "answer": "Hos Notarius Publicus i Sverige. Listan finns på regeringen.se. Avgift tas ut per dokument."
+        "question": "När behövs legalisering i stället för apostille?",
+        "answer": "När mottagarlandet inte är anslutet till Haagkonventionen och därmed inte godtar apostille."
       },
       {
-        "question": "Behöver fullmakten översättas?",
-        "answer": "Ja, oftast krävs auktoriserad översättning till mottagarlandets språk eller engelska."
+        "question": "Behövs översättning?",
+        "answer": "Ofta. Många länder kräver auktoriserad översättning av handlingen."
       },
       {
-        "question": "Vad är skillnaden mellan apostille och legalisering?",
-        "answer": "Apostille gäller för länder som undertecknat Haagkonventionen (1961). För andra länder krävs legalisering via UD och landets ambassad."
+        "question": "Kan ett ombud sköta hela processen?",
+        "answer": "Ja, inom ramen för fullmakten kan ombudet hantera legaliseringen och översättningen."
       },
       {
-        "question": "Kan svensk fullmakt användas direkt utomlands?",
-        "answer": "Ibland, men oftast krävs apostille eller legalisering plus översättning. Kontakta landets ambassad i förväg."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, genom att meddela ombudet skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

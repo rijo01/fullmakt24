@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att kommunicera med kommunen i bygglov, bostadsfrågor, försörjningsstöd, äldreomsorg eller annat. Specificera vilken nämnd eller ärendetyp.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Kommunallagen (2017:725) och förvaltningslagen (2017:900) reglerar kommunens ärendehantering.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för kommunärende ger ett ombud rätt att företräda dig i kontakten med din kommun i ett angivet ärende, exempelvis ansökningar, överklaganden eller andra kontakter med en kommunal förvaltning.\n\nMallen anger vilket ärende och vilken kommun det gäller och vad ombudet får göra. Du fyller i uppgifterna och laddar ner dokumentet som PDF. En part har enligt förvaltningslagen rätt att anlita ombud eller biträde i kontakten med myndigheter.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Enligt förvaltningslagen (2017:900) får den som är part i ett ärende anlita ombud eller biträde. Kommunal verksamhet regleras bland annat av kommunallagen (2017:725). Kommunen kan begära att ombudet styrker sin behörighet med fullmakten och gör en egen prövning i ärendet.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn, personnummer och adress.\nSteg 2: Fyll i ombudets namn, personnummer och relation till dig.\nSteg 3: Ange vilken kommun och vilken förvaltning eller vilket ärende fullmakten gäller.\nSteg 4: Beskriv vad ombudet får göra – ansöka, överklaga, ta emot handlingar.\nSteg 5: Ange en giltighetstid.\nSteg 6: Skriv under och lämna fullmakten till kommunen.",
+    "commonMistakes": "1. Otydligt ärende – Ange vilket kommunärende fullmakten gäller.\n\n2. Fel kommun eller förvaltning – Ange rätt kommun och förvaltning.\n\n3. Glömmer rätten att ta emot beslut – Ange om ombudet får ta emot handlingar och beslut.\n\n4. För bred fullmakt – Avgränsa till det aktuella ärendet.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Måste fullmakten bevittnas?",
-        "answer": "Det är inte ett lagkrav men rekommenderas starkt. Två vittnen som inte är jäviga gör fullmakten lättare att få godkänd av motparten."
+        "question": "Får jag ha ombud i kommunärenden?",
+        "answer": "Ja. Enligt förvaltningslagen får den som är part anlita ombud eller biträde."
       },
       {
-        "question": "Hur återkallar jag fullmakten?",
-        "answer": "Meddela fullmaktshavaren skriftligt och informera berörda parter (bank, myndighet etc.). Fullmakten upphör omedelbart."
+        "question": "Kan ombudet överklaga åt mig?",
+        "answer": "Ja, om fullmakten omfattar det. Ange uttryckligen om ombudet får överklaga beslut."
       },
       {
-        "question": "Vad händer vid dödsfall?",
-        "answer": "En vanlig fullmakt upphör automatiskt vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna."
+        "question": "Måste kommunen acceptera ombudet?",
+        "answer": "Kommunen kan begära att ombudet styrker sin behörighet med fullmakten, men har att tillåta ombud enligt förvaltningslagen."
       },
       {
-        "question": "Kan ombudet ge fullmakten vidare?",
-        "answer": "Bara om det uttryckligen anges. Som standard har ombudet inte rätt att utse en annan person (substitution)."
+        "question": "Gäller fullmakten alla kommunens förvaltningar?",
+        "answer": "Bara om du anger det. Ange vilken förvaltning eller vilket ärende fullmakten omfattar."
       },
       {
-        "question": "Behöver fullmakten registreras?",
-        "answer": "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar."
+        "question": "Kan jag återkalla fullmakten?",
+        "answer": "Ja, genom att meddela kommunen och ombudet skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

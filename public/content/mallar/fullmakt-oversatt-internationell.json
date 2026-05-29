@@ -12,30 +12,30 @@
     ]
   },
   "content": {
-    "introduction": "Tvåspråkig fullmakt på svenska och engelska. Lämplig för utlandsärenden där en engelsk version krävs. Bör kompletteras med apostille eller legalisering.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Haagkonventionen (1961) om apostille gäller mellan medlemsländer. Notarius Publicus utfärdar apostille i Sverige.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En översatt internationell fullmakt (Power of Attorney) är en tvåspråkig fullmakt på svenska och engelska som är avsedd för internationellt bruk. Den underlättar när ett ombud ska företräda dig inför myndigheter, banker eller motparter i ett annat land.\n\nMallen anger ombudet, uppdraget och vilket land det gäller, på båda språken. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att handlingen ofta behöver förses med apostille eller legalisering för att godtas utomlands.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. För att en svensk fullmakt ska godtas i ett annat land krävs ofta att den förses med apostille (Haagkonventionen 1961) eller legaliseras via Utrikesdepartementet och ambassad. En tvåspråkig utformning kan underlätta, men mottagarlandets egna krav är avgörande – kontrollera dem i förväg.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn, personnummer och passnummer.\nSteg 2: Fyll i ombudets namn och person- eller utländskt ID.\nSteg 3: Ange vilket land och vilken myndighet eller motpart fullmakten avser.\nSteg 4: Beskriv uppdraget tydligt, på både svenska och engelska.\nSteg 5: Kontrollera om apostille eller legalisering behövs och ange en giltighetstid.\nSteg 6: Skriv under och ordna eventuell apostille eller legalisering.",
+    "commonMistakes": "1. Glömmer apostille eller legalisering – En svensk fullmakt godtas ofta inte utomlands utan detta.\n\n2. Otydligt uppdrag – Beskriv uppdraget konkret på båda språken.\n\n3. Kontrollerar inte landets krav – Mottagarlandets egna regler är avgörande.\n\n4. Bara ett språk – Säkerställ att både den svenska och engelska texten stämmer överens.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Vad är en apostille?",
-        "answer": "En apostille är ett intyg från Notarius Publicus som bekräftar att en svensk myndighets eller notaries underskrift är äkta. Krävs för många utländska myndigheter."
+        "question": "Varför en tvåspråkig fullmakt?",
+        "answer": "En svensk/engelsk fullmakt underlättar när ett ombud ska företräda dig inför myndigheter eller motparter i ett annat land."
       },
       {
-        "question": "Var ansöker jag om apostille?",
-        "answer": "Hos Notarius Publicus i Sverige. Listan finns på regeringen.se. Avgift tas ut per dokument."
+        "question": "Räcker den för utlandsbruk?",
+        "answer": "Ofta krävs även apostille eller legalisering och ibland översättning till landets språk. Kontrollera mottagarlandets krav."
       },
       {
-        "question": "Behöver fullmakten översättas?",
-        "answer": "Ja, oftast krävs auktoriserad översättning till mottagarlandets språk eller engelska."
+        "question": "Vad är skillnaden mot en vanlig fullmakt?",
+        "answer": "Innehållet bygger på samma fullmaktsregler, men den är utformad på två språk för internationellt bruk."
       },
       {
-        "question": "Vad är skillnaden mellan apostille och legalisering?",
-        "answer": "Apostille gäller för länder som undertecknat Haagkonventionen (1961). För andra länder krävs legalisering via UD och landets ambassad."
+        "question": "Vem avgör om fullmakten godtas?",
+        "answer": "Mottagarlandets myndigheter, banker eller motparter, utifrån deras egna krav."
       },
       {
-        "question": "Kan svensk fullmakt användas direkt utomlands?",
-        "answer": "Ibland, men oftast krävs apostille eller legalisering plus översättning. Kontakta landets ambassad i förväg."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, genom att meddela ombudet och berörda parter skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -62,5 +62,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

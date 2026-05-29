@@ -12,30 +12,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet (vanligtvis varumärkesbyrå) rätt att ansöka om, försvara och underhålla varumärket hos PRV eller EUIPO.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Varumärkeslagen (2010:1877) och PRV:s regelverk.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för varumärkesregistrering ger ett ombud rätt att ansöka om och hantera registrering av ett varumärke hos Patent- och registreringsverket (PRV) för din eller bolagets räkning.\n\nMallen anger sökanden, ombudet och vilka befogenheter fullmakten omfattar. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att PRV och, vid EU- eller internationell registrering, andra organ kan ha egna krav på ombudsfullmakter.",
+    "legalValidity": "Varumärken regleras av varumärkeslagen (2010:1877), och registrering i Sverige hanteras av Patent- och registreringsverket (PRV). Fullmakten bygger på avtalslagen (1915:218) 2 kap. och ger ombudet rätt att företräda dig i ärendet. Vid EU-varumärken hanteras registrering av EUIPO. Sökanden ansvarar för att avgifter betalas och att eventuella frister hålls.",
+    "howToGuide": "Steg 1: Ange sökandens namn och organisations- eller personnummer.\nSteg 2: Ange vem som utfärdar fullmakten och dennes behörighet.\nSteg 3: Fyll i ombudets namn och uppgifter samt eventuell byrå.\nSteg 4: Ange vilket varumärke och vilka klasser ansökan avser.\nSteg 5: Avgränsa befogenheterna och ange en giltighetstid.\nSteg 6: Skriv under och kontrollera PRV:s eller EUIPO:s krav.",
+    "commonMistakes": "1. Otydligt varumärke eller klasser – Ange vilket märke och vilka varu-/tjänsteklasser ansökan avser.\n\n2. Missar myndighetens formkrav – PRV och EUIPO kan ha egna krav på ombudsfullmakter.\n\n3. Glömmer fristerna – Varumärkesärenden har tidsfrister; sökanden ansvarar för att de hålls.\n\n4. För bred fullmakt – Avgränsa till det aktuella ärendet om så önskas.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Vem får utfärda fullmakt för ett aktiebolag?",
-        "answer": "Endast styrelseledamot, VD eller annan firmatecknare har rätt att utfärda fullmakt för bolagets räkning."
+        "question": "Var registrerar jag ett varumärke i Sverige?",
+        "answer": "Hos Patent- och registreringsverket (PRV), enligt varumärkeslagen."
       },
       {
-        "question": "Behöver fullmakten registreras hos Bolagsverket?",
-        "answer": "Generellt inte, men vissa typer av fullmakter (t.ex. prokura) ska registreras enligt prokuralagen."
+        "question": "Vad gäller för EU-varumärken?",
+        "answer": "EU-varumärken registreras hos EUIPO och kan ha egna krav på ombudsfullmakter."
       },
       {
-        "question": "Kan fullmakten gälla flera år?",
-        "answer": "Ja. Företagsfullmakter gäller ofta tillsvidare eller flera år. Specificera dock alltid en tidsgräns för säkerhets skull."
+        "question": "Måste jag ange klasser?",
+        "answer": "Ja, ange vilka varu- och tjänsteklasser märket ska skyddas för."
       },
       {
-        "question": "Hur återkallas en företagsfullmakt?",
-        "answer": "Beslut om återkallelse fattas av samma organ som utfärdade fullmakten. Skriftlig återkallelse skickas till ombudet och berörda parter."
+        "question": "Vem ansvarar för avgifter?",
+        "answer": "Sökanden ansvarar för att avgifter betalas och frister hålls, även om ett ombud anlitas."
       },
       {
-        "question": "Gäller fullmakten vid VD-byte?",
-        "answer": "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, genom att meddela ombudet och myndigheten skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -62,5 +62,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }
