@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att kontakta Microsoft för åtkomst eller avslut av konto, OneDrive-data och Office-licens.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Saknar enhetlig svensk reglering. Tjänsteleverantörers villkor och internationella riktlinjer gäller parallellt.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Den här fullmakten gäller hantering av ett Microsoft-konto, exempelvis OneDrive eller Microsoft 365, för en annan persons eller ett dödsbos räkning. Tillgång till digitala konton styrs i hög grad av tjänsteleverantörens egna villkor.\n\nMallen anger kontot, vem som företräder och vad som ska göras. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Vid dödsfall används dokumentet tillsammans med dödsfallsintyg och Microsofts egen process; för en levande persons konto gäller att inloggningsuppgifter inte ska delas.",
+    "legalValidity": "Det saknas en enhetlig svensk lag som ger rätt till någon annans digitala konton. Vid dödsfall förvaltas kontot inom dödsboet enligt ärvdabalken (1958:637), och en fullmakt bygger på avtalslagen (1915:218) 2 kap. Vad som faktiskt kan göras avgörs av Microsofts användarvillkor och rutiner. Inloggningsuppgifter och eventuell e-legitimation är personliga och ska inte delas.",
+    "howToGuide": "Steg 1: Ange kontoinnehavarens namn och personnummer.\nSteg 2: Ange den e-postadress som är kopplad till Microsoft-kontot.\nSteg 3: Fyll i den företrädande personens namn, personnummer och relation.\nSteg 4: Ange vad som ska göras – hämta innehåll, avsluta abonnemang eller annat.\nSteg 5: Vid dödsfall, samla dödsfallsintyg och bevis på att du företräder dödsboet.\nSteg 6: Skriv under och följ Microsofts process.",
+    "commonMistakes": "1. Tror att en fullmakt ensam räcker – Microsofts egna villkor och rutiner styr vad som kan göras.\n\n2. Delar inloggningsuppgifter – Inloggningsuppgifter och e-legitimation är personliga och ska inte delas.\n\n3. Glömmer dödsfallsintyg – Vid dödsfall krävs normalt bevis på dödsfallet.\n\n4. Otydligt uppdrag – Ange vad som ska göras med kontot.\n\n5. Saknar datum och underskrift – Dokumentet är ogiltigt utan detta.",
     "faq": [
       {
-        "question": "Accepterar Google eller Apple svenska fullmakter?",
-        "answer": "Internationella tjänster har egna processer. Fullmakten är ett komplement – men de kan kräva engelsk översättning och dödsfallsintyg."
+        "question": "Får jag tillgång till någon annans Microsoft-konto?",
+        "answer": "Det styrs av Microsofts egna villkor. Inloggningsuppgifter är personliga och ska inte delas."
       },
       {
-        "question": "Vad händer med en avliden persons konto?",
-        "answer": "Många tjänster erbjuder en \"legacy\"-process. Fullmakt och dödsfallsintyg krävs ofta. Vissa konton raderas automatiskt efter inaktivitet."
+        "question": "Vad gäller vid dödsfall?",
+        "answer": "Kontot hanteras inom dödsboet, och Microsoft har egna rutiner. Dödsfallsintyg kan krävas."
       },
       {
-        "question": "Kan jag ge ombud rätt att se min mejl?",
-        "answer": "Ja, om det anges i fullmakten. Notera att tjänsteleverantörens egna regler också gäller och kan kräva extra verifiering."
+        "question": "Kan jag avsluta ett abonnemang åt någon?",
+        "answer": "Inom ramen för fullmakten och tjänstens rutiner. Ange tydligt vad som ska göras."
       },
       {
-        "question": "Behövs översättning?",
-        "answer": "För utländska tjänster: ja, en auktoriserad översättning till engelska rekommenderas starkt."
+        "question": "Får jag använda kontoinnehavarens lösenord?",
+        "answer": "Inloggningsuppgifter ska inte delas. Använd tjänstens officiella rutiner."
       },
       {
-        "question": "Hur lång tid tar det att avsluta ett digitalt konto?",
-        "answer": "Från några dagar till flera månader beroende på leverantör. Google har en särskild \"Inactive Account Manager\"-process."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, av den som utfärdat den, genom skriftligt meddelande."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=digitalt-dodsbo"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

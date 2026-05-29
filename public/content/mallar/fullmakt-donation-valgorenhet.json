@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Skriftliga instruktioner om att del av kvarlåtenskapen ska gå till välgörenhet, alternativt fullmakt för anhörig att donera i ditt namn.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Ärvdabalken (1958:637). Universella testamentstagare kan vara välgörenhetsorganisationer.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Det här dokumentet används för att uttrycka önskemål eller ge en fullmakt om donation till välgörenhet, antingen under din livstid eller i samband med ett dödsfall. Vill du att en del av ditt arv ska gå till välgörenhet krävs dock som regel ett testamente.\n\nMallen låter dig ange vilken donation du önskar och vem som ska ombesörja den. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på skillnaden mellan ett önskemål, en fullmakt att genomföra en gåva och ett testamente.",
+    "legalValidity": "En gåva under livstiden bygger på allmänna avtals- och gåvoregler, och en fullmakt att genomföra den bygger på avtalslagen (1915:218) 2 kap. För att låta egendom gå till välgörenhet efter din död krävs som regel ett testamente, som enligt ärvdabalken (1958:637) ska vara skriftligt och bevittnat av två vittnen. Ett blott önskemål är inte juridiskt bindande på samma sätt som ett testamente.",
+    "howToGuide": "Steg 1: Ange ditt fullständiga namn och personnummer.\nSteg 2: Ange om dokumentet avser en gåva under livstiden, en fullmakt eller ett önskemål.\nSteg 3: Beskriv vilken organisation och vilket belopp eller vilken egendom som avses.\nSteg 4: Utse vem som ska ombesörja donationen.\nSteg 5: Överväg om ett testamente behövs för donation efter din död.\nSteg 6: Datera och skriv under; vid testamente krävs två vittnen.",
+    "commonMistakes": "1. Tror att önskemål binder arvet – För donation efter din död krävs som regel ett testamente.\n\n2. Glömmer testamentets formkrav – Ett testamente ska vara skriftligt och bevittnat av två vittnen.\n\n3. Otydlig mottagare – Ange organisationens namn och gärna organisationsnummer.\n\n4. Oklart belopp – Ange belopp eller andel tydligt.\n\n5. Saknar datum och underskrift – Dokumentet är ogiltigt utan detta.",
     "faq": [
       {
-        "question": "Vem kan utses till testamentsexekutor?",
-        "answer": "En myndig och rättskapabel person, ofta en familjemedlem, advokat eller revisor. Personen ska kunna ta uppdraget utan jävsproblem."
+        "question": "Kan jag testamentera till välgörenhet?",
+        "answer": "Ja, men det kräver ett testamente som är skriftligt och bevittnat av två vittnen enligt ärvdabalken."
       },
       {
-        "question": "Måste bouppteckning göras?",
-        "answer": "Ja, vid varje dödsfall ska bouppteckning upprättas inom 3 månader och lämnas till Skatteverket inom 4 månader."
+        "question": "Räcker ett önskemål?",
+        "answer": "Ett blott önskemål är inte juridiskt bindande på samma sätt som ett testamente. För arv krävs testamente."
       },
       {
-        "question": "Vem är dödsbodelägare?",
-        "answer": "Make/maka, sambo med gemensamma barn, barn (bröstarvingar) och eventuella testamentstagare. Universella testamentstagare räknas också in."
+        "question": "Hur ger jag en gåva under livstiden?",
+        "answer": "Genom en gåva enligt allmänna regler; en fullmakt kan ge någon rätt att genomföra den åt dig."
       },
       {
-        "question": "Kan jag bestämma min egen begravning?",
-        "answer": "Ja, genom skriftliga önskemål i förväg. Det är inte bindande men respekteras vanligtvis av anhöriga."
+        "question": "Bör jag ange organisationsnummer?",
+        "answer": "Ja, ange organisationens namn och gärna organisationsnummer för att undvika förväxling."
       },
       {
-        "question": "Hur länge gäller fullmakt för dödsboet?",
-        "answer": "Vanligen tills arvskiftet är slutfört och dödsboet upplöst."
+        "question": "Kan dokumentet ändras?",
+        "answer": "Ja, när som helst. Ett testamente ändras genom ett nytt testamente med samma formkrav."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=digitalt-dodsbo"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

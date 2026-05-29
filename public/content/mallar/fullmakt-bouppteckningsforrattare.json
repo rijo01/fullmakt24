@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Utser en bouppteckningsförrättare (ofta jurist eller revisor) som upprättar bouppteckningen för dödsboet och lämnar in den till Skatteverket.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Ärvdabalken (1958:637) 20 kap. om bouppteckning.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Det här dokumentet används för att utse bouppteckningsförrättare, alltså de personer som förrättar bouppteckningen efter en avliden. En bouppteckning är en lagstadgad förteckning över dödsboets tillgångar och skulder.\n\nMallen anger den avlidne, dödsboet och vem eller vilka som utses. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att bouppteckningen ska förrättas av två kunniga och trovärdiga personer (förrättningsmän) och registreras hos Skatteverket.",
+    "legalValidity": "Bouppteckning regleras av ärvdabalken (1958:637) 20 kap. En bouppteckning ska normalt förrättas inom tre månader efter dödsfallet och förrättas av två kunniga och trovärdiga gode män (förrättningsmän) som inte själva är dödsbodelägare. Den ska därefter registreras hos Skatteverket. En fullmakt enligt avtalslagen (1915:218) 2 kap. kan användas för att utse den som ombesörjer förrättningen.",
+    "howToGuide": "Steg 1: Ange den avlidnes namn och personnummer.\nSteg 2: Ange den som utfärdar dokumentet och dennes roll i dödsboet.\nSteg 3: Fyll i namnen på den eller de som utses att ombesörja eller förrätta bouppteckningen.\nSteg 4: Beskriv uppdraget – kalla dödsbodelägare, upprätta och förrätta bouppteckningen.\nSteg 5: Notera att två förrättningsmän som inte är delägare ska anlitas.\nSteg 6: Skriv under; bouppteckningen ska registreras hos Skatteverket.",
+    "commonMistakes": "1. Förrättningsmän är delägare – Förrättningsmännen ska vara opartiska och får inte vara dödsbodelägare.\n\n2. Missar tremånadersfristen – Bouppteckning ska normalt förrättas inom tre månader efter dödsfallet.\n\n3. Glömmer kallelse – Samtliga dödsbodelägare ska kallas i god tid till förrättningen.\n\n4. Glömmer registrering – Bouppteckningen ska registreras hos Skatteverket.\n\n5. Saknar datum och underskrift – Dokumentet är ogiltigt utan detta.",
     "faq": [
       {
-        "question": "Vem kan utses till testamentsexekutor?",
-        "answer": "En myndig och rättskapabel person, ofta en familjemedlem, advokat eller revisor. Personen ska kunna ta uppdraget utan jävsproblem."
+        "question": "Vad är en bouppteckning?",
+        "answer": "En lagstadgad förteckning över dödsboets tillgångar och skulder, som regleras i ärvdabalken 20 kap."
       },
       {
-        "question": "Måste bouppteckning göras?",
-        "answer": "Ja, vid varje dödsfall ska bouppteckning upprättas inom 3 månader och lämnas till Skatteverket inom 4 månader."
+        "question": "Vem får vara förrättningsman?",
+        "answer": "Två kunniga och trovärdiga personer som inte själva är dödsbodelägare."
       },
       {
-        "question": "Vem är dödsbodelägare?",
-        "answer": "Make/maka, sambo med gemensamma barn, barn (bröstarvingar) och eventuella testamentstagare. Universella testamentstagare räknas också in."
+        "question": "När ska bouppteckningen göras?",
+        "answer": "Normalt inom tre månader efter dödsfallet, och den registreras därefter hos Skatteverket."
       },
       {
-        "question": "Kan jag bestämma min egen begravning?",
-        "answer": "Ja, genom skriftliga önskemål i förväg. Det är inte bindande men respekteras vanligtvis av anhöriga."
+        "question": "Måste alla delägare kallas?",
+        "answer": "Ja, samtliga dödsbodelägare ska kallas i god tid till förrättningen."
       },
       {
-        "question": "Hur länge gäller fullmakt för dödsboet?",
-        "answer": "Vanligen tills arvskiftet är slutfört och dödsboet upplöst."
+        "question": "Kan dokumentet återkallas?",
+        "answer": "Ja, av den som utfärdat det, genom skriftligt meddelande."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=digitalt-dodsbo"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

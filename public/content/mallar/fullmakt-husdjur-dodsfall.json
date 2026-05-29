@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Specificerar vem som ska ta över husdjur, hur mycket pengar som avsätts för vård och eventuella veterinärinstruktioner.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Djurskyddslagen (2018:1192) och ärvdabalken (1958:637).",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Det här dokumentet låter dig uttrycka önskemål och ge ett mandat om vad som ska hända med dina husdjur om du går bort. Eftersom djur juridiskt räknas som egendom ingår de i dödsboet, men dina önskemål kan vägleda anhöriga om vem som ska ta hand om djuret.\n\nMallen anger djuret, vem du önskar ska ta hand om det och eventuella instruktioner. Du fyller i uppgifterna och laddar ner dokumentet som PDF. För en mer bindande lösning kan du reglera frågan i ett testamente eller avtal.",
+    "legalValidity": "Djur betraktas juridiskt som egendom och ingår därför i dödsboet, som förvaltas enligt ärvdabalken (1958:637). Ett önskemål om vem som ska ta hand om djuret är inte i sig bindande, men ger vägledning. Vill du göra det mer bindande kan du reglera frågan i ett testamente, med dess formkrav, eller i ett avtal med den person som ska ta över djuret. Djurhållning omfattas även av djurskyddslagen (2018:1192).",
+    "howToGuide": "Steg 1: Ange ditt fullständiga namn och personnummer.\nSteg 2: Beskriv djuret – art, namn och eventuell ID-märkning.\nSteg 3: Ange vem du önskar ska ta hand om djuret och dennes uppgifter.\nSteg 4: Beskriv instruktioner om skötsel, mat, försäkring och veterinär.\nSteg 5: Överväg om frågan bör regleras i testamente eller avtal för att bli mer bindande.\nSteg 6: Datera, skriv under och informera dina anhöriga.",
+    "commonMistakes": "1. Tror att önskemålet är bindande – Ett blott önskemål binder inte; reglera i testamente eller avtal för mer säkerhet.\n\n2. Frågar inte den tilltänkta personen – Säkerställ att personen vill och kan ta hand om djuret.\n\n3. Glömmer skötselinstruktioner – Ange mat, försäkring, mediciner och veterinär.\n\n4. Otydlig identifikation – Ange art, namn och ID-märkning.\n\n5. Ingen känner till dokumentet – Informera dina anhöriga.",
     "faq": [
       {
-        "question": "Vem kan utses till testamentsexekutor?",
-        "answer": "En myndig och rättskapabel person, ofta en familjemedlem, advokat eller revisor. Personen ska kunna ta uppdraget utan jävsproblem."
+        "question": "Vad händer med mina husdjur om jag dör?",
+        "answer": "Djur räknas som egendom och ingår i dödsboet. Dina önskemål kan vägleda vem som tar över ansvaret."
       },
       {
-        "question": "Måste bouppteckning göras?",
-        "answer": "Ja, vid varje dödsfall ska bouppteckning upprättas inom 3 månader och lämnas till Skatteverket inom 4 månader."
+        "question": "Är mitt önskemål bindande?",
+        "answer": "Inte i sig. För en mer bindande lösning kan du reglera frågan i ett testamente eller avtal."
       },
       {
-        "question": "Vem är dödsbodelägare?",
-        "answer": "Make/maka, sambo med gemensamma barn, barn (bröstarvingar) och eventuella testamentstagare. Universella testamentstagare räknas också in."
+        "question": "Kan jag avsätta pengar till djurets skötsel?",
+        "answer": "Det kan regleras i testamente eller avtal. Ett enkelt önskemål binder inte ekonomiskt."
       },
       {
-        "question": "Kan jag bestämma min egen begravning?",
-        "answer": "Ja, genom skriftliga önskemål i förväg. Det är inte bindande men respekteras vanligtvis av anhöriga."
+        "question": "Bör jag fråga den som ska ta över?",
+        "answer": "Ja, säkerställ att personen vill och kan ta hand om djuret."
       },
       {
-        "question": "Hur länge gäller fullmakt för dödsboet?",
-        "answer": "Vanligen tills arvskiftet är slutfört och dödsboet upplöst."
+        "question": "Kan dokumentet ändras?",
+        "answer": "Ja, när som helst. Informera dina anhöriga om ändringar."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=digitalt-dodsbo"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger en marknadsförare eller anställd rätt att hantera företagets Instagram, Facebook, LinkedIn, TikTok och YouTube. Inkluderar inloggningar, annonsbudgetar och innehåll.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Regleras av aktiebolagslagen (2005:551) och prokuralagen (1974:158). Behörig företrädare ska utfärda fullmakten.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för företagets sociala medier ger en anställd eller ett ombud rätt att hantera bolagets konton på sociala medier, exempelvis att publicera, svara på meddelanden och administrera sidan. Det tydliggör vem som får agera för bolagets räkning.\n\nMallen anger bolaget, ombudet och vilka befogenheter som omfattas. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att hanteringen även styrs av plattformarnas villkor och, vid behandling av personuppgifter, av dataskyddsreglerna.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap., och behörigheten att företräda bolaget följer av aktiebolagslagen (2005:551) eller motsvarande regler. Plattformarnas egna villkor styr hur kontona får hanteras, och inloggningsuppgifter bör hanteras säkert. När personuppgifter behandlas, exempelvis i meddelanden eller annonsering, gäller dataskyddsförordningen (GDPR).",
+    "howToGuide": "Steg 1: Ange bolagets namn och organisationsnummer.\nSteg 2: Ange den behöriga företrädare som utfärdar fullmakten och dennes roll.\nSteg 3: Fyll i ombudets eller den anställdes namn och uppgifter.\nSteg 4: Ange vilka konton och befogenheter fullmakten omfattar – publicera, svara, annonsera.\nSteg 5: Ange en giltighetstid och eventuella riktlinjer.\nSteg 6: Skriv under och hantera inloggningsuppgifter säkert.",
+    "commonMistakes": "1. Utfärdas av obehörig – Den som ger fullmakten måste vara behörig att företräda bolaget.\n\n2. Otydliga befogenheter – Ange om ombudet får publicera, annonsera och svara på meddelanden.\n\n3. Delar lösenord oförsiktigt – Hantera inloggningsuppgifter säkert; använd plattformens behörighetsfunktioner.\n\n4. Glömmer dataskyddet – Vid behandling av personuppgifter gäller GDPR.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Vem får utfärda fullmakt för ett aktiebolag?",
-        "answer": "Endast styrelseledamot, VD eller annan firmatecknare har rätt att utfärda fullmakt för bolagets räkning."
+        "question": "Vem får utfärda fullmakten?",
+        "answer": "En behörig företrädare för bolaget, exempelvis enligt registrerad firmateckning eller styrelsebeslut."
       },
       {
-        "question": "Behöver fullmakten registreras hos Bolagsverket?",
-        "answer": "Generellt inte, men vissa typer av fullmakter (t.ex. prokura) ska registreras enligt prokuralagen."
+        "question": "Kan en anställd sköta våra konton?",
+        "answer": "Ja, inom ramen för fullmakten och plattformarnas villkor."
       },
       {
-        "question": "Kan fullmakten gälla flera år?",
-        "answer": "Ja. Företagsfullmakter gäller ofta tillsvidare eller flera år. Specificera dock alltid en tidsgräns för säkerhets skull."
+        "question": "Hur hanterar vi inloggningsuppgifter?",
+        "answer": "Säkert, och helst via plattformarnas egna behörighetsfunktioner i stället för att dela lösenord."
       },
       {
-        "question": "Hur återkallas en företagsfullmakt?",
-        "answer": "Beslut om återkallelse fattas av samma organ som utfärdade fullmakten. Skriftlig återkallelse skickas till ombudet och berörda parter."
+        "question": "Gäller GDPR?",
+        "answer": "Ja, när personuppgifter behandlas, exempelvis i meddelanden eller riktad annonsering."
       },
       {
-        "question": "Gäller fullmakten vid VD-byte?",
-        "answer": "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, genom att meddela den anställde och vid behov justera behörigheter."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=digitalt-dodsbo"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

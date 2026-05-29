@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger en auktoriserad värderingsman rätt att värdera konstverk, antikviteter eller andra dyrbarheter i dödsboet.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Ärvdabalken (1958:637) 23 kap. om arvskifte.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för konstvärdering vid arvskifte ger en värderingsman rätt att värdera konst, antikviteter eller andra föremål i ett dödsbo inför arvskiftet. En oberoende värdering underlättar en rättvis fördelning mellan dödsbodelägarna.\n\nMallen anger dödsboet, värderingsmannen och vad som ska värderas. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Värderingen utgör underlag för bouppteckning och arvskifte men ersätter inte dödsbodelägarnas överenskommelse.",
+    "legalValidity": "Bouppteckning och arvskifte regleras av ärvdabalken (1958:637), där tillgångarna ska tas upp till sitt värde. En fullmakt enligt avtalslagen (1915:218) 2 kap. kan ge en värderingsman rätt att besiktiga och värdera föremål för dödsboets räkning. Värderingen är ett underlag; den slutliga fördelningen sker genom arvskifte där dödsbodelägarna är överens eller, vid tvist, med hjälp av en skiftesman.",
+    "howToGuide": "Steg 1: Ange den avlidnes namn och personnummer.\nSteg 2: Ange den som utfärdar fullmakten och dennes roll i dödsboet.\nSteg 3: Fyll i värderingsmannens namn och uppgifter.\nSteg 4: Beskriv vad som ska värderas – konst, antikviteter eller andra föremål.\nSteg 5: Ange om värderingsmannen får besiktiga föremålen på plats.\nSteg 6: Skriv under; värderingen används som underlag för bouppteckning och arvskifte.",
+    "commonMistakes": "1. Förankrar inte med delägare – En värdering bör ske i samråd med övriga dödsbodelägare.\n\n2. Otydligt vad som ska värderas – Ange vilka föremål som omfattas.\n\n3. Tror att värderingen avgör skiftet – Den är underlag; fördelningen sker genom arvskifte.\n\n4. Glömmer besiktning – Ange om värderingsmannen får besiktiga på plats.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Vem kan utses till testamentsexekutor?",
-        "answer": "En myndig och rättskapabel person, ofta en familjemedlem, advokat eller revisor. Personen ska kunna ta uppdraget utan jävsproblem."
+        "question": "Varför värdera konst i ett dödsbo?",
+        "answer": "En oberoende värdering ger underlag för bouppteckning och en rättvis fördelning vid arvskiftet."
       },
       {
-        "question": "Måste bouppteckning göras?",
-        "answer": "Ja, vid varje dödsfall ska bouppteckning upprättas inom 3 månader och lämnas till Skatteverket inom 4 månader."
+        "question": "Avgör värderingen hur arvet fördelas?",
+        "answer": "Nej. Värderingen är ett underlag; fördelningen sker genom arvskifte där delägarna är överens eller med skiftesman vid tvist."
       },
       {
-        "question": "Vem är dödsbodelägare?",
-        "answer": "Make/maka, sambo med gemensamma barn, barn (bröstarvingar) och eventuella testamentstagare. Universella testamentstagare räknas också in."
+        "question": "Bör övriga delägare vara med?",
+        "answer": "Ja, en värdering bör ske i samråd med övriga dödsbodelägare."
       },
       {
-        "question": "Kan jag bestämma min egen begravning?",
-        "answer": "Ja, genom skriftliga önskemål i förväg. Det är inte bindande men respekteras vanligtvis av anhöriga."
+        "question": "Får värderingsmannen besiktiga föremålen?",
+        "answer": "Om fullmakten anger det. Ange om besiktning på plats ingår."
       },
       {
-        "question": "Hur länge gäller fullmakt för dödsboet?",
-        "answer": "Vanligen tills arvskiftet är slutfört och dödsboet upplöst."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, av den som utfärdat den, genom skriftligt meddelande."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=digitalt-dodsbo"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

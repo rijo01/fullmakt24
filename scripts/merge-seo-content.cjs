@@ -10,7 +10,16 @@ const path = require('path');
 
 const DIR = path.join(__dirname, '..', 'public', 'content', 'mallar');
 const LAST_UPDATED = '2026-05-29';
-const FORBIDDEN = [/juridiskt granskad/i, /\bBankID\b/, /accepteras av alla/i, /garanterat/i, /helt juridiskt bindande/i];
+// Catch FALSE marketing claims, not the mere word "BankID" (truthful warnings
+// that BankID/e-legitimation is personal and may not be shared are required).
+const FORBIDDEN = [
+  /juridiskt granskad/i,
+  /accepteras av alla/i,
+  /garanterat/i,
+  /helt juridiskt bindande/i,
+  /(signera|signering|underteckna|logga in|inloggning|legitimera dig)\s+(med\s+)?(mobilt\s+)?bankid/i,
+  /bankid[- ]?(inloggning|signering|verifiering)/i,
+];
 
 const batchPath = process.argv[2];
 if (!batchPath) { console.error('Provide batch file path'); process.exit(1); }

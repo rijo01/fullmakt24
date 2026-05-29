@@ -12,30 +12,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att begära åtkomst till den avlidnes Apple ID via Apples \"Legacy Contact\"-process. Krävs ofta även domstolsbeslut.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Saknar enhetlig svensk reglering. Tjänsteleverantörers villkor och internationella riktlinjer gäller parallellt.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Den här fullmakten gäller hantering av en avliden persons Apple ID och iCloud för dödsboets räkning. Det är viktigt att veta att tillgång till digitala konton efter ett dödsfall i hög grad styrs av tjänsteleverantörens egna villkor, inte av en enhetlig svensk lag.\n\nMallen anger kontot, vem som företräder dödsboet och vad som ska göras. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Använd dokumentet tillsammans med dödsfallsintyg och Apples egen process för avlidnas konton.",
+    "legalValidity": "Det saknas en enhetlig svensk lag som ger anhöriga rätt till en avlidens digitala konton. Dödsboet förvaltas av dödsbodelägarna enligt ärvdabalken (1958:637), och en fullmakt mellan delägarna bygger på avtalslagen (1915:218) 2 kap. Vad som faktiskt kan göras med kontot avgörs av Apples användarvillkor och deras särskilda rutiner för avlidnas konton. Dödsfallsintyg och eventuellt domstolsbeslut kan krävas.",
+    "howToGuide": "Steg 1: Ange kontoinnehavarens (den avlidnes) namn och personnummer.\nSteg 2: Ange den e-postadress som är kopplad till Apple ID.\nSteg 3: Fyll i den företrädande personens namn, personnummer och relation till den avlidne.\nSteg 4: Ange vad som ska göras – stänga kontot, hämta innehåll eller annat.\nSteg 5: Samla dödsfallsintyg och eventuellt bevis på att du företräder dödsboet.\nSteg 6: Skriv under och följ Apples process för avlidnas konton.",
+    "commonMistakes": "1. Tror att en fullmakt ensam räcker – Apples egna villkor och rutiner styr vad som kan göras.\n\n2. Glömmer dödsfallsintyg – Tjänsteleverantörer kräver normalt bevis på dödsfallet.\n\n3. Försöker använda den avlidnes inloggning – Använd plattformens officiella process i stället.\n\n4. Otydligt vad som ska göras – Ange om kontot ska stängas eller om innehåll ska hämtas.\n\n5. Saknar datum och underskrift – Dokumentet är ogiltigt utan detta.",
     "faq": [
       {
-        "question": "Accepterar Google eller Apple svenska fullmakter?",
-        "answer": "Internationella tjänster har egna processer. Fullmakten är ett komplement – men de kan kräva engelsk översättning och dödsfallsintyg."
+        "question": "Får jag tillgång till en avlidens Apple ID?",
+        "answer": "Det styrs av Apples egna villkor och rutiner för avlidnas konton. Det finns ingen enhetlig svensk lag som ger automatisk rätt."
       },
       {
-        "question": "Vad händer med en avliden persons konto?",
-        "answer": "Många tjänster erbjuder en \"legacy\"-process. Fullmakt och dödsfallsintyg krävs ofta. Vissa konton raderas automatiskt efter inaktivitet."
+        "question": "Vad behöver jag visa?",
+        "answer": "Normalt dödsfallsintyg och bevis på att du företräder dödsboet, samt det som Apple efterfrågar."
       },
       {
-        "question": "Kan jag ge ombud rätt att se min mejl?",
-        "answer": "Ja, om det anges i fullmakten. Notera att tjänsteleverantörens egna regler också gäller och kan kräva extra verifiering."
+        "question": "Kan jag bara logga in med den avlidnes lösenord?",
+        "answer": "Det avråds. Använd plattformens officiella process för avlidnas konton."
       },
       {
-        "question": "Behövs översättning?",
-        "answer": "För utländska tjänster: ja, en auktoriserad översättning till engelska rekommenderas starkt."
+        "question": "Vem förvaltar den avlidnes tillgångar?",
+        "answer": "Dödsboet, som förvaltas av dödsbodelägarna enligt ärvdabalken."
       },
       {
-        "question": "Hur lång tid tar det att avsluta ett digitalt konto?",
-        "answer": "Från några dagar till flera månader beroende på leverantör. Google har en särskild \"Inactive Account Manager\"-process."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, av den som utfärdat den, genom skriftligt meddelande."
       }
     ],
     "relatedSearchTerms": [
@@ -62,5 +62,5 @@
       "href": "/mallar?category=digitalt-dodsbo"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

@@ -12,30 +12,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att administrera AWS, Azure, Google Cloud eller andra molntjänster för företagets räkning – inklusive användarhantering, fakturering och säkerhetskonfiguration.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Regleras av aktiebolagslagen (2005:551) och prokuralagen (1974:158). Behörig företrädare ska utfärda fullmakten.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för företagets molntjänster ger IT-personal eller ett ombud rätt att administrera bolagets molntjänster, exempelvis konton, lagring och abonnemang. Det tydliggör vem som får agera för bolagets räkning gentemot leverantören.\n\nMallen anger bolaget, ombudet och vilka befogenheter som omfattas. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att hanteringen även styrs av leverantörens villkor och av dataskyddsreglerna när personuppgifter behandlas.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap., och behörigheten att företräda bolaget följer av aktiebolagslagen (2005:551) eller motsvarande regler för bolagsformen. Molntjänstleverantörens egna villkor styr administrationen. När molntjänsten behandlar personuppgifter gäller dataskyddsförordningen (GDPR), och ett personuppgiftsbiträdesavtal kan krävas med leverantören.",
+    "howToGuide": "Steg 1: Ange bolagets namn och organisationsnummer.\nSteg 2: Ange den behöriga företrädare som utfärdar fullmakten och dennes roll.\nSteg 3: Fyll i ombudets eller IT-personalens namn och uppgifter.\nSteg 4: Ange vilka tjänster och befogenheter fullmakten omfattar.\nSteg 5: Ange en giltighetstid och eventuella begränsningar.\nSteg 6: Skriv under och kontrollera leverantörens villkor och eventuella dataskyddskrav.",
+    "commonMistakes": "1. Utfärdas av obehörig – Den som ger fullmakten måste vara behörig att företräda bolaget.\n\n2. För breda befogenheter – Avgränsa till de tjänster och åtgärder som behövs.\n\n3. Glömmer dataskyddet – Vid behandling av personuppgifter gäller GDPR och eventuellt biträdesavtal.\n\n4. Bortser från leverantörens villkor – Leverantörens egna villkor styr administrationen.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Vem får utfärda fullmakt för ett aktiebolag?",
-        "answer": "Endast styrelseledamot, VD eller annan firmatecknare har rätt att utfärda fullmakt för bolagets räkning."
+        "question": "Vem får utfärda fullmakten?",
+        "answer": "En behörig företrädare för bolaget, exempelvis enligt registrerad firmateckning eller styrelsebeslut."
       },
       {
-        "question": "Behöver fullmakten registreras hos Bolagsverket?",
-        "answer": "Generellt inte, men vissa typer av fullmakter (t.ex. prokura) ska registreras enligt prokuralagen."
+        "question": "Gäller GDPR för molntjänsten?",
+        "answer": "Ja, när personuppgifter behandlas gäller dataskyddsförordningen, och ett personuppgiftsbiträdesavtal kan krävas."
       },
       {
-        "question": "Kan fullmakten gälla flera år?",
-        "answer": "Ja. Företagsfullmakter gäller ofta tillsvidare eller flera år. Specificera dock alltid en tidsgräns för säkerhets skull."
+        "question": "Kan IT-personal administrera tjänsterna?",
+        "answer": "Ja, inom ramen för fullmakten och leverantörens villkor."
       },
       {
-        "question": "Hur återkallas en företagsfullmakt?",
-        "answer": "Beslut om återkallelse fattas av samma organ som utfärdade fullmakten. Skriftlig återkallelse skickas till ombudet och berörda parter."
+        "question": "Bör befogenheterna begränsas?",
+        "answer": "Ja, avgränsa till de tjänster och åtgärder som faktiskt behövs."
       },
       {
-        "question": "Gäller fullmakten vid VD-byte?",
-        "answer": "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, genom att meddela leverantören och ombudet skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -62,5 +62,5 @@
       "href": "/mallar?category=digitalt-dodsbo"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

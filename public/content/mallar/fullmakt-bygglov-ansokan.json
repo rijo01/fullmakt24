@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet (arkitekt, byggfirma) rätt att lämna in bygglovsansökan, kommunicera med byggnadsnämnden och fatta beslut om mindre justeringar.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Plan- och bygglagen (2010:900).",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för bygglov ger en arkitekt, byggföretag eller annat ombud rätt att ansöka om bygglov för din räkning och sköta kontakten med kommunens byggnadsnämnd. Det är vanligt att den som projekterar bygget även hanterar bygglovsärendet.\n\nMallen anger fastigheten, ombudet och vad ansökan avser. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att byggnadsnämnden gör en egen prövning och kan begära kompletteringar.",
+    "legalValidity": "Bygglov regleras av plan- och bygglagen (2010:900) och prövas av kommunens byggnadsnämnd. Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. och ger ombudet rätt att ansöka och företräda dig i ärendet. Byggnadsnämnden gör en egen prövning mot bland annat detaljplan och kan begära kompletteringar. Fastighetsägarens uppgifter och rådighet över fastigheten är centrala i prövningen.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fastighetsägare och fullmaktsgivare – namn, personnummer och adress.\nSteg 2: Fyll i ombudets namn och uppgifter, t.ex. arkitekt eller byggföretag.\nSteg 3: Ange fastighetsbeteckning och vad ansökan avser.\nSteg 4: Beskriv vad ombudet får göra – ansöka, komplettera, ta emot beslut och eventuellt överklaga.\nSteg 5: Ange en giltighetstid.\nSteg 6: Skriv under och lämna fullmakten till byggnadsnämnden.",
+    "commonMistakes": "1. Otydlig fastighet – Ange fastighetsbeteckning så att ärendet kopplas rätt.\n\n2. Oklart vad ansökan avser – Beskriv åtgärden, t.ex. tillbyggnad eller nybyggnad.\n\n3. Glömmer rätten att överklaga – Ange om ombudet får ta emot beslut och överklaga.\n\n4. Bortser från detaljplanen – Byggnadsnämnden prövar mot bland annat gällande detaljplan.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Måste fullmakten bevittnas?",
-        "answer": "Det är inte ett lagkrav men rekommenderas starkt. Två vittnen som inte är jäviga gör fullmakten lättare att få godkänd av motparten."
+        "question": "Kan en arkitekt söka bygglov åt mig?",
+        "answer": "Ja. Med en fullmakt kan en arkitekt eller byggföretag ansöka och sköta kontakten med byggnadsnämnden."
       },
       {
-        "question": "Hur återkallar jag fullmakten?",
-        "answer": "Meddela fullmaktshavaren skriftligt och informera berörda parter (bank, myndighet etc.). Fullmakten upphör omedelbart."
+        "question": "Vem beslutar om bygglov?",
+        "answer": "Kommunens byggnadsnämnd, som prövar ärendet enligt plan- och bygglagen och gällande detaljplan."
       },
       {
-        "question": "Vad händer vid dödsfall?",
-        "answer": "En vanlig fullmakt upphör automatiskt vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna."
+        "question": "Kan ombudet överklaga ett avslag?",
+        "answer": "Om fullmakten omfattar det. Ange uttryckligen om ombudet får ta emot och överklaga beslut."
       },
       {
-        "question": "Kan ombudet ge fullmakten vidare?",
-        "answer": "Bara om det uttryckligen anges. Som standard har ombudet inte rätt att utse en annan person (substitution)."
+        "question": "Vad krävs i ansökan?",
+        "answer": "Normalt ritningar och uppgifter om åtgärden. Byggnadsnämnden kan begära kompletteringar."
       },
       {
-        "question": "Behöver fullmakten registreras?",
-        "answer": "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, genom att meddela byggnadsnämnden och ombudet skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=boende-vardag"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

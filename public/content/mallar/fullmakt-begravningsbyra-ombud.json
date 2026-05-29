@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att teckna avtal med begravningsbyrå, välja kista, blommor, ceremoni och hantera fakturering. Bör utfärdas av samtliga dödsbodelägare.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Begravningslagen (1990:1144).",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för begravningsbyrå ger en anhörig rätt att teckna avtal med en begravningsbyrå för dödsboets räkning och beställa de tjänster som behövs för begravningen.\n\nMallen anger den avlidne, vem som företräder dödsboet och vad som får beställas. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att kostnaderna belastar dödsboet och att större beslut bör förankras med övriga dödsbodelägare.",
+    "legalValidity": "Begravningsverksamheten regleras av begravningslagen (1990:1144), och dödsboet förvaltas av dödsbodelägarna enligt ärvdabalken (1958:637). En fullmakt enligt avtalslagen (1915:218) 2 kap. kan ge en anhörig rätt att teckna avtal med begravningsbyrån för dödsboets räkning. Begravningskostnaderna prioriteras normalt bland dödsboets utgifter, men större beslut bör förankras med övriga delägare.",
+    "howToGuide": "Steg 1: Ange den avlidnes namn och personnummer.\nSteg 2: Ange den som utfärdar fullmakten och dennes roll i dödsboet.\nSteg 3: Fyll i den anhöriges namn, personnummer och relation till den avlidne.\nSteg 4: Beskriv vad den anhörige får beställa och eventuell kostnadsram.\nSteg 5: Ange önskemål från den avlidne och eventuell budget.\nSteg 6: Skriv under och lämna fullmakten till begravningsbyrån.",
+    "commonMistakes": "1. Ingen kostnadsram – Ange gärna en budget; kostnaderna belastar dödsboet.\n\n2. Förankrar inte med delägare – Större beslut bör stämmas av med övriga dödsbodelägare.\n\n3. Bortser från önskemål – Den avlidnes önskemål ska så långt möjligt respekteras.\n\n4. Otydligt uppdrag – Ange vilka tjänster som får beställas.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Vem kan utses till testamentsexekutor?",
-        "answer": "En myndig och rättskapabel person, ofta en familjemedlem, advokat eller revisor. Personen ska kunna ta uppdraget utan jävsproblem."
+        "question": "Vem betalar begravningsbyrån?",
+        "answer": "Kostnaderna belastar dödsboet och prioriteras normalt bland boets utgifter."
       },
       {
-        "question": "Måste bouppteckning göras?",
-        "answer": "Ja, vid varje dödsfall ska bouppteckning upprättas inom 3 månader och lämnas till Skatteverket inom 4 månader."
+        "question": "Bör jag stämma av med andra delägare?",
+        "answer": "Ja, större beslut bör förankras med övriga dödsbodelägare."
       },
       {
-        "question": "Vem är dödsbodelägare?",
-        "answer": "Make/maka, sambo med gemensamma barn, barn (bröstarvingar) och eventuella testamentstagare. Universella testamentstagare räknas också in."
+        "question": "Kan jag ange en budget?",
+        "answer": "Ja, ange gärna en kostnadsram för vad den anhörige får beställa."
       },
       {
-        "question": "Kan jag bestämma min egen begravning?",
-        "answer": "Ja, genom skriftliga önskemål i förväg. Det är inte bindande men respekteras vanligtvis av anhöriga."
+        "question": "Måste den avlidnes önskemål följas?",
+        "answer": "Önskemålen ska så långt möjligt respekteras enligt begravningslagen."
       },
       {
-        "question": "Hur länge gäller fullmakt för dödsboet?",
-        "answer": "Vanligen tills arvskiftet är slutfört och dödsboet upplöst."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, av den som utfärdat den, genom skriftligt meddelande."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=digitalt-dodsbo"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

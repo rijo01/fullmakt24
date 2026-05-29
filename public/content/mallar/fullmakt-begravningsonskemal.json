@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Skriftliga önskemål om begravningsform, ceremoni, gravplats och eventuella sånger eller texter. Inte juridiskt bindande men respekteras vanligen av anhöriga.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Begravningslagen (1990:1144) reglerar begravning. Önskemål är ej bindande men har stark moralisk tyngd.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Begravningsönskemål är ett dokument där du i förväg beskriver hur du vill att din egen begravning ska ordnas, exempelvis val mellan jordbegravning och kremering, ceremoni och andra önskemål. Det är ett stöd för dina anhöriga och underlättar deras beslut.\n\nMallen låter dig ange dina önskemål och vem du vill ska ansvara för att de förs fram. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Önskemålen är inte ett juridiskt bindande testamente, men din vilja om gravsättning ska så långt möjligt respekteras.",
+    "legalValidity": "Begravningsverksamheten regleras av begravningslagen (1990:1144), enligt vilken den avlidnes önskemål om gravsättning och kremering så långt möjligt ska respekteras. Begravningsönskemål är inte ett testamente och fördelar inte egendom – för det krävs ett testamente enligt ärvdabalken (1958:637) med dess formkrav. Önskemålen ger framför allt vägledning för dina anhöriga.",
+    "howToGuide": "Steg 1: Ange ditt fullständiga namn och personnummer.\nSteg 2: Ange dina önskemål om gravsättning – jordbegravning eller kremering.\nSteg 3: Beskriv önskemål om ceremoni, plats, musik och eventuell trosinriktning.\nSteg 4: Ange vem du vill ska ansvara för att önskemålen förs fram.\nSteg 5: Datera och skriv under.\nSteg 6: Berätta för dina anhöriga var dokumentet finns.",
+    "commonMistakes": "1. Tror att det fördelar egendom – Önskemålen är inte ett testamente; egendom fördelas genom testamente.\n\n2. Ingen känner till dokumentet – Berätta för anhöriga var det finns.\n\n3. För vaga önskemål – Var konkret om gravsättning och ceremoni.\n\n4. Utser ingen ansvarig – Ange vem som ska föra fram din vilja.\n\n5. Glömmer att uppdatera – Se över dokumentet om din vilja ändras.",
     "faq": [
       {
-        "question": "Vem kan utses till testamentsexekutor?",
-        "answer": "En myndig och rättskapabel person, ofta en familjemedlem, advokat eller revisor. Personen ska kunna ta uppdraget utan jävsproblem."
+        "question": "Är begravningsönskemål bindande?",
+        "answer": "Din vilja om gravsättning och kremering ska så långt möjligt respekteras enligt begravningslagen, men dokumentet är inte ett testamente."
       },
       {
-        "question": "Måste bouppteckning göras?",
-        "answer": "Ja, vid varje dödsfall ska bouppteckning upprättas inom 3 månader och lämnas till Skatteverket inom 4 månader."
+        "question": "Kan jag fördela mina ägodelar i dokumentet?",
+        "answer": "Nej. För att fördela egendom krävs ett testamente enligt ärvdabalkens formkrav."
       },
       {
-        "question": "Vem är dödsbodelägare?",
-        "answer": "Make/maka, sambo med gemensamma barn, barn (bröstarvingar) och eventuella testamentstagare. Universella testamentstagare räknas också in."
+        "question": "Vem ska känna till önskemålen?",
+        "answer": "Dina närstående, så att de kan föra fram din vilja när det behövs."
       },
       {
-        "question": "Kan jag bestämma min egen begravning?",
-        "answer": "Ja, genom skriftliga önskemål i förväg. Det är inte bindande men respekteras vanligtvis av anhöriga."
+        "question": "Behöver det bevittnas?",
+        "answer": "Det är inget krav för önskemål, men tydlighet och att anhöriga känner till det är viktigast."
       },
       {
-        "question": "Hur länge gäller fullmakt för dödsboet?",
-        "answer": "Vanligen tills arvskiftet är slutfört och dödsboet upplöst."
+        "question": "Kan jag ändra mig?",
+        "answer": "Ja, när som helst. Upprätta ett nytt dokument och informera dina anhöriga."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=digitalt-dodsbo"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

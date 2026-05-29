@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att rösta åt dig vid samfällighetsföreningens stämma – vanligt vid gemensamhetsanläggningar (vägar, vatten, badplatser).\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Lag (1973:1150) om förvaltning av samfälligheter.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för andelar i samfällighet ger ett ombud rätt att företräda dig och rösta för dina andelar vid en samfällighetsförenings stämma. Det är praktiskt när du inte själv kan närvara men vill att din röst räknas.\n\nMallen anger föreningen, ombudet och eventuella röstinstruktioner. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att föreningens stadgar kan innehålla regler om ombud och om hur många medlemmar ett ombud får företräda.",
+    "legalValidity": "Samfällighetsföreningar regleras av lagen (1973:1150) om förvaltning av samfälligheter. En medlem kan normalt företrädas av ombud vid föreningsstämman, och fullmakten bygger på avtalslagen (1915:218) 2 kap. Föreningens stadgar kan innehålla begränsningar, exempelvis hur många medlemmar ett ombud får företräda. Kontrollera stadgarna och eventuella krav på skriftlig fullmakt.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som medlem och fullmaktsgivare – namn, personnummer och adress.\nSteg 2: Fyll i ombudets namn och personnummer.\nSteg 3: Ange vilken samfällighetsförening och vilken stämma fullmakten gäller.\nSteg 4: Ange eventuella röstinstruktioner.\nSteg 5: Datera och ange en giltighetstid.\nSteg 6: Skriv under och lämna fullmakten enligt föreningens anvisningar.",
+    "commonMistakes": "1. Missar stadgarnas regler – Stadgarna kan begränsa hur många medlemmar ett ombud får företräda.\n\n2. Otydlig stämma – Ange vilken stämma fullmakten gäller.\n\n3. Glömmer datering – En stämmofullmakt bör vara daterad.\n\n4. Saknar röstinstruktioner – Ange gärna hur ombudet ska rösta i viktiga frågor.\n\n5. Glömmer underskrift – Fullmakten ska vara skriftlig och undertecknad.",
     "faq": [
       {
-        "question": "Måste fullmakten bevittnas?",
-        "answer": "Det är inte ett lagkrav men rekommenderas starkt. Två vittnen som inte är jäviga gör fullmakten lättare att få godkänd av motparten."
+        "question": "Kan jag rösta via ombud i samfälligheten?",
+        "answer": "Ja, normalt kan en medlem företrädas av ombud vid stämman. Kontrollera föreningens stadgar."
       },
       {
-        "question": "Hur återkallar jag fullmakten?",
-        "answer": "Meddela fullmaktshavaren skriftligt och informera berörda parter (bank, myndighet etc.). Fullmakten upphör omedelbart."
+        "question": "Hur många kan ett ombud företräda?",
+        "answer": "Stadgarna kan begränsa hur många medlemmar ett ombud får företräda. Kontrollera vad som gäller i din förening."
       },
       {
-        "question": "Vad händer vid dödsfall?",
-        "answer": "En vanlig fullmakt upphör automatiskt vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna."
+        "question": "Måste fullmakten vara skriftlig?",
+        "answer": "En skriftlig, daterad och undertecknad fullmakt är att rekommendera och kan krävas enligt stadgarna."
       },
       {
-        "question": "Kan ombudet ge fullmakten vidare?",
-        "answer": "Bara om det uttryckligen anges. Som standard har ombudet inte rätt att utse en annan person (substitution)."
+        "question": "Kan jag ge röstinstruktioner?",
+        "answer": "Ja, du kan ange hur ombudet ska rösta i olika frågor."
       },
       {
-        "question": "Behöver fullmakten registreras?",
-        "answer": "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar."
+        "question": "Kan jag återkalla fullmakten?",
+        "answer": "Ja, genom att meddela ombudet och föreningen skriftligt före stämman."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=digitalt-dodsbo"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

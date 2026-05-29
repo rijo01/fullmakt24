@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Utser en testamentsexekutor (ofta advokat eller familjemedlem) som ansvarar för att förvalta dödsboet och verkställa testamentet enligt din vilja.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Ärvdabalken (1958:637) 19 kap. om testamentsexekutor.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Det här dokumentet används för att utse en testamentsexekutor, alltså den person som ska se till att ett testamente verkställs och förvalta dödsboet enligt den avlidnes vilja. En testamentsexekutor utses normalt i själva testamentet.\n\nMallen anger den avlidne eller testatorn, den utsedda personen och uppdragets omfattning. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att förordnandet om testamentsexekutor får sin fulla verkan genom ett giltigt testamente.",
+    "legalValidity": "Testamentsexekutor regleras av ärvdabalken (1958:637), främst 19 kap. En testamentsexekutor utses normalt genom förordnande i ett testamente och träder då i dödsbodelägarnas ställe vid förvaltningen av boet. Ett testamente ska enligt ärvdabalken vara skriftligt och bevittnat av två vittnen. Det här dokumentet kan tydliggöra vem du önskar utse, men förordnandet får sin fulla verkan genom ett giltigt testamente.",
+    "howToGuide": "Steg 1: Ange testatorns (eller den avlidnes) namn och personnummer.\nSteg 2: Ange den som utfärdar dokumentet och dennes roll.\nSteg 3: Fyll i den utsedda testamentsexekutorns namn och uppgifter.\nSteg 4: Beskriv uppdragets omfattning – förvalta boet och verkställa testamentet.\nSteg 5: Säkerställ att förordnandet finns i ett giltigt, bevittnat testamente.\nSteg 6: Skriv under och förvara handlingarna säkert.",
+    "commonMistakes": "1. Förordnar inte i testamente – En testamentsexekutor utses normalt genom ett giltigt testamente.\n\n2. Glömmer testamentets formkrav – Ett testamente ska vara skriftligt och bevittnat av två vittnen.\n\n3. Otydligt uppdrag – Beskriv vad exekutorn ska göra och hur långt uppdraget sträcker sig.\n\n4. Frågar inte den utsedda personen – Säkerställ att personen vill åta sig uppdraget.\n\n5. Saknar datum och underskrift – Dokumentet är ogiltigt utan detta.",
     "faq": [
       {
-        "question": "Vem kan utses till testamentsexekutor?",
-        "answer": "En myndig och rättskapabel person, ofta en familjemedlem, advokat eller revisor. Personen ska kunna ta uppdraget utan jävsproblem."
+        "question": "Vad gör en testamentsexekutor?",
+        "answer": "Förvaltar dödsboet och ser till att testamentet verkställs enligt den avlidnes vilja, enligt ärvdabalken 19 kap."
       },
       {
-        "question": "Måste bouppteckning göras?",
-        "answer": "Ja, vid varje dödsfall ska bouppteckning upprättas inom 3 månader och lämnas till Skatteverket inom 4 månader."
+        "question": "Hur utses en testamentsexekutor?",
+        "answer": "Normalt genom ett förordnande i ett giltigt, bevittnat testamente."
       },
       {
-        "question": "Vem är dödsbodelägare?",
-        "answer": "Make/maka, sambo med gemensamma barn, barn (bröstarvingar) och eventuella testamentstagare. Universella testamentstagare räknas också in."
+        "question": "Träder exekutorn i delägarnas ställe?",
+        "answer": "Ja, vid förvaltningen av boet träder en testamentsexekutor normalt i dödsbodelägarnas ställe."
       },
       {
-        "question": "Kan jag bestämma min egen begravning?",
-        "answer": "Ja, genom skriftliga önskemål i förväg. Det är inte bindande men respekteras vanligtvis av anhöriga."
+        "question": "Måste den utsedda acceptera uppdraget?",
+        "answer": "Säkerställ att personen vill åta sig uppdraget; det är ett ansvarsfullt uppdrag."
       },
       {
-        "question": "Hur länge gäller fullmakt för dödsboet?",
-        "answer": "Vanligen tills arvskiftet är slutfört och dödsboet upplöst."
+        "question": "Kan förordnandet ändras?",
+        "answer": "Ja, genom att upprätta ett nytt testamente med samma formkrav."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=digitalt-dodsbo"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }
