@@ -1,30 +1,33 @@
 {
-  "id": 121,
   "slug": "medgivande-idrottsstavling-utomlands",
-  "name": "Medgivande för idöttstävling utomlands",
-  "category": "Förening, Skola & Fritid",
-  "categorySlug": "forening-skola",
-  "description": "Medgivande för att deltaga i utlandstävling.",
-  "longDescription": "Ett medgivande för utlandstävling tillåter ett barn att deltaga i idöttstävling utomlands.",
-  "badge": "gratis",
-  "usageCount": 543,
-  "fields": [
-    { "id": "givare_namn", "label": "Föräldrens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
-    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
-    { "id": "barn_namn", "label": "Barnets namn", "type": "text", "placeholder": "Erik Andersson", "required": true, "group": "detaljer" },
-    { "id": "idrott", "label": "Idört", "type": "select", "options": ["Fotboll", "Ishockey", "Friidrott", "Segling", "Annat"], "required": true, "group": "detaljer" },
-    { "id": "land", "label": "Land", "type": "text", "placeholder": "Tyskland", "required": true, "group": "detaljer" },
-    { "id": "datum", "label": "Tävlingsdatum", "type": "date", "required": true, "group": "detaljer" },
-    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" }
+  "seo": {
+    "title": "Medgivande vid idrottstävling utomlands – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Medgivande för barn att delta i idrottstävling utomlands – samtycke från vårdnadshavare och behörighet för ledare. Utformad enligt svensk lag. Ladda ner som PDF.",
+    "h1": "Medgivande vid idrottstävling utomlands – Mall & Guide 2026",
+    "keywords": ["medgivande idrottstävling utomlands", "barn tävling utomlands samtycke", "föräldramedgivande tävlingsresa", "medgivande utlandsresa barn", "tävlingsresa medgivande mall"]
+  },
+  "content": {
+    "introduction": "Ett medgivande för idrottstävling utomlands är ett dokument där vårdnadshavarna intygar att barnet får följa med på en tävlingsresa utomlands och anger vem som ansvarar för barnet under resan. När ett barn reser utan sina föräldrar – exempelvis tillsammans med en idrottsförening, lagledare eller annan vuxen – behöver både arrangören och gränskontroller ofta ett skriftligt samtycke.\n\nMallen anger resmål, datum, vem som är ansvarig ledare och viktig information som allergier, mediciner och nödkontakter. Du fyller i uppgifterna, laddar ner dokumentet som PDF och skickar med det på resan tillsammans med barnets pass.",
+    "legalValidity": "Vid gemensam vårdnad fattar vårdnadshavarna beslut tillsammans enligt föräldrabalken (1949:381) 6 kap., och en utlandsresa kräver normalt båda vårdnadshavarnas samtycke. Medgivandet är ett intyg om detta samtycke och utgör underlag för arrangören och vid gränskontroll. Det ersätter inte barnets pass eller eventuellt visum, och vissa länder kan ha egna krav på dokumentation för barn som reser utan sina föräldrar.",
+    "howToGuide": "Steg 1: Ange båda vårdnadshavarnas namn, personnummer och kontaktuppgifter.\nSteg 2: Fyll i barnets fullständiga namn, personnummer och passnummer.\nSteg 3: Ange resmål, tävlingens namn, arrangör och exakta resdatum.\nSteg 4: Namnge den ansvariga ledaren eller vuxna som ansvarar för barnet under resan.\nSteg 5: Fyll i medicinsk information – allergier, mediciner, försäkring och nödkontakt.\nSteg 6: Ange vad ledaren får besluta om vid sjukdom eller olycka.\nSteg 7: Låt båda vårdnadshavarna skriva under och skicka med dokumentet på resan.",
+    "commonMistakes": "1. Bara en vårdnadshavare skriver under – Vid gemensam vårdnad krävs normalt båda underskrifterna för en utlandsresa.\n\n2. Saknar passuppgifter – Ange barnets passnummer; vissa gränskontroller efterfrågar det tillsammans med medgivandet.\n\n3. Otydlig ansvarig ledare – Namnge vem som ansvarar för barnet, annars vet arrangören inte vem som har behörighet.\n\n4. Glömmer medicinsk information – Allergier, mediciner och försäkring bör framgå så att ledaren kan agera rätt.\n\n5. Kollar inte landets krav – Vissa länder har särskilda krav för barn som reser utan föräldrar; kontrollera i förväg.",
+    "faq": [
+      {"question": "Krävs båda vårdnadshavarnas underskrift?", "answer": "Vid gemensam vårdnad ja, eftersom en utlandsresa normalt kräver båda vårdnadshavarnas samtycke. Vid ensam vårdnad räcker den vårdnadshavarens underskrift."},
+      {"question": "Ersätter medgivandet barnets pass?", "answer": "Nej. Barnet behöver giltigt pass och eventuellt visum. Medgivandet är ett komplement som visar att föräldrarna samtyckt till resan."},
+      {"question": "Vad ska stå om medicinsk vård?", "answer": "Ange allergier, mediciner, försäkringsuppgifter och vad ledaren får besluta vid sjukdom eller olycka, samt en nödkontakt."},
+      {"question": "Behöver dokumentet vara på engelska?", "answer": "Det kan vara klokt att ha en engelsk version eller översättning vid resa till länder där svenska inte förstås, särskilt vid gränskontroll."},
+      {"question": "Vem ska ha dokumentet under resan?", "answer": "Den ansvariga ledaren bör ha originalet eller en kopia tillgänglig, och en kopia kan finnas hos barnet."}
+    ],
+    "relatedSearchTerms": ["medgivande idrottstävling utomlands", "föräldramedgivande tävlingsresa", "medgivande utlandsresa barn", "medgivande tävlingsresa pdf", "medgivande idrottstävling mall gratis"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Alla mallar", "href": "/mallar"},
+    {"text": "Mallar i Föräldrar & Barn", "href": "/mallar?category=foraldrar-barn"}
   ],
-  "faq": [
-    { "q": "Vad behövs för att resa utomlands?", "a": "Pass, försäkring och detta medgivande från båda föräldrarna." },
-    { "q": "Vad kostar tävlingen?", "a": "Det varierar enormt - från 1000 kr till 20 000+ beroende på tävlingen." },
-    { "q": "Behöver båda föräldrarna godkänna?", "a": "Ja, normalt båda vårdnadshavare måste skriva under." },
-    { "q": "Vad gör jag vid olycka?", "a": "Reseledningen bör ha försäkring och kontakter för nödsituationer." },
-    { "q": "Kan medgivandet dras tillbaka?", "a": "Ja, men redan betalda resor kan få avbeställningsavgift." }
-  ],
-  "relatedIds": [50, 60, 71],
-  "legalInfo": "Detta medgivande måste undertecknas av båda vårdnadshavare.",
-  "keywords": ["idört", "tävling", "barn", "utomland", "resor", "medgivande"]
+  "lastUpdated": "2026-05-29"
 }

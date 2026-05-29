@@ -1,0 +1,33 @@
+{
+  "slug": "medgivande-tavling",
+  "seo": {
+    "title": "Medgivande vid tävling – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Medgivande för barn att delta i tävling – samtycke från vårdnadshavare till förening eller arrangör. Utformad enligt svensk lag. Klar på 3 minuter – ladda ner som PDF.",
+    "h1": "Medgivande vid tävling – Mall & Guide 2026",
+    "keywords": ["medgivande tävling", "föräldramedgivande tävling", "barn tävling samtycke", "tävlingsmedgivande mall", "medgivande förening tävling"]
+  },
+  "content": {
+    "introduction": "Ett medgivande vid tävling är ett dokument där vårdnadshavarna intygar att barnet får delta i en tävling som anordnas av en förening, skola eller annan arrangör. Det kan gälla idrottstävlingar, kulturtävlingar, e-sport eller andra evenemang där arrangören vill ha föräldrarnas samtycke innan barnet anmäls.\n\nMallen anger vilken tävling det gäller, datum och plats samt eventuellt samtycke till transport, fotografering och medicinsk vård. Du fyller i uppgifterna, laddar ner dokumentet som PDF och lämnar det till föreningen eller arrangören.",
+    "legalValidity": "Vid gemensam vårdnad fattar vårdnadshavarna beslut om barnet tillsammans enligt föräldrabalken (1949:381) 6 kap. Medgivandet är ett intyg om att vårdnadshavarna samtycker till barnets deltagande och fungerar som underlag för föreningen eller arrangören. Vid återkommande eller endagsverksamhet på hemorten kan ett medgivande från en vårdnadshavare räcka, men för mer ingripande beslut bör båda vara överens.",
+    "howToGuide": "Steg 1: Ange vårdnadshavarens (eller båda vårdnadshavarnas) namn, personnummer och kontaktuppgifter.\nSteg 2: Fyll i barnets fullständiga namn och personnummer.\nSteg 3: Ange tävlingens namn, arrangör, datum och plats.\nSteg 4: Markera vad du samtycker till – deltagande, transport, fotografering och eventuell publicering.\nSteg 5: Fyll i medicinsk information, allergier och en nödkontakt.\nSteg 6: Ange vad ledaren får besluta vid sjukdom eller olycka under tävlingen.\nSteg 7: Skriv under och lämna dokumentet till föreningen eller arrangören.",
+    "commonMistakes": "1. Saknar uppgift om transport – Ange om barnet får skjutsas av ledare eller andra föräldrar till och från tävlingen.\n\n2. Glömmer samtycke till foto – Många arrangörer publicerar bilder; ange om du samtycker eller inte.\n\n3. Ingen medicinsk information – Allergier, mediciner och nödkontakt bör framgå.\n\n4. Otydligt vilken tävling som avses – Ange namn, datum och plats så att medgivandet inte gäller mer än avsett.\n\n5. Glömmer underskrift – Dokumentet är ogiltigt utan datering och underskrift från vårdnadshavare.",
+    "faq": [
+      {"question": "Räcker det med en vårdnadshavares underskrift?", "answer": "För vardaglig tävlingsverksamhet på hemorten räcker det ofta. För mer ingripande beslut eller resor bör båda vårdnadshavarna vara överens."},
+      {"question": "Behöver jag ge samtycke till fotografering?", "answer": "Det är klokt att ta ställning. Många arrangörer fotograferar och publicerar bilder, och då bör ditt samtycke framgå av medgivandet."},
+      {"question": "Gäller medgivandet flera tävlingar?", "answer": "Bara om du anger det. Vill du täcka en hel säsong kan du skriva det uttryckligen, annars gäller det den angivna tävlingen."},
+      {"question": "Vad händer om barnet skadar sig?", "answer": "Ange en nödkontakt och vad ledaren får besluta vid sjukdom eller olycka, så att rätt åtgärder kan vidtas snabbt."},
+      {"question": "Kan föreningen kräva egen blankett?", "answer": "Ja, många föreningar har egna blanketter. Den här mallen täcker samma uppgifter och kan användas när det saknas en sådan."}
+    ],
+    "relatedSearchTerms": ["medgivande tävling", "föräldramedgivande tävling", "barn tävling samtycke", "medgivande tävling pdf", "medgivande tävling mall gratis"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Alla mallar", "href": "/mallar"},
+    {"text": "Mallar i Förening, Skola & Fritid", "href": "/mallar?category=forening-skola"}
+  ],
+  "lastUpdated": "2026-05-29"
+}

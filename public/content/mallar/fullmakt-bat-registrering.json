@@ -1,35 +1,33 @@
 {
-  "id": 30,
   "slug": "fullmakt-bat-registrering",
-  "name": "Fullmakt för båtregistrering",
-  "category": "Resa & Transport",
-  "categorySlug": "resa-transport",
-  "description": "Fullmakt för att registrera och hantera båt hos Sjöverket.",
-  "longDescription": "En fullmakt för båtregistrering ger någon annan befogenhet att registrera din båt hos Sjöverket eller att hantera ändringar i registreringen. Detta är praktiskt när du köper eller säljer en båt, eller när du behöver uppdatera registreringsinformation men inte kan göra det själv.",
-  "badge": "gratis",
-  "usageCount": 945,
-  "fields": [
-    { "id": "givare_namn", "label": "Båtägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
-    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
-    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
-    { "id": "bat_namn", "label": "Båtens namn", "type": "text", "placeholder": "Aurora", "required": true, "group": "detaljer" },
-    { "id": "bat_langd", "label": "Båtens längd (m)", "type": "text", "placeholder": "8,5", "required": true, "group": "detaljer" },
-    { "id": "bat_typ", "label": "Båttyp", "type": "select", "options": ["Motorbåt", "Segelåt", "Jetski", "Annan"], "required": true, "group": "detaljer" },
-    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
-    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
-    { "id": "havare_roll", "label": "Fullmakstagers roll", "type": "select", "options": ["Båtförsäljare", "Juridiskt ombud", "Båtägares representant", "Annat"], "required": true, "group": "havare" },
-    { "id": "omfang", "label": "Omfattning", "type": "select", "options": ["Ny registrering", "Ändringar av registrering", "Avregistrering", "All båthantering"], "required": true, "group": "detaljer" },
-    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
-    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  "seo": {
+    "title": "Fullmakt för båtregistrering – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Fullmakt för ombud att registrera eller avregistrera båt hos Transportstyrelsen. Utformad enligt svensk lag. Klar på 3 minuter – ladda ner som PDF.",
+    "h1": "Fullmakt för båtregistrering – Mall & Guide 2026",
+    "keywords": ["fullmakt båtregistrering", "registrera båt ombud", "fullmakt Transportstyrelsen båt", "avregistrera båt fullmakt", "fartygsregister fullmakt"]
+  },
+  "content": {
+    "introduction": "En fullmakt för båtregistrering ger ett ombud rätt att registrera, ändra eller avregistrera en båt åt dig hos Transportstyrelsen. Det är praktiskt när du själv inte kan sköta ärendet – exempelvis vid köp eller försäljning, dödsbo, eller när en mäklare eller varv hanterar registreringen.\n\nFullmakten anger vilken båt det gäller (namn, registrerings- eller skrovnummer) och exakt vilka åtgärder ombudet får utföra. Du fyller i uppgifterna, laddar ner dokumentet som PDF och lämnar det till ombudet som underlag i kontakten med myndigheten.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Registrering av fartyg hanteras av Transportstyrelsen och regleras främst genom sjölagen (1994:1009). Skyldigheten att registrera gäller i första hand större fartyg (skepp); för mindre fritidsbåtar är registrering oftast frivillig. Kontrollera vilka krav som gäller för just din båt och bifoga fullmakten till ansökan.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som båtägare och fullmaktsgivare – namn, personnummer och adress.\nSteg 2: Fyll i ombudets namn och personnummer samt relationen till dig.\nSteg 3: Identifiera båten med namn, skrov- eller registreringsnummer, fabrikat och byggår.\nSteg 4: Ange vilken åtgärd som avses – nyregistrering, ägarbyte, ändring av uppgifter eller avregistrering.\nSteg 5: Avgränsa behörigheten så att ombudet bara får göra det aktuella ärendet hos Transportstyrelsen.\nSteg 6: Skriv under fullmakten och bifoga den till ansökan, tillsammans med eventuella köpehandlingar.",
+    "commonMistakes": "1. Otydlig båtidentifikation – Saknas skrov- eller registreringsnummer kan ärendet inte handläggas.\n\n2. Fel åtgärd angiven – En fullmakt för registrering täcker inte automatiskt en avregistrering; ange exakt vad som avses.\n\n3. Saknar köpehandlingar – Vid ägarbyte krävs ofta köpekontrakt utöver fullmakten.\n\n4. För bred fullmakt – Ange enbart de åtgärder som behövs, så att ombudet inte ges onödigt vid behörighet.\n\n5. Glömmer datum och underskrift – En odaterad eller osignerad fullmakt godtas inte av myndigheten.",
+    "faq": [
+      {"question": "Vilka båtar måste registreras?", "answer": "Registreringsplikten gäller främst större fartyg (skepp). Mindre fritidsbåtar registreras ofta frivilligt. Kontrollera vad som gäller för din båt hos Transportstyrelsen."},
+      {"question": "Kan ombudet både köpa och registrera båten?", "answer": "Endast om fullmakten uttryckligen anger det. Registreringsfullmakten avser myndighetsärendet; köp bör regleras separat."},
+      {"question": "Behövs köpekontrakt vid ägarbyte?", "answer": "Ja, vid ägarbyte krävs normalt handlingar som styrker överlåtelsen utöver själva fullmakten."},
+      {"question": "Var lämnas fullmakten in?", "answer": "Fullmakten bifogas det ärende som lämnas till Transportstyrelsen. Kontrollera deras anvisningar för aktuell ärendetyp."},
+      {"question": "Hur länge gäller fullmakten?", "answer": "Den gäller tills den återkallas eller till angivet slutdatum. För ett enskilt registreringsärende räcker en kort giltighetstid."}
+    ],
+    "relatedSearchTerms": ["fullmakt båtregistrering", "registrera båt ombud", "fullmakt Transportstyrelsen båt", "fullmakt båt pdf", "fullmakt båtregistrering mall gratis"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Alla mallar", "href": "/mallar"},
+    {"text": "Mallar i Resa & Transport", "href": "/mallar?category=resa-transport"}
   ],
-  "faq": [
-    { "q": "Hur registrerar man en båt hos Sjöverket?", "a": "Du ansöker via Sjöverkets webbplats eller skickar ett registreringsformulär. En fullmakt för detta kan göra processen smidig om du inte kan göra det själv." },
-    { "q": "Vad kostar båtregistrering?", "a": "Registreringen hos Sjöverket är kostnadsfri, men båtförsäkring och fartygsavgifter kan krävas beroende på båtens typ." },
-    { "q": "Kan denna fullmakt användas vid båtförsäljning?", "a": "Ja, en båtförsäljare kan ofta kräva en fullmakt för att registrera båten hos Sjöverket när du säljer." },
-    { "q": "Behövs vittnen?", "a": "Två vittnen rekommenderas för att styrka fullmaktens äkthet, men inte alltid lagligt obligatoriskt." },
-    { "q": "Hur länge är registreringen giltig?", "a": "Båtregistreringen är giltig tills den aktivt avregistreras eller båten säljs till ny ägare." }
-  ],
-  "relatedIds": [39, 53, 62],
-  "legalInfo": "Denna fullmakt måste följa Sjöverkets krav och instruktioner. Kontakta Sjöverket direkt för deras procedurer.",
-  "keywords": ["båt", "registrering", "Sjöverket", "segelåt", "motorbåt", "fullmakt"]
+  "lastUpdated": "2026-05-29"
 }

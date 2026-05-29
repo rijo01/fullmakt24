@@ -1,35 +1,33 @@
 {
-  "id": 21,
   "slug": "fullmakt-hamta-ut-fordon",
-  "name": "Fullmakt att hämta ut fordon",
-  "category": "Resa & Transport",
-  "categorySlug": "resa-transport",
-  "description": "Fullmakt för att hämta ut annans fordon från verkstad eller parkering.",
-  "longDescription": "En fullmakt att hämta ut fordon är praktisk när du behöver ge någon annan behörighet att hämta din bil från verkstad, bilgarage, eller parkeringshus. Detta är en särskilt viktig dokument om du inte själv kan vara närvarande, eller om flera personer behöver kunna hämta fordonet i din avsaknad. Fullmakten bekräftar för verkstaden eller parkeringsbolaget att personen är auktoriserad att hämta fordonet på ditt vägnar.",
-  "badge": "gratis",
-  "usageCount": 4532,
-  "fields": [
-    { "id": "givare_namn", "label": "Fordonets ägare – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
-    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
-    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
-    { "id": "fordon_registreringsnummer", "label": "Fordonets registreringsnummer", "type": "text", "placeholder": "ABC 123", "required": true, "group": "detaljer" },
-    { "id": "fordon_typ", "label": "Fordonets typ", "type": "select", "options": ["Personbil", "Lastbil", "Motorcykel", "Husbil", "Traktor", "Annat"], "required": true, "group": "detaljer" },
-    { "id": "havare_namn", "label": "Fullmaktstagers namn", "type": "text", "placeholder": "Erik Eriksson", "required": true, "group": "havare" },
-    { "id": "havare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "havare" },
-    { "id": "havare_adress", "label": "Adress", "type": "address", "placeholder": "Lillgatan 5, 222 33 Göteborg", "required": false, "group": "havare" },
-    { "id": "andamal", "label": "Ändamål för hämtningen", "type": "textarea", "placeholder": "T.ex. att hämta bil från verkstad efter service", "required": true, "group": "detaljer" },
-    { "id": "plats_hämtning", "label": "Var fordonet hämtas", "type": "text", "placeholder": "Bengtssons Bil AB, Stockholm", "required": true, "group": "detaljer" },
-    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
-    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  "seo": {
+    "title": "Fullmakt att hämta ut fordon – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Fullmakt för att låta någon annan hämta ut ditt fordon från verkstad, parkering eller bärgare. Utformad enligt svensk lag. Klar på 3 minuter – ladda ner som PDF.",
+    "h1": "Fullmakt att hämta ut fordon – Mall & Guide 2026",
+    "keywords": ["fullmakt hämta fordon", "fullmakt hämta bil verkstad", "fullmakt hämta bil parkering", "hämta ut bil åt annan", "fullmakt fordon mall"]
+  },
+  "content": {
+    "introduction": "En fullmakt att hämta ut fordon ger en annan person rätt att kvittera ut din bil, motorcykel eller annat fordon i ditt ställe – exempelvis från en verkstad efter reparation, från ett bärgnings- eller inlösenföretag eller från en bevakad parkering. Eftersom verkstäder och parkeringsbolag normalt bara lämnar ut ett fordon till den registrerade ägaren krävs ett skriftligt mandat när någon annan ska hämta det.\n\nMallen anger tydligt vem som får hämta ut fordonet, vilket fordon det gäller (registreringsnummer) och varifrån det ska hämtas. Du fyller i uppgifterna, laddar ner dokumentet som PDF och låter ombudet ta med det tillsammans med legitimation.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. och ger ombudet behörighet att kvittera ut fordonet i ditt namn. Observera att en verkstad enligt sin retentionsrätt får hålla kvar fordonet tills reparationen är betald – ombudet kan därför behöva reglera eventuella avgifter vid uthämtningen. Verkstaden eller parkeringsbolaget kräver vanligtvis att ombudet visar både fullmakten och giltig legitimation.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fordonsägare och fullmaktsgivare – namn, personnummer och adress.\nSteg 2: Fyll i ombudets namn och personnummer – den person som ska hämta fordonet.\nSteg 3: Specificera fordonet med registreringsnummer, märke och modell så att det inte kan förväxlas.\nSteg 4: Ange varifrån fordonet ska hämtas, t.ex. verkstadens eller parkeringens namn och adress.\nSteg 5: Avgränsa uppdraget – får ombudet enbart hämta fordonet, eller även betala reparation och kvittera handlingar?\nSteg 6: Skriv under fullmakten och låt ombudet ta med den tillsammans med sin legitimation.",
+    "commonMistakes": "1. Saknar registreringsnummer – Utan tydlig identifikation av fordonet kan verkstaden vägra att lämna ut det.\n\n2. Otydligt om betalning – Ange om ombudet får betala obetald reparation, annars kan fordonet hållas kvar enligt verkstadens retentionsrätt.\n\n3. Ombudet glömmer legitimation – Fullmakten ensam räcker sällan; den som hämtar måste kunna styrka sin identitet.\n\n4. Fel ägaruppgift – Den som ger fullmakten bör vara registrerad ägare, annars kan utlämnaren ifrågasätta behörigheten.\n\n5. Ingen tidsangivelse – En odaterad fullmakt skapar osäkerhet; ange datum och gärna en sista giltighetsdag.",
+    "faq": [
+      {"question": "Måste jag vara registrerad ägare för att ge fullmakten?", "answer": "Normalt ja. Verkstäder och parkeringsbolag lämnar ut fordonet mot fullmakt från den som står som ägare. Är du inte ägare bör ägaren skriva under."},
+      {"question": "Kan ombudet betala reparationen åt mig?", "answer": "Bara om fullmakten uttryckligen ger den rätten. Eftersom verkstaden får hålla kvar fordonet tills skulden är betald bör du ange om ombudet får reglera avgiften."},
+      {"question": "Behöver ombudet ta med legitimation?", "answer": "Ja. De flesta verkstäder och parkeringsbolag kräver giltig legitimation utöver fullmakten innan de lämnar ut ett fordon."},
+      {"question": "Gäller fullmakten för hämtning från Kronofogden eller inlösen?", "answer": "Vid utmätning eller inlösen kan särskilda krav gälla. Kontakta den aktuella myndigheten eller företaget i förväg och ange ärendet tydligt i fullmakten."},
+      {"question": "Hur länge gäller fullmakten?", "answer": "Den gäller tills den återkallas eller tills angivet slutdatum. För en enstaka uthämtning är det lämpligt att sätta en kort giltighetstid."}
+    ],
+    "relatedSearchTerms": ["fullmakt hämta fordon", "fullmakt hämta bil verkstad", "fullmakt hämta bil parkering", "fullmakt fordon pdf", "fullmakt hämta ut fordon mall gratis"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Alla mallar", "href": "/mallar"},
+    {"text": "Mallar i Resa & Transport", "href": "/mallar?category=resa-transport"}
   ],
-  "faq": [
-    { "q": "Vad behövs för att hämta ut ett fordon med fullmakt?", "a": "Fullmaktstagaren behöver denna skrivna fullmakt, sitt ID-handlingar och ofta ett personbekräftelse från verkstaden. Kontakta verkstaden i förväg för att se deras krav." },
-    { "q": "Kan jag hämta ut en annans bil från bensinmacken?", "a": "För enkla ärenden kan en fullmakt räcka, men de flesta mackar kan kräva att registrerade ägaren är närvarande. Kontakta macken i förväg." },
-    { "q": "Hur länge ska fullmakten vara giltig?", "a": "Sätt ett rimligt slutdatum. För engångshämtningar kan några dagar eller veckor räcka. För återkommande behov kan du sätta ett längre datum." },
-    { "q": "Behövs vittnen för att fullmakten ska gälla?", "a": "Två vittnen är rekommenderat för att styrka dokumentets äkthet, men inte alltid lagligt obligatoriskt. Kontakta verkstaden för deras krav." },
-    { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, du kan när som helst dra tillbaka fullmakten genom att skriva ett meddelande till verkstaden eller den aktuella parten." }
-  ],
-  "relatedIds": [33, 39, 53],
-  "legalInfo": "Denna fullmakt är ett juridiskt bindande dokument mellan dig och fullmaktstagaren, och mellan fullmaktstagaren och verkstaden/parkeringshuset.",
-  "keywords": ["fordon", "bil", "hämta", "verkstad", "parkering", "fullmakt"]
+  "lastUpdated": "2026-05-29"
 }

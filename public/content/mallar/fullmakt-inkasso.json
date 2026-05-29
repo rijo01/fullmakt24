@@ -1,36 +1,33 @@
 {
-  "id": 61,
   "slug": "fullmakt-inkasso",
-  "name": "Fullmakt för inkasso",
-  "category": "Ekonomi, Bank & Myndigheter",
-  "categorySlug": "ekonomi-myndigheter",
-  "description": "Fullmakt för att hantera inkassoärenden.",
-  "longDescription": "En fullmakt för inkasso ger en person befogenhet att representera dig i inkassoärenden, det vill säga vid indrivning av skulder. Det kan gälla att kommunicera med gäldenär, registrera betalningar och hantera juridiska processer.",
-  "badge": "premium",
-  "usageCount": 876,
-  "fields": [
-    { "id": "givare_namn", "label": "Borgenärens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
-    { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
-    { "id": "givare_adress", "label": "Adress", "type": "address", "placeholder": "Storgatan 1, 111 22 Stockholm", "required": true, "group": "givare" },
-    { "id": "skuld_belopp", "label": "Skuldbeloppet", "type": "text", "placeholder": "50 000 kr", "required": true, "group": "detaljer" },
-    { "id": "galldenr_namn", "label": "Gäldenärens namn (om känt)", "type": "text", "placeholder": "Erik Eriksson", "required": false, "group": "detaljer" },
-    { "id": "havare_namn", "label": "Inkassoföretagets namn", "type": "text", "placeholder": "Svensk Inkasso AB", "required": true, "group": "havare" },
-    { "id": "havare_org", "label": "Organisationsnummer", "type": "text", "placeholder": "556000-1234", "required": true, "group": "havare" },
-    { "id": "havare_kontakt", "label": "Kontaktperson", "type": "text", "placeholder": "Jonas Jonasson", "required": false, "group": "havare" },
-    { "id": "omfattning", "label": "Fullmaktens omfattning", "type": "select", "options": ["Betalningar", "Juridiska åtgärder", "Förlikningssamtal", "All inkassohantering"], "required": true, "group": "detaljer" },
-    { "id": "vittne1_namn", "label": "Vittne 1 namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "detaljer" },
-    { "id": "vittne2_namn", "label": "Vittne 2 namn", "type": "text", "placeholder": "Berit Beritsson", "required": true, "group": "detaljer" },
-    { "id": "giltig_fran", "label": "Giltig från", "type": "date", "required": true, "group": "detaljer" },
-    { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
+  "seo": {
+    "title": "Fullmakt gentemot inkassobolag – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Fullmakt för ombud att företräda dig i inkassoärenden – kommunicera, bestrida och förhandla med inkassobolag. Utformad enligt svensk lag. Klar på 3 minuter – ladda ner som PDF.",
+    "h1": "Fullmakt gentemot inkassobolag – Mall & Guide 2026",
+    "keywords": ["fullmakt inkasso", "ombud inkassoärende", "fullmakt inkassobolag", "bestrida inkasso ombud", "fullmakt skuld inkasso"]
+  },
+  "content": {
+    "introduction": "En fullmakt gentemot inkassobolag ger ett ombud rätt att företräda dig i ett inkassoärende – exempelvis kommunicera med bolaget, bestrida ett krav, begära specifikation eller förhandla om en avbetalningsplan. Det är användbart när du vill att en anhörig, vän eller jurist sköter kontakten åt dig.\n\nMallen anger tydligt vilket krav eller vilket inkassobolag det gäller och exakt vad ombudet får göra. Du fyller i uppgifterna, laddar ner dokumentet som PDF och låter ombudet visa det i kontakten med inkassobolaget.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Inkassobolagens verksamhet regleras av inkassolagen (1974:182), som bland annat ställer krav på god inkassosed. Ett inkassobolag ska godta att du företräds av ett ombud med giltig fullmakt. Observera att fullmakten avser kontakten med bolaget – den påverkar inte i sig om själva skulden är riktig.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som gäldenär och fullmaktsgivare – namn, personnummer och adress.\nSteg 2: Fyll i ombudets namn, personnummer och relation till dig.\nSteg 3: Ange vilket inkassobolag och vilket ärende- eller referensnummer fullmakten gäller.\nSteg 4: Beskriv vad ombudet får göra – begära specifikation, bestrida kravet, förhandla om avbetalning eller ta emot korrespondens.\nSteg 5: Sätt en giltighetstid och avgränsa behörigheten till det aktuella ärendet.\nSteg 6: Skriv under och skicka fullmakten till inkassobolaget, gärna tillsammans med en kort förklaring av ärendet.",
+    "commonMistakes": "1. Saknar ärendenummer – Utan referens till det aktuella kravet kan bolaget ha svårt att koppla fullmakten rätt.\n\n2. För bred fullmakt – Begränsa behörigheten till det aktuella ärendet i stället för 'alla mina skulder'.\n\n3. Förväxlar bestridande med fullmakt – Vill du bestrida kravet måste det göras uttryckligen; fullmakten ger bara ombudet rätt att agera.\n\n4. Glömmer att meddela bolaget – Skicka fullmakten till inkassobolaget, annars kommunicerar de fortfarande direkt med dig.\n\n5. Ingen tidsbegränsning – Sätt en giltighetstid så att fullmakten inte gäller längre än ärendet kräver.",
+    "faq": [
+      {"question": "Måste inkassobolaget acceptera mitt ombud?", "answer": "Ett inkassobolag ska godta att du företräds av ett ombud med giltig fullmakt. Skicka in fullmakten så att de vet att de ska kommunicera med ombudet."},
+      {"question": "Kan ombudet bestrida kravet åt mig?", "answer": "Ja, om fullmakten omfattar det. Tänk på att ett bestridande bör vara tydligt och gärna motiverat – fullmakten ger ombudet rätt att framföra det."},
+      {"question": "Påverkar fullmakten själva skulden?", "answer": "Nej. Fullmakten styr bara vem som får sköta kontakten. Om skulden är felaktig måste den bestridas separat."},
+      {"question": "Kan ombudet förhandla om avbetalning?", "answer": "Ja, om fullmakten anger det. Ange gärna ramar, t.ex. att ombudet får komma överens om en avbetalningsplan."},
+      {"question": "Hur länge gäller fullmakten?", "answer": "Den gäller tills den återkallas eller till angivet slutdatum. Meddela bolaget skriftligt när den ska upphöra."}
+    ],
+    "relatedSearchTerms": ["fullmakt inkasso", "ombud inkassoärende", "fullmakt inkassobolag", "fullmakt inkasso pdf", "fullmakt inkasso mall gratis"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Alla mallar", "href": "/mallar"},
+    {"text": "Mallar i Ekonomi, Bank & Myndigheter", "href": "/mallar?category=ekonomi-myndigheter"}
   ],
-  "faq": [
-    { "q": "Vad är skillnaden mellan inkasso och betalningsuppgift?", "a": "Inkasso är när en tredje part (inkassoföretag) indriver skulden åt dig. Betalningsuppgift är en enklare påminnelse." },
-    { "q": "Behöver gäldenären informeras om fullmakten?", "a": "Ja, gäldenären måste få veta att ett inkassoföretag hanterar indrivningen." },
-    { "q": "Vilka rättigheter har ett inkassoföretag?", "a": "De kan skicka påminnelser, kräva dröjsmålsränta, och vid behov väcka domstolstalan." },
-    { "q": "Kan fullmakten begränsas?", "a": "Ja, du kan säga att inkassoföretaget inte får väcka domstolstalan utan att fråga dig först." },
-    { "q": "Hur mycket kostar inkasso?", "a": "Inkassoföretag tar vanligen mellan 5-20% av det indragna beloppet som provision." }
-  ],
-  "relatedIds": [29, 35, 51],
-  "legalInfo": "Denna fullmakt måste följa inkassolagen. Två vittnen rekommenderas starkt. Spara original på säker plats.",
-  "keywords": ["inkasso", "skuld", "indrivning", "gäldenär", "fullmakt"]
+  "lastUpdated": "2026-05-29"
 }

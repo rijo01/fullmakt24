@@ -32,12 +32,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = seoTitle || `${t.name} – Mall & Guide 2025 | Fullmakt24.se`
   const description = seoDescription || `${t.name}: ${t.description} Mall enligt svensk lag för ${cat?.name?.toLowerCase() || 'svenska förhållanden'}. Skapa och ladda ner som PDF.`
 
+  // Canonical URL – the single authoritative URL for each mall (template's true
+  // category), so duplicate/cross-category paths point back here and Google
+  // indexes only one version.
+  const canonical = `https://fullmakt24.se/mallar/${t.categorySlug}/${t.slug}`
+
   return {
     title,
     description,
+    alternates: {
+      canonical,
+    },
     openGraph: {
       title,
       description,
+      url: canonical,
     },
   }
 }

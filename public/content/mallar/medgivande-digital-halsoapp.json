@@ -1,29 +1,33 @@
 {
-  "id": 118,
   "slug": "medgivande-digital-halsoapp",
-  "name": "Medgivande för hälsoapp",
-  "category": "Vård & Omsorg",
-  "categorySlug": "vard-omsorg",
-  "description": "Medgivande för att använda digital hälsoapp.",
-  "longDescription": "Ett medgivande för hälsoapp bekräftar att du godkänner att din hälsodata samlas i en app.",
-  "badge": "gratis",
-  "usageCount": 432,
-  "fields": [
-    { "id": "givare_namn", "label": "Användaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
-    { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
-    { "id": "app_namn", "label": "App", "type": "select", "options": ["1177", "Min vårdcentral", "Doktor.se", "Annan"], "required": true, "group": "detaljer" },
-    { "id": "datatyp", "label": "Datatyp", "type": "select", "options": ["Journaluppgifter", "Läkemedel", "Tester", "Все"], "required": true, "group": "detaljer" },
-    { "id": "samtycke", "label": "Jag godkänner", "type": "select", "options": ["Ja", "Nej"], "required": true, "group": "detaljer" },
-    { "id": "giltig_fran", "label": "Gjort", "type": "date", "required": true, "group": "detaljer" }
+  "seo": {
+    "title": "Medgivande för digital hälsoapp – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Medgivande och fullmakt för att hantera en annan persons digitala hälsoapp och hälsodata. Utformad enligt svensk lag och GDPR. Ladda ner som PDF.",
+    "h1": "Medgivande för digital hälsoapp – Mall & Guide 2026",
+    "keywords": ["medgivande hälsoapp", "fullmakt hälsoapp", "hantera hälsodata anhörig", "samtycke hälsoapp", "hälsoapp ombud senior"]
+  },
+  "content": {
+    "introduction": "Ett medgivande för digital hälsoapp är ett dokument där en person samtycker till att en anhörig får hantera deras hälsoapp och tillhörande hälsodata – exempelvis följa blodtryck, blodsocker, medicinpåminnelser eller aktivitet, eller sköta kontot åt en äldre närstående. Eftersom hälsodata är särskilt känsliga personuppgifter krävs ett tydligt samtycke innan någon annan får tillgång till dem.\n\nMallen anger vem som får tillgång, vilken app och vilka uppgifter det gäller och exakt vad den anhörige får göra. Du fyller i uppgifterna, laddar ner dokumentet som PDF och använder det som underlag gentemot tjänsten eller vårdgivaren.",
+    "legalValidity": "Hälsodata är känsliga personuppgifter enligt dataskyddsförordningen (GDPR), och behandling av dem kräver normalt ett uttryckligt samtycke från den registrerade. Medgivandet dokumenterar detta samtycke, medan eventuella praktiska åtgärder gentemot tjänsteleverantören kan stödjas av fullmaktsreglerna i avtalslagen (1915:218) 2 kap. För ett barn lämnas samtycket av vårdnadshavarna. Tjänsteleverantörens egna villkor kan ställa ytterligare krav på hur tillgång delas.",
+    "howToGuide": "Steg 1: Ange uppgifter om den person vars hälsodata det gäller (den som lämnar samtycke).\nSteg 2: Fyll i den anhöriges eller ombudets namn, personnummer och relation.\nSteg 3: Ange vilken hälsoapp eller tjänst och vilket konto medgivandet avser.\nSteg 4: Specificera vilka uppgifter som omfattas och vad ombudet får göra – läsa, registrera, dela med vården eller ändra inställningar.\nSteg 5: Sätt en giltighetstid och ange hur samtycket kan återkallas.\nSteg 6: Låt personen (eller vårdnadshavarna vid barn) skriva under och spara dokumentet tillsammans med appens egna inställningar för delning.",
+    "commonMistakes": "1. För brett samtycke – Ange vilka uppgifter och vilka åtgärder som omfattas i stället för fullständig tillgång till allt.\n\n2. Glömmer hur samtycket återkallas – Samtycke ska kunna tas tillbaka; beskriv hur det går till.\n\n3. Bortser från appens villkor – Tjänsten kan ha egna regler för delat konto eller anhörigåtkomst som måste följas.\n\n4. Otydligt syfte – Ange varför den anhörige ska ha tillgång, t.ex. för att följa medicinering eller dela med vården.\n\n5. Saknar underskrift eller datum – Medgivandet bör vara daterat och undertecknat av den som lämnar samtycket.",
+    "faq": [
+      {"question": "Varför behövs ett särskilt medgivande för hälsodata?", "answer": "Hälsouppgifter är känsliga personuppgifter enligt GDPR. Att en annan person hanterar dem kräver normalt ett uttryckligt samtycke från den berörda."},
+      {"question": "Kan jag ge tillgång till mitt barns hälsoapp?", "answer": "För ett barn lämnas samtycket av vårdnadshavarna. Tänk på att äldre barn i vissa fall själva bör tillfrågas beroende på mognad."},
+      {"question": "Kan samtycket återkallas?", "answer": "Ja. Ett samtycke kan tas tillbaka. Beskriv i dokumentet hur återkallelse går till och meddela tjänsteleverantören."},
+      {"question": "Ersätter medgivandet appens egna inställningar?", "answer": "Nej. Många hälsoappar har egna funktioner för delning eller anhörigåtkomst. Medgivandet är ett komplement som dokumenterar samtycket."},
+      {"question": "Får den anhörige dela uppgifterna med vården?", "answer": "Bara om medgivandet anger det. Ange uttryckligen om ombudet får dela hälsodata med vårdgivare eller andra."}
+    ],
+    "relatedSearchTerms": ["medgivande hälsoapp", "fullmakt hälsoapp", "hantera hälsodata anhörig", "medgivande hälsoapp pdf", "medgivande digital hälsoapp mall gratis"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Alla mallar", "href": "/mallar"},
+    {"text": "Mallar i Seniorer & Omsorg", "href": "/mallar?category=seniorer-omsorg"}
   ],
-  "faq": [
-    { "q": "Är hälsoappar säkra?", "a": "De flesta är säkra men kontrollera datasäkerhetspolicyn." },
-    { "q": "Vad gör jag med mina data?", "a": "Du kan normalt neka vissa data eller radera appen när som helst." },
-    { "q": "Kan Min vårdcentral app delade uppgifter?", "a": "Data är normalt mellan dig och vårdcentralen, inte med tredje part." },
-    { "q": "Vilka hälsoappar rekommenderas?", "a": "1177, Min vårdcentral och Doktor.se är populära officiella appar." },
-    { "q": "Kan jag ta tillbaka mitt samtycke?", "a": "Ja, du kan radera appen eller uppdatera samtyckesinställningarna." }
-  ],
-  "relatedIds": [68, 70, 84],
-  "legalInfo": "Detta medgivande gäller mellan dig och appens operatör.",
-  "keywords": ["hälso", "app", "digital", "medicin", "data", "medgivande"]
+  "lastUpdated": "2026-05-29"
 }

@@ -2,48 +2,23 @@
   "slug": "fullmakt-borgensatagande",
   "seo": {
     "title": "Fullmakt borgensåtagande – Mall & Guide 2026 | Fullmakt24.se",
-    "metaDescription": "Fullmakt vid borgensförhandling – ombud agerar för borgensman. Utformad enligt svensk lag. Klar på 3 minuter. Ladda ner som PDF för 49 kr.",
+    "metaDescription": "Fullmakt vid borgensförhandling – ombud agerar för borgensman gentemot bank eller långivare. Utformad enligt svensk lag. Klar på 3 minuter – ladda ner som PDF.",
     "h1": "Fullmakt borgensåtagande – Mall & Guide 2026",
-    "keywords": [
-      "fullmakt borgen",
-      "borgensåtagande ombud",
-      "fullmakt bank borgen"
-    ]
+    "keywords": ["fullmakt borgen", "borgensåtagande ombud", "fullmakt bank borgen", "borgensman fullmakt", "fullmakt teckna borgen"]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att förhandla och underteckna borgensåtagande åt dig. Eftersom borgen är personligt ansvarstung bör fullmakten vara mycket specifik.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Handelsbalken (1736) 10 kap. om borgen och avtalslagen (1915:218).",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för borgensåtagande ger ett ombud rätt att förhandla om och underteckna ett borgensåtagande i ditt ställe – exempelvis gentemot en bank eller annan långivare. Eftersom borgen innebär ett personligt och ofta ansvarstungt åtagande är det extra viktigt att fullmakten är snäv och exakt formulerad.\n\nMallen anger tydligt vilket lån eller åtagande borgen avser, eventuellt högsta belopp och vilka handlingar ombudet får underteckna. Du fyller i uppgifterna, laddar ner dokumentet som PDF och låter gärna två vittnen bekräfta underskriften för extra tyngd.",
+    "legalValidity": "Borgen regleras genom reglerna om borgen i handelsbalken (1736) 10 kap., medan själva fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Eftersom borgen är ett betungande åtagande godtar banker normalt bara en fullmakt som tydligt anger åtagandets omfattning och eventuellt maxbelopp. Kontrollera alltid med banken i förväg, eftersom många har egna blanketter eller krav på bevittning.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som blivande borgensman och fullmaktsgivare – namn, personnummer och adress.\nSteg 2: Fyll i ombudets namn, personnummer och relation till dig.\nSteg 3: Beskriv exakt vilket lån eller åtagande borgen avser – låntagare, långivare och lånets ändamål.\nSteg 4: Ange ett tak för borgensåtagandet (högsta belopp) så att ombudet inte kan binda dig vidare.\nSteg 5: Sätt en giltighetstid och precisera vilka handlingar ombudet får underteckna.\nSteg 6: Skriv under, låt två vittnen bekräfta underskriften och kontakta banken i förväg om deras krav.",
+    "commonMistakes": "1. Inget beloppstak – Utan högsta belopp kan ombudet binda dig vid ett större åtagande än du tänkt. Ange alltid ett tak.\n\n2. Oklart vilket lån som avses – Ange låntagare, långivare och lånets ändamål så att borgen inte kan användas för annat.\n\n3. Missar bankens egna krav – Många banker har egen blankett eller kräver bevittning; kontrollera innan du skickar fullmakten.\n\n4. Underskattar ansvaret – Borgen kan innebära att du får betala hela skulden. Begränsa fullmakten och åtagandet noga.\n\n5. Glömmer återkallelse – När förhandlingen är klar bör du meddela banken skriftligt om fullmakten ska upphöra.",
     "faq": [
-      {
-        "question": "Accepterar alla banker fullmakten?",
-        "answer": "De flesta banker accepterar en korrekt utformad fullmakt, men vissa har egna blanketter. Kontakta banken i förväg."
-      },
-      {
-        "question": "Kan ombudet ta lån i mitt namn?",
-        "answer": "Bara om fullmakten uttryckligen anger detta. Lånebeslut är ofta personliga och kräver din uttryckliga rätt."
-      },
-      {
-        "question": "Hur skyddas jag mot missbruk?",
-        "answer": "Ange tydliga begränsningar, max-belopp och giltighetstid. Återkalla fullmakten när uppdraget är slutfört."
-      },
-      {
-        "question": "Måste bankfullmakten bevittnas?",
-        "answer": "Inte enligt lag, men många banker kräver eller starkt rekommenderar två vittnen."
-      },
-      {
-        "question": "Gäller fullmakten utomlands?",
-        "answer": "Den gäller primärt i Sverige. För utlandsbruk kan apostille eller legalisering krävas."
-      }
+      {"question": "Accepterar alla banker fullmakten?", "answer": "De flesta banker accepterar en korrekt och tydligt avgränsad fullmakt, men vissa har egna blanketter eller krav. Kontakta banken i förväg."},
+      {"question": "Kan ombudet binda mig vid ett obegränsat belopp?", "answer": "Inte om du anger ett tak. Sätt alltid ett högsta belopp för borgensåtagandet så att ombudet inte kan förbinda dig vidare."},
+      {"question": "Vad är skillnaden mellan enkel och proprieborgen?", "answer": "Vid proprieborgen kan långivaren kräva dig direkt 'såsom för egen skuld', medan enkel borgen först kräver att låntagaren inte kan betala. Ange vilken form som avses."},
+      {"question": "Måste fullmakten bevittnas?", "answer": "Det är inget generellt lagkrav, men många banker kräver eller rekommenderar två vittnen vid borgensåtaganden."},
+      {"question": "Hur återkallar jag fullmakten?", "answer": "Meddela banken och ombudet skriftligt att fullmakten upphör. Begär gärna tillbaka originalet om det lämnats ut."}
     ],
-    "relatedSearchTerms": [
-      "fullmakt borgen",
-      "borgensåtagande ombud",
-      "fullmakt bank borgen",
-      "fullmakt borgensåtagande pdf",
-      "fullmakt borgensåtagande mall gratis"
-    ]
+    "relatedSearchTerms": ["fullmakt borgen", "borgensåtagande ombud", "fullmakt bank borgen", "fullmakt borgensåtagande pdf", "fullmakt borgensåtagande mall gratis"]
   },
   "schema": {
     "faqSchema": true,
@@ -51,14 +26,8 @@
     "breadcrumbSchema": true
   },
   "internalLinks": [
-    {
-      "text": "Alla mallar",
-      "href": "/mallar"
-    },
-    {
-      "text": "Mallar i Ekonomi, Bank & Myndigheter",
-      "href": "/mallar?category=ekonomi-myndigheter"
-    }
+    {"text": "Alla mallar", "href": "/mallar"},
+    {"text": "Mallar i Ekonomi, Bank & Myndigheter", "href": "/mallar?category=ekonomi-myndigheter"}
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

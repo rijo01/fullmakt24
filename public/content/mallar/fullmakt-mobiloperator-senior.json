@@ -1,0 +1,33 @@
+{
+  "slug": "fullmakt-mobiloperator-senior",
+  "seo": {
+    "title": "Fullmakt för mobiloperatör (senior) – Mall & Guide 2026 | Fullmakt24.se",
+    "metaDescription": "Fullmakt för att hantera en äldre anhörigs mobilabonnemang hos operatören – ändra, säga upp eller felanmäla. Utformad enligt svensk lag. Ladda ner som PDF.",
+    "h1": "Fullmakt för mobiloperatör (senior) – Mall & Guide 2026",
+    "keywords": ["fullmakt mobiloperatör", "fullmakt mobilabonnemang senior", "hantera mobilabonnemang anhörig", "fullmakt telefonabonnemang", "fullmakt operatör äldre"]
+  },
+  "content": {
+    "introduction": "En fullmakt för mobiloperatör ger en anhörig rätt att hantera en äldre persons mobilabonnemang hos operatören – exempelvis ändra abonnemang, byta SIM-kort, felanmäla, kontrollera fakturor eller säga upp tjänsten. Många operatörer lämnar av integritetsskäl inte ut uppgifter eller gör ändringar utan ett skriftligt mandat från abonnenten.\n\nMallen anger vem som får företräda seniorn, vilket abonnemang och telefonnummer det gäller och exakt vilka åtgärder ombudet får utföra. Du fyller i uppgifterna, laddar ner dokumentet som PDF och låter den anhörige visa det i kontakten med operatören.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. och förutsätter att seniorn själv förstår och samtycker till den. Den ger ombudet behörighet att agera gentemot operatören i de avseenden som anges. Om behovet är mer varaktigt och seniorn på sikt inte själv kan ta hand om sina angelägenheter kan en framtidsfullmakt enligt lagen (2017:310) om framtidsfullmakter vara ett mer heltäckande alternativ.",
+    "howToGuide": "Steg 1: Ange seniorns uppgifter som abonnent och fullmaktsgivare – namn, personnummer och adress.\nSteg 2: Fyll i den anhöriges namn, personnummer och relation till seniorn.\nSteg 3: Ange operatör, abonnemang och det telefonnummer fullmakten gäller.\nSteg 4: Avgränsa behörigheten – får ombudet ändra abonnemang, byta SIM, felanmäla, se fakturor eller säga upp?\nSteg 5: Sätt en giltighetstid om fullmakten bara ska gälla en period.\nSteg 6: Låt seniorn skriva under och låt den anhörige ta med fullmakten och legitimation till operatören.",
+    "commonMistakes": "1. Saknar telefonnummer – Ange abonnemangets nummer så att operatören kan koppla fullmakten till rätt konto.\n\n2. För bred behörighet – Begränsa vad ombudet får göra, särskilt rätten att säga upp eller binda nya avtal.\n\n3. Seniorn förstår inte fullmakten – Fullmakten förutsätter att abonnenten själv samtycker; vid mer varaktigt behov kan en framtidsfullmakt passa bättre.\n\n4. Glömmer legitimation – Operatören kräver ofta att ombudet visar ID utöver fullmakten.\n\n5. Ingen tidsgräns – Sätt en giltighetstid om fullmakten inte ska gälla tills vidare.",
+    "faq": [
+      {"question": "Kan jag säga upp abonnemanget åt en anhörig?", "answer": "Ja, om fullmakten uttryckligen ger den rätten. Ange tydligt om uppsägning ingår, eftersom det är en ingripande åtgärd."},
+      {"question": "Vad är skillnaden mot en framtidsfullmakt?", "answer": "Den här fullmakten gäller medan seniorn själv kan samtycka. En framtidsfullmakt börjar gälla först när personen inte längre kan sköta sina angelägenheter och är mer heltäckande."},
+      {"question": "Måste operatören acceptera fullmakten?", "answer": "De flesta operatörer godtar en korrekt fullmakt men kan ha egna rutiner eller blanketter. Kontakta operatören i förväg."},
+      {"question": "Behöver den anhörige legitimera sig?", "answer": "Ja, operatören kräver normalt giltig legitimation utöver fullmakten innan ändringar görs."},
+      {"question": "Hur återkallar seniorn fullmakten?", "answer": "Seniorn meddelar operatören och den anhörige skriftligt att fullmakten upphör. Begär gärna tillbaka eventuellt original."}
+    ],
+    "relatedSearchTerms": ["fullmakt mobiloperatör", "fullmakt mobilabonnemang senior", "hantera mobilabonnemang anhörig", "fullmakt operatör pdf", "fullmakt mobiloperatör mall gratis"]
+  },
+  "schema": {
+    "faqSchema": true,
+    "howToSchema": true,
+    "breadcrumbSchema": true
+  },
+  "internalLinks": [
+    {"text": "Alla mallar", "href": "/mallar"},
+    {"text": "Mallar i Seniorer & Omsorg", "href": "/mallar?category=seniorer-omsorg"}
+  ],
+  "lastUpdated": "2026-05-29"
+}
