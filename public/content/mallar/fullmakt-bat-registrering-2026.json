@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att registrera båt eller anmäla ägarbyte i båtregistret. Krävs för båtar över 5 m längd.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Lag (1979:377) om registrering av båtar för yrkesmässig sjöfart m.m. samt sjötrafikförordningen.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för båtregistrering ger ett ombud rätt att registrera, ändra eller avregistrera en båt hos Transportstyrelsen för din räkning. Det kan vara aktuellt vid köp, försäljning eller dödsbo.\n\nMallen anger båten, ombudet och uppdraget. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att registreringsplikten i första hand gäller större fartyg och att Transportstyrelsen hanterar fartygsregistret.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Registrering av fartyg hanteras av Transportstyrelsen och regleras främst genom sjölagen (1994:1009). Registreringsplikten gäller i första hand större fartyg (skepp); för mindre fritidsbåtar är registrering oftast frivillig. Kontrollera vad som gäller för just din båt och bifoga fullmakten till ärendet.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som båtägare och fullmaktsgivare – namn och personnummer.\nSteg 2: Ange båten med namn, skrov- eller registreringsnummer, fabrikat och byggår.\nSteg 3: Fyll i ombudets namn och personnummer.\nSteg 4: Ange uppdraget – registrering, ändring eller avregistrering.\nSteg 5: Ange en giltighetstid.\nSteg 6: Skriv under och lämna fullmakten till Transportstyrelsen.",
+    "commonMistakes": "1. Otydlig båt – Ange skrov- eller registreringsnummer.\n\n2. Fel åtgärd – En fullmakt för registrering täcker inte automatiskt en avregistrering.\n\n3. Saknar köpehandlingar – Vid ägarbyte krävs ofta handlingar som styrker överlåtelsen.\n\n4. Glömmer registreringsplikten – Kontrollera om just din båt ska registreras.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Var anmäls ägarbyte?",
-        "answer": "Hos Transportstyrelsen via deras e-tjänst eller via post. Ägarbyte ska anmälas inom 10 dagar från övergången."
+        "question": "Vilka båtar måste registreras?",
+        "answer": "Registreringsplikten gäller främst större fartyg (skepp). Mindre fritidsbåtar registreras ofta frivilligt. Kontrollera hos Transportstyrelsen."
       },
       {
-        "question": "Behöver fordonsfullmakten bevittnas?",
-        "answer": "Inte enligt lag, men det rekommenderas. Köparen och Transportstyrelsen kan kräva det."
+        "question": "Vem hanterar registret?",
+        "answer": "Transportstyrelsen hanterar fartygsregistret enligt sjölagen."
       },
       {
-        "question": "Kan ombudet sälja fordonet under marknadsvärde?",
-        "answer": "Bara om du tillåter det. Ange ett minimipris i fullmakten för att skydda dig."
+        "question": "Behövs köpehandlingar vid ägarbyte?",
+        "answer": "Ja, normalt krävs handlingar som styrker överlåtelsen utöver fullmakten."
       },
       {
-        "question": "Vad behövs vid besiktning?",
-        "answer": "Fullmakten i original, ombudets ID-handling samt fordonets registreringsbevis del 2."
+        "question": "Kan ett ombud avregistrera båten?",
+        "answer": "Ja, om fullmakten uttryckligen anger avregistrering."
       },
       {
-        "question": "Gäller fullmakten för export utomlands?",
-        "answer": "Vid export krävs ofta separat exportfullmakt och tullhandlingar. Kontakta Transportstyrelsen och Tullverket."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, genom att meddela Transportstyrelsen och ombudet skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=resa-transport"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

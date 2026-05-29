@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att förhandla, förnya eller överlåta tomträtt åt dig.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Jordabalken (1970:994) 13 kap. om tomträtt.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för tomträtt ger ett ombud rätt att hantera tomträttsärenden för din räkning, exempelvis i kontakten med kommunen som upplåtare eller med Lantmäteriet. Tomträtt innebär att du nyttjar mark som ägs av någon annan, mot en årlig avgäld.\n\nMallen anger tomträtten, ombudet och uppdraget. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att tomträtt har egna regler och att överlåtelse och inskrivning hanteras på särskilt sätt.",
+    "legalValidity": "Tomträtt regleras av jordabalken (1970:994), främst 13 kap. En tomträtt upplåts normalt av en kommun eller staten mot en årlig avgäld och kan överlåtas och intecknas. Fullmakten bygger på avtalslagen (1915:218) 2 kap. och ger ombudet rätt att företräda dig i tomträttsärenden. Inskrivning av tomträtt och åtgärder kring den hanteras av Lantmäteriet.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som tomträttshavare och fullmaktsgivare – namn och personnummer.\nSteg 2: Ange fastighet/tomträtt och adress.\nSteg 3: Fyll i ombudets namn och personnummer.\nSteg 4: Beskriv vad ombudet får göra – kontakt med kommunen, överlåtelse, inskrivning.\nSteg 5: Ange en giltighetstid och eventuella begränsningar.\nSteg 6: Skriv under och lämna fullmakten till berörd part.",
+    "commonMistakes": "1. Förväxlar tomträtt med äganderätt – Vid tomträtt äger du inte marken utan nyttjar den mot avgäld.\n\n2. Otydligt uppdrag – Ange vad ombudet får göra i tomträttsärendet.\n\n3. Glömmer avgälden – Den årliga avgälden är en löpande kostnad att beakta.\n\n4. För bred fullmakt – Avgränsa till det aktuella ärendet.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Krävs bevittning för fastighetsfullmakt?",
-        "answer": "En fullmakt att sälja fast egendom måste enligt avtalslagen (1915:218) 27 § 2 st vara skriftlig. Själva köpehandlingen ska uppfylla formkraven i jordabalken 4 kap. 1 § (skriftlig, underskriven av säljare och köpare, med köpeskilling och överlåtelseförklaring). Någon notariell bekräftelse förekommer inte i svensk fastighetsrätt. För att lagfart ska beviljas ska säljarens underskrift på köpehandlingen bevittnas av två personer (jordabalken 20 kap. 7 §)."
+        "question": "Vad är tomträtt?",
+        "answer": "En rätt att nyttja mark som ägs av någon annan, normalt en kommun, mot en årlig avgäld. Tomträtt regleras i jordabalken 13 kap."
       },
       {
-        "question": "Kan ombudet skriva under köpekontrakt?",
-        "answer": "Ja, om fullmakten specifikt anger detta och är korrekt bevittnad. Banker och Lantmäteriet kan ställa egna krav."
+        "question": "Kan tomträtt överlåtas?",
+        "answer": "Ja, en tomträtt kan överlåtas och intecknas. Inskrivning hanteras av Lantmäteriet."
       },
       {
-        "question": "Hur länge gäller fastighetsfullmakten?",
-        "answer": "Den kan gälla en bestämd tid eller tills uppdraget är slutfört. För säkerhet rekommenderas en uttrycklig tidsgräns."
+        "question": "Vad är avgäld?",
+        "answer": "Den årliga avgift du betalar till markägaren för att nyttja marken."
       },
       {
-        "question": "Vad händer om priset blir lägre än önskat?",
-        "answer": "Ange ett minimipris i fullmakten. Ombudet kan inte gå under utan ditt godkännande – annars handlar de utanför fullmakten."
+        "question": "Kan ett ombud sköta ärendet?",
+        "answer": "Ja, inom ramen för fullmakten kan ett ombud företräda dig i tomträttsärenden."
       },
       {
-        "question": "Behöver fullmakten lagföras?",
-        "answer": "Lantmäteriet kräver ofta att fullmakten lämnas in i original eller som styrkt kopia vid registreringsärenden."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, genom att meddela berörd part och ombudet skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=boende-vardag"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Specifik fullmakt för försäljning av lantbruksfastighet med skog, jordbruk eller andra tillhörande rättigheter. Kräver bevittning enligt jordabalken.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Jordabalken (1970:994) och jordförvärvslagen (1979:230) som reglerar förvärv av lantbruksfastighet.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för försäljning av lantbruksfastighet ger ett ombud rätt att sälja en lantbruks- eller skogsfastighet för din räkning. Vid den här typen av fastigheter kan särskilda regler gälla, exempelvis krav på förvärvstillstånd för köparen.\n\nMallen anger fastigheten, ombudet och uppdraget, inklusive lägsta accepterade pris. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att köp av fast egendom har formkrav och att en lantbruksfastighet kan omfattas av jordförvärvslagen.",
+    "legalValidity": "Köp av fast egendom regleras av jordabalken (1970:994) 4 kap. med dess formkrav på köpehandlingen. För lant- och skogsbruksfastigheter kan jordförvärvslagen (1979:230) innebära att köparen behöver förvärvstillstånd från länsstyrelsen, beroende på fastighet och köpare. Fullmakten bygger på avtalslagen (1915:218) 2 kap. och bör vara skriftlig och tydlig. Lagfart söks hos Lantmäteriet.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fastighetsägare och fullmaktsgivare – namn och personnummer.\nSteg 2: Ange fastighetsbeteckning och adress.\nSteg 3: Fyll i ombudets namn och personnummer.\nSteg 4: Ange uppdraget – att sälja fastigheten – och lägsta accepterade pris.\nSteg 5: Avgränsa befogenheterna och uppmärksamma eventuellt krav på förvärvstillstånd.\nSteg 6: Skriv under fullmakten; köpehandlingen ska uppfylla jordabalkens formkrav.",
+    "commonMistakes": "1. Glömmer förvärvstillstånd – Köparen kan behöva förvärvstillstånd enligt jordförvärvslagen.\n\n2. Otydligt lägsta pris – Ange lägsta accepterade pris.\n\n3. Glömmer formkraven – Köpehandlingen ska vara skriftlig med köpeskilling och överlåtelseförklaring.\n\n4. Otydlig fastighet – Ange fastighetsbeteckning.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Krävs bevittning för fastighetsfullmakt?",
-        "answer": "En fullmakt att sälja fast egendom måste enligt avtalslagen (1915:218) 27 § 2 st vara skriftlig. Själva köpehandlingen ska uppfylla formkraven i jordabalken 4 kap. 1 § (skriftlig, underskriven av säljare och köpare, med köpeskilling och överlåtelseförklaring). Någon notariell bekräftelse förekommer inte i svensk fastighetsrätt. För att lagfart ska beviljas ska säljarens underskrift på köpehandlingen bevittnas av två personer (jordabalken 20 kap. 7 §)."
+        "question": "Krävs förvärvstillstånd för lantbruksfastighet?",
+        "answer": "Det kan krävas enligt jordförvärvslagen, beroende på fastighet och köpare. Tillstånd prövas av länsstyrelsen."
       },
       {
-        "question": "Kan ombudet skriva under köpekontrakt?",
-        "answer": "Ja, om fullmakten specifikt anger detta och är korrekt bevittnad. Banker och Lantmäteriet kan ställa egna krav."
+        "question": "Vilka formkrav gäller köpet?",
+        "answer": "Köpehandlingen ska enligt jordabalken vara skriftlig, undertecknas av båda, ange köpeskilling och innehålla en överlåtelseförklaring."
       },
       {
-        "question": "Hur länge gäller fastighetsfullmakten?",
-        "answer": "Den kan gälla en bestämd tid eller tills uppdraget är slutfört. För säkerhet rekommenderas en uttrycklig tidsgräns."
+        "question": "Kan ett ombud sälja fastigheten?",
+        "answer": "Ja, med en skriftlig och tydlig fullmakt. Ange lägsta accepterade pris."
       },
       {
-        "question": "Vad händer om priset blir lägre än önskat?",
-        "answer": "Ange ett minimipris i fullmakten. Ombudet kan inte gå under utan ditt godkännande – annars handlar de utanför fullmakten."
+        "question": "Vad händer efter försäljningen?",
+        "answer": "Köparen söker lagfart hos Lantmäteriet och eventuellt förvärvstillstånd om det krävs."
       },
       {
-        "question": "Behöver fullmakten lagföras?",
-        "answer": "Lantmäteriet kräver ofta att fullmakten lämnas in i original eller som styrkt kopia vid registreringsärenden."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, genom att meddela ombudet skriftligt; en redan genomförd försäljning påverkas dock inte."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=boende-vardag"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

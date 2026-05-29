@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet (ofta jurist eller mäklare) rätt att lämna in lagfartsansökan, betala stämpelskatt och företräda dig i Lantmäteriet-ärendet.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Jordabalken (1970:994) 20 kap. om lagfart.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för lagfart ger ett ombud rätt att ansöka om lagfart hos Lantmäteriet för din räkning. Lagfart innebär att ditt förvärv av en fastighet registreras och att du skrivs in som ägare.\n\nMallen anger fastigheten, ombudet och uppdraget. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att lagfart normalt ska sökas inom tre månader från förvärvet och att köpehandlingen behövs som underlag.",
+    "legalValidity": "Lagfart regleras av jordabalken (1970:994) 20 kap. och söks hos Lantmäteriet. Den som förvärvat en fastighet ska normalt söka lagfart inom tre månader från förvärvet, och köpehandlingen ligger till grund för ansökan. Fullmakten bygger på avtalslagen (1915:218) 2 kap. och ger ombudet rätt att ansöka och företräda dig i ärendet. Stämpelskatt tas normalt ut vid lagfart.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som förvärvare och fullmaktsgivare – namn och personnummer.\nSteg 2: Ange fastighetsbeteckning och adress.\nSteg 3: Fyll i ombudets namn och personnummer.\nSteg 4: Ange att fullmakten avser ansökan om lagfart.\nSteg 5: Bifoga eller hänvisa till köpehandlingen och ange en giltighetstid.\nSteg 6: Skriv under och lämna fullmakten till Lantmäteriet.",
+    "commonMistakes": "1. Missar tremånadersfristen – Lagfart ska normalt sökas inom tre månader från förvärvet.\n\n2. Saknar köpehandling – Köpehandlingen behövs som underlag för ansökan.\n\n3. Otydlig fastighet – Ange fastighetsbeteckning.\n\n4. Glömmer stämpelskatt – Stämpelskatt tas normalt ut vid lagfart.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Krävs bevittning för fastighetsfullmakt?",
-        "answer": "En fullmakt att sälja fast egendom måste enligt avtalslagen (1915:218) 27 § 2 st vara skriftlig. Själva köpehandlingen ska uppfylla formkraven i jordabalken 4 kap. 1 § (skriftlig, underskriven av säljare och köpare, med köpeskilling och överlåtelseförklaring). Någon notariell bekräftelse förekommer inte i svensk fastighetsrätt. För att lagfart ska beviljas ska säljarens underskrift på köpehandlingen bevittnas av två personer (jordabalken 20 kap. 7 §)."
+        "question": "Vad är lagfart?",
+        "answer": "Registrering av att du förvärvat en fastighet, varigenom du skrivs in som ägare. Lagfart regleras i jordabalken 20 kap."
       },
       {
-        "question": "Kan ombudet skriva under köpekontrakt?",
-        "answer": "Ja, om fullmakten specifikt anger detta och är korrekt bevittnad. Banker och Lantmäteriet kan ställa egna krav."
+        "question": "När ska lagfart sökas?",
+        "answer": "Normalt inom tre månader från förvärvet."
       },
       {
-        "question": "Hur länge gäller fastighetsfullmakten?",
-        "answer": "Den kan gälla en bestämd tid eller tills uppdraget är slutfört. För säkerhet rekommenderas en uttrycklig tidsgräns."
+        "question": "Var söker man lagfart?",
+        "answer": "Hos Lantmäteriet, med köpehandlingen som underlag."
       },
       {
-        "question": "Vad händer om priset blir lägre än önskat?",
-        "answer": "Ange ett minimipris i fullmakten. Ombudet kan inte gå under utan ditt godkännande – annars handlar de utanför fullmakten."
+        "question": "Kostar lagfart något?",
+        "answer": "Ja, normalt tas stämpelskatt och en expeditionsavgift ut."
       },
       {
-        "question": "Behöver fullmakten lagföras?",
-        "answer": "Lantmäteriet kräver ofta att fullmakten lämnas in i original eller som styrkt kopia vid registreringsärenden."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, genom att meddela Lantmäteriet och ombudet skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=boende-vardag"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

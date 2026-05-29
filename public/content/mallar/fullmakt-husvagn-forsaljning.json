@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att sälja, anmäla ägarbyte och registrera/avregistrera husvagn hos Transportstyrelsen.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Transportstyrelsen reglerar ägarbyte och registrering. Fullmakten kompletterar formell anmälan.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för husvagn ger ett ombud rätt att sälja eller registrera en husvagn hos Transportstyrelsen för din räkning. En husvagn är ett släpfordon som registreras i vägtrafikregistret.\n\nMallen anger fordonet, ombudet och uppdraget. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att husvagnen identifieras med registreringsnummer och att ägarbyte anmäls till Transportstyrelsen.",
+    "legalValidity": "Fordonsregistrering och ägarbyte hanteras av Transportstyrelsen och dokumenteras i vägtrafikregistret. En husvagn är ett släpfordon som omfattas av registrerings- och besiktningsregler. Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. och ger ombudet rätt att anmäla och företräda dig i ärendet. Vid försäljning bör en prisram anges.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fordonsägare och fullmaktsgivare – namn och personnummer.\nSteg 2: Ange fordonet med registreringsnummer, fabrikat och årsmodell.\nSteg 3: Fyll i ombudets namn och personnummer.\nSteg 4: Ange uppdraget – försäljning eller registrering – och eventuellt lägsta pris.\nSteg 5: Ange en giltighetstid.\nSteg 6: Skriv under och lämna fullmakten enligt Transportstyrelsens rutiner.",
+    "commonMistakes": "1. Otydligt fordon – Ange registreringsnummer, fabrikat och årsmodell.\n\n2. Oklart uppdrag – Ange om det gäller försäljning eller registrering.\n\n3. Saknar prisram vid försäljning – Ange lägsta accepterade pris.\n\n4. Glömmer Transportstyrelsens rutiner – Ärenden anmäls enligt deras anvisningar.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Var anmäls ägarbyte?",
-        "answer": "Hos Transportstyrelsen via deras e-tjänst eller via post. Ägarbyte ska anmälas inom 10 dagar från övergången."
+        "question": "Kan ett ombud sälja min husvagn?",
+        "answer": "Ja, om fullmakten anger det. Ange gärna lägsta accepterade pris."
       },
       {
-        "question": "Behöver fordonsfullmakten bevittnas?",
-        "answer": "Inte enligt lag, men det rekommenderas. Köparen och Transportstyrelsen kan kräva det."
+        "question": "Vem hanterar ägarbytet?",
+        "answer": "Transportstyrelsen, som dokumenterar ägarbyten i vägtrafikregistret."
       },
       {
-        "question": "Kan ombudet sälja fordonet under marknadsvärde?",
-        "answer": "Bara om du tillåter det. Ange ett minimipris i fullmakten för att skydda dig."
+        "question": "Är en husvagn ett registrerat fordon?",
+        "answer": "Ja, en husvagn är ett släpfordon som registreras i vägtrafikregistret."
       },
       {
-        "question": "Vad behövs vid besiktning?",
-        "answer": "Fullmakten i original, ombudets ID-handling samt fordonets registreringsbevis del 2."
+        "question": "Hur identifieras fordonet?",
+        "answer": "Med registreringsnummer, fabrikat och årsmodell."
       },
       {
-        "question": "Gäller fullmakten för export utomlands?",
-        "answer": "Vid export krävs ofta separat exportfullmakt och tullhandlingar. Kontakta Transportstyrelsen och Tullverket."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, genom att meddela Transportstyrelsen och ombudet skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=resa-transport"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }
