@@ -12,30 +12,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att förhandla, upprätta sambo-avtal eller företräda dig i bodelning enligt sambolagen. Lämpligt om du är utomlands eller vill ha juridisk företrädare.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Sambolagen (2003:376) reglerar samboegendom och bodelning vid separation.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för sambo-avtal ger ett ombud, exempelvis en jurist, rätt att biträda dig med att upprätta eller förhandla ett samboavtal eller företräda dig i frågor som rör sambolagen. Ett samboavtal används ofta för att avtala bort sambolagens regler om bodelning.\n\nMallen anger vad ombudet får göra och vilket ärende det gäller. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att ett samboavtal måste undertecknas av båda samborna för att vara giltigt.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Samboförhållanden och bodelning regleras i sambolagen (2003:376). Ett samboavtal ska enligt sambolagen vara skriftligt och undertecknas av båda samborna – ett ombud kan upprätta och förhandla det, men avtalet blir bindande först när båda parter skrivit under.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn, personnummer och adress.\nSteg 2: Fyll i ombudets namn, personnummer och relation till dig.\nSteg 3: Beskriv uppdraget – upprätta samboavtal, förhandla villkor eller företräda i bodelning.\nSteg 4: Ange eventuella ramar, t.ex. vilken egendom som ska omfattas.\nSteg 5: Sätt en giltighetstid.\nSteg 6: Skriv under fullmakten; kom ihåg att själva samboavtalet ska undertecknas av båda samborna.",
+    "commonMistakes": "1. Tror att ombudet kan binda avtalet ensamt – Ett samboavtal blir giltigt först när båda samborna undertecknat.\n\n2. Glömmer skriftform – Samboavtal måste vara skriftligt enligt sambolagen.\n\n3. Otydligt uppdrag – Ange om ombudet ska upprätta, förhandla eller företräda vid bodelning.\n\n4. Förväxlar med äktenskapsförord – Sambor använder samboavtal; gifta använder äktenskapsförord.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Måste fullmakten bevittnas?",
-        "answer": "Det är inte ett lagkrav men rekommenderas starkt. Två vittnen som inte är jäviga gör fullmakten lättare att få godkänd av motparten."
+        "question": "Måste båda sambor skriva under avtalet?",
+        "answer": "Ja. Ett samboavtal ska vara skriftligt och undertecknas av båda samborna för att gälla."
       },
       {
-        "question": "Hur återkallar jag fullmakten?",
-        "answer": "Meddela fullmaktshavaren skriftligt och informera berörda parter (bank, myndighet etc.). Fullmakten upphör omedelbart."
+        "question": "Vad kan man avtala bort?",
+        "answer": "Främst sambolagens regler om bodelning av gemensam bostad och bohag som skaffats för gemensamt bruk."
       },
       {
-        "question": "Vad händer vid dödsfall?",
-        "answer": "En vanlig fullmakt upphör automatiskt vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna."
+        "question": "Behöver samboavtal registreras?",
+        "answer": "Nej, samboavtal behöver inte registreras hos någon myndighet, men förvara det säkert."
       },
       {
-        "question": "Kan ombudet ge fullmakten vidare?",
-        "answer": "Bara om det uttryckligen anges. Som standard har ombudet inte rätt att utse en annan person (substitution)."
+        "question": "Är samboavtal samma som testamente?",
+        "answer": "Nej. Sambor ärver inte varandra enligt lag; vill ni det krävs ett testamente utöver samboavtalet."
       },
       {
-        "question": "Behöver fullmakten registreras?",
-        "answer": "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar."
+        "question": "Kan jag återkalla fullmakten?",
+        "answer": "Ja, genom att meddela ombudet skriftligt. Ett redan undertecknat samboavtal påverkas dock inte."
       }
     ],
     "relatedSearchTerms": [
@@ -62,5 +62,5 @@
       "href": "/mallar?category=foraldrar-barn"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

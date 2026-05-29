@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Informerat samtycke till estetiska ingrepp – t.ex. botox, fillers eller plastikkirurgi. Bekräftar att du fått information om risker och alternativ.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Patientsäkerhetslagen (2010:659) och Inspektionen för vård och omsorgs (IVO) tillsyn.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Ett medgivande för estetisk behandling är ett samtycke till en estetisk eller kosmetisk behandling, där du bekräftar att du fått information om behandlingen, dess risker och eventuella alternativ. Det används av kliniker som dokumentation av ditt informerade samtycke.\n\nMallen anger vilken behandling det gäller och vilken klinik som utför den. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att estetiska injektionsbehandlingar och estetisk kirurgi enligt lag som regel inte får utföras på personer under 18 år.",
+    "legalValidity": "Estetiska kirurgiska ingrepp och estetiska injektionsbehandlingar regleras av lagen (2021:363) om estetiska kirurgiska ingrepp och estetiska injektionsbehandlingar. Sådana behandlingar får som huvudregel inte utföras på den som är under 18 år, och ett skriftligt och informerat samtycke krävs efter att betänketid getts. Behandling bygger på ditt samtycke enligt patientlagen (2014:821); ett medgivande dokumenterar att du fått information och samtyckt.",
+    "howToGuide": "Steg 1: Ange ditt fullständiga namn, personnummer och adress.\nSteg 2: Ange kliniken eller behandlaren som ska utföra behandlingen.\nSteg 3: Beskriv vilken behandling medgivandet avser.\nSteg 4: Bekräfta att du fått information om behandlingen, dess risker och alternativ.\nSteg 5: Ange relevant medicinsk information, allergier och mediciner.\nSteg 6: Datera och skriv under efter att betänketid getts.",
+    "commonMistakes": "1. Behandling av minderårig – Estetiska injektioner och kirurgi får som regel inte utföras på personer under 18 år.\n\n2. Ingen betänketid – Lagen kräver att betänketid ges innan estetiska ingrepp utförs.\n\n3. Bristfällig information – Samtycket ska bygga på information om risker och alternativ.\n\n4. Saknar medicinsk information – Ange allergier, mediciner och tidigare reaktioner.\n\n5. Saknar datum och underskrift – Medgivandet är ogiltigt utan detta.",
     "faq": [
       {
-        "question": "Accepterar svensk vård ombud?",
-        "answer": "Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter enligt patientlagen (2014:821)."
+        "question": "Får jag göra estetisk behandling om jag är under 18?",
+        "answer": "Som huvudregel nej. Estetiska injektionsbehandlingar och estetisk kirurgi får enligt lag inte utföras på personer under 18 år."
       },
       {
-        "question": "Kan ombudet fatta medicinska beslut?",
-        "answer": "Endast om patienten saknar beslutsförmåga och fullmakten uttryckligen ger denna rätt. Annars krävs patientens samtycke."
+        "question": "Krävs betänketid?",
+        "answer": "Ja, lagen kräver att betänketid ges innan estetiska ingrepp utförs, så att du kan ta ett välgrundat beslut."
       },
       {
-        "question": "Får ombudet ta del av journalen?",
-        "answer": "Ja, om det anges i fullmakten. Vårdgivaren bedömer i varje enskilt fall enligt patientdatalagen (2008:355)."
+        "question": "Vad ska samtycket bygga på?",
+        "answer": "Ett informerat samtycke, där du fått information om behandlingen, dess risker och eventuella alternativ."
       },
       {
-        "question": "Behöver fullmakten bevittnas?",
-        "answer": "Rekommenderas starkt vid känsliga uppgifter eller större ingrepp. Bevittning ger fullmakten extra juridisk tyngd."
+        "question": "Vem får utföra behandlingen?",
+        "answer": "Estetiska kirurgiska ingrepp och injektionsbehandlingar får bara utföras av legitimerad hälso- och sjukvårdspersonal med rätt kompetens."
       },
       {
-        "question": "Vad är skillnaden mot en framtidsfullmakt?",
-        "answer": "En vanlig fullmakt gäller medan du är beslutskompetent. Framtidsfullmakten träder i kraft först när du inte längre kan fatta beslut."
+        "question": "Kan jag ångra mig?",
+        "answer": "Ja, du kan återkalla ditt samtycke fram till dess att behandlingen utförs."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=vard-omsorg"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

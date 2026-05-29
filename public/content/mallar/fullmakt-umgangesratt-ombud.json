@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger advokat eller annat ombud rätt att företräda en vårdnadshavare i tvister om umgänge, vårdnad eller boende. Kommunicerar med tingsrätt, socialnämnd och motparten.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Föräldrabalken (1949:381) 6 kap. om vårdnad, boende och umgänge.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt i umgängesrättsfrågor ger ett ombud rätt att företräda dig i frågor om barns umgänge, exempelvis i samarbetssamtal hos kommunen eller i en tvist i tingsrätten. Ombudet kan föra din talan och sköta kontakten med motpart och domstol.\n\nMallen anger vad ombudet får göra och vilket ärende det gäller. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att barnets bästa alltid är avgörande i dessa frågor och prövas ytterst av domstol.",
+    "legalValidity": "Frågor om vårdnad, boende och umgänge regleras i föräldrabalken (1949:381) 6 kap., där barnets bästa är avgörande. När ett ombud för din talan i domstol grundas behörigheten på en rättegångsfullmakt enligt rättegångsbalken (1942:740) 12 kap. Kommunen erbjuder samarbetssamtal enligt socialtjänstlagen (2001:453). Ett ombud kan företräda dig, men domstolen prövar alltid frågan utifrån barnets bästa.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn, personnummer och adress.\nSteg 2: Fyll i ombudets namn och uppgifter – ofta en advokat eller jurist.\nSteg 3: Ange att fullmakten avser umgänges-, boende- eller vårdnadsfrågor och vilket barn det gäller.\nSteg 4: Avgränsa behörigheten – samarbetssamtal, talan i tingsrätten, förlikning, delgivning.\nSteg 5: Sätt en giltighetstid eller låt den gälla tills ärendet avslutats.\nSteg 6: Skriv under och lämna fullmakten till ombudet och berörd instans.",
+    "commonMistakes": "1. Otydligt vilket barn det gäller – Ange barnets namn så att uppdraget inte missförstås.\n\n2. Glömmer barnets bästa – Umgängesfrågor avgörs utifrån barnets bästa, oavsett föräldrarnas önskemål.\n\n3. Oklart om förlikning – Ange om ombudet får träffa överenskommelser i ditt namn.\n\n4. Blandar ihop instanser – Klargör om fullmakten gäller kommunens samarbetssamtal, tingsrätten eller båda.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Måste fullmakten bevittnas?",
-        "answer": "Det är inte ett lagkrav men rekommenderas starkt. Två vittnen som inte är jäviga gör fullmakten lättare att få godkänd av motparten."
+        "question": "Vad väger tyngst i en umgängestvist?",
+        "answer": "Barnets bästa är alltid avgörande enligt föräldrabalken. Domstolen väger in barnets behov av en nära och god kontakt med båda föräldrarna."
       },
       {
-        "question": "Hur återkallar jag fullmakten?",
-        "answer": "Meddela fullmaktshavaren skriftligt och informera berörda parter (bank, myndighet etc.). Fullmakten upphör omedelbart."
+        "question": "Vad är samarbetssamtal?",
+        "answer": "Det är samtal som kommunen erbjuder för att hjälpa föräldrar att enas om vårdnad, boende och umgänge utan domstol."
       },
       {
-        "question": "Vad händer vid dödsfall?",
-        "answer": "En vanlig fullmakt upphör automatiskt vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna."
+        "question": "Kan ombudet träffa avtal åt mig?",
+        "answer": "Bara om fullmakten anger det. Avtal om umgänge kan godkännas av socialnämnden och blir då verkställbart."
       },
       {
-        "question": "Kan ombudet ge fullmakten vidare?",
-        "answer": "Bara om det uttryckligen anges. Som standard har ombudet inte rätt att utse en annan person (substitution)."
+        "question": "Behöver jag advokat?",
+        "answer": "Inte alltid, men i en tvist i tingsrätten är ett juridiskt ombud ofta till stor hjälp."
       },
       {
-        "question": "Behöver fullmakten registreras?",
-        "answer": "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar."
+        "question": "Kan jag återkalla fullmakten?",
+        "answer": "Ja. Meddela ombudet och berörd instans skriftligt att fullmakten upphör."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=foraldrar-barn"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

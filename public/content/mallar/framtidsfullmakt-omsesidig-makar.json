@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Båda makarna upprättar samtidigt en framtidsfullmakt för varandra. Träder i kraft för den part som blir oförmögen att fatta beslut. Mycket vanligt för äldre par.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Lag (2017:310) om framtidsfullmakter. Kräver bevittning av två vittnen för respektive fullmakt.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer korrekt bevittning – En framtidsfullmakt måste enligt lag (2017:310) om framtidsfullmakter undertecknas i två vittnens samtidiga närvaro. Vittnena måste känna till att det är en framtidsfullmakt de bevittnar. Fullmaktshavaren får inte vara vittne.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En ömsesidig framtidsfullmakt för makar är två framtidsfullmakter i ett dokument, där makarna ger varandra rätt att sköta ekonomiska och personliga angelägenheter om någon av dem i framtiden inte längre kan göra det själv. Det är ett sätt för par att i förväg bestämma att den andra maken ska företräda dem.\n\nMallen låter båda makar utse varandra som framtidsfullmaktshavare och ange vad fullmakten ska omfatta. Du fyller i uppgifterna och laddar ner dokumentet som PDF. För att vara giltig måste en framtidsfullmakt uppfylla särskilda formkrav.",
+    "legalValidity": "En framtidsfullmakt regleras av lagen (2017:310) om framtidsfullmakter. Den måste vara skriftlig, fullmaktsgivaren ska ha fyllt 18 år, och dokumentet ska undertecknas i närvaro av två samtidigt närvarande vittnen. Framtidsfullmakten träder i kraft först när fullmaktsgivaren på grund av sjukdom, psykisk störning eller liknande varaktigt inte längre kan ta hand om sina angelägenheter. Det är fullmaktshavaren som bedömer när den tidpunkten har inträtt.",
+    "howToGuide": "Steg 1: Ange båda makarnas fullständiga namn, personnummer och adress.\nSteg 2: Ange att makarna ömsesidigt utser varandra till framtidsfullmaktshavare.\nSteg 3: Beskriv vad fullmakten ska omfatta – ekonomiska och/eller personliga angelägenheter.\nSteg 4: Ange eventuella begränsningar och om någon särskild person ska granska fullmaktshavaren.\nSteg 5: Skriv ut dokumentet och underteckna i närvaro av två samtidigt närvarande vittnen.\nSteg 6: Förvara originalet säkert och berätta för närstående var det finns.",
+    "commonMistakes": "1. Saknar två vittnen – Framtidsfullmakten måste bevittnas av två samtidigt närvarande personer för att vara giltig.\n\n2. Vittnena är jäviga – Fullmaktshavaren, makar, sambo eller nära släktingar till fullmaktshavaren får inte vara vittnen.\n\n3. För vag omfattning – Ange tydligt vilka angelägenheter fullmakten omfattar.\n\n4. Tror att den gäller direkt – Framtidsfullmakten gäller först när fullmaktsgivaren inte längre kan sköta sina angelägenheter.\n\n5. Original saknas – Förvara originalet säkert; det kan behöva visas upp för banker och myndigheter.",
     "faq": [
       {
-        "question": "Måste fullmakten bevittnas?",
-        "answer": "Ja. En framtidsfullmakt måste enligt lag (2017:310) om framtidsfullmakter undertecknas i två vittnens samtidiga närvaro. Vittnena måste känna till att det är en framtidsfullmakt de bevittnar. Fullmaktshavaren får inte vara vittne."
+        "question": "När börjar en framtidsfullmakt gälla?",
+        "answer": "Först när fullmaktsgivaren på grund av sjukdom eller liknande varaktigt inte längre kan ta hand om sina angelägenheter. Fullmaktshavaren bedömer när det inträtt."
       },
       {
-        "question": "Hur återkallar jag fullmakten?",
-        "answer": "Meddela fullmaktshavaren skriftligt och informera berörda parter (bank, myndighet etc.). Fullmakten upphör omedelbart."
+        "question": "Hur många vittnen krävs?",
+        "answer": "Två, som ska vara samtidigt närvarande när fullmaktsgivaren skriver under. Fullmaktshavaren får inte vara vittne."
       },
       {
-        "question": "Vad händer vid dödsfall?",
-        "answer": "En vanlig fullmakt upphör automatiskt vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna."
+        "question": "Kan makar ge varandra fullmakt i samma dokument?",
+        "answer": "Ja, en ömsesidig framtidsfullmakt innehåller två fullmakter där makarna utser varandra."
       },
       {
-        "question": "Kan ombudet ge fullmakten vidare?",
-        "answer": "Bara om det uttryckligen anges. Som standard har ombudet inte rätt att utse en annan person (substitution)."
+        "question": "Ersätter den en god man?",
+        "answer": "Den kan minska behovet av god man eller förvaltare, men en överförmyndare kan ändå behöva kopplas in i vissa fall."
       },
       {
-        "question": "Behöver fullmakten registreras?",
-        "answer": "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar."
+        "question": "Kan framtidsfullmakten återkallas?",
+        "answer": "Ja, så länge fullmaktsgivaren fortfarande är beslutsför kan den återkallas."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=seniorer-omsorg"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

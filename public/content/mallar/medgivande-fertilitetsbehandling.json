@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Skriftligt medgivande från partner och eventuella donatorer vid IVF, insemination eller annan assisterad befruktning. Krävs av vårdgivaren.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Lag (2006:351) om genetisk integritet m.m. och lag (1984:1140) om insemination.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Ett medgivande för fertilitetsbehandling är ett samtycke till assisterad befruktning, exempelvis insemination eller IVF. Vid behandling av par krävs samtycke från båda i paret, och dokumentet bekräftar att samtycket har lämnats.\n\nMallen anger vilken behandling det gäller och vilken klinik som utför den. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att assisterad befruktning är reglerad i lag och att kliniken alltid gör en egen bedömning och inhämtar nödvändiga samtycken.",
+    "legalValidity": "Assisterad befruktning regleras av lagen (2006:351) om genetisk integritet m.m. Vid behandling av en kvinna som är gift, registrerad partner eller sambo krävs som regel skriftligt samtycke från partnern, och partnerns samtycke har också betydelse för det rättsliga föräldraskapet. Vården bygger på den enskildes samtycke enligt patientlagen (2014:821), och kliniken gör alltid en egen prövning av förutsättningarna.",
+    "howToGuide": "Steg 1: Ange ditt fullständiga namn, personnummer och adress.\nSteg 2: Ange eventuell partner som också lämnar samtycke.\nSteg 3: Beskriv vilken behandling medgivandet avser.\nSteg 4: Ange kliniken som ska utföra behandlingen.\nSteg 5: Bekräfta att ni fått information om behandlingen och dess innebörd.\nSteg 6: Datera och skriv under – vid par undertecknar båda.",
+    "commonMistakes": "1. Partnerns samtycke saknas – Vid par krävs som regel samtycke från båda, vilket även påverkar föräldraskapet.\n\n2. Otydlig behandling – Ange vilken typ av behandling som avses.\n\n3. Bristfällig information – Samtycket ska bygga på information om behandlingen och dess innebörd.\n\n4. Glömmer klinikens egen prövning – Kliniken gör alltid en egen bedömning enligt lag.\n\n5. Saknar datum och underskrift – Medgivandet är ogiltigt utan detta.",
     "faq": [
       {
-        "question": "Accepterar svensk vård ombud?",
-        "answer": "Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter enligt patientlagen (2014:821)."
+        "question": "Behöver min partner också samtycka?",
+        "answer": "Vid par krävs som regel samtycke från båda. Partnerns samtycke har även betydelse för det rättsliga föräldraskapet."
       },
       {
-        "question": "Kan ombudet fatta medicinska beslut?",
-        "answer": "Endast om patienten saknar beslutsförmåga och fullmakten uttryckligen ger denna rätt. Annars krävs patientens samtycke."
+        "question": "Vilken lag gäller?",
+        "answer": "Lagen (2006:351) om genetisk integritet m.m. reglerar assisterad befruktning i Sverige."
       },
       {
-        "question": "Får ombudet ta del av journalen?",
-        "answer": "Ja, om det anges i fullmakten. Vårdgivaren bedömer i varje enskilt fall enligt patientdatalagen (2008:355)."
+        "question": "Gör kliniken en egen bedömning?",
+        "answer": "Ja, kliniken prövar alltid förutsättningarna och inhämtar de samtycken som krävs enligt lag."
       },
       {
-        "question": "Behöver fullmakten bevittnas?",
-        "answer": "Rekommenderas starkt vid känsliga uppgifter eller större ingrepp. Bevittning ger fullmakten extra juridisk tyngd."
+        "question": "Kan ett ombud samtycka åt mig?",
+        "answer": "Nej, samtycke till fertilitetsbehandling är personligt och kan inte lämnas av ett ombud."
       },
       {
-        "question": "Vad är skillnaden mot en framtidsfullmakt?",
-        "answer": "En vanlig fullmakt gäller medan du är beslutskompetent. Framtidsfullmakten träder i kraft först när du inte längre kan fatta beslut."
+        "question": "Kan jag ångra mig?",
+        "answer": "Ja, samtycket kan återkallas fram till dess att behandlingen genomförs."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=vard-omsorg"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

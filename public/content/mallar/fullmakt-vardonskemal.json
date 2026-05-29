@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Komplement till livstestamente – specificerar dina vårdönskemål för olika scenarier och utser ett ombud som ska företräda dig om du blir oförmögen.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Patientlagen (2014:821) reglerar samråd och samtycke.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt med vårdönskemål låter dig beskriva dina önskemål om medicinsk behandling och utse en närstående som kan föra fram din vilja om du själv inte kan göra det. Den används för att ge vården och dina anhöriga tydlig vägledning.\n\nMallen låter dig ange behandlingsönskemål och utse ett ombud i vårdfrågor. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att vården alltid gör en medicinsk bedömning, men att dina önskemål ska beaktas så långt det är möjligt.",
+    "legalValidity": "Hälso- och sjukvården ska enligt patientlagen (2014:821) utforma och genomföra vården i samråd med patienten så långt det är möjligt och respektera patientens självbestämmande. Ett dokument med vårdönskemål är inte juridiskt bindande, men ger vägledning. För beslut om ekonomiska och personliga angelägenheter vid varaktig oförmåga kan en framtidsfullmakt enligt lagen (2017:310) om framtidsfullmakter behövas som komplement.",
+    "howToGuide": "Steg 1: Ange ditt fullständiga namn, personnummer och adress.\nSteg 2: Beskriv dina önskemål om behandling och omvårdnad, så konkret som möjligt.\nSteg 3: Ange vad du vill respektive inte vill, t.ex. smärtlindring eller specifika ingrepp.\nSteg 4: Utse en närstående som kan föra fram din vilja och ange dennes uppgifter.\nSteg 5: Datera och skriv under, gärna med vittnen.\nSteg 6: Ge en kopia till närstående och informera vården om att dokumentet finns.",
+    "commonMistakes": "1. Förväntar dig att önskemålen är bindande – De är vägledande; vården gör alltid en medicinsk bedömning.\n\n2. För allmänt hållet – Konkreta önskemål är lättare för vården att följa.\n\n3. Ingen vet om dokumentet – Informera närstående och vården var det finns.\n\n4. Saknar utsedd närstående – Utse någon som kan föra fram din vilja om du inte själv kan.\n\n5. Uppdateras inte – Se över dokumentet vid förändrad hälsa eller ändrad vilja.",
     "faq": [
       {
-        "question": "Accepterar svensk vård ombud?",
-        "answer": "Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter enligt patientlagen (2014:821)."
+        "question": "Måste vården följa mina önskemål?",
+        "answer": "Vården ska beakta din vilja så långt det är möjligt enligt patientlagen, men gör alltid en egen medicinsk bedömning."
       },
       {
-        "question": "Kan ombudet fatta medicinska beslut?",
-        "answer": "Endast om patienten saknar beslutsförmåga och fullmakten uttryckligen ger denna rätt. Annars krävs patientens samtycke."
+        "question": "Vad är skillnaden mot livstestamente?",
+        "answer": "De överlappar; ett livstestamente fokuserar på livets slutskede, medan vårdönskemål kan vara bredare. Båda är vägledande."
       },
       {
-        "question": "Får ombudet ta del av journalen?",
-        "answer": "Ja, om det anges i fullmakten. Vårdgivaren bedömer i varje enskilt fall enligt patientdatalagen (2008:355)."
+        "question": "Kan jag utse någon att tala för mig?",
+        "answer": "Ja, du kan utse en närstående som för fram din vilja. För ekonomiska frågor kan en framtidsfullmakt behövas."
       },
       {
-        "question": "Behöver fullmakten bevittnas?",
-        "answer": "Rekommenderas starkt vid känsliga uppgifter eller större ingrepp. Bevittning ger fullmakten extra juridisk tyngd."
+        "question": "Behöver det bevittnas?",
+        "answer": "Det är inget krav, men vittnen stärker dokumentets trovärdighet."
       },
       {
-        "question": "Vad är skillnaden mot en framtidsfullmakt?",
-        "answer": "En vanlig fullmakt gäller medan du är beslutskompetent. Framtidsfullmakten träder i kraft först när du inte längre kan fatta beslut."
+        "question": "Kan jag ändra mina önskemål?",
+        "answer": "Ja, när som helst. Skriv ett nytt dokument och informera närstående och vården."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=vard-omsorg"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

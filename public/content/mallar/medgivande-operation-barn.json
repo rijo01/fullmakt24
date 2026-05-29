@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Skriftligt medgivande från båda vårdnadshavare för icke-akut operation. Krävs av sjukhuset innan ingreppet kan genomföras.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Patientlagen (2014:821) 4 kap. om samråd och samtycke.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Ett medgivande för operation av barn är vårdnadshavarnas skriftliga samtycke till en planerad operation av ett barn. Det ger vården ett tydligt underlag inför ingreppet och bekräftar att vårdnadshavarna fått information om operationen och dess risker.\n\nMallen anger vilket barn och vilket ingrepp det gäller samt vilken vårdgivare som utför det. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Vid gemensam vårdnad krävs som regel båda vårdnadshavarnas samtycke till en planerad operation.",
+    "legalValidity": "Vård av barn bygger på vårdnadshavarnas samtycke enligt föräldrabalken (1949:381) 6 kap. och ges i enlighet med patientlagen (2014:821). Vid gemensam vårdnad krävs som regel båda vårdnadshavarnas samtycke för en planerad operation, medan akut och nödvändig vård kan ges utan föregående samtycke. Barnets egen inställning ska beaktas utifrån ålder och mognad.",
+    "howToGuide": "Steg 1: Ange barnets namn och personnummer.\nSteg 2: Fyll i vårdnadshavarnas namn och personnummer.\nSteg 3: Beskriv vilket ingrepp medgivandet avser.\nSteg 4: Ange vårdgivare och planerat datum om det är känt.\nSteg 5: Bekräfta att ni fått information om ingreppet och dess risker, och ange medicinsk information.\nSteg 6: Låt vårdnadshavarna skriva under och lämna medgivandet till vårdgivaren.",
+    "commonMistakes": "1. Endast en vårdnadshavare skriver under – Vid gemensam vårdnad krävs som regel båda för en planerad operation.\n\n2. Otydligt ingrepp – Ange vilket ingrepp medgivandet avser.\n\n3. Glömmer barnets inställning – Äldre barn bör tillfrågas utifrån mognad.\n\n4. Saknar medicinsk information – Ange allergier, mediciner och tidigare narkos.\n\n5. Saknar datum och underskrift – Medgivandet är ogiltigt utan detta.",
     "faq": [
       {
-        "question": "Krävs båda vårdnadshavares underskrift?",
-        "answer": "Vid gemensam vårdnad krävs båda vårdnadshavares samtycke för väsentliga beslut. För vardagliga beslut räcker en."
+        "question": "Krävs båda vårdnadshavarnas samtycke?",
+        "answer": "Vid gemensam vårdnad krävs som regel båda för en planerad operation. Akut vård kan ges utan föregående samtycke."
       },
       {
-        "question": "Hur länge gäller medgivandet?",
-        "answer": "Under den tid du anger. Vi rekommenderar att specificera ett konkret slutdatum för säkerhet."
+        "question": "Ska barnet tillfrågas?",
+        "answer": "Ja, barnets inställning ska beaktas utifrån ålder och mognad."
       },
       {
-        "question": "Kan medgivandet återkallas?",
-        "answer": "Ja, när som helst. Meddela mottagaren och berörda parter skriftligt så slutar medgivandet att gälla omedelbart."
+        "question": "Vad gäller vid akut operation?",
+        "answer": "Akut och nödvändig vård kan ges utan föregående samtycke om det krävs för barnets bästa."
       },
       {
         "question": "Behöver medgivandet bevittnas?",
-        "answer": "Inte enligt lag, men många mottagare (skolor, vårdgivare) föredrar det. Två vittnen rekommenderas."
+        "answer": "Det är inget generellt krav, men vårdgivaren kan ha egna rutiner."
       },
       {
-        "question": "Vad om vårdnadshavarna är osams?",
-        "answer": "Vid oenighet kan saken avgöras av tingsrätten. Familjerätten kan också medla via socialnämnden."
+        "question": "Kan vi återkalla samtycket?",
+        "answer": "Ja, fram till dess att ingreppet genomförs."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=vard-omsorg"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Vårdnadshavares medgivande till blodprov, urinprov eller annan provtagning på barn. Krävs vid icke-akut provtagning eller forskning.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Patientlagen (2014:821) 4 kap. och lag (2003:460) om etikprövning av forskning på människor.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Ett medgivande för blodprov på barn är vårdnadshavarnas skriftliga samtycke till att blodprov eller annan provtagning får tas på ett barn, exempelvis inför en utredning, hälsokontroll eller forskningsstudie. Det ger vården ett tydligt underlag för att genomföra provtagningen.\n\nMallen anger vilket barn det gäller, vilken provtagning som avses och vem som lämnar samtycke. Du fyller i uppgifterna och laddar ner dokumentet som PDF. För barn fattas beslutet av vårdnadshavarna, men barnets egen inställning ska beaktas utifrån ålder och mognad.",
+    "legalValidity": "Vård av barn bygger på vårdnadshavarnas samtycke enligt föräldrabalken (1949:381) 6 kap., och vården ska ges i enlighet med patientlagen (2014:821). Barnets egen inställning ska tillmätas betydelse i takt med ålder och mognad. Vid gemensam vårdnad krävs som regel båda vårdnadshavarnas samtycke för åtgärder som inte är rutinmässiga eller akuta.",
+    "howToGuide": "Steg 1: Ange barnets namn och personnummer.\nSteg 2: Fyll i vårdnadshavarnas namn och personnummer.\nSteg 3: Beskriv vilken provtagning medgivandet avser och syftet med den.\nSteg 4: Ange vårdgivare eller mottagning som ska utföra provtagningen.\nSteg 5: Notera eventuella allergier eller relevant medicinsk information.\nSteg 6: Låt vårdnadshavarna skriva under och lämna medgivandet till vårdgivaren.",
+    "commonMistakes": "1. Endast en vårdnadshavare skriver under – Vid gemensam vårdnad krävs ofta båda för åtgärder som inte är akuta.\n\n2. Otydligt vilken provtagning – Ange vilken typ av prov och syftet.\n\n3. Glömmer barnets inställning – Äldre barn bör tillfrågas utifrån mognad.\n\n4. Saknar medicinsk information – Ange allergier eller relevanta tidigare reaktioner.\n\n5. Saknar datum och underskrift – Medgivandet är ogiltigt utan detta.",
     "faq": [
       {
-        "question": "Krävs båda vårdnadshavares underskrift?",
-        "answer": "Vid gemensam vårdnad krävs båda vårdnadshavares samtycke för väsentliga beslut. För vardagliga beslut räcker en."
+        "question": "Krävs båda vårdnadshavarnas samtycke?",
+        "answer": "Vid gemensam vårdnad krävs som regel båda för provtagning som inte är rutinmässig eller akut."
       },
       {
-        "question": "Hur länge gäller medgivandet?",
-        "answer": "Under den tid du anger. Vi rekommenderar att specificera ett konkret slutdatum för säkerhet."
+        "question": "Ska barnet tillfrågas?",
+        "answer": "Ja, barnets inställning ska beaktas utifrån ålder och mognad."
       },
       {
-        "question": "Kan medgivandet återkallas?",
-        "answer": "Ja, när som helst. Meddela mottagaren och berörda parter skriftligt så slutar medgivandet att gälla omedelbart."
+        "question": "Gäller medgivandet vid akut vård?",
+        "answer": "Vid akuta situationer kan vård ges utan medgivande. Dokumentet underlättar planerad provtagning."
       },
       {
-        "question": "Behöver medgivandet bevittnas?",
-        "answer": "Inte enligt lag, men många mottagare (skolor, vårdgivare) föredrar det. Två vittnen rekommenderas."
+        "question": "Kan medgivandet gälla forskning?",
+        "answer": "Ja, men forskning på barn har särskilda krav på information och samtycke; vårdgivaren informerar om vad som gäller."
       },
       {
-        "question": "Vad om vårdnadshavarna är osams?",
-        "answer": "Vid oenighet kan saken avgöras av tingsrätten. Familjerätten kan också medla via socialnämnden."
+        "question": "Kan jag återkalla samtycket?",
+        "answer": "Ja, fram till dess att provtagningen genomförs."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=vard-omsorg"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

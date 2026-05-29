@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Skriftligt medgivande från levande organdonator (oftast närstående). Genomgår strikt etisk prövning och kräver upprepad bekräftelse.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Lag (1995:831) om transplantation m.m.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Ett medgivande för organdonation från levande donator är ett samtycke från dig som vill donera ett organ, exempelvis en njure eller del av lever, till en annan person. Dokumentet bekräftar att du fått information om ingreppet och dess risker och att du frivilligt samtycker.\n\nMallen anger vilken donation det gäller och vilken vårdgivare som utför den. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Levande donation förutsätter en noggrann medicinsk och etisk prövning och ett frivilligt, informerat samtycke.",
+    "legalValidity": "Donation av organ och vävnad regleras av lagen (1995:831) om transplantation m.m. Ingrepp på en levande donator får göras endast med donatorns samtycke och efter en noggrann medicinsk bedömning. Samtycket ska vara frivilligt och bygga på information om ingreppet och dess risker enligt patientlagen (2014:821). Vården gör alltid en egen prövning, och i vissa fall krävs ytterligare prövning.",
+    "howToGuide": "Steg 1: Ange ditt fullständiga namn, personnummer och adress.\nSteg 2: Ange relationen till mottagaren om det är relevant.\nSteg 3: Beskriv vilken donation medgivandet avser.\nSteg 4: Ange vårdgivare som ansvarar för ingreppet.\nSteg 5: Bekräfta att du fått information om ingreppet och dess risker och att samtycket är frivilligt.\nSteg 6: Datera och skriv under, gärna med vittnen.",
+    "commonMistakes": "1. Bristfällig information – Samtycket ska bygga på fullständig information om ingreppet och riskerna.\n\n2. Otydligt om frivillighet – Det ska tydligt framgå att donationen är frivillig och utan påtryckningar.\n\n3. Glömmer den medicinska prövningen – Vården gör alltid en egen medicinsk och etisk bedömning.\n\n4. Saknar uppgift om vårdgivare – Ange vilken klinik som ansvarar för ingreppet.\n\n5. Saknar datum och underskrift – Medgivandet är ogiltigt utan detta.",
     "faq": [
       {
-        "question": "Accepterar svensk vård ombud?",
-        "answer": "Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter enligt patientlagen (2014:821)."
+        "question": "Vilken lag reglerar levande donation?",
+        "answer": "Lagen (1995:831) om transplantation m.m. Ingrepp på levande donator får göras endast med samtycke och efter medicinsk bedömning."
       },
       {
-        "question": "Kan ombudet fatta medicinska beslut?",
-        "answer": "Endast om patienten saknar beslutsförmåga och fullmakten uttryckligen ger denna rätt. Annars krävs patientens samtycke."
+        "question": "Måste samtycket vara frivilligt?",
+        "answer": "Ja. Det ska vara helt frivilligt, utan påtryckningar, och bygga på information om ingreppet och dess risker."
       },
       {
-        "question": "Får ombudet ta del av journalen?",
-        "answer": "Ja, om det anges i fullmakten. Vårdgivaren bedömer i varje enskilt fall enligt patientdatalagen (2008:355)."
+        "question": "Gör vården en egen prövning?",
+        "answer": "Ja, alltid. En noggrann medicinsk och etisk bedömning görs innan en levande donation kan genomföras."
       },
       {
-        "question": "Behöver fullmakten bevittnas?",
-        "answer": "Rekommenderas starkt vid känsliga uppgifter eller större ingrepp. Bevittning ger fullmakten extra juridisk tyngd."
+        "question": "Kan ett ombud samtycka åt mig?",
+        "answer": "Nej. Samtycke till att donera ett organ som levande donator är strikt personligt."
       },
       {
-        "question": "Vad är skillnaden mot en framtidsfullmakt?",
-        "answer": "En vanlig fullmakt gäller medan du är beslutskompetent. Framtidsfullmakten träder i kraft först när du inte längre kan fatta beslut."
+        "question": "Kan jag ångra mig?",
+        "answer": "Ja, du kan återkalla ditt samtycke fram till ingreppet."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=vard-omsorg"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

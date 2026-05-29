@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Specificerar omfattning, ansvar och tidsperiod för regelbunden barnpassning. Ger barnvakten rätt att fatta vissa vardagliga beslut, hämta från skola, akut sjukvård etc.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Föräldrabalken (1949:381). Vårdnadshavare delegerar inte vårdnaden men ger samtycke till vardagliga beslut.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Ett medgivande för regelbunden barnpassning används när en barnvakt, mor- eller farförälder eller dagbarnvårdare regelbundet ska passa barnet. Det ger den som passar barnet ett tydligt mandat och samlar viktig information som behövs vid sjukdom eller nödsituation.\n\nMallen anger vem som får passa barnet, under vilka tider och vad personen får göra. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Det ansvariga för barnet är fortfarande vårdnadshavaren; medgivandet ger den som passar barnet rätt att agera i vardagliga frågor.",
+    "legalValidity": "Det rättsliga ansvaret för barnet ligger kvar hos vårdnadshavaren enligt föräldrabalken (1949:381) 6 kap. Medgivandet bygger på vårdnadshavarens samtycke och ger den som passar barnet ett mandat i praktiska och vardagliga frågor. Det är inte ett myndighetskrav, men ger trygghet och tydlighet, särskilt vid kontakt med vård eller förskola.",
+    "howToGuide": "Steg 1: Ange barnets namn och personnummer.\nSteg 2: Fyll i vårdnadshavarnas namn och personnummer.\nSteg 3: Ange den som ska passa barnet – namn, personnummer och relation.\nSteg 4: Beskriv vilka tider och situationer passningen gäller.\nSteg 5: Ange vad personen får göra och fyll i medicinsk information samt nödkontakt.\nSteg 6: Låt vårdnadshavarna skriva under och ge barnvakten en kopia.",
+    "commonMistakes": "1. Saknar medicinsk information – Ange allergier, mediciner och nödkontakt.\n\n2. Otydliga tider – Ange när passningen gäller, särskilt vid regelbunden passning.\n\n3. Ingen instruktion vid nödsituation – Beskriv vad personen får och bör göra om något händer.\n\n4. Endast en vårdnadshavare skriver under – Vid gemensam vårdnad bör båda godkänna.\n\n5. Glömmer att uppdatera – Uppdatera medgivandet när uppgifter, tider eller mediciner ändras.",
     "faq": [
       {
-        "question": "Krävs båda vårdnadshavares underskrift?",
-        "answer": "Vid gemensam vårdnad krävs båda vårdnadshavares samtycke för väsentliga beslut. För vardagliga beslut räcker en."
+        "question": "Är medgivandet ett lagkrav?",
+        "answer": "Nej, men det ger barnvakten ett tydligt mandat och samlar viktig information vid sjukdom eller nödsituation."
       },
       {
-        "question": "Hur länge gäller medgivandet?",
-        "answer": "Under den tid du anger. Vi rekommenderar att specificera ett konkret slutdatum för säkerhet."
+        "question": "Får barnvakten söka vård för barnet?",
+        "answer": "Vid akut behov bör vård alltid sökas. Ange gärna i medgivandet vad personen får göra och en nödkontakt."
+      },
+      {
+        "question": "Måste båda vårdnadshavare skriva under?",
+        "answer": "Vid gemensam vårdnad är det lämpligt att båda godkänner, särskilt vid regelbunden passning."
+      },
+      {
+        "question": "Gäller medgivandet på förskolan?",
+        "answer": "Förskolor har ofta egna rutiner för vem som får hämta barnet; komplettera med deras blankett vid behov."
       },
       {
         "question": "Kan medgivandet återkallas?",
-        "answer": "Ja, när som helst. Meddela mottagaren och berörda parter skriftligt så slutar medgivandet att gälla omedelbart."
-      },
-      {
-        "question": "Behöver medgivandet bevittnas?",
-        "answer": "Inte enligt lag, men många mottagare (skolor, vårdgivare) föredrar det. Två vittnen rekommenderas."
-      },
-      {
-        "question": "Vad om vårdnadshavarna är osams?",
-        "answer": "Vid oenighet kan saken avgöras av tingsrätten. Familjerätten kan också medla via socialnämnden."
+        "answer": "Ja, när som helst genom att meddela den som passar barnet."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=foraldrar-barn"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

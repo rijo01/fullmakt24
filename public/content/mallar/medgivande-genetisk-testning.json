@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Skriftligt informerat samtycke till genetisk testning, fosterdiagnostik eller DNA-analys. Inkluderar information om hantering av resultat.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Lag (2006:351) om genetisk integritet m.m. 3 kap.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Ett medgivande för genetisk testning är ett samtycke till genetisk undersökning eller DNA-analys, exempelvis inom vården eller en forskningsstudie. Dokumentet bekräftar att du fått information om testet och dess innebörd och att du samtycker.\n\nMallen anger vilket test det gäller och vilken aktör som utför det. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Genetiska uppgifter är särskilt känsliga och hanteras enligt särskild lagstiftning och dataskyddsreglerna.",
+    "legalValidity": "Genetiska undersökningar inom hälso- och sjukvården regleras av lagen (2006:351) om genetisk integritet m.m. Genetiska uppgifter är känsliga personuppgifter enligt dataskyddsförordningen (GDPR) och kräver normalt ett uttryckligt samtycke. Vården bygger på den enskildes samtycke enligt patientlagen (2014:821). För barn lämnas samtycket av vårdnadshavarna med hänsyn till barnets mognad.",
+    "howToGuide": "Steg 1: Ange ditt fullständiga namn, personnummer och adress.\nSteg 2: Beskriv vilket genetiskt test eller vilken analys medgivandet avser.\nSteg 3: Ange vilken vårdgivare eller aktör som utför testet.\nSteg 4: Bekräfta att du fått information om testets innebörd och hur resultatet används.\nSteg 5: Ange om resultatet får delas och i så fall med vem.\nSteg 6: Datera och skriv under; för barn undertecknar vårdnadshavarna.",
+    "commonMistakes": "1. Bristfällig information – Samtycket ska bygga på information om vad testet innebär och hur resultatet används.\n\n2. Otydligt om delning – Ange om och med vem resultatet får delas.\n\n3. Glömmer barnets situation – För barn lämnas samtycket av vårdnadshavarna med hänsyn till mognad.\n\n4. Underskattar känsligheten – Genetiska uppgifter är särskilt känsliga och ska hanteras varsamt.\n\n5. Saknar datum och underskrift – Medgivandet är ogiltigt utan detta.",
     "faq": [
       {
-        "question": "Accepterar svensk vård ombud?",
-        "answer": "Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter enligt patientlagen (2014:821)."
+        "question": "Varför krävs särskilt samtycke?",
+        "answer": "Genetiska uppgifter är känsliga personuppgifter enligt GDPR och regleras dessutom av lagen om genetisk integritet."
       },
       {
-        "question": "Kan ombudet fatta medicinska beslut?",
-        "answer": "Endast om patienten saknar beslutsförmåga och fullmakten uttryckligen ger denna rätt. Annars krävs patientens samtycke."
+        "question": "Vem äger resultatet?",
+        "answer": "Resultatet rör dig. Ange i medgivandet om och med vem det får delas."
       },
       {
-        "question": "Får ombudet ta del av journalen?",
-        "answer": "Ja, om det anges i fullmakten. Vårdgivaren bedömer i varje enskilt fall enligt patientdatalagen (2008:355)."
+        "question": "Kan jag testa mitt barn?",
+        "answer": "För barn lämnas samtycket av vårdnadshavarna, med hänsyn till barnets ålder och mognad och de särskilda regler som gäller."
       },
       {
-        "question": "Behöver fullmakten bevittnas?",
-        "answer": "Rekommenderas starkt vid känsliga uppgifter eller större ingrepp. Bevittning ger fullmakten extra juridisk tyngd."
+        "question": "Får arbetsgivare eller försäkringsbolag begära resultatet?",
+        "answer": "Lagen om genetisk integritet begränsar i hög grad andras rätt att efterfråga eller använda genetisk information."
       },
       {
-        "question": "Vad är skillnaden mot en framtidsfullmakt?",
-        "answer": "En vanlig fullmakt gäller medan du är beslutskompetent. Framtidsfullmakten träder i kraft först när du inte längre kan fatta beslut."
+        "question": "Kan jag återkalla samtycket?",
+        "answer": "Ja, fram till dess att testet genomförs, och du kan be att uppgifter inte används vidare."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=vard-omsorg"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

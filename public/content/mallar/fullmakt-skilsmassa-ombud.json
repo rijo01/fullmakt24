@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att lämna in ansökan om skilsmässa, företräda dig i bodelning och kommunicera med tingsrätten. Mycket användbart om du är utomlands eller vill ha juridisk företrädare.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Äktenskapsbalken (1987:230) reglerar skilsmässa och bodelning.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt vid skilsmässa ger ett ombud, ofta en advokat eller jurist, rätt att företräda dig i ärendet om äktenskapsskillnad och i frågor om bodelning. Ombudet kan föra din talan i tingsrätten och sköta kontakten med motparten och domstolen.\n\nMallen anger vad ombudet får göra och vilket ärende det gäller. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att en gemensam ansökan om skilsmässa undertecknas av makarna själva, medan ett ombud kan föra talan vid tvist.",
+    "legalValidity": "Äktenskapsskillnad regleras i äktenskapsbalken (1987:230) och prövas av tingsrätten. När ett ombud för din talan i domstol grundas behörigheten på en rättegångsfullmakt enligt rättegångsbalken (1942:740) 12 kap. Ett ombud kan företräda dig under processen, men beslutet att skiljas och ett eventuellt samtycke är personligt.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn, personnummer och adress.\nSteg 2: Fyll i ombudets namn och uppgifter – ofta en advokat eller jurist.\nSteg 3: Ange att fullmakten avser äktenskapsskillnad och eventuellt bodelning.\nSteg 4: Avgränsa behörigheten – får ombudet föra talan, ingå förlikning och ta emot delgivning?\nSteg 5: Sätt en giltighetstid eller låt den gälla tills ärendet avslutats.\nSteg 6: Skriv under och lämna fullmakten till ombudet och tingsrätten.",
+    "commonMistakes": "1. Oklart om förlikning – Ange uttryckligen om ombudet får ingå förlikning om bodelning eller andra frågor.\n\n2. Blandar ihop ansökan och ombudskap – En gemensam ansökan undertecknas av makarna; ombud behövs främst vid tvist.\n\n3. Glömmer bodelningen – Klargör om fullmakten även omfattar bodelning, som är en egen process.\n\n4. För snäv behörighet – Saknar ombudet rätt att ta emot delgivning kan handläggningen försenas.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Måste fullmakten bevittnas?",
-        "answer": "Det är inte ett lagkrav men rekommenderas starkt. Två vittnen som inte är jäviga gör fullmakten lättare att få godkänd av motparten."
+        "question": "Behöver jag ombud för att skilja mig?",
+        "answer": "Nej, inte vid en gemensam ansökan. Ombud behövs främst vid tvist om barn, bostad eller bodelning."
       },
       {
-        "question": "Hur återkallar jag fullmakten?",
-        "answer": "Meddela fullmaktshavaren skriftligt och informera berörda parter (bank, myndighet etc.). Fullmakten upphör omedelbart."
+        "question": "Vad är en rättegångsfullmakt?",
+        "answer": "Det är en fullmakt som ger ett ombud rätt att föra din talan i domstol, enligt reglerna i rättegångsbalken 12 kap."
       },
       {
-        "question": "Vad händer vid dödsfall?",
-        "answer": "En vanlig fullmakt upphör automatiskt vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna."
+        "question": "Får ombudet ingå förlikning åt mig?",
+        "answer": "Bara om fullmakten anger det. Ange uttryckligen om ombudet får träffa överenskommelser om t.ex. bodelning."
       },
       {
-        "question": "Kan ombudet ge fullmakten vidare?",
-        "answer": "Bara om det uttryckligen anges. Som standard har ombudet inte rätt att utse en annan person (substitution)."
+        "question": "Gäller betänketid?",
+        "answer": "Om någon av makarna har barn under 16 år eller en make motsätter sig skilsmässa gäller normalt betänketid enligt äktenskapsbalken."
       },
       {
-        "question": "Behöver fullmakten registreras?",
-        "answer": "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar."
+        "question": "Kan jag återkalla fullmakten?",
+        "answer": "Ja. Meddela ombudet och tingsrätten skriftligt att fullmakten upphör."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=foraldrar-barn"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

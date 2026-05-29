@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet (ofta adoptionsbyrå eller advokat) rätt att kommunicera med socialnämnden, MFoF, tingsrätten och utländska myndigheter under adoptionsprocessen.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Föräldrabalken (1949:381) 4 kap. om adoption och lag (1997:191) om internationell adoption.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för adoptionsärende ger ett ombud rätt att företräda dig i kontakten med socialnämnden och Myndigheten för familjerätt och föräldraskapsstöd (MFoF) under en adoptionsprocess. Det kan handla om att lämna in handlingar, ta emot besked och följa upp utredningen åt dig.\n\nMallen anger tydligt vilket adoptionsärende det gäller och exakt vad ombudet får göra. Du fyller i uppgifterna, laddar ner dokumentet som PDF och lämnar det som underlag till myndigheten. Tänk på att de mest centrala besluten i en adoption alltid fattas av dig själv och prövas av domstol.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Själva adoptionen regleras i föräldrabalken (1949:381) 4 kap. och beslutas av tingsrätten, medan medgivande- och lämplighetsutredning sköts av socialnämnden. Ett ombud kan biträda dig i kontakterna, men ditt eget samtycke till adoptionen och domstolens prövning kan inte överlåtas.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn, personnummer och adress.\nSteg 2: Fyll i ombudets namn, personnummer och relation till dig.\nSteg 3: Beskriv vilket adoptionsärende fullmakten avser och vilken instans det gäller (socialnämnd, MFoF).\nSteg 4: Avgränsa uppdraget – får ombudet lämna in handlingar, ta emot besked och begära komplettering?\nSteg 5: Sätt en giltighetstid som täcker utredningstiden.\nSteg 6: Skriv under och lämna fullmakten till den handläggande myndigheten.",
+    "commonMistakes": "1. Tror att ombudet kan samtycka åt dig – Ditt eget samtycke till adoptionen är personligt och kan inte lämnas via fullmakt.\n\n2. För vag beskrivning – Ange exakt vilket ärende och vilken myndighet fullmakten gäller.\n\n3. För kort giltighetstid – Adoptionsutredningar tar tid; sätt en giltighetstid som täcker hela processen.\n\n4. Glömmer relationen – Ange ombudets relation till dig, det underlättar myndighetens bedömning.\n\n5. Glömmer datum och underskrift – En odaterad eller osignerad fullmakt godtas inte.",
     "faq": [
       {
-        "question": "Måste fullmakten bevittnas?",
-        "answer": "Det är inte ett lagkrav men rekommenderas starkt. Två vittnen som inte är jäviga gör fullmakten lättare att få godkänd av motparten."
+        "question": "Kan ett ombud adoptera åt mig?",
+        "answer": "Nej. Ombudet kan biträda i kontakter och handläggning, men ditt eget samtycke och själva adoptionsbeslutet i tingsrätten kan inte överlåtas."
       },
       {
-        "question": "Hur återkallar jag fullmakten?",
-        "answer": "Meddela fullmaktshavaren skriftligt och informera berörda parter (bank, myndighet etc.). Fullmakten upphör omedelbart."
+        "question": "Vilken myndighet hanterar adoption?",
+        "answer": "Socialnämnden gör medgivande- och lämplighetsutredning, MFoF har tillsyn över internationell adoptionsförmedling och tingsrätten beslutar om adoptionen."
       },
       {
-        "question": "Vad händer vid dödsfall?",
-        "answer": "En vanlig fullmakt upphör automatiskt vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna."
+        "question": "Hur länge bör fullmakten gälla?",
+        "answer": "Eftersom utredningar drar ut på tiden är det klokt att sätta en längre giltighetstid, exempelvis ett eller två år, eller tills ärendet avslutats."
       },
       {
-        "question": "Kan ombudet ge fullmakten vidare?",
-        "answer": "Bara om det uttryckligen anges. Som standard har ombudet inte rätt att utse en annan person (substitution)."
+        "question": "Behöver fullmakten bevittnas?",
+        "answer": "Det är inget generellt lagkrav för en sådan fullmakt, men bevittning kan stärka dokumentets tyngd och efterfrågas ibland av myndigheten."
       },
       {
-        "question": "Behöver fullmakten registreras?",
-        "answer": "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar."
+        "question": "Kan jag återkalla fullmakten?",
+        "answer": "Ja. Meddela myndigheten och ombudet skriftligt att fullmakten upphör att gälla."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=foraldrar-barn"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

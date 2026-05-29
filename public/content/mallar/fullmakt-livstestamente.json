@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Anger din vilja om vård i livets slutskede – t.ex. om livsuppehållande behandling ska sättas in eller avstås. Är inte juridiskt bindande i Sverige men respekteras starkt av vårdpersonal.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Patientlagen (2014:821) 4 kap. om patientens medverkan i vården.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "Ett livstestamente är en skriftlig viljeyttring om vilken vård du vill ha eller inte vill ha i livets slutskede, exempelvis vid svår sjukdom där du själv inte kan uttrycka din vilja. Det ger vården och dina närstående vägledning om dina önskemål om livsuppehållande behandling.\n\nMallen låter dig beskriva dina önskemål och utse en närstående som kan föra fram din vilja. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att ett livstestamente i Sverige inte är juridiskt bindande, men att vården ska ta hänsyn till din vilja så långt det är möjligt.",
+    "legalValidity": "Ett livstestamente är inte juridiskt bindande enligt svensk rätt, men hälso- och sjukvården ska enligt patientlagen (2014:821) så långt det är möjligt utforma och genomföra vården i samråd med patienten och respektera patientens vilja. En patient har rätt att avstå från behandling. Dokumentet ger därmed viktig vägledning, men det slutliga medicinska ansvaret ligger hos den behandlande läkaren.",
+    "howToGuide": "Steg 1: Ange ditt fullständiga namn, personnummer och adress.\nSteg 2: Beskriv i vilka situationer dina önskemål ska gälla, t.ex. obotlig sjukdom utan utsikt till förbättring.\nSteg 3: Ange vilken behandling du önskar respektive vill avstå från, så konkret som möjligt.\nSteg 4: Utse en närstående som kan föra fram din vilja och ange dennes uppgifter.\nSteg 5: Datera och skriv under, gärna i närvaro av vittnen för att stärka dokumentets trovärdighet.\nSteg 6: Ge en kopia till närstående och berätta var originalet finns; nämn det gärna för din läkare.",
+    "commonMistakes": "1. Tror att det är bindande – Ett livstestamente är vägledande, inte juridiskt bindande, men vården ska beakta din vilja.\n\n2. För vaga formuleringar – Beskriv så konkret som möjligt vilken behandling du önskar eller vill avstå från.\n\n3. Ingen känner till dokumentet – Berätta för närstående och vården var det finns, annars riskerar det att inte uppmärksammas.\n\n4. Förväxlar med framtidsfullmakt – Ett livstestamente avser vård i livets slutskede; en framtidsfullmakt avser ekonomiska och personliga angelägenheter.\n\n5. Uppdateras aldrig – Se över dokumentet med jämna mellanrum så att det fortfarande speglar din vilja.",
     "faq": [
       {
-        "question": "Accepterar svensk vård ombud?",
-        "answer": "Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter enligt patientlagen (2014:821)."
+        "question": "Är ett livstestamente juridiskt bindande?",
+        "answer": "Nej. Det är en viljeyttring som vården ska ta hänsyn till så långt det är möjligt, men det slutliga medicinska ansvaret ligger hos läkaren."
       },
       {
-        "question": "Kan ombudet fatta medicinska beslut?",
-        "answer": "Endast om patienten saknar beslutsförmåga och fullmakten uttryckligen ger denna rätt. Annars krävs patientens samtycke."
+        "question": "Kan jag tacka nej till behandling i förväg?",
+        "answer": "Du har rätt att avstå från behandling. Ett livstestamente kan beskriva din vilja för situationer då du själv inte kan uttrycka den."
       },
       {
-        "question": "Får ombudet ta del av journalen?",
-        "answer": "Ja, om det anges i fullmakten. Vårdgivaren bedömer i varje enskilt fall enligt patientdatalagen (2008:355)."
+        "question": "Behöver det bevittnas?",
+        "answer": "Det är inget krav, men vittnen och en utsedd närstående stärker dokumentets trovärdighet."
       },
       {
-        "question": "Behöver fullmakten bevittnas?",
-        "answer": "Rekommenderas starkt vid känsliga uppgifter eller större ingrepp. Bevittning ger fullmakten extra juridisk tyngd."
+        "question": "Vem ska få veta att det finns?",
+        "answer": "Närstående och gärna din läkare, så att det kan uppmärksammas när det behövs."
       },
       {
-        "question": "Vad är skillnaden mot en framtidsfullmakt?",
-        "answer": "En vanlig fullmakt gäller medan du är beslutskompetent. Framtidsfullmakten träder i kraft först när du inte längre kan fatta beslut."
+        "question": "Kan jag ändra mig?",
+        "answer": "Ja, när som helst. Upprätta ett nytt dokument och informera dina närstående om ändringen."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=vard-omsorg"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

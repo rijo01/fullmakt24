@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Vid sjukdom, resa eller annan tillfällig frånvaro ger denna fullmakt en annan vuxen rätt att bistå med vardagliga beslut, hämta från skola och vid behov söka vård.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Föräldrabalken (1949:381). Vårdnadsansvaret kvarstår hos vårdnadshavaren men beslut kan delegeras.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för vårdnadshavarbistånd ger en annan vuxen rätt att tillfälligt bistå vårdnadshavaren med ett barn – exempelvis hämta och lämna på förskola, följa med till vården eller fatta vardagliga beslut när vårdnadshavaren själv är förhindrad.\n\nMallen anger vilket barn det gäller, vem som får bistå och i vilka situationer. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Dokumentet ersätter inte vårdnaden, utan ger den utsedda personen ett tydligt mandat att hjälpa till under en avgränsad period.",
+    "legalValidity": "Det rättsliga ansvaret för barnet ligger kvar hos vårdnadshavaren enligt föräldrabalken (1949:381) 6 kap. En sådan här fullmakt bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. och ger en utsedd vuxen behörighet att bistå i praktiska frågor. Den kan inte överföra vårdnaden eller rätten att fatta de mest ingripande besluten om barnet.",
+    "howToGuide": "Steg 1: Ange barnets namn och personnummer.\nSteg 2: Fyll i vårdnadshavarnas namn och personnummer.\nSteg 3: Ange den utsedda vuxnas namn, personnummer och relation till barnet.\nSteg 4: Beskriv vad personen får göra – hämta/lämna, följa till vården, fatta vardagliga beslut.\nSteg 5: Ange tidsperiod och eventuella begränsningar.\nSteg 6: Låt vårdnadshavarna skriva under och ge personen en kopia.",
+    "commonMistakes": "1. Tror att vårdnaden överförs – Fullmakten ger bistånd i praktiska frågor, inte vårdnaden.\n\n2. Endast en vårdnadshavare skriver under – Vid gemensam vårdnad bör båda godkänna mandatet.\n\n3. Otydlig omfattning – Ange exakt vad personen får göra och i vilka situationer.\n\n4. Ingen tidsperiod – Ange under vilken period mandatet gäller.\n\n5. Saknar medicinsk information – Ange allergier, mediciner och nödkontakt om personen ska kunna agera vid behov.",
     "faq": [
       {
-        "question": "Krävs båda vårdnadshavares underskrift?",
-        "answer": "Vid gemensam vårdnad krävs båda vårdnadshavares samtycke för väsentliga beslut. För vardagliga beslut räcker en."
+        "question": "Överförs vårdnaden genom dokumentet?",
+        "answer": "Nej. Vårdnaden ligger kvar hos vårdnadshavaren. Dokumentet ger bara en utsedd vuxen rätt att bistå i praktiska frågor."
       },
       {
-        "question": "Hur länge gäller medgivandet?",
-        "answer": "Under den tid du anger. Vi rekommenderar att specificera ett konkret slutdatum för säkerhet."
+        "question": "Måste båda vårdnadshavare skriva under?",
+        "answer": "Vid gemensam vårdnad bör båda godkänna mandatet, särskilt om det gäller längre tid eller viktigare beslut."
       },
       {
-        "question": "Kan medgivandet återkallas?",
-        "answer": "Ja, när som helst. Meddela mottagaren och berörda parter skriftligt så slutar medgivandet att gälla omedelbart."
+        "question": "Får personen besluta om sjukvård?",
+        "answer": "Endast om mandatet uttryckligen tillåter det och i praktiska frågor. Mer ingripande vårdbeslut förutsätter vårdnadshavarens medgivande."
       },
       {
-        "question": "Behöver medgivandet bevittnas?",
-        "answer": "Inte enligt lag, men många mottagare (skolor, vårdgivare) föredrar det. Två vittnen rekommenderas."
+        "question": "Hur länge gäller fullmakten?",
+        "answer": "Under den period du anger. För tillfälligt bistånd bör en tydlig start- och slutdag anges."
       },
       {
-        "question": "Vad om vårdnadshavarna är osams?",
-        "answer": "Vid oenighet kan saken avgöras av tingsrätten. Familjerätten kan också medla via socialnämnden."
+        "question": "Kan jag återkalla den?",
+        "answer": "Ja, när som helst genom att meddela den utsedda personen och berörda verksamheter."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=foraldrar-barn"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }
