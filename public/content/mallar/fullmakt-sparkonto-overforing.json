@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Specificerad fullmakt för att genomföra en eller flera överföringar från ditt sparkonto. Vanligt vid utlandsvistelse.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Avtalslagen (1915:218) reglerar fullmakter. Banker och finansinstitut kan ha egna krav.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för överföring mellan sparkonton ger ett ombud rätt att genomföra en eller flera specifika överföringar mellan dina konton. Genom att avgränsa fullmakten till bestämda överföringar minskar du risken för missbruk.\n\nMallen anger vilka konton det gäller och vilka överföringar som avses. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att banker ofta har egna fullmaktsblanketter och rutiner för kontotransaktioner.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Banker har egna rutiner och blanketter för kontofullmakter och gör en egen prövning, bland annat utifrån regler om åtgärder mot penningtvätt. En snäv, specifik fullmakt med angivna konton och belopp är både säkrare och lättare för banken att godta.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn och personnummer.\nSteg 2: Fyll i ombudets namn och personnummer.\nSteg 3: Ange från vilket och till vilket konto överföringen ska göras.\nSteg 4: Ange belopp eller högsta belopp samt om det gäller en eller flera överföringar.\nSteg 5: Ange en kort giltighetstid.\nSteg 6: Skriv under och kontrollera bankens egna krav.",
+    "commonMistakes": "1. För bred fullmakt – Avgränsa till specifika konton och belopp i stället för generell tillgång.\n\n2. Saknar kontouppgifter – Ange tydligt från- och till-konto.\n\n3. Inget belopp angivet – Ange belopp eller högsta belopp.\n\n4. För lång giltighetstid – En specifik överföring bör ha kort giltighetstid.\n\n5. Glömmer bankens rutiner – Banker har egna fullmaktsblanketter; kontrollera i förväg.",
     "faq": [
       {
-        "question": "Accepterar alla banker fullmakten?",
-        "answer": "De flesta banker accepterar en korrekt utformad fullmakt, men vissa har egna blanketter. Kontakta banken i förväg."
+        "question": "Kan ombudet tömma mitt konto?",
+        "answer": "Inte om du avgränsar fullmakten till specifika överföringar och belopp, vilket rekommenderas."
       },
       {
-        "question": "Kan ombudet ta lån i mitt namn?",
-        "answer": "Bara om fullmakten uttryckligen anger detta. Lånebeslut är ofta personliga och kräver din uttryckliga rätt."
+        "question": "Accepterar banken fullmakten?",
+        "answer": "Banker har ofta egna kontofullmakter och rutiner. Kontakta banken i förväg."
       },
       {
-        "question": "Hur skyddas jag mot missbruk?",
-        "answer": "Ange tydliga begränsningar, max-belopp och giltighetstid. Återkalla fullmakten när uppdraget är slutfört."
+        "question": "Hur länge bör fullmakten gälla?",
+        "answer": "För en specifik överföring bör giltighetstiden vara kort."
       },
       {
-        "question": "Måste bankfullmakten bevittnas?",
-        "answer": "Inte enligt lag, men många banker kräver eller starkt rekommenderar två vittnen."
+        "question": "Varför frågar banken om syftet?",
+        "answer": "Banker omfattas av regler mot penningtvätt och kan behöva förstå syftet med överföringen."
       },
       {
-        "question": "Gäller fullmakten utomlands?",
-        "answer": "Den gäller primärt i Sverige. För utlandsbruk kan apostille eller legalisering krävas."
+        "question": "Hur återkallar jag fullmakten?",
+        "answer": "Meddela banken och ombudet skriftligt att fullmakten upphör."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

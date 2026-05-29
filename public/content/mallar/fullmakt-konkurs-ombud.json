@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Vid konkurs behöver bolaget ofta företrädas mot konkursförvaltaren, fordringsägare och tingsrätten. Denna fullmakt ger ombudet rätt att agera i dessa ärenden.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Konkurslagen (1987:672) reglerar konkursförfarandet.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt vid konkurs ger ett ombud rätt att företräda dig eller bolaget i frågor som rör en konkurs, exempelvis i kontakten med konkursförvaltaren och i bevakning av fordringar. Vid en konkurs tar en av tingsrätten utsedd förvaltare över förvaltningen av boet.\n\nMallen anger vad ombudet får göra och vilket ärende det gäller. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att förvaltaren leder konkursförvaltningen och att vissa frågor avgörs av tingsrätten.",
+    "legalValidity": "Konkurs regleras av konkurslagen (1987:672). När ett bolag eller en person försätts i konkurs av tingsrätten utses en konkursförvaltare som tar över förvaltningen av konkursboet. Fullmakten bygger på avtalslagen (1915:218) 2 kap. och ger ett ombud rätt att företräda dig i konkursrelaterade frågor, men förvaltarens och domstolens roll kan inte övertas genom fullmakt.",
+    "howToGuide": "Steg 1: Ange bolagets eller dina uppgifter och vem som utfärdar fullmakten.\nSteg 2: Fyll i ombudets namn och person- eller organisationsnummer.\nSteg 3: Ange vilken konkurs och vilken roll fullmakten avser (gäldenär, borgenär).\nSteg 4: Beskriv vad ombudet får göra – kontakt med förvaltaren, bevaka fordran, ta emot handlingar.\nSteg 5: Ange en giltighetstid som täcker konkursförfarandet.\nSteg 6: Skriv under och lämna fullmakten till förvaltaren eller domstolen vid behov.",
+    "commonMistakes": "1. Tror att ombudet styr boet – Konkursförvaltaren leder förvaltningen, inte ditt ombud.\n\n2. Otydlig roll – Ange om fullmakten avser gäldenär eller borgenär.\n\n3. Glömmer fordringsbevakning – Ange om ombudet får bevaka en fordran i konkursen.\n\n4. För kort giltighetstid – Konkursförfaranden kan dra ut på tiden.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Vem får utfärda fullmakt för ett aktiebolag?",
-        "answer": "Endast styrelseledamot, VD eller annan firmatecknare har rätt att utfärda fullmakt för bolagets räkning."
+        "question": "Vem förvaltar konkursboet?",
+        "answer": "En konkursförvaltare som utses av tingsrätten enligt konkurslagen. Förvaltaren leder konkursförvaltningen."
       },
       {
-        "question": "Behöver fullmakten registreras hos Bolagsverket?",
-        "answer": "Generellt inte, men vissa typer av fullmakter (t.ex. prokura) ska registreras enligt prokuralagen."
+        "question": "Kan ett ombud bevaka min fordran?",
+        "answer": "Ja, inom ramen för fullmakten kan ombudet bevaka en fordran och sköta kontakten med förvaltaren."
       },
       {
-        "question": "Kan fullmakten gälla flera år?",
-        "answer": "Ja. Företagsfullmakter gäller ofta tillsvidare eller flera år. Specificera dock alltid en tidsgräns för säkerhets skull."
+        "question": "Tar ombudet över förvaltarens roll?",
+        "answer": "Nej. Förvaltarens och domstolens roll kan inte övertas genom fullmakt."
       },
       {
-        "question": "Hur återkallas en företagsfullmakt?",
-        "answer": "Beslut om återkallelse fattas av samma organ som utfärdade fullmakten. Skriftlig återkallelse skickas till ombudet och berörda parter."
+        "question": "Hur länge bör fullmakten gälla?",
+        "answer": "Sätt en giltighetstid som täcker hela konkursförfarandet, som kan ta tid."
       },
       {
-        "question": "Gäller fullmakten vid VD-byte?",
-        "answer": "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja. Meddela ombudet och förvaltaren skriftligt att fullmakten upphör."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

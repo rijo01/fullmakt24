@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Eftersom enskild firma inte är en juridisk person agerar du som privatperson. Fullmakten ger ombudet rätt att hantera firmans löpande ärenden – fakturering, bankärenden, myndighetskontakter.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Enskild näringsverksamhet regleras av enskild näringsidkares ansvar – ingen separat juridisk person.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för enskild firma ger en annan person rätt att agera för din enskilda näringsverksamhet i de frågor som anges, exempelvis att hantera kontakter med kunder, leverantörer eller myndigheter. I en enskild firma är det du som innehavare som ansvarar personligen.\n\nMallen anger vad ombudet får göra och vilka befogenheter fullmakten omfattar. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Eftersom du ansvarar personligt för verksamheten bör fullmakten vara tydligt avgränsad.",
+    "legalValidity": "En enskild firma är inte en egen juridisk person; innehavaren ansvarar personligen för verksamhetens åtaganden. Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. och ger en utsedd person rätt att agera i ditt namn inom angivna ramar. Eftersom ansvaret är personligt bör du noga avgränsa vilka befogenheter ombudet ges.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som innehavare och fullmaktsgivare – namn och personnummer.\nSteg 2: Ange firmans namn och eventuellt organisationsnummer.\nSteg 3: Fyll i ombudets namn och person- eller organisationsnummer.\nSteg 4: Ange vilka befogenheter fullmakten omfattar – avtal, betalningar, myndighetskontakter.\nSteg 5: Ange en giltighetstid och eventuella beloppsgränser.\nSteg 6: Skriv under fullmakten.",
+    "commonMistakes": "1. Bortser från det personliga ansvaret – Du ansvarar personligt; avgränsa fullmakten noga.\n\n2. För breda befogenheter – Ange exakt vad ombudet får göra.\n\n3. Glömmer beloppsgränser – Ange gränser för betalningar och avtal.\n\n4. Otydlig giltighetstid – Sätt en tydlig tidsram för uppdraget.\n\n5. Glömmer återkallelse – Meddela motparter skriftligt när fullmakten ska upphöra.",
     "faq": [
       {
-        "question": "Måste fullmakten bevittnas?",
-        "answer": "Det är inte ett lagkrav men rekommenderas starkt. Två vittnen som inte är jäviga gör fullmakten lättare att få godkänd av motparten."
+        "question": "Vem ansvarar för en enskild firma?",
+        "answer": "Innehavaren ansvarar personligen, eftersom en enskild firma inte är en egen juridisk person."
+      },
+      {
+        "question": "Kan jag låta någon annan sköta firman?",
+        "answer": "Ja, du kan ge fullmakt för angivna uppgifter, men ansvaret ligger fortfarande hos dig."
+      },
+      {
+        "question": "Bör jag sätta beloppsgränser?",
+        "answer": "Ja, gärna, eftersom du ansvarar personligt för åtaganden ombudet gör inom fullmakten."
+      },
+      {
+        "question": "Gäller fullmakten hos myndigheter?",
+        "answer": "Den kan användas i kontakter, men vissa myndigheter har egna ombuds- och fullmaktsrutiner."
       },
       {
         "question": "Hur återkallar jag fullmakten?",
-        "answer": "Meddela fullmaktshavaren skriftligt och informera berörda parter (bank, myndighet etc.). Fullmakten upphör omedelbart."
-      },
-      {
-        "question": "Vad händer vid dödsfall?",
-        "answer": "En vanlig fullmakt upphör automatiskt vid fullmaktsgivarens dödsfall. Dödsboet hanteras sedan av dödsbodelägarna."
-      },
-      {
-        "question": "Kan ombudet ge fullmakten vidare?",
-        "answer": "Bara om det uttryckligen anges. Som standard har ombudet inte rätt att utse en annan person (substitution)."
-      },
-      {
-        "question": "Behöver fullmakten registreras?",
-        "answer": "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar."
+        "answer": "Meddela ombudet och berörda motparter skriftligt att fullmakten upphör."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

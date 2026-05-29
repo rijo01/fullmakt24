@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Specificerad fullmakt för VD att fatta beslut utöver den löpande förvaltningen, t.ex. större investeringar eller strategiska avtal. Kompletterar den allmänna VD-behörigheten.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Aktiebolagslagen (2005:551) 8 kap. om bolagets ledning.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En VD-fullmakt reglerar och tydliggör VD:s behörighet att binda bolaget i specifika ärenden. VD ansvarar enligt lag för den löpande förvaltningen, men en fullmakt kan användas för att precisera eller utvidga behörigheten i enskilda frågor.\n\nMallen anger bolaget, VD:n och vilka befogenheter som avses. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att gränsen mellan löpande förvaltning och styrelsens beslut följer av aktiebolagslagen.",
+    "legalValidity": "VD:s roll regleras av aktiebolagslagen (2005:551), främst 8 kap., där VD ansvarar för bolagets löpande förvaltning. Åtgärder som med hänsyn till bolagets verksamhet är av ovanligt slag eller stor betydelse ligger normalt utanför den löpande förvaltningen och kräver styrelsens beslut. En fullmakt enligt avtalslagen (1915:218) 2 kap. kan precisera VD:s behörighet i enskilda ärenden, men ändrar inte ansvarsfördelningen i lagen.",
+    "howToGuide": "Steg 1: Ange bolagets namn och organisationsnummer.\nSteg 2: Ange vem som utfärdar fullmakten – normalt styrelsen genom behörig företrädare.\nSteg 3: Fyll i VD:ns namn och personnummer.\nSteg 4: Ange vilka specifika ärenden eller befogenheter fullmakten avser.\nSteg 5: Ange eventuella beloppsgränser och en giltighetstid.\nSteg 6: Skriv under; protokollför gärna styrelsens beslut.",
+    "commonMistakes": "1. Blandar ihop löpande förvaltning och styrelsebeslut – Större eller ovanliga åtgärder kräver normalt styrelsens beslut.\n\n2. Otydliga befogenheter – Ange exakt vilka ärenden fullmakten avser.\n\n3. Inget beslutsunderlag – Utvidgad behörighet bör beslutas och protokollföras av styrelsen.\n\n4. Glömmer beloppsgränser – Ange gränser för större åtaganden.\n\n5. Glömmer återkallelse – Meddela berörda parter skriftligt när fullmakten ska upphöra.",
     "faq": [
       {
-        "question": "Vem får utfärda fullmakt för ett aktiebolag?",
-        "answer": "Endast styrelseledamot, VD eller annan firmatecknare har rätt att utfärda fullmakt för bolagets räkning."
+        "question": "Vad får en VD besluta själv?",
+        "answer": "VD ansvarar för den löpande förvaltningen. Åtgärder av ovanligt slag eller stor betydelse kräver normalt styrelsens beslut."
       },
       {
-        "question": "Behöver fullmakten registreras hos Bolagsverket?",
-        "answer": "Generellt inte, men vissa typer av fullmakter (t.ex. prokura) ska registreras enligt prokuralagen."
+        "question": "Behöver VD en fullmakt?",
+        "answer": "VD:s grundläggande behörighet följer av lag, men en fullmakt kan precisera eller utvidga behörigheten i enskilda ärenden."
       },
       {
-        "question": "Kan fullmakten gälla flera år?",
-        "answer": "Ja. Företagsfullmakter gäller ofta tillsvidare eller flera år. Specificera dock alltid en tidsgräns för säkerhets skull."
+        "question": "Vem utfärdar VD-fullmakten?",
+        "answer": "Normalt styrelsen genom behörig företrädare; beslutet bör protokollföras."
       },
       {
-        "question": "Hur återkallas en företagsfullmakt?",
-        "answer": "Beslut om återkallelse fattas av samma organ som utfärdade fullmakten. Skriftlig återkallelse skickas till ombudet och berörda parter."
+        "question": "Bör beloppsgränser anges?",
+        "answer": "Ja, gärna, särskilt för större åtaganden, för att tydliggöra behörigheten."
       },
       {
-        "question": "Gäller fullmakten vid VD-byte?",
-        "answer": "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte."
+        "question": "Hur återkallas fullmakten?",
+        "answer": "Genom styrelsebeslut och skriftligt meddelande till berörda parter."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

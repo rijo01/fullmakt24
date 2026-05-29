@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att ansöka om skuldsanering hos Kronofogden, kommunicera med borgenärer och företräda dig i ärendet.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Skuldsaneringslagen (2016:675).",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för skuldsanering ger en advokat, jurist eller annan person rätt att biträda dig i ett skuldsaneringsärende, exempelvis i kontakten med Kronofogden och dina borgenärer. Ett ombud kan hjälpa till med ansökan och kommunikationen under processen.\n\nMallen anger vad ombudet får göra och vilket ärende det gäller. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att Kronofogden gör en egen prövning och att vissa uppgifter och beslut är personliga.",
+    "legalValidity": "Skuldsanering regleras av skuldsaneringslagen (2016:675), och ansökan prövas av Kronofogden. Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. och ger ombudet rätt att biträda dig och sköta kontakten. Kronofogden gör alltid en egen prövning av om förutsättningarna för skuldsanering är uppfyllda.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn och personnummer.\nSteg 2: Fyll i ombudets namn och person- eller organisationsnummer.\nSteg 3: Ange att fullmakten avser skuldsaneringsärende hos Kronofogden.\nSteg 4: Beskriv vad ombudet får göra – ansöka, komplettera, kommunicera med borgenärer och ta emot beslut.\nSteg 5: Ange en giltighetstid som täcker processen.\nSteg 6: Skriv under och lämna fullmakten till Kronofogden.",
+    "commonMistakes": "1. För kort giltighetstid – Skuldsanering tar tid; sätt en tid som täcker hela processen.\n\n2. Otydligt uppdrag – Ange om ombudet får ansöka, komplettera och kommunicera med borgenärer.\n\n3. Tror att skuldsanering beviljas automatiskt – Kronofogden gör alltid en egen prövning.\n\n4. Glömmer borgenärskontakten – Ange om ombudet får kommunicera med borgenärerna.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Accepterar alla banker fullmakten?",
-        "answer": "De flesta banker accepterar en korrekt utformad fullmakt, men vissa har egna blanketter. Kontakta banken i förväg."
+        "question": "Vem beslutar om skuldsanering?",
+        "answer": "Kronofogden prövar ansökan enligt skuldsaneringslagen. Ett ombud kan biträda dig men beslutet fattas av Kronofogden."
       },
       {
-        "question": "Kan ombudet ta lån i mitt namn?",
-        "answer": "Bara om fullmakten uttryckligen anger detta. Lånebeslut är ofta personliga och kräver din uttryckliga rätt."
+        "question": "Vad kan ombudet göra?",
+        "answer": "Inom ramen för fullmakten kan ombudet ansöka, komplettera och sköta kontakten med Kronofogden och borgenärerna."
       },
       {
-        "question": "Hur skyddas jag mot missbruk?",
-        "answer": "Ange tydliga begränsningar, max-belopp och giltighetstid. Återkalla fullmakten när uppdraget är slutfört."
+        "question": "Hur länge bör fullmakten gälla?",
+        "answer": "Skuldsanering är en längre process; sätt en giltighetstid som täcker hela ärendet."
       },
       {
-        "question": "Måste bankfullmakten bevittnas?",
-        "answer": "Inte enligt lag, men många banker kräver eller starkt rekommenderar två vittnen."
+        "question": "Måste jag betala för ombud?",
+        "answer": "Du kan ansöka om skuldsanering själv utan kostnad hos Kronofogden. Anlitar du ombud kan kostnad tillkomma."
       },
       {
-        "question": "Gäller fullmakten utomlands?",
-        "answer": "Den gäller primärt i Sverige. För utlandsbruk kan apostille eller legalisering krävas."
+        "question": "Kan jag återkalla fullmakten?",
+        "answer": "Ja. Meddela Kronofogden och ombudet skriftligt att fullmakten upphör."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

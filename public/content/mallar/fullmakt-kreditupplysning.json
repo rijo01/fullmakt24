@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att inhämta kreditupplysning från UC, Bisnode eller annan kreditupplysningsbyrå för din räkning.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Kreditupplysningslagen (1973:1173).",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för kreditupplysning ger ett ombud rätt att inhämta en kreditupplysning om dig, exempelvis i samband med en hyres-, kredit- eller anställningsprocess där du gett ditt medgivande.\n\nMallen anger vad ombudet får göra och i vilket syfte. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att kreditupplysningar regleras särskilt och att det normalt krävs ett legitimt behov för att en upplysning ska få begäras.",
+    "legalValidity": "Kreditupplysningsverksamhet regleras av kreditupplysningslagen (1973:1173), med Integritetsskyddsmyndigheten som tillsynsmyndighet. En kreditupplysning får normalt begäras endast om den som frågar har ett legitimt behov, och den omfrågade ska som regel få en kopia. Fullmakten bygger på avtalslagen (1915:218) 2 kap.; den ersätter inte kravet på legitimt behov.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn och personnummer.\nSteg 2: Fyll i ombudets namn och person- eller organisationsnummer.\nSteg 3: Ange i vilket syfte kreditupplysningen ska inhämtas.\nSteg 4: Avgränsa vad ombudet får göra och vilken upplysning som avses.\nSteg 5: Ange en giltighetstid.\nSteg 6: Skriv under fullmakten.",
+    "commonMistakes": "1. Tror att fullmakten ersätter legitimt behov – En kreditupplysning kräver normalt ett legitimt behov oavsett fullmakt.\n\n2. Otydligt syfte – Ange varför upplysningen ska inhämtas.\n\n3. För bred fullmakt – Avgränsa till den aktuella upplysningen och syftet.\n\n4. Glömmer kopian – Den omfrågade har normalt rätt till en kopia av upplysningen.\n\n5. Glömmer återkallelse – Meddela ombudet skriftligt när fullmakten ska upphöra.",
     "faq": [
       {
-        "question": "Accepterar alla banker fullmakten?",
-        "answer": "De flesta banker accepterar en korrekt utformad fullmakt, men vissa har egna blanketter. Kontakta banken i förväg."
+        "question": "Får vem som helst ta en kreditupplysning på mig?",
+        "answer": "Nej. En kreditupplysning får normalt begäras endast om den som frågar har ett legitimt behov enligt kreditupplysningslagen."
       },
       {
-        "question": "Kan ombudet ta lån i mitt namn?",
-        "answer": "Bara om fullmakten uttryckligen anger detta. Lånebeslut är ofta personliga och kräver din uttryckliga rätt."
+        "question": "Får jag veta att en upplysning tagits?",
+        "answer": "Ja, som regel ska den omfrågade få en kopia av upplysningen."
       },
       {
-        "question": "Hur skyddas jag mot missbruk?",
-        "answer": "Ange tydliga begränsningar, max-belopp och giltighetstid. Återkalla fullmakten när uppdraget är slutfört."
+        "question": "Ersätter fullmakten kravet på legitimt behov?",
+        "answer": "Nej. Fullmakten ger ombudet rätt att agera, men kravet på legitimt behov gäller ändå."
       },
       {
-        "question": "Måste bankfullmakten bevittnas?",
-        "answer": "Inte enligt lag, men många banker kräver eller starkt rekommenderar två vittnen."
+        "question": "Vilken myndighet har tillsyn?",
+        "answer": "Integritetsskyddsmyndigheten utövar tillsyn över kreditupplysningsverksamhet."
       },
       {
-        "question": "Gäller fullmakten utomlands?",
-        "answer": "Den gäller primärt i Sverige. För utlandsbruk kan apostille eller legalisering krävas."
+        "question": "Kan jag återkalla fullmakten?",
+        "answer": "Ja, genom att meddela ombudet skriftligt."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

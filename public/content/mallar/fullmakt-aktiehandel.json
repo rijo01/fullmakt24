@@ -12,30 +12,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att köpa, sälja och förvalta aktier på din värdepappersdepå. Specificera om det rör enstaka köp eller löpande diskretionär förvaltning.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Värdepappersmarknadslagen (2007:528) och MiFID II-regelverket.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för aktiehandel ger en rådgivare eller anhörig rätt att köpa och sälja aktier för din räkning hos din bank eller värdepappersinstitut. Eftersom handel med värdepapper innebär ekonomisk risk bör fullmakten vara tydligt avgränsad.\n\nMallen anger vilket institut det gäller, vilka befogenheter ombudet har och eventuellt högsta engångsbelopp. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Kontrollera alltid med banken, eftersom många har egna fullmaktsblanketter för värdepappershandel.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Värdepappersinstitutens verksamhet regleras av lagen (2007:528) om värdepappersmarknaden. Banker och institut har normalt egna rutiner och blanketter för handelsfullmakter och gör en egen prövning. Begränsa gärna fullmakten med belopp och tidsgräns för att minska risken.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn och personnummer.\nSteg 2: Fyll i ombudets namn och person- eller organisationsnummer.\nSteg 3: Ange vilken bank eller vilket institut och vilket depå-/kontonummer som avses.\nSteg 4: Avgränsa befogenheterna – får ombudet köpa, sälja, eller bara förvalta?\nSteg 5: Ange eventuellt högsta engångsbelopp och en giltighetstid.\nSteg 6: Skriv under och kontrollera bankens egna krav på handelsfullmakt.",
+    "commonMistakes": "1. Inget beloppstak – Utan en gräns kan ombudet handla för stora summor. Ange ett tak vid behov.\n\n2. Otydliga befogenheter – Ange om ombudet får köpa, sälja eller endast förvalta.\n\n3. Missar bankens blankett – Många institut kräver egen handelsfullmakt; kontrollera i förväg.\n\n4. Glömmer risken – Värdepappershandel innebär risk; ange tydliga ramar för uppdraget.\n\n5. Glömmer återkallelse – Meddela institutet skriftligt när fullmakten ska upphöra.",
     "faq": [
       {
-        "question": "Accepterar alla banker fullmakten?",
-        "answer": "De flesta banker accepterar en korrekt utformad fullmakt, men vissa har egna blanketter. Kontakta banken i förväg."
+        "question": "Får ombudet sälja mina aktier?",
+        "answer": "Bara om fullmakten anger det. Avgränsa tydligt om ombudet får köpa, sälja eller endast förvalta."
       },
       {
-        "question": "Kan ombudet ta lån i mitt namn?",
-        "answer": "Bara om fullmakten uttryckligen anger detta. Lånebeslut är ofta personliga och kräver din uttryckliga rätt."
+        "question": "Accepterar banken fullmakten?",
+        "answer": "Många banker kräver egen handelsfullmakt för värdepapper. Kontakta institutet i förväg."
       },
       {
-        "question": "Hur skyddas jag mot missbruk?",
-        "answer": "Ange tydliga begränsningar, max-belopp och giltighetstid. Återkalla fullmakten när uppdraget är slutfört."
+        "question": "Kan jag sätta ett tak?",
+        "answer": "Ja, ange gärna ett högsta engångsbelopp så att ombudet inte kan handla för större summor än du vill."
       },
       {
-        "question": "Måste bankfullmakten bevittnas?",
-        "answer": "Inte enligt lag, men många banker kräver eller starkt rekommenderar två vittnen."
+        "question": "Vem bär risken?",
+        "answer": "Du som fullmaktsgivare bär den ekonomiska risken för affärerna. Sätt tydliga ramar för uppdraget."
       },
       {
-        "question": "Gäller fullmakten utomlands?",
-        "answer": "Den gäller primärt i Sverige. För utlandsbruk kan apostille eller legalisering krävas."
+        "question": "Hur återkallar jag fullmakten?",
+        "answer": "Meddela banken och ombudet skriftligt. Begär gärna tillbaka eventuellt original."
       }
     ],
     "relatedSearchTerms": [
@@ -62,5 +62,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

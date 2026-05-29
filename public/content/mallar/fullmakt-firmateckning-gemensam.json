@@ -12,30 +12,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger två eller fler personer rätt att teckna firma i förening – alla angivna ombud måste underteckna gemensamt för att rättshandlingen ska vara giltig. Standard vid större affärer.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Regleras av aktiebolagslagen (2005:551) och prokuralagen (1974:158). Behörig företrädare ska utfärda fullmakten.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för gemensam firmateckning ger två eller flera personer rätt att tillsammans teckna ett aktiebolags firma. Krav på gemensam teckning används ofta som en intern kontroll så att inga viktiga avtal binds av en person ensam.\n\nMallen anger bolaget, vilka personer som ska teckna gemensamt och vilka befogenheter som omfattas. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att den formella firmateckningsrätten beslutas av styrelsen och registreras hos Bolagsverket.",
+    "legalValidity": "Aktiebolags företrädare och firmateckning regleras av aktiebolagslagen (2005:551). Styrelsen beslutar om firmateckning, inklusive krav på att den ska tecknas i förening, och beslutet registreras hos Bolagsverket. En fullmakt enligt avtalslagen (1915:218) 2 kap. kan reglera hur personer företräder bolaget tillsammans, men ersätter inte den registrerade firmateckningsrätten.",
+    "howToGuide": "Steg 1: Ange bolagets namn och organisationsnummer.\nSteg 2: Ange den behöriga företrädaren som utfärdar fullmakten och dennes roll.\nSteg 3: Fyll i namnen på de personer som ska teckna gemensamt.\nSteg 4: Ange vilka befogenheter som omfattas och att teckning sker i förening.\nSteg 5: Ange en giltighetstid och eventuella beloppsgränser.\nSteg 6: Skriv under; kontrollera om beslutet behöver protokollföras och registreras hos Bolagsverket.",
+    "commonMistakes": "1. Otydligt vilka som tecknar i förening – Ange tydligt vilka personer som måste skriva under tillsammans.\n\n2. Förväxlar med registrerad firmateckning – Fullmakten ersätter inte den registrerade rätten hos Bolagsverket.\n\n3. Utfärdas av obehörig – Den som ger fullmakten måste själv vara behörig.\n\n4. Glömmer beloppsgränser – Ange om vissa avtal kräver fler underskrifter.\n\n5. Glömmer återkallelse – Meddela motparter skriftligt när fullmakten ska upphöra.",
     "faq": [
       {
-        "question": "Vem får utfärda fullmakt för ett aktiebolag?",
-        "answer": "Endast styrelseledamot, VD eller annan firmatecknare har rätt att utfärda fullmakt för bolagets räkning."
+        "question": "Vad innebär teckning i förening?",
+        "answer": "Att två eller flera personer måste skriva under tillsammans för att binda bolaget, vilket ger intern kontroll."
       },
       {
-        "question": "Behöver fullmakten registreras hos Bolagsverket?",
-        "answer": "Generellt inte, men vissa typer av fullmakter (t.ex. prokura) ska registreras enligt prokuralagen."
+        "question": "Beslutar styrelsen om gemensam teckning?",
+        "answer": "Ja. Styrelsen beslutar om firmateckning och hur den ska ske, och beslutet registreras hos Bolagsverket."
       },
       {
-        "question": "Kan fullmakten gälla flera år?",
-        "answer": "Ja. Företagsfullmakter gäller ofta tillsvidare eller flera år. Specificera dock alltid en tidsgräns för säkerhets skull."
+        "question": "Ersätter fullmakten registrerad firmateckning?",
+        "answer": "Nej. Fullmakten kan reglera samarbetet men ersätter inte den registrerade firmateckningsrätten."
       },
       {
-        "question": "Hur återkallas en företagsfullmakt?",
-        "answer": "Beslut om återkallelse fattas av samma organ som utfärdade fullmakten. Skriftlig återkallelse skickas till ombudet och berörda parter."
+        "question": "Kan olika belopp kräva olika antal underskrifter?",
+        "answer": "Ja, interna regler kan kräva fler underskrifter för större åtaganden. Ange det i fullmakten."
       },
       {
-        "question": "Gäller fullmakten vid VD-byte?",
-        "answer": "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte."
+        "question": "Hur återkallas fullmakten?",
+        "answer": "Meddela de berörda personerna och motparterna skriftligt att fullmakten upphör."
       }
     ],
     "relatedSearchTerms": [
@@ -62,5 +62,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

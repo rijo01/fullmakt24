@@ -13,30 +13,30 @@
     ]
   },
   "content": {
-    "introduction": "Med denna fullmakt får ombudet rätt att ensam teckna firma för bolagets räkning – t.ex. underteckna avtal, betalningar och officiella handlingar. Lämplig när VD eller styrelseledamot inte är tillgänglig.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Regleras av aktiebolagslagen (2005:551) och prokuralagen (1974:158). Behörig företrädare ska utfärda fullmakten.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för enskild firmateckning ger en person rätt att ensam teckna ett aktiebolags firma i de avseenden som anges. Firmateckningsrätt avser vem som får skriva under och binda bolaget i avtal och andra handlingar.\n\nMallen anger bolaget, vem som ger fullmakten och vilka befogenheter den omfattar. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att den formella firmateckningsrätten beslutas av styrelsen och registreras hos Bolagsverket.",
+    "legalValidity": "Aktiebolags företrädare och firmateckning regleras av aktiebolagslagen (2005:551). Styrelsen beslutar om firmateckning, som registreras hos Bolagsverket. En fullmakt enligt avtalslagen (1915:218) 2 kap. kan ge en person rätt att företräda bolaget i vissa frågor, men den ersätter inte den registrerade firmateckningsrätten. Kontrollera att den som utfärdar fullmakten är behörig.",
+    "howToGuide": "Steg 1: Ange bolagets namn och organisationsnummer.\nSteg 2: Ange den behöriga företrädaren som utfärdar fullmakten och dennes roll.\nSteg 3: Fyll i ombudets namn och person- eller organisationsnummer.\nSteg 4: Ange vilka befogenheter fullmakten omfattar – vilka avtal eller handlingar som avses.\nSteg 5: Ange en giltighetstid och eventuella beloppsgränser.\nSteg 6: Skriv under; kontrollera om beslutet behöver protokollföras och registreras hos Bolagsverket.",
+    "commonMistakes": "1. Förväxlar med registrerad firmateckning – En fullmakt ersätter inte den firmateckningsrätt som registrerats hos Bolagsverket.\n\n2. Utfärdas av obehörig – Den som ger fullmakten måste själv vara behörig att företräda bolaget.\n\n3. Otydliga befogenheter – Ange exakt vilka avtal eller handlingar fullmakten omfattar.\n\n4. Inget beslutsunderlag – Större befogenheter bör beslutas och protokollföras av styrelsen.\n\n5. Glömmer återkallelse – Meddela motparter skriftligt när fullmakten ska upphöra.",
     "faq": [
       {
-        "question": "Vem får utfärda fullmakt för ett aktiebolag?",
-        "answer": "Endast styrelseledamot, VD eller annan firmatecknare har rätt att utfärda fullmakt för bolagets räkning."
+        "question": "Vad är firmateckningsrätt?",
+        "answer": "Rätten att skriva under och binda bolaget i avtal och andra handlingar. Den beslutas av styrelsen och registreras hos Bolagsverket."
       },
       {
-        "question": "Behöver fullmakten registreras hos Bolagsverket?",
-        "answer": "Generellt inte, men vissa typer av fullmakter (t.ex. prokura) ska registreras enligt prokuralagen."
+        "question": "Ersätter fullmakten registrerad firmateckning?",
+        "answer": "Nej. En fullmakt kan ge rätt att företräda bolaget i vissa frågor men ersätter inte den registrerade firmateckningen."
       },
       {
-        "question": "Kan fullmakten gälla flera år?",
-        "answer": "Ja. Företagsfullmakter gäller ofta tillsvidare eller flera år. Specificera dock alltid en tidsgräns för säkerhets skull."
+        "question": "Vem får utfärda fullmakten?",
+        "answer": "Den som själv är behörig att företräda bolaget, exempelvis enligt registrerad firmateckning eller styrelsebeslut."
       },
       {
-        "question": "Hur återkallas en företagsfullmakt?",
-        "answer": "Beslut om återkallelse fattas av samma organ som utfärdade fullmakten. Skriftlig återkallelse skickas till ombudet och berörda parter."
+        "question": "Behöver fullmakten registreras?",
+        "answer": "Själva firmateckningen registreras hos Bolagsverket. En enskild fullmakt registreras normalt inte, men kontrollera vad motparten kräver."
       },
       {
-        "question": "Gäller fullmakten vid VD-byte?",
-        "answer": "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte."
+        "question": "Hur återkallas fullmakten?",
+        "answer": "Meddela ombudet och berörda motparter skriftligt att fullmakten upphör."
       }
     ],
     "relatedSearchTerms": [
@@ -64,5 +64,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att byta fonder inom din ISK, KF eller pensionssparande. Vanlig vid diskretionär förvaltning eller assistans från anhörig.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Lagen (2004:46) om värdepappersfonder och MiFID II.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för fondbyten ger en rådgivare eller anhörig rätt att byta fonder i ditt sparande, exempelvis i en fondförsäkring eller på ett investeringssparkonto. Det kan vara praktiskt om du vill ha hjälp att förvalta sparandet aktivt.\n\nMallen anger vilket institut och vilket konto det gäller och vilka befogenheter ombudet har. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att institut ofta har egna fullmaktsblanketter och att du själv bär risken för förändringar i sparandet.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Fondverksamhet och värdepappershandel regleras bland annat av lagen (2004:46) om värdepappersfonder och lagen (2007:528) om värdepappersmarknaden. Institut har egna rutiner för fullmakter och gör en egen prövning. Avgränsa fullmakten till fondbyten om du inte vill ge bredare befogenheter.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn och personnummer.\nSteg 2: Fyll i ombudets namn och person- eller organisationsnummer.\nSteg 3: Ange vilket institut och vilket konto eller försäkring som avses.\nSteg 4: Avgränsa befogenheterna till fondbyten och eventuell omfördelning.\nSteg 5: Ange en giltighetstid.\nSteg 6: Skriv under och kontrollera institutets egna krav.",
+    "commonMistakes": "1. För breda befogenheter – Avgränsa till fondbyten om du inte vill tillåta uttag eller annan handel.\n\n2. Otydligt konto – Ange vilket konto eller vilken försäkring som avses.\n\n3. Missar institutets blankett – Många institut kräver egen fullmakt; kontrollera i förväg.\n\n4. Glömmer risken – Förändringar i fondinnehavet påverkar värdet och risken bärs av dig.\n\n5. Glömmer återkallelse – Meddela institutet skriftligt när fullmakten ska upphöra.",
     "faq": [
       {
-        "question": "Accepterar alla banker fullmakten?",
-        "answer": "De flesta banker accepterar en korrekt utformad fullmakt, men vissa har egna blanketter. Kontakta banken i förväg."
+        "question": "Får ombudet ta ut pengar?",
+        "answer": "Bara om fullmakten anger det. Vill du begränsa till fondbyten ska det framgå tydligt."
       },
       {
-        "question": "Kan ombudet ta lån i mitt namn?",
-        "answer": "Bara om fullmakten uttryckligen anger detta. Lånebeslut är ofta personliga och kräver din uttryckliga rätt."
+        "question": "Accepterar institutet fullmakten?",
+        "answer": "Många institut har egna fullmaktsblanketter. Kontrollera i förväg."
       },
       {
-        "question": "Hur skyddas jag mot missbruk?",
-        "answer": "Ange tydliga begränsningar, max-belopp och giltighetstid. Återkalla fullmakten när uppdraget är slutfört."
+        "question": "Vem bär risken vid fondbyten?",
+        "answer": "Du som fullmaktsgivare bär risken för värdeförändringar i sparandet."
       },
       {
-        "question": "Måste bankfullmakten bevittnas?",
-        "answer": "Inte enligt lag, men många banker kräver eller starkt rekommenderar två vittnen."
+        "question": "Kan jag begränsa fullmakten i tid?",
+        "answer": "Ja, ange en giltighetstid för uppdraget."
       },
       {
-        "question": "Gäller fullmakten utomlands?",
-        "answer": "Den gäller primärt i Sverige. För utlandsbruk kan apostille eller legalisering krävas."
+        "question": "Hur återkallar jag fullmakten?",
+        "answer": "Meddela institutet och ombudet skriftligt att fullmakten upphör."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

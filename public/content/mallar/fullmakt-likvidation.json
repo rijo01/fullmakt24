@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att företräda bolagsmännen eller styrelsen under likvidationsförfarandet. Hanterar avveckling av tillgångar, betalning av skulder och slutreglering.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Aktiebolagslagen (2005:551) 25 kap. om likvidation och konkurs.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt vid likvidation ger en likvidator eller ett ombud rätt att företräda bolaget under en frivillig likvidation, då bolaget avvecklas och tillgångarna fördelas. En likvidator träder in i styrelsens och eventuell VD:s ställe.\n\nMallen anger bolaget, vem som utfärdar fullmakten och vilka befogenheter den omfattar. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att likvidation följer särskilda regler i aktiebolagslagen och anmäls till Bolagsverket.",
+    "legalValidity": "Likvidation av aktiebolag regleras av aktiebolagslagen (2005:551), främst 25 kap. Vid likvidation utses en likvidator som träder i styrelsens och VD:s ställe och sköter avvecklingen. Likvidationen anmäls till och registreras hos Bolagsverket. En fullmakt enligt avtalslagen (1915:218) 2 kap. kan ge ett ombud rätt att biträda, men ersätter inte likvidatorns lagstadgade roll.",
+    "howToGuide": "Steg 1: Ange bolagets namn och organisationsnummer.\nSteg 2: Ange vem som utfärdar fullmakten och dennes roll i likvidationen.\nSteg 3: Fyll i ombudets eller likvidatorns namn och uppgifter.\nSteg 4: Ange vilka befogenheter fullmakten omfattar i avvecklingen.\nSteg 5: Ange en giltighetstid som täcker likvidationen.\nSteg 6: Skriv under; kontrollera vad som ska anmälas till Bolagsverket.",
+    "commonMistakes": "1. Förväxlar fullmakt med likvidators roll – Likvidatorn har en lagstadgad roll som inte ersätts av en fullmakt.\n\n2. Glömmer Bolagsverket – Likvidationen ska anmälas och registreras.\n\n3. Otydliga befogenheter – Ange vad ombudet får göra i avvecklingen.\n\n4. För kort giltighetstid – Likvidation kan ta lång tid.\n\n5. Saknar datum och underskrift – Fullmakten är ogiltig utan detta.",
     "faq": [
       {
-        "question": "Vem får utfärda fullmakt för ett aktiebolag?",
-        "answer": "Endast styrelseledamot, VD eller annan firmatecknare har rätt att utfärda fullmakt för bolagets räkning."
+        "question": "Vad gör en likvidator?",
+        "answer": "Likvidatorn träder i styrelsens och VD:s ställe och avvecklar bolaget enligt aktiebolagslagen 25 kap."
       },
       {
-        "question": "Behöver fullmakten registreras hos Bolagsverket?",
-        "answer": "Generellt inte, men vissa typer av fullmakter (t.ex. prokura) ska registreras enligt prokuralagen."
+        "question": "Anmäls likvidationen någonstans?",
+        "answer": "Ja, likvidationen anmäls till och registreras hos Bolagsverket."
       },
       {
-        "question": "Kan fullmakten gälla flera år?",
-        "answer": "Ja. Företagsfullmakter gäller ofta tillsvidare eller flera år. Specificera dock alltid en tidsgräns för säkerhets skull."
+        "question": "Kan ett ombud biträda likvidatorn?",
+        "answer": "Ja, en fullmakt kan ge ett ombud rätt att biträda, men ersätter inte likvidatorns lagstadgade roll."
       },
       {
-        "question": "Hur återkallas en företagsfullmakt?",
-        "answer": "Beslut om återkallelse fattas av samma organ som utfärdade fullmakten. Skriftlig återkallelse skickas till ombudet och berörda parter."
+        "question": "Hur länge tar en likvidation?",
+        "answer": "Det varierar; en likvidation innehåller bland annat en period för att kalla okända borgenärer och kan ta lång tid."
       },
       {
-        "question": "Gäller fullmakten vid VD-byte?",
-        "answer": "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte."
+        "question": "Kan fullmakten återkallas?",
+        "answer": "Ja, av den som är behörig, genom skriftligt meddelande till ombudet och berörda parter."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

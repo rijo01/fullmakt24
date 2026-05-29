@@ -12,30 +12,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger den auktoriserade revisorn rätt att inhämta information, kommunicera med Skatteverket och företräda bolaget i revisionsrelaterade ärenden.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Regleras av revisorslagen (2001:883) och Aktiebolagslagen (2005:551) 9 kap.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt till revisor ger en revisor rätt att företräda bolaget i revisionsrelaterade ärenden, exempelvis i kontakten med myndigheter eller vid inhämtning av underlag. Revisorns granskande uppdrag följer dock av lag och bolagets beslut, inte av fullmakten i sig.\n\nMallen anger bolaget, revisorn och vilka befogenheter fullmakten omfattar. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att revisorn väljs av bolagsstämman och att dennes oberoende är centralt.",
+    "legalValidity": "Revision i aktiebolag regleras av aktiebolagslagen (2005:551) och, för vissa företag, revisionslagen (1999:1079); revisorns yrkesutövning regleras av revisorslagen (2001:883). Revisorn väljs normalt av bolagsstämman. En fullmakt enligt avtalslagen (1915:218) 2 kap. kan ge revisorn rätt att företräda bolaget i vissa praktiska frågor, men ersätter inte det lagstadgade revisionsuppdraget eller revisorns oberoende.",
+    "howToGuide": "Steg 1: Ange bolagets namn och organisationsnummer.\nSteg 2: Ange den behöriga företrädaren som utfärdar fullmakten och dennes roll.\nSteg 3: Fyll i revisorns namn och uppgifter samt eventuell revisionsbyrå.\nSteg 4: Ange vilka befogenheter fullmakten omfattar – t.ex. kontakt med Skatteverket eller inhämtning av underlag.\nSteg 5: Ange en giltighetstid.\nSteg 6: Skriv under fullmakten.",
+    "commonMistakes": "1. Förväxlar fullmakt med revisionsuppdrag – Revisionsuppdraget följer av lag och bolagsstämmans val, inte av fullmakten.\n\n2. Hotar oberoendet – Ge inte befogenheter som riskerar revisorns oberoende.\n\n3. Otydliga befogenheter – Ange exakt vilka praktiska frågor fullmakten omfattar.\n\n4. Utfärdas av obehörig – Den som ger fullmakten måste vara behörig att företräda bolaget.\n\n5. Glömmer återkallelse – Meddela berörda parter skriftligt när fullmakten ska upphöra.",
     "faq": [
       {
-        "question": "Vem får utfärda fullmakt för ett aktiebolag?",
-        "answer": "Endast styrelseledamot, VD eller annan firmatecknare har rätt att utfärda fullmakt för bolagets räkning."
+        "question": "Behöver revisorn en fullmakt för att granska bolaget?",
+        "answer": "Nej. Revisionsuppdraget följer av lag och bolagsstämmans val. Fullmakten avser praktiska företrädarfrågor."
       },
       {
-        "question": "Behöver fullmakten registreras hos Bolagsverket?",
-        "answer": "Generellt inte, men vissa typer av fullmakter (t.ex. prokura) ska registreras enligt prokuralagen."
+        "question": "Vem väljer revisor?",
+        "answer": "Revisorn väljs normalt av bolagsstämman."
       },
       {
-        "question": "Kan fullmakten gälla flera år?",
-        "answer": "Ja. Företagsfullmakter gäller ofta tillsvidare eller flera år. Specificera dock alltid en tidsgräns för säkerhets skull."
+        "question": "Påverkar fullmakten revisorns oberoende?",
+        "answer": "Den får inte ge befogenheter som riskerar oberoendet, vilket är centralt för revisorsrollen."
       },
       {
-        "question": "Hur återkallas en företagsfullmakt?",
-        "answer": "Beslut om återkallelse fattas av samma organ som utfärdade fullmakten. Skriftlig återkallelse skickas till ombudet och berörda parter."
+        "question": "Vad kan fullmakten omfatta?",
+        "answer": "Exempelvis kontakt med myndigheter eller inhämtning av underlag inom angivna ramar."
       },
       {
-        "question": "Gäller fullmakten vid VD-byte?",
-        "answer": "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte."
+        "question": "Hur återkallas fullmakten?",
+        "answer": "Meddela revisorn och berörda parter skriftligt att fullmakten upphör."
       }
     ],
     "relatedSearchTerms": [
@@ -62,5 +62,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

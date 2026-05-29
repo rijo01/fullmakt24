@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att lämna in ansökan om företagslån, presentera affärsplan och förhandla villkor med bank.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Regleras av aktiebolagslagen (2005:551) och prokuralagen (1974:158). Behörig företrädare ska utfärda fullmakten.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för företagslån ger en företrädare eller anställd rätt att ansöka om företagslån för bolagets räkning. Eftersom ett lån binder bolaget ekonomiskt bör fullmakten vara tydligt avgränsad och utfärdas av behörig företrädare.\n\nMallen anger bolaget, vilken bank det gäller och vilka befogenheter ombudet har. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att banken gör en egen prövning och har egna krav på fullmakt och behörighet.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap., och behörigheten att företräda bolaget följer av aktiebolagslagen (2005:551) eller motsvarande regler för bolagsformen. Banken gör en egen kredit- och behörighetsprövning och kräver ofta att en behörig firmatecknare undertecknar själva låneavtalet. Den som utfärdar fullmakten måste vara behörig.",
+    "howToGuide": "Steg 1: Ange bolagets namn och organisationsnummer.\nSteg 2: Ange den behöriga företrädaren som utfärdar fullmakten och dennes roll.\nSteg 3: Fyll i ombudets namn och person- eller organisationsnummer.\nSteg 4: Ange vilken bank ansökan gäller och vilka befogenheter ombudet har.\nSteg 5: Ange ett högsta lånebelopp och en giltighetstid.\nSteg 6: Skriv under och kontrollera bankens egna krav på behörighet.",
+    "commonMistakes": "1. Utfärdas av obehörig – Den som ger fullmakten måste vara behörig att företräda bolaget.\n\n2. Inget beloppstak – Ange ett högsta lånebelopp.\n\n3. Oklart om underskrift – Banken kräver ofta att en behörig firmatecknare undertecknar avtalet.\n\n4. Tror att lånet beviljas automatiskt – Banken gör alltid en egen kreditprövning.\n\n5. Glömmer återkallelse – Meddela banken skriftligt när fullmakten ska upphöra.",
     "faq": [
       {
-        "question": "Vem får utfärda fullmakt för ett aktiebolag?",
-        "answer": "Endast styrelseledamot, VD eller annan firmatecknare har rätt att utfärda fullmakt för bolagets räkning."
+        "question": "Vem får utfärda fullmakten?",
+        "answer": "En behörig företrädare för bolaget, exempelvis enligt registrerad firmateckning eller styrelsebeslut."
       },
       {
-        "question": "Behöver fullmakten registreras hos Bolagsverket?",
-        "answer": "Generellt inte, men vissa typer av fullmakter (t.ex. prokura) ska registreras enligt prokuralagen."
+        "question": "Kan ombudet skriva under låneavtalet?",
+        "answer": "Banken kräver ofta att en behörig firmatecknare undertecknar avtalet. Klargör vad fullmakten omfattar."
       },
       {
-        "question": "Kan fullmakten gälla flera år?",
-        "answer": "Ja. Företagsfullmakter gäller ofta tillsvidare eller flera år. Specificera dock alltid en tidsgräns för säkerhets skull."
+        "question": "Beviljas lånet automatiskt?",
+        "answer": "Nej. Banken gör alltid en egen kredit- och behörighetsprövning."
       },
       {
-        "question": "Hur återkallas en företagsfullmakt?",
-        "answer": "Beslut om återkallelse fattas av samma organ som utfärdade fullmakten. Skriftlig återkallelse skickas till ombudet och berörda parter."
+        "question": "Kan jag begränsa beloppet?",
+        "answer": "Ja, ange ett högsta lånebelopp i fullmakten."
       },
       {
-        "question": "Gäller fullmakten vid VD-byte?",
-        "answer": "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte."
+        "question": "Hur återkallar bolaget fullmakten?",
+        "answer": "Genom att meddela banken och ombudet skriftligt att fullmakten upphör."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }

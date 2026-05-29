@@ -11,30 +11,30 @@
     ]
   },
   "content": {
-    "introduction": "Ger ombudet rätt att förvalta IPS, traditionell pension eller tjänstepensionen via diskretionär förvaltning eller specifika instruktioner.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Inkomstskattelagen (1999:1229) och pensionsmyndighetens regelverk.",
-    "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
-    "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
+    "introduction": "En fullmakt för pensionssparande ger en rådgivare eller anhörig rätt att hjälpa dig att förvalta ditt pensionssparande, exempelvis tjänstepension eller privat pensionssparande. Det kan handla om fondval, omplaceringar eller kontakt med pensionsbolaget.\n\nMallen anger vilket institut och vilket sparande det gäller och vilka befogenheter ombudet har. Du fyller i uppgifterna och laddar ner dokumentet som PDF. Tänk på att pensionsbolag ofta har egna fullmaktsblanketter och att vissa val är personliga.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Pensionsbolag och institut har egna rutiner för fullmakter och gör en egen prövning. För premiepensionen ansvarar Pensionsmyndigheten, som har särskilda regler för ombud och fondförvaltning. Avgränsa fullmakten till det sparande och de befogenheter du avser.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fullmaktsgivare – namn och personnummer.\nSteg 2: Fyll i ombudets namn och person- eller organisationsnummer.\nSteg 3: Ange vilket institut och vilket pensionssparande som avses.\nSteg 4: Avgränsa befogenheterna – fondval, omplaceringar eller kontakt med bolaget.\nSteg 5: Ange en giltighetstid.\nSteg 6: Skriv under och kontrollera institutets egna krav.",
+    "commonMistakes": "1. För breda befogenheter – Avgränsa till de val du vill att ombudet ska få göra.\n\n2. Otydligt sparande – Ange vilket pensionssparande och vilket bolag som avses.\n\n3. Missar bolagets blankett – Många pensionsbolag har egna fullmaktskrav.\n\n4. Glömmer premiepensionens regler – Pensionsmyndigheten har särskilda regler för ombud.\n\n5. Glömmer återkallelse – Meddela bolaget skriftligt när fullmakten ska upphöra.",
     "faq": [
       {
-        "question": "Accepterar alla banker fullmakten?",
-        "answer": "De flesta banker accepterar en korrekt utformad fullmakt, men vissa har egna blanketter. Kontakta banken i förväg."
+        "question": "Får ombudet flytta min pension?",
+        "answer": "Bara om fullmakten anger det och bolagets regler tillåter det. Flytt av pension har ofta särskilda krav."
       },
       {
-        "question": "Kan ombudet ta lån i mitt namn?",
-        "answer": "Bara om fullmakten uttryckligen anger detta. Lånebeslut är ofta personliga och kräver din uttryckliga rätt."
+        "question": "Gäller fullmakten för premiepensionen?",
+        "answer": "Pensionsmyndigheten har särskilda regler för ombud och fondförvaltning av premiepensionen. Kontrollera vad som gäller."
       },
       {
-        "question": "Hur skyddas jag mot missbruk?",
-        "answer": "Ange tydliga begränsningar, max-belopp och giltighetstid. Återkalla fullmakten när uppdraget är slutfört."
+        "question": "Accepterar pensionsbolaget fullmakten?",
+        "answer": "Många bolag har egna fullmaktsblanketter. Kontakta bolaget i förväg."
       },
       {
-        "question": "Måste bankfullmakten bevittnas?",
-        "answer": "Inte enligt lag, men många banker kräver eller starkt rekommenderar två vittnen."
+        "question": "Kan jag begränsa befogenheterna?",
+        "answer": "Ja, avgränsa till exempelvis fondval eller kontakt med bolaget."
       },
       {
-        "question": "Gäller fullmakten utomlands?",
-        "answer": "Den gäller primärt i Sverige. För utlandsbruk kan apostille eller legalisering krävas."
+        "question": "Hur återkallar jag fullmakten?",
+        "answer": "Meddela bolaget och ombudet skriftligt att fullmakten upphör."
       }
     ],
     "relatedSearchTerms": [
@@ -60,5 +60,5 @@
       "href": "/mallar?category=ekonomi-myndigheter"
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-29"
 }
