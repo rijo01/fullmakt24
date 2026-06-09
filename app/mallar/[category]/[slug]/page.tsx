@@ -303,6 +303,14 @@ export default function TemplateDetailPage() {
                   </div>
                 </div>
               </div>
+
+              {/* Paketbanner – diskret tips om paketpris */}
+              <Link
+                href="/priser"
+                className="mt-4 block rounded-xl bg-navy-50 hover:bg-navy-100 transition-colors p-3 text-xs text-navy-500"
+              >
+                💡 Behöver du flera fullmakter? <span className="font-semibold text-navy-600">Familjepaket 3 st för 249 kr</span> →
+              </Link>
             </div>
 
             {/* SEO keywords as tags */}

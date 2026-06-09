@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { templates, categories } from '@/data/templates'
 import { trackEvent } from '@/components/GoogleAnalytics'
+import { getPackage, getCredits, grantPackageCredits } from '@/lib/packages'
 
 import { Suspense } from 'react'
 
@@ -12,11 +13,31 @@ function BetaldContent() {
   const searchParams = useSearchParams()
   const slug = searchParams.get('slug')
   const sessionId = searchParams.get('session_id')
+  const packageParam = searchParams.get('package')
+  const usedCredit = searchParams.get('credit') === 'used'
   const [downloading, setDownloading] = useState(false)
   const [downloaded, setDownloaded] = useState(false)
+  const [credits, setCreditsState] = useState(0)
 
+  const isPackagePurchase = !!packageParam
   const t = templates.find(tp => tp.slug === slug)
   const cat = t ? categories.find(c => c.slug === t.categorySlug) : null
+
+  // Paketköp: dela ut krediter exakt en gång per Stripe-session.
+  useEffect(() => {
+    if (isPackagePurchase) {
+      const pkg = getPackage(packageParam)
+      grantPackageCredits(sessionId, pkg.credits)
+      trackEvent('purchase', {
+        transaction_id: sessionId || `pkg_${pkg.type}`,
+        currency: 'SEK',
+        value: pkg.price,
+        items: [{ item_id: `package_${pkg.type}`, item_name: pkg.name, item_category: 'Paket', price: pkg.price, quantity: 1 }],
+      })
+    }
+    setCreditsState(getCredits())
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   // Retrieve saved form data from localStorage
   const getFormData = () => {
@@ -80,21 +101,61 @@ function BetaldContent() {
     }
   }
 
-  // Auto-download on page load
+  // Auto-download on page load (template downloads only)
   useEffect(() => {
-    if (t && sessionId) {
-      trackEvent('purchase', {
-        transaction_id: sessionId,
-        currency: 'SEK',
-        value: 99,
-        items: [{ item_id: t.slug, item_name: t.name, item_category: t.category, price: 99, quantity: 1 }],
-      })
+    if (!isPackagePurchase && t && (sessionId || usedCredit)) {
+      // Köpet via Stripe ska räknas som purchase. Kreditnedladdning räknades
+      // redan vid paketköpet, så då skickas inget nytt purchase-event.
+      if (sessionId && !usedCredit) {
+        trackEvent('purchase', {
+          transaction_id: sessionId,
+          currency: 'SEK',
+          value: 99,
+          items: [{ item_id: t.slug, item_name: t.name, item_category: t.category, price: 99, quantity: 1 }],
+        })
+      }
       const timer = setTimeout(() => handleDownload(), 1500)
       return () => clearTimeout(timer)
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t, sessionId])
 
+  /* ── Paketköp-bekräftelse ─────────────────────────────────────────────── */
+  if (isPackagePurchase) {
+    const pkg = getPackage(packageParam)
+    return (
+      <div className="section-padding py-16 lg:py-24">
+        <div className="max-w-lg mx-auto text-center">
+          <div className="w-24 h-24 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-8">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" className="text-success">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" strokeWidth="2"/>
+              <path d="M22 4L12 14.01l-3-3" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+
+          <h1 className="text-3xl font-heading font-bold text-navy-500 mb-3">Tack för ditt köp!</h1>
+          <p className="text-navy-400 text-lg mb-2">Du har köpt <strong className="text-navy-600">{pkg.name}</strong>.</p>
+
+          <div className="bg-gold-50 border border-gold-200 rounded-2xl p-6 my-8">
+            <div className="text-4xl font-heading font-bold text-navy-600 mb-1">{credits}</div>
+            <div className="text-sm text-gold-700">nedladdningar kvar i ditt paket</div>
+          </div>
+
+          <p className="text-sm text-navy-400 mb-8">
+            Välj vilka fullmakter du vill skapa. En nedladdning dras av varje gång du
+            laddar ner en färdig PDF – utan ny betalning.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/mallar" className="btn-gold">Välj din första fullmakt →</Link>
+            <Link href="/" className="btn-secondary">Tillbaka till startsidan</Link>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  /* ── Template-nedladdning (single eller kreditköp) ────────────────────── */
   if (!t) {
     return (
       <div className="section-padding py-20 text-center">
@@ -117,14 +178,22 @@ function BetaldContent() {
         </div>
 
         <h1 className="text-3xl font-heading font-bold text-navy-500 mb-3">
-          Tack för ditt köp!
+          {usedCredit ? 'Din fullmakt är klar!' : 'Tack för ditt köp!'}
         </h1>
         <p className="text-navy-400 text-lg mb-2">
           Din fullmakt laddas ner automatiskt.
         </p>
-        <p className="text-sm text-navy-300 mb-8">
-          Betalnings-ID: {sessionId?.slice(0, 20)}...
-        </p>
+        {sessionId && !usedCredit && (
+          <p className="text-sm text-navy-300 mb-2">
+            Betalnings-ID: {sessionId?.slice(0, 20)}...
+          </p>
+        )}
+        {usedCredit && (
+          <p className="text-sm text-gold-700 mb-2">
+            En paketkredit användes. Du har <strong>{credits}</strong> nedladdningar kvar.
+          </p>
+        )}
+        <div className="mb-8" />
 
         {/* Download button */}
         <div className="space-y-3 max-w-sm mx-auto mb-10">
@@ -167,11 +236,21 @@ function BetaldContent() {
               <span className="text-navy-600">PDF utan vattenstämpel</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-navy-400">Pris:</span>
-              <span className="text-navy-600 font-medium">99 kr</span>
+              <span className="text-navy-400">{usedCredit ? 'Betalsätt:' : 'Pris:'}</span>
+              <span className="text-navy-600 font-medium">{usedCredit ? 'Paketkredit' : '99 kr'}</span>
             </div>
           </div>
         </div>
+
+        {/* Krediter kvar */}
+        {credits > 0 && (
+          <div className="bg-gold-50 border border-gold-200 rounded-xl p-5 text-left mb-8">
+            <p className="text-sm text-gold-800">
+              💳 Du har <strong>{credits}</strong> nedladdningar kvar i ditt paket.{' '}
+              <Link href="/mallar" className="font-semibold underline">Skapa nästa fullmakt →</Link>
+            </p>
+          </div>
+        )}
 
         {/* Tips */}
         <div className="bg-gold-50 border border-gold-200 rounded-xl p-5 text-left mb-8">

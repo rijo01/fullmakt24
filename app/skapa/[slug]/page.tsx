@@ -2,10 +2,11 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
-import { useParams } from 'next/navigation'
+import { useParams, useRouter } from 'next/navigation'
 import { templates, categories } from '@/data/templates'
 import type { TemplateField } from '@/data/templates'
 import { trackEvent } from '@/components/GoogleAnalytics'
+import { getCredits, useCredit } from '@/lib/packages'
 
 function FormField({ field, value, onChange }: { field: TemplateField; value: string; onChange: (v: string) => void }) {
   const base = "input-field text-sm"
@@ -35,11 +36,32 @@ function FormField({ field, value, onChange }: { field: TemplateField; value: st
 
 export default function SkapaPage() {
   const params = useParams()
+  const router = useRouter()
   const slug = params?.slug as string
   const t = templates.find(tp => tp.slug === slug)
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState<Record<string, string>>({})
   const [paying, setPaying] = useState(false)
+  const [credits, setCreditsState] = useState(0)
+
+  useEffect(() => {
+    setCreditsState(getCredits())
+  }, [])
+
+  // Använd en paketkredit istället för ny betalning. Drar av en credit,
+  // sparar formuläret och går vidare till nedladdningssidan.
+  const handleUseCredit = useCallback(() => {
+    if (!t) return
+    if (typeof window !== 'undefined' && slug) {
+      localStorage.setItem(`draft_${slug}`, JSON.stringify(formData))
+    }
+    if (useCredit()) {
+      trackEvent('select_content', { content_type: 'package_credit', item_id: t.slug })
+      router.push(`/betald?slug=${slug}&credit=used`)
+    } else {
+      setCreditsState(0)
+    }
+  }, [t, slug, formData, router])
 
   useEffect(() => {
     if (typeof window !== 'undefined' && slug) {
@@ -282,6 +304,23 @@ export default function SkapaPage() {
                     <h2 className="font-heading font-bold text-navy-500 text-2xl mb-2">Slutför ditt köp</h2>
                     <p className="text-navy-400 mb-2">Betala tryggt med kort, Apple Pay eller Klarna.</p>
 
+                    {/* Paketkredit tillgänglig – ladda ner utan ny betalning */}
+                    {credits > 0 && (
+                      <div className="bg-success/10 border border-success/30 rounded-xl p-5 max-w-sm mx-auto mb-6 text-left">
+                        <p className="text-sm text-navy-600 mb-3">
+                          💳 Du har <strong>{credits}</strong> nedladdningar kvar i ditt paket.
+                          Ladda ner den här fullmakten utan ny betalning.
+                        </p>
+                        <button
+                          onClick={handleUseCredit}
+                          className="btn-gold w-full !py-3"
+                        >
+                          Ladda ner med paketkredit →
+                        </button>
+                        <p className="text-xs text-navy-400 text-center mt-3">eller betala styckpris nedan</p>
+                      </div>
+                    )}
+
                     {/* Price */}
                     <div className="bg-navy-50 rounded-xl p-5 max-w-sm mx-auto mb-6 text-left">
                       <div className="flex justify-between items-center mb-3">
@@ -296,7 +335,7 @@ export default function SkapaPage() {
                     <button
                       onClick={handlePayment}
                       disabled={paying}
-                      className="btn-gold w-full max-w-sm mx-auto !py-4 text-lg"
+                      className={`w-full max-w-sm mx-auto !py-4 text-lg ${credits > 0 ? 'btn-secondary' : 'btn-gold'}`}
                     >
                       {paying ? (
                         <span className="flex items-center justify-center gap-2">
