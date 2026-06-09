@@ -62,8 +62,8 @@ export default function SkapaPage() {
 
     trackEvent('begin_checkout', {
       currency: 'SEK',
-      value: 49,
-      items: [{ item_id: t.slug, item_name: t.name, item_category: t.category, price: 49, quantity: 1 }],
+      value: 99,
+      items: [{ item_id: t.slug, item_name: t.name, item_category: t.category, price: 99, quantity: 1 }],
     })
 
     try {
@@ -289,7 +289,7 @@ export default function SkapaPage() {
                       </div>
                       <div className="flex justify-between items-center pt-3 border-t border-navy-200">
                         <span className="font-semibold text-navy-600">Totalt</span>
-                        <span className="text-2xl font-heading font-bold text-navy-600">49 kr</span>
+                        <span className="text-2xl font-heading font-bold text-navy-600">99 kr</span>
                       </div>
                     </div>
 
@@ -304,7 +304,7 @@ export default function SkapaPage() {
                           Omdirigerar till betalning...
                         </span>
                       ) : (
-                        'Betala 49 kr →'
+                        'Betala 99 kr →'
                       )}
                     </button>
 
@@ -400,7 +400,7 @@ export default function SkapaPage() {
 
                 {/* Price reminder */}
                 <div className="mt-4 bg-gold-50 border border-gold-200 rounded-xl p-4 text-center">
-                  <div className="text-2xl font-heading font-bold text-navy-600 mb-1">49 kr</div>
+                  <div className="text-2xl font-heading font-bold text-navy-600 mb-1">99 kr</div>
                   <div className="text-xs text-gold-700">Engångsbetalning · Ingen prenumeration</div>
                 </div>
               </div>

@@ -22,7 +22,7 @@ export default function PriserPage() {
     },
     {
       name: 'Ladda ner PDF',
-      price: '49',
+      price: '99',
       unit: 'kr / mall',
       description: 'Betala per mall – inget abonnemang',
       badge: 'Allt du behöver',
@@ -33,7 +33,7 @@ export default function PriserPage() {
         'Engångsköp – ingen bindningstid',
       ],
       limitations: [],
-      cta: 'Skapa dokument – 49 kr',
+      cta: 'Skapa dokument – 99 kr',
       ctaStyle: 'btn-gold',
       href: '/mallar',
     },
@@ -103,8 +103,8 @@ export default function PriserPage() {
             { q: 'Behöver jag skapa ett konto?', a: 'Nej, du kan betala och ladda ner direkt utan konto. Vill du spara dokumentet för framtida redigering kan du skapa ett gratis konto.' },
             { q: 'Vilka betalmetoder accepteras?', a: 'Vi accepterar kort (Visa/Mastercard) och faktura via Klarna.' },
             { q: 'Kan jag redigera dokumentet efteråt?', a: 'Ja, du kan när som helst gå tillbaka och skapa en ny version av ditt dokument.' },
-            { q: 'Vad är skillnaden mot förhandsgranskningen?', a: 'Du kan fylla i och förhandsgranska ditt dokument gratis. För att ladda ner den färdiga PDF:en betalar du 49 kr per mall.' },
-            { q: 'Erbjuder ni företagspriser?', a: 'Priset är 49 kr per mall för alla – inga volympriser eller abonnemang. Ett API för företag är under utveckling.' },
+            { q: 'Vad är skillnaden mot förhandsgranskningen?', a: 'Du kan fylla i och förhandsgranska ditt dokument gratis. För att ladda ner den färdiga PDF:en betalar du 99 kr per mall.' },
+            { q: 'Erbjuder ni företagspriser?', a: 'Priset är 99 kr per mall för alla – inga volympriser eller abonnemang. Ett API för företag är under utveckling.' },
           ].map(f => (
             <details key={f.q} className="group">
               <summary className="flex items-center justify-between py-4 cursor-pointer list-none">

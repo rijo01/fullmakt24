@@ -36,7 +36,7 @@ export default function VillkorPage() {
               Aktuella priser visas på webbplatsen. Alla priser anges i svenska kronor (SEK) inklusive moms. Betalning sker via vår betalningsleverantör Stripe och kan genomföras med betalkort, Apple Pay eller Klarna.
             </p>
             <p className="text-navy-400 leading-relaxed mt-2">
-              Standardpriset för ett enskilt dokument är 49 kr. Vi erbjuder även paketpriser och tillfälliga erbjudanden som framgår av prissidan.
+              Standardpriset för ett enskilt dokument är 99 kr. Vi erbjuder även paketpriser och tillfälliga erbjudanden som framgår av prissidan.
             </p>
           </section>
 

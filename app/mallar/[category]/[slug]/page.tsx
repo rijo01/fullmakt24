@@ -80,7 +80,7 @@ export default function TemplateDetailPage() {
     brand: { '@type': 'Brand', name: 'Fullmakt24.se' },
     offers: {
       '@type': 'Offer',
-      price: '49',
+      price: '99',
       priceCurrency: 'SEK',
       availability: 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',
@@ -298,7 +298,7 @@ export default function TemplateDetailPage() {
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-navy-400">Pris:</span>
                   <div>
-                    <span className="font-bold text-navy-600">49 kr</span>
+                    <span className="font-bold text-navy-600">99 kr</span>
                     <span className="text-navy-300 text-xs ml-1">/ gratis med vattenstämpel</span>
                   </div>
                 </div>

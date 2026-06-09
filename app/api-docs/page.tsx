@@ -44,7 +44,7 @@ export default function ApiDocsPage() {
           Anmäl intresse
         </a>
         <p className="text-xs text-navy-300 mt-4">
-          Tills vidare skapar du fullmakter direkt på sajten – 49 kr per mall, klar som PDF.
+          Tills vidare skapar du fullmakter direkt på sajten – 99 kr per mall, klar som PDF.
         </p>
       </div>
     </div>

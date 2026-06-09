@@ -86,8 +86,8 @@ function BetaldContent() {
       trackEvent('purchase', {
         transaction_id: sessionId,
         currency: 'SEK',
-        value: 49,
-        items: [{ item_id: t.slug, item_name: t.name, item_category: t.category, price: 49, quantity: 1 }],
+        value: 99,
+        items: [{ item_id: t.slug, item_name: t.name, item_category: t.category, price: 99, quantity: 1 }],
       })
       const timer = setTimeout(() => handleDownload(), 1500)
       return () => clearTimeout(timer)
@@ -168,7 +168,7 @@ function BetaldContent() {
             </div>
             <div className="flex justify-between">
               <span className="text-navy-400">Pris:</span>
-              <span className="text-navy-600 font-medium">49 kr</span>
+              <span className="text-navy-600 font-medium">99 kr</span>
             </div>
           </div>
         </div>

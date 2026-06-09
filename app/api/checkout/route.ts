@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
               name: `Fullmakt: ${templateName}`,
               description: 'Professionell PDF utan vattenstämpel – klar att signera',
             },
-            unit_amount: 4900, // 49 kr in öre
+            unit_amount: 9900, // 99 kr in öre
           },
           quantity: 1,
         },
