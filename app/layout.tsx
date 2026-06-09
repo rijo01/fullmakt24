@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     url: 'https://fullmakt24.se',
     siteName: 'Fullmakt24.se',
     title: 'Fullmakt24.se – Din fullmakt klar på 3 minuter',
-    description: '100+ juridiskt korrekta mallar för fullmakter och medgivanden.',
+    description: 'Över 200 juridiskt korrekta mallar för fullmakter och medgivanden.',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Fullmakt24.se – Din fullmakt klar på 3 minuter',
-    description: '100+ juridiskt korrekta mallar för fullmakter och medgivanden.',
+    description: 'Över 200 juridiskt korrekta mallar för fullmakter och medgivanden.',
   },
   robots: {
     index: true,

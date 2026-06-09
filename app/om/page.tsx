@@ -26,7 +26,7 @@ export default function OmPage() {
 
           <h2 className="font-heading font-bold text-navy-500 text-xl mt-10 mb-4">Vad vi erbjuder</h2>
           <p className="text-navy-400 leading-relaxed">
-            Med över 124 professionellt utformade mallar täcker vi de flesta situationer där du behöver en fullmakt eller ett medgivande. Våra mallar är anpassade för svenska förhållanden och uppdateras löpande i enlighet med gällande lagstiftning.
+            Med över 200 professionellt utformade mallar täcker vi de flesta situationer där du behöver en fullmakt eller ett medgivande. Våra mallar är anpassade för svenska förhållanden och uppdateras löpande i enlighet med gällande lagstiftning.
           </p>
           <p className="text-navy-400 leading-relaxed">
             Varje mall har granskats av juridisk expertis och är utformad för att accepteras av banker, myndigheter, vårdgivare och andra mottagare. Du fyller i dina uppgifter, granskar dokumentet och laddar ner en färdig PDF – allt på under tre minuter.
