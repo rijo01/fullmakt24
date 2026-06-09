@@ -287,7 +287,7 @@ export default function TemplateDetailPage() {
                 Skapa nu →
               </Link>
               <div className="mt-4 space-y-2 text-xs text-navy-400">
-                {['Enligt svensk lag', 'Klar på 3 minuter', 'Ladda ner som PDF'].map(item => (
+                {['Enligt svensk avtalsrätt', 'Klar på 3 minuter', 'Ladda ner som PDF'].map(item => (
                   <div key={item} className="flex items-center gap-2">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-success"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" strokeWidth="2"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                     {item}

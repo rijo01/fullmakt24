@@ -329,6 +329,19 @@ export default function SkapaPage() {
                         Säker betalning via Stripe
                       </span>
                     </div>
+
+                    {/* 14 dagars återbetalning – synlig i kassan */}
+                    <div className="mt-5 max-w-sm mx-auto bg-success/10 border border-success/30 rounded-xl px-4 py-3 flex items-start gap-2 text-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-success shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" strokeWidth="2"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      <span className="text-xs text-navy-500">
+                        <strong className="text-navy-600">14 dagars återbetalning.</strong> Är du inte nöjd med dokumentet får du pengarna tillbaka inom 14 dagar – mejla support@fullmakt24.se med ditt betalnings-ID.
+                      </span>
+                    </div>
+
+                    {/* Disclaimer – mall, inte juridisk rådgivning */}
+                    <p className="mt-4 max-w-sm mx-auto text-[11px] leading-relaxed text-navy-400 text-left">
+                      Detta är en mall, inte individuell juridisk rådgivning. Mallen är utformad enligt svensk avtalsrätt för vanliga situationer. Vid komplexa eller ovanliga ärenden rekommenderar vi att du kontaktar en jurist.
+                    </p>
                   </div>
 
                   <button onClick={() => setStep(3)} className="btn-secondary w-full">

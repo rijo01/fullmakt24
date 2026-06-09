@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     default: 'Fullmakt24.se – Din fullmakt klar på 3 minuter',
     template: '%s | Fullmakt24.se',
   },
-  description: `${templates.length} juridiskt korrekta mallar för fullmakter och medgivanden. Anpassade för svenska förhållanden. Klara att skriva ut och skriva under.`,
+  description: `${templates.length} mallar för fullmakter och medgivanden, utformade enligt svensk avtalsrätt. Anpassade för svenska förhållanden. Klara att skriva ut och skriva under.`,
   keywords: ['fullmakt', 'medgivande', 'fullmakt mall', 'fullmakt gratis', 'fullmakt barn', 'fullmakt bank', 'juridiskt dokument', 'Sverige'],
   authors: [{ name: 'Fullmakt24.se' }],
   icons: {
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     url: 'https://fullmakt24.se',
     siteName: 'Fullmakt24.se',
     title: 'Fullmakt24.se – Din fullmakt klar på 3 minuter',
-    description: 'Över 200 juridiskt korrekta mallar för fullmakter och medgivanden.',
+    description: 'Över 200 mallar för fullmakter och medgivanden, utformade enligt svensk avtalsrätt.',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Fullmakt24.se – Din fullmakt klar på 3 minuter',
-    description: 'Över 200 juridiskt korrekta mallar för fullmakter och medgivanden.',
+    description: 'Över 200 mallar för fullmakter och medgivanden, utformade enligt svensk avtalsrätt.',
   },
   robots: {
     index: true,

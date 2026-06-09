@@ -26,7 +26,7 @@ export default function VillkorPage() {
               Fullmakt24.se tillhandahåller digitala mallar för fullmakter och medgivanden. Tjänsten innefattar att fylla i en mall via vår webbplats och ladda ner det färdiga dokumentet som PDF.
             </p>
             <p className="text-navy-400 leading-relaxed mt-2">
-              Våra mallar är utformade för att vara juridiskt korrekta enligt svensk lag, men utgör inte juridisk rådgivning. Vi rekommenderar att du konsulterar en jurist vid komplexa eller ovanliga ärenden.
+              Våra mallar är framtagna för vanliga svenska fullmaktssituationer och utformade enligt svensk avtalsrätt, men utgör inte individuell juridisk rådgivning. Vi rekommenderar att du konsulterar en jurist vid komplexa eller ovanliga ärenden.
             </p>
           </section>
 

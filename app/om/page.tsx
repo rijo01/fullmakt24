@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Om Fullmakt24.se – Sveriges smartaste fullmaktstjänst',
-  description: 'Fullmakt24.se gör det enkelt att skapa juridiskt korrekta fullmakter och medgivanden. Läs mer om oss, vår vision och varför tusentals svenskar väljer oss.',
+  description: 'Fullmakt24.se gör det enkelt att skapa fullmakter och medgivanden utformade enligt svensk avtalsrätt. Läs mer om oss, vår vision och varför tusentals svenskar väljer oss.',
 }
 
 export default function OmPage() {
@@ -14,13 +14,13 @@ export default function OmPage() {
 
         <div className="space-y-6 text-navy-500">
           <p className="text-lg text-navy-400 leading-relaxed">
-            Fullmakt24.se är Sveriges ledande digitala plattform för fullmakter och medgivanden. Vi gör det enkelt, snabbt och tryggt att skapa juridiskt korrekta dokument – utan att behöva anlita en jurist.
+            Fullmakt24.se är Sveriges ledande digitala plattform för fullmakter och medgivanden. Vi gör det enkelt, snabbt och tryggt att skapa dokument utformade enligt svensk avtalsrätt – för vanliga situationer där du annars hade behövt börja från ett tomt papper.
           </p>
 
           <div className="card p-8 my-8">
             <h2 className="font-heading font-bold text-navy-500 text-xl mb-4">Vår vision</h2>
             <p className="text-navy-400 leading-relaxed">
-              Juridiska dokument ska vara tillgängliga för alla. Vi tror att ingen ska behöva betala tusentals kronor för en enkel fullmakt som tar tre minuter att fylla i. Därför har vi byggt Fullmakt24.se – en tjänst som kombinerar juridisk expertis med modern teknik.
+              Juridiska dokument ska vara tillgängliga för alla. Vi tror att ingen ska behöva betala tusentals kronor för en enkel fullmakt som tar tre minuter att fylla i. Därför har vi byggt Fullmakt24.se – en tjänst som gör tydligt utformade dokumentmallar tillgängliga med modern teknik.
             </p>
           </div>
 
@@ -29,7 +29,7 @@ export default function OmPage() {
             Med över 200 professionellt utformade mallar täcker vi de flesta situationer där du behöver en fullmakt eller ett medgivande. Våra mallar är anpassade för svenska förhållanden och uppdateras löpande i enlighet med gällande lagstiftning.
           </p>
           <p className="text-navy-400 leading-relaxed">
-            Varje mall har granskats av juridisk expertis och är utformad för att accepteras av banker, myndigheter, vårdgivare och andra mottagare. Du fyller i dina uppgifter, granskar dokumentet och laddar ner en färdig PDF – allt på under tre minuter.
+            Varje mall är utformad enligt svensk avtalsrätt och anpassad för de situationer där banker, myndigheter, vårdgivare och andra mottagare vanligtvis efterfrågar en fullmakt. Vid komplexa eller ovanliga ärenden rekommenderar vi att du kontaktar en jurist. Du fyller i dina uppgifter, granskar dokumentet och laddar ner en färdig PDF – allt på under tre minuter.
           </p>
 
           <h2 className="font-heading font-bold text-navy-500 text-xl mt-10 mb-4">Trygghet och kvalitet</h2>

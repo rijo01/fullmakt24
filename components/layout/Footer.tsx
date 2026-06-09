@@ -23,7 +23,7 @@ export function Footer() {
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-navy-200">
             <span className="flex items-center gap-2">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-success"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-              Enligt svensk lag
+              Enligt svensk avtalsrätt
             </span>
             <span className="flex items-center gap-2">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-success"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -34,7 +34,7 @@ export function Footer() {
               49 kr per mall
             </span>
             <span className="flex items-center gap-2">
-              🇸🇪 Svensk lag
+              🇸🇪 Svensk avtalsrätt
             </span>
           </div>
         </div>
@@ -58,7 +58,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm text-navy-200 leading-relaxed mb-4">
-              Sveriges smartaste plattform för fullmakter och medgivanden. Skapa juridiskt korrekta dokument på minuter.
+              Sveriges smartaste plattform för fullmakter och medgivanden. Skapa dokument utformade enligt svensk avtalsrätt på minuter.
             </p>
             <p className="text-xs text-navy-300">
               support@fullmakt24.se

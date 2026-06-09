@@ -114,7 +114,7 @@ export default function HomePage() {
   const popular = getPopularTemplates(6)
 
   const faqs = [
-    { q: 'Är fullmakterna juridiskt giltiga?', a: 'Ja, alla våra mallar är utformade enligt gällande svensk lagstiftning, bland annat avtalslagen (1915:218). De uppfyller formkraven för giltiga fullmakter enligt svensk lag.' },
+    { q: 'Är fullmakterna juridiskt giltiga?', a: 'Våra mallar är framtagna för vanliga svenska fullmaktssituationer och utformade enligt svensk avtalsrätt, bland annat avtalslagen (1915:218). De flesta fullmakter är formlösa och kräver inget särskilt format för att gälla. Vid komplexa eller ovanliga ärenden rekommenderar vi att du kontaktar en jurist.' },
     { q: 'Vad kostar det?', a: 'Varje mall kostar 49 kr som engångsköp. Du betalar per dokument och laddar ner det direkt som PDF – inga abonnemang och inga månadsavgifter.' },
     { q: 'Hur signerar jag dokumentet?', a: 'Du laddar ner dokumentet som PDF, skriver ut det och skriver under för hand – tillsammans med eventuella vittnen. Dokumentet är klart att signera direkt.' },
     { q: 'Hur lång tid tar det att skapa ett dokument?', a: 'De flesta användare skapar sitt dokument på under 3 minuter. Vår guidade ifyllning gör processen snabb och enkel.' },
@@ -125,14 +125,14 @@ export default function HomePage() {
   ]
 
   const trustSignals = [
-    { value: `${templates.length} mallar`, label: 'Enligt svensk lag', icon: '📋' },
+    { value: `${templates.length} mallar`, label: 'För svenska behov', icon: '📋' },
     { value: '49 kr', label: 'per dokument', icon: '💳' },
     { value: '3 minuter', label: 'från start till PDF', icon: '⏱️' },
-    { value: 'Svensk lag', label: 'korrekta lagrum', icon: '⚖️' },
+    { value: 'Avtalsrätt', label: 'utformade enligt svensk avtalsrätt', icon: '⚖️' },
   ]
 
   const steps = [
-    { num: '01', title: 'Välj mall', desc: `Välj bland ${templates.length} mallar utformade enligt svensk lag, anpassade för ditt behov.`, iconPath: 'M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z' },
+    { num: '01', title: 'Välj mall', desc: `Välj bland ${templates.length} mallar utformade enligt svensk avtalsrätt, anpassade för ditt behov.`, iconPath: 'M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z' },
     { num: '02', title: 'Fyll i uppgifter', desc: 'Guidad ifyllning med validering. Dina uppgifter sparas automatiskt.', iconPath: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z' },
     { num: '03', title: 'Ladda ner PDF', desc: 'Ladda ner dokumentet direkt som PDF – klart att skriva ut och skriva under.', iconPath: 'M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z' },
   ]
@@ -143,7 +143,7 @@ export default function HomePage() {
     name: 'Fullmakt24.se',
     url: 'https://fullmakt24.se',
     logo: 'https://fullmakt24.se/icon.png',
-    description: 'Sveriges smartaste plattform för fullmakter och medgivanden enligt svensk lag. Skapa din PDF på 3 minuter.',
+    description: 'Sveriges smartaste plattform för fullmakter och medgivanden, utformade enligt svensk avtalsrätt. Skapa din PDF på 3 minuter.',
     sameAs: [],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -206,7 +206,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-lg sm:text-xl text-navy-200 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-                {templates.length} juridiskt korrekta mallar. Anpassade för dig. Klara att skriva ut och skriva under.
+                {templates.length} mallar utformade enligt svensk avtalsrätt. Anpassade för dig. Klara att skriva ut och skriva under.
               </p>
 
               <HeroSearch />
@@ -221,7 +221,7 @@ export default function HomePage() {
               </div>
 
               <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center lg:justify-start text-sm text-navy-200">
-                {['Enligt svensk lag', 'GDPR-säker', 'PDF direkt', '49 kr per mall'].map(b => (
+                {['Enligt svensk avtalsrätt', 'GDPR-säker', 'PDF direkt', '49 kr per mall'].map(b => (
                   <span key={b} className="flex items-center gap-1.5">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-success"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" strokeWidth="2.5"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                     {b}
