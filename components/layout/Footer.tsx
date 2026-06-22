@@ -4,6 +4,7 @@ import { categories } from '@/data/templates'
 const tjansterLinks = [
   { label: 'Alla mallar', href: '/mallar' },
   { label: 'Priser', href: '/priser' },
+  { label: 'Guider & blogg', href: '/blogg' },
 ]
 
 const omOssLinks = [

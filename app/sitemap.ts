@@ -1,4 +1,5 @@
 import { templates, categories } from '@/data/templates'
+import { blogPosts } from '@/data/blog'
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -15,7 +16,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/integritet`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
     { url: `${baseUrl}/cookies`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
     { url: `${baseUrl}/api-docs`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${baseUrl}/blogg`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
   ]
+
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map(post => ({
+    url: `${baseUrl}/blogg/${post.slug}`,
+    lastModified: new Date(post.dateUpdated),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }))
 
   const categoryPages: MetadataRoute.Sitemap = categories.map(cat => ({
     url: `${baseUrl}/mallar?category=${cat.slug}`,
@@ -39,5 +48,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ])
 
-  return [...staticPages, ...categoryPages, ...templatePages]
+  return [...staticPages, ...categoryPages, ...templatePages, ...blogPages]
 }
