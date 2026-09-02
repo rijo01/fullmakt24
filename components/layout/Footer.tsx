@@ -7,6 +7,10 @@ const tjansterLinks = [
   { label: 'Guider & blogg', href: '/blogg' },
 ]
 
+const guideLinks = [
+  { label: 'Fullmakt sälja bostad', href: '/fullmakt-salja-bostadsratt' },
+]
+
 const omOssLinks = [
   { label: 'Om Fullmakt24', href: '/om' },
   { label: 'Kontakt', href: '/kontakt' },
@@ -90,6 +94,17 @@ export function Footer() {
             <ul className="space-y-2.5">
               {tjansterLinks.map(link => (
                 <li key={link.href + link.label}>
+                  <Link href={link.href} className="text-sm text-navy-200 hover:text-gold-400 transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-sm font-semibold text-white mt-6 mb-4">Guider</h3>
+            <ul className="space-y-2.5">
+              {guideLinks.map(link => (
+                <li key={link.href}>
                   <Link href={link.href} className="text-sm text-navy-200 hover:text-gold-400 transition-colors">
                     {link.label}
                   </Link>
