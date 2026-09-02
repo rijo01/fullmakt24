@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/api-docs`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${baseUrl}/blogg`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${baseUrl}/fullmakt-salja-bostadsratt`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/generalfullmakt`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
   ]
 
   const blogPages: MetadataRoute.Sitemap = blogPosts.map(post => ({

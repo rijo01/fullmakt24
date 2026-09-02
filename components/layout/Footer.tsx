@@ -9,6 +9,7 @@ const tjansterLinks = [
 
 const guideLinks = [
   { label: 'Fullmakt sälja bostad', href: '/fullmakt-salja-bostadsratt' },
+  { label: 'Generalfullmakt', href: '/generalfullmakt' },
 ]
 
 const omOssLinks = [
