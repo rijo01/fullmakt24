@@ -1,24 +1,50 @@
 {
   "slug": "fullmakt-agarbyte-bil",
   "seo": {
-    "title": "Fullmakt för ägarbyte bil – Mall & Guide 2025 | Fullmakt24.se",
-    "metaDescription": "Skapa fullmakt för ägarbyte av bil gratis. Juridisk mall för att överlåta fordon till ny ägare. Accepterad av Transportstyrelsen. Ladda ner och använd direkt.",
-    "h1": "Fullmakt för ägarbyte bil – Mall & Guide 2025",
-    "keywords": ["fullmakt ägarbyte bil", "bilägarbyte fullmakt", "ägarbyteshandling", "forsäljning bil fullmakt", "transportstyrelsen fullmakt"]
+    "title": "Fullmakt ägarbyte bil – mall för Transportstyrelsen",
+    "metaDescription": "Låt någon annan sköta ägarbytet av bilen hos Transportstyrelsen. Fyll i fordonsuppgifter och befogenhet, signera. 99 kr, PDF direkt.",
+    "h1": "Fullmakt ägarbyte bil – mall för Transportstyrelsen 2026",
+    "keywords": [
+      "fullmakt ägarbyte bil",
+      "ägarbyte bil fullmakt",
+      "fullmakt Transportstyrelsen ägarbyte",
+      "fullmakt sälja bil",
+      "ägarbyteshandling fullmakt"
+    ]
   },
   "content": {
     "introduction": "En fullmakt för ägarbyte av bil ger någon annan rätt att företräda dig vid överlåtelse av fordonet. Det kan handla om att genomföra själva ägarbytesprocessen hos Transportstyrelsen, ta hand om papperarbetet, eller agera på ditt vägnar vid försäljning av bilen.\n\nDet finns många skäl att använda denna fullmakt. Kanske kan du inte själv närvara vid ägarbytesregistreringen, eller så säljer du bilen privat och vill att en vän eller familjemedlem hanterar de administrativa delarna. En korrekt utformad fullmakt säkerställer att processen fungerar smidigt.",
-    "legalValidity": "En fullmakt för ägarbyte av motorfordon är giltig enligt trafikskadestadgan och regleras av Transportstyrelsen. Fullmakten måste vara skriftlig och undertecknad av ägaren. Transportstyrelsen kräver att fullmakten är original eller kopia vid ägarbytesregistrering. Normalt krävs att både köpare och säljare undertecknar ägarbyteshandlingen, men med denna fullmakt kan köparen genomföra allt på säljarens vägnar.",
+    "legalValidity": "Fullmakten bygger på de allmänna fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Något lagstadgat krav på vittnen finns inte för den här typen av fullmakt – men Transportstyrelsen vill ha en skriftlig, daterad och undertecknad fullmakt där fordonets registreringsnummer, fullmaktsgivaren och ombudet framgår tydligt, och två vittnen höjer bevisvärdet om någon senare ifrågasätter underskriften. Observera att själva ägarbytet anmäls på fordonets registreringsbevis del 2 eller via Transportstyrelsens e-tjänst; fullmakten ger ombudet rätt att göra den anmälan åt dig, den ersätter inte anmälan. Kontrollera alltid Transportstyrelsens aktuella anvisningar för ditt ärende.",
     "howToGuide": "Steg 1: Ange dina personuppgifter som fordonets nuvarande ägare – namn, personnummer och adress.\n\nSteg 2: Ange uppgifter om fullmaktshavaren (den som ska hantera ägarbytespassen) – namn och personnummer.\n\nSteg 3: Beskriv fordonet – märke, modell, registreringsnummer och chassinummer.\n\nSteg 4: Ange köparen av fordonet (namn, personnummer och adress) – eller lämna det blankt om det ännu inte är bestämt.\n\nSteg 5: Specificera exakt vad fullmakten omfattar: registrering av ägarbyte, hantering av papperarbete, kommunikation med köpare, etc.\n\nSteg 6: Ange giltighetstid. Ägarbytef fullmakter är ofta tidsbegränsade till exempel tre till sex månader.\n\nSteg 7: Granska dokumentet och ladda ner som PDF.\n\nSteg 8: Underteckna fullmakten och två vittnen.",
-    "commonMistakes": "1. Saknar fordonets registreringsnummer – Allt måste anges tydligt för att Transportstyrelsen ska acceptera fullmakten.\n\n2. För vag formulering – Specificera exakt vilka handlingar fullmakten omfattar (ägarbyte, kvittot, försäljningsavtal, etc.).\n\n3. För lång giltighetstid – Ägarbytef fullmakter bör normalt begränsas till två till sex månader.\n\n4. Glömmer vittnen – Två vittnen måste underteckna för att fullmakten ska ha full juridisk styrka vid Transportstyrelsen.\n\n5. Använder gammal version av försäljningsavtal – Se till att försäljningsavtalet är aktuellt och korrekt utfyllt.",
+    "commonMistakes": "1. Saknar fordonets registreringsnummer – Utan reg.nr kan Transportstyrelsen inte koppla fullmakten till rätt fordon.\n\n2. För vag formulering – Skriv exakt vilka åtgärder som omfattas: anmäla ägarbyte, underteckna köpekontrakt, hantera registreringsbeviset.\n\n3. För lång giltighetstid – Begränsa fullmakten till den tid affären faktiskt tar, ofta två till sex månader.\n\n4. Blandar ihop fullmakt och ägarbytesanmälan – Fullmakten ger behörighet, men ägarbytet måste ändå anmälas på registreringsbeviset del 2 eller i Transportstyrelsens e-tjänst.\n\n5. Glömmer legitimation – Ombudet bör kunna visa ID tillsammans med fullmakten.\n\n6. Otydlig underskrift – Datera, texta namnförtydligande och låt gärna två vittnen skriva under; det höjer bevisvärdet även om lagen inte kräver vittnen.",
     "faq": [
-      {"question": "Accepterar Transportstyrelsen denna fullmakt?", "answer": "Ja, en korrekt utformad fullmakt med två vittnen accepteras av Transportstyrelsen för ägarbyte av fordon."},
-      {"question": "Kan fullmaktsgivaren ändra sitt sinne?", "answer": "Ja, fullmakten kan när som helst återkallas av fullmaktsgivaren, men det kan skapa juridiska problem i försäljningsprocessen."},
-      {"question": "Vad händer om bilen inte är betald?", "answer": "Fullt ansvar ligger på säljaren att säkerställa att all betalning är mottagen innan ägarbyte genomförs."},
-      {"question": "Gäller fullmakten för försäljningen själv?", "answer": "Denna fullmakt täcker administrativa handlingar och registreringsprocessen, men försäljningsavtalet upprättas separat."},
-      {"question": "Behövs denna fullmakt även vid privatförsäljning?", "answer": "Ja, även vid privatförsäljning behövs ett korrekt ägarbytesformulär. Denna fullmakt gör det möjligt för köparen att genomföra registreringen."}
+      {
+        "question": "Accepterar Transportstyrelsen denna fullmakt?",
+        "answer": "Transportstyrelsen godtar en skriftlig fullmakt där fullmaktsgivare, ombud, fordonets registreringsnummer och uppdragets omfattning framgår tydligt, och som är daterad och undertecknad. Vittnen krävs inte enligt lag men rekommenderas. Kontrollera Transportstyrelsens aktuella anvisningar för just ditt ärende innan du skickar in."
+      },
+      {
+        "question": "Kan fullmaktsgivaren ändra sitt sinne?",
+        "answer": "Ja, fullmakten kan när som helst återkallas av fullmaktsgivaren, men det kan skapa juridiska problem i försäljningsprocessen."
+      },
+      {
+        "question": "Vad händer om bilen inte är betald?",
+        "answer": "Fullt ansvar ligger på säljaren att säkerställa att all betalning är mottagen innan ägarbyte genomförs."
+      },
+      {
+        "question": "Gäller fullmakten för försäljningen själv?",
+        "answer": "Denna fullmakt täcker administrativa handlingar och registreringsprocessen, men försäljningsavtalet upprättas separat."
+      },
+      {
+        "question": "Behövs denna fullmakt även vid privatförsäljning?",
+        "answer": "Ja, även vid privatförsäljning behövs ett korrekt ägarbytesformulär. Denna fullmakt gör det möjligt för köparen att genomföra registreringen."
+      }
     ],
-    "relatedSearchTerms": ["ägarbyte bil fullmakt", "bilförsäljning fullmakt", "transportstyrelsen ägarbyte", "fordonskatt fullmakt"]
+    "relatedSearchTerms": [
+      "ägarbyte bil fullmakt",
+      "bilförsäljning fullmakt",
+      "transportstyrelsen ägarbyte",
+      "fordonskatt fullmakt"
+    ]
   },
   "schema": {
     "faqSchema": true,
@@ -26,9 +52,18 @@
     "breadcrumbSchema": true
   },
   "internalLinks": [
-    {"text": "Fullmakt för bilverkstad", "href": "/mallar/resa-transport/fullmakt-bilverkstad"},
-    {"text": "Fullmakt för Transportstyrelsen", "href": "/mallar/resa-transport/fullmakt-transportstyrelsen"},
-    {"text": "Fullmakt för besiktning", "href": "/mallar/resa-transport/fullmakt-besiktning"}
+    {
+      "text": "Fullmakt för bilverkstad",
+      "href": "/mallar/resa-transport/fullmakt-bilverkstad"
+    },
+    {
+      "text": "Fullmakt för Transportstyrelsen",
+      "href": "/mallar/resa-transport/fullmakt-transportstyrelsen"
+    },
+    {
+      "text": "Fullmakt för besiktning",
+      "href": "/mallar/resa-transport/fullmakt-besiktning"
+    }
   ],
-  "lastUpdated": "2025-02-27"
+  "lastUpdated": "2026-09-02"
 }
