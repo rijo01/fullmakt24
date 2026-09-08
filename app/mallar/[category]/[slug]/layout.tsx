@@ -30,7 +30,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const title = seoTitle || `${t.name} – Mall & Guide 2025 | Fullmakt24.se`
-  const description = seoDescription || `${t.name}: ${t.description} Mall utformad enligt svensk avtalsrätt för ${cat?.name?.toLowerCase() || 'svenska förhållanden'}. Skapa och ladda ner som PDF.`
+
+  // Tvåspråkiga mallar säljs som svensk original + engelsk översättning. Det är
+  // ett eget sökintresse ("fullmakt på engelska"), så det ska med i beskrivningen
+  // även när mallen saknar egen SEO-text.
+  const fallbackDescription = t.bilingual
+    ? `${t.name} – mall enligt svensk avtalsrätt. Finns på svenska + engelska för utlandsbruk. Klar på 3 minuter, ladda ner som PDF.`
+    : `${t.name}: ${t.description} Mall utformad enligt svensk avtalsrätt för ${cat?.name?.toLowerCase() || 'svenska förhållanden'}. Skapa och ladda ner som PDF.`
+  const description = seoDescription || fallbackDescription
 
   // Canonical URL – the single authoritative URL for each mall (template's true
   // category), so duplicate/cross-category paths point back here and Google

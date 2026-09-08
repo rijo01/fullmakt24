@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { templates, categories } from '@/data/templates'
+import { templates, categories, fieldLabelsEn } from '@/data/templates'
 import { trackEvent } from '@/components/GoogleAnalytics'
 import { getPackage, getCredits, grantPackageCredits } from '@/lib/packages'
 
@@ -14,6 +14,8 @@ function BetaldContent() {
   const slug = searchParams.get('slug')
   const sessionId = searchParams.get('session_id')
   const packageParam = searchParams.get('package')
+  // Tvåspråkigt köp: den engelska översättningen läggs till i samma PDF.
+  const wantsBilingual = searchParams.get('lang') === 'bilingual'
   const usedCredit = searchParams.get('credit') === 'used'
   const [downloading, setDownloading] = useState(false)
   const [downloaded, setDownloaded] = useState(false)
@@ -22,6 +24,7 @@ function BetaldContent() {
   const isPackagePurchase = !!packageParam
   const t = templates.find(tp => tp.slug === slug)
   const cat = t ? categories.find(c => c.slug === t.categorySlug) : null
+  const isBilingualDownload = !!(wantsBilingual && t?.bilingual && t?.en)
 
   // Paketköp: dela ut krediter exakt en gång per Stripe-session.
   useEffect(() => {
@@ -50,6 +53,10 @@ function BetaldContent() {
     }
   }
 
+  // Mallarna använder olika fält-id:n för samma roll. Ta första ifyllda värdet.
+  const pick = (formData: Record<string, string>, ...ids: string[]) =>
+    ids.map(id => formData[id]).find(v => v?.trim()) || ''
+
   const handleDownload = async () => {
     if (!t) return
     setDownloading(true)
@@ -58,39 +65,66 @@ function BetaldContent() {
       const { downloadPdf } = await import('@/lib/pdf-generator')
       const formData = getFormData()
 
+      // Fält som redan skrivs ut på egen plats i PDF:en ska inte upprepas.
+      const rendered = new Set([
+        'givare_namn', 'givare_pnr', 'givare_adress', 'givare_epost', 'givare_telefon',
+        'fullmaktsgivare_namn', 'fullmaktsgivare_pnr', 'fullmaktsgivare_adress',
+        'utstallare_namn', 'utstallare_pnr', 'vardnadshavare1_namn', 'vardnadshavare1_pnr',
+        'havare_namn', 'havare_pnr', 'havare_relation', 'havare_adress',
+        'ombud_namn', 'ombud_pnr', 'ombud_relation', 'motande_vuxen',
+        'giltig_fran', 'giltig_till', 'syfte', 'uppdrag', 'befogenheter', 'begransningar',
+      ])
+
+      // Övriga ifyllda uppgifter (barnets namn, flygbolag, djurets art …) med
+      // mallens egna etiketter – och engelska etiketter för den engelska sidan.
+      const extraDetails = t.fields
+        .filter(f => !rendered.has(f.id) && formData[f.id]?.trim())
+        .map(f => ({
+          label: f.label,
+          labelEn: fieldLabelsEn[f.id],
+          value: formData[f.id],
+        }))
+
       downloadPdf({
         templateName: t.name,
+        documentTitle: t.documentTitle,
         categoryName: cat?.name || '',
         givare: {
-          namn: formData.givare_namn || '',
-          personnummer: formData.givare_pnr || '',
-          adress: formData.givare_adress || '',
+          namn: pick(formData, 'givare_namn', 'fullmaktsgivare_namn', 'utstallare_namn', 'vardnadshavare1_namn'),
+          personnummer: pick(formData, 'givare_pnr', 'fullmaktsgivare_pnr', 'utstallare_pnr', 'vardnadshavare1_pnr'),
+          adress: pick(formData, 'givare_adress', 'fullmaktsgivare_adress'),
           epost: formData.givare_epost,
           telefon: formData.givare_telefon,
         },
         havare: {
-          namn: formData.havare_namn || '',
-          personnummer: formData.havare_pnr || '',
-          relation: formData.havare_relation || '',
+          namn: pick(formData, 'havare_namn', 'ombud_namn', 'motande_vuxen'),
+          personnummer: pick(formData, 'havare_pnr', 'ombud_pnr'),
+          relation: pick(formData, 'havare_relation', 'ombud_relation'),
           adress: formData.havare_adress,
         },
         detaljer: {
           giltigFran: formData.giltig_fran,
           giltigTill: formData.giltig_till,
-          syfte: formData.syfte,
+          syfte: pick(formData, 'syfte', 'uppdrag', 'befogenheter'),
           begransningar: formData.begransningar,
-          barn_namn: formData.barn_namn,
-          barn_pnr: formData.barn_pnr,
-          vardgivare: formData.vardgivare,
-          fastighet: formData.fastighet,
-          forening: formData.forening,
-          tjanst: formData.tjanst,
-          djur_namn: formData.djur_namn,
-          djur_art: formData.djur_art,
-          myndighet: formData.myndighet,
         },
+        extraDetails,
+        standardText: t.standardText,
+        // Mallens juridiska notis skrivs ut för de tvåspråkiga mallarna, där
+        // den har en engelsk motsvarighet på översättningssidan.
+        legalInfo: t.bilingual ? t.legalInfo : undefined,
+        bilingual: isBilingualDownload,
+        en: t.en
+          ? {
+              templateName: t.en.name,
+              documentTitle: t.en.documentTitle,
+              categoryName: t.en.category,
+              standardText: t.en.standardText,
+              legalInfo: t.en.legalInfo,
+            }
+          : undefined,
         watermark: false, // NO watermark - paid version!
-      }, `fullmakt-${t.slug}.pdf`)
+      }, `fullmakt-${t.slug}${isBilingualDownload ? '-sv-en' : ''}.pdf`)
 
       setDownloaded(true)
     } catch (err) {
@@ -107,11 +141,12 @@ function BetaldContent() {
       // Köpet via Stripe ska räknas som purchase. Kreditnedladdning räknades
       // redan vid paketköpet, så då skickas inget nytt purchase-event.
       if (sessionId && !usedCredit) {
+        const value = isBilingualDownload ? 149 : 99
         trackEvent('purchase', {
           transaction_id: sessionId,
           currency: 'SEK',
-          value: 99,
-          items: [{ item_id: t.slug, item_name: t.name, item_category: t.category, price: 99, quantity: 1 }],
+          value,
+          items: [{ item_id: t.slug, item_name: t.name, item_category: t.category, price: value, quantity: 1 }],
         })
       }
       const timer = setTimeout(() => handleDownload(), 1500)
@@ -183,6 +218,12 @@ function BetaldContent() {
         <p className="text-navy-400 text-lg mb-2">
           Din fullmakt laddas ner automatiskt.
         </p>
+        {isBilingualDownload && (
+          <p className="text-sm text-navy-500 mb-2">
+            🌍 PDF:en innehåller den svenska originalversionen följd av den engelska
+            översättningen – klar att visa upp utomlands.
+          </p>
+        )}
         {sessionId && !usedCredit && (
           <p className="text-sm text-navy-300 mb-2">
             Betalnings-ID: {sessionId?.slice(0, 20)}...

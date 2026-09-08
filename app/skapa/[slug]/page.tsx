@@ -6,7 +6,7 @@ import { useParams, useRouter } from 'next/navigation'
 import { templates, categories } from '@/data/templates'
 import type { TemplateField } from '@/data/templates'
 import { trackEvent } from '@/components/GoogleAnalytics'
-import { getCredits, useCredit } from '@/lib/packages'
+import { getCredits, useCredit, PACKAGES } from '@/lib/packages'
 
 function FormField({ field, value, onChange }: { field: TemplateField; value: string; onChange: (v: string) => void }) {
   const base = "input-field text-sm"
@@ -43,6 +43,8 @@ export default function SkapaPage() {
   const [formData, setFormData] = useState<Record<string, string>>({})
   const [paying, setPaying] = useState(false)
   const [credits, setCreditsState] = useState(0)
+  // Tvåspråkiga mallar kan köpas med engelsk översättning i samma PDF.
+  const [packageType, setPackageType] = useState<'single' | 'bilingual'>('single')
 
   useEffect(() => {
     setCreditsState(getCredits())
@@ -57,6 +59,7 @@ export default function SkapaPage() {
     }
     if (useCredit()) {
       trackEvent('select_content', { content_type: 'package_credit', item_id: t.slug })
+      // Paketkrediter gäller den svenska versionen; tvåspråkig PDF köps separat.
       router.push(`/betald?slug=${slug}&credit=used`)
     } else {
       setCreditsState(0)
@@ -82,10 +85,14 @@ export default function SkapaPage() {
     if (!t) return
     setPaying(true)
 
+    // Tvåspråkig PDF kan bara väljas för mallar som har en engelsk version.
+    const type = t.bilingual && packageType === 'bilingual' ? 'bilingual' : 'single'
+    const price = PACKAGES[type].price
+
     trackEvent('begin_checkout', {
       currency: 'SEK',
-      value: 99,
-      items: [{ item_id: t.slug, item_name: t.name, item_category: t.category, price: 99, quantity: 1 }],
+      value: price,
+      items: [{ item_id: t.slug, item_name: t.name, item_category: t.category, price, quantity: 1 }],
     })
 
     try {
@@ -96,6 +103,7 @@ export default function SkapaPage() {
           templateSlug: t.slug,
           templateName: t.name,
           formData,
+          packageType: type,
         }),
       })
 
@@ -114,7 +122,7 @@ export default function SkapaPage() {
     } finally {
       setPaying(false)
     }
-  }, [t, formData, slug])
+  }, [t, formData, slug, packageType])
 
   if (!t) {
     return (
@@ -135,6 +143,10 @@ export default function SkapaPage() {
   }
 
   const stepTitles = ['Parter', 'Detaljer', 'Granska', 'Betala & Ladda ner']
+
+  // Tvåspråkig PDF är ett tillval; endast svenska är förvalt.
+  const isBilingual = !!t.bilingual && packageType === 'bilingual'
+  const price = PACKAGES[isBilingual ? 'bilingual' : 'single'].price
 
   const requiredGivare = givareFields.filter(f => f.required).every(f => formData[f.id]?.trim())
   const requiredHavare = havareFields.filter(f => f.required).every(f => formData[f.id]?.trim())
@@ -285,6 +297,63 @@ export default function SkapaPage() {
                       </div>
                     </div>
                   </div>
+                  {/* Språkval – endast för mallar som finns som tvåspråkig PDF */}
+                  {t.bilingual && (
+                    <div className="card p-6">
+                      <h2 className="font-heading font-bold text-navy-500 text-lg mb-1">Språk</h2>
+                      <p className="text-sm text-navy-400 mb-5">
+                        Ska du visa upp fullmakten utomlands – för gränskontroll, flygbolag,
+                        sjukvård eller hotell? Välj den tvåspråkiga versionen, så följer en
+                        engelsk översättning med som extra sida i samma PDF.
+                      </p>
+                      <div className="space-y-3">
+                        {([
+                          {
+                            value: 'single' as const,
+                            title: 'Endast svenska',
+                            price: `${PACKAGES.single.price} kr`,
+                            desc: 'Den svenska originalversionen som PDF.',
+                          },
+                          {
+                            value: 'bilingual' as const,
+                            title: 'Svenska + engelska',
+                            price: `${PACKAGES.bilingual.price} kr`,
+                            desc: 'Svensk original först, engelsk översättning som extra sida i samma PDF.',
+                          },
+                        ]).map(opt => (
+                          <label
+                            key={opt.value}
+                            className={`flex items-start gap-3 p-4 rounded-xl border-2 cursor-pointer transition-colors ${
+                              packageType === opt.value
+                                ? 'border-gold-400 bg-gold-50'
+                                : 'border-navy-100 hover:border-navy-200'
+                            }`}
+                          >
+                            <input
+                              type="radio"
+                              name="doc-language"
+                              value={opt.value}
+                              checked={packageType === opt.value}
+                              onChange={() => setPackageType(opt.value)}
+                              className="mt-1 w-4 h-4 text-gold-500 focus:ring-gold-400"
+                            />
+                            <span className="flex-1">
+                              <span className="flex items-center justify-between gap-3">
+                                <span className="font-semibold text-navy-600 text-sm">{opt.title}</span>
+                                <span className="font-heading font-bold text-navy-600 text-sm">{opt.price}</span>
+                              </span>
+                              <span className="block text-xs text-navy-400 mt-1">{opt.desc}</span>
+                            </span>
+                          </label>
+                        ))}
+                      </div>
+                      <p className="text-xs text-navy-400 mt-4">
+                        Den svenska versionen är alltid originalet. Översättningen är till för att
+                        mottagare utomlands ska kunna läsa dokumentet.
+                      </p>
+                    </div>
+                  )}
+
                   <div className="flex gap-3">
                     <button onClick={() => setStep(2)} className="btn-secondary flex-1">← Ändra</button>
                     <button onClick={() => setStep(4)} className="btn-gold flex-1">Bekräfta & Betala →</button>
@@ -317,7 +386,11 @@ export default function SkapaPage() {
                         >
                           Ladda ner med paketkredit →
                         </button>
-                        <p className="text-xs text-navy-400 text-center mt-3">eller betala styckpris nedan</p>
+                        <p className="text-xs text-navy-400 text-center mt-3">
+                          {isBilingual
+                            ? 'Paketkrediten ger den svenska versionen. Betala nedan för svensk + engelsk PDF.'
+                            : 'eller betala styckpris nedan'}
+                        </p>
                       </div>
                     )}
 
@@ -325,11 +398,26 @@ export default function SkapaPage() {
                     <div className="bg-navy-50 rounded-xl p-5 max-w-sm mx-auto mb-6 text-left">
                       <div className="flex justify-between items-center mb-3">
                         <span className="text-sm text-navy-500">Fullmakt: {t.name}</span>
+                        <span className="text-sm text-navy-500">{PACKAGES.single.price} kr</span>
                       </div>
+                      {isBilingual && (
+                        <div className="flex justify-between items-center mb-3 text-sm text-navy-500">
+                          <span>Engelsk översättning i samma PDF</span>
+                          <span>+{PACKAGES.bilingual.price - PACKAGES.single.price} kr</span>
+                        </div>
+                      )}
                       <div className="flex justify-between items-center pt-3 border-t border-navy-200">
                         <span className="font-semibold text-navy-600">Totalt</span>
-                        <span className="text-2xl font-heading font-bold text-navy-600">99 kr</span>
+                        <span className="text-2xl font-heading font-bold text-navy-600">{price} kr</span>
                       </div>
+                      {t.bilingual && (
+                        <button
+                          onClick={() => setStep(3)}
+                          className="mt-3 text-xs text-gold-700 hover:text-gold-800 font-medium"
+                        >
+                          {isBilingual ? 'Byt till endast svenska' : 'Lägg till engelsk översättning (149 kr)'} →
+                        </button>
+                      )}
                     </div>
 
                     <button
@@ -343,7 +431,7 @@ export default function SkapaPage() {
                           Omdirigerar till betalning...
                         </span>
                       ) : (
-                        'Betala 99 kr →'
+                        `Betala ${price} kr →`
                       )}
                     </button>
 
@@ -439,8 +527,15 @@ export default function SkapaPage() {
 
                 {/* Price reminder */}
                 <div className="mt-4 bg-gold-50 border border-gold-200 rounded-xl p-4 text-center">
-                  <div className="text-2xl font-heading font-bold text-navy-600 mb-1">99 kr</div>
-                  <div className="text-xs text-gold-700">Engångsbetalning · Ingen prenumeration</div>
+                  <div className="text-2xl font-heading font-bold text-navy-600 mb-1">{price} kr</div>
+                  <div className="text-xs text-gold-700">
+                    {isBilingual ? 'Svenska + engelska · Engångsbetalning' : 'Engångsbetalning · Ingen prenumeration'}
+                  </div>
+                  {t.bilingual && !isBilingual && (
+                    <div className="text-[11px] text-navy-400 mt-2">
+                      Finns även som tvåspråkig PDF – {PACKAGES.bilingual.price} kr
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

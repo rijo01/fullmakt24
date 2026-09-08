@@ -1,7 +1,7 @@
 // Pakettyper för köp. Delas mellan checkout-API:t (server) och klientsidor.
 // Belopp i öre för Stripe. Inga abonnemang – allt är engångsköp.
 
-export type PackageType = 'single' | 'family' | 'estate'
+export type PackageType = 'single' | 'bilingual' | 'family' | 'estate'
 
 export interface PackageInfo {
   type: PackageType
@@ -30,6 +30,17 @@ export const PACKAGES: Record<PackageType, PackageInfo> = {
     save: 0,
     description: '1 fullmakt – PDF utan vattenstämpel, klar att signera',
   },
+  // Tillval för rese- och barnmallar: samma dokument med en engelsk
+  // översättning som extra sida i samma PDF. Den svenska versionen är original.
+  bilingual: {
+    type: 'bilingual',
+    name: 'Fullmakt svenska + engelska',
+    credits: 1,
+    amount: 14900,
+    price: 149,
+    save: 0,
+    description: '1 tvåspråkig fullmakt – svensk original + engelsk översättning i samma PDF',
+  },
   family: {
     type: 'family',
     name: 'Familjepaket',
@@ -55,6 +66,14 @@ export function getPackage(type: unknown): PackageInfo {
     return PACKAGES[type as PackageType]
   }
   return PACKAGES.single
+}
+
+/**
+ * Pakettyper som är knutna till en enskild mall (till skillnad från
+ * flerkredit-paketen som köps fristående på prissidan).
+ */
+export function isTemplatePackage(type: PackageType): boolean {
+  return type === 'single' || type === 'bilingual'
 }
 
 /* ──────────────────────────────────────────────────────────────────────────

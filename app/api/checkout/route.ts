@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
-import { getPackage } from '@/lib/packages'
+import { getPackage, isTemplatePackage } from '@/lib/packages'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2025-02-24.acacia',
@@ -12,7 +12,9 @@ export async function POST(req: NextRequest) {
     const { templateSlug, templateName, formData, packageType = 'single' } = body
 
     const pkg = getPackage(packageType)
-    const isSingle = pkg.type === 'single'
+    // Både 'single' och 'bilingual' avser en specifik mall; paketköp gör det inte.
+    const isSingle = isTemplatePackage(pkg.type)
+    const isBilingual = pkg.type === 'bilingual'
 
     // Ett enskilt köp är knutet till en specifik mall; paketköp är det inte.
     if (isSingle && (!templateSlug || !templateName)) {
@@ -22,15 +24,19 @@ export async function POST(req: NextRequest) {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fullmakt24.se'
 
     // Produktnamn och beskrivning per pakettyp.
-    const productName = isSingle ? `Fullmakt: ${templateName}` : pkg.name
+    const productName = isSingle
+      ? `Fullmakt: ${templateName}${isBilingual ? ' (svenska + engelska)' : ''}`
+      : pkg.name
     const productDescription = isSingle
-      ? 'Professionell PDF utan vattenstämpel – klar att signera'
+      ? isBilingual
+        ? 'Tvåspråkig PDF utan vattenstämpel – svensk original med engelsk översättning'
+        : 'Professionell PDF utan vattenstämpel – klar att signera'
       : pkg.description
 
     // Single -> tillbaka till betald-sidan för just den mallen.
     // Paket -> betald-sidan med pakettyp, krediter delas ut där.
     const successUrl = isSingle
-      ? `${siteUrl}/betald?session_id={CHECKOUT_SESSION_ID}&slug=${templateSlug}`
+      ? `${siteUrl}/betald?session_id={CHECKOUT_SESSION_ID}&slug=${templateSlug}${isBilingual ? '&lang=bilingual' : ''}`
       : `${siteUrl}/betald?session_id={CHECKOUT_SESSION_ID}&package=${pkg.type}`
 
     const cancelUrl = isSingle

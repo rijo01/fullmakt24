@@ -13,6 +13,27 @@ export interface Template {
   relatedIds: number[];
   legalInfo: string;
   keywords: string[];
+  /** Mallen kan köpas som tvåspråkig PDF – svensk original + engelsk översättning. */
+  bilingual?: boolean;
+  /** Dokumentrubrik i PDF:en (FULLMAKT, MEDGIVANDE, INTYG …). Standard: FULLMAKT. */
+  documentTitle?: string;
+  /** Mallens svenska standardklausul, skrivs ut i uppdragsrutan i PDF:en. */
+  standardText?: string;
+  /** Engelska motsvarigheter till mallens standardtexter (endast tvåspråkiga mallar). */
+  en?: TemplateTranslation;
+}
+
+/** Engelsk version av en malls standardtexter. Användarens egna uppgifter översätts aldrig. */
+export interface TemplateTranslation {
+  name: string;
+  /** Dokumentrubrik på engelska, t.ex. POWER OF ATTORNEY eller PARENTAL CONSENT FOR TRAVEL. */
+  documentTitle: string;
+  category: string;
+  description: string;
+  longDescription: string;
+  legalInfo: string;
+  /** Engelsk motsvarighet till mallens svenska standardklausul. */
+  standardText: string;
 }
 
 export interface TemplateField {
@@ -4261,7 +4282,404 @@ function generateTemplates(): Template[] {
   return Array.from(bySlug.values());
 }
 
-export const templates = generateTemplates();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   TVÅSPRÅKIGA MALLAR (svenska + engelska)
+   ──────────────────────────────────────────────────────────────────────────
+   Rese- och barnmallar köps ofta för utlandsbruk: gränskontroll, flygbolag,
+   utländsk sjukvård och hotell vill kunna läsa handlingen. Dessa mallar kan
+   därför köpas som tvåspråkig PDF där den svenska versionen är originalet och
+   den engelska översättningen följer som extra sida i samma dokument.
+
+   `standardText` är mallens svenska standardklausul och `en.standardText`
+   dess engelska motsvarighet – översatt till naturlig juridisk engelska, inte
+   ord för ord. Användarens egna ifyllda uppgifter översätts aldrig.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+interface BilingualContent {
+  /** Svensk dokumentrubrik i PDF:en (FULLMAKT / MEDGIVANDE / RESEINTYG / INTYG) */
+  documentTitle: string;
+  /** Svensk standardklausul som skrivs ut i uppdragsrutan */
+  standardText: string;
+  en: TemplateTranslation;
+}
+
+const EN_LEGAL_CHILD =
+  'This document is drawn up under Swedish contract law and is intended for use with authorities, schools, airlines and health services. Outside Sweden it serves as evidence of the guardian’s consent; the country of destination may impose additional requirements.';
+const EN_LEGAL_TRAVEL =
+  'Valid under Swedish contract law and the Swedish law of agency (avtalslagen 1915:218).';
+const EN_LEGAL_ANIMAL =
+  'Valid under Swedish animal welfare legislation (djurskyddslagen 2018:1192).';
+
+const bilingualContent: Record<string, BilingualContent> = {
+  'foraldraredgivande-resa-annan-vuxen': {
+    documentTitle: 'MEDGIVANDE',
+    standardText:
+      'Undertecknad vårdnadshavare medger härmed att ovan angivet barn får resa tillsammans med den angivna vuxna under den period som anges i denna handling. Medgivandet omfattar resa till och från destinationen, in- och utresa över gränser samt att den angivna vuxna fattar de beslut om barnets omvårdnad som behövs under resan. Vårdnadshavaren är anträffbar på de kontaktuppgifter som anges ovan.',
+    en: {
+      name: 'Parental consent – travel with another adult',
+      documentTitle: 'PARENTAL CONSENT FOR TRAVEL',
+      category: 'Parents & Children',
+      description: 'Consent for a child to travel with an adult who is not the guardian.',
+      longDescription:
+        'A parental consent letter for a child travelling with an adult other than the guardian. Border control officers, airlines and hotels regularly ask for this document, and the English translation lets them read it without a sworn translator.',
+      legalInfo: EN_LEGAL_CHILD,
+      standardText:
+        'The undersigned guardian hereby consents to the child named above travelling with the authorised person named above during the period stated in this document. The consent covers travel to and from the destination, the crossing of international borders, and the authorised person taking any decisions needed for the child’s day-to-day care during the journey. The guardian can be reached at the contact details given above.',
+    },
+  },
+
+  'reseintyg-barn-internationell': {
+    documentTitle: 'RESEINTYG',
+    standardText:
+      'Detta intyg utfärdas för att styrka att undertecknad vårdnadshavare känner till och godkänner barnets internationella resa. Intyget är avsett att visas upp för flygbolag, gränskontroll och andra myndigheter i avrese- och ankomstlandet tillsammans med barnets pass eller nationella id-handling.',
+    en: {
+      name: 'Travel certificate for a child – international travel',
+      documentTitle: 'PARENTAL CONSENT FOR TRAVEL',
+      category: 'Parents & Children',
+      description: 'The certificate required when a child travels internationally.',
+      longDescription:
+        'A travel certificate for a child on an international journey. It is presented together with the child’s passport at check-in and at border control, and the English page makes it usable at any border.',
+      legalInfo: EN_LEGAL_CHILD,
+      standardText:
+        'This certificate is issued to confirm that the undersigned guardian is aware of and approves the child’s international journey. It is intended to be presented to airlines, border control authorities and other authorities in the countries of departure and arrival, together with the child’s passport or national identity document.',
+    },
+  },
+
+  'resefullmakt-barn-eu': {
+    documentTitle: 'FULLMAKT',
+    standardText:
+      'Fullmakten ger fullmaktshavaren rätt att resa med barnet inom EU och EES och att företräda barnet i praktiska frågor under resan, såsom incheckning, boende, transport och kontakt med lokala myndigheter. Fullmakten ger inte rätt att ändra barnets stadigvarande bosättning.',
+    en: {
+      name: 'Travel authorisation for a child within the EU',
+      documentTitle: 'POWER OF ATTORNEY',
+      category: 'Parents & Children',
+      description: 'A power of attorney written for travel with a child inside the EU.',
+      longDescription:
+        'A power of attorney for travelling with a child inside the EU and the EEA. Free movement does not remove the need to show that the accompanying adult has the guardian’s permission.',
+      legalInfo: EN_LEGAL_CHILD,
+      standardText:
+        'This power of attorney authorises the attorney-in-fact to travel with the child within the EU and the EEA and to represent the child in practical matters during the journey, such as check-in, accommodation, transport and contact with local authorities. It confers no right to change the child’s habitual residence.',
+    },
+  },
+
+  'medgivande-skolresa': {
+    documentTitle: 'MEDGIVANDE',
+    standardText:
+      'Undertecknad vårdnadshavare medger att barnet deltar i den skolresa som anges ovan. Medgivandet omfattar transport, boende och de aktiviteter som ingår i resans program samt att ansvarig personal fattar de beslut om barnets omvårdnad som behövs om vårdnadshavaren inte kan nås.',
+    en: {
+      name: 'Consent for a school trip',
+      documentTitle: 'PARENTAL CONSENT FOR TRAVEL',
+      category: 'Parents & Children',
+      description: 'Consent for a child to take part in a school trip.',
+      longDescription:
+        'A consent form for a school trip, covering transport, accommodation and the activities in the programme. Schools travelling abroad usually need it in English as well.',
+      legalInfo: EN_LEGAL_CHILD,
+      standardText:
+        'The undersigned guardian consents to the child taking part in the school trip stated above. The consent covers transport, accommodation and the activities included in the programme, and authorises the responsible staff to take any decisions needed for the child’s care if the guardian cannot be reached.',
+    },
+  },
+
+  'medgivande-lager-kollo': {
+    documentTitle: 'MEDGIVANDE',
+    standardText:
+      'Undertecknad vårdnadshavare medger att barnet deltar i angivet läger eller kolloverksamhet. Medgivandet omfattar resa till och från lägret, boende och deltagande i lägrets aktiviteter samt att lägerledningen fattar de beslut om barnets omvårdnad som behövs under vistelsen.',
+    en: {
+      name: 'Consent for a summer camp',
+      documentTitle: 'PARENTAL CONSENT FOR TRAVEL',
+      category: 'Parents & Children',
+      description: 'Consent for a child to attend a camp or summer camp.',
+      longDescription:
+        'A consent form for a camp or summer camp, covering the journey there and back, accommodation and the activities of the camp. Camps abroad ask for an English version.',
+      legalInfo: EN_LEGAL_CHILD,
+      standardText:
+        'The undersigned guardian consents to the child attending the camp stated above. The consent covers travel to and from the camp, accommodation and participation in the activities of the camp, and authorises the camp management to take any decisions needed for the child’s care during the stay.',
+    },
+  },
+
+  'medgivande-foreningsresa': {
+    documentTitle: 'MEDGIVANDE',
+    standardText:
+      'Undertecknad vårdnadshavare medger att barnet följer med på föreningens resa enligt ovan. Medgivandet omfattar transport, boende och deltagande i resans aktiviteter samt att ansvarig ledare företräder barnet i praktiska frågor under resan.',
+    en: {
+      name: 'Consent for a club trip',
+      documentTitle: 'PARENTAL CONSENT FOR TRAVEL',
+      category: 'Parents & Children',
+      description: 'Consent for a child to travel with a club or team.',
+      longDescription:
+        'A consent form for a trip with a club or team, covering transport, accommodation and the activities of the trip, and naming the team leader who represents the child.',
+      legalInfo: EN_LEGAL_CHILD,
+      standardText:
+        'The undersigned guardian consents to the child taking part in the club trip stated above. The consent covers transport, accommodation and participation in the activities of the trip, and authorises the responsible team leader to represent the child in practical matters during the journey.',
+    },
+  },
+
+  'medgivande-ensam-resa-minderarig': {
+    documentTitle: 'MEDGIVANDE',
+    standardText:
+      'Undertecknad vårdnadshavare medger att den minderårige reser ensam enligt de uppgifter som anges ovan. Vårdnadshavaren ansvarar för att den minderårige lämnas av och möts upp av behörig vuxen och är anträffbar på angivna kontaktuppgifter under hela resan.',
+    en: {
+      name: 'Consent for a minor travelling alone',
+      documentTitle: 'PARENTAL CONSENT FOR TRAVEL',
+      category: 'Parents & Children',
+      description: 'Consent for a minor to travel unaccompanied.',
+      longDescription:
+        'A consent form for a minor travelling unaccompanied. Airlines and border control ask to see the guardian’s written permission and contact details, in a language they can read.',
+      legalInfo: EN_LEGAL_CHILD,
+      standardText:
+        'The undersigned guardian consents to the minor travelling unaccompanied as stated above. The guardian is responsible for ensuring that the minor is seen off and met by an authorised adult, and undertakes to be reachable at the contact details given above throughout the journey.',
+    },
+  },
+
+  'fullmakt-barns-sjukvard': {
+    documentTitle: 'FULLMAKT',
+    standardText:
+      'Fullmakten ger fullmaktshavaren rätt att företräda barnet i kontakter med hälso- och sjukvården, ta emot information om barnets hälsotillstånd och lämna samtycke till sedvanlig undersökning och behandling. Vid livshotande tillstånd får nödvändig vård ges utan att vårdnadshavaren först kontaktas.',
+    en: {
+      name: 'Power of attorney for a child’s medical care',
+      documentTitle: 'POWER OF ATTORNEY',
+      category: 'Parents & Children',
+      description: 'Authorises another adult to handle a child’s medical care.',
+      longDescription:
+        'A power of attorney allowing another adult to deal with health services on behalf of a child. It is the document foreign clinics and hospitals ask for when a child falls ill while travelling without a guardian.',
+      legalInfo: EN_LEGAL_CHILD,
+      standardText:
+        'This power of attorney authorises the attorney-in-fact to represent the child in contacts with health services, to receive information about the child’s state of health and to give consent to routine examination and treatment. In life-threatening situations, necessary care may be given without the guardian being contacted first.',
+    },
+  },
+
+  'medgivande-akut-vard': {
+    documentTitle: 'MEDGIVANDE',
+    standardText:
+      'Undertecknad vårdnadshavare medger att den angivna vuxna får söka akut vård för barnet och lämna samtycke till den behandling som vårdpersonalen bedömer nödvändig när vårdnadshavaren inte är anträffbar. Vårdnadshavaren ska underrättas så snart det är möjligt.',
+    en: {
+      name: 'Consent to emergency medical care',
+      documentTitle: 'PARENTAL CONSENT',
+      category: 'Parents & Children',
+      description: 'Emergency consent to medical care for a child when the guardian is unavailable.',
+      longDescription:
+        'An emergency consent allowing a named adult to seek urgent medical care for a child when the guardian cannot be reached – the situation it is written for is most often one that arises abroad.',
+      legalInfo: EN_LEGAL_CHILD,
+      standardText:
+        'The undersigned guardian consents to the authorised person seeking emergency care for the child and giving consent to the treatment that the medical staff consider necessary when the guardian cannot be reached. The guardian shall be informed as soon as possible.',
+    },
+  },
+
+  'fullmakt-slakting-resa': {
+    documentTitle: 'FULLMAKT',
+    standardText:
+      'Fullmakten ger den angivna släktingen rätt att resa med barnet under den period som anges ovan och att företräda barnet i praktiska frågor under resan, såsom transport, boende och kontakt med myndigheter i destinationslandet.',
+    en: {
+      name: 'Power of attorney for a relative travelling with a child',
+      documentTitle: 'POWER OF ATTORNEY',
+      category: 'Parents & Children',
+      description: 'Authorises a relative to travel with a child.',
+      longDescription:
+        'A power of attorney for a grandparent, aunt, uncle or other relative travelling with a child. A shared surname is not proof of permission – border officers ask for the document.',
+      legalInfo: EN_LEGAL_CHILD,
+      standardText:
+        'This power of attorney authorises the relative named above to travel with the child during the period stated and to represent the child in practical matters during the journey, such as transport, accommodation and contact with the authorities of the destination country.',
+    },
+  },
+
+  'medgivande-overnattning-utomlands': {
+    documentTitle: 'MEDGIVANDE',
+    standardText:
+      'Undertecknad vårdnadshavare medger att barnet övernattar utomlands hos den angivna vuxna under den period som anges ovan. Medgivandet omfattar boende, kost och tillsyn samt att den angivna vuxna fattar de beslut om barnets omvårdnad som behövs.',
+    en: {
+      name: 'Consent for a child to stay overnight abroad',
+      documentTitle: 'PARENTAL CONSENT FOR TRAVEL',
+      category: 'Parents & Children',
+      description: 'Consent for a child to stay overnight abroad.',
+      longDescription:
+        'A consent form for a child staying overnight abroad with a host family or another named adult, covering accommodation, meals and supervision.',
+      legalInfo: EN_LEGAL_CHILD,
+      standardText:
+        'The undersigned guardian consents to the child staying overnight abroad with the authorised person named above during the period stated. The consent covers accommodation, meals and supervision, and authorises that person to take any decisions needed for the child’s care.',
+    },
+  },
+
+  'medgivande-idrottsstavling-utomlands': {
+    documentTitle: 'MEDGIVANDE',
+    standardText:
+      'Undertecknad vårdnadshavare medger att barnet deltar i den idrottstävling utomlands som anges ovan. Medgivandet omfattar resa, boende, deltagande i tävling och träning samt att ansvarig ledare företräder barnet i praktiska och medicinska frågor under vistelsen.',
+    en: {
+      name: 'Consent for a sports competition abroad',
+      documentTitle: 'PARENTAL CONSENT FOR TRAVEL',
+      category: 'Parents & Children',
+      description: 'Consent for a child to take part in a sports competition abroad.',
+      longDescription:
+        'A consent form for a child competing abroad, covering the journey, accommodation, training and the competition itself, and naming the leader who represents the child.',
+      legalInfo: EN_LEGAL_CHILD,
+      standardText:
+        'The undersigned guardian consents to the child taking part in the sports competition abroad stated above. The consent covers travel, accommodation, participation in training and in the competition, and authorises the responsible team leader to represent the child in practical and medical matters during the stay.',
+    },
+  },
+
+  'medgivande-barn-ensamresa-flyg-2026': {
+    documentTitle: 'MEDGIVANDE',
+    standardText:
+      'Undertecknad vårdnadshavare medger att barnet flyger ensamt med angivet flygbolag och enligt angiven resväg. Medgivandet omfattar flygbolagets tjänst för ensamresande barn (UM). Barnet lämnas av och möts upp av angiven vuxen, och angiven nödkontakt är anträffbar under hela resan.',
+    en: {
+      name: 'Consent for a child flying unaccompanied',
+      documentTitle: 'PARENTAL CONSENT FOR TRAVEL',
+      category: 'Parents & Children',
+      description: 'Consent for a minor to fly alone, stating airline, route and emergency contact.',
+      longDescription:
+        'A consent form for a child flying unaccompanied. Most airlines require the guardian’s written consent for passengers under 15–18, and ground staff abroad need to be able to read it.',
+      legalInfo:
+        'Requirements differ between airlines. Check the airline’s current unaccompanied minor policy before travelling.',
+      standardText:
+        'The undersigned guardian consents to the child flying unaccompanied with the airline and on the route stated above. The consent covers the airline’s unaccompanied minor (UM) service. The child will be seen off and met by the adult named above, and the emergency contact stated will be reachable throughout the journey.',
+    },
+  },
+
+  'resefullmakt-vuxen': {
+    documentTitle: 'FULLMAKT',
+    standardText:
+      'Fullmakten ger fullmaktshavaren rätt att företräda fullmaktsgivaren i frågor som rör den aktuella resan, såsom bokning, ombokning, avbokning, incheckning, uthämtning av handlingar och kontakt med resebolag, flygbolag och försäkringsbolag.',
+    en: {
+      name: 'Travel power of attorney for an adult',
+      documentTitle: 'POWER OF ATTORNEY',
+      category: 'Travel & Transport',
+      description: 'A general travel power of attorney for an adult.',
+      longDescription:
+        'A general travel power of attorney: the attorney-in-fact books, rebooks, checks in and deals with travel operators and insurers on the principal’s behalf.',
+      legalInfo: EN_LEGAL_TRAVEL,
+      standardText:
+        'This power of attorney authorises the attorney-in-fact to represent the principal in matters relating to the journey concerned, such as bookings, rebookings, cancellations, check-in, collection of documents and contact with travel operators, airlines and insurance companies.',
+    },
+  },
+
+  'resefullmakt-grupp': {
+    documentTitle: 'FULLMAKT',
+    standardText:
+      'Fullmakten ger fullmaktshavaren rätt att företräda gruppens deltagare i frågor som rör den gemensamma resan, såsom bokning, ombokning, incheckning, hotellregistrering och kontakt med resebolag och transportörer. Deltagarna anges i uppdragsbeskrivningen.',
+    en: {
+      name: 'Travel power of attorney for a group',
+      documentTitle: 'POWER OF ATTORNEY',
+      category: 'Travel & Transport',
+      description: 'A power of attorney for a group journey with named participants.',
+      longDescription:
+        'A travel power of attorney for a group, letting one person handle bookings, check-in and hotel registration for every named participant.',
+      legalInfo: EN_LEGAL_TRAVEL,
+      standardText:
+        'This power of attorney authorises the attorney-in-fact to represent the members of the group in matters relating to the joint journey, such as bookings, rebookings, check-in, hotel registration and contact with travel operators and carriers. The participants are listed in the description of the assignment.',
+    },
+  },
+
+  'fullmakt-flygbolag': {
+    documentTitle: 'FULLMAKT',
+    standardText:
+      'Fullmakten ger fullmaktshavaren rätt att företräda fullmaktsgivaren gentemot flygbolaget i frågor om bokning, ombokning och avbokning samt att framställa och ta emot krav på ersättning vid försenad, inställd eller överbokad flygning, inklusive ersättning enligt EU-förordning 261/2004.',
+    en: {
+      name: 'Power of attorney for dealings with an airline',
+      documentTitle: 'POWER OF ATTORNEY',
+      category: 'Travel & Transport',
+      description: 'Authorises another person to handle a booking or a claim with an airline.',
+      longDescription:
+        'A power of attorney for dealings with an airline – bookings, rebookings and compensation claims for delayed, cancelled or overbooked flights. Foreign airlines will not act on a Swedish-only document.',
+      legalInfo: EN_LEGAL_TRAVEL,
+      standardText:
+        'This power of attorney authorises the attorney-in-fact to represent the principal in dealings with the airline concerning bookings, rebookings and cancellations, and to submit and receive claims for compensation for a delayed, cancelled or overbooked flight, including compensation under EU Regulation 261/2004.',
+    },
+  },
+
+  'fullmakt-djurtransport': {
+    documentTitle: 'FULLMAKT',
+    standardText:
+      'Fullmakten ger fullmaktshavaren rätt att transportera det angivna djuret för ägarens räkning och att under transporten fatta de beslut om djurets omvårdnad som behövs, inklusive att uppsöka veterinär vid akut behov.',
+    en: {
+      name: 'Power of attorney for transporting an animal',
+      documentTitle: 'POWER OF ATTORNEY',
+      category: 'Animals & Pets',
+      description: 'Authorises another person to transport someone else’s animal.',
+      longDescription:
+        'A power of attorney for transporting an animal on the owner’s behalf, including the right to contact a veterinarian in an emergency during the journey.',
+      legalInfo: EN_LEGAL_ANIMAL,
+      standardText:
+        'This power of attorney authorises the attorney-in-fact to transport the animal named above on behalf of the owner and, during transport, to take any decisions needed for the animal’s welfare, including contacting a veterinarian in an emergency.',
+    },
+  },
+
+  'intyg-djur-resa-utomlands': {
+    documentTitle: 'INTYG',
+    standardText:
+      'Detta intyg utfärdas som komplement till djurets pass och visar att undertecknad ägare godkänner att djuret reser utomlands tillsammans med den angivna personen. Intyget ersätter inte krav på husdjurspass, id-märkning, vaccinationer eller övriga införselregler i destinationslandet.',
+    en: {
+      name: 'Certificate for a pet travelling abroad',
+      documentTitle: 'PET TRAVEL CERTIFICATE',
+      category: 'Animals & Pets',
+      description: 'A supplement to the pet passport for travel abroad.',
+      longDescription:
+        'A certificate to accompany the pet passport when an animal travels abroad with someone other than its owner. Border and customs officers read it at the point of entry.',
+      legalInfo: EN_LEGAL_ANIMAL,
+      standardText:
+        'This certificate is issued as a supplement to the animal’s pet passport and confirms that the undersigned owner approves the animal travelling abroad with the person named above. It does not replace the requirements for a pet passport, microchipping, vaccinations or any other import rules of the country of destination.',
+    },
+  },
+
+  'medgivande-skidresa': {
+    documentTitle: 'MEDGIVANDE',
+    standardText:
+      'Undertecknad vårdnadshavare medger att barnet deltar i den skidresa som anges ovan. Medgivandet omfattar transport, boende, skidåkning och övriga aktiviteter i resans program samt att ansvarig ledare fattar de beslut om barnets omvårdnad som behövs under resan.',
+    en: {
+      name: 'Consent for a ski trip',
+      documentTitle: 'PARENTAL CONSENT FOR TRAVEL',
+      category: 'Clubs, School & Leisure',
+      description: 'Consent for a child to take part in a ski trip.',
+      longDescription:
+        'A consent form for a ski trip, covering transport, accommodation, skiing and the rest of the programme. Ski trips usually cross a border, so the English page travels with it.',
+      legalInfo:
+        'Written for club and school activities in Sweden. Outside Sweden it serves as evidence of the guardian’s consent.',
+      standardText:
+        'The undersigned guardian consents to the child taking part in the ski trip stated above. The consent covers transport, accommodation, skiing and the other activities in the programme, and authorises the responsible leader to take any decisions needed for the child’s care during the trip.',
+    },
+  },
+};
+
+/** Engelska etiketter för de fält som skrivs ut i PDF:ens detaljruta. */
+export const fieldLabelsEn: Record<string, string> = {
+  barn_namn: 'Child’s full name',
+  barn_pnr: 'Child’s personal identity number',
+  barn_foddatum: 'Child’s date of birth',
+  vardnadshavare1_namn: 'Guardian 1 – full name',
+  vardnadshavare1_pnr: 'Guardian 1 – personal identity number',
+  vardnadshavare2_namn: 'Guardian 2 – full name',
+  vardnadshavare2_pnr: 'Guardian 2 – personal identity number',
+  flygbolag: 'Airline',
+  avgangsplats: 'Place of departure',
+  destination: 'Destination',
+  motande_vuxen: 'Adult meeting the child',
+  nodkontakt: 'Emergency contact',
+  djur_namn: 'Name of the animal',
+  djur_art: 'Species and breed',
+  forening: 'Club or association',
+  vardgivare: 'Healthcare provider',
+  myndighet: 'Authority or institution',
+  resmal: 'Destination',
+};
+
+/** Slugs som säljs som tvåspråkig PDF. */
+export const bilingualSlugs = Object.keys(bilingualContent);
+
+export function isBilingual(slug: string): boolean {
+  return slug in bilingualContent;
+}
+
+function applyBilingual(list: Template[]): Template[] {
+  for (const t of list) {
+    const b = bilingualContent[t.slug];
+    if (!b) continue;
+    t.bilingual = true;
+    t.documentTitle = b.documentTitle;
+    t.standardText = b.standardText;
+    t.en = b.en;
+  }
+  return list;
+}
+
+export const templates = applyBilingual(generateTemplates());
 
 export function getTemplateBySlug(slug: string): Template | undefined {
   return templates.find(t => t.slug === slug);

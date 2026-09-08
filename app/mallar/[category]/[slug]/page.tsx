@@ -45,7 +45,18 @@ export default function TemplateDetailPage() {
 
   const cat = categories.find(c => c.slug === t.categorySlug)
   const related = getTemplatesByCategory(t.categorySlug).filter(r => r.id !== t.id).slice(0, 4)
-  const allFaqs = (seoContent?.content?.faq || t?.faq || []) as Array<Record<string, string>>
+  const baseFaqs = (seoContent?.content?.faq || t?.faq || []) as Array<Record<string, string>>
+  // Tvåspråkiga mallar får en egen fråga om engelsk version – både i listan och
+  // i FAQ-schemat, eftersom "fullmakt på engelska" är en vanlig sökfras.
+  const allFaqs = t?.bilingual
+    ? [
+        ...baseFaqs.filter(f => !/engelska/i.test(('question' in f ? f.question : f.q) || '')),
+        {
+          question: 'Kan jag få fullmakten på engelska?',
+          answer: `Ja. ${t.name} finns som tvåspråkig PDF för 149 kr: den svenska originalversionen först och en engelsk översättning som extra sida i samma dokument. Du väljer språk i steg 3 när du skapar dokumentet. Det är den versionen du vill ha om handlingen ska visas upp för gränskontroll, flygbolag, sjukvård eller hotell utomlands.`,
+        },
+      ]
+    : baseFaqs
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -302,6 +313,15 @@ export default function TemplateDetailPage() {
                     <span className="text-navy-300 text-xs ml-1">/ gratis med vattenstämpel</span>
                   </div>
                 </div>
+                {t.bilingual && (
+                  <div className="mt-3 flex items-start gap-2 text-xs text-navy-500">
+                    <span aria-hidden="true">🌍</span>
+                    <span>
+                      Finns även som tvåspråkig PDF (svenska + engelska) –{' '}
+                      <span className="font-semibold text-navy-600">149 kr</span>
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Paketbanner – diskret tips om paketpris */}
