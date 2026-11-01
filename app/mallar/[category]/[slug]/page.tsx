@@ -1,9 +1,34 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, type ReactNode } from 'react'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 import { templates, categories, getTemplatesByCategory } from '@/data/templates'
+
+// FAQ-svar i mall-JSON får innehålla länkar som [text](https://…). De visas som
+// klickbara länkar i FAQ-listan och som "text (url)" i FAQPage-schemat.
+const FAQ_LINK_RE = /\[([^\]]+)\]\((https:\/\/[^)\s]+)\)/g
+
+function faqPlainText(text: string): string {
+  return text.replace(FAQ_LINK_RE, '$1 ($2)')
+}
+
+function renderFaqAnswer(text: string) {
+  const parts: ReactNode[] = []
+  let last = 0
+  for (const m of text.matchAll(FAQ_LINK_RE)) {
+    const idx = m.index ?? 0
+    if (idx > last) parts.push(text.slice(last, idx))
+    parts.push(
+      <a key={idx} href={m[2]} target="_blank" rel="noopener noreferrer" className="text-gold-600 underline hover:text-gold-700">
+        {m[1]}
+      </a>,
+    )
+    last = idx + m[0].length
+  }
+  if (last < text.length) parts.push(text.slice(last))
+  return parts
+}
 
 interface SeoContent {
   slug: string
@@ -75,7 +100,7 @@ export default function TemplateDetailPage() {
     mainEntity: allFaqs.map(f => ({
       '@type': 'Question',
       name: ('question' in f ? f.question : f.q) as string,
-      acceptedAnswer: { '@type': 'Answer', text: ('answer' in f ? f.answer : f.a) as string },
+      acceptedAnswer: { '@type': 'Answer', text: faqPlainText(('answer' in f ? f.answer : f.a) as string) },
     })),
   } : null
 
@@ -253,7 +278,7 @@ export default function TemplateDetailPage() {
                       <span className="font-medium text-navy-600 pr-4 text-sm group-hover:text-gold-600 transition-colors">{q}</span>
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={`text-navy-300 shrink-0 transition-transform ${faqOpen === i ? 'rotate-180' : ''}`}><path d="M6 9l6 6 6-6"/></svg>
                     </button>
-                    {faqOpen === i && <div className="px-5 pb-5 text-sm text-navy-400 leading-relaxed -mt-2">{a}</div>}
+                    {faqOpen === i && <div className="px-5 pb-5 text-sm text-navy-400 leading-relaxed -mt-2">{renderFaqAnswer(a)}</div>}
                   </div>
                 )
               })}
