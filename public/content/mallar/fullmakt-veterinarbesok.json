@@ -23,7 +23,7 @@
     { "id": "giltig_till", "label": "Giltig till", "type": "date", "required": true, "group": "detaljer" }
   ],
   "faq": [
-    { "q": "Kan veterinären acceptera fullmakten?", "a": "De flesta veterinärkliniker accepterar fullmakt för akut vård. Kontakta kliniken i förväg för deras procedur." },
+    { "q": "Godtar veterinären fullmakten?", "a": "Det avgör kliniken. Kontakta kliniken i förväg för att höra vad den behöver." },
     { "q": "Vad kostar ett veterinärbesök?", "a": "Det varierar mycket beroende på undersökning och behandling. En undersökning kan kosta 300-800 kr." },
     { "q": "Vem betalar för veterinärvården?", "a": "Det beror på vad du är överens om med fullmaktstagaren. Ofta betalar djurägarens kreditkort eller försäkring." },
     { "q": "Behöver veterinären denna fullmakt?", "a": "För akut vård kan många veterinärer göra det utan fullmakt. Men fullmakten är bra för att godkänna dyra ingrepp." },

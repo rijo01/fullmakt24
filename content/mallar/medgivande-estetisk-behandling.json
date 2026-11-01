@@ -17,8 +17,8 @@
     "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
     "faq": [
       {
-        "question": "Accepterar svensk vård ombud?",
-        "answer": "Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter enligt patientlagen (2014:821)."
+        "question": "Godtar vården ett ombud?",
+        "answer": "Det avgör vårdgivaren. I offentligt driven vård gäller som huvudregel sekretess för uppgifter om patientens hälsotillstånd och andra personliga förhållanden (25 kap. 1 § offentlighets- och sekretesslagen (2009:400)), och patienten kan helt eller delvis häva sekretessen genom samtycke (12 kap. 2 § samma lag). Det är vårdgivaren som avgör vilka uppgifter som kan lämnas ut, så kontrollera med vården i förväg."
       },
       {
         "question": "Kan ombudet fatta medicinska beslut?",

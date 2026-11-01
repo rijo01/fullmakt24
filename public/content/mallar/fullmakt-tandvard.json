@@ -23,7 +23,7 @@
   ],
   "faq": [
     { "q": "Vem betalar tandvårdskostnaderna?", "a": "Det beror på vad du är överens om. Ofta betalar patienten själv, men fullmaktstagaren kan vara auktoriserad att godkänna kostnaderna." },
-    { "q": "Kan tandläkaren acceptera denna fullmakt?", "a": "De flesta tandläkare accepterar fullmakter. Kontakta kliniken för deras procedur." },
+    { "q": "Godtar tandläkaren den här fullmakten?", "a": "Det avgör kliniken. Kontakta kliniken i förväg för att höra vad den behöver." },
     { "q": "Vilka tandvårdsbehandlingar täcks av försäkring?", "a": "I Sverige täcks mycket tandvård av Tandvårdsstödet för vuxna. Barn får fri tandvård." },
     { "q": "Behöver jag sätta en kostnadsgräns?", "a": "Det är smart att sätta en gräns för större ingrepp så fullmaktstagaren inte godkänner alltför dyra behandlingar." },
     { "q": "Kan fullmakten dras tillbaka?", "a": "Ja, informera tandläkaren omedelbar och fullmakten är återkallad." }

@@ -205,7 +205,7 @@ function generateTemplates(): Template[] {
         { q: 'Är detta dokument juridiskt bindande?', a: 'Ja, dokumentet uppfyller kraven för en giltig fullmakt enligt svensk rätt. Det rekommenderas att bägge parter undertecknar i närvaro av vittnen.' },
         { q: 'Behöver bägge vårdnadshavare skriva under?', a: 'Vid gemensam vårdnad krävs som regel bägge vårdnadshavares medgivande.' },
         { q: 'Hur länge gäller fullmakten?', a: 'Fullmakten gäller under den period du anger i dokumentet. Den kan återkallas när som helst.' },
-        { q: 'Accepteras denna av flygbolag?', a: 'Ja, de flesta flygbolag och gränskontroller accepterar denna typ av fullmakt. Vi rekommenderar att ta med en kopia.' },
+        { q: 'Godtar flygbolag den här handlingen?', a: 'Det avgör varje flygbolag och gränskontroll. Kontrollera med flygbolaget före resan och ta med en kopia.' },
         { q: 'Kan jag använda fullmakten utomlands?', a: 'Ja, men vi rekommenderar att ha den på både svenska och engelska vid utlandsresor.' },
       ],
       relatedIds: [2, 3, 9, 11, 14],
@@ -286,7 +286,7 @@ function generateTemplates(): Template[] {
         { id: 'syfte', label: 'Specifikt uppdrag', type: 'textarea', placeholder: 'Beskriv uppdraget...', required: true, group: 'detaljer' },
       ],
       faq: [
-        { q: 'Accepteras denna av sjukvården?', a: 'Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter.' },
+        { q: 'Godtar vården den här fullmakten?', a: 'Det avgör vårdgivaren. I offentligt driven vård gäller som huvudregel sekretess för uppgifter om patientens hälsotillstånd och andra personliga förhållanden (25 kap. 1 § offentlighets- och sekretesslagen (2009:400)), och patienten kan helt eller delvis häva sekretessen genom samtycke (12 kap. 2 § samma lag). Det är vårdgivaren som avgör vilka uppgifter som kan lämnas ut, så kontrollera med vården i förväg.' },
         { q: 'Kan fullmaktshavaren ta medicinska beslut?', a: 'Fullmakten ger rätt att inhämta information och företräda i kontakter, men medicinska beslut kräver specifikt medgivande.' },
         { q: 'Behöver den vara bevittnad?', a: 'Rekommenderas men krävs inte för grundläggande vårdkontakter.' },
         { q: 'Gäller den hos alla vårdgivare?', a: 'Ja, den gäller generellt men kan specificeras till viss vårdgivare.' },
@@ -454,7 +454,7 @@ function generateTemplates(): Template[] {
         { id: 'syfte', label: 'Specifikt uppdrag', type: 'textarea', placeholder: 'Beskriv...', required: true, group: 'detaljer' },
       ],
       faq: [
-        { q: 'Accepteras fullmakten av veterinärer?', a: 'Ja, de flesta veterinärkliniker accepterar en korrekt utformad fullmakt.' },
+        { q: 'Godtar veterinären fullmakten?', a: 'Det avgör kliniken. Kontakta kliniken i förväg för att höra vad den behöver.' },
         { q: 'Behöver djurets registrering anges?', a: 'Det rekommenderas att ange chipnummer om djuret är chippmärkt.' },
         { q: 'Kan jag ge fullmakt för nödvändiga behandlingar?', a: 'Ja, du kan specificera vilka typer av behandlingar fullmakten omfattar.' },
         { q: 'Gäller fullmakten hos alla veterinärer?', a: 'Ja, fullmakten är generell men kan specificeras till viss klinik.' },
@@ -779,7 +779,7 @@ function generateTemplates(): Template[] {
     ],
     faq: [
       { q: 'Kan man ge fullmakt att ansöka om andrahandsuthyrning?', a: 'Ja. Ombudet kan ansöka och kommunicera med hyresvärden. Vissa hyresvärdar kräver egna blanketter – kontrollera i förväg.' },
-      { q: 'Godkänner alla hyresvärdar externa fullmakter?', a: 'De flesta godkänner det. Större fastighetsbolag kan ha egna krav. Kontakta alltid hyresvärden först.' },
+      { q: 'Godtar hyresvärden en fullmakt?', a: 'Det avgör hyresvärden, och vissa har egna krav. Kontakta alltid hyresvärden först.' },
       { q: 'Kan ombudet skriva under ett hyreskontrakt?', a: 'Ja, om fullmakten specificerar detta. Ange att ombudet får underteckna hyresrelaterade handlingar.' },
       { q: 'Måste fullmakten bevittnas?', a: 'Rekommenderas men är inte lagkrav. Några hyresvärdar kan kräva det – fråga i förväg.' },
       { q: 'Vad händer om hyresvärden nekar trots fullmakt?', a: 'Fullmakten ger representationsrätt, inte rätt att få ansökan bifören. Vid felaktigt avslag: vänd dig till Hyresnämnden.' },
@@ -807,7 +807,7 @@ function generateTemplates(): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['1 månad', '3 månader', '6 månader', '1 år', 'Tillsvidare'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: 'Accepterar vårdcentraler sjukvårdsfullmakter?', a: 'Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter. Visa fullmakten vid varje besök.' },
+      { q: 'Godtar vårdcentralen en sjukvårdsfullmakt?', a: 'Det avgör vårdgivaren. I offentligt driven vård gäller som huvudregel sekretess för uppgifter om patientens hälsotillstånd och andra personliga förhållanden (25 kap. 1 § offentlighets- och sekretesslagen (2009:400)), och patienten kan helt eller delvis häva sekretessen genom samtycke (12 kap. 2 § samma lag). Det är vårdgivaren som avgör vilka uppgifter som kan lämnas ut, så kontrollera med vården i förväg. Ta med fullmakten vid varje besök.' },
       { q: 'Kan ombudet ta del av min journal?', a: 'Om det anges i fullmakten: ja, för de delar du specificerat.' },
       { q: 'Vad skiljer sjukvårdsfullmakt från framtidsfullmakt?', a: 'Sjukvårdsfullmakt gäller när du är beslutskompetent. Framtidsfullmakt aktiveras när du INTE längre kan fatta egna beslut.' },
       { q: 'Kan ombudet fatta medicinska beslut?', a: 'Ombudet kan kommunicera och informeras. Medicinska beslut kräver din samtycke så länge du är beslutskompetent.' },
@@ -823,7 +823,7 @@ function generateTemplates(): Template[] {
     name: 'Medgivande barn ensam flyresa',
     category: 'Föräldrar & Barn', categorySlug: 'foraldrar-barn',
     description: 'Medgivande för minderarigt barn att flyga ensamt. Specificerar flygbolag, ruttinformation och nödkontakt.',
-    longDescription: 'De flesta flygbolag kräver vårdnadshavares skriftliga medgivande när barn under 15–18 år flyger ensamt. Denna mall uppfyller kraven från SAS, Norwegian och Ryanair.',
+    longDescription: 'Vårdnadshavarens skriftliga medgivande när ett barn reser ensamt. Varje flygbolag har egna regler och ofta en egen blankett för barn som reser ensamma, så kontrollera med flygbolaget före bokning.',
     badge: 'popular', usageCount: 8340,
     fields: [
       { id: 'barn_namn', label: 'Barnets fullständiga namn', type: 'text', placeholder: 'Maja Svensson', required: true, group: 'givare' },
@@ -867,7 +867,7 @@ function generateTemplates(): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['6 månader', '1 år', '2 år', 'Tillsvidare'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: 'Accepterar Pensionsmyndigheten externa fullmakter?', a: 'Ja, Pensionsmyndigheten accepterar fullmakter. De kan ha egna blanketter som komplement – kontakta dem i förväg för att få veta vad de kräver.' },
+      { q: 'Godtar Pensionsmyndigheten en fullmakt?', a: 'Det avgör Pensionsmyndigheten, som kan ha egna blanketter. Kontakta dem i förväg för att få veta vad de kräver.' },
       { q: 'Kan ombudet ändra mina pensionsuttag?', a: 'Bara om det anges i fullmakten. Specificera tydligt vilka befögenheter ombudet har – informationsätkomst eller även rätt att göra ändringar.' },
       { q: 'Kan jag ge fullmakt för tjänstepension?', a: 'Ja, varje tjänstepensionsleverantör (AMF, SPP, Alecta etc.) hanterar fullmakter. Kontakta din leverantör för deras specifika krav.' },
       { q: 'Måste fullmakten bevittnas för pensionsärenden?', a: 'Rekommenderas men krävs inte alltid. Pensionsmyndigheten kan kräva legalisering vid större ändringar. Fråga myndigheten i förväg.' },
@@ -2469,7 +2469,7 @@ function generateTemplates(): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['1 månad', '3 månader', '6 månader', '1 år', 'Tillsvidare'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: "Accepterar svensk vård ombud?", a: "Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter enligt patientlagen (2014:821)." },
+      { q: "Godtar vården ett ombud?", a: "Det avgör vårdgivaren. I offentligt driven vård gäller som huvudregel sekretess för uppgifter om patientens hälsotillstånd och andra personliga förhållanden (25 kap. 1 § offentlighets- och sekretesslagen (2009:400)), och patienten kan helt eller delvis häva sekretessen genom samtycke (12 kap. 2 § samma lag). Det är vårdgivaren som avgör vilka uppgifter som kan lämnas ut, så kontrollera med vården i förväg." },
       { q: "Kan ombudet fatta medicinska beslut?", a: "Endast om patienten saknar beslutsförmåga och fullmakten uttryckligen ger denna rätt. Annars krävs patientens samtycke." },
       { q: "Får ombudet ta del av journalen?", a: "Ja, om det anges i fullmakten. Vårdgivaren bedömer i varje enskilt fall enligt patientdatalagen (2008:355)." },
       { q: "Behöver fullmakten bevittnas?", a: "Rekommenderas starkt vid känsliga uppgifter eller större ingrepp. Bevittning ger fullmakten extra juridisk tyngd." },
@@ -2503,7 +2503,7 @@ function generateTemplates(): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['1 månad', '3 månader', '6 månader', '1 år', 'Tillsvidare'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: "Accepterar svensk vård ombud?", a: "Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter enligt patientlagen (2014:821)." },
+      { q: "Godtar vården ett ombud?", a: "Det avgör vårdgivaren. I offentligt driven vård gäller som huvudregel sekretess för uppgifter om patientens hälsotillstånd och andra personliga förhållanden (25 kap. 1 § offentlighets- och sekretesslagen (2009:400)), och patienten kan helt eller delvis häva sekretessen genom samtycke (12 kap. 2 § samma lag). Det är vårdgivaren som avgör vilka uppgifter som kan lämnas ut, så kontrollera med vården i förväg." },
       { q: "Kan ombudet fatta medicinska beslut?", a: "Endast om patienten saknar beslutsförmåga och fullmakten uttryckligen ger denna rätt. Annars krävs patientens samtycke." },
       { q: "Får ombudet ta del av journalen?", a: "Ja, om det anges i fullmakten. Vårdgivaren bedömer i varje enskilt fall enligt patientdatalagen (2008:355)." },
       { q: "Behöver fullmakten bevittnas?", a: "Rekommenderas starkt vid känsliga uppgifter eller större ingrepp. Bevittning ger fullmakten extra juridisk tyngd." },
@@ -2607,7 +2607,7 @@ function generateTemplates(): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['1 månad', '3 månader', '6 månader', '1 år', 'Tillsvidare'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: "Accepterar svensk vård ombud?", a: "Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter enligt patientlagen (2014:821)." },
+      { q: "Godtar vården ett ombud?", a: "Det avgör vårdgivaren. I offentligt driven vård gäller som huvudregel sekretess för uppgifter om patientens hälsotillstånd och andra personliga förhållanden (25 kap. 1 § offentlighets- och sekretesslagen (2009:400)), och patienten kan helt eller delvis häva sekretessen genom samtycke (12 kap. 2 § samma lag). Det är vårdgivaren som avgör vilka uppgifter som kan lämnas ut, så kontrollera med vården i förväg." },
       { q: "Kan ombudet fatta medicinska beslut?", a: "Endast om patienten saknar beslutsförmåga och fullmakten uttryckligen ger denna rätt. Annars krävs patientens samtycke." },
       { q: "Får ombudet ta del av journalen?", a: "Ja, om det anges i fullmakten. Vårdgivaren bedömer i varje enskilt fall enligt patientdatalagen (2008:355)." },
       { q: "Behöver fullmakten bevittnas?", a: "Rekommenderas starkt vid känsliga uppgifter eller större ingrepp. Bevittning ger fullmakten extra juridisk tyngd." },
@@ -2641,7 +2641,7 @@ function generateTemplates(): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['1 månad', '3 månader', '6 månader', '1 år', 'Tillsvidare'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: "Accepterar svensk vård ombud?", a: "Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter enligt patientlagen (2014:821)." },
+      { q: "Godtar vården ett ombud?", a: "Det avgör vårdgivaren. I offentligt driven vård gäller som huvudregel sekretess för uppgifter om patientens hälsotillstånd och andra personliga förhållanden (25 kap. 1 § offentlighets- och sekretesslagen (2009:400)), och patienten kan helt eller delvis häva sekretessen genom samtycke (12 kap. 2 § samma lag). Det är vårdgivaren som avgör vilka uppgifter som kan lämnas ut, så kontrollera med vården i förväg." },
       { q: "Kan ombudet fatta medicinska beslut?", a: "Endast om patienten saknar beslutsförmåga och fullmakten uttryckligen ger denna rätt. Annars krävs patientens samtycke." },
       { q: "Får ombudet ta del av journalen?", a: "Ja, om det anges i fullmakten. Vårdgivaren bedömer i varje enskilt fall enligt patientdatalagen (2008:355)." },
       { q: "Behöver fullmakten bevittnas?", a: "Rekommenderas starkt vid känsliga uppgifter eller större ingrepp. Bevittning ger fullmakten extra juridisk tyngd." },
@@ -2745,7 +2745,7 @@ function generateTemplates(): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['1 månad', '3 månader', '6 månader', '1 år', 'Tillsvidare'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: "Accepterar svensk vård ombud?", a: "Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter enligt patientlagen (2014:821)." },
+      { q: "Godtar vården ett ombud?", a: "Det avgör vårdgivaren. I offentligt driven vård gäller som huvudregel sekretess för uppgifter om patientens hälsotillstånd och andra personliga förhållanden (25 kap. 1 § offentlighets- och sekretesslagen (2009:400)), och patienten kan helt eller delvis häva sekretessen genom samtycke (12 kap. 2 § samma lag). Det är vårdgivaren som avgör vilka uppgifter som kan lämnas ut, så kontrollera med vården i förväg." },
       { q: "Kan ombudet fatta medicinska beslut?", a: "Endast om patienten saknar beslutsförmåga och fullmakten uttryckligen ger denna rätt. Annars krävs patientens samtycke." },
       { q: "Får ombudet ta del av journalen?", a: "Ja, om det anges i fullmakten. Vårdgivaren bedömer i varje enskilt fall enligt patientdatalagen (2008:355)." },
       { q: "Behöver fullmakten bevittnas?", a: "Rekommenderas starkt vid känsliga uppgifter eller större ingrepp. Bevittning ger fullmakten extra juridisk tyngd." },
@@ -2779,7 +2779,7 @@ function generateTemplates(): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['1 månad', '3 månader', '6 månader', '1 år', 'Tillsvidare'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: "Accepterar svensk vård ombud?", a: "Ja, svenska vårdgivare är skyldiga att respektera giltiga fullmakter enligt patientlagen (2014:821)." },
+      { q: "Godtar vården ett ombud?", a: "Det avgör vårdgivaren. I offentligt driven vård gäller som huvudregel sekretess för uppgifter om patientens hälsotillstånd och andra personliga förhållanden (25 kap. 1 § offentlighets- och sekretesslagen (2009:400)), och patienten kan helt eller delvis häva sekretessen genom samtycke (12 kap. 2 § samma lag). Det är vårdgivaren som avgör vilka uppgifter som kan lämnas ut, så kontrollera med vården i förväg." },
       { q: "Kan ombudet fatta medicinska beslut?", a: "Endast om patienten saknar beslutsförmåga och fullmakten uttryckligen ger denna rätt. Annars krävs patientens samtycke." },
       { q: "Får ombudet ta del av journalen?", a: "Ja, om det anges i fullmakten. Vårdgivaren bedömer i varje enskilt fall enligt patientdatalagen (2008:355)." },
       { q: "Behöver fullmakten bevittnas?", a: "Rekommenderas starkt vid känsliga uppgifter eller större ingrepp. Bevittning ger fullmakten extra juridisk tyngd." },
@@ -4789,7 +4789,7 @@ export function searchTemplates(query: string): Template[] {
       { q: 'Vad innehåller ett arbetsgivarintyg?', a: 'Arbetsgivarintyget innehåller uppgifter om anställningstid, tjänstgöringsgrad, löneinformation och anställningsform. Det krävs bland annat av a-kassan och banker vid bolåneansökan.' },
       { q: 'Måste arbetsgivaren godkänna fullmakten?', a: 'Arbetsgivaren är skyldig att utfärda arbetsgivarintyg på begäran. Fullmakten visar att ombudet har rätt att agera för din räkning. Kontakta HR-avdelningen i förväg för att kontrollera eventuella rutiner.' },
       { q: 'Gäller fullmakten även för lönespecifikationer?', a: 'Ja, om det anges i fullmakten. Lönespecifikationer innehåller personuppgifter och skyddas av GDPR. Specificera tydligt vilka handlingar och vilken tidsperiod ombudet har rätt att ta del av.' },
-      { q: 'Kan en bank använda fullmakten vid bolåneansökan?', a: 'Ja. Banker accepterar fullmakter för att hämta löneinformation och arbetsgivarintyg vid kreditprövning. Kontrollera med din bank vilken form av dokumentation de accepterar – en del kräver stämplad kopia.' },
+      { q: 'Kan en bank använda fullmakten vid bolåneansökan?', a: 'Det avgör banken. Kontrollera med din bank vilken form av dokumentation den godtar – en del kräver stämplad kopia.' },
     ],
     relatedIds: [126, 136],
     legalInfo: 'Lagen (1982:80) om anställningsskydd (LAS) och GDPR (EU 2016/679) reglerar rätten till arbetsgivarintyg och hantering av personuppgifter.',
@@ -4816,7 +4816,7 @@ export function searchTemplates(query: string): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['3 månader', '6 månader', '1 år', 'Tillsvidare'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: 'Kan ett ombud anmäla en försäkringsskada åt mig?', a: 'Ja. Med en giltig fullmakt kan ombudet kontakta försäkringsbolaget, fylla i skadeanmälan och kommunicera med skadehandläggaren. De flesta försäkringsbolag accepterar fullmakter om de är korrekt utformade.' },
+      { q: 'Kan ett ombud anmäla en försäkringsskada åt mig?', a: 'Ja. Med en giltig fullmakt kan ombudet kontakta försäkringsbolaget, fylla i skadeanmälan och kommunicera med skadehandläggaren. Försäkringsbolaget avgör självt vad det godtar, så kontrollera med bolaget i förväg.' },
       { q: 'Kan ombudet ta emot skadeersättning?', a: 'Ja, om det anges tydligt i fullmakten. Observera att försäkringsbolag ofta kräver att ersättning betalas ut till den försäkrades bankkonto. Ange detta i fullmakten och kontrollera med försäkringsbolaget i förväg.' },
       { q: 'Vad gäller för bilförsäkring och skadeanmälan?', a: 'Försäkringsavtalslagen 7 kap. reglerar rätten att företrädas av ombud. Ombudet kan anmäla vagnskada, stöld och trafikskada. Vid tredjepartsskada kan polisrapport krävas.' },
       { q: 'Gäller fullmakten för hemförsäkring och inbrott?', a: 'Ja. Ombudet kan anmäla stöld, vattenskada och brandskada, kommunicera med värderare och följa upp utbetalningar. Försäkringsbolagets egna rutiner kan kräva kompletterande dokumentation.' },
