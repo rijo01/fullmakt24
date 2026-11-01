@@ -49,6 +49,74 @@ interface PdfData {
   bilingual?: boolean
   en?: PdfTranslation
   watermark?: boolean
+  /**
+   * Framtidsfullmakt enligt lag (2017:310). När den är satt renderas en egen
+   * layout med lagstadgade formuleringar och obligatoriskt vittnesavsnitt –
+   * fälten ovan (givare/havare/detaljer) används då inte.
+   */
+  framtidsfullmakt?: FramtidsfullmaktData
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Framtidsfullmakt (lag 2017:310). Formuleringarna nedan följer lagtexten:
+   1 § (när fullmakten gäller), 2 § (vad den får omfatta), 4 § och ärvdabalken
+   10 kap. 2 § första stycket och 4 § första stycket (vittnen), 5 § (innehåll),
+   6–8 §§ (ändring och återkallelse, via avtalslagen 16 §), 9–10 §§
+   (ikraftträdande), 18 § (gåvor), 19 § (arvode), 23 § (granskare).
+   ────────────────────────────────────────────────────────────────────────── */
+
+export interface FramtidsfullmaktPerson {
+  namn: string
+  personnummer: string
+  adress?: string
+  relation?: string
+}
+
+export interface FramtidsfullmaktDokument {
+  givare: FramtidsfullmaktPerson
+  havare: FramtidsfullmaktPerson
+}
+
+export interface FramtidsfullmaktData {
+  /** Ett dokument per fullmaktsgivare. Ömsesidig fullmakt för makar = två dokument. */
+  dokument: FramtidsfullmaktDokument[]
+  ersattare?: FramtidsfullmaktPerson
+  /** Vilka angelägenheter fullmakten omfattar (5 § 3). Obligatoriskt. */
+  angelagenheter: string
+  fastEgendom?: string
+  gavor?: string
+  /** 'skäligt' = rätt till skäligt arvode, annars inget arvode (19 §). */
+  arvode?: 'skäligt' | 'inget'
+  granskare?: FramtidsfullmaktPerson
+  granskareFarAterkalla?: boolean
+  domstolsprovning?: boolean
+  ovrigaVillkor?: string
+}
+
+/** Kastas när obligatoriska uppgifter saknas. PDF:en skapas då inte alls. */
+export class PdfValidationError extends Error {
+  missing: string[]
+  constructor(missing: string[]) {
+    super(`Obligatoriska uppgifter saknas: ${missing.join(', ')}`)
+    this.name = 'PdfValidationError'
+    this.missing = missing
+  }
+}
+
+/** Returnerar de obligatoriska uppgifter som saknas (tom lista = OK). */
+export function validateFramtidsfullmakt(ff: FramtidsfullmaktData): string[] {
+  const missing: string[] = []
+  const blank = (v?: string) => !v || !v.trim()
+  if (ff.dokument.length === 0) missing.push('fullmaktsgivare')
+  ff.dokument.forEach((d, i) => {
+    const n = ff.dokument.length > 1 ? ` (dokument ${i + 1})` : ''
+    if (blank(d.givare.namn)) missing.push(`fullmaktsgivarens namn${n}`)
+    if (blank(d.givare.personnummer)) missing.push(`fullmaktsgivarens personnummer${n}`)
+    if (blank(d.havare.namn)) missing.push(`fullmaktshavarens namn${n}`)
+    if (blank(d.havare.personnummer)) missing.push(`fullmaktshavarens personnummer${n}`)
+  })
+  if (blank(ff.angelagenheter)) missing.push('angelägenheter som fullmakten omfattar')
+  return missing
 }
 
 /* ──────────────────────────────────────────────────────────────────────────
@@ -218,6 +286,16 @@ export function generatePdf(data: PdfData): jsPDF {
 
   // Vilket språk varje sida är skriven på – styr sidfoten längst ner.
   const pageLangs: PdfLang[] = []
+
+  if (data.framtidsfullmakt) {
+    const missing = validateFramtidsfullmakt(data.framtidsfullmakt)
+    if (missing.length > 0) throw new PdfValidationError(missing)
+    renderFramtidsfullmakt(doc, data.framtidsfullmakt, pageLangs)
+    drawFooters(doc, pageLangs)
+    if (data.watermark) drawWatermarks(doc, pageLangs)
+    doc.setPage(1)
+    return doc
+  }
 
   renderVersion(doc, data, 'sv', pageLangs)
 
@@ -494,6 +572,259 @@ function renderVersion(doc: jsPDF, data: PdfData, lang: PdfLang, pageLangs: PdfL
   for (let p = firstPage; p <= doc.getNumberOfPages(); p++) {
     pageLangs[p - 1] = lang
   }
+}
+
+/* ─── FRAMTIDSFULLMAKT ─────────────────────────────────────────────────── */
+
+/** Lägsta y-position för innehåll; sidfoten ligger på 280–285. */
+const FF_BOTTOM = 268
+
+const FF_TEXT = {
+  title: 'FRAMTIDSFULLMAKT',
+  subtitle: 'enligt lagen (2017:310) om framtidsfullmakter',
+  mutual: (i: number, total: number) => `Ömsesidig framtidsfullmakt – dokument ${i} av ${total}`,
+  grant: (g: FramtidsfullmaktPerson, h: FramtidsfullmaktPerson) =>
+    `Jag, ${g.namn} (${g.personnummer}), ger härmed ${h.namn} (${h.personnummer}) framtidsfullmakt enligt lagen (2017:310) om framtidsfullmakter att företräda mig i de angelägenheter som anges nedan.`,
+  substitute: (h: FramtidsfullmaktPerson, e: FramtidsfullmaktPerson) =>
+    `Om ${h.namn} avlider eller av annat skäl inte kan eller vill fullgöra uppdraget, ska ${e.namn}${e.personnummer ? ` (${e.personnummer})` : ''} vara fullmaktshavare i dennes ställe.`,
+  // 1 § – lagens ordalydelse.
+  condition:
+    'Framtidsfullmakten gäller för det fall jag på grund av sjukdom, psykisk störning, försvagat hälsotillstånd eller något liknande förhållande varaktigt och i huvudsak inte längre har förmåga att ha hand om de angelägenheter som fullmakten avser.',
+  // 9 § andra stycket.
+  assessHolder:
+    'Det är fullmaktshavaren som bedömer om framtidsfullmakten har trätt i kraft. Fullmaktshavaren kan begära att tingsrätten prövar frågan.',
+  assessCourt: 'Frågan om framtidsfullmakten har trätt i kraft ska prövas av tingsrätten.',
+  // 2 § andra stycket.
+  scopeLimit:
+    'Fullmakten omfattar inte åtgärder som avses i 2 kap. 1 § första stycket hälso- och sjukvårdslagen (2017:30) eller 1 § tandvårdslagen (1985:125), och inte frågor av utpräglat personlig karaktär (2 § lagen om framtidsfullmakter).',
+  realEstate: 'Fast egendom och bostadsrätter:',
+  // 18 §.
+  giftsDefault:
+    'Fullmakten reglerar inte gåvor. Fullmaktshavaren får därmed, till andra än sig själv, lämna personliga presenter vars värde inte står i missförhållande till mina ekonomiska villkor (18 §).',
+  // 19 §.
+  feeNone: 'Fullmaktshavaren har inte rätt till arvode (19 §).',
+  feeReasonable:
+    'Fullmaktshavaren har rätt till ett med hänsyn till uppdragets art och omfattning skäligt arvode (19 §).',
+  // 23 § och 8 § andra stycket.
+  reviewer: (r: FramtidsfullmaktPerson) =>
+    `Jag utser ${r.namn}${r.personnummer ? ` (${r.personnummer})` : ''} att granska fullmaktshavarens verksamhet. Fullmaktshavaren ska på granskarens begäran lämna redovisning för sitt uppdrag (23 §).`,
+  reviewerRevoke: 'Granskaren har rätt att återkalla framtidsfullmakten (8 § andra stycket).',
+  // 6, 7, 8 och 10 §§ samt avtalslagen 16 §.
+  legal:
+    'Framtidsfullmakten är upprättad enligt lagen (2017:310) om framtidsfullmakter. Den kan inte göras oåterkallelig (6 §). För återkallelse gäller lagen (1915:218) om avtal och andra rättshandlingar på förmögenhetsrättens område (8 §): en skriftlig fullmakt som lämnats till fullmaktshavaren återkallas genom att fullmaktsgivaren tar tillbaka eller förstör handlingen (avtalslagen 16 §). Tillägg och andra ändringar kräver samma form som när fullmakten upprättades, utom när ändringen enbart består i en begränsning av fullmakten (7 §). När fullmaktshavaren bedömer att fullmakten har trätt i kraft ska han eller hon snarast underrätta fullmaktsgivaren, dennes make eller sambo och närmaste släktingar samt en eventuell granskare om det och om vad fullmakten innehåller (10 §).',
+  // 4 § och ärvdabalken 10 kap. 2 § första stycket.
+  attestation: (g: FramtidsfullmaktPerson) =>
+    `Vi intygar att ${g.namn} i vår samtidiga närvaro har skrivit under denna handling eller intygat att han eller hon har skrivit under den, och att vi känner till att handlingen är en framtidsfullmakt. Fullmaktsgivaren var vid undertecknandet vid sunt och fullt förstånd och handlade av fri vilja.`,
+  // 4 § tredje stycket och ärvdabalken 10 kap. 4 § första stycket.
+  witnessRules:
+    'Får inte vara vittne: fullmaktshavaren (4 § lagen om framtidsfullmakter); den som är under 15 år eller på grund av en psykisk störning saknar insikt om betydelsen av vittnesbekräftelsen; fullmaktsgivarens make, sambo eller syskon, eller den som står i rätt upp- eller nedstigande släktskap eller svågerlag till fullmaktsgivaren (10 kap. 4 § första stycket ärvdabalken). Välj helst vittnen utan koppling till någon av parterna.',
+}
+
+function renderFramtidsfullmakt(doc: jsPDF, ff: FramtidsfullmaktData, pageLangs: PdfLang[]): void {
+  const total = ff.dokument.length
+  ff.dokument.forEach((d, i) => {
+    if (i > 0) doc.addPage()
+    renderFramtidsfullmaktDokument(doc, ff, d, i + 1, total)
+  })
+  for (let p = 1; p <= doc.getNumberOfPages(); p++) pageLangs[p - 1] = 'sv'
+}
+
+function renderFramtidsfullmaktDokument(
+  doc: jsPDF,
+  ff: FramtidsfullmaktData,
+  d: FramtidsfullmaktDokument,
+  index: number,
+  total: number,
+): void {
+  const s = STRINGS.sv
+  const T = FF_TEXT
+  let y = 0
+
+  const newPage = () => {
+    doc.addPage()
+    y = 25
+  }
+  const ensure = (needed: number) => {
+    if (y + needed > FF_BOTTOM) newPage()
+  }
+  /** Radbruten text som bryter sida rad för rad – aldrig utanför sidan. */
+  const para = (
+    text: string,
+    opts: { size?: number; style?: 'normal' | 'bold' | 'italic'; color?: [number, number, number]; gap?: number } = {},
+  ) => {
+    const size = opts.size ?? 10
+    const lineH = size * 0.5
+    const [r, g, b] = opts.color ?? [40, 45, 60]
+    doc.setFont('helvetica', opts.style ?? 'normal')
+    doc.setFontSize(size)
+    doc.setTextColor(r, g, b)
+    const lines: string[] = doc.splitTextToSize(text, CONTENT_WIDTH)
+    for (const line of lines) {
+      if (y + lineH > FF_BOTTOM) {
+        newPage()
+        doc.setFont('helvetica', opts.style ?? 'normal')
+        doc.setFontSize(size)
+        doc.setTextColor(r, g, b)
+      }
+      doc.text(line, MARGIN_LEFT, y)
+      y += lineH
+    }
+    y += opts.gap ?? 3
+  }
+  const heading = (title: string) => {
+    ensure(18) // rubrik + minst två rader text
+    y = drawSectionHeader(doc, title, MARGIN_LEFT, y) + 1
+  }
+  const personBox = (title: string, p: FramtidsfullmaktPerson) => {
+    const rows: [string, string][] = [
+      [s.labelNamn, p.namn],
+      [s.labelPnr, p.personnummer],
+    ]
+    if (p.relation?.trim()) rows.push([s.labelRelation, p.relation])
+    if (p.adress?.trim()) rows.push([s.labelAdress, p.adress])
+    const h = rows.length * 7 + 4
+    ensure(h + 10)
+    y = drawSectionHeader(doc, title, MARGIN_LEFT, y) + 2
+    doc.setFillColor(248, 249, 251)
+    doc.roundedRect(MARGIN_LEFT, y, CONTENT_WIDTH, h, 2, 2, 'F')
+    y += 6
+    for (const [label, value] of rows) y = drawField(doc, label, value, MARGIN_LEFT + 5, y, s)
+    y += 5
+  }
+  const signLine = (x: number, width: number, label: string, value?: string) => {
+    doc.setDrawColor(27, 43, 75)
+    doc.setLineWidth(0.3)
+    doc.line(x, y, x + width, y)
+    doc.setFont('helvetica', 'normal')
+    doc.setFontSize(7.5)
+    doc.setTextColor(100, 110, 125)
+    doc.text(label, x, y + 3.5)
+    if (value) {
+      doc.setFontSize(9)
+      doc.setTextColor(30, 35, 50)
+      doc.text(value, x, y - 1.5)
+    }
+  }
+
+  // ─── Sidhuvud ───
+  doc.setFillColor(27, 43, 75)
+  doc.rect(0, 0, PAGE_WIDTH, 18, 'F')
+  doc.setFont('helvetica', 'bold')
+  doc.setFontSize(11)
+  doc.setTextColor(232, 160, 32)
+  doc.text('Fullmakt24.se', MARGIN_LEFT, 11)
+
+  y = 34
+  doc.setFont('helvetica', 'bold')
+  doc.setFontSize(22)
+  doc.setTextColor(27, 43, 75)
+  doc.text(T.title, PAGE_WIDTH / 2, y, { align: 'center' })
+  y += 8
+  doc.setFont('helvetica', 'normal')
+  doc.setFontSize(11)
+  doc.setTextColor(80, 90, 110)
+  doc.text(T.subtitle, PAGE_WIDTH / 2, y, { align: 'center' })
+  if (total > 1) {
+    y += 5.5
+    doc.setFontSize(9)
+    doc.setTextColor(140, 150, 165)
+    doc.text(T.mutual(index, total), PAGE_WIDTH / 2, y, { align: 'center' })
+  }
+  y += 7
+  doc.setDrawColor(27, 43, 75)
+  doc.setLineWidth(0.5)
+  doc.line(MARGIN_LEFT, y, PAGE_WIDTH - MARGIN_RIGHT, y)
+  y += 9
+
+  // ─── Parter (5 § 2) ───
+  personBox(s.sectionGivare, d.givare)
+  personBox(s.sectionHavare, d.havare)
+  if (ff.ersattare?.namn?.trim()) personBox('ERSÄTTARE FÖR FULLMAKTSHAVAREN', ff.ersattare)
+
+  // ─── Förordnande (5 § 1) ───
+  heading('FÖRORDNANDE')
+  para(T.grant(d.givare, d.havare))
+  if (ff.ersattare?.namn?.trim()) para(T.substitute(d.havare, ff.ersattare))
+
+  // ─── När fullmakten gäller (1 och 9 §§) ───
+  heading('NÄR FULLMAKTEN GÄLLER')
+  para(T.condition)
+  para(ff.domstolsprovning ? T.assessCourt : T.assessHolder)
+
+  // ─── Angelägenheter (2 § och 5 § 3) ───
+  heading('ANGELÄGENHETER SOM FULLMAKTEN OMFATTAR')
+  para(ff.angelagenheter.trim())
+  if (ff.fastEgendom?.trim()) {
+    para(T.realEstate, { style: 'bold', size: 9, gap: 1 })
+    para(ff.fastEgendom.trim())
+  }
+  para(T.scopeLimit, { size: 8.5, style: 'italic', color: [90, 100, 115] })
+
+  // ─── Övriga villkor (5 § 4) ───
+  heading('ÖVRIGA VILLKOR')
+  para('Gåvor', { style: 'bold', size: 9, gap: 1 })
+  para(ff.gavor?.trim() || T.giftsDefault)
+  para('Arvode', { style: 'bold', size: 9, gap: 1 })
+  para(ff.arvode === 'skäligt' ? T.feeReasonable : T.feeNone)
+  if (ff.granskare?.namn?.trim()) {
+    para('Granskare', { style: 'bold', size: 9, gap: 1 })
+    para(T.reviewer(ff.granskare) + (ff.granskareFarAterkalla ? ` ${T.reviewerRevoke}` : ''))
+  }
+  if (ff.ovrigaVillkor?.trim()) {
+    para('Övrigt', { style: 'bold', size: 9, gap: 1 })
+    para(ff.ovrigaVillkor.trim())
+  }
+
+  // ─── Lagstadgade upplysningar ───
+  ensure(14)
+  doc.setDrawColor(200, 205, 215)
+  doc.setLineWidth(0.3)
+  doc.line(MARGIN_LEFT, y, PAGE_WIDTH - MARGIN_RIGHT, y)
+  y += 5
+  para(T.legal, { size: 8, style: 'italic', color: [110, 120, 135], gap: 5 })
+
+  // ─── Underskrift och bevittning hålls samman på samma sida ───
+  // Vittnena intygar fullmaktsgivarens underskrift, så båda ska stå på samma
+  // sida. Blocket flyttas i sin helhet till en ny sida om det inte får plats.
+  const half = (CONTENT_WIDTH - 15) / 2
+  const col2 = MARGIN_LEFT + half + 15
+  doc.setFontSize(10)
+  const attLines = doc.splitTextToSize(T.attestation(d.givare), CONTENT_WIDTH).length
+  doc.setFontSize(7.5)
+  const ruleLines = doc.splitTextToSize(T.witnessRules, CONTENT_WIDTH).length
+  const signBlock = 7 + 12 + 14 + 10
+  const witnessBlock = 7 + attLines * 5 + 3 + 9 + 12 + 11 + 5 * 11 + 2 + ruleLines * 3.75
+  ensure(signBlock + witnessBlock)
+
+  // ─── Fullmaktsgivarens underskrift ───
+  heading('FULLMAKTSGIVARENS UNDERSKRIFT')
+  y += 12
+  signLine(MARGIN_LEFT, half, 'Ort och datum')
+  signLine(col2, half, 'Namnteckning')
+  y += 14
+  signLine(MARGIN_LEFT, half, 'Namnförtydligande', d.givare.namn)
+  y += 10
+
+  // ─── Bevittning (4 § – obligatorisk, skrivs alltid ut) ───
+  ensure(witnessBlock)
+  heading('BEVITTNING')
+  para(T.attestation(d.givare))
+  y += 9
+  signLine(MARGIN_LEFT, CONTENT_WIDTH, 'Ort och datum för bevittningen')
+  y += 12
+  doc.setFont('helvetica', 'bold')
+  doc.setFontSize(8.5)
+  doc.setTextColor(27, 43, 75)
+  doc.text('Vittne 1', MARGIN_LEFT, y)
+  doc.text('Vittne 2', col2, y)
+  y += 11
+  for (const label of ['Namnteckning', 'Namnförtydligande', 'Personnummer', 'Yrke', 'Adress (hemvist)']) {
+    signLine(MARGIN_LEFT, half, label)
+    signLine(col2, half, label)
+    y += 11
+  }
+  y += 1
+  para(T.witnessRules, { size: 7.5, color: [90, 100, 115], gap: 0 })
 }
 
 /** Bryter till ny sida om innehållet inte får plats. Returnerar ny y-position. */

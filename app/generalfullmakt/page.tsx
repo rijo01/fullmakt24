@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import type { ReactNode } from 'react'
 import Link from 'next/link'
 
 const URL = 'https://fullmakt24.se/generalfullmakt'
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
 
 interface Section {
   heading: string
-  paragraphs?: string[]
+  paragraphs?: ReactNode[]
   list?: string[]
   listHeading?: string
   list2Heading?: string
@@ -62,6 +63,14 @@ const sections: Section[] = [
       'Vad händer då med en vanlig generalfullmakt om du blir svårt sjuk? Här ska man vara ärlig: avtalslagen ger inget klart svar. I förarbetena till lagen om framtidsfullmakter (prop. 2016/17:30) skriver regeringen rakt ut att "det är osäkert vilken giltighet en fullmakt enligt avtalslagen … har när fullmaktsgivaren inte längre har förutsättningar att upprätthålla sin roll i fullmaktsförhållandet", och att fullmaktsgivaren i praktiken saknar möjlighet att kontrollera fullmaktshavarens handlande, vilket skapar en risk för missbruk. Just den osäkerheten var ett av huvudskälen till att framtidsfullmakter infördes.',
       'Avtalslagen reglerar två närliggande situationer, men inte denna. Enligt 21 § gäller fullmakten i regel även efter fullmaktsgivarens död, om inte särskilda omständigheter medför att den ska anses förfallen. Enligt 22 § får en rättshandling som ombudet företar inte större verkan än om fullmaktsgivaren själv företagit den, om fullmaktsgivaren fått en förvaltare enligt föräldrabalken och handlingen omfattas av förvaltarens uppdrag.',
       'Slutsatsen är praktisk snarare än juridisk: banker, vårdgivare och myndigheter vill inte hamna i den osäkerheten, och slutar i regel godta fullmakten om de får veta att fullmaktsgivaren inte längre kan bestämma själv. Ska någon kunna hjälpa dig den dagen – skriv en framtidsfullmakt. Vill du ha hjälp redan nu, medan du är fullt beslutskapabel – då är generalfullmakten rätt. Många skriver båda.',
+      <>
+        Formkrav, vittnen, ikraftträdande och hur banken hanterar en framtidsfullmakt går vi igenom i
+        guiden om{' '}
+        <Link href="/framtidsfullmakt" className="text-gold-600 hover:text-gold-700 font-medium">
+          framtidsfullmakt
+        </Link>
+        .
+      </>,
       'Framtidsfullmakten har dessutom formkrav som generalfullmakten saknar. Enligt 4 § ska den vara skriftlig och undertecknas i två vittnens samtidiga närvaro. Enligt 2 § får den omfatta ekonomiska och personliga angelägenheter, men inte åtgärder enligt hälso- och sjukvårdslagen eller tandvårdslagen och inte frågor av utpräglat personlig karaktär. Och enligt 6 § kan en framtidsfullmakt inte göras oåterkallelig.',
     ],
   },
@@ -173,7 +182,7 @@ const relatedTemplates = [
   { name: 'Generalfullmakt för privatperson', href: '/mallar/ekonomi-myndigheter/generalfullmakt-privatperson-2026', note: 'Den breda mallen – fyll i och skriv under.' },
   { name: 'Begränsad fullmakt', href: '/mallar/ekonomi-myndigheter/begransad-fullmakt', note: 'När uppdraget är avgränsat i tid eller ärende.' },
   { name: 'Framtidsfullmakt 2026 – komplett mall', href: '/mallar/seniorer-omsorg/framtidsfullmakt-komplett-2026', note: 'Träder i kraft vid beslutsoförmåga.' },
-  { name: 'Ömsesidig framtidsfullmakt för makar', href: '/mallar/seniorer-omsorg/framtidsfullmakt-omsesidig-makar', note: 'Två framtidsfullmakter i ett dokumentpaket.' },
+  { name: 'Ömsesidig framtidsfullmakt för makar och sambor', href: '/mallar/seniorer-omsorg/framtidsfullmakt-omsesidig-makar', note: 'Två separata framtidsfullmakter, en för var och en av er.' },
   { name: 'Fullmakt för bankärenden', href: '/mallar/ekonomi-myndigheter/fullmakt-bank', note: 'Komplement till bankens egen blankett.' },
   { name: 'Guide: fullmakt vid bostadsförsäljning', href: '/fullmakt-salja-bostadsratt', note: 'Ska bostaden säljas krävs en särskild säljfullmakt.' },
 ]

@@ -20,11 +20,14 @@ function BetaldContent() {
   const [downloading, setDownloading] = useState(false)
   const [downloaded, setDownloaded] = useState(false)
   const [credits, setCreditsState] = useState(0)
+  // Obligatoriska uppgifter som saknas – då skapas ingen PDF alls.
+  const [missingFields, setMissingFields] = useState<string[]>([])
 
   const isPackagePurchase = !!packageParam
   const t = templates.find(tp => tp.slug === slug)
   const cat = t ? categories.find(c => c.slug === t.categorySlug) : null
   const isBilingualDownload = !!(wantsBilingual && t?.bilingual && t?.en)
+  const isFramtidsfullmakt = t?.documentKind === 'framtidsfullmakt'
 
   // Paketköp: dela ut krediter exakt en gång per Stripe-session.
   useEffect(() => {
@@ -62,8 +65,34 @@ function BetaldContent() {
     setDownloading(true)
 
     try {
-      const { downloadPdf } = await import('@/lib/pdf-generator')
+      const { downloadPdf, PdfValidationError } = await import('@/lib/pdf-generator')
       const formData = getFormData()
+
+      // Framtidsfullmakt (lag 2017:310) har en egen layout. Ömsesidig mall för
+      // makar/sambor ger två separata dokument – ett per fullmaktsgivare.
+      if (t.documentKind === 'framtidsfullmakt') {
+        const { buildFramtidsfullmaktData } = await import('@/lib/framtidsfullmakt-data')
+        try {
+          downloadPdf({
+            templateName: t.name,
+            categoryName: cat?.name || '',
+            givare: { namn: '', personnummer: '', adress: '' },
+            havare: { namn: '', personnummer: '', relation: '' },
+            detaljer: {},
+            framtidsfullmakt: buildFramtidsfullmaktData(t, formData),
+            watermark: false,
+          }, `framtidsfullmakt-${t.slug}.pdf`)
+          setMissingFields([])
+          setDownloaded(true)
+        } catch (err) {
+          if (err instanceof PdfValidationError) {
+            setMissingFields(err.missing)
+            return
+          }
+          throw err
+        }
+        return
+      }
 
       // Fält som redan skrivs ut på egen plats i PDF:en ska inte upprepas.
       const rendered = new Set([
@@ -236,6 +265,22 @@ function BetaldContent() {
         )}
         <div className="mb-8" />
 
+        {missingFields.length > 0 && (
+          <div className="bg-red-50 border border-red-200 rounded-xl p-5 text-left mb-8" role="alert">
+            <h3 className="font-semibold text-red-800 text-sm mb-2">Dokumentet kunde inte skapas</h3>
+            <p className="text-sm text-red-700 mb-2">
+              En framtidsfullmakt måste innehålla följande uppgifter, som saknas i formuläret:
+            </p>
+            <ul className="text-sm text-red-700 list-disc list-inside mb-3">
+              {missingFields.map(m => <li key={m}>{m}</li>)}
+            </ul>
+            <Link href={`/skapa/${t.slug}`} className="text-sm font-semibold text-red-800 underline">
+              Fyll i uppgifterna och ladda ner igen →
+            </Link>
+            <p className="text-xs text-red-600 mt-2">Ditt köp finns kvar – du behöver inte betala igen på den här enheten.</p>
+          </div>
+        )}
+
         {/* Download button */}
         <div className="space-y-3 max-w-sm mx-auto mb-10">
           <button
@@ -296,12 +341,21 @@ function BetaldContent() {
         {/* Tips */}
         <div className="bg-gold-50 border border-gold-200 rounded-xl p-5 text-left mb-8">
           <h3 className="font-semibold text-gold-800 text-sm mb-2">💡 Nästa steg</h3>
-          <ol className="text-sm text-gold-700 space-y-1.5 list-decimal list-inside">
-            <li>Skriv ut dokumentet eller spara PDF:en</li>
-            <li>Fullmaktsgivaren skriver under</li>
-            <li>Låt gärna två vittnen också skriva under</li>
-            <li>Ge en kopia till fullmaktshavaren</li>
-          </ol>
+          {isFramtidsfullmakt ? (
+            <ol className="text-sm text-gold-700 space-y-1.5 list-decimal list-inside">
+              <li>Skriv ut dokumentet{t.mutual ? 'en – ett per person' : ''}</li>
+              <li>Skriv under i två vittnens samtidiga närvaro – det är ett lagkrav</li>
+              <li>Vittnena får inte vara fullmaktshavaren eller nära släkt med fullmaktsgivaren (se dokumentet)</li>
+              <li>Förvara originalet säkert – banken vill se det i original</li>
+            </ol>
+          ) : (
+            <ol className="text-sm text-gold-700 space-y-1.5 list-decimal list-inside">
+              <li>Skriv ut dokumentet eller spara PDF:en</li>
+              <li>Fullmaktsgivaren skriver under</li>
+              <li>Låt gärna två vittnen också skriva under</li>
+              <li>Ge en kopia till fullmaktshavaren</li>
+            </ol>
+          )}
         </div>
 
         {/* Create another */}

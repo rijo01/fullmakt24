@@ -183,8 +183,8 @@ export default function SkapaPage() {
               {step === 1 && (
                 <div className="space-y-8">
                   <div className="card p-6">
-                    <h2 className="font-heading font-bold text-navy-500 text-lg mb-1">Fullmaktsgivare</h2>
-                    <p className="text-sm text-navy-400 mb-6">Den person som ger fullmakten.</p>
+                    <h2 className="font-heading font-bold text-navy-500 text-lg mb-1">{t.groupLabels?.givare || 'Fullmaktsgivare'}</h2>
+                    <p className="text-sm text-navy-400 mb-6">{t.groupLabels?.givareHelp || 'Den person som ger fullmakten.'}</p>
                     <div className="space-y-4">
                       {givareFields.map(f => (
                         <div key={f.id}>
@@ -192,6 +192,7 @@ export default function SkapaPage() {
                             {f.label} {f.required && <span className="text-red-400">*</span>}
                           </label>
                           <FormField field={f} value={formData[f.id] || ''} onChange={v => updateField(f.id, v)} />
+                          {f.helpText && <p className="text-xs text-navy-400 mt-1">{f.helpText}</p>}
                           {f.required && formData[f.id]?.trim() && (
                             <div className="flex items-center gap-1 mt-1">
                               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-success"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" strokeWidth="2"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -203,8 +204,8 @@ export default function SkapaPage() {
                     </div>
                   </div>
                   <div className="card p-6">
-                    <h2 className="font-heading font-bold text-navy-500 text-lg mb-1">Fullmaktshavare</h2>
-                    <p className="text-sm text-navy-400 mb-6">Den person som tar emot fullmakten.</p>
+                    <h2 className="font-heading font-bold text-navy-500 text-lg mb-1">{t.groupLabels?.havare || 'Fullmaktshavare'}</h2>
+                    <p className="text-sm text-navy-400 mb-6">{t.groupLabels?.havareHelp || 'Den person som tar emot fullmakten.'}</p>
                     <div className="space-y-4">
                       {havareFields.map(f => (
                         <div key={f.id}>
@@ -212,6 +213,7 @@ export default function SkapaPage() {
                             {f.label} {f.required && <span className="text-red-400">*</span>}
                           </label>
                           <FormField field={f} value={formData[f.id] || ''} onChange={v => updateField(f.id, v)} />
+                          {f.helpText && <p className="text-xs text-navy-400 mt-1">{f.helpText}</p>}
                           {f.required && formData[f.id]?.trim() && (
                             <div className="flex items-center gap-1 mt-1">
                               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-success"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" strokeWidth="2"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -238,10 +240,13 @@ export default function SkapaPage() {
                     <div className="space-y-4">
                       {detaljFields.map(f => (
                         <div key={f.id}>
-                          <label className="text-sm font-medium text-navy-600 mb-1.5 block">
-                            {f.label} {f.required && <span className="text-red-400">*</span>}
-                          </label>
+                          {f.type !== 'checkbox' && (
+                            <label className="text-sm font-medium text-navy-600 mb-1.5 block">
+                              {f.label} {f.required && <span className="text-red-400">*</span>}
+                            </label>
+                          )}
                           <FormField field={f} value={formData[f.id] || ''} onChange={v => updateField(f.id, v)} />
+                          {f.helpText && <p className="text-xs text-navy-400 mt-1">{f.helpText}</p>}
                         </div>
                       ))}
                     </div>
@@ -263,7 +268,7 @@ export default function SkapaPage() {
                     <h2 className="font-heading font-bold text-navy-500 text-lg mb-6">Granska ditt dokument</h2>
                     <div className="space-y-6">
                       <div>
-                        <h3 className="text-xs font-bold text-navy-400 uppercase tracking-wider mb-3">Fullmaktsgivare</h3>
+                        <h3 className="text-xs font-bold text-navy-400 uppercase tracking-wider mb-3">{t.groupLabels?.givare || 'Fullmaktsgivare'}</h3>
                         <div className="bg-navy-50 rounded-xl p-4 space-y-1">
                           {givareFields.map(f => formData[f.id] && (
                             <div key={f.id} className="flex justify-between text-sm">
@@ -274,7 +279,7 @@ export default function SkapaPage() {
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-xs font-bold text-navy-400 uppercase tracking-wider mb-3">Fullmaktshavare</h3>
+                        <h3 className="text-xs font-bold text-navy-400 uppercase tracking-wider mb-3">{t.groupLabels?.havare || 'Fullmaktshavare'}</h3>
                         <div className="bg-navy-50 rounded-xl p-4 space-y-1">
                           {havareFields.map(f => formData[f.id] && (
                             <div key={f.id} className="flex justify-between text-sm">
@@ -354,9 +359,23 @@ export default function SkapaPage() {
                     </div>
                   )}
 
+                  {t.documentKind === 'framtidsfullmakt' && (
+                    <div className="card p-6 border-2 border-gold-200">
+                      <h2 className="font-heading font-bold text-navy-500 text-lg mb-2">Så blir framtidsfullmakten giltig</h2>
+                      <ul className="text-sm text-navy-500 space-y-1.5 list-disc list-inside">
+                        <li>{t.mutual ? 'Var och en skriver under sitt eget dokument' : 'Fullmaktsgivaren skriver under'} i två vittnens samtidiga närvaro. Det är ett lagkrav (4 § lag 2017:310).</li>
+                        <li>Vittnena ska känna till att det är en framtidsfullmakt och skriva under bevittningen.</li>
+                        <li>Fullmaktshavaren får inte vara vittne, och inte heller fullmaktsgivarens make, sambo, syskon eller släktingar och svågrar i rakt upp- eller nedstigande led.</li>
+                      </ul>
+                    </div>
+                  )}
+
                   <div className="flex gap-3">
                     <button onClick={() => setStep(2)} className="btn-secondary flex-1">← Ändra</button>
-                    <button onClick={() => setStep(4)} className="btn-gold flex-1">Bekräfta & Betala →</button>
+                    <button onClick={() => setStep(4)} disabled={!requiredGivare || !requiredHavare || !requiredDetaljer}
+                      className={`flex-1 ${requiredGivare && requiredHavare && requiredDetaljer ? 'btn-gold' : 'py-3 rounded-xl font-semibold bg-navy-100 text-navy-300 cursor-not-allowed'}`}>
+                      Bekräfta & Betala →
+                    </button>
                   </div>
                 </div>
               )}
@@ -487,7 +506,7 @@ export default function SkapaPage() {
                     <span className="text-[10px] text-navy-200">PDF</span>
                   </div>
                   <div className="p-5 font-mono text-[10px] text-navy-500 leading-relaxed space-y-3 max-h-[500px] overflow-y-auto">
-                    <div className="text-center font-bold text-xs uppercase tracking-wider mb-4">FULLMAKT</div>
+                    <div className="text-center font-bold text-xs uppercase tracking-wider mb-4">{t.documentTitle || 'FULLMAKT'}</div>
                     <div className="text-center text-navy-400 mb-4">{t.name}</div>
                     <hr className="border-navy-100" />
                     {formData.givare_namn && (
