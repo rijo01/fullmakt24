@@ -6,7 +6,7 @@
   "categorySlug": "ekonomi-myndigheter",
   "description": "Fullmakt för att representera vid Arbetsförmedlingens ärenden.",
   "longDescription": "En fullmakt för Arbetsförmedlingen ger en person befogenhet att representera dig i ärenden relaterade till arbetslöshetsförsäkring, jobbsökning och arbetsmarknadsprogram.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 1098,
   "fields": [
     { "id": "givare_namn", "label": "Arbetssökarens namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "givare" },

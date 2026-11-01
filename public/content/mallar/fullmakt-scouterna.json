@@ -6,7 +6,7 @@
   "categorySlug": "forening-skola",
   "description": "Fullmakt för att representera på scoutmöte.",
   "longDescription": "En fullmakt för Scouterna ger en person befogenhet att representera dig på scoutmöten och aktiviteter.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 654,
   "fields": [
     { "id": "givare_namn", "label": "Scoutens förälder – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

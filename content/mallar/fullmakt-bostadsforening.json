@@ -2,7 +2,7 @@
   "slug": "fullmakt-bostadsforening",
   "seo": {
     "title": "Fullmakt bostadsförening – stämma 2026",
-    "metaDescription": "Fullmakt för bostadsförening: låt ett ombud rösta och företräda dig på BRF-stämman när du inte kan delta. Gratis mall enligt lagen om ekonomiska föreningar.",
+    "metaDescription": "Fullmakt för bostadsförening: låt ett ombud rösta och företräda dig på BRF-stämman när du inte kan delta. Mall enligt lagen om ekonomiska föreningar.",
     "h1": "Fullmakt för bostadsförening – mall 2026",
     "keywords": ["fullmakt bostadsförening", "fullmakt föreningsstämma", "fullmakt BRF-stämma", "ombud bostadsrättsförening", "rösta med fullmakt stämma"]
   },
@@ -20,7 +20,7 @@
       {"question": "Behöver ombudet visa fullmakten i original?", "answer": "Ja, normalt ska originalet visas upp vid inträdet till stämman så att rösträknaren kan kontrollera behörigheten."},
       {"question": "Gäller samma regler för en hyresrättsförening eller samfällighet?", "answer": "Reglerna skiljer sig åt. Den här mallen är anpassad för bostadsrättsföreningar. För en samfällighetsförening gäller andra bestämmelser – välj en mall som passar din föreningstyp."}
     ],
-    "relatedSearchTerms": ["fullmakt BRF-stämma mall", "ombud föreningsstämma", "fullmakt rösta stämma", "stämmofullmakt bostadsrätt", "fullmakt bostadsförening gratis"]
+    "relatedSearchTerms": ["fullmakt BRF-stämma mall", "ombud föreningsstämma", "fullmakt rösta stämma", "stämmofullmakt bostadsrätt", "fullmakt bostadsförening"]
   },
   "schema": {
     "faqSchema": true,

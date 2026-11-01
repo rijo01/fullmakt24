@@ -6,7 +6,7 @@
   "categorySlug": "resa-transport",
   "description": "Fullmakt för att lämna in och hämta bil på verkstad.",
   "longDescription": "En fullmakt för bilverkstad ger en person befogenhet att lämna in och hämta din bil på verkstad, samt godkänna reparationer.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 1543,
   "fields": [
     { "id": "givare_namn", "label": "Bilägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

@@ -6,7 +6,7 @@
   "categorySlug": "djur-husdjur",
   "description": "Fullmakt för att transportera djur åt någon.",
   "longDescription": "En fullmakt för djurtransport ger en person befogenhet att transportera ditt djur till veterinär eller annat ändamål.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 543,
   "fields": [
     { "id": "givare_namn", "label": "Djurägarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

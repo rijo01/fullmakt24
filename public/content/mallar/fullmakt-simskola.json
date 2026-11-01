@@ -6,7 +6,7 @@
   "categorySlug": "forening-skola",
   "description": "Fullmakt för att anmäla barn till simskola.",
   "longDescription": "En fullmakt för simskola ger en person befogenhet att anmäla barnet till simundervisning.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 765,
   "fields": [
     { "id": "givare_namn", "label": "Föräldrerns namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

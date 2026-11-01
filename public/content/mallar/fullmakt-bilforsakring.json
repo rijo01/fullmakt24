@@ -6,7 +6,7 @@
   "categorySlug": "ekonomi-myndigheter",
   "description": "Fullmakt för att hantera bilförsäkring åt annan.",
   "longDescription": "En fullmakt för bilförsäkring ger en person befogenhet att hantera din bilförsäkring. Det kan gälla att få information om försäkringen, göra ändringar, hantera skador, eller kommunicera med försäkringsbolaget. Detta är praktiskt när du är skadad, sjuk eller ej tillgänglig.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 1876,
   "fields": [
     { "id": "givare_namn", "label": "Försäkringstagarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

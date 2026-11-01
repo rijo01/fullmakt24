@@ -83,7 +83,6 @@ export function MallarBrowser() {
           <div className="bg-gold-50 rounded-xl p-4 border border-gold-200/50">
             <div className="text-sm font-semibold text-gold-700 mb-2">Prisförklaring</div>
             <div className="space-y-2 text-xs text-gold-600">
-              <div className="flex items-center gap-2"><span className="badge-gratis">Gratis</span> Grundmallar</div>
               <div className="flex items-center gap-2"><span className="badge-popular">Populär</span> Mest använda</div>
               <div className="flex items-center gap-2"><span className="badge-premium">Premium</span> Standard+</div>
             </div>
@@ -155,9 +154,11 @@ export function MallarBrowser() {
             >
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-lg">{categories.find(c => c.slug === t.categorySlug)?.icon}</span>
-                <span className={t.badge === 'popular' ? 'badge-popular' : t.badge === 'premium' ? 'badge-premium' : 'badge-gratis'}>
-                  {t.badge === 'popular' ? 'Populär' : t.badge === 'premium' ? 'Premium' : 'Gratis'}
-                </span>
+                {t.badge !== 'standard' && (
+                  <span className={t.badge === 'popular' ? 'badge-popular' : 'badge-premium'}>
+                    {t.badge === 'popular' ? 'Populär' : 'Premium'}
+                  </span>
+                )}
               </div>
               <h3 className="font-heading font-bold text-navy-600 text-sm mb-2 group-hover:text-gold-600 transition-colors line-clamp-2 flex-1">
                 {t.name}

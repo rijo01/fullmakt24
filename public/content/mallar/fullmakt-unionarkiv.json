@@ -6,7 +6,7 @@
   "categorySlug": "ekonomi-myndigheter",
   "description": "Fullmakt för att hantera fackföreningsärenden.",
   "longDescription": "En fullmakt för fackförening ger en person befogenhet att representera dig i fackföreningsärenden och medlemsbeslut.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 654,
   "fields": [
     { "id": "givare_namn", "label": "Medlemmens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

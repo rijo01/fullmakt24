@@ -6,7 +6,7 @@ export interface Template {
   categorySlug: string;
   description: string;
   longDescription: string;
-  badge: 'gratis' | 'premium' | 'popular';
+  badge: 'standard' | 'premium' | 'popular';
   usageCount: number;
   fields: TemplateField[];
   faq: { q: string; a: string }[];
@@ -158,24 +158,24 @@ function generateTemplates(): Template[] {
   const foraldrarTemplates: Partial<Template>[] = [
     { id: 1, slug: 'foraldraredgivande-resa-annan-vuxen', name: 'Föräldramedgivande – resa med annan vuxen', description: 'Medgivande för barn att resa med annan vuxen än vårdnadshavare.', badge: 'popular', usageCount: 12847 },
     { id: 2, slug: 'reseintyg-barn-internationell', name: 'Reseintyg för barn – internationell resa', description: 'Intyg som krävs vid internationella resor med barn.', badge: 'popular', usageCount: 9832 },
-    { id: 3, slug: 'resefullmakt-barn-eu', name: 'Resefullmakt för barn inom EU', description: 'Fullmakt specifikt anpassad för resor inom EU med barn.', badge: 'gratis', usageCount: 7641 },
-    { id: 4, slug: 'medgivande-skolresa', name: 'Medgivande vid skolresa', description: 'Medgivande för barn att delta i skolresa.', badge: 'gratis', usageCount: 8923 },
-    { id: 5, slug: 'medgivande-lager-kollo', name: 'Medgivande vid läger / kollo', description: 'Medgivande för barn att delta i läger eller kolloverksamhet.', badge: 'gratis', usageCount: 6754 },
-    { id: 6, slug: 'medgivande-foreningsresa', name: 'Medgivande vid föreningsresa', description: 'Medgivande för barn att resa med förening eller lag.', badge: 'gratis', usageCount: 4532 },
-    { id: 7, slug: 'medgivande-barn-bo-annan-vuxen', name: 'Medgivande för barn att bo hos annan vuxen', description: 'Tillfälligt medgivande för barn att bo hos annan vuxen.', badge: 'gratis', usageCount: 3421 },
+    { id: 3, slug: 'resefullmakt-barn-eu', name: 'Resefullmakt för barn inom EU', description: 'Fullmakt specifikt anpassad för resor inom EU med barn.', badge: 'standard', usageCount: 7641 },
+    { id: 4, slug: 'medgivande-skolresa', name: 'Medgivande vid skolresa', description: 'Medgivande för barn att delta i skolresa.', badge: 'standard', usageCount: 8923 },
+    { id: 5, slug: 'medgivande-lager-kollo', name: 'Medgivande vid läger / kollo', description: 'Medgivande för barn att delta i läger eller kolloverksamhet.', badge: 'standard', usageCount: 6754 },
+    { id: 6, slug: 'medgivande-foreningsresa', name: 'Medgivande vid föreningsresa', description: 'Medgivande för barn att resa med förening eller lag.', badge: 'standard', usageCount: 4532 },
+    { id: 7, slug: 'medgivande-barn-bo-annan-vuxen', name: 'Medgivande för barn att bo hos annan vuxen', description: 'Tillfälligt medgivande för barn att bo hos annan vuxen.', badge: 'standard', usageCount: 3421 },
     { id: 8, slug: 'medgivande-ensam-resa-minderarig', name: 'Medgivande vid ensam resa för minderårig', description: 'Medgivande för minderårig att resa ensam.', badge: 'premium', usageCount: 5678 },
     { id: 9, slug: 'fullmakt-barns-sjukvard', name: 'Fullmakt för barnets sjukvård', description: 'Fullmakt för annan vuxen att hantera barnets sjukvårdskontakter.', badge: 'popular', usageCount: 11234 },
-    { id: 10, slug: 'medgivande-akut-vard', name: 'Medgivande vid akut vård', description: 'Akutmedgivande för vård av barn när vårdnadshavare ej är tillgänglig.', badge: 'gratis', usageCount: 8765 },
+    { id: 10, slug: 'medgivande-akut-vard', name: 'Medgivande vid akut vård', description: 'Akutmedgivande för vård av barn när vårdnadshavare ej är tillgänglig.', badge: 'standard', usageCount: 8765 },
     { id: 11, slug: 'fullmakt-bonusforalder', name: 'Fullmakt till bonusförälder', description: 'Fullmakt som ger bonusförälder rätt att agera för barnets räkning.', badge: 'popular', usageCount: 9543 },
-    { id: 12, slug: 'medgivande-passansokan', name: 'Medgivande för passansökan', description: 'Medgivande från vårdnadshavare för passansökan åt barn.', badge: 'gratis', usageCount: 7654 },
+    { id: 12, slug: 'medgivande-passansokan', name: 'Medgivande för passansökan', description: 'Medgivande från vårdnadshavare för passansökan åt barn.', badge: 'standard', usageCount: 7654 },
     { id: 13, slug: 'medgivande-bankarenden-barn', name: 'Medgivande för bankärenden för barn', description: 'Fullmakt för att hantera bankärenden för minderårig.', badge: 'premium', usageCount: 4321 },
-    { id: 14, slug: 'fullmakt-slakting-resa', name: 'Fullmakt till släkting vid resa', description: 'Fullmakt till släkting för att resa med barn.', badge: 'gratis', usageCount: 5432 },
-    { id: 15, slug: 'medgivande-overnattning-utomlands', name: 'Medgivande för övernattning utomlands', description: 'Medgivande för barn att övernatta utomlands.', badge: 'gratis', usageCount: 3456 },
-    { id: 16, slug: 'fullmakt-skolarenden', name: 'Fullmakt för skolärenden', description: 'Fullmakt för annan person att hantera barnets skolärenden.', badge: 'gratis', usageCount: 6543 },
-    { id: 17, slug: 'medgivande-byte-skola', name: 'Medgivande vid byte av skola', description: 'Medgivande från bägge vårdnadshavare vid byte av skola.', badge: 'gratis', usageCount: 2345 },
-    { id: 18, slug: 'intyg-gemensam-vardnad', name: 'Intyg om gemensam vårdnad', description: 'Intyg som bekräftar gemensam vårdnad om barn.', badge: 'gratis', usageCount: 4567 },
-    { id: 19, slug: 'intyg-ensam-vardnad', name: 'Intyg om ensam vårdnad', description: 'Intyg som bekräftar ensam vårdnad om barn.', badge: 'gratis', usageCount: 3789 },
-    { id: 20, slug: 'medgivande-idrottsstavling-utomlands', name: 'Medgivande vid idrottstävling utomlands', description: 'Medgivande för barn att delta i idrottstävling utomlands.', badge: 'gratis', usageCount: 2678 },
+    { id: 14, slug: 'fullmakt-slakting-resa', name: 'Fullmakt till släkting vid resa', description: 'Fullmakt till släkting för att resa med barn.', badge: 'standard', usageCount: 5432 },
+    { id: 15, slug: 'medgivande-overnattning-utomlands', name: 'Medgivande för övernattning utomlands', description: 'Medgivande för barn att övernatta utomlands.', badge: 'standard', usageCount: 3456 },
+    { id: 16, slug: 'fullmakt-skolarenden', name: 'Fullmakt för skolärenden', description: 'Fullmakt för annan person att hantera barnets skolärenden.', badge: 'standard', usageCount: 6543 },
+    { id: 17, slug: 'medgivande-byte-skola', name: 'Medgivande vid byte av skola', description: 'Medgivande från bägge vårdnadshavare vid byte av skola.', badge: 'standard', usageCount: 2345 },
+    { id: 18, slug: 'intyg-gemensam-vardnad', name: 'Intyg om gemensam vårdnad', description: 'Intyg som bekräftar gemensam vårdnad om barn.', badge: 'standard', usageCount: 4567 },
+    { id: 19, slug: 'intyg-ensam-vardnad', name: 'Intyg om ensam vårdnad', description: 'Intyg som bekräftar ensam vårdnad om barn.', badge: 'standard', usageCount: 3789 },
+    { id: 20, slug: 'medgivande-idrottsstavling-utomlands', name: 'Medgivande vid idrottstävling utomlands', description: 'Medgivande för barn att delta i idrottstävling utomlands.', badge: 'standard', usageCount: 2678 },
   ];
 
   foraldrarTemplates.forEach(t => {
@@ -205,21 +205,21 @@ function generateTemplates(): Template[] {
 
   // === RESA & TRANSPORT (21-35) ===
   const resaTemplates: Partial<Template>[] = [
-    { id: 21, slug: 'fullmakt-hamta-ut-fordon', name: 'Fullmakt att hämta ut fordon', description: 'Fullmakt för att hämta ut annans fordon från verkstad eller parkering.', badge: 'gratis', usageCount: 4532 },
-    { id: 22, slug: 'fullmakt-bilforsakring', name: 'Fullmakt för bilförsäkring', description: 'Fullmakt att teckna eller ändra bilförsäkring.', badge: 'gratis', usageCount: 3241 },
+    { id: 21, slug: 'fullmakt-hamta-ut-fordon', name: 'Fullmakt att hämta ut fordon', description: 'Fullmakt för att hämta ut annans fordon från verkstad eller parkering.', badge: 'standard', usageCount: 4532 },
+    { id: 22, slug: 'fullmakt-bilforsakring', name: 'Fullmakt för bilförsäkring', description: 'Fullmakt att teckna eller ändra bilförsäkring.', badge: 'standard', usageCount: 3241 },
     { id: 23, slug: 'fullmakt-besiktning', name: 'Fullmakt för besiktning', description: 'Fullmakt att besikta annans fordon.', badge: 'popular', usageCount: 8765 },
-    { id: 24, slug: 'resefullmakt-vuxen', name: 'Resefullmakt för vuxen', description: 'Generell resefullmakt för vuxen person.', badge: 'gratis', usageCount: 5432 },
+    { id: 24, slug: 'resefullmakt-vuxen', name: 'Resefullmakt för vuxen', description: 'Generell resefullmakt för vuxen person.', badge: 'standard', usageCount: 5432 },
     { id: 25, slug: 'fullmakt-agarbyte-bil', name: 'Fullmakt för ägarbyte bil', description: 'Fullmakt att genomföra ägarbyte av motorfordon.', badge: 'popular', usageCount: 11432 },
-    { id: 26, slug: 'fullmakt-transportstyrelsen', name: 'Fullmakt för Transportstyrelsen', description: 'Fullmakt att företräda person hos Transportstyrelsen.', badge: 'gratis', usageCount: 6543 },
-    { id: 27, slug: 'fullmakt-parkeringsbolag', name: 'Fullmakt gentemot parkeringsbolag', description: 'Fullmakt att överklaga eller hantera parkeringsärenden.', badge: 'gratis', usageCount: 2345 },
-    { id: 28, slug: 'fullmakt-bilverkstad', name: 'Fullmakt för bilverkstad', description: 'Fullmakt att lämna in och hämta ut fordon från verkstad.', badge: 'gratis', usageCount: 4321 },
-    { id: 29, slug: 'medgivande-hyrbil', name: 'Medgivande för hyrbil', description: 'Medgivande att hyra bil för annans räkning.', badge: 'gratis', usageCount: 3456 },
+    { id: 26, slug: 'fullmakt-transportstyrelsen', name: 'Fullmakt för Transportstyrelsen', description: 'Fullmakt att företräda person hos Transportstyrelsen.', badge: 'standard', usageCount: 6543 },
+    { id: 27, slug: 'fullmakt-parkeringsbolag', name: 'Fullmakt gentemot parkeringsbolag', description: 'Fullmakt att överklaga eller hantera parkeringsärenden.', badge: 'standard', usageCount: 2345 },
+    { id: 28, slug: 'fullmakt-bilverkstad', name: 'Fullmakt för bilverkstad', description: 'Fullmakt att lämna in och hämta ut fordon från verkstad.', badge: 'standard', usageCount: 4321 },
+    { id: 29, slug: 'medgivande-hyrbil', name: 'Medgivande för hyrbil', description: 'Medgivande att hyra bil för annans räkning.', badge: 'standard', usageCount: 3456 },
     { id: 30, slug: 'fullmakt-bat-registrering', name: 'Fullmakt för båtregistrering', description: 'Fullmakt att registrera eller avregistrera båt.', badge: 'premium', usageCount: 1234 },
-    { id: 31, slug: 'fullmakt-korkort-arende', name: 'Fullmakt för körkortsärende', description: 'Fullmakt att hantera körkortsärenden hos Transportstyrelsen.', badge: 'gratis', usageCount: 5678 },
+    { id: 31, slug: 'fullmakt-korkort-arende', name: 'Fullmakt för körkortsärende', description: 'Fullmakt att hantera körkortsärenden hos Transportstyrelsen.', badge: 'standard', usageCount: 5678 },
     { id: 32, slug: 'resefullmakt-grupp', name: 'Resefullmakt för grupp', description: 'Fullmakt för gruppresa med specificerade deltagare.', badge: 'premium', usageCount: 2345 },
     { id: 33, slug: 'fullmakt-tullarende', name: 'Fullmakt för tullärende', description: 'Fullmakt att hantera tullärenden för annans räkning.', badge: 'premium', usageCount: 1567 },
-    { id: 34, slug: 'fullmakt-flygbolag', name: 'Fullmakt gentemot flygbolag', description: 'Fullmakt att hantera bokning eller reklamation hos flygbolag.', badge: 'gratis', usageCount: 3456 },
-    { id: 35, slug: 'medgivande-samakande', name: 'Medgivande för samåkande', description: 'Medgivande och ansvarsfördelning vid samåkning.', badge: 'gratis', usageCount: 987 },
+    { id: 34, slug: 'fullmakt-flygbolag', name: 'Fullmakt gentemot flygbolag', description: 'Fullmakt att hantera bokning eller reklamation hos flygbolag.', badge: 'standard', usageCount: 3456 },
+    { id: 35, slug: 'medgivande-samakande', name: 'Medgivande för samåkande', description: 'Medgivande och ansvarsfördelning vid samåkning.', badge: 'standard', usageCount: 987 },
   ];
 
   resaTemplates.forEach(t => {
@@ -249,19 +249,19 @@ function generateTemplates(): Template[] {
   const vardTemplates: Partial<Template>[] = [
     { id: 36, slug: 'fullmakt-sjukvard', name: 'Fullmakt för sjukvård', description: 'Fullmakt att företräda person i sjukvårdskontakter.', badge: 'popular', usageCount: 12345 },
     { id: 37, slug: 'fullmakt-apotek', name: 'Fullmakt för apotek', description: 'Fullmakt att hämta ut recept åt annan person.', badge: 'popular', usageCount: 15678 },
-    { id: 38, slug: 'fullmakt-hemtjanst', name: 'Fullmakt för hemtjänst', description: 'Fullmakt att ansöka om eller hantera hemtjänst.', badge: 'gratis', usageCount: 5432 },
-    { id: 39, slug: 'fullmakt-tandvard', name: 'Fullmakt för tandvård', description: 'Fullmakt att boka och hantera tandvårdsärenden.', badge: 'gratis', usageCount: 3456 },
-    { id: 40, slug: 'fullmakt-aldrevard', name: 'Fullmakt för äldreomsorg', description: 'Fullmakt att företräda äldre person i omsorgsärenden.', badge: 'gratis', usageCount: 6789 },
+    { id: 38, slug: 'fullmakt-hemtjanst', name: 'Fullmakt för hemtjänst', description: 'Fullmakt att ansöka om eller hantera hemtjänst.', badge: 'standard', usageCount: 5432 },
+    { id: 39, slug: 'fullmakt-tandvard', name: 'Fullmakt för tandvård', description: 'Fullmakt att boka och hantera tandvårdsärenden.', badge: 'standard', usageCount: 3456 },
+    { id: 40, slug: 'fullmakt-aldrevard', name: 'Fullmakt för äldreomsorg', description: 'Fullmakt att företräda äldre person i omsorgsärenden.', badge: 'standard', usageCount: 6789 },
     { id: 41, slug: 'medgivande-medicinsk-behandling', name: 'Medgivande för medicinsk behandling', description: 'Medgivande till specifik medicinsk behandling.', badge: 'premium', usageCount: 4567 },
     { id: 42, slug: 'fullmakt-forsikringskassan', name: 'Fullmakt för Försäkringskassan', description: 'Fullmakt att företräda person hos Försäkringskassan.', badge: 'popular', usageCount: 9876 },
-    { id: 43, slug: 'fullmakt-journalhantering', name: 'Fullmakt för journalhantering', description: 'Fullmakt att begära ut journalhandlingar.', badge: 'gratis', usageCount: 3456 },
-    { id: 44, slug: 'fullmakt-rehabilitering', name: 'Fullmakt för rehabilitering', description: 'Fullmakt att hantera rehabiliteringsärenden.', badge: 'gratis', usageCount: 2345 },
-    { id: 45, slug: 'medgivande-organdonation', name: 'Medgivande för organdonation', description: 'Intyg om önskemål gällande organdonation.', badge: 'gratis', usageCount: 1234 },
+    { id: 43, slug: 'fullmakt-journalhantering', name: 'Fullmakt för journalhantering', description: 'Fullmakt att begära ut journalhandlingar.', badge: 'standard', usageCount: 3456 },
+    { id: 44, slug: 'fullmakt-rehabilitering', name: 'Fullmakt för rehabilitering', description: 'Fullmakt att hantera rehabiliteringsärenden.', badge: 'standard', usageCount: 2345 },
+    { id: 45, slug: 'medgivande-organdonation', name: 'Medgivande för organdonation', description: 'Intyg om önskemål gällande organdonation.', badge: 'standard', usageCount: 1234 },
     { id: 46, slug: 'fullmakt-psykiatrisk-vard', name: 'Fullmakt för psykiatrisk vård', description: 'Fullmakt att hantera kontakter med psykiatrisk vård.', badge: 'premium', usageCount: 2345 },
-    { id: 47, slug: 'fullmakt-privat-vardgivare', name: 'Fullmakt för privat vårdgivare', description: 'Fullmakt gentemot privat vårdgivare.', badge: 'gratis', usageCount: 3456 },
-    { id: 48, slug: 'medgivande-delad-journalinfo', name: 'Medgivande för delad journalinformation', description: 'Medgivande att dela journalinformation med annan part.', badge: 'gratis', usageCount: 1567 },
-    { id: 49, slug: 'fullmakt-hjalpmedel', name: 'Fullmakt för hjälpmedel', description: 'Fullmakt att hämta ut eller beställa hjälpmedel.', badge: 'gratis', usageCount: 2345 },
-    { id: 50, slug: 'fullmakt-vaccin', name: 'Fullmakt för vaccination', description: 'Fullmakt att boka och genomföra vaccination åt annan.', badge: 'gratis', usageCount: 4567 },
+    { id: 47, slug: 'fullmakt-privat-vardgivare', name: 'Fullmakt för privat vårdgivare', description: 'Fullmakt gentemot privat vårdgivare.', badge: 'standard', usageCount: 3456 },
+    { id: 48, slug: 'medgivande-delad-journalinfo', name: 'Medgivande för delad journalinformation', description: 'Medgivande att dela journalinformation med annan part.', badge: 'standard', usageCount: 1567 },
+    { id: 49, slug: 'fullmakt-hjalpmedel', name: 'Fullmakt för hjälpmedel', description: 'Fullmakt att hämta ut eller beställa hjälpmedel.', badge: 'standard', usageCount: 2345 },
+    { id: 50, slug: 'fullmakt-vaccin', name: 'Fullmakt för vaccination', description: 'Fullmakt att boka och genomföra vaccination åt annan.', badge: 'standard', usageCount: 4567 },
   ];
 
   vardTemplates.forEach(t => {
@@ -292,23 +292,23 @@ function generateTemplates(): Template[] {
     { id: 51, slug: 'fullmakt-bank', name: 'Fullmakt för bankärenden', description: 'Generell fullmakt för bankärenden.', badge: 'popular', usageCount: 18765 },
     { id: 52, slug: 'fullmakt-skatteverket', name: 'Fullmakt för Skatteverket', description: 'Fullmakt att företräda hos Skatteverket.', badge: 'popular', usageCount: 14567 },
     { id: 53, slug: 'fullmakt-deklaration', name: 'Fullmakt för deklaration', description: 'Fullmakt att lämna in deklaration åt annan.', badge: 'popular', usageCount: 11234 },
-    { id: 54, slug: 'fullmakt-bolagsverket', name: 'Fullmakt för Bolagsverket', description: 'Fullmakt för ärenden hos Bolagsverket.', badge: 'gratis', usageCount: 5678 },
-    { id: 55, slug: 'fullmakt-forsakring', name: 'Fullmakt för försäkringsärenden', description: 'Fullmakt att hantera försäkringar åt annan.', badge: 'gratis', usageCount: 6789 },
-    { id: 56, slug: 'fullmakt-inkasso', name: 'Fullmakt gentemot inkassobolag', description: 'Fullmakt att företräda i inkassoärenden.', badge: 'gratis', usageCount: 3456 },
-    { id: 57, slug: 'fullmakt-kronofogden', name: 'Fullmakt för Kronofogden', description: 'Fullmakt att företräda hos Kronofogden.', badge: 'gratis', usageCount: 4567 },
-    { id: 58, slug: 'fullmakt-pension', name: 'Fullmakt för pensionsärenden', description: 'Fullmakt att hantera pensionsärenden.', badge: 'gratis', usageCount: 5432 },
-    { id: 59, slug: 'fullmakt-arbetsformedlingen', name: 'Fullmakt för Arbetsförmedlingen', description: 'Fullmakt att företräda hos Arbetsförmedlingen.', badge: 'gratis', usageCount: 3456 },
+    { id: 54, slug: 'fullmakt-bolagsverket', name: 'Fullmakt för Bolagsverket', description: 'Fullmakt för ärenden hos Bolagsverket.', badge: 'standard', usageCount: 5678 },
+    { id: 55, slug: 'fullmakt-forsakring', name: 'Fullmakt för försäkringsärenden', description: 'Fullmakt att hantera försäkringar åt annan.', badge: 'standard', usageCount: 6789 },
+    { id: 56, slug: 'fullmakt-inkasso', name: 'Fullmakt gentemot inkassobolag', description: 'Fullmakt att företräda i inkassoärenden.', badge: 'standard', usageCount: 3456 },
+    { id: 57, slug: 'fullmakt-kronofogden', name: 'Fullmakt för Kronofogden', description: 'Fullmakt att företräda hos Kronofogden.', badge: 'standard', usageCount: 4567 },
+    { id: 58, slug: 'fullmakt-pension', name: 'Fullmakt för pensionsärenden', description: 'Fullmakt att hantera pensionsärenden.', badge: 'standard', usageCount: 5432 },
+    { id: 59, slug: 'fullmakt-arbetsformedlingen', name: 'Fullmakt för Arbetsförmedlingen', description: 'Fullmakt att företräda hos Arbetsförmedlingen.', badge: 'standard', usageCount: 3456 },
     { id: 60, slug: 'fullmakt-bouppteckning', name: 'Fullmakt för bouppteckning', description: 'Fullmakt att företräda vid bouppteckning.', badge: 'premium', usageCount: 7890 },
-    { id: 61, slug: 'fullmakt-kontoutdrag', name: 'Fullmakt för kontoutdrag', description: 'Fullmakt att hämta kontoutdrag.', badge: 'gratis', usageCount: 2345 },
+    { id: 61, slug: 'fullmakt-kontoutdrag', name: 'Fullmakt för kontoutdrag', description: 'Fullmakt att hämta kontoutdrag.', badge: 'standard', usageCount: 2345 },
     { id: 62, slug: 'fullmakt-lan-kredit', name: 'Fullmakt för lån och kredit', description: 'Fullmakt att företräda i lån- och kreditärenden.', badge: 'premium', usageCount: 4567 },
     { id: 63, slug: 'generell-fullmakt', name: 'Generell fullmakt', description: 'Generell fullmakt utan begränsning till specifikt ärende.', badge: 'popular', usageCount: 21345 },
-    { id: 64, slug: 'begransad-fullmakt', name: 'Begränsad fullmakt', description: 'Fullmakt begränsad till specifikt ärende eller tid.', badge: 'gratis', usageCount: 8765 },
+    { id: 64, slug: 'begransad-fullmakt', name: 'Begränsad fullmakt', description: 'Fullmakt begränsad till specifikt ärende eller tid.', badge: 'standard', usageCount: 8765 },
     { id: 65, slug: 'fullmakt-arvsarende', name: 'Fullmakt för arvsärende', description: 'Fullmakt att hantera arvsärenden.', badge: 'premium', usageCount: 6543 },
-    { id: 66, slug: 'fullmakt-migrationsverket', name: 'Fullmakt för Migrationsverket', description: 'Fullmakt att företräda hos Migrationsverket.', badge: 'gratis', usageCount: 5432 },
+    { id: 66, slug: 'fullmakt-migrationsverket', name: 'Fullmakt för Migrationsverket', description: 'Fullmakt att företräda hos Migrationsverket.', badge: 'standard', usageCount: 5432 },
     { id: 67, slug: 'fullmakt-tingsratten', name: 'Fullmakt för tingsrätten', description: 'Fullmakt att företräda vid tingsrätten.', badge: 'premium', usageCount: 3456 },
     { id: 68, slug: 'fullmakt-aktiebolag', name: 'Fullmakt för aktiebolagsärenden', description: 'Fullmakt att agera för aktiebolag.', badge: 'premium', usageCount: 4567 },
-    { id: 69, slug: 'fullmakt-handelsbanken', name: 'Fullmakt specificerad för Handelsbanken', description: 'Fullmakt anpassad för Handelsbankens krav.', badge: 'gratis', usageCount: 2345 },
-    { id: 70, slug: 'fullmakt-csp-konto', name: 'Fullmakt för CSN-ärenden', description: 'Fullmakt att företräda hos CSN.', badge: 'gratis', usageCount: 3456 },
+    { id: 69, slug: 'fullmakt-handelsbanken', name: 'Fullmakt specificerad för Handelsbanken', description: 'Fullmakt anpassad för Handelsbankens krav.', badge: 'standard', usageCount: 2345 },
+    { id: 70, slug: 'fullmakt-csp-konto', name: 'Fullmakt för CSN-ärenden', description: 'Fullmakt att företräda hos CSN.', badge: 'standard', usageCount: 3456 },
   ];
 
   ekonomiTemplates.forEach(t => {
@@ -339,18 +339,18 @@ function generateTemplates(): Template[] {
   const boendeTemplates: Partial<Template>[] = [
     { id: 71, slug: 'fullmakt-bostadskop', name: 'Fullmakt för bostadsköp', description: 'Fullmakt att köpa bostad för annans räkning.', badge: 'premium', usageCount: 6789 },
     { id: 72, slug: 'fullmakt-bostadsforening', name: 'Fullmakt för bostadsförening', description: 'Fullmakt att företräda vid bostadsföreningsstämma.', badge: 'popular', usageCount: 9876 },
-    { id: 73, slug: 'fullmakt-hyreskontrakt', name: 'Fullmakt för hyreskontrakt', description: 'Fullmakt att teckna hyreskontrakt.', badge: 'gratis', usageCount: 5432 },
-    { id: 74, slug: 'fullmakt-elbolag', name: 'Fullmakt för elbolag', description: 'Fullmakt att hantera elavtal åt annan.', badge: 'gratis', usageCount: 3456 },
-    { id: 75, slug: 'fullmakt-bredbandsleverantor', name: 'Fullmakt för bredbandsleverantör', description: 'Fullmakt att hantera bredbandsabonnemang.', badge: 'gratis', usageCount: 2345 },
+    { id: 73, slug: 'fullmakt-hyreskontrakt', name: 'Fullmakt för hyreskontrakt', description: 'Fullmakt att teckna hyreskontrakt.', badge: 'standard', usageCount: 5432 },
+    { id: 74, slug: 'fullmakt-elbolag', name: 'Fullmakt för elbolag', description: 'Fullmakt att hantera elavtal åt annan.', badge: 'standard', usageCount: 3456 },
+    { id: 75, slug: 'fullmakt-bredbandsleverantor', name: 'Fullmakt för bredbandsleverantör', description: 'Fullmakt att hantera bredbandsabonnemang.', badge: 'standard', usageCount: 2345 },
     { id: 76, slug: 'fullmakt-paket-post', name: 'Fullmakt för paket och post', description: 'Fullmakt att hämta ut paket och post.', badge: 'popular', usageCount: 13456 },
     { id: 77, slug: 'fullmakt-lagenhetsbyte', name: 'Fullmakt vid lägenhetsbyte', description: 'Fullmakt att genomföra lägenhetsbyte.', badge: 'premium', usageCount: 2345 },
-    { id: 78, slug: 'fullmakt-forsakring-boende', name: 'Fullmakt för boendeförsäkring', description: 'Fullmakt att teckna hemförsäkring.', badge: 'gratis', usageCount: 3456 },
-    { id: 79, slug: 'fullmakt-renovering', name: 'Fullmakt för renovering', description: 'Fullmakt att godkänna renoveringsarbeten.', badge: 'gratis', usageCount: 2345 },
-    { id: 80, slug: 'fullmakt-andrahandsuthyrning', name: 'Fullmakt för andrahandsuthyrning', description: 'Fullmakt att hyra ut bostad i andra hand.', badge: 'gratis', usageCount: 4567 },
-    { id: 81, slug: 'fullmakt-vattenavlasning', name: 'Fullmakt för vattenavläsning', description: 'Fullmakt att ge tillträde för vattenavläsning.', badge: 'gratis', usageCount: 1234 },
-    { id: 82, slug: 'fullmakt-sophantering', name: 'Fullmakt för sophantering', description: 'Fullmakt att hantera avfallsärenden.', badge: 'gratis', usageCount: 987 },
-    { id: 83, slug: 'fullmakt-garage-parkering', name: 'Fullmakt för garage/parkering', description: 'Fullmakt att hantera garageplats/parkering.', badge: 'gratis', usageCount: 2345 },
-    { id: 84, slug: 'fullmakt-nycklar-tillgang', name: 'Fullmakt för nycklar och tillgång', description: 'Fullmakt att överlämna nycklar till tredje part.', badge: 'gratis', usageCount: 3456 },
+    { id: 78, slug: 'fullmakt-forsakring-boende', name: 'Fullmakt för boendeförsäkring', description: 'Fullmakt att teckna hemförsäkring.', badge: 'standard', usageCount: 3456 },
+    { id: 79, slug: 'fullmakt-renovering', name: 'Fullmakt för renovering', description: 'Fullmakt att godkänna renoveringsarbeten.', badge: 'standard', usageCount: 2345 },
+    { id: 80, slug: 'fullmakt-andrahandsuthyrning', name: 'Fullmakt för andrahandsuthyrning', description: 'Fullmakt att hyra ut bostad i andra hand.', badge: 'standard', usageCount: 4567 },
+    { id: 81, slug: 'fullmakt-vattenavlasning', name: 'Fullmakt för vattenavläsning', description: 'Fullmakt att ge tillträde för vattenavläsning.', badge: 'standard', usageCount: 1234 },
+    { id: 82, slug: 'fullmakt-sophantering', name: 'Fullmakt för sophantering', description: 'Fullmakt att hantera avfallsärenden.', badge: 'standard', usageCount: 987 },
+    { id: 83, slug: 'fullmakt-garage-parkering', name: 'Fullmakt för garage/parkering', description: 'Fullmakt att hantera garageplats/parkering.', badge: 'standard', usageCount: 2345 },
+    { id: 84, slug: 'fullmakt-nycklar-tillgang', name: 'Fullmakt för nycklar och tillgång', description: 'Fullmakt att överlämna nycklar till tredje part.', badge: 'standard', usageCount: 3456 },
     { id: 85, slug: 'fullmakt-bostadsforsaljning', name: 'Fullmakt för bostadsförsäljning', description: 'Fullmakt att sälja bostad för annans räkning.', badge: 'premium', usageCount: 5678 },
   ];
 
@@ -380,20 +380,20 @@ function generateTemplates(): Template[] {
   // === FÖRENING, SKOLA & FRITID (86-100) ===
   const foreningTemplates: Partial<Template>[] = [
     { id: 86, slug: 'fullmakt-foreningsstamma', name: 'Fullmakt för föreningsstämma', description: 'Fullmakt att rösta vid föreningsstämma.', badge: 'popular', usageCount: 7654 },
-    { id: 87, slug: 'medgivande-skolaktivitet', name: 'Medgivande för skolaktivitet', description: 'Medgivande för barn att delta i skolaktivitet.', badge: 'gratis', usageCount: 8765 },
-    { id: 88, slug: 'fullmakt-idrottsforening', name: 'Fullmakt för idrottsförening', description: 'Fullmakt att företräda i idrottsföreningsärenden.', badge: 'gratis', usageCount: 3456 },
+    { id: 87, slug: 'medgivande-skolaktivitet', name: 'Medgivande för skolaktivitet', description: 'Medgivande för barn att delta i skolaktivitet.', badge: 'standard', usageCount: 8765 },
+    { id: 88, slug: 'fullmakt-idrottsforening', name: 'Fullmakt för idrottsförening', description: 'Fullmakt att företräda i idrottsföreningsärenden.', badge: 'standard', usageCount: 3456 },
     { id: 89, slug: 'medgivande-foto-film', name: 'Medgivande för foto och film', description: 'Medgivande att fotografera/filma barn vid aktivitet.', badge: 'popular', usageCount: 11234 },
-    { id: 90, slug: 'fullmakt-styrelsearbete', name: 'Fullmakt för styrelsearbete', description: 'Fullmakt att agera som ställföreträdare i styrelse.', badge: 'gratis', usageCount: 2345 },
-    { id: 91, slug: 'medgivande-utflykt', name: 'Medgivande för utflykt', description: 'Medgivande för barn att delta i utflykt.', badge: 'gratis', usageCount: 6543 },
-    { id: 92, slug: 'fullmakt-fritidsaktivitet', name: 'Fullmakt för fritidsaktivitet', description: 'Fullmakt att anmäla barn till fritidsaktivitet.', badge: 'gratis', usageCount: 4321 },
-    { id: 93, slug: 'medgivande-simskola', name: 'Medgivande för simskola', description: 'Medgivande för barn att delta i simskola.', badge: 'gratis', usageCount: 5432 },
-    { id: 94, slug: 'fullmakt-scouterna', name: 'Fullmakt för Scouterna', description: 'Fullmakt för scoutverksamhet.', badge: 'gratis', usageCount: 2345 },
-    { id: 95, slug: 'medgivande-musicerande', name: 'Medgivande för musicerande', description: 'Medgivande för barn att delta i musikverksamhet.', badge: 'gratis', usageCount: 1234 },
-    { id: 96, slug: 'fullmakt-kulturskola', name: 'Fullmakt för kulturskola', description: 'Fullmakt att hantera kulturskoleärenden.', badge: 'gratis', usageCount: 2345 },
-    { id: 97, slug: 'medgivande-tavling', name: 'Medgivande vid tävling', description: 'Medgivande för barn att delta i tävling.', badge: 'gratis', usageCount: 3456 },
-    { id: 98, slug: 'fullmakt-foraldrautskott', name: 'Fullmakt för föräldraföreningens utskott', description: 'Fullmakt att företräda i föräldraföreningens utskott.', badge: 'gratis', usageCount: 1234 },
-    { id: 99, slug: 'medgivande-skidresa', name: 'Medgivande för skidresa', description: 'Medgivande för barn att delta i skidresa.', badge: 'gratis', usageCount: 4567 },
-    { id: 100, slug: 'fullmakt-fritidsgard', name: 'Fullmakt för fritidsgård', description: 'Fullmakt att anmäla barn till fritidsgård.', badge: 'gratis', usageCount: 2345 },
+    { id: 90, slug: 'fullmakt-styrelsearbete', name: 'Fullmakt för styrelsearbete', description: 'Fullmakt att agera som ställföreträdare i styrelse.', badge: 'standard', usageCount: 2345 },
+    { id: 91, slug: 'medgivande-utflykt', name: 'Medgivande för utflykt', description: 'Medgivande för barn att delta i utflykt.', badge: 'standard', usageCount: 6543 },
+    { id: 92, slug: 'fullmakt-fritidsaktivitet', name: 'Fullmakt för fritidsaktivitet', description: 'Fullmakt att anmäla barn till fritidsaktivitet.', badge: 'standard', usageCount: 4321 },
+    { id: 93, slug: 'medgivande-simskola', name: 'Medgivande för simskola', description: 'Medgivande för barn att delta i simskola.', badge: 'standard', usageCount: 5432 },
+    { id: 94, slug: 'fullmakt-scouterna', name: 'Fullmakt för Scouterna', description: 'Fullmakt för scoutverksamhet.', badge: 'standard', usageCount: 2345 },
+    { id: 95, slug: 'medgivande-musicerande', name: 'Medgivande för musicerande', description: 'Medgivande för barn att delta i musikverksamhet.', badge: 'standard', usageCount: 1234 },
+    { id: 96, slug: 'fullmakt-kulturskola', name: 'Fullmakt för kulturskola', description: 'Fullmakt att hantera kulturskoleärenden.', badge: 'standard', usageCount: 2345 },
+    { id: 97, slug: 'medgivande-tavling', name: 'Medgivande vid tävling', description: 'Medgivande för barn att delta i tävling.', badge: 'standard', usageCount: 3456 },
+    { id: 98, slug: 'fullmakt-foraldrautskott', name: 'Fullmakt för föräldraföreningens utskott', description: 'Fullmakt att företräda i föräldraföreningens utskott.', badge: 'standard', usageCount: 1234 },
+    { id: 99, slug: 'medgivande-skidresa', name: 'Medgivande för skidresa', description: 'Medgivande för barn att delta i skidresa.', badge: 'standard', usageCount: 4567 },
+    { id: 100, slug: 'fullmakt-fritidsgard', name: 'Fullmakt för fritidsgård', description: 'Fullmakt att anmäla barn till fritidsgård.', badge: 'standard', usageCount: 2345 },
   ];
 
   foreningTemplates.forEach(t => {
@@ -422,13 +422,13 @@ function generateTemplates(): Template[] {
   // === DJUR & HUSDJUR (101-108) ===
   const djurTemplates: Partial<Template>[] = [
     { id: 101, slug: 'fullmakt-veterinarbesok', name: 'Fullmakt för veterinärbesök', description: 'Fullmakt att ta annans djur till veterinär.', badge: 'popular', usageCount: 5678 },
-    { id: 102, slug: 'medgivande-djurvard', name: 'Medgivande för tillfällig djurvård', description: 'Medgivande för hundvakt eller kattpassning.', badge: 'gratis', usageCount: 4321 },
-    { id: 103, slug: 'fullmakt-kennelvistelse', name: 'Fullmakt för kennelvistelse', description: 'Fullmakt att lämna djur på kennel.', badge: 'gratis', usageCount: 2345 },
-    { id: 104, slug: 'medgivande-kastration-djur', name: 'Medgivande för kastration/operation av djur', description: 'Medgivande för operation av djur.', badge: 'gratis', usageCount: 1234 },
-    { id: 105, slug: 'fullmakt-djurtransport', name: 'Fullmakt för djurtransport', description: 'Fullmakt att transportera annans djur.', badge: 'gratis', usageCount: 987 },
+    { id: 102, slug: 'medgivande-djurvard', name: 'Medgivande för tillfällig djurvård', description: 'Medgivande för hundvakt eller kattpassning.', badge: 'standard', usageCount: 4321 },
+    { id: 103, slug: 'fullmakt-kennelvistelse', name: 'Fullmakt för kennelvistelse', description: 'Fullmakt att lämna djur på kennel.', badge: 'standard', usageCount: 2345 },
+    { id: 104, slug: 'medgivande-kastration-djur', name: 'Medgivande för kastration/operation av djur', description: 'Medgivande för operation av djur.', badge: 'standard', usageCount: 1234 },
+    { id: 105, slug: 'fullmakt-djurtransport', name: 'Fullmakt för djurtransport', description: 'Fullmakt att transportera annans djur.', badge: 'standard', usageCount: 987 },
     { id: 106, slug: 'intyg-djur-resa-utomlands', name: 'Intyg för djurets resa utomlands', description: 'Komplement till husdjurspass vid utlandsresa.', badge: 'premium', usageCount: 1567 },
-    { id: 107, slug: 'fullmakt-djurforsakring', name: 'Fullmakt för djurförsäkring', description: 'Fullmakt att teckna djurförsäkring.', badge: 'gratis', usageCount: 876 },
-    { id: 108, slug: 'medgivande-inkop-djur', name: 'Medgivande vid inköp av djur', description: 'Medgivande att köpa djur för annans räkning.', badge: 'gratis', usageCount: 654 },
+    { id: 107, slug: 'fullmakt-djurforsakring', name: 'Fullmakt för djurförsäkring', description: 'Fullmakt att teckna djurförsäkring.', badge: 'standard', usageCount: 876 },
+    { id: 108, slug: 'medgivande-inkop-djur', name: 'Medgivande vid inköp av djur', description: 'Medgivande att köpa djur för annans räkning.', badge: 'standard', usageCount: 654 },
   ];
 
   djurTemplates.forEach(t => {
@@ -458,13 +458,13 @@ function generateTemplates(): Template[] {
   // === SENIORER & DIGITAL OMSORG (109-116) ===
   const seniorTemplates: Partial<Template>[] = [
     { id: 109, slug: 'fullmakt-internetbank-senior', name: 'Fullmakt för internetbanksärenden (senior)', description: 'Fullmakt att hjälpa äldre med internetbankärenden.', badge: 'popular', usageCount: 6543 },
-    { id: 110, slug: 'fullmakt-digital-brevlada', name: 'Fullmakt för digital brevlåda', description: 'Fullmakt att hantera Kivra/e-Boks åt annan.', badge: 'gratis', usageCount: 4321 },
+    { id: 110, slug: 'fullmakt-digital-brevlada', name: 'Fullmakt för digital brevlåda', description: 'Fullmakt att hantera Kivra/e-Boks åt annan.', badge: 'standard', usageCount: 4321 },
     { id: 111, slug: 'fullmakt-god-man-komplement', name: 'Fullmakt god man-komplement', description: 'Kompletterande fullmakt för god man.', badge: 'premium', usageCount: 3456 },
-    { id: 112, slug: 'medgivande-hemtjanst-digital', name: 'Medgivande för hemtjänst digital kommunikation', description: 'Medgivande för digital kommunikation med hemtjänst.', badge: 'gratis', usageCount: 2345 },
-    { id: 113, slug: 'fullmakt-abonnemang', name: 'Fullmakt för abonnemang/prenumerationer', description: 'Fullmakt att hantera abonnemang åt annan.', badge: 'gratis', usageCount: 3456 },
-    { id: 114, slug: 'intyg-digital-tillganglighet', name: 'Intyg om digital tillgänglighet', description: 'Intyg om behov av hjälp med digitala tjänster.', badge: 'gratis', usageCount: 1234 },
-    { id: 115, slug: 'fullmakt-mobiloperator-senior', name: 'Fullmakt för mobiloperatör (senior)', description: 'Fullmakt att hantera mobilabonnemang för äldre.', badge: 'gratis', usageCount: 2345 },
-    { id: 116, slug: 'medgivande-digital-halsoapp', name: 'Medgivande för digital hälsoapp', description: 'Medgivande att hantera hälsoapp åt annan.', badge: 'gratis', usageCount: 987 },
+    { id: 112, slug: 'medgivande-hemtjanst-digital', name: 'Medgivande för hemtjänst digital kommunikation', description: 'Medgivande för digital kommunikation med hemtjänst.', badge: 'standard', usageCount: 2345 },
+    { id: 113, slug: 'fullmakt-abonnemang', name: 'Fullmakt för abonnemang/prenumerationer', description: 'Fullmakt att hantera abonnemang åt annan.', badge: 'standard', usageCount: 3456 },
+    { id: 114, slug: 'intyg-digital-tillganglighet', name: 'Intyg om digital tillgänglighet', description: 'Intyg om behov av hjälp med digitala tjänster.', badge: 'standard', usageCount: 1234 },
+    { id: 115, slug: 'fullmakt-mobiloperator-senior', name: 'Fullmakt för mobiloperatör (senior)', description: 'Fullmakt att hantera mobilabonnemang för äldre.', badge: 'standard', usageCount: 2345 },
+    { id: 116, slug: 'medgivande-digital-halsoapp', name: 'Medgivande för digital hälsoapp', description: 'Medgivande att hantera hälsoapp åt annan.', badge: 'standard', usageCount: 987 },
   ];
 
   seniorTemplates.forEach(t => {
@@ -493,13 +493,13 @@ function generateTemplates(): Template[] {
   // === DIGITALT & DÖDSBO (117-124) ===
   const digitaltTemplates: Partial<Template>[] = [
     { id: 117, slug: 'fullmakt-digital-dodsboforvaltning', name: 'Fullmakt för digital dödsboförvaltning', description: 'Fullmakt att hantera dödsboets digitala tillgångar.', badge: 'premium', usageCount: 3456 },
-    { id: 118, slug: 'medgivande-sociala-medier-dodsfall', name: 'Medgivande för sociala mediekonton (dödsfall)', description: 'Medgivande att hantera sociala mediekonton vid dödsfall.', badge: 'gratis', usageCount: 2345 },
-    { id: 119, slug: 'fullmakt-domanhantering', name: 'Fullmakt för domänhantering', description: 'Fullmakt att hantera domännamn åt annan.', badge: 'gratis', usageCount: 1234 },
-    { id: 120, slug: 'medgivande-prenumerationsavslut', name: 'Medgivande för prenumerationsavslut efter dödsfall', description: 'Medgivande att avsluta prenumerationer efter dödsfall.', badge: 'gratis', usageCount: 1567 },
+    { id: 118, slug: 'medgivande-sociala-medier-dodsfall', name: 'Medgivande för sociala mediekonton (dödsfall)', description: 'Medgivande att hantera sociala mediekonton vid dödsfall.', badge: 'standard', usageCount: 2345 },
+    { id: 119, slug: 'fullmakt-domanhantering', name: 'Fullmakt för domänhantering', description: 'Fullmakt att hantera domännamn åt annan.', badge: 'standard', usageCount: 1234 },
+    { id: 120, slug: 'medgivande-prenumerationsavslut', name: 'Medgivande för prenumerationsavslut efter dödsfall', description: 'Medgivande att avsluta prenumerationer efter dödsfall.', badge: 'standard', usageCount: 1567 },
     { id: 121, slug: 'fullmakt-kryptovaluta', name: 'Fullmakt för kryptovaluta/digitala tillgångar', description: 'Fullmakt att hantera kryptovaluta och digitala tillgångar.', badge: 'premium', usageCount: 2345 },
     { id: 122, slug: 'intyg-digital-arvshandling', name: 'Intyg för digital arvshandling', description: 'Intyg avseende digitalt arv.', badge: 'premium', usageCount: 1234 },
-    { id: 123, slug: 'fullmakt-epostarkiv', name: 'Fullmakt för e-postarkiv/molntjänster', description: 'Fullmakt att hantera e-post och molntjänster.', badge: 'gratis', usageCount: 987 },
-    { id: 124, slug: 'medgivande-digital-minnessida', name: 'Medgivande för digital minnessida', description: 'Medgivande att skapa och hantera digital minnessida.', badge: 'gratis', usageCount: 876 },
+    { id: 123, slug: 'fullmakt-epostarkiv', name: 'Fullmakt för e-postarkiv/molntjänster', description: 'Fullmakt att hantera e-post och molntjänster.', badge: 'standard', usageCount: 987 },
+    { id: 124, slug: 'medgivande-digital-minnessida', name: 'Medgivande för digital minnessida', description: 'Medgivande att skapa och hantera digital minnessida.', badge: 'standard', usageCount: 876 },
   ];
 
   digitaltTemplates.forEach(t => {
@@ -602,7 +602,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'resa-transport',
     description: 'Fullmakt för att sälja, registrera eller avregistrera ett fordon åt dig hos Transportstyrelsen.',
     longDescription: 'Ska någon annan sälja din bil åt dig, registrera ett fordon eller hantera ägarbytet hos Transportstyrelsen? Denna fullmakt ger ombudet rätt att agera för dig i alla fordonsrelaterade ärenden. Krävs av köpare eller mäklare om du inte kan närvara vid ägarbytet.',
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 7210,
     fields: [
       { id: 'agare_namn', label: 'Fordonsägarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -733,7 +733,7 @@ function generateTemplates(): Template[] {
     category: 'Boende & Vardag', categorySlug: 'boende-vardag',
     description: 'Fullmakt för att ansöka om byte eller överlåtelse av hyresrätt hos hyresvärden.',
     longDescription: 'Ger ditt ombud rätt att ansöka om andrahandsuthyrning, lägenhetsbyte och överlåtelse. Hyresvärden kommuniceras via ombudet.',
-    badge: 'gratis', usageCount: 5890,
+    badge: 'standard', usageCount: 5890,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Hyresgaestens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
       { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
@@ -851,7 +851,7 @@ function generateTemplates(): Template[] {
     category: 'Boende & Vardag', categorySlug: 'boende-vardag',
     description: 'Fullmakt för en representant att rösta och agera på bostadsrättsföreningens årliga eller extra stämma.',
     longDescription: 'Kan du inte delta på årsstämman eller extrastämman i din BRF? Denna fullmakt ger en annan bostadsrättshavare eller anhörig rätt att rösta och agera i ditt ställe. Bostadsrättslagen reglerar vem som kan vara fullmaktshavare.',
-    badge: 'gratis', usageCount: 4320,
+    badge: 'standard', usageCount: 4320,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Bostadsrättshavaren (du)', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
       { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
@@ -1015,7 +1015,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för revisor att företräda bolaget i revisionsärenden.",
     longDescription: "Ger den auktoriserade revisorn rätt att inhämta information, kommunicera med Skatteverket och företräda bolaget i revisionsrelaterade ärenden.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 2340,
     fields: [
       { id: 'foretag_namn', label: 'Företagets namn', type: 'text', placeholder: 'Exempel AB', required: true, group: 'givare' },
@@ -1049,7 +1049,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för bolagsman att företräda handelsbolaget.",
     longDescription: "Ger en bolagsman eller utomstående rätt att handla för handelsbolagets räkning. Eftersom bolagsmännen har personligt ansvar är detta särskilt viktigt vid större affärer.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1820,
     fields: [
       { id: 'foretag_namn', label: 'Företagets namn', type: 'text', placeholder: 'Exempel AB', required: true, group: 'givare' },
@@ -1252,7 +1252,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för patentombud att hantera patentansökan.",
     longDescription: "Ger patentombudet (auktoriserat patentkonsult) rätt att lämna in patentansökan, kommunicera med PRV och företräda dig i patentärenden.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1450,
     fields: [
       { id: 'foretag_namn', label: 'Företagets namn', type: 'text', placeholder: 'Exempel AB', required: true, group: 'givare' },
@@ -1286,7 +1286,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för ombud att registrera varumärke hos PRV.",
     longDescription: "Ger ombudet (vanligtvis varumärkesbyrå) rätt att ansöka om, försvara och underhålla varumärket hos PRV eller EUIPO.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1670,
     fields: [
       { id: 'foretag_namn', label: 'Företagets namn', type: 'text', placeholder: 'Exempel AB', required: true, group: 'givare' },
@@ -1453,7 +1453,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'foraldrar-barn',
     description: "Medgivande för barnvakt, mor-/farförälder eller dagbarnvårdare att passa barnet regelbundet.",
     longDescription: "Specificerar omfattning, ansvar och tidsperiod för regelbunden barnpassning. Ger barnvakten rätt att fatta vissa vardagliga beslut, hämta från skola, akut sjukvård etc.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 5430,
     fields: [
       { id: 'barn_namn', label: 'Barnets fullständiga namn', type: 'text', placeholder: 'Maja Svensson', required: true, group: 'givare' },
@@ -1521,7 +1521,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'foraldrar-barn',
     description: "Fullmakt för annan vuxen att bistå vårdnadshavaren tillfälligt.",
     longDescription: "Vid sjukdom, resa eller annan tillfällig frånvaro ger denna fullmakt en annan vuxen rätt att bistå med vardagliga beslut, hämta från skola och vid behov söka vård.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 4560,
     fields: [
       { id: 'barn_namn', label: 'Barnets fullständiga namn', type: 'text', placeholder: 'Maja Svensson', required: true, group: 'givare' },
@@ -1556,7 +1556,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'foraldrar-barn',
     description: "Fullmakt för ombud att upprätta eller företräda i sambolagens ärenden.",
     longDescription: "Ger ombudet rätt att förhandla, upprätta sambo-avtal eller företräda dig i bodelning enligt sambolagen. Lämpligt om du är utomlands eller vill ha juridisk företrädare.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1980,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -1589,7 +1589,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'foraldrar-barn',
     description: "Fullmakt för partner eller ombud att hantera föräldraledighetsärenden.",
     longDescription: "Ger ombudet rätt att kommunicera med Försäkringskassan, arbetsgivare och kommunen om föräldrapenning, VAB och föräldraledighet.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 3450,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -1622,7 +1622,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'foraldrar-barn',
     description: "Fullmakt för ombud att begära familjerådgivning hos kommunen.",
     longDescription: "Ger ombudet rätt att initiera, boka och kommunicera med familjerådgivningen i din kommun. Kan användas vid uppslitande situationer.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1240,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -1655,7 +1655,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Allmän fullmakt för att företräda dig hos kommunen.",
     longDescription: "Ger ombudet rätt att kommunicera med kommunen i bygglov, bostadsfrågor, försörjningsstöd, äldreomsorg eller annat. Specificera vilken nämnd eller ärendetyp.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 5670,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -1722,7 +1722,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för ombud att göra polisanmälan i ditt namn.",
     longDescription: "Ger ombudet rätt att göra polisanmälan, lämna in handlingar och företräda dig i polisärenden. Lämpligt om du är skadad, utomlands eller saknar förmåga.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 2890,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -1755,7 +1755,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för annan person att ansöka om passförnyelse för vuxen.",
     longDescription: "Ger ombudet rätt att hjälpa till med passansökan i begränsade fall – t.ex. vid sjukdom. Notera att passansökan kräver personlig inställelse för fingeravtryck och foto.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1840,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -1788,7 +1788,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för ombud att hantera ärenden hos CSN.",
     longDescription: "Ger ombudet rätt att ansöka om studielån, kommunicera med CSN och hantera återbetalningsärenden. Vanligt för studenter utomlands eller anhöriga som hjälper.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 4230,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -1854,7 +1854,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för ombud att hantera a-kasseärende.",
     longDescription: "Ger ombudet rätt att kommunicera med a-kassan, Arbetsförmedlingen och hantera ersättningsfrågor. Lämpligt vid utlandsvistelse eller sjukdom.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 3120,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -1887,7 +1887,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för ombud att hantera ärenden hos Jordbruksverket.",
     longDescription: "Ger ombudet rätt att söka EU-stöd, hantera djurregistrering och kommunicera med Jordbruksverket. Vanligt för lantbruksföretagare.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1340,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -1920,7 +1920,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för ombud att hantera skogsbruksärenden hos Skogsstyrelsen.",
     longDescription: "Ger ombudet rätt att lämna avverkningsanmälan, ansöka om skogsbruksbidrag och kommunicera med Skogsstyrelsen.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 980,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -1953,7 +1953,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för ombud att hantera kontakt med statlig myndighet vid utnämning eller tjänsteanvisning.",
     longDescription: "Ger ombudet rätt att kommunicera med statlig myndighet i tillsättningsärenden, lönefrågor och placering.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 670,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -2019,7 +2019,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för anhörig vid anmälan eller avanmälan från hemvärnet.",
     longDescription: "Ger ombudet rätt att kommunicera med Försvarsmakten/hemvärnet om tjänstgöring, avanmälan eller praktiska frågor.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 540,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -2154,7 +2154,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'boende-vardag',
     description: "Fullmakt för ombud att hantera tomträttsärenden hos kommunen eller Lantmäteriet.",
     longDescription: "Ger ombudet rätt att förhandla, förnya eller överlåta tomträtt åt dig.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1230,
     fields: [
       { id: 'agare_namn', label: 'Fastighetsägarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -2188,7 +2188,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'boende-vardag',
     description: "Fullmakt för ombud att teckna eller förhandla arrendeavtal.",
     longDescription: "Ger ombudet rätt att förhandla, teckna och säga upp arrendeavtal (jordbruks-, anläggnings-, bostads- eller lägenhetsarrende).",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 980,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -2221,7 +2221,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'boende-vardag',
     description: "Fullmakt för ombud att förhandla eller registrera servitut.",
     longDescription: "Ger ombudet rätt att förhandla servitutsavtal och ansöka om officialservitut hos Lantmäteriet.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 850,
     fields: [
       { id: 'agare_namn', label: 'Fastighetsägarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -2457,7 +2457,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'vard-omsorg',
     description: "Vårdnadshavares medgivande för tandreglering av barn under 18.",
     longDescription: "Medgivande som krävs av tandläkaren innan tandreglering (ortodontisk behandling) påbörjas för minderårig. Specificerar behandling, omfattning och kostnad.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 4320,
     fields: [
       { id: 'barn_namn', label: 'Barnets fullständiga namn', type: 'text', placeholder: 'Maja Svensson', required: true, group: 'givare' },
@@ -2492,7 +2492,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'vard-omsorg',
     description: "Medgivande för blodprov eller annan provtagning på minderårig.",
     longDescription: "Vårdnadshavares medgivande till blodprov, urinprov eller annan provtagning på barn. Krävs vid icke-akut provtagning eller forskning.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 2870,
     fields: [
       { id: 'barn_namn', label: 'Barnets fullständiga namn', type: 'text', placeholder: 'Maja Svensson', required: true, group: 'givare' },
@@ -2595,7 +2595,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'vard-omsorg',
     description: "Vårdnadshavares medgivande för vaccination av minderårig.",
     longDescription: "Specificerar vilka vacciner barnet får ta och under vilka omständigheter. Användbart när annan vuxen följer med barnet till vården.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 6540,
     fields: [
       { id: 'barn_namn', label: 'Barnets fullständiga namn', type: 'text', placeholder: 'Maja Svensson', required: true, group: 'givare' },
@@ -2699,7 +2699,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'vard-omsorg',
     description: "Medgivande till estetisk eller kosmetisk behandling.",
     longDescription: "Informerat samtycke till estetiska ingrepp – t.ex. botox, fillers eller plastikkirurgi. Bekräftar att du fått information om risker och alternativ.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1670,
     fields: [
       { id: 'patient_namn', label: 'Patientens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -2733,7 +2733,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'resa-transport',
     description: "Fullmakt för att sälja eller registrera motorcykel.",
     longDescription: "Ger ombudet rätt att hantera ägarbyte, registrering och försäkring för motorcykeln hos Transportstyrelsen.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 2340,
     fields: [
       { id: 'agare_namn', label: 'Fordonsägarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -2767,7 +2767,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'resa-transport',
     description: "Fullmakt för försäljning, registrering eller besiktning av husbil.",
     longDescription: "Ger ombudet rätt att hantera alla husbils-relaterade ärenden – ägarbyte, registrering, försäkring och besiktning.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1890,
     fields: [
       { id: 'agare_namn', label: 'Fordonsägarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -2801,7 +2801,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'resa-transport',
     description: "Fullmakt för försäljning eller registrering av husvagn.",
     longDescription: "Ger ombudet rätt att sälja, anmäla ägarbyte och registrera/avregistrera husvagn hos Transportstyrelsen.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1560,
     fields: [
       { id: 'agare_namn', label: 'Fordonsägarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -2835,7 +2835,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'resa-transport',
     description: "Fullmakt för försäljning eller ägarbyte av snöskoter.",
     longDescription: "Ger ombudet rätt att anmäla ägarbyte, ansöka om registrering och hantera snöskoter-relaterade ärenden.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 980,
     fields: [
       { id: 'agare_namn', label: 'Fordonsägarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -2869,7 +2869,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'resa-transport',
     description: "Fullmakt för registrering, besiktning eller försäljning av traktor.",
     longDescription: "Ger ombudet rätt att hantera traktor-relaterade ärenden hos Transportstyrelsen, inklusive registrering och besiktning.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 870,
     fields: [
       { id: 'agare_namn', label: 'Fordonsägarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -2937,7 +2937,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'resa-transport',
     description: "Fullmakt för registrering av båt hos Transportstyrelsen.",
     longDescription: "Ger ombudet rätt att registrera båt eller anmäla ägarbyte i båtregistret. Krävs för båtar över 5 m längd.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1230,
     fields: [
       { id: 'agare_namn', label: 'Fordonsägarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -2971,7 +2971,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'resa-transport',
     description: "Fullmakt för ATV (terränghjuling) – registrering, ägarbyte, försäljning.",
     longDescription: "Ger ombudet rätt att hantera ATV-/terränghjulings-ärenden hos Transportstyrelsen.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 540,
     fields: [
       { id: 'agare_namn', label: 'Fordonsägarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -3039,7 +3039,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'resa-transport',
     description: "Fullmakt för försäljning, besiktning eller registrering av veteranfordon.",
     longDescription: "Ger ombudet rätt att hantera veteranfordon (över 30 år) hos Transportstyrelsen och försäkringsbolaget.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 450,
     fields: [
       { id: 'agare_namn', label: 'Fordonsägarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -3141,7 +3141,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'digitalt-dodsbo',
     description: "Fullmakt för att avsluta eller överta Spotify-abonnemang.",
     longDescription: "Ger ombudet rätt att kontakta Spotify för att avsluta abonnemang, hämta uppspelningshistorik eller överta familjekonto.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1230,
     fields: [
       { id: 'kontoinnehavare_namn', label: 'Kontoinnehavarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -3209,7 +3209,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'digitalt-dodsbo',
     description: "Fullmakt rörande e-legitimation / Mobilt BankID.",
     longDescription: "Klargör att Mobilt BankID och Freja eID inte kan överlåtas – fullmakten reglerar istället att ombudet kan göra ärenden på fullmaktsgivarens vägnar mot myndigheter och banker.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1780,
     fields: [
       { id: 'kontoinnehavare_namn', label: 'Kontoinnehavarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -3243,7 +3243,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'digitalt-dodsbo',
     description: "Fullmakt för att hantera Microsoft-konto, OneDrive eller Office 365.",
     longDescription: "Ger ombudet rätt att kontakta Microsoft för åtkomst eller avslut av konto, OneDrive-data och Office-licens.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 870,
     fields: [
       { id: 'kontoinnehavare_namn', label: 'Kontoinnehavarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -3379,7 +3379,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för ombud att företräda dig hos svenska eller utländska konsulat.",
     longDescription: "Ger ombudet rätt att kommunicera med Sveriges utlandsmyndigheter (ambassad, konsulat) eller utländska konsulat i Sverige.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1450,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -3481,7 +3481,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för att hantera utlandsflytt – Skatteverket, FK, kommun.",
     longDescription: "Ger ombudet rätt att anmäla utflyttning hos Skatteverket, hantera ärenden hos Försäkringskassan och avsluta löpande abonnemang.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1670,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -3749,7 +3749,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för advokat eller jurist att hantera skuldsanering.",
     longDescription: "Ger ombudet rätt att ansöka om skuldsanering hos Kronofogden, kommunicera med borgenärer och företräda dig i ärendet.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 2870,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -3782,7 +3782,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för ombud att inhämta kreditupplysning.",
     longDescription: "Ger ombudet rätt att inhämta kreditupplysning från UC, Bisnode eller annan kreditupplysningsbyrå för din räkning.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1670,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -3848,7 +3848,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för specifik överföring mellan sparkonton.",
     longDescription: "Specificerad fullmakt för att genomföra en eller flera överföringar från ditt sparkonto. Vanligt vid utlandsvistelse.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 980,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -3881,7 +3881,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för rådgivare att göra crowdfunding-investeringar åt dig.",
     longDescription: "Ger ombudet rätt att investera i crowdfunding-projekt (FundedByMe, Kameo, Tessin etc.) inom angivna ramar och belopp.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 540,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -3914,7 +3914,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för ombud att ansöka om privatlån.",
     longDescription: "Ger ombudet rätt att förbereda och lämna in ansökan om privatlån eller konsumentkredit. Lånebeslutet är personligt och baserat på dina inkomstuppgifter.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 2120,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -3981,7 +3981,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: "Utökad fullmakt för försäkringsärenden – flera bolag och produkter.",
     longDescription: "Ger ombudet rätt att hantera alla dina försäkringar – hem, bil, liv, sjuk- och olycksfall – hos flera försäkringsbolag.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 3450,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -4116,7 +4116,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'digitalt-dodsbo',
     description: "Fullmakt eller önskemål om donation till välgörenhet vid dödsfall.",
     longDescription: "Skriftliga instruktioner om att del av kvarlåtenskapen ska gå till välgörenhet, alternativt fullmakt för anhörig att donera i ditt namn.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 670,
     fields: [
       { id: 'avliden_namn', label: 'Den avlidnes namn (om relevant)', type: 'text', placeholder: 'Anna Svensson', required: false, group: 'givare' },
@@ -4150,7 +4150,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'digitalt-dodsbo',
     description: "Fullmakt för värderingsman att värdera konst eller antikviteter inför arvskifte.",
     longDescription: "Ger en auktoriserad värderingsman rätt att värdera konstverk, antikviteter eller andra dyrbarheter i dödsboet.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 540,
     fields: [
       { id: 'avliden_namn', label: 'Den avlidnes namn (om relevant)', type: 'text', placeholder: 'Anna Svensson', required: false, group: 'givare' },
@@ -4184,7 +4184,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'digitalt-dodsbo',
     description: "Önskemål och fullmakt om vad som ska hända med husdjuren vid dödsfall.",
     longDescription: "Specificerar vem som ska ta över husdjur, hur mycket pengar som avsätts för vård och eventuella veterinärinstruktioner.",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 1230,
     fields: [
       { id: 'avliden_namn', label: 'Den avlidnes namn (om relevant)', type: 'text', placeholder: 'Anna Svensson', required: false, group: 'givare' },
@@ -4252,7 +4252,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'digitalt-dodsbo',
     description: "Fullmakt för andelsägare att rösta i samfällighetsföreningens stämma.",
     longDescription: "Ger ombudet rätt att rösta åt dig vid samfällighetsföreningens stämma – vanligt vid gemensamhetsanläggningar (vägar, vatten, badplatser).",
-    badge: 'gratis',
+    badge: 'standard',
     usageCount: 870,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
@@ -4737,7 +4737,7 @@ export function searchTemplates(query: string): Template[] {
     category: 'Ekonomi & Myndigheter', categorySlug: 'ekonomi-myndigheter',
     description: 'Ger ombud rätt att anmäla skada, följa upp ärendet och ta emot ersättning från försäkringsbolag.',
     longDescription: 'Denna fullmakt ger ditt ombud rätt att anmäla skada, kommunicera med försäkringsbolaget, följa upp ärenden och ta emot skadeersättning för din räkning. Täcker bil-, hem- och olycksfallsförsäkring. Används när du är skadad, utomlands, sjuk eller av annan anledning inte kan hantera skadeanmälan själv. Ombudet kan agera gentemot försäkringsbolagets skadehanteringsavdelning.',
-    badge: 'gratis', usageCount: 5210,
+    badge: 'standard', usageCount: 5210,
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
       { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },

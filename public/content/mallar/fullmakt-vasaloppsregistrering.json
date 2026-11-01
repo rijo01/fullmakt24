@@ -6,7 +6,7 @@
   "categorySlug": "forening-skola",
   "description": "Fullmakt för att registrera sig för Vasaloppet.",
   "longDescription": "En fullmakt för Vasaloppet ger en person befogenhet att registrera sig för skidloppet Vasaloppet.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 432,
   "fields": [
     { "id": "givare_namn", "label": "Deltagaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

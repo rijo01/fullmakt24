@@ -6,7 +6,7 @@
   "categorySlug": "boende-vardag",
   "description": "Fullmakt för att hantera vattenskatt.",
   "longDescription": "En fullmakt för vattenskatt ger en person befogenhet att hantera vattenskatter och vattenledningsärenden.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 432,
   "fields": [
     { "id": "givare_namn", "label": "Fastighetsägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

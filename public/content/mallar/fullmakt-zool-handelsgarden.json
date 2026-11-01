@@ -6,7 +6,7 @@
   "categorySlug": "djur-husdjur",
   "description": "Fullmakt för att köpa djur och tillbehör.",
   "longDescription": "En fullmakt för djurhandel ger en person befogenhet att köpa djur och djurutrustning på din räkning.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 432,
   "fields": [
     { "id": "givare_namn", "label": "Djurägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

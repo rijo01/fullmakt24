@@ -6,7 +6,7 @@
   "categorySlug": "djur-husdjur",
   "description": "Fullmakt för att hantera djurförsäkring för husdjuret.",
   "longDescription": "En fullmakt för djurförsäkring ger en annan person befogenhet att hantera din hunds-, katts- eller andra husdjurs försäkring. Det kan gälla att göra anspråk på veterinärkostnaderna, uppdatera försäkringen eller ge information till försäkringsbolaget. Detta är särskilt användbart om du är sjuk eller ej tillgänglig när djuret behöver vård.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 765,
   "fields": [
     { "id": "givare_namn", "label": "Försäkringstagarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

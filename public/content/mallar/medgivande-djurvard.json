@@ -6,7 +6,7 @@
   "categorySlug": "djur-husdjur",
   "description": "Medgivande för veterinär behandling.",
   "longDescription": "Ett medgivande för djurvård tillåter veterinären att behandla ditt djur.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 543,
   "fields": [
     { "id": "givare_namn", "label": "Djurägarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

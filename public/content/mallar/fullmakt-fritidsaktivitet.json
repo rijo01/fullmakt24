@@ -6,7 +6,7 @@
   "categorySlug": "forening-skola",
   "description": "Fullmakt för att anmäla barn till fritidsaktivitet.",
   "longDescription": "En fullmakt för fritidsaktivitet ger en annan vuxen befogenhet att anmäla ditt barn till fritidsverksamhet, såsom fotboll, dans eller musik. Det kan behövas när du inte kan närvara vid registreringen.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 765,
   "fields": [
     { "id": "givare_namn", "label": "Förälderns namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

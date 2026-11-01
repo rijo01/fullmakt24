@@ -18,7 +18,7 @@
       {"question": "Ersätter medgivandet appens egna inställningar?", "answer": "Nej. Många hälsoappar har egna funktioner för delning eller anhörigåtkomst. Medgivandet är ett komplement som dokumenterar samtycket."},
       {"question": "Får den anhörige dela uppgifterna med vården?", "answer": "Bara om medgivandet anger det. Ange uttryckligen om ombudet får dela hälsodata med vårdgivare eller andra."}
     ],
-    "relatedSearchTerms": ["medgivande hälsoapp", "fullmakt hälsoapp", "hantera hälsodata anhörig", "medgivande hälsoapp pdf", "medgivande digital hälsoapp mall gratis"]
+    "relatedSearchTerms": ["medgivande hälsoapp", "fullmakt hälsoapp", "hantera hälsodata anhörig", "medgivande hälsoapp pdf", "medgivande digital hälsoapp mall"]
   },
   "schema": {
     "faqSchema": true,

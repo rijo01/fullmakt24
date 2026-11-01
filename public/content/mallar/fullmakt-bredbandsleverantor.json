@@ -6,7 +6,7 @@
   "categorySlug": "ekonomi-myndigheter",
   "description": "Fullmakt för att hantera bredbandskontakt.",
   "longDescription": "En fullmakt för bredbandsleverantör ger en person befogenhet att hantera ditt bredbands- eller internetkontrakt.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 765,
   "fields": [
     { "id": "givare_namn", "label": "Kundnamn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

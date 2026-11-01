@@ -6,7 +6,7 @@
   "categorySlug": "boende-vardag",
   "description": "Fullmakt för att representera vid andrahandsuthyrning.",
   "longDescription": "En fullmakt för andrahandsuthyrning ger en person befogenhet att underteckna hyresavtal för andrahandsuthyrning. Det är när du hyr ut din lägenhet vidare till någon annan medan du själv är hyresgäst.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 543,
   "fields": [
     { "id": "givare_namn", "label": "Primär hyresgästens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

@@ -6,7 +6,7 @@
   "categorySlug": "vard-omsorg",
   "description": "Fullmakt för att hantera tandvårdsärenden åt annan.",
   "longDescription": "En fullmakt för tandvård ger en närstående eller juridisk representant befogenhet att hantera dina tandvårdsärenden. Det kan gälla att boka tandläkartider, ge samtyck till behandling, eller godkänna kostnader.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 987,
   "fields": [
     { "id": "givare_namn", "label": "Patientens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

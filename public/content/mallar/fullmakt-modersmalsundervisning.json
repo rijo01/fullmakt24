@@ -6,7 +6,7 @@
   "categorySlug": "forening-skola",
   "description": "Fullmakt för modersmålsundervisning.",
   "longDescription": "En fullmakt för modersmålsundervisning ger en person befogenhet att anmäla ditt barn till modersmålsundervisning.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 432,
   "fields": [
     { "id": "givare_namn", "label": "Föräldrerns namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

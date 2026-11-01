@@ -115,9 +115,6 @@ export default function PriserPage() {
           Betala en gång och ladda ner färdiga PDF:er. Behöver du flera fullmakter
           sparar du på våra paket. Ingen bindningstid, inga dolda avgifter.
         </p>
-        <p className="text-sm text-navy-400 mt-3">
-          Du kan alltid fylla i och förhandsgranska din fullmakt gratis innan du betalar.
-        </p>
       </div>
 
       {/* Pricing grid */}
@@ -187,11 +184,10 @@ export default function PriserPage() {
         <h2 className="text-2xl font-heading font-bold text-navy-500 text-center mb-8">Vanliga frågor om priser</h2>
         <div className="card p-6 space-y-0 divide-y divide-navy-50">
           {[
-            { q: 'Behöver jag skapa ett konto?', a: 'Nej, du kan betala och ladda ner direkt utan konto. Vill du spara dokumentet för framtida redigering kan du skapa ett gratis konto.' },
+            { q: 'Behöver jag skapa ett konto?', a: 'Nej, du kan betala och ladda ner direkt utan konto. Vill du spara dokumentet för framtida redigering kan du skapa ett konto.' },
             { q: 'Vilka betalmetoder accepteras?', a: 'Vi accepterar kort (Visa/Mastercard) och faktura via Klarna.' },
             { q: 'Vad kostar ett enskilt dokument?', a: 'Ett enskilt dokument kostar 99 kr. Behöver du flera lönar sig Familjepaketet (3 st för 249 kr) eller Dödsbo- & anhörigpaketet (5 st för 399 kr).' },
             { q: 'Hur fungerar paketen?', a: 'När du köper ett paket får du 3 eller 5 nedladdningar. Du väljer själv vilka fullmakter du vill skapa och en nedladdning dras av per färdig PDF. Det är ett engångsköp utan abonnemang.' },
-            { q: 'Vad är skillnaden mot förhandsgranskningen?', a: 'Du kan fylla i och förhandsgranska ditt dokument gratis. För att ladda ner den färdiga PDF:en betalar du 99 kr per mall, eller använder en kredit från ditt paket.' },
           ].map(f => (
             <details key={f.q} className="group">
               <summary className="flex items-center justify-between py-4 cursor-pointer list-none">

@@ -18,7 +18,7 @@
       {"question": "Vad händer om barnet skadar sig?", "answer": "Ange en nödkontakt och vad ledaren får besluta vid sjukdom eller olycka, så att rätt åtgärder kan vidtas snabbt."},
       {"question": "Kan föreningen kräva egen blankett?", "answer": "Ja, många föreningar har egna blanketter. Den här mallen täcker samma uppgifter och kan användas när det saknas en sådan."}
     ],
-    "relatedSearchTerms": ["medgivande tävling", "föräldramedgivande tävling", "barn tävling samtycke", "medgivande tävling pdf", "medgivande tävling mall gratis"]
+    "relatedSearchTerms": ["medgivande tävling", "föräldramedgivande tävling", "barn tävling samtycke", "medgivande tävling pdf", "medgivande tävling mall"]
   },
   "schema": {
     "faqSchema": true,

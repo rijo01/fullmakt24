@@ -18,7 +18,7 @@
       {"question": "Gäller fullmakten för hämtning från Kronofogden eller inlösen?", "answer": "Vid utmätning eller inlösen kan särskilda krav gälla. Kontakta den aktuella myndigheten eller företaget i förväg och ange ärendet tydligt i fullmakten."},
       {"question": "Hur länge gäller fullmakten?", "answer": "Den gäller tills den återkallas eller tills angivet slutdatum. För en enstaka uthämtning är det lämpligt att sätta en kort giltighetstid."}
     ],
-    "relatedSearchTerms": ["fullmakt hämta fordon", "fullmakt hämta bil verkstad", "fullmakt hämta bil parkering", "fullmakt fordon pdf", "fullmakt hämta ut fordon mall gratis"]
+    "relatedSearchTerms": ["fullmakt hämta fordon", "fullmakt hämta bil verkstad", "fullmakt hämta bil parkering", "fullmakt fordon pdf", "fullmakt hämta ut fordon mall"]
   },
   "schema": {
     "faqSchema": true,

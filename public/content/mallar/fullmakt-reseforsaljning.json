@@ -6,7 +6,7 @@
   "categorySlug": "resa-transport",
   "description": "Fullmakt för att boka och betala resor.",
   "longDescription": "En fullmakt för reseförsäljning ger en person befogenhet att boka och betala resor på din räkning.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 876,
   "fields": [
     { "id": "givare_namn", "label": "Resenärens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

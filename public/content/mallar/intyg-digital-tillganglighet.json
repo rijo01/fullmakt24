@@ -6,7 +6,7 @@
   "categorySlug": "juridik",
   "description": "Intyg för att bekräfta digital tillgänglighet.",
   "longDescription": "Ett intyg för digital tillgänglighet bekräftar att du har tillgång till vissa digitala tjänster.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 432,
   "fields": [
     { "id": "givare_namn", "label": "Personens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

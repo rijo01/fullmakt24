@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s | Fullmakt24.se',
   },
   description: `${templates.length} mallar för fullmakter och medgivanden, utformade enligt svensk avtalsrätt. Anpassade för svenska förhållanden. Klara att skriva ut och skriva under.`,
-  keywords: ['fullmakt', 'medgivande', 'fullmakt mall', 'fullmakt gratis', 'fullmakt barn', 'fullmakt bank', 'juridiskt dokument', 'Sverige'],
+  keywords: ['fullmakt', 'medgivande', 'fullmakt mall', 'fullmakt barn', 'fullmakt bank', 'juridiskt dokument', 'Sverige'],
   authors: [{ name: 'Fullmakt24.se' }],
   icons: {
     icon: [

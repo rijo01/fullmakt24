@@ -6,7 +6,7 @@
   "categorySlug": "juridik",
   "description": "Intyg för gemensam vårdnad av barn.",
   "longDescription": "Ett intyg för gemensam vårdnad bekräftar att båda föräldrarna är vårdnadshavare för ett barn.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 543,
   "fields": [
     { "id": "givare_namn", "label": "Föräldrern 1 – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

@@ -18,7 +18,7 @@
       {"question": "Vad händer om föräldrarna inte är överens?", "answer": "Vid oenighet mellan föräldrar kan det krävas domstolsbeslut. Vi rekommenderar att konsultera en jurist."},
       {"question": "Gäller fullmakten vid akutsituationer?", "answer": "Vid livsfarlig sjukdom kan sjukvården agera utan fullmakt, men fullmakten underlättar normala medicinska kontakter."}
     ],
-    "relatedSearchTerms": ["barnets sjukvård fullmakt", "läkarfullmakt barn gratis", "medicinsk fullmakt barn", "sjukhus barn fullmakt"]
+    "relatedSearchTerms": ["barnets sjukvård fullmakt", "läkarfullmakt barn", "medicinsk fullmakt barn", "sjukhus barn fullmakt"]
   },
   "schema": {
     "faqSchema": true,

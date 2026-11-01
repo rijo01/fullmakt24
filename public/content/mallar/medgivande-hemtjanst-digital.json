@@ -6,7 +6,7 @@
   "categorySlug": "vard-omsorg",
   "description": "Medgivande för digital hemtjänstövervakning.",
   "longDescription": "Ett medgivande för digital hemtjänst tillåter övervakning och loggning av hemtjänsten digitalt.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 432,
   "fields": [
     { "id": "givare_namn", "label": "Användaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

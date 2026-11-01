@@ -320,9 +320,11 @@ export default function HomePage() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-2xl">{cat?.icon}</span>
-                  <span className={t.badge === 'popular' ? 'badge-popular' : t.badge === 'premium' ? 'badge-premium' : 'badge-gratis'}>
-                    {t.badge === 'popular' ? 'Populär' : t.badge === 'premium' ? 'Premium' : 'Gratis'}
-                  </span>
+                  {t.badge !== 'standard' && (
+                    <span className={t.badge === 'popular' ? 'badge-popular' : 'badge-premium'}>
+                      {t.badge === 'popular' ? 'Populär' : 'Premium'}
+                    </span>
+                  )}
                 </div>
                 <h3 className="font-heading font-bold text-navy-600 text-base mb-2 group-hover:text-gold-600 transition-colors line-clamp-2 flex-1">
                   {t.name}

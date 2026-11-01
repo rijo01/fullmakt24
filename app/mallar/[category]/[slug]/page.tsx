@@ -156,9 +156,11 @@ export default function TemplateDetailPage() {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <span className="text-3xl">{cat?.icon}</span>
-            <span className={t.badge === 'popular' ? 'badge-popular' : t.badge === 'premium' ? 'badge-premium' : 'badge-gratis'}>
-              {t.badge === 'popular' ? 'Populär' : t.badge === 'premium' ? 'Premium' : 'Gratis'}
-            </span>
+            {t.badge !== 'standard' && (
+              <span className={t.badge === 'popular' ? 'badge-popular' : 'badge-premium'}>
+                {t.badge === 'popular' ? 'Populär' : 'Premium'}
+              </span>
+            )}
             <span className="text-sm text-navy-400">{t.usageCount.toLocaleString('sv-SE')} skapade</span>
           </div>
 
@@ -310,7 +312,6 @@ export default function TemplateDetailPage() {
                   <span className="text-navy-400">Pris:</span>
                   <div>
                     <span className="font-bold text-navy-600">99 kr</span>
-                    <span className="text-navy-300 text-xs ml-1">/ gratis med vattenstämpel</span>
                   </div>
                 </div>
                 {t.bilingual && (

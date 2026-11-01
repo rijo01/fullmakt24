@@ -297,14 +297,14 @@ T.append(('fullmakt-bolagsstamma', 'Fullmakt till bolagsstämma', 'ekonomi-myndi
 T.append(('fullmakt-revisor', 'Fullmakt till revisor', 'ekonomi-myndigheter',
     'Fullmakt för revisor att företräda bolaget i revisionsärenden.',
     'Ger den auktoriserade revisorn rätt att inhämta information, kommunicera med Skatteverket och företräda bolaget i revisionsrelaterade ärenden.',
-    'gratis', 2340, 'company', 'Regleras av revisorslagen (2001:883) och Aktiebolagslagen (2005:551) 9 kap.',
+    'standard', 2340, 'company', 'Regleras av revisorslagen (2001:883) och Aktiebolagslagen (2005:551) 9 kap.',
     ['fullmakt revisor', 'revisionsfullmakt', 'fullmakt bolag', 'auktoriserad revisor'],
     [0, 3, 5], None))
 
 T.append(('fullmakt-handelsbolag', 'Fullmakt handelsbolag', 'ekonomi-myndigheter',
     'Fullmakt för bolagsman att företräda handelsbolaget.',
     'Ger en bolagsman eller utomstående rätt att handla för handelsbolagets räkning. Eftersom bolagsmännen har personligt ansvar är detta särskilt viktigt vid större affärer.',
-    'gratis', 1820, 'company', 'Regleras av lagen om handelsbolag och enkla bolag (1980:1102).',
+    'standard', 1820, 'company', 'Regleras av lagen om handelsbolag och enkla bolag (1980:1102).',
     ['fullmakt handelsbolag', 'fullmakt HB', 'bolagsman fullmakt'],
     [0, 5, 6], None))
 
@@ -346,14 +346,14 @@ T.append(('fullmakt-konkurs-ombud', 'Fullmakt vid konkurs', 'ekonomi-myndigheter
 T.append(('fullmakt-patent-arende', 'Fullmakt patentärende', 'ekonomi-myndigheter',
     'Fullmakt för patentombud att hantera patentansökan.',
     'Ger patentombudet (auktoriserat patentkonsult) rätt att lämna in patentansökan, kommunicera med PRV och företräda dig i patentärenden.',
-    'gratis', 1450, 'company', 'Regleras av patentlagen (1967:837) och Patent- och registreringsverkets (PRV) föreskrifter.',
+    'standard', 1450, 'company', 'Regleras av patentlagen (1967:837) och Patent- och registreringsverkets (PRV) föreskrifter.',
     ['fullmakt patent', 'patentombud', 'PRV fullmakt', 'patentansökan ombud'],
     [11, 0, 5], None))
 
 T.append(('fullmakt-varumarke-registrering', 'Fullmakt varumärkesregistrering', 'ekonomi-myndigheter',
     'Fullmakt för ombud att registrera varumärke hos PRV.',
     'Ger ombudet (vanligtvis varumärkesbyrå) rätt att ansöka om, försvara och underhålla varumärket hos PRV eller EUIPO.',
-    'gratis', 1670, 'company', 'Varumärkeslagen (2010:1877) och PRV:s regelverk.',
+    'standard', 1670, 'company', 'Varumärkeslagen (2010:1877) och PRV:s regelverk.',
     ['fullmakt varumärke', 'varumärkesregistrering', 'PRV varumärke', 'EUIPO fullmakt'],
     [10, 0, 5], None))
 
@@ -389,7 +389,7 @@ T.append(('fullmakt-adoption-arende', 'Fullmakt adoption', 'foraldrar-barn',
 T.append(('medgivande-barnpassning-regelbunden', 'Medgivande för regelbunden barnpassning', 'foraldrar-barn',
     'Medgivande för barnvakt, mor-/farförälder eller dagbarnvårdare att passa barnet regelbundet.',
     'Specificerar omfattning, ansvar och tidsperiod för regelbunden barnpassning. Ger barnvakten rätt att fatta vissa vardagliga beslut, hämta från skola, akut sjukvård etc.',
-    'gratis', 5430, 'child', 'Föräldrabalken (1949:381). Vårdnadshavare delegerar inte vårdnaden men ger samtycke till vardagliga beslut.',
+    'standard', 5430, 'child', 'Föräldrabalken (1949:381). Vårdnadshavare delegerar inte vårdnaden men ger samtycke till vardagliga beslut.',
     ['medgivande barnpassning', 'fullmakt barnvakt', 'fullmakt mor-/farförälder barn'],
     [12, 16, 17], None))
 
@@ -403,28 +403,28 @@ T.append(('fullmakt-umgangesratt-ombud', 'Fullmakt umgängesrätt', 'foraldrar-b
 T.append(('fullmakt-vardnadshavare-bistand', 'Fullmakt vårdnadshavare bistånd', 'foraldrar-barn',
     'Fullmakt för annan vuxen att bistå vårdnadshavaren tillfälligt.',
     'Vid sjukdom, resa eller annan tillfällig frånvaro ger denna fullmakt en annan vuxen rätt att bistå med vardagliga beslut, hämta från skola och vid behov söka vård.',
-    'gratis', 4560, 'child', 'Föräldrabalken (1949:381). Vårdnadsansvaret kvarstår hos vårdnadshavaren men beslut kan delegeras.',
+    'standard', 4560, 'child', 'Föräldrabalken (1949:381). Vårdnadsansvaret kvarstår hos vårdnadshavaren men beslut kan delegeras.',
     ['fullmakt vårdnadshavare', 'tillfällig vårdnad fullmakt', 'medgivande barn bistånd'],
     [16, 15, 12], None))
 
 T.append(('fullmakt-sambo-avtal-ombud', 'Fullmakt sambo-avtal', 'foraldrar-barn',
     'Fullmakt för ombud att upprätta eller företräda i sambolagens ärenden.',
     'Ger ombudet rätt att förhandla, upprätta sambo-avtal eller företräda dig i bodelning enligt sambolagen. Lämpligt om du är utomlands eller vill ha juridisk företrädare.',
-    'gratis', 1980, 'standard', 'Sambolagen (2003:376) reglerar samboegendom och bodelning vid separation.',
+    'standard', 1980, 'standard', 'Sambolagen (2003:376) reglerar samboegendom och bodelning vid separation.',
     ['fullmakt sambo', 'sambo-avtal ombud', 'sambolagen fullmakt', 'samboegendom fullmakt'],
     [13, 14, 15], None))
 
 T.append(('fullmakt-foraldraledighet-myndighet', 'Fullmakt föräldraledighet myndighet', 'foraldrar-barn',
     'Fullmakt för partner eller ombud att hantera föräldraledighetsärenden.',
     'Ger ombudet rätt att kommunicera med Försäkringskassan, arbetsgivare och kommunen om föräldrapenning, VAB och föräldraledighet.',
-    'gratis', 3450, 'standard', 'Föräldraledighetslagen (1995:584) och socialförsäkringsbalken (2010:110).',
+    'standard', 3450, 'standard', 'Föräldraledighetslagen (1995:584) och socialförsäkringsbalken (2010:110).',
     ['fullmakt föräldraledighet', 'fullmakt föräldrapenning', 'försäkringskassan föräldraledighet'],
     [15, 16, 17], None))
 
 T.append(('fullmakt-familjeradgivning-ombud', 'Fullmakt familjerådgivning', 'foraldrar-barn',
     'Fullmakt för ombud att begära familjerådgivning hos kommunen.',
     'Ger ombudet rätt att initiera, boka och kommunicera med familjerådgivningen i din kommun. Kan användas vid uppslitande situationer.',
-    'gratis', 1240, 'standard', 'Socialtjänstlagen (2001:453) reglerar familjerådgivning som kommunens ansvar.',
+    'standard', 1240, 'standard', 'Socialtjänstlagen (2001:453) reglerar familjerådgivning som kommunens ansvar.',
     ['fullmakt familjerådgivning', 'kommunal familjerådgivning fullmakt'],
     [15, 13, 19], None))
 
@@ -432,7 +432,7 @@ T.append(('fullmakt-familjeradgivning-ombud', 'Fullmakt familjerådgivning', 'fo
 T.append(('fullmakt-kommun-arende', 'Fullmakt kommunärende', 'ekonomi-myndigheter',
     'Allmän fullmakt för att företräda dig hos kommunen.',
     'Ger ombudet rätt att kommunicera med kommunen i bygglov, bostadsfrågor, försörjningsstöd, äldreomsorg eller annat. Specificera vilken nämnd eller ärendetyp.',
-    'gratis', 5670, 'standard', 'Kommunallagen (2017:725) och förvaltningslagen (2017:900) reglerar kommunens ärendehantering.',
+    'standard', 5670, 'standard', 'Kommunallagen (2017:725) och förvaltningslagen (2017:900) reglerar kommunens ärendehantering.',
     ['fullmakt kommun', 'kommunärende ombud', 'fullmakt kommunala myndigheter'],
     [21, 22, 23], None))
 
@@ -446,21 +446,21 @@ T.append(('fullmakt-lantmateriet', 'Fullmakt Lantmäteriet', 'ekonomi-myndighete
 T.append(('fullmakt-polisanmalan-ombud', 'Fullmakt polisanmälan', 'ekonomi-myndigheter',
     'Fullmakt för ombud att göra polisanmälan i ditt namn.',
     'Ger ombudet rätt att göra polisanmälan, lämna in handlingar och företräda dig i polisärenden. Lämpligt om du är skadad, utomlands eller saknar förmåga.',
-    'gratis', 2890, 'standard', 'Rättegångsbalken (1942:740) reglerar förundersökning och polisanmälan.',
+    'standard', 2890, 'standard', 'Rättegångsbalken (1942:740) reglerar förundersökning och polisanmälan.',
     ['fullmakt polisanmälan', 'polisanmälan ombud', 'fullmakt polisen'],
     [20, 23, 33], None))
 
 T.append(('fullmakt-passfornyelse-vuxen', 'Fullmakt passförnyelse vuxen', 'ekonomi-myndigheter',
     'Fullmakt för annan person att ansöka om passförnyelse för vuxen.',
     'Ger ombudet rätt att hjälpa till med passansökan i begränsade fall – t.ex. vid sjukdom. Notera att passansökan kräver personlig inställelse för fingeravtryck och foto.',
-    'gratis', 1840, 'standard', 'Passlagen (1978:302). Observera: passansökan kräver normalt personlig inställelse.',
+    'standard', 1840, 'standard', 'Passlagen (1978:302). Observera: passansökan kräver normalt personlig inställelse.',
     ['fullmakt pass vuxen', 'passförnyelse fullmakt', 'fullmakt passansökan vuxen'],
     [20, 23, 25], None))
 
 T.append(('fullmakt-csn-ansokan', 'Fullmakt CSN-ärenden', 'ekonomi-myndigheter',
     'Fullmakt för ombud att hantera ärenden hos CSN.',
     'Ger ombudet rätt att ansöka om studielån, kommunicera med CSN och hantera återbetalningsärenden. Vanligt för studenter utomlands eller anhöriga som hjälper.',
-    'gratis', 4230, 'standard', 'Studiestödslagen (1999:1395) reglerar CSN-stöd.',
+    'standard', 4230, 'standard', 'Studiestödslagen (1999:1395) reglerar CSN-stöd.',
     ['fullmakt CSN', 'CSN ombud', 'studielån fullmakt'],
     [20, 26, 27], None))
 
@@ -474,28 +474,28 @@ T.append(('fullmakt-fk-sjukpenning', 'Fullmakt Försäkringskassan sjukpenning',
 T.append(('fullmakt-arbetsloshet-arende', 'Fullmakt arbetslöshet (a-kassa)', 'ekonomi-myndigheter',
     'Fullmakt för ombud att hantera a-kasseärende.',
     'Ger ombudet rätt att kommunicera med a-kassan, Arbetsförmedlingen och hantera ersättningsfrågor. Lämpligt vid utlandsvistelse eller sjukdom.',
-    'gratis', 3120, 'standard', 'Lag om arbetslöshetsförsäkring (1997:238).',
+    'standard', 3120, 'standard', 'Lag om arbetslöshetsförsäkring (1997:238).',
     ['fullmakt a-kassa', 'fullmakt arbetslöshet', 'fullmakt arbetsförmedlingen'],
     [25, 26, 41], None))
 
 T.append(('fullmakt-jordbruksverket', 'Fullmakt Jordbruksverket', 'ekonomi-myndigheter',
     'Fullmakt för ombud att hantera ärenden hos Jordbruksverket.',
     'Ger ombudet rätt att söka EU-stöd, hantera djurregistrering och kommunicera med Jordbruksverket. Vanligt för lantbruksföretagare.',
-    'gratis', 1340, 'standard', 'Jordbruksverkets verksamhet regleras av miljöbalken, djurskyddslagen och EU:s jordbrukspolitik.',
+    'standard', 1340, 'standard', 'Jordbruksverkets verksamhet regleras av miljöbalken, djurskyddslagen och EU:s jordbrukspolitik.',
     ['fullmakt Jordbruksverket', 'lantbruksstöd fullmakt', 'EU-stöd fullmakt'],
     [28, 30, 31], None))
 
 T.append(('fullmakt-skogsstyrelsen', 'Fullmakt Skogsstyrelsen', 'ekonomi-myndigheter',
     'Fullmakt för ombud att hantera skogsbruksärenden hos Skogsstyrelsen.',
     'Ger ombudet rätt att lämna avverkningsanmälan, ansöka om skogsbruksbidrag och kommunicera med Skogsstyrelsen.',
-    'gratis', 980, 'standard', 'Skogsvårdslagen (1979:429) och Skogsstyrelsens föreskrifter.',
+    'standard', 980, 'standard', 'Skogsvårdslagen (1979:429) och Skogsstyrelsens föreskrifter.',
     ['fullmakt Skogsstyrelsen', 'avverkningsanmälan fullmakt', 'skogsbruk ombud'],
     [27, 29, 31], None))
 
 T.append(('fullmakt-statlig-tjanst-anvisning', 'Fullmakt statlig tjänsteanvisning', 'ekonomi-myndigheter',
     'Fullmakt för ombud att hantera kontakt med statlig myndighet vid utnämning eller tjänsteanvisning.',
     'Ger ombudet rätt att kommunicera med statlig myndighet i tillsättningsärenden, lönefrågor och placering.',
-    'gratis', 670, 'standard', 'Lag (1994:260) om offentlig anställning och statstjänstemannalagen.',
+    'standard', 670, 'standard', 'Lag (1994:260) om offentlig anställning och statstjänstemannalagen.',
     ['fullmakt statlig anställning', 'tjänsteanvisning fullmakt'],
     [25, 26, 31], None))
 
@@ -509,7 +509,7 @@ T.append(('fullmakt-vapenlicens-ombud', 'Fullmakt vapenlicens', 'ekonomi-myndigh
 T.append(('fullmakt-hemvarnet-anmalan', 'Fullmakt hemvärnet anmälan', 'ekonomi-myndigheter',
     'Fullmakt för anhörig vid anmälan eller avanmälan från hemvärnet.',
     'Ger ombudet rätt att kommunicera med Försvarsmakten/hemvärnet om tjänstgöring, avanmälan eller praktiska frågor.',
-    'gratis', 540, 'standard', 'Förordning (1997:147) med instruktion för Försvarsmakten och Hemvärnsförordningen (1997:146).',
+    'standard', 540, 'standard', 'Förordning (1997:147) med instruktion för Försvarsmakten och Hemvärnsförordningen (1997:146).',
     ['fullmakt hemvärnet', 'fullmakt Försvarsmakten', 'hemvärnsärende ombud'],
     [30, 33, 31], None))
 
@@ -538,21 +538,21 @@ T.append(('fullmakt-inteckning-pantbrev', 'Fullmakt inteckning och pantbrev', 'b
 T.append(('fullmakt-tomtratt-ombud', 'Fullmakt tomträtt', 'boende-vardag',
     'Fullmakt för ombud att hantera tomträttsärenden hos kommunen eller Lantmäteriet.',
     'Ger ombudet rätt att förhandla, förnya eller överlåta tomträtt åt dig.',
-    'gratis', 1230, 'realestate', 'Jordabalken (1970:994) 13 kap. om tomträtt.',
+    'standard', 1230, 'realestate', 'Jordabalken (1970:994) 13 kap. om tomträtt.',
     ['fullmakt tomträtt', 'tomträtt ombud', 'fullmakt kommun tomt'],
     [34, 32, 33], None))
 
 T.append(('fullmakt-arrende-avtal', 'Fullmakt arrende', 'boende-vardag',
     'Fullmakt för ombud att teckna eller förhandla arrendeavtal.',
     'Ger ombudet rätt att förhandla, teckna och säga upp arrendeavtal (jordbruks-, anläggnings-, bostads- eller lägenhetsarrende).',
-    'gratis', 980, 'standard', 'Jordabalken (1970:994) 7-11 kap. om arrende.',
+    'standard', 980, 'standard', 'Jordabalken (1970:994) 7-11 kap. om arrende.',
     ['fullmakt arrende', 'arrende ombud', 'jordbruksarrende fullmakt'],
     [36, 37, 38], None))
 
 T.append(('fullmakt-servitut-anlaggning', 'Fullmakt servitut', 'boende-vardag',
     'Fullmakt för ombud att förhandla eller registrera servitut.',
     'Ger ombudet rätt att förhandla servitutsavtal och ansöka om officialservitut hos Lantmäteriet.',
-    'gratis', 850, 'realestate', 'Jordabalken (1970:994) 14 kap. om servitut och fastighetsbildningslagen.',
+    'standard', 850, 'realestate', 'Jordabalken (1970:994) 14 kap. om servitut och fastighetsbildningslagen.',
     ['fullmakt servitut', 'officialservitut fullmakt', 'servitut Lantmäteriet'],
     [32, 35, 37], None))
 
@@ -602,14 +602,14 @@ T.append(('fullmakt-vardonskemal', 'Fullmakt vårdönskemål', 'vard-omsorg',
 T.append(('medgivande-tandreglering-barn', 'Medgivande tandreglering barn', 'vard-omsorg',
     'Vårdnadshavares medgivande för tandreglering av barn under 18.',
     'Medgivande som krävs av tandläkaren innan tandreglering (ortodontisk behandling) påbörjas för minderårig. Specificerar behandling, omfattning och kostnad.',
-    'gratis', 4320, 'child', 'Tandvårdslagen (1985:125) och patientlagen (2014:821).',
+    'standard', 4320, 'child', 'Tandvårdslagen (1985:125) och patientlagen (2014:821).',
     ['medgivande tandreglering', 'tandreglering barn fullmakt', 'ortodonti barn samtycke'],
     [45, 47, 46], None))
 
 T.append(('medgivande-blodprov-barn', 'Medgivande blodprov barn', 'vard-omsorg',
     'Medgivande för blodprov eller annan provtagning på minderårig.',
     'Vårdnadshavares medgivande till blodprov, urinprov eller annan provtagning på barn. Krävs vid icke-akut provtagning eller forskning.',
-    'gratis', 2870, 'child', 'Patientlagen (2014:821) 4 kap. och lag (2003:460) om etikprövning av forskning på människor.',
+    'standard', 2870, 'child', 'Patientlagen (2014:821) 4 kap. och lag (2003:460) om etikprövning av forskning på människor.',
     ['medgivande blodprov barn', 'provtagning barn samtycke', 'forskning på barn medgivande'],
     [43, 45, 47], None))
 
@@ -630,7 +630,7 @@ T.append(('medgivande-organdonation-levande', 'Medgivande organdonation levande'
 T.append(('medgivande-vaccin-barn', 'Medgivande vaccination barn', 'vard-omsorg',
     'Vårdnadshavares medgivande för vaccination av minderårig.',
     'Specificerar vilka vacciner barnet får ta och under vilka omständigheter. Användbart när annan vuxen följer med barnet till vården.',
-    'gratis', 6540, 'child', 'Smittskyddslagen (2004:168) och patientlagen (2014:821).',
+    'standard', 6540, 'child', 'Smittskyddslagen (2004:168) och patientlagen (2014:821).',
     ['medgivande vaccin barn', 'vaccination samtycke', 'fullmakt vaccinera barn'],
     [44, 45, 47], None))
 
@@ -651,7 +651,7 @@ T.append(('medgivande-genetisk-testning', 'Medgivande genetisk testning', 'vard-
 T.append(('medgivande-estetisk-behandling', 'Medgivande estetisk behandling', 'vard-omsorg',
     'Medgivande till estetisk eller kosmetisk behandling.',
     'Informerat samtycke till estetiska ingrepp – t.ex. botox, fillers eller plastikkirurgi. Bekräftar att du fått information om risker och alternativ.',
-    'gratis', 1670, 'medical', 'Patientsäkerhetslagen (2010:659) och Inspektionen för vård och omsorgs (IVO) tillsyn.',
+    'standard', 1670, 'medical', 'Patientsäkerhetslagen (2010:659) och Inspektionen för vård och omsorgs (IVO) tillsyn.',
     ['medgivande estetisk behandling', 'samtycke skönhetsbehandling', 'plastikkirurgi samtycke'],
     [41, 42, 47], None))
 
@@ -659,35 +659,35 @@ T.append(('medgivande-estetisk-behandling', 'Medgivande estetisk behandling', 'v
 T.append(('fullmakt-mc-agarbyte', 'Fullmakt MC ägarbyte', 'resa-transport',
     'Fullmakt för att sälja eller registrera motorcykel.',
     'Ger ombudet rätt att hantera ägarbyte, registrering och försäkring för motorcykeln hos Transportstyrelsen.',
-    'gratis', 2340, 'vehicle', None,
+    'standard', 2340, 'vehicle', None,
     ['fullmakt MC', 'motorcykel ägarbyte', 'fullmakt sälja MC'],
     [55, 56, 57], None))
 
 T.append(('fullmakt-husbil-arende', 'Fullmakt husbil', 'resa-transport',
     'Fullmakt för försäljning, registrering eller besiktning av husbil.',
     'Ger ombudet rätt att hantera alla husbils-relaterade ärenden – ägarbyte, registrering, försäkring och besiktning.',
-    'gratis', 1890, 'vehicle', None,
+    'standard', 1890, 'vehicle', None,
     ['fullmakt husbil', 'husbil försäljning', 'husbil registrering ombud'],
     [54, 56, 57], None))
 
 T.append(('fullmakt-husvagn-forsaljning', 'Fullmakt husvagn försäljning', 'resa-transport',
     'Fullmakt för försäljning eller registrering av husvagn.',
     'Ger ombudet rätt att sälja, anmäla ägarbyte och registrera/avregistrera husvagn hos Transportstyrelsen.',
-    'gratis', 1560, 'vehicle', None,
+    'standard', 1560, 'vehicle', None,
     ['fullmakt husvagn', 'husvagn försäljning', 'husvagn ägarbyte'],
     [54, 55, 57], None))
 
 T.append(('fullmakt-snoskoter-agarbyte', 'Fullmakt snöskoter ägarbyte', 'resa-transport',
     'Fullmakt för försäljning eller ägarbyte av snöskoter.',
     'Ger ombudet rätt att anmäla ägarbyte, ansöka om registrering och hantera snöskoter-relaterade ärenden.',
-    'gratis', 980, 'vehicle', None,
+    'standard', 980, 'vehicle', None,
     ['fullmakt snöskoter', 'snöskoter ägarbyte', 'fullmakt snowmobile'],
     [54, 58, 59], None))
 
 T.append(('fullmakt-traktor-registrering', 'Fullmakt traktor registrering', 'resa-transport',
     'Fullmakt för registrering, besiktning eller försäljning av traktor.',
     'Ger ombudet rätt att hantera traktor-relaterade ärenden hos Transportstyrelsen, inklusive registrering och besiktning.',
-    'gratis', 870, 'vehicle', None,
+    'standard', 870, 'vehicle', None,
     ['fullmakt traktor', 'traktor registrering', 'traktor ägarbyte'],
     [58, 59, 53], None))
 
@@ -701,14 +701,14 @@ T.append(('fullmakt-epa-traktor', 'Fullmakt EPA-traktor', 'resa-transport',
 T.append(('fullmakt-bat-registrering-2026', 'Fullmakt båtregistrering 2026', 'resa-transport',
     'Fullmakt för registrering av båt hos Transportstyrelsen.',
     'Ger ombudet rätt att registrera båt eller anmäla ägarbyte i båtregistret. Krävs för båtar över 5 m längd.',
-    'gratis', 1230, 'vehicle', 'Lag (1979:377) om registrering av båtar för yrkesmässig sjöfart m.m. samt sjötrafikförordningen.',
+    'standard', 1230, 'vehicle', 'Lag (1979:377) om registrering av båtar för yrkesmässig sjöfart m.m. samt sjötrafikförordningen.',
     ['fullmakt båt', 'båtregistrering 2026', 'båt ägarbyte'],
     [56, 58, 57], None))
 
 T.append(('fullmakt-atv-arende', 'Fullmakt ATV', 'resa-transport',
     'Fullmakt för ATV (terränghjuling) – registrering, ägarbyte, försäljning.',
     'Ger ombudet rätt att hantera ATV-/terränghjulings-ärenden hos Transportstyrelsen.',
-    'gratis', 540, 'vehicle', None,
+    'standard', 540, 'vehicle', None,
     ['fullmakt ATV', 'fullmakt terränghjuling', 'ATV ägarbyte'],
     [54, 56, 57], None))
 
@@ -722,7 +722,7 @@ T.append(('fullmakt-lastbil-foretag', 'Fullmakt lastbil företag', 'resa-transpo
 T.append(('fullmakt-veteranfordon-arende', 'Fullmakt veteranfordon', 'resa-transport',
     'Fullmakt för försäljning, besiktning eller registrering av veteranfordon.',
     'Ger ombudet rätt att hantera veteranfordon (över 30 år) hos Transportstyrelsen och försäkringsbolaget.',
-    'gratis', 450, 'vehicle', None,
+    'standard', 450, 'vehicle', None,
     ['fullmakt veteranfordon', 'veteranbil ägarbyte', 'historiskt fordon fullmakt'],
     [54, 55, 56], None))
 
@@ -744,7 +744,7 @@ T.append(('fullmakt-apple-id-dodsbo', 'Fullmakt Apple ID dödsbo', 'digitalt-dod
 T.append(('fullmakt-spotify-abonnemang', 'Fullmakt Spotify-abonnemang', 'digitalt-dodsbo',
     'Fullmakt för att avsluta eller överta Spotify-abonnemang.',
     'Ger ombudet rätt att kontakta Spotify för att avsluta abonnemang, hämta uppspelningshistorik eller överta familjekonto.',
-    'gratis', 1230, 'digital', None,
+    'standard', 1230, 'digital', None,
     ['fullmakt Spotify', 'Spotify dödsbo', 'avsluta abonnemang fullmakt'],
     [64, 65, 67], None))
 
@@ -758,14 +758,14 @@ T.append(('fullmakt-bankapp-tillgang', 'Fullmakt bankapp tillgång', 'digitalt-d
 T.append(('fullmakt-e-legitimation', 'Fullmakt e-legitimation', 'digitalt-dodsbo',
     'Fullmakt rörande e-legitimation / Mobilt BankID.',
     'Klargör att Mobilt BankID och Freja eID inte kan överlåtas – fullmakten reglerar istället att ombudet kan göra ärenden på fullmaktsgivarens vägnar mot myndigheter och banker.',
-    'gratis', 1780, 'digital', 'BankID-koden är personlig enligt avtal med utfärdaren. Fullmakter ersätter inte e-legitimation utan kompletterar.',
+    'standard', 1780, 'digital', 'BankID-koden är personlig enligt avtal med utfärdaren. Fullmakter ersätter inte e-legitimation utan kompletterar.',
     ['fullmakt e-legitimation', 'fullmakt BankID', 'Freja eID fullmakt'],
     [67, 27, 32], None))
 
 T.append(('fullmakt-microsoft-konto', 'Fullmakt Microsoft-konto', 'digitalt-dodsbo',
     'Fullmakt för att hantera Microsoft-konto, OneDrive eller Office 365.',
     'Ger ombudet rätt att kontakta Microsoft för åtkomst eller avslut av konto, OneDrive-data och Office-licens.',
-    'gratis', 870, 'digital', None,
+    'standard', 870, 'digital', None,
     ['fullmakt Microsoft', 'Microsoft-konto fullmakt', 'OneDrive dödsbo'],
     [64, 65, 70], None))
 
@@ -794,7 +794,7 @@ T.append(('fullmakt-apostille-ansokan', 'Fullmakt apostille', 'ekonomi-myndighet
 T.append(('fullmakt-konsulat-arende', 'Fullmakt konsulat', 'ekonomi-myndigheter',
     'Fullmakt för ombud att företräda dig hos svenska eller utländska konsulat.',
     'Ger ombudet rätt att kommunicera med Sveriges utlandsmyndigheter (ambassad, konsulat) eller utländska konsulat i Sverige.',
-    'gratis', 1450, 'international', 'Wienkonventionen om konsulära förbindelser (1963) och Sveriges utlandsmyndigheter.',
+    'standard', 1450, 'international', 'Wienkonventionen om konsulära förbindelser (1963) och Sveriges utlandsmyndigheter.',
     ['fullmakt konsulat', 'fullmakt ambassad', 'konsulärt ärende ombud'],
     [72, 74, 75], None))
 
@@ -815,7 +815,7 @@ T.append(('fullmakt-oversatt-internationell', 'Översatt internationell fullmakt
 T.append(('fullmakt-utlandsflytt-myndighet', 'Fullmakt utlandsflytt', 'ekonomi-myndigheter',
     'Fullmakt för att hantera utlandsflytt – Skatteverket, FK, kommun.',
     'Ger ombudet rätt att anmäla utflyttning hos Skatteverket, hantera ärenden hos Försäkringskassan och avsluta löpande abonnemang.',
-    'gratis', 1670, 'international', None,
+    'standard', 1670, 'international', None,
     ['fullmakt utlandsflytt', 'fullmakt utvandring', 'utflyttningsanmälan ombud'],
     [25, 41, 72], None))
 
@@ -872,14 +872,14 @@ T.append(('fullmakt-borgensatagande', 'Fullmakt borgensåtagande', 'ekonomi-mynd
 T.append(('fullmakt-skuldsanering-ombud', 'Fullmakt skuldsanering', 'ekonomi-myndigheter',
     'Fullmakt för advokat eller jurist att hantera skuldsanering.',
     'Ger ombudet rätt att ansöka om skuldsanering hos Kronofogden, kommunicera med borgenärer och företräda dig i ärendet.',
-    'gratis', 2870, 'financial', 'Skuldsaneringslagen (2016:675).',
+    'standard', 2870, 'financial', 'Skuldsaneringslagen (2016:675).',
     ['fullmakt skuldsanering', 'fullmakt Kronofogden skuldsanering', 'skuldsanering ombud'],
     [85, 87, 27], None))
 
 T.append(('fullmakt-kreditupplysning', 'Fullmakt kreditupplysning', 'ekonomi-myndigheter',
     'Fullmakt för ombud att inhämta kreditupplysning.',
     'Ger ombudet rätt att inhämta kreditupplysning från UC, Bisnode eller annan kreditupplysningsbyrå för din räkning.',
-    'gratis', 1670, 'financial', 'Kreditupplysningslagen (1973:1173).',
+    'standard', 1670, 'financial', 'Kreditupplysningslagen (1973:1173).',
     ['fullmakt kreditupplysning', 'UC fullmakt', 'fullmakt Bisnode'],
     [82, 84, 5], None))
 
@@ -893,21 +893,21 @@ T.append(('fullmakt-pensionssparande', 'Fullmakt pensionssparande', 'ekonomi-myn
 T.append(('fullmakt-sparkonto-overforing', 'Fullmakt sparkonto överföring', 'ekonomi-myndigheter',
     'Fullmakt för specifik överföring mellan sparkonton.',
     'Specificerad fullmakt för att genomföra en eller flera överföringar från ditt sparkonto. Vanligt vid utlandsvistelse.',
-    'gratis', 980, 'financial', None,
+    'standard', 980, 'financial', None,
     ['fullmakt sparkonto', 'fullmakt överföring bank', 'sparkonto ombud'],
     [82, 83, 5], None))
 
 T.append(('fullmakt-crowdfunding-investering', 'Fullmakt crowdfunding-investering', 'ekonomi-myndigheter',
     'Fullmakt för rådgivare att göra crowdfunding-investeringar åt dig.',
     'Ger ombudet rätt att investera i crowdfunding-projekt (FundedByMe, Kameo, Tessin etc.) inom angivna ramar och belopp.',
-    'gratis', 540, 'financial', 'Lag (2019:1215) om viss verksamhet med konsumentkrediter och EU:s crowdfunding-förordning (EU 2020/1503).',
+    'standard', 540, 'financial', 'Lag (2019:1215) om viss verksamhet med konsumentkrediter och EU:s crowdfunding-förordning (EU 2020/1503).',
     ['fullmakt crowdfunding', 'investering ombud', 'fullmakt Kameo Tessin'],
     [80, 82, 5], None))
 
 T.append(('fullmakt-privatlan-ansokan', 'Fullmakt privatlån', 'ekonomi-myndigheter',
     'Fullmakt för ombud att ansöka om privatlån.',
     'Ger ombudet rätt att förbereda och lämna in ansökan om privatlån eller konsumentkredit. Lånebeslutet är personligt och baserat på dina inkomstuppgifter.',
-    'gratis', 2120, 'financial', 'Konsumentkreditlagen (2010:1846).',
+    'standard', 2120, 'financial', 'Konsumentkreditlagen (2010:1846).',
     ['fullmakt privatlån', 'fullmakt konsumentkredit', 'privatlån ombud'],
     [82, 84, 85], None))
 
@@ -921,7 +921,7 @@ T.append(('fullmakt-foretagslan-ansokan', 'Fullmakt företagslån', 'ekonomi-myn
 T.append(('fullmakt-forsakringsarende-utokad', 'Fullmakt försäkringsärende utökad', 'ekonomi-myndigheter',
     'Utökad fullmakt för försäkringsärenden – flera bolag och produkter.',
     'Ger ombudet rätt att hantera alla dina försäkringar – hem, bil, liv, sjuk- och olycksfall – hos flera försäkringsbolag.',
-    'gratis', 3450, 'financial', 'Försäkringsavtalslagen (2005:104).',
+    'standard', 3450, 'financial', 'Försäkringsavtalslagen (2005:104).',
     ['fullmakt försäkring', 'fullmakt försäkringsbolag', 'försäkringsärende ombud'],
     [82, 27, 5], None))
 
@@ -950,21 +950,21 @@ T.append(('fullmakt-bouppteckningsforrattare', 'Fullmakt bouppteckningsförrätt
 T.append(('fullmakt-donation-valgorenhet', 'Fullmakt donation välgörenhet', 'digitalt-dodsbo',
     'Fullmakt eller önskemål om donation till välgörenhet vid dödsfall.',
     'Skriftliga instruktioner om att del av kvarlåtenskapen ska gå till välgörenhet, alternativt fullmakt för anhörig att donera i ditt namn.',
-    'gratis', 670, 'estate', 'Ärvdabalken (1958:637). Universella testamentstagare kan vara välgörenhetsorganisationer.',
+    'standard', 670, 'estate', 'Ärvdabalken (1958:637). Universella testamentstagare kan vara välgörenhetsorganisationer.',
     ['fullmakt donation', 'donera arv välgörenhet', 'fullmakt välgörenhet'],
     [92, 93, 95], None))
 
 T.append(('fullmakt-konst-vardering-arvskifte', 'Fullmakt konstvärdering vid arvskifte', 'digitalt-dodsbo',
     'Fullmakt för värderingsman att värdera konst eller antikviteter inför arvskifte.',
     'Ger en auktoriserad värderingsman rätt att värdera konstverk, antikviteter eller andra dyrbarheter i dödsboet.',
-    'gratis', 540, 'estate', 'Ärvdabalken (1958:637) 23 kap. om arvskifte.',
+    'standard', 540, 'estate', 'Ärvdabalken (1958:637) 23 kap. om arvskifte.',
     ['fullmakt värdering konst', 'arvskifte värderingsman', 'fullmakt antikviteter'],
     [93, 94, 95], None))
 
 T.append(('fullmakt-husdjur-dodsfall', 'Fullmakt husdjur vid dödsfall', 'digitalt-dodsbo',
     'Önskemål och fullmakt om vad som ska hända med husdjuren vid dödsfall.',
     'Specificerar vem som ska ta över husdjur, hur mycket pengar som avsätts för vård och eventuella veterinärinstruktioner.',
-    'gratis', 1230, 'estate', 'Djurskyddslagen (2018:1192) och ärvdabalken (1958:637).',
+    'standard', 1230, 'estate', 'Djurskyddslagen (2018:1192) och ärvdabalken (1958:637).',
     ['fullmakt husdjur dödsfall', 'husdjur vid dödsfall', 'fullmakt hund katt'],
     [92, 93, 97], None))
 
@@ -978,7 +978,7 @@ T.append(('fullmakt-begravningsbyra-ombud', 'Fullmakt begravningsbyrå', 'digita
 T.append(('fullmakt-andelar-samfallighet', 'Fullmakt andelar samfällighet', 'digitalt-dodsbo',
     'Fullmakt för andelsägare att rösta i samfällighetsföreningens stämma.',
     'Ger ombudet rätt att rösta åt dig vid samfällighetsföreningens stämma – vanligt vid gemensamhetsanläggningar (vägar, vatten, badplatser).',
-    'gratis', 870, 'standard', 'Lag (1973:1150) om förvaltning av samfälligheter.',
+    'standard', 870, 'standard', 'Lag (1973:1150) om förvaltning av samfälligheter.',
     ['fullmakt samfällighet', 'samfällighetsförening stämma', 'andelsägare fullmakt'],
     [49, 2, 36], None))
 
@@ -1124,7 +1124,7 @@ def seo_json(tpl, id_):
             'howToGuide': how_to,
             'commonMistakes': common_mistakes,
             'faq': [{'question': q, 'answer': a} for q, a in faqs],
-            'relatedSearchTerms': kw + [f'{name.lower()} pdf', f'{name.lower()} mall gratis'],
+            'relatedSearchTerms': kw + [f'{name.lower()} pdf', f'{name.lower()} mall'],
         },
         'schema': {
             'faqSchema': True,

@@ -6,7 +6,7 @@
   "categorySlug": "vard-omsorg",
   "description": "Fullmakt för att skriva in på vaccinering.",
   "longDescription": "En fullmakt för vaccinering ger en person befogenhet att skriva in barn eller äldre för vaccinering.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 876,
   "fields": [
     { "id": "givare_namn", "label": "Föräldrern/Vårdgivaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

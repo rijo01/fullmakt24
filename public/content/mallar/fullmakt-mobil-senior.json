@@ -6,7 +6,7 @@
   "categorySlug": "seniorer-omsorg",
   "description": "Fullmakt för att hantera mobil- och telefonkontakt åt senior.",
   "longDescription": "En fullmakt för mobiloperatör ger en familjemedlem eller vårdare befogenhet att hantera mobiltelefon- och telefonkontakt för en äldre person. Det kan gälla betalning, att aktivera/deaktivera tjänster, eller att lösa tekniska problem.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 1543,
   "fields": [
     { "id": "givare_namn", "label": "Kundens namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "givare" },

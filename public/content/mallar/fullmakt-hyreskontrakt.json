@@ -6,7 +6,7 @@
   "categorySlug": "boende-vardag",
   "description": "Fullmakt för att representera vid hyreskontrakt.",
   "longDescription": "En fullmakt för hyreskontrakt ger en person befogenhet att underteckna hyresavtal på din räkning. Det kan gälla vid uthyrning eller förminskad egen möjlighet att närvara vid kontraktssignering.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 876,
   "fields": [
     { "id": "givare_namn", "label": "Fastighetsägarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

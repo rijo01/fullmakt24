@@ -6,7 +6,7 @@
   "categorySlug": "forening-skola",
   "description": "Medgivande för att deltaga i tävling.",
   "longDescription": "Ett medgivande för tävling bekräftar att barnet kan deltaga i en idötts- eller andra tävlingar.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 876,
   "fields": [
     { "id": "givare_namn", "label": "Föräldrens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

@@ -6,7 +6,7 @@
   "categorySlug": "ekonomi-myndigheter",
   "description": "Fullmakt för att hantera telefon- och internetabonnemang åt annan.",
   "longDescription": "En fullmakt för telefon- och internetabonnemang låter en betrodd person agera för din räkning gentemot telejournaloperatörer och internetleverantörer. Detta kan behövas när du inte kan personligen kontakta leverantören för att ändra abonnemang, betala fakturor eller lösa tekniska problem.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 2145,
   "fields": [
     { "id": "givare_namn", "label": "Kundnamn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },

@@ -2,7 +2,7 @@
   "slug": "fullmakt-apotek",
   "seo": {
     "title": "Fullmakt för apotek – Hämta ut recept åt annan 2025",
-    "metaDescription": "Skapa fullmakt för att hämta ut recept på apotek. Gratis mall, utformad enligt svensk lag. Klar på 3 minuter. Ladda ner PDF direkt.",
+    "metaDescription": "Skapa fullmakt för att hämta ut recept på apotek. Mall utformad enligt svensk lag. Klar på 3 minuter. Ladda ner PDF direkt.",
     "h1": "Fullmakt för apotek – Hämta ut recept åt annan 2025",
     "keywords": ["fullmakt apotek", "hämta ut recept åt annan", "apoteksfullmakt", "fullmakt recept", "fullmakt apotek mall"]
   },
@@ -18,7 +18,7 @@
       {"question": "Hur länge gäller en apoteksfullmakt?", "answer": "Fullmakten gäller under den period du anger. Vi rekommenderar max 6 månader åt gången, sedan kan du enkelt skapa en ny."},
       {"question": "Kan jag använda fullmakten på nätapotek?", "answer": "Nätapotek som Apotea och Meds hanterar detta annorlunda – de kräver ofta att uthämtningen görs via fullmaktsgivarens BankID eller e-legitimation. Vår fullmakt fungerar bäst vid fysiska apoteksbesök."}
     ],
-    "relatedSearchTerms": ["fullmakt apotek mall", "hämta medicin åt annan", "apoteksfullmakt pdf", "fullmakt recept gratis"]
+    "relatedSearchTerms": ["fullmakt apotek mall", "hämta medicin åt annan", "apoteksfullmakt pdf", "fullmakt recept"]
   },
   "schema": { "faqSchema": true, "howToSchema": true, "breadcrumbSchema": true },
   "internalLinks": [

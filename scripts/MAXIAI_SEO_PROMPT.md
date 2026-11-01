@@ -65,7 +65,7 @@ Generera en JSON-fil med exakt denna struktur:
 
 ### SEO-regler
 - H1 ska innehålla primärt sökord + "Mall" eller "Fullmakt" + årtal
-- Meta-beskrivning: exakt 150-160 tecken, inkludera CTA ("Skapa gratis", "Ladda ner direkt")
+- Meta-beskrivning: exakt 150-160 tecken, inkludera CTA ("Skapa online", "Ladda ner direkt"). Påstå aldrig att mallarna är gratis eller kostnadsfria – nedladdning kostar 99 kr.
 - Naturlig sökordsanvändning, aldrig keyword stuffing
 - Varje FAQ-fråga ska matcha hur folk faktiskt söker på Google
 - Inkludera long-tail sökord i texten
@@ -90,9 +90,9 @@ För mall "Fullmakt för bankärenden":
   "slug": "fullmakt-bank",
   "seo": {
     "title": "Fullmakt för bankärenden – Mall & Guide 2025 | Fullmakt24.se",
-    "metaDescription": "Skapa fullmakt för bankärenden gratis. Juridiskt granskad mall anpassad för svenska banker. Klar på 3 minuter. Ladda ner som PDF direkt.",
+    "metaDescription": "Skapa fullmakt för bankärenden online. Juridiskt granskad mall anpassad för svenska banker. Klar på 3 minuter. Ladda ner som PDF direkt.",
     "h1": "Fullmakt för bankärenden – Mall & Guide 2025",
-    "keywords": ["fullmakt bank", "bankfullmakt", "fullmakt bankärenden mall", "fullmakt bank gratis", "fullmakt handelsbanken"]
+    "keywords": ["fullmakt bank", "bankfullmakt", "fullmakt bankärenden mall", "fullmakt handelsbanken"]
   },
   "content": {
     "introduction": "En fullmakt för bankärenden ger en annan person rätt att agera för din räkning hos banken. Det kan handla om allt från att hämta ut kontoutdrag till att hantera överföringar och kontaktärenden.\n\nDet finns många situationer där en bankfullmakt behövs. Kanske är du utomlands och behöver någon som sköter dina bankärenden hemma, eller så hjälper du en äldre förälder som har svårt att ta sig till banken. Oavsett anledning är det viktigt att fullmakten är korrekt utformad – annars riskerar banken att neka den.",
@@ -106,7 +106,7 @@ För mall "Fullmakt för bankärenden":
       {"question": "Behöver bankfullmakten bevittnas?", "answer": "Det är inte lagkrav men rekommenderas starkt. Två vittnen ger fullmakten extra juridisk tyngd och gör det lättare att få den accepterad."},
       {"question": "Kan jag ge fullmakt för att ta lån?", "answer": "Ja, men det kräver en specifik och detaljerad fullmakt. Vi rekommenderar att konsultera en jurist vid lånerelaterade fullmakter."}
     ],
-    "relatedSearchTerms": ["bankfullmakt mall gratis", "fullmakt swish", "fullmakt handelsbanken"]
+    "relatedSearchTerms": ["bankfullmakt mall", "fullmakt swish", "fullmakt handelsbanken"]
   },
   "schema": {
     "faqSchema": true,

@@ -6,7 +6,7 @@
   "categorySlug": "seniorer-omsorg",
   "description": "Fullmakt att hantera Kivra/e-Boks åt annan.",
   "longDescription": "En fullmakt för digital brevlåda är viktig när du behöver låta någon annan hantera dina digitala brev och meddelanden från myndigheter, banker och försäkringsbolag. Genom tjänster som Kivra eller e-Boks kan du få officiella brev digitalt. Med denna fullmakt ger du en betrodd person (ofta familjemedlem, vårdare eller äldreomsorg) befogenhet att läsa och förvalta dina digitala brev när du inte kan göra det själv.",
-  "badge": "gratis",
+  "badge": "standard",
   "usageCount": 4321,
   "fields": [
     { "id": "givare_namn", "label": "Brevlådans ägare – namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "givare" },
