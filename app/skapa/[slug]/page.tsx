@@ -486,7 +486,7 @@ export default function SkapaPage() {
 
                     {/* Disclaimer – mall, inte juridisk rådgivning */}
                     <p className="mt-4 max-w-sm mx-auto text-[11px] leading-relaxed text-navy-400 text-left">
-                      Detta är en mall, inte individuell juridisk rådgivning. Mallen är utformad enligt svensk avtalsrätt för vanliga situationer. Vid komplexa eller ovanliga ärenden rekommenderar vi att du kontaktar en jurist.
+                      Detta är en mall, inte individuell juridisk rådgivning. Mallen är utformad {t.legalBasisLabel ? t.legalBasisLabel.charAt(0).toLowerCase() + t.legalBasisLabel.slice(1) : 'enligt svensk avtalsrätt'} för vanliga situationer. Vid komplexa eller ovanliga ärenden rekommenderar vi att du kontaktar en jurist.
                     </p>
                   </div>
 

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
-import { templates, categories } from '@/data/templates'
-import fs from 'fs'
-import path from 'path'
+import { templates } from '@/data/templates'
+import { loadTemplateSeo } from '@/lib/template-seo'
 
 interface Props {
   params: Promise<{ category: string; slug: string }>
@@ -15,29 +14,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: 'Mall hittades inte | Fullmakt24.se' }
   }
 
-  const cat = categories.find(c => c.slug === t.categorySlug)
+  const seo = await loadTemplateSeo(slug)
 
-  // Try to read SEO content from JSON file
-  let seoTitle = ''
-  let seoDescription = ''
-  try {
-    const filePath = path.join(process.cwd(), 'public', 'content', 'mallar', `${slug}.json`)
-    const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
-    seoTitle = data.seo?.title || ''
-    seoDescription = data.seo?.metaDescription || ''
-  } catch {
-    // No SEO content file, use generated title
-  }
-
-  const title = seoTitle || `${t.name} – Mall & Guide 2025 | Fullmakt24.se`
+  // JSON-titeln används precis som den är skriven (absolute = ingen extra
+  // titelmall från rotlayouten). Reservtexten används bara när mallen saknar
+  // JSON eller SEO-titel, och innehåller varken årtal eller påståenden om
+  // rättslig grund.
+  const title = seo?.title?.trim() || `${t.name} – mall att fylla i | Fullmakt24.se`
 
   // Tvåspråkiga mallar säljs som svensk original + engelsk översättning. Det är
   // ett eget sökintresse ("fullmakt på engelska"), så det ska med i beskrivningen
   // även när mallen saknar egen SEO-text.
   const fallbackDescription = t.bilingual
-    ? `${t.name} – mall enligt svensk avtalsrätt. Finns på svenska + engelska för utlandsbruk. Klar på 3 minuter, ladda ner som PDF.`
-    : `${t.name}: ${t.description} Mall utformad enligt svensk avtalsrätt för ${cat?.name?.toLowerCase() || 'svenska förhållanden'}. Skapa och ladda ner som PDF.`
-  const description = seoDescription || fallbackDescription
+    ? `${t.name} – svensk mall med engelsk översättning för utlandsbruk. Fyll i uppgifterna och ladda ner som PDF.`
+    : `${t.name}: ${t.description} Fyll i uppgifterna och ladda ner som PDF.`
+  const description = seo?.metaDescription?.trim() || fallbackDescription
 
   // Canonical URL – the single authoritative URL for each mall (template's true
   // category), so duplicate/cross-category paths point back here and Google
@@ -45,15 +36,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonical = `https://fullmakt24.se/mallar/${t.categorySlug}/${t.slug}`
 
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: {
       canonical,
     },
+    // openGraph och twitter ersätter rotlayoutens objekt helt, så de fält som
+    // ska ärvas (bild, sajtnamn, korttyp) måste anges här också.
     openGraph: {
+      type: 'website',
+      locale: 'sv_SE',
+      siteName: 'Fullmakt24.se',
       title,
       description,
       url: canonical,
+      images: [{ url: 'https://fullmakt24.se/og-image.png', width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
     },
   }
 }

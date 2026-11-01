@@ -30,6 +30,8 @@ export interface Template {
   mutual?: boolean;
   /** Egna rubriker för formulärets partsavsnitt. */
   groupLabels?: { givare: string; givareHelp: string; havare: string; havareHelp: string };
+  /** Rättslig grund som visas i köprutan på mallsidan. Standard: "Enligt svensk avtalsrätt". */
+  legalBasisLabel?: string;
 }
 
 /** Engelsk version av en malls standardtexter. Användarens egna uppgifter översätts aldrig. */
@@ -648,6 +650,7 @@ function generateTemplates(): Template[] {
     usageCount: 14520,
     documentTitle: 'FRAMTIDSFULLMAKT',
     documentKind: 'framtidsfullmakt',
+    legalBasisLabel: 'Enligt lag (2017:310) om framtidsfullmakter',
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
       { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅÅÅMMDD-XXXX', required: true, group: 'givare' },
@@ -1355,6 +1358,7 @@ function generateTemplates(): Template[] {
     usageCount: 9870,
     documentTitle: 'FRAMTIDSFULLMAKT',
     documentKind: 'framtidsfullmakt',
+    legalBasisLabel: 'Enligt lag (2017:310) om framtidsfullmakter',
     mutual: true,
     groupLabels: {
       givare: 'Make, maka eller sambo 1',
