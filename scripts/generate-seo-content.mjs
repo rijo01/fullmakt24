@@ -8,7 +8,7 @@
  * 
  * This script generates the template data that MaxiAI uses to create content.
  * MaxiAI calls this to get the list of templates needing content, then
- * generates JSON files in /content/mallar/
+ * generates JSON files in /public/content/mallar/
  */
 
 import fs from 'fs'
@@ -82,7 +82,7 @@ const allTemplates = [
   { id: 117, slug: 'fullmakt-digital-dodsboforvaltning', name: 'Fullmakt för digital dödsboförvaltning', categorySlug: 'digitalt-dodsbo', description: 'Fullmakt att hantera dödsboets digitala tillgångar.' },
 ]
 
-const contentDir = path.join(process.cwd(), 'content', 'mallar')
+const contentDir = path.join(process.cwd(), 'public', 'content', 'mallar')
 
 // Ensure directory exists
 if (!fs.existsSync(contentDir)) {

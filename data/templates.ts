@@ -265,7 +265,6 @@ function generateTemplates(): Template[] {
     { id: 42, slug: 'fullmakt-forsikringskassan', name: 'Fullmakt för Försäkringskassan', description: 'Fullmakt att företräda person hos Försäkringskassan.' },
     { id: 43, slug: 'fullmakt-journalhantering', name: 'Fullmakt för journalhantering', description: 'Fullmakt att begära ut journalhandlingar.' },
     { id: 44, slug: 'fullmakt-rehabilitering', name: 'Fullmakt för rehabilitering', description: 'Fullmakt att hantera rehabiliteringsärenden.' },
-    { id: 45, slug: 'medgivande-organdonation', name: 'Medgivande för organdonation', description: 'Intyg om önskemål gällande organdonation.' },
     { id: 46, slug: 'fullmakt-psykiatrisk-vard', name: 'Fullmakt för psykiatrisk vård', description: 'Fullmakt att hantera kontakter med psykiatrisk vård.' },
     { id: 47, slug: 'fullmakt-privat-vardgivare', name: 'Fullmakt för privat vårdgivare', description: 'Fullmakt gentemot privat vårdgivare.' },
     { id: 48, slug: 'medgivande-delad-journalinfo', name: 'Medgivande för delad journalinformation', description: 'Medgivande att dela journalinformation med annan part.' },
@@ -4248,8 +4247,6 @@ function generateTemplates(): Template[] {
     'medgivande-hyrbil': ['Är denna fullmakt giltig hos myndigheter?'],
     'fullmakt-flygbolag': ['Är denna fullmakt giltig hos myndigheter?'],
     'medgivande-samakande': ['Är denna fullmakt giltig hos myndigheter?'],
-    // Vård & omsorg: intyg om önskemål, inte en fullmakt
-    'medgivande-organdonation': ['Godtar vården den här fullmakten?', 'Kan fullmaktshavaren ta medicinska beslut?', 'Behöver den vara bevittnad?', 'Gäller den hos alla vårdgivare?', 'Hur återkallar jag fullmakten?'],
     // Boende & vardag
     'fullmakt-bostadskop': ['Kan hyresvärden neka?'],
     'fullmakt-bostadsforsaljning': ['Kan hyresvärden neka?'],

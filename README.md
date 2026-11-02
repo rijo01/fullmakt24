@@ -75,17 +75,17 @@ Skicka API-nyckel till MaxiAI för:
 | Blogg | `/blogg` | ✅ Klar |
 | Sitemap | `/sitemap.xml` | ✅ Auto |
 
-## 124 Mallar i 9 Kategorier
+## Mallkategorier
 
-- 👨‍👩‍👧‍👦 Föräldrar & Barn (20)
-- ✈️ Resa & Transport (15)
-- 🏥 Vård & Omsorg (15)
-- 💼 Ekonomi, Bank & Myndigheter (20)
-- 🏠 Boende & Vardag (15)
-- ⚽ Förening, Skola & Fritid (15)
-- 🐾 Djur & Husdjur (8)
-- 👴 Seniorer & Digital Omsorg (8)
-- 💻 Digitalt & Dödsbo (8)
+- 👨‍👩‍👧‍👦 Föräldrar & Barn
+- ✈️ Resa & Transport
+- 🏥 Vård & Omsorg
+- 💼 Ekonomi, Bank & Myndigheter
+- 🏠 Boende & Vardag
+- ⚽ Förening, Skola & Fritid
+- 🐾 Djur & Husdjur
+- 👴 Seniorer & Digital Omsorg
+- 💻 Digitalt & Dödsbo
 
 ## Nästa steg
 

@@ -2,8 +2,8 @@
 
 ## ÖVERSIKT
 
-MaxiAI genererar SEO-optimerat innehåll för alla 124 mallsidor på Fullmakt24.se.
-Innehållet sparas som JSON-filer i `/content/mallar/` och committas till GitHub.
+MaxiAI genererar SEO-optimerat innehåll för mallsidorna på Fullmakt24.se.
+Innehållet sparas som JSON-filer i `public/content/mallar/` och committas till GitHub.
 Vercel auto-deployar vid varje push.
 
 ## DAGLIGT SCHEMA
@@ -23,12 +23,12 @@ Du ska generera SEO-innehåll för Fullmakt24.se.
 
 Läs instruktionerna i scripts/MAXIAI_SEO_PROMPT.md i repot rijo01/fullmakt24.
 
-Kolla vilka mallar i content/mallar/ som SAKNAR en .json-fil.
+Kolla vilka mallar i public/content/mallar/ som SAKNAR en .json-fil.
 
 Generera innehåll för de 5 första mallarna som saknar innehåll, baserat på
 template-data i data/templates.ts.
 
-Spara varje mall som content/mallar/{slug}.json
+Spara varje mall som public/content/mallar/{slug}.json
 
 Committa med meddelande: "SEO: Lagt till innehåll för [mallnamn1], [mallnamn2], ..."
 
@@ -67,8 +67,8 @@ Pusha till main-branchen.
 
 ```bash
 cd ~/Projects/fullmakt24
-# Skapa/uppdatera JSON-filer i content/mallar/
-git add content/mallar/
+# Skapa/uppdatera JSON-filer i public/content/mallar/
+git add public/content/mallar/
 git commit -m "SEO: Lagt till innehåll för [lista av mallar]"
 git push origin main
 ```
@@ -124,8 +124,8 @@ content/
 ```
 
 ### Att JSON-filerna servas via Next.js:
-Filerna i `content/mallar/` behöver vara tillgängliga via `/content/mallar/[slug].json`.
-Konfigurera i `next.config.js` eller lägg dem i `public/content/mallar/`.
+Filerna ligger i `public/content/mallar/` och servas som `/content/mallar/[slug].json`.
+Mallsidan läser dem på servern via `lib/template-seo.ts`. Katalogen `content/mallar/` används inte längre.
 
 ## MÄTVÄRDEN
 
