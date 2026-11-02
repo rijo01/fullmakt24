@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Integritetspolicy – Fullmakt24.se',
-  description: 'Läs om hur Fullmakt24.se behandlar dina personuppgifter i enlighet med GDPR. Vi värnar om din integritet.',
+  description: 'Läs om hur Fullmakt24.se behandlar dina personuppgifter och vilka rättigheter du har.',
 }
 
 export default function IntegritetPage() {

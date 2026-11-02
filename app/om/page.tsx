@@ -34,7 +34,7 @@ export default function OmPage() {
 
           <h2 className="font-heading font-bold text-navy-500 text-xl mt-10 mb-4">Trygghet och kvalitet</h2>
           <p className="text-navy-400 leading-relaxed">
-            Alla betalningar hanteras säkert via Stripe med stöd för kort, Apple Pay och Klarna. Vi lagrar aldrig dina betaluppgifter. Dina dokumentdata behandlas konfidentiellt i enlighet med GDPR och vår integritetspolicy.
+            Alla betalningar hanteras säkert via Stripe med stöd för kort, Apple Pay och Klarna. Vi lagrar aldrig dina betaluppgifter. Hur vi behandlar personuppgifter beskrivs i vår integritetspolicy.
           </p>
 
           <div className="bg-gold-50 border border-gold-200 rounded-xl p-6 my-8">

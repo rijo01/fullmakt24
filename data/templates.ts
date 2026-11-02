@@ -291,7 +291,7 @@ function generateTemplates(): Template[] {
         { q: 'Hur återkallar jag fullmakten?', a: 'Meddela fullmaktshavaren och berörda vårdgivare skriftligt.' },
       ],
       relatedIds: [],
-      legalInfo: 'Giltig enligt patientlagen och svensk hälso- och sjukvårdslagstiftning.',
+      legalInfo: 'Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.',
       keywords: ['fullmakt vård', 'sjukvård', 'apotek', 'medicinsk fullmakt'],
     } as Template);
   });
@@ -339,7 +339,7 @@ function generateTemplates(): Template[] {
         { q: 'Vad händer om fullmaktsgivaren blir beslutsoförmögen?', a: 'En vanlig fullmakt upphör om fullmaktsgivaren förlorar sin beslutsförmåga. Överväg en framtidsfullmakt för sådana situationer.' },
       ],
       relatedIds: [],
-      legalInfo: 'Giltig enligt avtalslagen och tillämplig svensk banklagstiftning.',
+      legalInfo: 'Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.',
       keywords: ['fullmakt bank', 'myndighet', 'ekonomi', 'skatteverket'],
     } as Template);
   });
@@ -381,7 +381,7 @@ function generateTemplates(): Template[] {
         { q: 'Kan jag ändra fullmakten i efterhand?', a: 'Ja, du kan alltid upprätta en ny fullmakt som ersätter den tidigare.' },
       ],
       relatedIds: [],
-      legalInfo: 'Giltig enligt jordabalken och hyreslagen.',
+      legalInfo: 'Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.',
       keywords: ['fullmakt bostad', 'hyreskontrakt', 'bostadsrätt', 'boende'],
     } as Template);
   });
@@ -459,7 +459,7 @@ function generateTemplates(): Template[] {
         { q: 'Behöver den bevittnas?', a: 'Nej, men det kan rekommenderas vid omfattande fullmakter.' },
       ],
       relatedIds: [],
-      legalInfo: 'Giltig enligt svensk djurskyddslagstiftning.',
+      legalInfo: 'Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.',
       keywords: ['fullmakt djur', 'veterinär', 'husdjur'],
     } as Template);
   });
@@ -529,7 +529,7 @@ function generateTemplates(): Template[] {
         { q: 'Gäller fullmakten internationellt?', a: 'Den gäller i Sverige men utländska tjänster kan ha andra krav.' },
       ],
       relatedIds: [],
-      legalInfo: 'Giltig enligt svensk arvsrätt och tillämplig digital lagstiftning.',
+      legalInfo: 'Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.',
       keywords: ['fullmakt dödsbo', 'digitalt arv', 'kryptovaluta', 'sociala medier'],
     } as Template);
   });
@@ -544,7 +544,7 @@ function generateTemplates(): Template[] {
     category: 'Boende & Vardag',
     categorySlug: 'boende-vardag',
     description: 'Fullmakt för en ombud att sälja din bostadsrätt eller hyresrätt åt dig, inklusive signera köpekontrakt.',
-    longDescription: 'Kan du inte närvara vid en bostadsrättsförsäljning? Denna fullmakt ger ditt ombud rätten att underteckna köpekontrakt, sköta kontakter med mäklare och köpare, och hantera allt kring försäljningen. Används vid sjukdom, utlandsvistelse eller om du av andra skäl inte kan vara på plats. Notera: Säljfullmakt för fast egendom (villa) kräver notariell bekräftelse – denna mall avser bostadsrätt.',
+    longDescription: 'Kan du inte närvara vid en bostadsrättsförsäljning? Denna fullmakt ger ditt ombud rätten att underteckna köpekontrakt, sköta kontakter med mäklare och köpare, och hantera allt kring försäljningen. Används vid sjukdom, utlandsvistelse eller om du av andra skäl inte kan vara på plats. Notera: mallen avser bostadsrätt. För fast egendom (villa) ska en fullmakt att sälja vara skriftlig (27 § andra stycket avtalslagen (1915:218)).',
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
       { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
@@ -557,13 +557,13 @@ function generateTemplates(): Template[] {
     ],
     faq: [
       { q: 'Kan jag ge någon fullmakt att sälja min bostadsrätt?', a: 'Ja. Fullmakt för bostadsrättsförsäljning är juridiskt giltig. Ombudet kan underteckna köpekontrakt och överlåtelsehandlingar. Mäklaren och BRF:en måste godkänna fullmakten och ombudet.' },
-      { q: 'Krävs notarie för säljfullmakt?', a: 'För bostadsrätt: normalt nej – en bevittnad fullmakt räcker. För fast egendom (villa, tomt): ja, säljfullmakt kräver bevittning av två vittnen och ska notariellt bekräftas hos domstol.' },
+      { q: 'Krävs notarie för säljfullmakt?', a: 'Inte enligt jordabalken. För fast egendom (villa, tomt) ska en fullmakt att sälja vara skriftlig (27 § andra stycket avtalslagen (1915:218)), och är säljarens underskrift på köpehandlingen inte bevittnad av två vittnen förklaras lagfartsansökan vilande (20 kap. 7 § 1 jordabalken (1970:994)). För bostadsrätt avgör mäklaren, köparen och föreningen vilka krav de har på fullmakten, så kontrollera med dem i förväg.' },
       { q: 'Kan jag ange ett lägsta pris i fullmakten?', a: 'Ja, och det rekommenderas. Ange ett minimipris – ombudet kan inte acceptera ett bud under det utan att kontakta dig. Det skyddar dig mot oönskad försäljning till underpris.' },
       { q: 'Hur lång ska fullmaktens giltighetstid vara?', a: 'Välj "Till försäljning genomförd" om du inte vet hur lång tid det tar. Välj en fast period om du vill ha kontroll – då löper uppdraget ut om försäljningen inte genomförts.' },
       { q: 'Vad händer om ombudet missköter sig?', a: 'Ombudet ansvarar för handlingar utförda med stöd av fullmakten. Har ombudet handlat utanför fullmaktens befogenhet kan du bestrida handlingen. Anlita alltid någon du litar på.' },
     ],
     relatedIds: [126, 127],
-    legalInfo: 'Gäller för bostadsrätt. Fast egendom kräver notariell bekräftelse (JB 4 kap. 3 §).',
+    legalInfo: 'Gäller för bostadsrätt. Fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)).',
     keywords: ['fullmakt lägenhet', 'sälja bostadsrätt fullmakt', 'fullmakt mäklare', 'fullmakt bostad'],
   } as Template);
 
@@ -706,7 +706,7 @@ function generateTemplates(): Template[] {
     faq: [
       { q: 'Vad kan en generalfullmakt användas till?', a: 'En generalfullmakt ger fullmaktshavaren rätt att hantera bankärenden, skriva avtal, företräda dig hos myndigheter, sälja eller köpa lös egendom och mycket mer – om du inte specifikt undantar något.' },
       { q: 'Kan generalfullmakten ge rätt att sälja min bostad?', a: 'Ja, om inget undantag anges kan fullmaktshavaren i princip sälja fast egendom. Vill du förhindra detta, lägg till ett undantag i fullmakten.' },
-      { q: 'Måste en generalfullmakt registreras?', a: 'Nej, det finns ingen obligatorisk registrering. Vissa banker och myndigheter kan kräva att fullmakten är bevittnad eller notariellt bekräftad.' },
+      { q: 'Måste en generalfullmakt registreras?', a: 'Nej, det finns ingen obligatorisk registrering. Vissa banker och myndigheter kan kräva att fullmakten är bevittnad eller bestyrkt.' },
       { q: 'Hur återkallar man en generalfullmakt?', a: 'Meddela fullmaktshavaren skriftligen och informera berörda institutioner (bank, myndigheter). Generalfullmakten upphör automatiskt om du förlorar rättslig handlingsförmåga – då behövs framtidsfullmakt istället.' },
       { q: 'Är en generalfullmakt giltig efter dödsfall?', a: 'Nej. En fullmakt upphör alltid vid fullmaktsgivarens dödsfall. Dödsboet hanteras av dödsbodelägarna gemensamt eller via boutredningsman.' },
     ],
@@ -742,7 +742,7 @@ function generateTemplates(): Template[] {
       { q: 'Räcker dödsfallsintyget istället för fullmakt?', a: 'Dödsfallsintyget bevisar dödsfallet men ger inte automatiskt befogenhet att agera. Fullmakt krävs för att en specifik person ska kunna agera för dödsboet.' },
     ],
     relatedIds: [125, 126],
-    legalInfo: 'Grundas på ärvdabalken (1958:637). Kräver samtycke från samtliga dödsbodelägare.',
+    legalInfo: 'Dödsbodelägarna förvaltar gemensamt den dödes egendom under boets utredning (18 kap. 1 § ärvdabalken (1958:637)).',
     keywords: ['dödsbo fullmakt', 'fullmakt arvinge', 'hantera dödsbo', 'dödsbodelägare fullmakt', 'arvinge fullmakt bank'],
   } as Template);
 
@@ -770,7 +770,7 @@ function generateTemplates(): Template[] {
       { q: 'Vad händer om hyresvärden nekar trots fullmakt?', a: 'Fullmakten ger representationsrätt, inte rätt att få ansökan bifören. Vid felaktigt avslag: vänd dig till Hyresnämnden.' },
     ],
     relatedIds: [128, 130],
-    legalInfo: 'Hyreslägen (JB 12 kap.) reglerar hyresgästens rättigheter.',
+    legalInfo: 'Hyreslagen (12 kap. jordabalken (1970:994)) reglerar hyresgästens rättigheter.',
     keywords: ['fullmakt hyresrätt', 'lägenhetsbyte fullmakt', 'andrahandsuthyrning fullmakt'],
   } as Template);
 
@@ -798,7 +798,7 @@ function generateTemplates(): Template[] {
       { q: 'Måste fullmakten bevittnas för sjukvård?', a: 'Rekommenderas. För känsliga uppgifter kan vårdgivaren kräva bevittning.' },
     ],
     relatedIds: [125, 126],
-    legalInfo: 'Regleras av Patientlagen (2014:821) och patientdatalagen (2008:355).',
+    legalInfo: 'Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Patientdatalagen (2008:355) innehåller bestämmelser om skyldighet att föra patientjournal (1 kap. 1 §).',
     keywords: ['sjukvårdsfullmakt', 'fullmakt vård', 'fullmakt apotek'],
   } as Template);
 
@@ -1169,7 +1169,7 @@ function generateTemplates(): Template[] {
       { q: "Gäller fullmakten vid VD-byte?", a: "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte." },
     ],
     relatedIds: [137, 143, 145],
-    legalInfo: "Regleras av prokuralagen (1974:158). Ska registreras hos Bolagsverket för att vara fullt gällande mot tredje man.",
+    legalInfo: "Regleras av prokuralagen (1974:158). Om registrering av prokura finns bestämmelser i handelsregisterlagen (1974:157) (1 § prokuralagen).",
     keywords: ["prokura", "fullmakt prokura", "näringsfullmakt", "prokuralagen"],
   } as Template);
 
@@ -1265,7 +1265,7 @@ function generateTemplates(): Template[] {
       { q: "Gäller fullmakten vid VD-byte?", a: "Det beror på fullmaktens utformning. Om fullmakten utfärdats av bolaget (inte personligen av VD) gäller den vidare efter VD-byte." },
     ],
     relatedIds: [148, 137, 142],
-    legalInfo: "Regleras av patentlagen (1967:837) och Patent- och registreringsverkets (PRV) föreskrifter.",
+    legalInfo: "Regleras av patentlagen (2024:945) och Patent- och registreringsverkets (PRV) föreskrifter.",
     keywords: ["fullmakt patent", "patentombud", "PRV fullmakt", "patentansökan ombud"],
   } as Template);
 
@@ -1454,7 +1454,7 @@ function generateTemplates(): Template[] {
       { q: "Behöver fullmakten registreras?", a: "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar." },
     ],
     relatedIds: [151, 153, 154],
-    legalInfo: "Föräldrabalken (1949:381) 4 kap. om adoption och lag (1997:191) om internationell adoption.",
+    legalInfo: "Föräldrabalken (1949:381) 4 kap. om adoption och lag (1997:191) med anledning av Sveriges tillträde till Haagkonventionen om skydd av barn och samarbete vid internationella adoptioner.",
     keywords: ["fullmakt adoption", "adoption ombud", "MFoF fullmakt"],
   } as Template);
 
@@ -1487,7 +1487,7 @@ function generateTemplates(): Template[] {
       { q: "Vad om vårdnadshavarna är osams?", a: "Vid oenighet kan saken avgöras av tingsrätten. Familjerätten kan också medla via socialnämnden." },
     ],
     relatedIds: [149, 153, 154],
-    legalInfo: "Föräldrabalken (1949:381). Vårdnadshavare delegerar inte vårdnaden men ger samtycke till vardagliga beslut.",
+    legalInfo: "Vårdnadshavaren har rätt och skyldighet att bestämma i frågor som rör barnets personliga angelägenheter (6 kap. 11 § föräldrabalken (1949:381)).",
     keywords: ["medgivande barnpassning", "fullmakt barnvakt", "fullmakt mor-/farförälder barn"],
   } as Template);
 
@@ -1551,7 +1551,7 @@ function generateTemplates(): Template[] {
       { q: "Vad om vårdnadshavarna är osams?", a: "Vid oenighet kan saken avgöras av tingsrätten. Familjerätten kan också medla via socialnämnden." },
     ],
     relatedIds: [153, 152, 149],
-    legalInfo: "Föräldrabalken (1949:381). Vårdnadsansvaret kvarstår hos vårdnadshavaren men beslut kan delegeras.",
+    legalInfo: "Vårdnadshavaren har rätt och skyldighet att bestämma i frågor som rör barnets personliga angelägenheter (6 kap. 11 § föräldrabalken (1949:381)).",
     keywords: ["fullmakt vårdnadshavare", "tillfällig vårdnad fullmakt", "medgivande barn bistånd"],
   } as Template);
 
@@ -1644,7 +1644,7 @@ function generateTemplates(): Template[] {
       { q: "Behöver fullmakten registreras?", a: "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar." },
     ],
     relatedIds: [152, 150, 156],
-    legalInfo: "Socialtjänstlagen (2001:453) reglerar familjerådgivning som kommunens ansvar.",
+    legalInfo: "Socialtjänstlagen (2025:400) 13 kap. 4 § reglerar familjerådgivning som kommunens ansvar.",
     keywords: ["fullmakt familjerådgivning", "kommunal familjerådgivning fullmakt"],
   } as Template);
 
@@ -1700,7 +1700,7 @@ function generateTemplates(): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['3 månader', '6 månader', '1 år', 'Till uppdrag slutfört'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: "Krävs bevittning för fastighetsfullmakt?", a: "Vid försäljning av fast egendom krävs två vittnen och notariell bekräftelse enligt jordabalken (JB 4 kap. 3 §)." },
+      { q: "Krävs bevittning för fastighetsfullmakt?", a: "Fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)). Köpehandlingen ska skrivas under av säljaren och köparen (4 kap. 1 § jordabalken (1970:994)), och är säljarens underskrift inte bevittnad av två vittnen förklaras lagfartsansökan vilande (20 kap. 7 § 1 jordabalken)." },
       { q: "Kan ombudet skriva under köpekontrakt?", a: "Ja, om fullmakten specifikt anger detta och är korrekt bevittnad. Banker och Lantmäteriet kan ställa egna krav." },
       { q: "Hur länge gäller fastighetsfullmakten?", a: "Den kan gälla en bestämd tid eller tills uppdraget är slutfört. För säkerhet rekommenderas en uttrycklig tidsgräns." },
       { q: "Vad händer om priset blir lägre än önskat?", a: "Ange ett minimipris i fullmakten. Ombudet kan inte gå under utan ditt godkännande – annars handlar de utanför fullmakten." },
@@ -1769,7 +1769,7 @@ function generateTemplates(): Template[] {
       { q: "Behöver fullmakten registreras?", a: "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar." },
     ],
     relatedIds: [157, 160, 162],
-    legalInfo: "Passlagen (1978:302). Observera: passansökan kräver normalt personlig inställelse.",
+    legalInfo: "Passlagen (1978:302). Observera: sökanden är skyldig att inställa sig personligen (6 §).",
     keywords: ["fullmakt pass vuxen", "passförnyelse fullmakt", "fullmakt passansökan vuxen"],
   } as Template);
 
@@ -1862,7 +1862,7 @@ function generateTemplates(): Template[] {
       { q: "Behöver fullmakten registreras?", a: "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar." },
     ],
     relatedIds: [162, 163, 178],
-    legalInfo: "Lag om arbetslöshetsförsäkring (1997:238).",
+    legalInfo: "Lag (2024:506) om arbetslöshetsförsäkring.",
     keywords: ["fullmakt a-kassa", "fullmakt arbetslöshet", "fullmakt arbetsförmedlingen"],
   } as Template);
 
@@ -1893,7 +1893,7 @@ function generateTemplates(): Template[] {
       { q: "Behöver fullmakten registreras?", a: "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar." },
     ],
     relatedIds: [165, 167, 168],
-    legalInfo: "Jordbruksverkets verksamhet regleras av miljöbalken, djurskyddslagen och EU:s jordbrukspolitik.",
+    legalInfo: "Den som är part i ett ärende får anlita ombud (14 § förvaltningslagen (2017:900)).",
     keywords: ["fullmakt Jordbruksverket", "lantbruksstöd fullmakt", "EU-stöd fullmakt"],
   } as Template);
 
@@ -1955,7 +1955,7 @@ function generateTemplates(): Template[] {
       { q: "Behöver fullmakten registreras?", a: "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar." },
     ],
     relatedIds: [162, 163, 168],
-    legalInfo: "Lag (1994:260) om offentlig anställning och statstjänstemannalagen.",
+    legalInfo: "Lag (1994:260) om offentlig anställning.",
     keywords: ["fullmakt statlig anställning", "tjänsteanvisning fullmakt"],
   } as Template);
 
@@ -1986,7 +1986,7 @@ function generateTemplates(): Template[] {
       { q: "Behöver fullmakten registreras?", a: "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar." },
     ],
     relatedIds: [159, 170, 178],
-    legalInfo: "Vapenlagen (1996:67) reglerar vapenlicens och polismyndighetens prövning.",
+    legalInfo: "Vapenlagen (2026:408) reglerar vapentillstånd, och Polismyndigheten prövar frågor om tillstånd (1 kap. 11 §).",
     keywords: ["fullmakt vapenlicens", "fullmakt polisen vapen", "vapenlicens ombud"],
   } as Template);
 
@@ -2017,7 +2017,7 @@ function generateTemplates(): Template[] {
       { q: "Behöver fullmakten registreras?", a: "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar." },
     ],
     relatedIds: [167, 170, 168],
-    legalInfo: "Förordning (1997:147) med instruktion för Försvarsmakten och Hemvärnsförordningen (1997:146).",
+    legalInfo: "Hemvärnsförordningen (1997:146).",
     keywords: ["fullmakt hemvärnet", "fullmakt Försvarsmakten", "hemvärnsärende ombud"],
   } as Template);
 
@@ -2042,14 +2042,14 @@ function generateTemplates(): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['3 månader', '6 månader', '1 år', 'Till uppdrag slutfört'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: "Krävs bevittning för fastighetsfullmakt?", a: "Vid försäljning av fast egendom krävs två vittnen och notariell bekräftelse enligt jordabalken (JB 4 kap. 3 §)." },
+      { q: "Krävs bevittning för fastighetsfullmakt?", a: "Fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)). Köpehandlingen ska skrivas under av säljaren och köparen (4 kap. 1 § jordabalken (1970:994)), och är säljarens underskrift inte bevittnad av två vittnen förklaras lagfartsansökan vilande (20 kap. 7 § 1 jordabalken)." },
       { q: "Kan ombudet skriva under köpekontrakt?", a: "Ja, om fullmakten specifikt anger detta och är korrekt bevittnad. Banker och Lantmäteriet kan ställa egna krav." },
       { q: "Hur länge gäller fastighetsfullmakten?", a: "Den kan gälla en bestämd tid eller tills uppdraget är slutfört. För säkerhet rekommenderas en uttrycklig tidsgräns." },
       { q: "Vad händer om priset blir lägre än önskat?", a: "Ange ett minimipris i fullmakten. Ombudet kan inte gå under utan ditt godkännande – annars handlar de utanför fullmakten." },
       { q: "Behöver fullmakten lagföras?", a: "Lantmäteriet kräver ofta att fullmakten lämnas in i original eller som styrkt kopia vid registreringsärenden." },
     ],
     relatedIds: [170, 171, 172],
-    legalInfo: "Jordabalken (1970:994) 4 kap. 3 § kräver bevittning av två vittnen och notariell bekräftelse.",
+    legalInfo: "Fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)). Är säljarens underskrift på köpehandlingen inte bevittnad av två vittnen förklaras lagfartsansökan vilande (20 kap. 7 § 1 jordabalken (1970:994)).",
     keywords: ["fullmakt fastighetsförsäljning", "fullmakt sälja villa", "fastighetsförsäljning ombud", "fullmakt köpekontrakt"],
   } as Template);
 
@@ -2074,7 +2074,7 @@ function generateTemplates(): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['3 månader', '6 månader', '1 år', 'Till uppdrag slutfört'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: "Krävs bevittning för fastighetsfullmakt?", a: "Vid försäljning av fast egendom krävs två vittnen och notariell bekräftelse enligt jordabalken (JB 4 kap. 3 §)." },
+      { q: "Krävs bevittning för fastighetsfullmakt?", a: "Fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)). Köpehandlingen ska skrivas under av säljaren och köparen (4 kap. 1 § jordabalken (1970:994)), och är säljarens underskrift inte bevittnad av två vittnen förklaras lagfartsansökan vilande (20 kap. 7 § 1 jordabalken)." },
       { q: "Kan ombudet skriva under köpekontrakt?", a: "Ja, om fullmakten specifikt anger detta och är korrekt bevittnad. Banker och Lantmäteriet kan ställa egna krav." },
       { q: "Hur länge gäller fastighetsfullmakten?", a: "Den kan gälla en bestämd tid eller tills uppdraget är slutfört. För säkerhet rekommenderas en uttrycklig tidsgräns." },
       { q: "Vad händer om priset blir lägre än önskat?", a: "Ange ett minimipris i fullmakten. Ombudet kan inte gå under utan ditt godkännande – annars handlar de utanför fullmakten." },
@@ -2106,7 +2106,7 @@ function generateTemplates(): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['3 månader', '6 månader', '1 år', 'Till uppdrag slutfört'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: "Krävs bevittning för fastighetsfullmakt?", a: "Vid försäljning av fast egendom krävs två vittnen och notariell bekräftelse enligt jordabalken (JB 4 kap. 3 §)." },
+      { q: "Krävs bevittning för fastighetsfullmakt?", a: "Fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)). Köpehandlingen ska skrivas under av säljaren och köparen (4 kap. 1 § jordabalken (1970:994)), och är säljarens underskrift inte bevittnad av två vittnen förklaras lagfartsansökan vilande (20 kap. 7 § 1 jordabalken)." },
       { q: "Kan ombudet skriva under köpekontrakt?", a: "Ja, om fullmakten specifikt anger detta och är korrekt bevittnad. Banker och Lantmäteriet kan ställa egna krav." },
       { q: "Hur länge gäller fastighetsfullmakten?", a: "Den kan gälla en bestämd tid eller tills uppdraget är slutfört. För säkerhet rekommenderas en uttrycklig tidsgräns." },
       { q: "Vad händer om priset blir lägre än önskat?", a: "Ange ett minimipris i fullmakten. Ombudet kan inte gå under utan ditt godkännande – annars handlar de utanför fullmakten." },
@@ -2138,7 +2138,7 @@ function generateTemplates(): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['3 månader', '6 månader', '1 år', 'Till uppdrag slutfört'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: "Krävs bevittning för fastighetsfullmakt?", a: "Vid försäljning av fast egendom krävs två vittnen och notariell bekräftelse enligt jordabalken (JB 4 kap. 3 §)." },
+      { q: "Krävs bevittning för fastighetsfullmakt?", a: "Fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)). Köpehandlingen ska skrivas under av säljaren och köparen (4 kap. 1 § jordabalken (1970:994)), och är säljarens underskrift inte bevittnad av två vittnen förklaras lagfartsansökan vilande (20 kap. 7 § 1 jordabalken)." },
       { q: "Kan ombudet skriva under köpekontrakt?", a: "Ja, om fullmakten specifikt anger detta och är korrekt bevittnad. Banker och Lantmäteriet kan ställa egna krav." },
       { q: "Hur länge gäller fastighetsfullmakten?", a: "Den kan gälla en bestämd tid eller tills uppdraget är slutfört. För säkerhet rekommenderas en uttrycklig tidsgräns." },
       { q: "Vad händer om priset blir lägre än önskat?", a: "Ange ett minimipris i fullmakten. Ombudet kan inte gå under utan ditt godkännande – annars handlar de utanför fullmakten." },
@@ -2176,7 +2176,7 @@ function generateTemplates(): Template[] {
       { q: "Behöver fullmakten registreras?", a: "Nej, en vanlig fullmakt registreras inte. Den ska däremot visas upp i original eller bevittnad kopia när ombudet agerar." },
     ],
     relatedIds: [173, 174, 175],
-    legalInfo: "Jordabalken (1970:994) 7-11 kap. om arrende.",
+    legalInfo: "Jordabalken (1970:994) 8–11 kap. om arrende.",
     keywords: ["fullmakt arrende", "arrende ombud", "jordbruksarrende fullmakt"],
   } as Template);
 
@@ -2201,7 +2201,7 @@ function generateTemplates(): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['3 månader', '6 månader', '1 år', 'Till uppdrag slutfört'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: "Krävs bevittning för fastighetsfullmakt?", a: "Vid försäljning av fast egendom krävs två vittnen och notariell bekräftelse enligt jordabalken (JB 4 kap. 3 §)." },
+      { q: "Krävs bevittning för fastighetsfullmakt?", a: "Fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)). Köpehandlingen ska skrivas under av säljaren och köparen (4 kap. 1 § jordabalken (1970:994)), och är säljarens underskrift inte bevittnad av två vittnen förklaras lagfartsansökan vilande (20 kap. 7 § 1 jordabalken)." },
       { q: "Kan ombudet skriva under köpekontrakt?", a: "Ja, om fullmakten specifikt anger detta och är korrekt bevittnad. Banker och Lantmäteriet kan ställa egna krav." },
       { q: "Hur länge gäller fastighetsfullmakten?", a: "Den kan gälla en bestämd tid eller tills uppdraget är slutfört. För säkerhet rekommenderas en uttrycklig tidsgräns." },
       { q: "Vad händer om priset blir lägre än önskat?", a: "Ange ett minimipris i fullmakten. Ombudet kan inte gå under utan ditt godkännande – annars handlar de utanför fullmakten." },
@@ -2295,7 +2295,7 @@ function generateTemplates(): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['3 månader', '6 månader', '1 år', 'Till uppdrag slutfört'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: "Krävs bevittning för fastighetsfullmakt?", a: "Vid försäljning av fast egendom krävs två vittnen och notariell bekräftelse enligt jordabalken (JB 4 kap. 3 §)." },
+      { q: "Krävs bevittning för fastighetsfullmakt?", a: "Fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)). Köpehandlingen ska skrivas under av säljaren och köparen (4 kap. 1 § jordabalken (1970:994)), och är säljarens underskrift inte bevittnad av två vittnen förklaras lagfartsansökan vilande (20 kap. 7 § 1 jordabalken)." },
       { q: "Kan ombudet skriva under köpekontrakt?", a: "Ja, om fullmakten specifikt anger detta och är korrekt bevittnad. Banker och Lantmäteriet kan ställa egna krav." },
       { q: "Hur länge gäller fastighetsfullmakten?", a: "Den kan gälla en bestämd tid eller tills uppdraget är slutfört. För säkerhet rekommenderas en uttrycklig tidsgräns." },
       { q: "Vad händer om priset blir lägre än önskat?", a: "Ange ett minimipris i fullmakten. Ombudet kan inte gå under utan ditt godkännande – annars handlar de utanför fullmakten." },
@@ -2327,7 +2327,7 @@ function generateTemplates(): Template[] {
       { id: 'giltighetstid', label: 'Giltighetstid', type: 'select', options: ['3 månader', '6 månader', '1 år', 'Till uppdrag slutfört'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: "Krävs bevittning för fastighetsfullmakt?", a: "Vid försäljning av fast egendom krävs två vittnen och notariell bekräftelse enligt jordabalken (JB 4 kap. 3 §)." },
+      { q: "Krävs bevittning för fastighetsfullmakt?", a: "Fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)). Köpehandlingen ska skrivas under av säljaren och köparen (4 kap. 1 § jordabalken (1970:994)), och är säljarens underskrift inte bevittnad av två vittnen förklaras lagfartsansökan vilande (20 kap. 7 § 1 jordabalken)." },
       { q: "Kan ombudet skriva under köpekontrakt?", a: "Ja, om fullmakten specifikt anger detta och är korrekt bevittnad. Banker och Lantmäteriet kan ställa egna krav." },
       { q: "Hur länge gäller fastighetsfullmakten?", a: "Den kan gälla en bestämd tid eller tills uppdraget är slutfört. För säkerhet rekommenderas en uttrycklig tidsgräns." },
       { q: "Vad händer om priset blir lägre än önskat?", a: "Ange ett minimipris i fullmakten. Ombudet kan inte gå under utan ditt godkännande – annars handlar de utanför fullmakten." },
@@ -2366,7 +2366,7 @@ function generateTemplates(): Template[] {
       { q: "Vad är skillnaden mot en framtidsfullmakt?", a: "En vanlig fullmakt gäller medan du är beslutskompetent. Framtidsfullmakten träder i kraft först när du inte längre kan fatta beslut." },
     ],
     relatedIds: [179, 180, 181],
-    legalInfo: "Patientlagen (2014:821) 4 kap. om patientens medverkan i vården.",
+    legalInfo: "Patientlagen (2014:821) 4 kap. om samtycke och 5 kap. om delaktighet.",
     keywords: ["livstestamente", "fullmakt vård i livets slut", "palliativ vård fullmakt"],
   } as Template);
 
@@ -2464,7 +2464,7 @@ function generateTemplates(): Template[] {
       { q: "Vad om vårdnadshavarna är osams?", a: "Vid oenighet kan saken avgöras av tingsrätten. Familjerätten kan också medla via socialnämnden." },
     ],
     relatedIds: [180, 182, 184],
-    legalInfo: "Patientlagen (2014:821) 4 kap. och lag (2003:460) om etikprövning av forskning på människor.",
+    legalInfo: "Patientlagen (2014:821) 4 kap. och lag (2003:460) om etikprövning av forskning som avser människor.",
     keywords: ["medgivande blodprov barn", "provtagning barn samtycke", "forskning på barn medgivande"],
   } as Template);
 
@@ -2496,7 +2496,7 @@ function generateTemplates(): Template[] {
       { q: "Vad är skillnaden mot en framtidsfullmakt?", a: "En vanlig fullmakt gäller medan du är beslutskompetent. Framtidsfullmakten träder i kraft först när du inte längre kan fatta beslut." },
     ],
     relatedIds: [179, 183, 185],
-    legalInfo: "Lag (2006:351) om genetisk integritet m.m. och lag (1984:1140) om insemination.",
+    legalInfo: "Lag (2006:351) om genetisk integritet m.m. 6 kap. (insemination) och 7 kap. (befruktning utanför kroppen).",
     keywords: ["medgivande IVF", "medgivande fertilitetsbehandling", "assisterad befruktning samtycke"],
   } as Template);
 
@@ -2594,7 +2594,7 @@ function generateTemplates(): Template[] {
       { q: "Vad om vårdnadshavarna är osams?", a: "Vid oenighet kan saken avgöras av tingsrätten. Familjerätten kan också medla via socialnämnden." },
     ],
     relatedIds: [179, 181, 184],
-    legalInfo: "Patientlagen (2014:821) 4 kap. om samråd och samtycke.",
+    legalInfo: "Patientlagen (2014:821) 4 kap. om samtycke och 5 kap. 1 § om samråd.",
     keywords: ["medgivande operation barn", "operation barn samtycke", "kirurgi barn fullmakt"],
   } as Template);
 
@@ -2626,7 +2626,7 @@ function generateTemplates(): Template[] {
       { q: "Vad är skillnaden mot en framtidsfullmakt?", a: "En vanlig fullmakt gäller medan du är beslutskompetent. Framtidsfullmakten träder i kraft först när du inte längre kan fatta beslut." },
     ],
     relatedIds: [181, 185, 186],
-    legalInfo: "Lag (2006:351) om genetisk integritet m.m. 3 kap.",
+    legalInfo: "Lag (2006:351) om genetisk integritet m.m. 2 kap. om genetisk undersökning och information.",
     keywords: ["medgivande genetisk test", "DNA-test samtycke", "fosterdiagnostik samtycke"],
   } as Template);
 
@@ -2882,7 +2882,7 @@ function generateTemplates(): Template[] {
       { q: "Gäller fullmakten för export utomlands?", a: "Vid export krävs ofta separat exportfullmakt och tullhandlingar. Kontakta Transportstyrelsen och Tullverket." },
     ],
     relatedIds: [193, 195, 194],
-    legalInfo: "Lag (1979:377) om registrering av båtar för yrkesmässig sjöfart m.m. samt sjötrafikförordningen.",
+    legalInfo: "Lag (1979:377) om registrering av båtar.",
     keywords: ["fullmakt båt", "båtregistrering 2026", "båt ägarbyte"],
   } as Template);
 
@@ -3262,11 +3262,11 @@ function generateTemplates(): Template[] {
       { q: "Vad är en apostille?", a: "En apostille är ett intyg från Notarius Publicus som bekräftar att en svensk myndighets eller notaries underskrift är äkta. Krävs för många utländska myndigheter." },
       { q: "Var ansöker jag om apostille?", a: "Hos Notarius Publicus i Sverige. Listan finns på regeringen.se. Avgift tas ut per dokument." },
       { q: "Behöver fullmakten översättas?", a: "Ja, oftast krävs auktoriserad översättning till mottagarlandets språk eller engelska." },
-      { q: "Vad är skillnaden mellan apostille och legalisering?", a: "Apostille gäller för länder som undertecknat Haagkonventionen (1961). För andra länder krävs legalisering via UD och landets ambassad." },
+      { q: "Vad är skillnaden mellan apostille och legalisering?", a: "Apostille används mellan länder som har anslutit sig till Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar. I Sverige utfärdas apostille av notarius publicus. För andra länder används i stället ofta legalisering via Utrikesdepartementet och vanligen landets ambassad. Mottagaren avgör vad som krävs, så kontrollera i förväg." },
       { q: "Kan svensk fullmakt användas direkt utomlands?", a: "Ibland, men oftast krävs apostille eller legalisering plus översättning. Kontakta landets ambassad i förväg." },
     ],
     relatedIds: [210, 211, 212],
-    legalInfo: "Haagkonventionen (1961) om apostille gäller mellan medlemsländer. Notarius Publicus utfärdar apostille i Sverige.",
+    legalInfo: "Apostille regleras i Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar och används mellan anslutna länder. Notarius Publicus utfärdar apostille i Sverige.",
     keywords: ["fullmakt apostille", "apostille ombud", "Notarius Publicus fullmakt"],
   } as Template);
 
@@ -3294,11 +3294,11 @@ function generateTemplates(): Template[] {
       { q: "Vad är en apostille?", a: "En apostille är ett intyg från Notarius Publicus som bekräftar att en svensk myndighets eller notaries underskrift är äkta. Krävs för många utländska myndigheter." },
       { q: "Var ansöker jag om apostille?", a: "Hos Notarius Publicus i Sverige. Listan finns på regeringen.se. Avgift tas ut per dokument." },
       { q: "Behöver fullmakten översättas?", a: "Ja, oftast krävs auktoriserad översättning till mottagarlandets språk eller engelska." },
-      { q: "Vad är skillnaden mellan apostille och legalisering?", a: "Apostille gäller för länder som undertecknat Haagkonventionen (1961). För andra länder krävs legalisering via UD och landets ambassad." },
+      { q: "Vad är skillnaden mellan apostille och legalisering?", a: "Apostille används mellan länder som har anslutit sig till Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar. I Sverige utfärdas apostille av notarius publicus. För andra länder används i stället ofta legalisering via Utrikesdepartementet och vanligen landets ambassad. Mottagaren avgör vad som krävs, så kontrollera i förväg." },
       { q: "Kan svensk fullmakt användas direkt utomlands?", a: "Ibland, men oftast krävs apostille eller legalisering plus översättning. Kontakta landets ambassad i förväg." },
     ],
     relatedIds: [209, 211, 212],
-    legalInfo: "Wienkonventionen om konsulära förbindelser (1963) och Sveriges utlandsmyndigheter.",
+    legalInfo: "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.",
     keywords: ["fullmakt konsulat", "fullmakt ambassad", "konsulärt ärende ombud"],
   } as Template);
 
@@ -3310,7 +3310,7 @@ function generateTemplates(): Template[] {
     category: "Ekonomi, Bank & Myndigheter",
     categorySlug: 'ekonomi-myndigheter',
     description: "Fullmakt för ombud att legalisera dokument hos UD eller ambassad.",
-    longDescription: "Krävs när dokument ska användas i länder som INTE undertecknat Haagkonventionen. Ombudet hanterar processen via Sveriges UD och mottagarlandets ambassad.",
+    longDescription: "Används när en handling ska godtas i ett land som inte har anslutit sig till Haagkonventionen om apostille (1961). Ombudet hanterar processen via Sveriges UD och mottagarlandets ambassad.",
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
       { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
@@ -3326,11 +3326,11 @@ function generateTemplates(): Template[] {
       { q: "Vad är en apostille?", a: "En apostille är ett intyg från Notarius Publicus som bekräftar att en svensk myndighets eller notaries underskrift är äkta. Krävs för många utländska myndigheter." },
       { q: "Var ansöker jag om apostille?", a: "Hos Notarius Publicus i Sverige. Listan finns på regeringen.se. Avgift tas ut per dokument." },
       { q: "Behöver fullmakten översättas?", a: "Ja, oftast krävs auktoriserad översättning till mottagarlandets språk eller engelska." },
-      { q: "Vad är skillnaden mellan apostille och legalisering?", a: "Apostille gäller för länder som undertecknat Haagkonventionen (1961). För andra länder krävs legalisering via UD och landets ambassad." },
+      { q: "Vad är skillnaden mellan apostille och legalisering?", a: "Apostille används mellan länder som har anslutit sig till Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar. I Sverige utfärdas apostille av notarius publicus. För andra länder används i stället ofta legalisering via Utrikesdepartementet och vanligen landets ambassad. Mottagaren avgör vad som krävs, så kontrollera i förväg." },
       { q: "Kan svensk fullmakt användas direkt utomlands?", a: "Ibland, men oftast krävs apostille eller legalisering plus översättning. Kontakta landets ambassad i förväg." },
     ],
     relatedIds: [209, 210, 212],
-    legalInfo: "Haagkonventionen (1961) om apostille gäller mellan medlemsländer. Notarius Publicus utfärdar apostille i Sverige.",
+    legalInfo: "Apostille regleras i Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar och används mellan anslutna länder. Notarius Publicus utfärdar apostille i Sverige.",
     keywords: ["fullmakt legalisering", "legalisering UD", "fullmakt ambassad legalisering"],
   } as Template);
 
@@ -3358,11 +3358,11 @@ function generateTemplates(): Template[] {
       { q: "Vad är en apostille?", a: "En apostille är ett intyg från Notarius Publicus som bekräftar att en svensk myndighets eller notaries underskrift är äkta. Krävs för många utländska myndigheter." },
       { q: "Var ansöker jag om apostille?", a: "Hos Notarius Publicus i Sverige. Listan finns på regeringen.se. Avgift tas ut per dokument." },
       { q: "Behöver fullmakten översättas?", a: "Ja, oftast krävs auktoriserad översättning till mottagarlandets språk eller engelska." },
-      { q: "Vad är skillnaden mellan apostille och legalisering?", a: "Apostille gäller för länder som undertecknat Haagkonventionen (1961). För andra länder krävs legalisering via UD och landets ambassad." },
+      { q: "Vad är skillnaden mellan apostille och legalisering?", a: "Apostille används mellan länder som har anslutit sig till Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar. I Sverige utfärdas apostille av notarius publicus. För andra länder används i stället ofta legalisering via Utrikesdepartementet och vanligen landets ambassad. Mottagaren avgör vad som krävs, så kontrollera i förväg." },
       { q: "Kan svensk fullmakt användas direkt utomlands?", a: "Ibland, men oftast krävs apostille eller legalisering plus översättning. Kontakta landets ambassad i förväg." },
     ],
     relatedIds: [209, 210, 211],
-    legalInfo: "Haagkonventionen (1961) om apostille gäller mellan medlemsländer. Notarius Publicus utfärdar apostille i Sverige.",
+    legalInfo: "Apostille regleras i Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar och används mellan anslutna länder. Notarius Publicus utfärdar apostille i Sverige.",
     keywords: ["Power of Attorney Swedish", "internationell fullmakt", "engelsk fullmakt", "bilingual fullmakt"],
   } as Template);
 
@@ -3390,11 +3390,11 @@ function generateTemplates(): Template[] {
       { q: "Vad är en apostille?", a: "En apostille är ett intyg från Notarius Publicus som bekräftar att en svensk myndighets eller notaries underskrift är äkta. Krävs för många utländska myndigheter." },
       { q: "Var ansöker jag om apostille?", a: "Hos Notarius Publicus i Sverige. Listan finns på regeringen.se. Avgift tas ut per dokument." },
       { q: "Behöver fullmakten översättas?", a: "Ja, oftast krävs auktoriserad översättning till mottagarlandets språk eller engelska." },
-      { q: "Vad är skillnaden mellan apostille och legalisering?", a: "Apostille gäller för länder som undertecknat Haagkonventionen (1961). För andra länder krävs legalisering via UD och landets ambassad." },
+      { q: "Vad är skillnaden mellan apostille och legalisering?", a: "Apostille används mellan länder som har anslutit sig till Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar. I Sverige utfärdas apostille av notarius publicus. För andra länder används i stället ofta legalisering via Utrikesdepartementet och vanligen landets ambassad. Mottagaren avgör vad som krävs, så kontrollera i förväg." },
       { q: "Kan svensk fullmakt användas direkt utomlands?", a: "Ibland, men oftast krävs apostille eller legalisering plus översättning. Kontakta landets ambassad i förväg." },
     ],
     relatedIds: [162, 178, 209],
-    legalInfo: "Haagkonventionen (1961) om apostille gäller mellan medlemsländer. Notarius Publicus utfärdar apostille i Sverige.",
+    legalInfo: "Apostille regleras i Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar och används mellan anslutna länder. Notarius Publicus utfärdar apostille i Sverige.",
     keywords: ["fullmakt utlandsflytt", "fullmakt utvandring", "utflyttningsanmälan ombud"],
   } as Template);
 
@@ -3422,11 +3422,11 @@ function generateTemplates(): Template[] {
       { q: "Vad är en apostille?", a: "En apostille är ett intyg från Notarius Publicus som bekräftar att en svensk myndighets eller notaries underskrift är äkta. Krävs för många utländska myndigheter." },
       { q: "Var ansöker jag om apostille?", a: "Hos Notarius Publicus i Sverige. Listan finns på regeringen.se. Avgift tas ut per dokument." },
       { q: "Behöver fullmakten översättas?", a: "Ja, oftast krävs auktoriserad översättning till mottagarlandets språk eller engelska." },
-      { q: "Vad är skillnaden mellan apostille och legalisering?", a: "Apostille gäller för länder som undertecknat Haagkonventionen (1961). För andra länder krävs legalisering via UD och landets ambassad." },
+      { q: "Vad är skillnaden mellan apostille och legalisering?", a: "Apostille används mellan länder som har anslutit sig till Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar. I Sverige utfärdas apostille av notarius publicus. För andra länder används i stället ofta legalisering via Utrikesdepartementet och vanligen landets ambassad. Mottagaren avgör vad som krävs, så kontrollera i förväg." },
       { q: "Kan svensk fullmakt användas direkt utomlands?", a: "Ibland, men oftast krävs apostille eller legalisering plus översättning. Kontakta landets ambassad i förväg." },
     ],
     relatedIds: [213, 162, 142],
-    legalInfo: "Utlänningslagen (2005:716) och EU:s direktiv om EU-blå kort (2009/50/EG).",
+    legalInfo: "Utlänningslagen (2005:716) 6 kap. om arbetstillstånd och 6 a kap. om EU-blåkort.",
     keywords: ["fullmakt arbetstillstånd", "EU-blå kort ombud", "Migrationsverket fullmakt arbete"],
   } as Template);
 
@@ -3454,11 +3454,11 @@ function generateTemplates(): Template[] {
       { q: "Vad är en apostille?", a: "En apostille är ett intyg från Notarius Publicus som bekräftar att en svensk myndighets eller notaries underskrift är äkta. Krävs för många utländska myndigheter." },
       { q: "Var ansöker jag om apostille?", a: "Hos Notarius Publicus i Sverige. Listan finns på regeringen.se. Avgift tas ut per dokument." },
       { q: "Behöver fullmakten översättas?", a: "Ja, oftast krävs auktoriserad översättning till mottagarlandets språk eller engelska." },
-      { q: "Vad är skillnaden mellan apostille och legalisering?", a: "Apostille gäller för länder som undertecknat Haagkonventionen (1961). För andra länder krävs legalisering via UD och landets ambassad." },
+      { q: "Vad är skillnaden mellan apostille och legalisering?", a: "Apostille används mellan länder som har anslutit sig till Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar. I Sverige utfärdas apostille av notarius publicus. För andra länder används i stället ofta legalisering via Utrikesdepartementet och vanligen landets ambassad. Mottagaren avgör vad som krävs, så kontrollera i förväg." },
       { q: "Kan svensk fullmakt användas direkt utomlands?", a: "Ibland, men oftast krävs apostille eller legalisering plus översättning. Kontakta landets ambassad i förväg." },
     ],
     relatedIds: [150, 209, 212],
-    legalInfo: "Lag (1997:191) om internationell privaträttslig adoption och Haagkonventionen om internationell adoption (1993).",
+    legalInfo: "Lag (1997:191) med anledning av Sveriges tillträde till Haagkonventionen om skydd av barn och samarbete vid internationella adoptioner och lag (1997:192) om internationell adoptionsförmedling.",
     keywords: ["fullmakt internationell adoption", "utlandsadoption ombud", "MFoF fullmakt"],
   } as Template);
 
@@ -3486,11 +3486,11 @@ function generateTemplates(): Template[] {
       { q: "Vad är en apostille?", a: "En apostille är ett intyg från Notarius Publicus som bekräftar att en svensk myndighets eller notaries underskrift är äkta. Krävs för många utländska myndigheter." },
       { q: "Var ansöker jag om apostille?", a: "Hos Notarius Publicus i Sverige. Listan finns på regeringen.se. Avgift tas ut per dokument." },
       { q: "Behöver fullmakten översättas?", a: "Ja, oftast krävs auktoriserad översättning till mottagarlandets språk eller engelska." },
-      { q: "Vad är skillnaden mellan apostille och legalisering?", a: "Apostille gäller för länder som undertecknat Haagkonventionen (1961). För andra länder krävs legalisering via UD och landets ambassad." },
+      { q: "Vad är skillnaden mellan apostille och legalisering?", a: "Apostille används mellan länder som har anslutit sig till Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar. I Sverige utfärdas apostille av notarius publicus. För andra länder används i stället ofta legalisering via Utrikesdepartementet och vanligen landets ambassad. Mottagaren avgör vad som krävs, så kontrollera i förväg." },
       { q: "Kan svensk fullmakt användas direkt utomlands?", a: "Ibland, men oftast krävs apostille eller legalisering plus översättning. Kontakta landets ambassad i förväg." },
     ],
     relatedIds: [209, 210, 167],
-    legalInfo: "Haagkonventionen (1961) om apostille gäller mellan medlemsländer. Notarius Publicus utfärdar apostille i Sverige.",
+    legalInfo: "Apostille regleras i Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar och används mellan anslutna länder. Notarius Publicus utfärdar apostille i Sverige.",
     keywords: ["fullmakt utländsk fastighet", "fastighet utomlands fullmakt", "köpa hus Spanien fullmakt"],
   } as Template);
 
@@ -3521,7 +3521,7 @@ function generateTemplates(): Template[] {
       { q: "Gäller fullmakten utomlands?", a: "Den gäller primärt i Sverige. För utlandsbruk kan apostille eller legalisering krävas." },
     ],
     relatedIds: [218, 219, 220],
-    legalInfo: "Värdepappersmarknadslagen (2007:528) och MiFID II-regelverket.",
+    legalInfo: "Lag (2007:528) om värdepappersmarknaden.",
     keywords: ["fullmakt aktiehandel", "aktiefullmakt", "fullmakt Avanza Nordnet", "diskretionär förvaltning"],
   } as Template);
 
@@ -3552,7 +3552,7 @@ function generateTemplates(): Template[] {
       { q: "Gäller fullmakten utomlands?", a: "Den gäller primärt i Sverige. För utlandsbruk kan apostille eller legalisering krävas." },
     ],
     relatedIds: [217, 219, 220],
-    legalInfo: "Lagen (2004:46) om värdepappersfonder och MiFID II.",
+    legalInfo: "Lag (2004:46) om värdepappersfonder.",
     keywords: ["fullmakt fondbyte", "fondrörelse fullmakt", "PPM fullmakt"],
   } as Template);
 
@@ -3583,7 +3583,7 @@ function generateTemplates(): Template[] {
       { q: "Gäller fullmakten utomlands?", a: "Den gäller primärt i Sverige. För utlandsbruk kan apostille eller legalisering krävas." },
     ],
     relatedIds: [220, 221, 222],
-    legalInfo: "Konsumentkreditlagen (2010:1846) och bolånelagen (2016:1024).",
+    legalInfo: "Konsumentkreditlagen (2010:1846), som ersätts av konsumentkreditlagen (2026:1011) den 20 november 2026, och lag (2016:1024) om verksamhet med bostadskrediter.",
     keywords: ["fullmakt bolån", "bolåneansökan ombud", "fullmakt bank lån"],
   } as Template);
 
@@ -3614,7 +3614,7 @@ function generateTemplates(): Template[] {
       { q: "Gäller fullmakten utomlands?", a: "Den gäller primärt i Sverige. För utlandsbruk kan apostille eller legalisering krävas." },
     ],
     relatedIds: [219, 221, 222],
-    legalInfo: "Handelsbalken (1736) 10 kap. om borgen och avtalslagen (1915:218).",
+    legalInfo: "Handelsbalken (1736:0123 2) 10 kap. om pant och borgen och avtalslagen (1915:218).",
     keywords: ["fullmakt borgen", "borgensåtagande ombud", "fullmakt bank borgen"],
   } as Template);
 
@@ -3707,7 +3707,7 @@ function generateTemplates(): Template[] {
       { q: "Gäller fullmakten utomlands?", a: "Den gäller primärt i Sverige. För utlandsbruk kan apostille eller legalisering krävas." },
     ],
     relatedIds: [218, 221, 142],
-    legalInfo: "Inkomstskattelagen (1999:1229) och pensionsmyndighetens regelverk.",
+    legalInfo: "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.",
     keywords: ["fullmakt pension", "pensionssparande ombud", "PPM fullmakt"],
   } as Template);
 
@@ -3769,7 +3769,7 @@ function generateTemplates(): Template[] {
       { q: "Gäller fullmakten utomlands?", a: "Den gäller primärt i Sverige. För utlandsbruk kan apostille eller legalisering krävas." },
     ],
     relatedIds: [217, 219, 142],
-    legalInfo: "Lag (2019:1215) om viss verksamhet med konsumentkrediter och EU:s crowdfunding-förordning (EU 2020/1503).",
+    legalInfo: "Lag (2021:899) med kompletterande bestämmelser till EU:s förordning om gräsrotsfinansiering. Finansinspektionen är behörig myndighet (2 §).",
     keywords: ["fullmakt crowdfunding", "investering ombud", "fullmakt Kameo Tessin"],
   } as Template);
 
@@ -3800,7 +3800,7 @@ function generateTemplates(): Template[] {
       { q: "Gäller fullmakten utomlands?", a: "Den gäller primärt i Sverige. För utlandsbruk kan apostille eller legalisering krävas." },
     ],
     relatedIds: [219, 221, 222],
-    legalInfo: "Konsumentkreditlagen (2010:1846).",
+    legalInfo: "Konsumentkreditlagen (2010:1846), som ersätts av konsumentkreditlagen (2026:1011) den 20 november 2026.",
     keywords: ["fullmakt privatlån", "fullmakt konsumentkredit", "privatlån ombud"],
   } as Template);
 
@@ -3895,7 +3895,7 @@ function generateTemplates(): Template[] {
       { q: "Hur länge gäller fullmakt för dödsboet?", a: "Vanligen tills arvskiftet är slutfört och dödsboet upplöst." },
     ],
     relatedIds: [230, 231, 232],
-    legalInfo: "Begravningslagen (1990:1144) reglerar begravning. Önskemål är ej bindande men har stark moralisk tyngd.",
+    legalInfo: "Begravningslagen (1990:1144). Kan de efterlevande inte enas ska länsstyrelsen särskilt beakta önskemål som den avlidne kan ha haft (5 kap. 4 §).",
     keywords: ["begravningsönskemål", "fullmakt egen begravning", "min begravning vilja"],
   } as Template);
 
@@ -3991,7 +3991,7 @@ function generateTemplates(): Template[] {
       { q: "Hur länge gäller fullmakt för dödsboet?", a: "Vanligen tills arvskiftet är slutfört och dödsboet upplöst." },
     ],
     relatedIds: [229, 230, 232],
-    legalInfo: "Ärvdabalken (1958:637). Universella testamentstagare kan vara välgörenhetsorganisationer.",
+    legalInfo: "Ärvdabalken (1958:637). Testamente ska upprättas skriftligen med två vittnen (10 kap. 1 §).",
     keywords: ["fullmakt donation", "donera arv välgörenhet", "fullmakt välgörenhet"],
   } as Template);
 
@@ -4146,11 +4146,11 @@ function generateTemplates(): Template[] {
       { q: 'Kan ett ombud hämta mitt arbetsgivarintyg?', a: 'Ja. Med en giltig fullmakt kan ombudet vända sig till arbetsgivarens HR-avdelning eller lönekontor och begära ut de angivna handlingarna. Arbetsgivaren är skyldig att utfärda arbetsgivarintyg enligt LAS.' },
       { q: 'Vad innehåller ett arbetsgivarintyg?', a: 'Arbetsgivarintyget innehåller uppgifter om anställningstid, tjänstgöringsgrad, löneinformation och anställningsform. Det krävs bland annat av a-kassan och banker vid bolåneansökan.' },
       { q: 'Måste arbetsgivaren godkänna fullmakten?', a: 'Arbetsgivaren är skyldig att utfärda arbetsgivarintyg på begäran. Fullmakten visar att ombudet har rätt att agera för din räkning. Kontakta HR-avdelningen i förväg för att kontrollera eventuella rutiner.' },
-      { q: 'Gäller fullmakten även för lönespecifikationer?', a: 'Ja, om det anges i fullmakten. Lönespecifikationer innehåller personuppgifter och skyddas av GDPR. Specificera tydligt vilka handlingar och vilken tidsperiod ombudet har rätt att ta del av.' },
+      { q: 'Gäller fullmakten även för lönespecifikationer?', a: 'Ja, om det anges i fullmakten. Lönespecifikationer innehåller personuppgifter. Specificera tydligt vilka handlingar och vilken tidsperiod ombudet har rätt att ta del av.' },
       { q: 'Kan en bank använda fullmakten vid bolåneansökan?', a: 'Det avgör banken. Kontrollera med din bank vilken form av dokumentation den godtar – en del kräver stämplad kopia.' },
     ],
     relatedIds: [126, 136],
-    legalInfo: 'Lagen (1982:80) om anställningsskydd (LAS) och GDPR (EU 2016/679) reglerar rätten till arbetsgivarintyg och hantering av personuppgifter.',
+    legalInfo: 'Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.',
     keywords: ['fullmakt arbetsgivarintyg', 'hämta arbetsgivarintyg ombud', 'fullmakt löneinformation', 'arbetsgivarintyg bolån fullmakt'],
   } as Template);
 
@@ -4180,7 +4180,7 @@ function generateTemplates(): Template[] {
       { q: 'Kan jag använda en fullmakt om jag befinner mig utomlands?', a: 'Ja, det är ett vanligt användningsfall. Se till att fullmakten är undertecknad med vittne och att ombudet har tillgång till relevanta försäkringsdokument. Kontakta försäkringsbolaget på förhand för att informera om fullmakten.' },
     ],
     relatedIds: [126, 131],
-    legalInfo: 'Försäkringsavtalslagen (2005:104) 7 kap. reglerar försäkringstagarens rätt att företrädas av ombud vid skadereglering.',
+    legalInfo: 'Försäkringsavtalslagen (2005:104). Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.',
     keywords: ['fullmakt försäkring', 'skadeanmälan fullmakt', 'fullmakt försäkringsbolag', 'ombud försäkringsskada'],
   } as Template);
 
@@ -4212,10 +4212,10 @@ function generateTemplates(): Template[] {
       { q: 'Vilka länder kräver detta medgivande?', a: 'Krav varierar. EU-länder som Spanien, Italien och Frankrike tillämpar ofta striktare regler för minderåriga utan föräldrar. USA kräver i regel skriftligt medgivande vid icke-akut behandling. Vid akut livsfara kan behandling alltid ges utan tillstånd.' },
       { q: 'Kan en lärare använda detta medgivande?', a: 'Ja. Medgivandet är utformat för att kunna användas av skolpersonal, reseledare och andra vuxna som ansvarar för barn utomlands. Lärarens eller ledarens fullständiga namn och relation till barnet anges i dokumentet.' },
       { q: 'Behöver medgivandet vara på engelska?', a: 'Rekommenderas starkt. Mallen producerar ett dokument på svenska och engelska. Vid vistelse utanför Norden är en engelsk version i princip nödvändig för att sjukvårdspersonal ska förstå dokumentet.' },
-      { q: 'Vad är skillnaden mot en fullmakt för sjukvård?', a: 'En sjukvårdsfullmakt (mall 132) gäller i Sverige och aktiveras när du som vuxen inte kan besluta själv. Detta medgivande är specifikt för att låta en annan vuxen ge tillstånd för behandling av ett BARN utomlands, och grundar sig i Föräldrabalken 6 kap. och Patientlagen 4 kap. 3 §.' },
+      { q: 'Vad är skillnaden mot en fullmakt för sjukvård?', a: 'En sjukvårdsfullmakt (mall 132) gäller i Sverige och aktiveras när du som vuxen inte kan besluta själv. Detta medgivande är specifikt för att låta en annan vuxen ge tillstånd för behandling av ett BARN utomlands. Det bygger på vårdnadshavarens rätt och skyldighet att bestämma i frågor som rör barnets personliga angelägenheter (6 kap. 11 § föräldrabalken (1949:381)).' },
     ],
     relatedIds: [133, 132],
-    legalInfo: 'Grundat på Patientlagen (2014:821) 4 kap. 3 § om informerat samtycke och Föräldrabalken (1949:381) 6 kap. om vårdnadshavarens ansvar.',
+    legalInfo: 'Vårdnadshavaren har rätt och skyldighet att bestämma i frågor som rör barnets personliga angelägenheter (6 kap. 11 § föräldrabalken (1949:381)).',
     keywords: ['medgivande medicinsk behandling barn', 'tillstånd behandling utomlands minderårig', 'skolresa medgivande sjukvård', 'vårdnadshavare medgivande utomlands'],
   } as Template);
 
@@ -4347,7 +4347,7 @@ const EN_LEGAL_CHILD =
 const EN_LEGAL_TRAVEL =
   'Valid under Swedish contract law and the Swedish law of agency (avtalslagen 1915:218).';
 const EN_LEGAL_ANIMAL =
-  'Valid under Swedish animal welfare legislation (djurskyddslagen 2018:1192).';
+  'Based on the rules on agency in chapter 2 of the Swedish Contracts Act (avtalslagen (1915:218)).';
 
 const bilingualContent: Record<string, BilingualContent> = {
   'foraldraredgivande-resa-annan-vuxen': {

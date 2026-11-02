@@ -13,13 +13,13 @@
   },
   "content": {
     "introduction": "Mycket viktig fullmakt – ger ombudet rätt att underteckna köpekontrakt och köpebrev för fast egendom. Kräver bevittning av två vittnen enligt jordabalken.\n\nDenna mall är utformad enligt gällande svensk lagstiftning. Du kan skapa, ladda ner och dela ditt dokument som PDF på under 3 minuter.",
-    "legalValidity": "Avtalslagen (1915:218) 27 § 2 st (fullmakten ska vara skriftlig) och jordabalken 4 kap. 1 § (formkrav för köp av fast egendom). För lagfart ska säljarens underskrift bevittnas av två personer (jordabalken 20 kap. 7 §). Notariell bekräftelse förekommer inte i svensk fastighetsrätt.",
+    "legalValidity": "Fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)). Köpehandlingen ska skrivas under av säljaren och köparen (4 kap. 1 § jordabalken (1970:994)), och är säljarens underskrift inte bevittnad av två vittnen förklaras lagfartsansökan vilande (20 kap. 7 § 1 jordabalken).",
     "howToGuide": "Steg 1: Ange dina egna uppgifter som fullmaktsgivare – fullständigt namn, personnummer och adress.\nSteg 2: Fyll i ombudets uppgifter och relation till dig.\nSteg 3: Specificera uppdragets exakta omfattning – vara så detaljerad som möjligt.\nSteg 4: Välj giltighetstid – för säkerhet rekommenderas en uttrycklig slutdatum.\nSteg 5: Granska dokumentet i förhandsgranskningen och kontrollera att alla uppgifter stämmer.\nSteg 6: Ladda ner som PDF, skriv under och låt gärna två vittnen underteckna för extra juridisk tyngd.",
     "commonMistakes": "1. För vag formulering – Banker, myndigheter och andra parter avvisar ofta fullmakter som är för generella. Beskriv exakt vad uppdraget omfattar.\n\n2. Glömmer personnummer – Båda parters fullständiga personnummer måste anges.\n\n3. Inget slutdatum – En fullmakt utan slutdatum kan skapa problem. Sätt alltid en tidsbegränsning.\n\n4. Glömmer bevittning – Även om det ofta inte är ett lagkrav stärker det dokumentets juridiska tyngd avsevärt.\n\n5. Glömmer återkallelse – När uppdraget är slutfört: meddela motparten skriftligt att fullmakten upphör.",
     "faq": [
       {
         "question": "Krävs bevittning för fastighetsfullmakt?",
-        "answer": "En fullmakt att sälja fast egendom måste enligt avtalslagen (1915:218) 27 § 2 st vara skriftlig. Själva köpehandlingen ska uppfylla formkraven i jordabalken 4 kap. 1 § (skriftlig, underskriven av säljare och köpare, med köpeskilling och överlåtelseförklaring). Någon notariell bekräftelse förekommer inte i svensk fastighetsrätt. För att lagfart ska beviljas ska säljarens underskrift på köpehandlingen bevittnas av två personer (jordabalken 20 kap. 7 §)."
+        "answer": "Fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)). Köpehandlingen ska skrivas under av säljaren och köparen (4 kap. 1 § jordabalken (1970:994)), och är säljarens underskrift inte bevittnad av två vittnen förklaras lagfartsansökan vilande (20 kap. 7 § 1 jordabalken)."
       },
       {
         "question": "Kan ombudet skriva under köpekontrakt?",

@@ -73,7 +73,7 @@ export default function VillkorPage() {
           <section>
             <h2 className="font-heading font-bold text-navy-500 text-xl mb-3">7. Personuppgifter</h2>
             <p className="text-navy-400 leading-relaxed">
-              Vi behandlar personuppgifter i enlighet med GDPR och vår <a href="/integritet" className="text-gold-600 font-semibold hover:underline">integritetspolicy</a>. Dokumentdata genereras lokalt i din webbläsare och lagras inte på våra servrar.
+              Vi behandlar personuppgifter enligt vår <a href="/integritet" className="text-gold-600 font-semibold hover:underline">integritetspolicy</a>. Dokumentdata genereras lokalt i din webbläsare och lagras inte på våra servrar.
             </p>
           </section>
 

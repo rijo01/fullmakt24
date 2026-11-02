@@ -131,7 +131,7 @@ export default function HomePage() {
     { q: 'Vad kostar det?', a: 'Varje mall kostar 99 kr som engångsköp. Du betalar per dokument och laddar ner det direkt som PDF – inga abonnemang och inga månadsavgifter.' },
     { q: 'Hur signerar jag dokumentet?', a: 'Du laddar ner dokumentet som PDF, skriver ut det och skriver under för hand – tillsammans med eventuella vittnen. Dokumentet är klart att signera direkt.' },
     { q: 'Hur lång tid tar det att skapa ett dokument?', a: 'De flesta användare skapar sitt dokument på under 3 minuter. Vår guidade ifyllning gör processen snabb och enkel.' },
-    { q: 'Sparas mina personuppgifter?', a: 'Vi följer GDPR strikt. Dina uppgifter lagras krypterat och används bara för att generera ditt dokument. Du kan när som helst radera dina data.' },
+    { q: 'Sparas mina personuppgifter?', a: 'Uppgifterna du fyller i sparas som utkast i din webbläsare, och PDF:en skapas i webbläsaren. När du betalar skickas uppgifterna, eller en del av dem, med till betalningsleverantören Stripe. Läs mer i vår integritetspolicy.' },
     { q: 'Kan jag redigera dokumentet efter nedladdning?', a: 'Du kan ladda ner som PDF för utskrift. Om du behöver göra ändringar kan du alltid gå tillbaka och skapa en ny version via ditt konto.' },
     { q: 'Accepteras fullmakten av banker och myndigheter?', a: 'Ja, våra mallar är utformade enligt de krav som ställs av svenska banker, Skatteverket, Försäkringskassan och andra myndigheter. Vissa banker har dock egna blanketter.' },
     { q: 'Kan jag använda tjänsten som företag?', a: 'Ja, vem som helst kan skapa och köpa enskilda mallar för 99 kr per dokument. Du betalar per mall du laddar ner – det finns inga abonnemang eller teamkonton.' },
@@ -234,7 +234,7 @@ export default function HomePage() {
               </div>
 
               <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center lg:justify-start text-sm text-navy-200">
-                {['Enligt svensk avtalsrätt', 'GDPR-säker', 'PDF direkt', '99 kr per mall'].map(b => (
+                {['Enligt svensk avtalsrätt', 'PDF direkt', '99 kr per mall'].map(b => (
                   <span key={b} className="flex items-center gap-1.5">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-success"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" strokeWidth="2.5"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                     {b}
