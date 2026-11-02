@@ -10,7 +10,7 @@ export function MallarBrowser() {
   const searchParams = useSearchParams()
   const [search, setSearch] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
-  const [sortBy, setSortBy] = useState<'popular' | 'az' | 'new'>('popular')
+  const [sortBy, setSortBy] = useState<'az' | 'new'>('az')
 
   useEffect(() => {
     const urlSearch = searchParams.get('search')
@@ -23,7 +23,6 @@ export function MallarBrowser() {
     let result = search.length > 1 ? searchTemplates(search) : templates
     if (selectedCategory) result = result.filter(t => t.categorySlug === selectedCategory)
     switch (sortBy) {
-      case 'popular': return [...result].sort((a, b) => b.usageCount - a.usageCount)
       case 'az': return [...result].sort((a, b) => a.name.localeCompare(b.name, 'sv'))
       case 'new': return [...result].sort((a, b) => b.id - a.id)
       default: return result
@@ -78,15 +77,6 @@ export function MallarBrowser() {
               ))}
             </div>
           </div>
-
-          {/* Badge filter info */}
-          <div className="bg-gold-50 rounded-xl p-4 border border-gold-200/50">
-            <div className="text-sm font-semibold text-gold-700 mb-2">Prisförklaring</div>
-            <div className="space-y-2 text-xs text-gold-600">
-              <div className="flex items-center gap-2"><span className="badge-popular">Populär</span> Mest använda</div>
-              <div className="flex items-center gap-2"><span className="badge-premium">Premium</span> Standard+</div>
-            </div>
-          </div>
         </div>
       </aside>
 
@@ -128,7 +118,6 @@ export function MallarBrowser() {
           <div className="flex items-center gap-2">
             <span className="text-xs text-navy-400 hidden sm:inline">Sortera:</span>
             {[
-              { key: 'popular' as const, label: 'Populärast' },
               { key: 'az' as const, label: 'A–Ö' },
               { key: 'new' as const, label: 'Nyast' },
             ].map(s => (
@@ -154,18 +143,12 @@ export function MallarBrowser() {
             >
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-lg">{categories.find(c => c.slug === t.categorySlug)?.icon}</span>
-                {t.badge !== 'standard' && (
-                  <span className={t.badge === 'popular' ? 'badge-popular' : 'badge-premium'}>
-                    {t.badge === 'popular' ? 'Populär' : 'Premium'}
-                  </span>
-                )}
               </div>
               <h3 className="font-heading font-bold text-navy-600 text-sm mb-2 group-hover:text-gold-600 transition-colors line-clamp-2 flex-1">
                 {t.name}
               </h3>
               <p className="text-xs text-navy-400 line-clamp-2 mb-4">{t.description}</p>
-              <div className="flex items-center justify-between mt-auto pt-3 border-t border-navy-50">
-                <span className="text-[11px] text-navy-300">{t.usageCount.toLocaleString('sv-SE')} skapade</span>
+              <div className="flex items-center justify-end mt-auto pt-3 border-t border-navy-50">
                 <span className="text-xs font-semibold text-gold-500 group-hover:text-gold-600">
                   Skapa nu →
                 </span>

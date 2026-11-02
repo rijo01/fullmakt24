@@ -47,7 +47,7 @@ export default function PriserPage() {
       price: String(PACKAGES.family.price),
       unit: 'kr',
       description: '3 valfria fullmakter',
-      badge: 'Populärast',
+      badge: null,
       save: PACKAGES.family.save,
       features: [
         '3 valfria fullmakter',

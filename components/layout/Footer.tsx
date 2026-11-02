@@ -65,7 +65,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm text-navy-200 leading-relaxed mb-4">
-              Sveriges smartaste plattform för fullmakter och medgivanden. Skapa dokument utformade enligt svensk avtalsrätt på minuter.
+              En digital tjänst för fullmakter och medgivanden. Skapa dokument utformade enligt svensk avtalsrätt på minuter.
             </p>
             <p className="text-xs text-navy-300">
               support@fullmakt24.se

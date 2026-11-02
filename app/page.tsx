@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useState, useMemo, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { categories, getPopularTemplates, templates, searchTemplates } from '@/data/templates'
+import { categories, templates, searchTemplates } from '@/data/templates'
 import { trackEvent } from '@/components/GoogleAnalytics'
 
 function FAQItem({ q, a }: { q: string; a: string }) {
@@ -110,8 +110,21 @@ function HeroSearch() {
   )
 }
 
+const FEATURED_SLUGS = [
+  'generell-fullmakt',
+  'fullmakt-bank',
+  'fullmakt-apotek',
+  'fullmakt-skatteverket',
+  'framtidsfullmakt-komplett-2026',
+  'fullmakt-paket-post',
+]
+
 export default function HomePage() {
-  const popular = getPopularTemplates(6)
+  // Fast urval av mallar. Det finns ingen försäljnings- eller trafikdata att
+  // sortera på, så urvalet presenteras inte som "populärast".
+  const featured = FEATURED_SLUGS
+    .map(slug => templates.find(t => t.slug === slug))
+    .filter((t): t is (typeof templates)[number] => Boolean(t))
 
   const faqs = [
     { q: 'Är fullmakterna juridiskt giltiga?', a: 'Våra mallar är framtagna för vanliga svenska fullmaktssituationer och utformade enligt svensk avtalsrätt, bland annat avtalslagen (1915:218). De flesta fullmakter är formlösa och kräver inget särskilt format för att gälla. Vid komplexa eller ovanliga ärenden rekommenderar vi att du kontaktar en jurist.' },
@@ -143,7 +156,7 @@ export default function HomePage() {
     name: 'Fullmakt24.se',
     url: 'https://fullmakt24.se',
     logo: 'https://fullmakt24.se/icon.png',
-    description: 'Sveriges smartaste plattform för fullmakter och medgivanden, utformade enligt svensk avtalsrätt. Skapa din PDF på 3 minuter.',
+    description: 'Digital tjänst för fullmakter och medgivanden, utformade enligt svensk avtalsrätt. Skapa din PDF på 3 minuter.',
     sameAs: [],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -242,7 +255,7 @@ export default function HomePage() {
                     <div className="text-sm font-heading font-bold text-navy-500">FULLMAKT</div>
                     <div className="text-xs text-navy-300">Fullmakt24.se • 2026</div>
                   </div>
-                  <div className="ml-auto"><span className="badge-popular text-[10px]">Signerad ✓</span></div>
+                  <div className="ml-auto"><span className="badge-popular text-[10px]">Klar att skriva under</span></div>
                 </div>
                 <div className="space-y-4 font-mono text-xs text-navy-400">
                   <div>
@@ -301,15 +314,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ POPULAR (top 6) ═══ */}
+      {/* ═══ UTVALDA MALLAR ═══ */}
       <section className="section-padding py-20 lg:py-28">
         <div className="text-center mb-12">
-          <span className="inline-block px-3 py-1 bg-gold-50 text-gold-600 text-sm font-semibold rounded-full mb-4">Populärast just nu</span>
-          <h2 className="text-3xl lg:text-4xl font-heading font-bold text-navy-500">Populäraste mallarna</h2>
-          <p className="text-navy-400 mt-3">De mest använda mallarna i Sverige just nu.</p>
+          <h2 className="text-3xl lg:text-4xl font-heading font-bold text-navy-500">Utvalda mallar</h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
-          {popular.map(t => {
+          {featured.map(t => {
             const cat = categories.find(c => c.slug === t.categorySlug)
             return (
               <Link
@@ -320,18 +331,12 @@ export default function HomePage() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-2xl">{cat?.icon}</span>
-                  {t.badge !== 'standard' && (
-                    <span className={t.badge === 'popular' ? 'badge-popular' : 'badge-premium'}>
-                      {t.badge === 'popular' ? 'Populär' : 'Premium'}
-                    </span>
-                  )}
                 </div>
                 <h3 className="font-heading font-bold text-navy-600 text-base mb-2 group-hover:text-gold-600 transition-colors line-clamp-2 flex-1">
                   {t.name}
                 </h3>
                 <p className="text-sm text-navy-400 line-clamp-2 mb-4">{t.description}</p>
-                <div className="flex items-center justify-between mt-auto pt-3 border-t border-navy-50">
-                  <span className="text-xs text-navy-300">{t.usageCount.toLocaleString('sv-SE')} skapade</span>
+                <div className="flex items-center justify-end mt-auto pt-3 border-t border-navy-50">
                   <span className="text-sm font-semibold text-gold-600 group-hover:text-gold-700">Skapa nu →</span>
                 </div>
               </Link>

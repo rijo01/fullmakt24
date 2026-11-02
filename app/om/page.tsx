@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Om Fullmakt24.se – Sveriges smartaste fullmaktstjänst',
-  description: 'Fullmakt24.se gör det enkelt att skapa fullmakter och medgivanden utformade enligt svensk avtalsrätt. Läs mer om oss, vår vision och varför tusentals svenskar väljer oss.',
+  title: 'Om Fullmakt24.se – digital tjänst för fullmakter och medgivanden',
+  description: 'Fullmakt24.se gör det enkelt att skapa fullmakter och medgivanden utformade enligt svensk avtalsrätt. Läs mer om oss och vår vision.',
 }
 
 export default function OmPage() {
@@ -14,7 +14,7 @@ export default function OmPage() {
 
         <div className="space-y-6 text-navy-500">
           <p className="text-lg text-navy-400 leading-relaxed">
-            Fullmakt24.se är Sveriges ledande digitala plattform för fullmakter och medgivanden. Vi gör det enkelt, snabbt och tryggt att skapa dokument utformade enligt svensk avtalsrätt – för vanliga situationer där du annars hade behövt börja från ett tomt papper.
+            Fullmakt24.se är en digital plattform för fullmakter och medgivanden. Vi gör det enkelt, snabbt och tryggt att skapa dokument utformade enligt svensk avtalsrätt – för vanliga situationer där du annars hade behövt börja från ett tomt papper.
           </p>
 
           <div className="card p-8 my-8">

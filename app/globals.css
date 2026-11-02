@@ -71,10 +71,6 @@
     @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
   }
 
-  .badge-premium {
-    @apply badge bg-gold-50 text-gold-700 border border-gold-200;
-  }
-
   .badge-popular {
     @apply badge bg-navy-50 text-navy-700 border border-navy-200;
   }

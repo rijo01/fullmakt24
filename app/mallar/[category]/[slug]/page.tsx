@@ -181,12 +181,6 @@ export default function TemplateDetailPage() {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <span className="text-3xl">{cat?.icon}</span>
-            {t.badge !== 'standard' && (
-              <span className={t.badge === 'popular' ? 'badge-popular' : 'badge-premium'}>
-                {t.badge === 'popular' ? 'Populär' : 'Premium'}
-              </span>
-            )}
-            <span className="text-sm text-navy-400">{t.usageCount.toLocaleString('sv-SE')} skapade</span>
           </div>
 
           <h1 className="text-3xl lg:text-4xl font-heading font-bold text-navy-500 mb-4">
