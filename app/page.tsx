@@ -131,9 +131,9 @@ export default function HomePage() {
     { q: 'Vad kostar det?', a: 'Varje mall kostar 99 kr som engångsköp. Du betalar per dokument och laddar ner det direkt som PDF – inga abonnemang och inga månadsavgifter.' },
     { q: 'Hur signerar jag dokumentet?', a: 'Du laddar ner dokumentet som PDF, skriver ut det och skriver under för hand – tillsammans med eventuella vittnen. Dokumentet är klart att signera direkt.' },
     { q: 'Hur lång tid tar det att skapa ett dokument?', a: 'De flesta användare skapar sitt dokument på under 3 minuter. Vår guidade ifyllning gör processen snabb och enkel.' },
-    { q: 'Sparas mina personuppgifter?', a: 'Uppgifterna du fyller i sparas som utkast i din webbläsare, och PDF:en skapas i webbläsaren. När du betalar skickas uppgifterna, eller en del av dem, med till betalningsleverantören Stripe. Läs mer i vår integritetspolicy.' },
-    { q: 'Kan jag redigera dokumentet efter nedladdning?', a: 'Du kan ladda ner som PDF för utskrift. Om du behöver göra ändringar kan du alltid gå tillbaka och skapa en ny version via ditt konto.' },
-    { q: 'Accepteras fullmakten av banker och myndigheter?', a: 'Ja, våra mallar är utformade enligt de krav som ställs av svenska banker, Skatteverket, Försäkringskassan och andra myndigheter. Vissa banker har dock egna blanketter.' },
+    { q: 'Sparas mina personuppgifter?', a: 'Uppgifterna du fyller i mallen sparas som utkast i din webbläsare, och PDF:en skapas i webbläsaren. De skickas inte till oss eller till betalningsleverantören Stripe. Läs mer i vår integritetspolicy.' },
+    { q: 'Kan jag redigera dokumentet efter nedladdning?', a: 'PDF:en är gjord för utskrift och går inte att redigera på sajten. Behöver du ändra något skapar du ett nytt dokument från mallen.' },
+    { q: 'Accepteras fullmakten av banker och myndigheter?', a: 'Det avgör varje bank och myndighet. Många har egna blanketter eller särskilda krav för fullmakter, så kontrollera med mottagaren i förväg.' },
     { q: 'Kan jag använda tjänsten som företag?', a: 'Ja, vem som helst kan skapa och köpa enskilda mallar för 99 kr per dokument. Du betalar per mall du laddar ner – det finns inga abonnemang eller teamkonton.' },
   ]
 
