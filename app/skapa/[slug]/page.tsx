@@ -102,7 +102,6 @@ export default function SkapaPage() {
         body: JSON.stringify({
           templateSlug: t.slug,
           templateName: t.name,
-          formData,
           packageType: type,
         }),
       })

@@ -9,7 +9,10 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { templateSlug, templateName, formData, packageType = 'single' } = body
+    // Formulärdata (namn, personnummer m.m.) tas aldrig emot här. Den stannar i
+    // webbläsaren och PDF:en skapas där, enligt integritetspolicyn. Skickar en
+    // äldre klient ändå med den ignoreras den.
+    const { templateSlug, templateName, packageType = 'single' } = body
 
     const pkg = getPackage(packageType)
     // Både 'single' och 'bilingual' avser en specifik mall; paketköp gör det inte.
@@ -67,7 +70,6 @@ export async function POST(req: NextRequest) {
         credits: String(pkg.credits),
         templateSlug: templateSlug || '',
         templateName: templateName || '',
-        formData: formData ? JSON.stringify(formData).slice(0, 500) : '', // Stripe metadata limit
       },
     })
 
