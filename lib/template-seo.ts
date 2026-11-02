@@ -14,16 +14,33 @@ export interface TemplateSeo {
   h1?: string
 }
 
+export interface TemplateContent {
+  slug?: string
+  seo?: TemplateSeo & { keywords?: string[] }
+  content?: {
+    introduction?: string
+    legalValidity?: string
+    howToGuide?: string
+    commonMistakes?: string
+    faq?: { question: string; answer: string }[]
+  }
+  internalLinks?: { text: string; href: string }[]
+}
+
 const SLUG_RE = /^[a-z0-9-]+$/
 
-export async function loadTemplateSeo(slug: string): Promise<TemplateSeo | null> {
+/** Hela mall-JSON:en (SEO-texter, FAQ, länkar), eller null om mallen saknar fil. */
+export async function loadTemplateContent(slug: string): Promise<TemplateContent | null> {
   if (!SLUG_RE.test(slug)) return null
   try {
     const mod = await import(`../public/content/mallar/${slug}.json`)
-    const data = (mod.default ?? mod) as { seo?: TemplateSeo }
-    return data.seo ?? null
+    return (mod.default ?? mod) as TemplateContent
   } catch {
     // Ingen JSON-fil för mallen.
     return null
   }
+}
+
+export async function loadTemplateSeo(slug: string): Promise<TemplateSeo | null> {
+  return (await loadTemplateContent(slug))?.seo ?? null
 }
