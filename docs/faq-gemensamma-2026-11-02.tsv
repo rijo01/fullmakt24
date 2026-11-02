@@ -1,0 +1,74 @@
+mall	namn	FAQ-grupp	synlig på sajten	borttagna frågor	frågor kvar	behöver egen FAQ
+medgivande-bankarenden-barn	Medgivande för bankärenden för barn	G1	ja	Godtar flygbolag den här handlingen? | Kan jag använda fullmakten utomlands?	3	
+medgivande-barn-bo-annan-vuxen	Medgivande för barn att bo hos annan vuxen	G1	ja	Godtar flygbolag den här handlingen?	4	
+medgivande-byte-skola	Medgivande vid byte av skola	G1	ja	Godtar flygbolag den här handlingen? | Kan jag använda fullmakten utomlands?	3	
+fullmakt-aktiebolag	Fullmakt för aktiebolagsärenden	G2	nej (JSON-FAQ visas)	Accepteras denna av alla banker?	4	
+fullmakt-arbetsformedlingen	Fullmakt för Arbetsförmedlingen	G2	ja	Accepteras denna av alla banker?	4	
+fullmakt-bolagsverket	Fullmakt för Bolagsverket	G2	ja	Accepteras denna av alla banker?	4	
+fullmakt-bouppteckning	Fullmakt för bouppteckning	G2	ja	Accepteras denna av alla banker?	4	
+fullmakt-csp-konto	Fullmakt för CSN-ärenden	G2	ja	Accepteras denna av alla banker?	4	
+fullmakt-deklaration	Fullmakt för deklaration	G2	nej (JSON-FAQ visas)	Accepteras denna av alla banker?	4	
+fullmakt-forsakring	Fullmakt för försäkringsärenden	G2	ja	Accepteras denna av alla banker?	4	
+fullmakt-inkasso	Fullmakt gentemot inkassobolag	G2	nej (JSON-FAQ visas)	Accepteras denna av alla banker?	4	
+fullmakt-kronofogden	Fullmakt för Kronofogden	G2	ja	Accepteras denna av alla banker?	4	
+fullmakt-migrationsverket	Fullmakt för Migrationsverket	G2	ja	Accepteras denna av alla banker?	4	
+fullmakt-pension	Fullmakt för pensionsärenden	G2	ja	Accepteras denna av alla banker?	4	
+fullmakt-skatteverket	Fullmakt för Skatteverket	G2	nej (JSON-FAQ visas)	Accepteras denna av alla banker?	4	
+fullmakt-tingsratten	Fullmakt för tingsrätten	G2	ja	Accepteras denna av alla banker?	4	
+fullmakt-bilforsakring	Fullmakt för bilförsäkring	G3	ja	Är denna fullmakt giltig hos myndigheter?	4	
+fullmakt-bilverkstad	Fullmakt för bilverkstad	G3	ja	Är denna fullmakt giltig hos myndigheter?	4	
+fullmakt-flygbolag	Fullmakt gentemot flygbolag	G3	ja	Är denna fullmakt giltig hos myndigheter?	4	
+fullmakt-parkeringsbolag	Fullmakt gentemot parkeringsbolag	G3	ja	Är denna fullmakt giltig hos myndigheter?	4	
+medgivande-hyrbil	Medgivande för hyrbil	G3	ja	Är denna fullmakt giltig hos myndigheter?	4	
+medgivande-samakande	Medgivande för samåkande	G3	ja	Är denna fullmakt giltig hos myndigheter?	4	
+medgivande-organdonation	Medgivande för organdonation	G4	ja	Godtar vården den här fullmakten? | Kan fullmaktshavaren ta medicinska beslut? | Behöver den vara bevittnad? | Gäller den hos alla vårdgivare? | Hur återkallar jag fullmakten?	0	ja
+fullmakt-andrahandsuthyrning	Fullmakt för andrahandsuthyrning	G5	ja	Gäller denna för bostadsförsäljning?	4	
+fullmakt-bostadsforsaljning	Fullmakt för bostadsförsäljning	G5	ja	Kan hyresvärden neka?	4	
+fullmakt-bostadskop	Fullmakt för bostadsköp	G5	ja	Kan hyresvärden neka?	4	
+fullmakt-bredbandsleverantor	Fullmakt för bredbandsleverantör	G5	ja	Gäller denna för bostadsförsäljning? | Kan hyresvärden neka?	3	
+fullmakt-elbolag	Fullmakt för elbolag	G5	ja	Gäller denna för bostadsförsäljning? | Kan hyresvärden neka?	3	
+fullmakt-forsakring-boende	Fullmakt för boendeförsäkring	G5	ja	Gäller denna för bostadsförsäljning? | Kan hyresvärden neka?	3	
+fullmakt-garage-parkering	Fullmakt för garage/parkering	G5	ja	Gäller denna för bostadsförsäljning?	4	
+fullmakt-hyreskontrakt	Fullmakt för hyreskontrakt	G5	ja	Gäller denna för bostadsförsäljning?	4	
+fullmakt-lagenhetsbyte	Fullmakt vid lägenhetsbyte	G5	ja	Gäller denna för bostadsförsäljning?	4	
+fullmakt-nycklar-tillgang	Fullmakt för nycklar och tillgång	G5	ja	Gäller denna för bostadsförsäljning?	4	
+fullmakt-paket-post	Fullmakt för paket och post	G5	nej (JSON-FAQ visas)	Gäller denna för bostadsförsäljning? | Kan hyresvärden neka?	3	
+fullmakt-renovering	Fullmakt för renovering	G5	ja	Gäller denna för bostadsförsäljning? | Kan hyresvärden neka?	3	
+fullmakt-sophantering	Fullmakt för sophantering	G5	nej (JSON-FAQ visas)	Gäller denna för bostadsförsäljning? | Kan hyresvärden neka?	3	
+fullmakt-vattenavlasning	Fullmakt för vattenavläsning	G5	ja	Gäller denna för bostadsförsäljning? | Kan hyresvärden neka?	3	
+fullmakt-foraldrautskott	Fullmakt för föräldraföreningens utskott	G6	ja	Kan bägge vårdnadshavare behöva skriva under? | Gäller medgivandet automatiskt för framtida aktiviteter? | Vad om mitt barn inte vill delta?	2	ja
+fullmakt-foreningsstamma	Fullmakt för föreningsstämma	G6	nej (JSON-FAQ visas)	Behöver skolan godkänna fullmakten? | Kan bägge vårdnadshavare behöva skriva under? | Gäller medgivandet automatiskt för framtida aktiviteter? | Vad om mitt barn inte vill delta?	1	ja
+fullmakt-fritidsgard	Fullmakt för fritidsgård	G6	ja	Behöver skolan godkänna fullmakten?	4	
+fullmakt-idrottsforening	Fullmakt för idrottsförening	G6	ja	Behöver skolan godkänna fullmakten?	4	
+fullmakt-scouterna	Fullmakt för Scouterna	G6	ja	Behöver skolan godkänna fullmakten?	4	
+fullmakt-styrelsearbete	Fullmakt för styrelsearbete	G6	ja	Behöver skolan godkänna fullmakten? | Kan bägge vårdnadshavare behöva skriva under? | Gäller medgivandet automatiskt för framtida aktiviteter? | Vad om mitt barn inte vill delta?	1	ja
+fullmakt-crowdfunding-investering	Fullmakt crowdfunding-investering	G8	nej (JSON-FAQ visas)	Accepterar alla banker fullmakten? | Kan ombudet ta lån i mitt namn? | Måste bankfullmakten bevittnas?	2	ja
+fullmakt-forsakringsarende-utokad	Fullmakt försäkringsärende utökad	G8	nej (JSON-FAQ visas)	Accepterar alla banker fullmakten? | Kan ombudet ta lån i mitt namn? | Måste bankfullmakten bevittnas?	2	ja
+fullmakt-kreditupplysning	Fullmakt kreditupplysning	G8	nej (JSON-FAQ visas)	Accepterar alla banker fullmakten? | Kan ombudet ta lån i mitt namn? | Måste bankfullmakten bevittnas?	2	ja
+fullmakt-skuldsanering-ombud	Fullmakt skuldsanering	G8	nej (JSON-FAQ visas)	Accepterar alla banker fullmakten? | Kan ombudet ta lån i mitt namn? | Måste bankfullmakten bevittnas?	2	ja
+fullmakt-djurforsakring	Fullmakt för djurförsäkring	G10	ja	Godtar veterinären fullmakten? | Kan jag ge fullmakt för nödvändiga behandlingar? | Gäller fullmakten hos alla veterinärer?	2	ja
+fullmakt-djurtransport	Fullmakt för djurtransport	G10	ja	Godtar veterinären fullmakten? | Kan jag ge fullmakt för nödvändiga behandlingar? | Gäller fullmakten hos alla veterinärer?	2	ja
+intyg-djur-resa-utomlands	Intyg för djurets resa utomlands	G10	ja	Godtar veterinären fullmakten? | Kan jag ge fullmakt för nödvändiga behandlingar? | Gäller fullmakten hos alla veterinärer?	2	ja
+medgivande-inkop-djur	Medgivande vid inköp av djur	G10	ja	Godtar veterinären fullmakten? | Kan jag ge fullmakt för nödvändiga behandlingar? | Gäller fullmakten hos alla veterinärer?	2	ja
+fullmakt-abonnemang	Fullmakt för abonnemang/prenumerationer	G11	ja	Gäller fullmakten hos alla banker?	4	
+fullmakt-digital-brevlada	Fullmakt för digital brevlåda	G11	ja	Gäller fullmakten hos alla banker?	4	
+fullmakt-mobiloperator-senior	Fullmakt för mobiloperatör (senior)	G11	nej (JSON-FAQ visas)	Gäller fullmakten hos alla banker?	4	
+intyg-digital-tillganglighet	Intyg om digital tillgänglighet	G11	ja	Gäller fullmakten hos alla banker?	4	
+medgivande-digital-halsoapp	Medgivande för digital hälsoapp	G11	nej (JSON-FAQ visas)	Gäller fullmakten hos alla banker?	4	
+medgivande-hemtjanst-digital	Medgivande för hemtjänst digital kommunikation	G11	ja	Gäller fullmakten hos alla banker?	4	
+fullmakt-domanhantering	Fullmakt för domänhantering	G12	ja	Hur hanteras kryptovaluta vid dödsfall? | Kan jag ge fullmakt för sociala medier?	3	
+fullmakt-epostarkiv	Fullmakt för e-postarkiv/molntjänster	G12	ja	Hur hanteras kryptovaluta vid dödsfall? | Kan jag ge fullmakt för sociala medier?	3	
+fullmakt-kryptovaluta	Fullmakt för kryptovaluta/digitala tillgångar	G12	ja	Kan jag ge fullmakt för sociala medier?	4	
+medgivande-digital-minnessida	Medgivande för digital minnessida	G12	ja	Hur hanteras kryptovaluta vid dödsfall?	4	
+medgivande-prenumerationsavslut	Medgivande för prenumerationsavslut efter dödsfall	G12	ja	Hur hanteras kryptovaluta vid dödsfall? | Kan jag ge fullmakt för sociala medier?	3	
+medgivande-sociala-medier-dodsfall	Medgivande för sociala mediekonton (dödsfall)	G12	ja	Hur hanteras kryptovaluta vid dödsfall?	4	
+fullmakt-fastighetsavstyckning	Fullmakt fastighetsavstyckning	G14	nej (JSON-FAQ visas)	Kan ombudet skriva under köpekontrakt? | Vad händer om priset blir lägre än önskat?	3	
+fullmakt-inteckning-pantbrev	Fullmakt inteckning och pantbrev	G14	nej (JSON-FAQ visas)	Kan ombudet skriva under köpekontrakt? | Vad händer om priset blir lägre än önskat?	3	
+fullmakt-lagfart-ansokan	Fullmakt lagfart	G14	nej (JSON-FAQ visas)	Kan ombudet skriva under köpekontrakt? | Vad händer om priset blir lägre än önskat?	3	
+fullmakt-lantmateriet	Fullmakt Lantmäteriet	G14	nej (JSON-FAQ visas)	Kan ombudet skriva under köpekontrakt? | Vad händer om priset blir lägre än önskat?	3	
+fullmakt-servitut-anlaggning	Fullmakt servitut	G14	nej (JSON-FAQ visas)	Kan ombudet skriva under köpekontrakt? | Vad händer om priset blir lägre än önskat?	3	
+fullmakt-tomtratt-ombud	Fullmakt tomträtt	G14	nej (JSON-FAQ visas)	Kan ombudet skriva under köpekontrakt? | Vad händer om priset blir lägre än önskat?	3	
+fullmakt-bankapp-tillgang	Fullmakt bankapp tillgång	G18	nej (JSON-FAQ visas)	Accepterar Google eller Apple svenska fullmakter? | Kan jag ge ombud rätt att se min mejl?	3	
+fullmakt-e-legitimation	Fullmakt e-legitimation	G18	nej (JSON-FAQ visas)	Accepterar Google eller Apple svenska fullmakter? | Kan jag ge ombud rätt att se min mejl?	3	
+fullmakt-microsoft-konto	Fullmakt Microsoft-konto	G18	nej (JSON-FAQ visas)	Accepterar Google eller Apple svenska fullmakter?	4	
+fullmakt-spotify-abonnemang	Fullmakt Spotify-abonnemang	G18	nej (JSON-FAQ visas)	Accepterar Google eller Apple svenska fullmakter? | Kan jag ge ombud rätt att se min mejl?	3	

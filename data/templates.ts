@@ -200,7 +200,7 @@ function generateTemplates(): Template[] {
         { id: 'begransningar', label: 'Eventuella begränsningar', type: 'textarea', placeholder: 'Ange eventuella begränsningar...', required: false, group: 'detaljer' },
       ],
       faq: [
-        { q: 'Är detta dokument juridiskt bindande?', a: 'Ja, dokumentet uppfyller kraven för en giltig fullmakt enligt svensk rätt. Det rekommenderas att bägge parter undertecknar i närvaro av vittnen.' },
+        { q: 'Är detta dokument juridiskt bindande?', a: 'En fullmakt eller ett medgivande har i regel inget formkrav, men vissa ärenden har särskilda krav. Det är mottagaren som avgör om dokumentet godtas, så kontrollera med mottagaren i förväg.' },
         { q: 'Behöver bägge vårdnadshavare skriva under?', a: 'Vid gemensam vårdnad krävs som regel bägge vårdnadshavares medgivande.' },
         { q: 'Hur länge gäller fullmakten?', a: 'Fullmakten gäller under den period du anger i dokumentet. Den kan återkallas när som helst.' },
         { q: 'Godtar flygbolag den här handlingen?', a: 'Det avgör varje flygbolag och gränskontroll. Kontrollera med flygbolaget före resan och ta med en kopia.' },
@@ -332,7 +332,7 @@ function generateTemplates(): Template[] {
         { id: 'myndighet', label: 'Bank/Myndighet', type: 'text', placeholder: 'Namn på mottagande institution', required: false, group: 'detaljer' },
       ],
       faq: [
-        { q: 'Accepteras denna av alla banker?', a: 'De flesta banker accepterar en korrekt utformad fullmakt, men vissa banker har egna blanketter som de föredrar.' },
+        { q: 'Accepteras denna av alla banker?', a: 'Det avgör varje bank. Många banker har egna blanketter eller krav för fullmakter, så kontrollera med banken i förväg.' },
         { q: 'Behövs legitimation?', a: 'Ja, fullmaktshavaren behöver visa giltig legitimation tillsammans med fullmakten.' },
         { q: 'Kan jag begränsa fullmakten?', a: 'Ja, du kan specificera exakt vilka ärenden fullmakten gäller för.' },
         { q: 'Gäller fullmakten direkt?', a: 'Ja, fullmakten gäller från det datum som anges i dokumentet.' },
@@ -375,8 +375,8 @@ function generateTemplates(): Template[] {
       ],
       faq: [
         { q: 'Behöver fullmakten registreras?', a: 'Nej, en fullmakt för boende behöver inte registreras men bör förvaras säkert.' },
-        { q: 'Gäller denna för bostadsförsäljning?', a: 'Vid fastighetsförsäljning krävs skriftlig fullmakt som uppfyller formkrav i jordabalken.' },
-        { q: 'Kan hyresvärden neka?', a: 'En hyresvärd kan inte neka en korrekt utformad fullmakt, men kan kräva att den uppfyller vissa formkrav.' },
+        { q: 'Gäller denna för bostadsförsäljning?', a: 'En fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)). Gäller det en bostadsrätt kan du läsa mer om [fullmakt för att sälja bostadsrätt](https://fullmakt24.se/fullmakt-salja-bostadsratt). Mäklaren, köparen och föreningen avgör själva om de godtar fullmakten, så kontrollera med dem i förväg.' },
+        { q: 'Kan hyresvärden neka?', a: 'Det avgör hyresvärden. Många hyresvärdar har egna rutiner eller blanketter för ombud, så kontrollera med hyresvärden i förväg.' },
         { q: 'Behöver den bevittnas?', a: 'Rekommenderas, särskilt vid fastighetsaffärer.' },
         { q: 'Kan jag ändra fullmakten i efterhand?', a: 'Ja, du kan alltid upprätta en ny fullmakt som ersätter den tidigare.' },
       ],
@@ -416,7 +416,7 @@ function generateTemplates(): Template[] {
         { id: 'syfte', label: 'Specifik aktivitet/ärende', type: 'textarea', placeholder: 'Beskriv...', required: true, group: 'detaljer' },
       ],
       faq: [
-        { q: 'Behöver skolan godkänna fullmakten?', a: 'Skolor och föreningar accepterar vanligtvis giltiga fullmakter och medgivanden.' },
+        { q: 'Behöver skolan godkänna fullmakten?', a: 'Det avgör skolan eller föreningen. Kontrollera i förväg vilka uppgifter och underskrifter de behöver.' },
         { q: 'Kan bägge vårdnadshavare behöva skriva under?', a: 'Vid gemensam vårdnad kan bägge vårdnadshavares underskrift krävas.' },
         { q: 'Gäller medgivandet automatiskt för framtida aktiviteter?', a: 'Nej, varje aktivitet kräver normalt ett separat medgivande om inget annat anges.' },
         { q: 'Kan föreningen kräva specifik blankett?', a: 'Vissa föreningar har egna blanketter, men denna fullmakt fungerar som komplement.' },
@@ -489,7 +489,7 @@ function generateTemplates(): Template[] {
       faq: [
         { q: 'Kan denna användas istället för god man?', a: 'Nej, denna fullmakt ersätter inte ett godmanskap men kan komplettera det.' },
         { q: 'Kräver tjänsterna BankID?', a: 'Många digitala tjänster kräver BankID. Fullmakten kan ge tillgång via ombud.' },
-        { q: 'Gäller fullmakten hos alla banker?', a: 'De flesta banker accepterar fullmakten, men kan ha egna formulär.' },
+        { q: 'Gäller fullmakten hos alla banker?', a: 'Det avgör varje bank, och många har egna blanketter för fullmakter. Kontrollera med banken i förväg.' },
         { q: 'Kan jag ge fullmakt för alla digitala tjänster?', a: 'Ja, du kan specificera vilka tjänster fullmakten gäller för.' },
         { q: 'Behöver den förnya?', a: 'Det rekommenderas att se över fullmakten årligen.' },
       ],
@@ -525,7 +525,7 @@ function generateTemplates(): Template[] {
         { q: 'Kan digitala tillgångar ärvas?', a: 'Ja, digitala tillgångar ingår i kvarlåtenskapen men reglerna varierar beroende på tjänst.' },
         { q: 'Hur hanteras kryptovaluta vid dödsfall?', a: 'Kryptovaluta betraktas som egendom och ingår i bouppteckningen.' },
         { q: 'Kan jag ge fullmakt för sociala medier?', a: 'Ja, men varje plattform har egna regler för kontohantering vid dödsfall.' },
-        { q: 'Behöver dödsfallsintyg bifogas?', a: 'Ja, de flesta tjänster kräver dödsfallsintyg för att godkänna fullmakten.' },
+        { q: 'Behöver dödsfallsintyg bifogas?', a: 'Det avgör varje tjänst. Många har egna rutiner och begär intyg om dödsfallet, så kontrollera med tjänsten i förväg.' },
         { q: 'Gäller fullmakten internationellt?', a: 'Den gäller i Sverige men utländska tjänster kan ha andra krav.' },
       ],
       relatedIds: [],
@@ -4218,6 +4218,101 @@ function generateTemplates(): Template[] {
     legalInfo: 'Grundat på Patientlagen (2014:821) 4 kap. 3 § om informerat samtycke och Föräldrabalken (1949:381) 6 kap. om vårdnadshavarens ansvar.',
     keywords: ['medgivande medicinsk behandling barn', 'tillstånd behandling utomlands minderårig', 'skolresa medgivande sjukvård', 'vårdnadshavare medgivande utomlands'],
   } as Template);
+
+  // Gemensamma FAQ-frågor som följer med kategorins forEach men inte gäller
+  // mallens ämne (granskning 2026-11-02). Frågorna tas bort per mall.
+  const BANK = 'Accepteras denna av alla banker?';
+  const FAQ_EXCLUDE: Record<string, string[]> = {
+    // Föräldrar & barn
+    'medgivande-barn-bo-annan-vuxen': ['Godtar flygbolag den här handlingen?'],
+    'medgivande-bankarenden-barn': ['Godtar flygbolag den här handlingen?', 'Kan jag använda fullmakten utomlands?'],
+    'medgivande-byte-skola': ['Godtar flygbolag den här handlingen?', 'Kan jag använda fullmakten utomlands?'],
+    // Ekonomi & myndigheter: bankfrågan på mallar som inte gäller bank
+    'fullmakt-bolagsverket': [BANK],
+    'fullmakt-forsakring': [BANK],
+    'fullmakt-kronofogden': [BANK],
+    'fullmakt-pension': [BANK],
+    'fullmakt-arbetsformedlingen': [BANK],
+    'fullmakt-bouppteckning': [BANK],
+    'fullmakt-migrationsverket': [BANK],
+    'fullmakt-tingsratten': [BANK],
+    'fullmakt-csp-konto': [BANK],
+    'fullmakt-skatteverket': [BANK],
+    'fullmakt-deklaration': [BANK],
+    'fullmakt-inkasso': [BANK],
+    'fullmakt-aktiebolag': [BANK],
+    // Resa & transport: myndighetsfrågan på mallar mot privata mottagare
+    'fullmakt-bilforsakring': ['Är denna fullmakt giltig hos myndigheter?'],
+    'fullmakt-parkeringsbolag': ['Är denna fullmakt giltig hos myndigheter?'],
+    'fullmakt-bilverkstad': ['Är denna fullmakt giltig hos myndigheter?'],
+    'medgivande-hyrbil': ['Är denna fullmakt giltig hos myndigheter?'],
+    'fullmakt-flygbolag': ['Är denna fullmakt giltig hos myndigheter?'],
+    'medgivande-samakande': ['Är denna fullmakt giltig hos myndigheter?'],
+    // Vård & omsorg: intyg om önskemål, inte en fullmakt
+    'medgivande-organdonation': ['Godtar vården den här fullmakten?', 'Kan fullmaktshavaren ta medicinska beslut?', 'Behöver den vara bevittnad?', 'Gäller den hos alla vårdgivare?', 'Hur återkallar jag fullmakten?'],
+    // Boende & vardag
+    'fullmakt-bostadskop': ['Kan hyresvärden neka?'],
+    'fullmakt-bostadsforsaljning': ['Kan hyresvärden neka?'],
+    'fullmakt-hyreskontrakt': ['Gäller denna för bostadsförsäljning?'],
+    'fullmakt-lagenhetsbyte': ['Gäller denna för bostadsförsäljning?'],
+    'fullmakt-andrahandsuthyrning': ['Gäller denna för bostadsförsäljning?'],
+    'fullmakt-garage-parkering': ['Gäller denna för bostadsförsäljning?'],
+    'fullmakt-nycklar-tillgang': ['Gäller denna för bostadsförsäljning?'],
+    'fullmakt-elbolag': ['Gäller denna för bostadsförsäljning?', 'Kan hyresvärden neka?'],
+    'fullmakt-bredbandsleverantor': ['Gäller denna för bostadsförsäljning?', 'Kan hyresvärden neka?'],
+    'fullmakt-forsakring-boende': ['Gäller denna för bostadsförsäljning?', 'Kan hyresvärden neka?'],
+    'fullmakt-renovering': ['Gäller denna för bostadsförsäljning?', 'Kan hyresvärden neka?'],
+    'fullmakt-vattenavlasning': ['Gäller denna för bostadsförsäljning?', 'Kan hyresvärden neka?'],
+    'fullmakt-paket-post': ['Gäller denna för bostadsförsäljning?', 'Kan hyresvärden neka?'],
+    'fullmakt-sophantering': ['Gäller denna för bostadsförsäljning?', 'Kan hyresvärden neka?'],
+    // Förening & skola
+    'fullmakt-idrottsforening': ['Behöver skolan godkänna fullmakten?'],
+    'fullmakt-scouterna': ['Behöver skolan godkänna fullmakten?'],
+    'fullmakt-fritidsgard': ['Behöver skolan godkänna fullmakten?'],
+    'fullmakt-foreningsstamma': ['Behöver skolan godkänna fullmakten?', 'Kan bägge vårdnadshavare behöva skriva under?', 'Gäller medgivandet automatiskt för framtida aktiviteter?', 'Vad om mitt barn inte vill delta?'],
+    'fullmakt-styrelsearbete': ['Behöver skolan godkänna fullmakten?', 'Kan bägge vårdnadshavare behöva skriva under?', 'Gäller medgivandet automatiskt för framtida aktiviteter?', 'Vad om mitt barn inte vill delta?'],
+    'fullmakt-foraldrautskott': ['Kan bägge vårdnadshavare behöva skriva under?', 'Gäller medgivandet automatiskt för framtida aktiviteter?', 'Vad om mitt barn inte vill delta?'],
+    // Djur: veterinärfrågor på mallar som inte gäller veterinär
+    'fullmakt-djurtransport': ['Godtar veterinären fullmakten?', 'Kan jag ge fullmakt för nödvändiga behandlingar?', 'Gäller fullmakten hos alla veterinärer?'],
+    'intyg-djur-resa-utomlands': ['Godtar veterinären fullmakten?', 'Kan jag ge fullmakt för nödvändiga behandlingar?', 'Gäller fullmakten hos alla veterinärer?'],
+    'fullmakt-djurforsakring': ['Godtar veterinären fullmakten?', 'Kan jag ge fullmakt för nödvändiga behandlingar?', 'Gäller fullmakten hos alla veterinärer?'],
+    'medgivande-inkop-djur': ['Godtar veterinären fullmakten?', 'Kan jag ge fullmakt för nödvändiga behandlingar?', 'Gäller fullmakten hos alla veterinärer?'],
+    // Seniorer: bankfrågan på mallar som inte gäller bank
+    'fullmakt-digital-brevlada': ['Gäller fullmakten hos alla banker?'],
+    'medgivande-hemtjanst-digital': ['Gäller fullmakten hos alla banker?'],
+    'fullmakt-abonnemang': ['Gäller fullmakten hos alla banker?'],
+    'intyg-digital-tillganglighet': ['Gäller fullmakten hos alla banker?'],
+    'fullmakt-mobiloperator-senior': ['Gäller fullmakten hos alla banker?'],
+    'medgivande-digital-halsoapp': ['Gäller fullmakten hos alla banker?'],
+    // Digitalt dödsbo
+    'medgivande-sociala-medier-dodsfall': ['Hur hanteras kryptovaluta vid dödsfall?'],
+    'medgivande-digital-minnessida': ['Hur hanteras kryptovaluta vid dödsfall?'],
+    'fullmakt-domanhantering': ['Hur hanteras kryptovaluta vid dödsfall?', 'Kan jag ge fullmakt för sociala medier?'],
+    'medgivande-prenumerationsavslut': ['Hur hanteras kryptovaluta vid dödsfall?', 'Kan jag ge fullmakt för sociala medier?'],
+    'fullmakt-epostarkiv': ['Hur hanteras kryptovaluta vid dödsfall?', 'Kan jag ge fullmakt för sociala medier?'],
+    'fullmakt-kryptovaluta': ['Kan jag ge fullmakt för sociala medier?'],
+    // Bank och lån (dold bakom JSON-FAQ)
+    'fullmakt-skuldsanering-ombud': ['Accepterar alla banker fullmakten?', 'Kan ombudet ta lån i mitt namn?', 'Måste bankfullmakten bevittnas?'],
+    'fullmakt-kreditupplysning': ['Accepterar alla banker fullmakten?', 'Kan ombudet ta lån i mitt namn?', 'Måste bankfullmakten bevittnas?'],
+    'fullmakt-crowdfunding-investering': ['Accepterar alla banker fullmakten?', 'Kan ombudet ta lån i mitt namn?', 'Måste bankfullmakten bevittnas?'],
+    'fullmakt-forsakringsarende-utokad': ['Accepterar alla banker fullmakten?', 'Kan ombudet ta lån i mitt namn?', 'Måste bankfullmakten bevittnas?'],
+    // Fastighet: försäljningsfrågor på mallar som inte gäller försäljning (dold)
+    'fullmakt-lantmateriet': ['Kan ombudet skriva under köpekontrakt?', 'Vad händer om priset blir lägre än önskat?'],
+    'fullmakt-lagfart-ansokan': ['Kan ombudet skriva under köpekontrakt?', 'Vad händer om priset blir lägre än önskat?'],
+    'fullmakt-inteckning-pantbrev': ['Kan ombudet skriva under köpekontrakt?', 'Vad händer om priset blir lägre än önskat?'],
+    'fullmakt-tomtratt-ombud': ['Kan ombudet skriva under köpekontrakt?', 'Vad händer om priset blir lägre än önskat?'],
+    'fullmakt-servitut-anlaggning': ['Kan ombudet skriva under köpekontrakt?', 'Vad händer om priset blir lägre än önskat?'],
+    'fullmakt-fastighetsavstyckning': ['Kan ombudet skriva under köpekontrakt?', 'Vad händer om priset blir lägre än önskat?'],
+    // Digitala konton (dold)
+    'fullmakt-spotify-abonnemang': ['Accepterar Google eller Apple svenska fullmakter?', 'Kan jag ge ombud rätt att se min mejl?'],
+    'fullmakt-bankapp-tillgang': ['Accepterar Google eller Apple svenska fullmakter?', 'Kan jag ge ombud rätt att se min mejl?'],
+    'fullmakt-e-legitimation': ['Accepterar Google eller Apple svenska fullmakter?', 'Kan jag ge ombud rätt att se min mejl?'],
+    'fullmakt-microsoft-konto': ['Accepterar Google eller Apple svenska fullmakter?'],
+  };
+  for (const t of templates) {
+    const exclude = FAQ_EXCLUDE[t.slug];
+    if (exclude && t.faq) t.faq = t.faq.filter(f => !exclude.includes(f.q));
+  }
 
   // Defensive dedup by slug — last write wins
   const bySlug = new Map<string, Template>();
