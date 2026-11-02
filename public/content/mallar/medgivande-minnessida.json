@@ -6,8 +6,6 @@
   "categorySlug": "digitalt-dodsbo",
   "description": "Medgivande för att skapa minnessida.",
   "longDescription": "Ett medgivande för minnessida tillåter att en minnessida skapas för en avliden person.",
-  "badge": "standard",
-  "usageCount": 432,
   "fields": [
     { "id": "givare_namn", "label": "Närståndes namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

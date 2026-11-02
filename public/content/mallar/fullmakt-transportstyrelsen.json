@@ -6,8 +6,6 @@
   "categorySlug": "resa-transport",
   "description": "Fullmakt för att representera vid Transportstyrelsens ärenden.",
   "longDescription": "En fullmakt för Transportstyrelsen ger en annan person befogenhet att representera dig vid ärenden relaterade till fordon, körkort och båtar. Det kan gälla registrering, förnyelse, och andra administrativa ärenden.",
-  "badge": "standard",
-  "usageCount": 1234,
   "fields": [
     { "id": "givare_namn", "label": "Ägarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

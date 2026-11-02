@@ -6,8 +6,6 @@
   "categorySlug": "ekonomi-myndigheter",
   "description": "Fullmakt för att söka lån.",
   "longDescription": "En fullmakt för lånehandlare ger en person befogenhet att söka och underteckna låneavtal på din räkning.",
-  "badge": "premium",
-  "usageCount": 1876,
   "fields": [
     { "id": "givare_namn", "label": "Lånetagarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

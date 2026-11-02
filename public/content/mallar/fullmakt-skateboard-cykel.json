@@ -6,8 +6,6 @@
   "categorySlug": "boende-vardag",
   "description": "Fullmakt för att köpa och sälja cykel.",
   "longDescription": "En fullmakt för cykelaffär ger en person befogenhet att köpa eller sälja cykel på din räkning.",
-  "badge": "standard",
-  "usageCount": 432,
   "fields": [
     { "id": "givare_namn", "label": "Cykelägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

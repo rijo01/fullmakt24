@@ -6,8 +6,6 @@
   "categorySlug": "boende-vardag",
   "description": "Fullmakt för att beställa och ta emot blomsterleveranser.",
   "longDescription": "En fullmakt för blomsterleverans ger en person befogenhet att beställa och betala för blomster på din räkning.",
-  "badge": "standard",
-  "usageCount": 345,
   "fields": [
     { "id": "givare_namn", "label": "Beställarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

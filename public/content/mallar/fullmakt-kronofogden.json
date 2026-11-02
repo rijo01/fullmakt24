@@ -6,8 +6,6 @@
   "categorySlug": "ekonomi-myndigheter",
   "description": "Fullmakt för att representera vid Kronofogdens ärenden.",
   "longDescription": "En fullmakt för Kronofogden ger en person befogenhet att representera dig i ärenden relaterade till skulder, betalningsförelägganden och tvångsexekution.",
-  "badge": "premium",
-  "usageCount": 1234,
   "fields": [
     { "id": "givare_namn", "label": "Gäldenärens namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

@@ -6,8 +6,6 @@
   "categorySlug": "ekonomi-myndigheter",
   "description": "Fullmakt för att hantera pensionsärenden och pensionsutbetalningar.",
   "longDescription": "En fullmakt för pensionsärenden gör att en familjemedlem eller juridisk representant kan hantera din pension och pensionsutbetalningar. Det kan gälla att kommunicera med pensionsmyndigheter, uppdatera personuppgifter, eller förvalta pensionsfonden.",
-  "badge": "premium",
-  "usageCount": 1234,
   "fields": [
     { "id": "givare_namn", "label": "Pensionärens namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

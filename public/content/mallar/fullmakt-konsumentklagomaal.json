@@ -6,8 +6,6 @@
   "categorySlug": "juridik",
   "description": "Fullmakt för att hantera konsumentklagomål.",
   "longDescription": "En fullmakt för konsumentklagomål ger en person befogenhet att klaga på en köp eller tjänst på dina rättigheter.",
-  "badge": "standard",
-  "usageCount": 876,
   "fields": [
     { "id": "givare_namn", "label": "Konsumentens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

@@ -6,8 +6,6 @@
   "categorySlug": "ekonomi-myndigheter",
   "description": "Fullmakt för att hantera CSP-konto åt arbetsgivare.",
   "longDescription": "En fullmakt för CSP-konto (Cloud Solution Provider-konto) ger en person befogenhet att hantera Microsoft-tjänster på arbetsgivarens räkning.",
-  "badge": "premium",
-  "usageCount": 432,
   "fields": [
     { "id": "givare_namn", "label": "Företagsnamn", "type": "text", "placeholder": "Anderssons AB", "required": true, "group": "givare" },
     { "id": "givare_orgnr", "label": "Organisationsnummer", "type": "text", "placeholder": "556000-1234", "required": true, "group": "givare" },

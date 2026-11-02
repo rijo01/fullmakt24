@@ -6,8 +6,6 @@
   "categorySlug": "boende-vardag",
   "description": "Fullmakt för att representera vid fastighetsköp eller försäljning.",
   "longDescription": "En fullmakt för fastighetsärenden ger en person befogenhet att representera dig vid köp eller försäljning av fastighet.",
-  "badge": "premium",
-  "usageCount": 2345,
   "fields": [
     { "id": "givare_namn", "label": "Fastighetsägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

@@ -6,8 +6,6 @@
   "categorySlug": "djur-husdjur",
   "description": "Intyg för att ta djur utomlands.",
   "longDescription": "Ett intyg för djurresa bekräftar att ditt djur är vaccinnerat och friskt för resa.",
-  "badge": "standard",
-  "usageCount": 543,
   "fields": [
     { "id": "givare_namn", "label": "Djurägarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

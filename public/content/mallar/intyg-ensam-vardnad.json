@@ -6,8 +6,6 @@
   "categorySlug": "juridik",
   "description": "Intyg för ensam vårdnad av barn.",
   "longDescription": "Ett intyg för ensam vårdnad bekräftar att du är ensam vårdnadshavare för ett barn.",
-  "badge": "premium",
-  "usageCount": 876,
   "fields": [
     { "id": "givare_namn", "label": "Föräldrerns namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

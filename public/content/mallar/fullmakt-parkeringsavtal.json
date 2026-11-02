@@ -6,8 +6,6 @@
   "categorySlug": "boende-vardag",
   "description": "Fullmakt för att underteckna parkeringsavtal.",
   "longDescription": "En fullmakt för parkeringsavtal ger en person befogenhet att underteckna parkeringsavtal på din räkning.",
-  "badge": "standard",
-  "usageCount": 654,
   "fields": [
     { "id": "givare_namn", "label": "Avtalstagaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

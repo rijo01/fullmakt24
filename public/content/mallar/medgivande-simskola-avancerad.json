@@ -6,8 +6,6 @@
   "categorySlug": "forening-skola",
   "description": "Medgivande för avancerad simundervisning.",
   "longDescription": "Ett medgivande för avancerad simundervisning bekräftar att barnet kan deltaga i djupare vattenverksamhet.",
-  "badge": "standard",
-  "usageCount": 543,
   "fields": [
     { "id": "givare_namn", "label": "Föräldrens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

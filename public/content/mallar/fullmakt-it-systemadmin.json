@@ -6,8 +6,6 @@
   "categorySlug": "ekonomi-myndigheter",
   "description": "Fullmakt för IT-systemadministration.",
   "longDescription": "En fullmakt för IT-systemadministration ger en person befogenhet att administrera dina IT-system och nätverk.",
-  "badge": "premium",
-  "usageCount": 765,
   "fields": [
     { "id": "givare_namn", "label": "Systemägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

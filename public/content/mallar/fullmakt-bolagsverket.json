@@ -6,8 +6,6 @@
   "categorySlug": "ekonomi-myndigheter",
   "description": "Fullmakt för att representera ett bolag vid Bolagsverket.",
   "longDescription": "En fullmakt för Bolagsverket ger en person befogenhet att representera ditt bolag i ärenden hos Bolagsverket, som registrering, ändringar i bolagsuppgifter, eller årsredovisning.",
-  "badge": "premium",
-  "usageCount": 1654,
   "fields": [
     { "id": "givare_namn", "label": "Bolaget namn", "type": "text", "placeholder": "Anderssons AB", "required": true, "group": "givare" },
     { "id": "givare_orgnr", "label": "Organisationsnummer", "type": "text", "placeholder": "556000-1234", "required": true, "group": "givare" },

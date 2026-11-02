@@ -6,8 +6,6 @@
   "categorySlug": "vard-omsorg",
   "description": "Fullmakt för att besöka vårdcentral.",
   "longDescription": "En fullmakt för vårdcentral ger en person befogenhet att representera dig vid läkarbesök på vårdcentral.",
-  "badge": "standard",
-  "usageCount": 987,
   "fields": [
     { "id": "givare_namn", "label": "Patientens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

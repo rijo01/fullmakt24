@@ -6,8 +6,6 @@
   "categorySlug": "ekonomi-myndigheter",
   "description": "Fullmakt för att hämta paket och brev.",
   "longDescription": "En fullmakt för PostNord ger en person befogenhet att hämta paket och brev på PostNord åt dig.",
-  "badge": "standard",
-  "usageCount": 1098,
   "fields": [
     { "id": "givare_namn", "label": "Mottagarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

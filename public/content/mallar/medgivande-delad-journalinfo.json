@@ -6,8 +6,6 @@
   "categorySlug": "vard-omsorg",
   "description": "Medgivande att dela journalinformation med annan part.",
   "longDescription": "Ett medgivande för delad journalinformation ger en annan person – ofta en familjemedlem, vårdare eller närstående – rätt att få tillgång till din medicinska journal från sjukvården. Detta är viktigt när någon närstående behöver stödja dig i dina medicinska ärenden, följa din läkningstid eller förvalta din vård. Utan detta medgivande är journalen skyddad av sekretess.",
-  "badge": "standard",
-  "usageCount": 1567,
   "fields": [
     { "id": "givare_namn", "label": "Patientens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

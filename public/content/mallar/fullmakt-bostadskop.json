@@ -6,8 +6,6 @@
   "categorySlug": "boende-vardag",
   "description": "Fullmakt för att representera vid bostadsköp.",
   "longDescription": "En fullmakt för bostadsköp ger en annan person befogenhet att representera dig vid köpet av en bostad. Detta kan inkludera att underteckna kontrakt, hantera finansieringen och kommunicera med mäklare och juridiska ombud.",
-  "badge": "premium",
-  "usageCount": 2134,
   "fields": [
     {
       "id": "givare_namn",

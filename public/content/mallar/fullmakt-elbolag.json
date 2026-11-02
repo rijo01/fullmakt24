@@ -6,8 +6,6 @@
   "categorySlug": "boende-vardag",
   "description": "Fullmakt för att hantera elkontraktoch avtal med elbolaget.",
   "longDescription": "En fullmakt för elbolag ger en annan person befogenhet att hantera dina elkontakt och avtal. Det kan gälla att ändra el­leverantör, hantera avläsningar, ta emot fakturor eller lösa problem med elöverföringen. Detta är praktiskt när du är borta långt eller när någon närstående behöver ta över hanteringen.",
-  "badge": "standard",
-  "usageCount": 876,
   "fields": [
     { "id": "givare_namn", "label": "Kundnamn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

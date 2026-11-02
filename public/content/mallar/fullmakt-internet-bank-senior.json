@@ -6,8 +6,6 @@
   "categorySlug": "seniorer-omsorg",
   "description": "Fullmakt för internetbank anpassad för seniorer.",
   "longDescription": "En fullmakt för internetbank gör att en familjemedlem eller betrodd person kan logga in på ditt bankkonto och hantera dina ekonomiska ärenden. Detta är särskilt värdefullt för äldre som behöver stöd med digitala tjänster eller som inte längre kan hantera sitt bankkonto självständigt.",
-  "badge": "premium",
-  "usageCount": 1876,
   "fields": [
     { "id": "givare_namn", "label": "Bankkunds namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

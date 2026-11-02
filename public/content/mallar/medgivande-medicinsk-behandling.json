@@ -6,8 +6,6 @@
   "categorySlug": "vard-omsorg",
   "description": "Medgivande för att annan person kan godkänna medicinsk behandling åt dig.",
   "longDescription": "Ett medgivande för medicinsk behandling ger en närstående befogenhet att godkänna vård eller behandling åt dig om du inte själv kan göra det. Detta är särskilt viktigt i nödsituationer eller när du är omedveten.",
-  "badge": "premium",
-  "usageCount": 2345,
   "fields": [
     { "id": "givare_namn", "label": "Patientens namn", "type": "text", "placeholder": "Sven Svensson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

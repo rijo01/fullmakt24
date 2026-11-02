@@ -6,8 +6,6 @@
   "categorySlug": "ekonomi-myndigheter",
   "description": "Fullmakt för att hantera internetdomän.",
   "longDescription": "En fullmakt för domänhantering ger en person befogenhet att administrera din internetdomän, inklusive DNS-inställningar och förnyelse.",
-  "badge": "premium",
-  "usageCount": 432,
   "fields": [
     { "id": "givare_namn", "label": "Domänägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

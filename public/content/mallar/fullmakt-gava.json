@@ -6,8 +6,6 @@
   "categorySlug": "ekonomi-myndigheter",
   "description": "Fullmakt för att ge bort egendom eller pengar.",
   "longDescription": "En fullmakt för gåva ger en person befogenhet att ge bort dina pengar eller egendom till andra.",
-  "badge": "premium",
-  "usageCount": 1234,
   "fields": [
     { "id": "givare_namn", "label": "Gåvogivaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

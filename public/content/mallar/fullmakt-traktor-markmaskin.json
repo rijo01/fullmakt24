@@ -6,8 +6,6 @@
   "categorySlug": "jordbruk",
   "description": "Fullmakt för att köpa eller sälja traktor.",
   "longDescription": "En fullmakt för traktor ger en person befogenhet att köpa eller sälja jordbruksmaskin på din räkning.",
-  "badge": "premium",
-  "usageCount": 543,
   "fields": [
     { "id": "givare_namn", "label": "Jordbrukarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

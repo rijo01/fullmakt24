@@ -6,8 +6,6 @@
   "categorySlug": "digitalt-dodsbo",
   "description": "Fullmakt för att hantera e-postarkiv och digitala meddelanden.",
   "longDescription": "En fullmakt för e-postarkiv ger en person befogenhet att få åtkomst till ditt e-postarkiv efter dödsfall eller om du är oförmögen.",
-  "badge": "premium",
-  "usageCount": 654,
   "fields": [
     { "id": "givare_namn", "label": "E-postägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

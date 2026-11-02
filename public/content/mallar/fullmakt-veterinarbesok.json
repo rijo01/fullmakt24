@@ -6,8 +6,6 @@
   "categorySlug": "djur-husdjur",
   "description": "Fullmakt för att ta djuret till veterinär åt annan.",
   "longDescription": "En fullmakt för veterinärbesök ger en annan person befogenhet att ta ditt djur till veterinären och godkänna behandling. Detta är praktiskt när du är sjuk, bortrest eller har begränsad mobilitet.",
-  "badge": "standard",
-  "usageCount": 1098,
   "fields": [
     { "id": "givare_namn", "label": "Djurägarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

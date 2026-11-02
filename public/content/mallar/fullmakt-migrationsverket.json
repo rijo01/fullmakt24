@@ -6,8 +6,6 @@
   "categorySlug": "ekonomi-myndigheter",
   "description": "Fullmakt för att representera vid Migrationsverkets ärenden.",
   "longDescription": "En fullmakt för Migrationsverket ger en person befogenhet att representera dig vid ärendet rörande visum, uppehållstillstånd, medborgarskap och andra invandring­särenden. Denna fullmakt kan behövas när du inte kan personligen närvara vid möten eller intervjuer.",
-  "badge": "premium",
-  "usageCount": 1543,
   "fields": [
     { "id": "givare_namn", "label": "Sökandens namn", "type": "text", "placeholder": "Maria Garcia", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer/Passnummer", "type": "text", "placeholder": "XXXXXX-XXXX eller passnummer", "required": true, "group": "givare" },

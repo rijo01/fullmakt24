@@ -6,8 +6,6 @@
   "categorySlug": "foretagsjuridik",
   "description": "Fullmakt för att administrera företaget.",
   "longDescription": "En fullmakt för företagsjuridik ger en person befogenhet att administrera ditt företag och hantera juridiska ärenden.",
-  "badge": "premium",
-  "usageCount": 1234,
   "fields": [
     { "id": "givare_namn", "label": "Företagets namn", "type": "text", "placeholder": "Anderssons AB", "required": true, "group": "givare" },
     { "id": "givare_orgnr", "label": "Organisationsnummer", "type": "text", "placeholder": "556000-1234", "required": true, "group": "givare" },

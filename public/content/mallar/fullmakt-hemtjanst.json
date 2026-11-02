@@ -6,8 +6,6 @@
   "categorySlug": "vard-omsorg",
   "description": "Fullmakt för att använda hemtjänstens tjänster.",
   "longDescription": "En fullmakt för hemtjänst ger en person befogenhet att beställa och hantera hemtjänster åt dig.",
-  "badge": "premium",
-  "usageCount": 1098,
   "fields": [
     { "id": "givare_namn", "label": "Användaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

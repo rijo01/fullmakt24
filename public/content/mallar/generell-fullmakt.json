@@ -6,8 +6,6 @@
   "categorySlug": "ekonomi-myndigheter",
   "description": "Generell fullmakt för att hantera alla ärenden åt annan.",
   "longDescription": "En generell fullmakt är en bred fullmakt som ger en annan person behörighet att agera för dig i de flesta juridiska och ekonomiska ärenden. Det är en omfattande fullmakt som ofta används när någon behöver fullständig representativ befogenhet.",
-  "badge": "premium",
-  "usageCount": 3456,
   "fields": [
     { "id": "givare_namn", "label": "Fullmaktsgivarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

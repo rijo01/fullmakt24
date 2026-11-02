@@ -6,8 +6,6 @@
   "categorySlug": "forening-skola",
   "description": "Fullmakt för att representera idöttsklubb.",
   "longDescription": "En fullmakt för idöttsklubb ger en person befogenhet att representera klubben vid möten och tävlingar.",
-  "badge": "standard",
-  "usageCount": 1234,
   "fields": [
     { "id": "givare_namn", "label": "Medlemmens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

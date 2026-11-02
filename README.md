@@ -2,7 +2,7 @@
 
 > Din fullmakt – klar på 3 minuter
 
-Sveriges smartaste plattform för fullmakter och medgivanden. 124 juridiskt granskade mallar.
+En digital tjänst för fullmakter och medgivanden.
 
 ## Tech Stack
 

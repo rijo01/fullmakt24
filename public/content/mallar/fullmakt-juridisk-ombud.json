@@ -6,8 +6,6 @@
   "categorySlug": "juridik",
   "description": "Fullmakt för juridisk representation.",
   "longDescription": "En fullmakt för juridisk ombud ger en advokat eller juridisk expert befogenhet att representera dig i domstol och myndighetsärenden.",
-  "badge": "premium",
-  "usageCount": 3456,
   "fields": [
     { "id": "givare_namn", "label": "Klientens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

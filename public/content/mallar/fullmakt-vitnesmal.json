@@ -6,8 +6,6 @@
   "categorySlug": "juridik",
   "description": "Fullmakt för vittnesbok.",
   "longDescription": "En fullmakt för vittnesbok ger en person befogenhet att underteckna som vittne på dina juridiska dokument.",
-  "badge": "premium",
-  "usageCount": 432,
   "fields": [
     { "id": "givare_namn", "label": "Vittnesaktersnamn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

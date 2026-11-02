@@ -6,8 +6,6 @@
   "categorySlug": "juridik",
   "description": "Fullmakt för att ansöka om namnbyte.",
   "longDescription": "En fullmakt för namnbyte ger en person befogenhet att ansöka om namnbyte på Skatteverket åt dig.",
-  "badge": "premium",
-  "usageCount": 654,
   "fields": [
     { "id": "givare_namn", "label": "Det gamla namnet", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

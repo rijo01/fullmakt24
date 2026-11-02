@@ -6,8 +6,6 @@
   "categorySlug": "boende-vardag",
   "description": "Fullmakt för fastighetsförvaltning.",
   "longDescription": "En fullmakt för fastighetsförvaltning ger en person befogenhet att förvalta din fastighet och ta hyresbeslut.",
-  "badge": "premium",
-  "usageCount": 1234,
   "fields": [
     { "id": "givare_namn", "label": "Fastighetsägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

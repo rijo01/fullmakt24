@@ -6,8 +6,6 @@
   "categorySlug": "boende-vardag",
   "description": "Fullmakt för att organisera renovering.",
   "longDescription": "En fullmakt för renovering ger en person befogenhet att organisera och betala för renoveringsarbete på din fastighet.",
-  "badge": "premium",
-  "usageCount": 654,
   "fields": [
     { "id": "givare_namn", "label": "Fastighetsägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

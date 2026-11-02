@@ -6,8 +6,6 @@
   "categorySlug": "boende-vardag",
   "description": "Fullmakt för att representera vid bostadsförsäljning.",
   "longDescription": "En fullmakt för bostadsförsäljning ger en person befogenhet att representera dig vid försäljningen av en bostad. Det kan inkludera att hantera försäljningsprocessen, underteckna kontrakt och kommunicera med köpare och mäklare.",
-  "badge": "premium",
-  "usageCount": 2876,
   "fields": [
     {
       "id": "givare_namn",

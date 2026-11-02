@@ -6,8 +6,6 @@
   "categorySlug": "boende-vardag",
   "description": "Fullmakt för att hantera garage- och parkeringsärenden.",
   "longDescription": "En fullmakt för garage och parkering ger en annan person befogenhet att hantera din parkering eller garage. Det kan gälla att betala parkeringsavgifter, registrera nya fordon, eller lösa dispyter med parkeringsbolag.",
-  "badge": "standard",
-  "usageCount": 654,
   "fields": [
     { "id": "givare_namn", "label": "Fastighetsägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

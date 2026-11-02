@@ -6,8 +6,6 @@
   "categorySlug": "juridik",
   "description": "Fullmakt för att representera vid Tingsrätten.",
   "longDescription": "En fullmakt för Tingsrätten ger en person befogenhet att representera dig i tvister och juridiska processer.",
-  "badge": "premium",
-  "usageCount": 1876,
   "fields": [
     { "id": "givare_namn", "label": "Partens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer/Org.nr", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

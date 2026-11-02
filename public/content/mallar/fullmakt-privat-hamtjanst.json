@@ -6,8 +6,6 @@
   "categorySlug": "vard-omsorg",
   "description": "Fullmakt för att använda privat hemtjänst.",
   "longDescription": "En fullmakt för privat hemtjänst ger en person befogenhet att använda privata hemtjänster på din räkning.",
-  "badge": "premium",
-  "usageCount": 765,
   "fields": [
     { "id": "givare_namn", "label": "Tjänstetagarens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

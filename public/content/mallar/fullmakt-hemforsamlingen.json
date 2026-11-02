@@ -6,8 +6,6 @@
   "categorySlug": "forening-skola",
   "description": "Fullmakt för att representera hemförsamlingen.",
   "longDescription": "En fullmakt för hemförsamlingen ger en person befogenhet att representera en religös hemförsamling vid myndighetskontakter eller möten.",
-  "badge": "standard",
-  "usageCount": 432,
   "fields": [
     { "id": "givare_namn", "label": "Försam medlemmens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

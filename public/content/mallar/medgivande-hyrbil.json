@@ -6,8 +6,6 @@
   "categorySlug": "resa-transport",
   "description": "Medgivande för att annan person kan hyra bil på ditt namn.",
   "longDescription": "Ett medgivande för hyrbil ger någon annan rätt att hyra en bil på ditt namn. Detta kan behövas när du är skadad, sjuk eller inte själv kan köra. Biluthyrningsföretag kräver ofta ett originaldokument eller medgivande från bilägaren för att tillåta detta.",
-  "badge": "standard",
-  "usageCount": 1432,
   "fields": [
     { "id": "givare_namn", "label": "Bilägaren – namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },

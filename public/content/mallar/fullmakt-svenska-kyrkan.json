@@ -6,8 +6,6 @@
   "categorySlug": "forening-skola",
   "description": "Fullmakt för att representera Svenska kyrkan.",
   "longDescription": "En fullmakt för Svenska kyrkan ger en person befogenhet att representera dig vid kyrkomöten och kyrkoärenden.",
-  "badge": "standard",
-  "usageCount": 876,
   "fields": [
     { "id": "givare_namn", "label": "Medlemmens namn", "type": "text", "placeholder": "Anna Andersson", "required": true, "group": "givare" },
     { "id": "givare_pnr", "label": "Personnummer", "type": "personnummer", "placeholder": "ÅÅÅÅMMDD-XXXX", "required": true, "group": "givare" },
