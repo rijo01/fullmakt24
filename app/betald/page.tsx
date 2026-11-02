@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { templates, categories, fieldLabelsEn } from '@/data/templates'
 import { trackEvent } from '@/components/GoogleAnalytics'
-import { getPackage, getCredits, grantPackageCredits } from '@/lib/packages'
+import { getPackage, getCredits, grantPackageCredits, getLastPackageSession } from '@/lib/packages'
 
 import { Suspense } from 'react'
 
@@ -14,9 +14,11 @@ function BetaldContent() {
   const slug = searchParams.get('slug')
   const sessionId = searchParams.get('session_id')
   const packageParam = searchParams.get('package')
-  // Tvåspråkigt köp: den engelska översättningen läggs till i samma PDF.
-  const wantsBilingual = searchParams.get('lang') === 'bilingual'
   const usedCredit = searchParams.get('credit') === 'used'
+  // Ingen PDF och inga krediter förrän betalningen är kontrollerad mot Stripe.
+  const [verify, setVerify] = useState<'pending' | 'ok' | 'fail'>('pending')
+  // Pakettypen som faktiskt betalades (single, bilingual, family, estate).
+  const [paidType, setPaidType] = useState<string | null>(null)
   const [downloading, setDownloading] = useState(false)
   const [downloaded, setDownloaded] = useState(false)
   const [credits, setCreditsState] = useState(0)
@@ -26,22 +28,54 @@ function BetaldContent() {
   const isPackagePurchase = !!packageParam
   const t = templates.find(tp => tp.slug === slug)
   const cat = t ? categories.find(c => c.slug === t.categorySlug) : null
-  const isBilingualDownload = !!(wantsBilingual && t?.bilingual && t?.en)
+  // Tvåspråkig PDF bara om det tvåspråkiga paketet betalades, oavsett URL:en.
+  const isBilingualDownload = !!(paidType === 'bilingual' && t?.bilingual && t?.en)
   const isFramtidsfullmakt = t?.documentKind === 'framtidsfullmakt'
 
-  // Paketköp: dela ut krediter exakt en gång per Stripe-session.
+  // Kontrollera betalningen mot Stripe. Samma giltiga session_id godtas vid
+  // varje omladdning, så att en kund som tappat nedladdningen inte låses ute.
   useEffect(() => {
-    if (isPackagePurchase) {
-      const pkg = getPackage(packageParam)
-      grantPackageCredits(sessionId, pkg.credits)
-      trackEvent('purchase', {
-        transaction_id: sessionId || `pkg_${pkg.type}`,
-        currency: 'SEK',
-        value: pkg.price,
-        items: [{ item_id: `package_${pkg.type}`, item_name: pkg.name, item_category: 'Paket', price: pkg.price, quantity: 1 }],
-      })
+    let cancelled = false
+    const run = async () => {
+      // Kreditinlösen: webbläsaren måste ha en betald paketsession.
+      const id = usedCredit ? getLastPackageSession() : sessionId
+      let query: string | null = null
+      if (id && isPackagePurchase) query = `package=${encodeURIComponent(packageParam || '')}`
+      else if (id && usedCredit && slug) query = 'credit=1'
+      else if (id && slug) query = `slug=${encodeURIComponent(slug)}`
+      if (!id || !query) {
+        setVerify('fail')
+        return
+      }
+      try {
+        const res = await fetch(`/api/verify-session?session_id=${encodeURIComponent(id)}&${query}`, { cache: 'no-store' })
+        const data = await res.json()
+        if (cancelled) return
+        if (!res.ok || !data.ok) {
+          setVerify('fail')
+          return
+        }
+        setPaidType(data.packageType)
+        if (isPackagePurchase) {
+          // Paketköp: dela ut krediter exakt en gång per Stripe-session.
+          const pkg = getPackage(data.packageType)
+          grantPackageCredits(sessionId, pkg.credits)
+          trackEvent('purchase', {
+            transaction_id: sessionId || `pkg_${pkg.type}`,
+            currency: 'SEK',
+            value: pkg.price,
+            items: [{ item_id: `package_${pkg.type}`, item_name: pkg.name, item_category: 'Paket', price: pkg.price, quantity: 1 }],
+          })
+        }
+        setCreditsState(getCredits())
+        setVerify('ok')
+      } catch {
+        if (!cancelled) setVerify('fail')
+      }
     }
     setCreditsState(getCredits())
+    run()
+    return () => { cancelled = true }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -61,7 +95,7 @@ function BetaldContent() {
     ids.map(id => formData[id]).find(v => v?.trim()) || ''
 
   const handleDownload = async () => {
-    if (!t) return
+    if (!t || verify !== 'ok') return
     setDownloading(true)
 
     try {
@@ -164,9 +198,9 @@ function BetaldContent() {
     }
   }
 
-  // Auto-download on page load (template downloads only)
+  // Auto-download efter godkänd kontroll (endast mallnedladdningar)
   useEffect(() => {
-    if (!isPackagePurchase && t && (sessionId || usedCredit)) {
+    if (verify === 'ok' && !isPackagePurchase && t && (sessionId || usedCredit)) {
       // Köpet via Stripe ska räknas som purchase. Kreditnedladdning räknades
       // redan vid paketköpet, så då skickas inget nytt purchase-event.
       if (sessionId && !usedCredit) {
@@ -182,11 +216,43 @@ function BetaldContent() {
       return () => clearTimeout(timer)
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [t, sessionId])
+  }, [t, sessionId, verify])
+
+  /* ── Betalningskontroll ───────────────────────────────────────────────── */
+  if (verify === 'pending') {
+    return (
+      <div className="section-padding py-20 text-center">
+        <p className="text-navy-400" role="status">Kontrollerar betalningen…</p>
+      </div>
+    )
+  }
+
+  if (verify === 'fail') {
+    const backHref = t ? `/skapa/${t.slug}` : isPackagePurchase ? '/priser' : '/mallar'
+    const backLabel = t ? `← Tillbaka till ${t.name}` : isPackagePurchase ? '← Tillbaka till priser' : '← Tillbaka till mallar'
+    return (
+      <div className="section-padding py-16 lg:py-24">
+        <div className="max-w-lg mx-auto text-center" role="alert">
+          <h1 className="text-2xl font-heading font-bold text-navy-500 mb-3">Vi kunde inte bekräfta betalningen</h1>
+          <p className="text-navy-400 mb-2">
+            {usedCredit
+              ? 'Vi hittade inget betalt paket i den här webbläsaren. Paketkrediter kan bara användas i den webbläsare där paketet köptes.'
+              : 'Länken gäller inte ett genomfört köp av det här dokumentet, så ingen PDF har skapats.'}
+          </p>
+          <p className="text-navy-400 mb-8">
+            Har du betalat? Kontakta{' '}
+            <a href="mailto:support@fullmakt24.se" className="text-gold-600 font-semibold underline">support@fullmakt24.se</a>
+            {sessionId ? ' och skicka med länken till den här sidan' : ''}, så hjälper vi dig.
+          </p>
+          <Link href={backHref} className="btn-primary">{backLabel}</Link>
+        </div>
+      </div>
+    )
+  }
 
   /* ── Paketköp-bekräftelse ─────────────────────────────────────────────── */
   if (isPackagePurchase) {
-    const pkg = getPackage(packageParam)
+    const pkg = getPackage(paidType)
     return (
       <div className="section-padding py-16 lg:py-24">
         <div className="max-w-lg mx-auto text-center">
@@ -323,7 +389,7 @@ function BetaldContent() {
             </div>
             <div className="flex justify-between">
               <span className="text-navy-400">{usedCredit ? 'Betalsätt:' : 'Pris:'}</span>
-              <span className="text-navy-600 font-medium">{usedCredit ? 'Paketkredit' : '99 kr'}</span>
+              <span className="text-navy-600 font-medium">{usedCredit ? 'Paketkredit' : `${getPackage(paidType).price} kr`}</span>
             </div>
           </div>
         </div>

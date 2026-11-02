@@ -77,9 +77,10 @@ export function isTemplatePackage(type: PackageType): boolean {
 }
 
 /* ──────────────────────────────────────────────────────────────────────────
-   Paketkrediter (localStorage). Detta är en bekvämlighetsfunktion på klienten
-   – den verkliga betalningssäkerheten ligger i Stripe. En credit dras av per
-   nedladdad mall.
+   Paketkrediter (localStorage). Krediterna delas ut först när /betald har
+   kontrollerat paketköpet mot Stripe (/api/verify-session). Vid inlösen
+   kontrolleras att webbläsaren har en betald paketsession. Antalet kvarvarande
+   krediter finns bara här på klienten – det finns ingen databas som räknar dem.
    ────────────────────────────────────────────────────────────────────────── */
 
 const CREDITS_KEY = 'package_credits'
@@ -123,4 +124,19 @@ export function grantPackageCredits(sessionId: string | null, credits: number): 
   localStorage.setItem(PROCESSED_KEY, JSON.stringify(processed))
   setCredits(getCredits() + credits)
   return true
+}
+
+/** Senast kontrollerade paketsession i den här webbläsaren, eller null. */
+export function getLastPackageSession(): string | null {
+  if (typeof window === 'undefined') return null
+  try {
+    const processed: unknown = JSON.parse(localStorage.getItem(PROCESSED_KEY) || '[]')
+    if (Array.isArray(processed) && processed.length > 0) {
+      const last = processed[processed.length - 1]
+      return typeof last === 'string' ? last : null
+    }
+  } catch {
+    /* ignore */
+  }
+  return null
 }
