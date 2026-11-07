@@ -14,37 +14,38 @@ export interface PdfTranslation {
   legalInfo?: string
 }
 
-interface PdfData {
+/** Avsnittet i PDF:en som ett värde hör till. Samma roller som data/field-roles.ts. */
+export type PdfRole =
+  | 'givare' | 'vardnadshavare' | 'havare' | 'ersattare' | 'barn' | 'avliden'
+  | 'forening' | 'djur' | 'resa' | 'objekt' | 'uppdrag' | 'giltighet' | 'begransning' | 'ovrigt'
+
+/** Ett ifyllt (eller tomt) fält. Generatorn placerar det enbart utifrån rollen. */
+export interface PdfField {
+  id: string
+  role: PdfRole
+  /** namn/pnr återges i uppdragsmeningen, namn och undertecknare under underskriften. */
+  key?: 'namn' | 'pnr' | 'undertecknare'
+  person?: 1 | 2
+  type: string
+  label: string
+  /** Etikett på den engelska översättningssidan. Saknas den används den svenska. */
+  labelEn?: string
+  value: string
+}
+
+export interface PdfData {
   templateName: string
   /** Dokumentrubrik, t.ex. FULLMAKT eller MEDGIVANDE. Standard: FULLMAKT. */
   documentTitle?: string
   categoryName: string
-  givare: {
-    namn: string
-    personnummer: string
-    adress: string
-    epost?: string
-    telefon?: string
-  }
-  havare: {
-    namn: string
-    personnummer: string
-    relation: string
-    adress?: string
-  }
-  detaljer: {
-    giltigFran?: string
-    giltigTill?: string
-    syfte?: string
-    begransningar?: string
-    [key: string]: string | undefined
-  }
-  /** Mallens svenska standardklausul (skrivs efter användarens egen text). */
+  /** Mallens alla fält i mallens ordning, med kundens värden. */
+  fields: PdfField[]
+  /** Uppdragets innehåll när mallen saknar ett uppdragsfält. */
+  uppdragText?: string
+  /** Mallens svenska standardklausul (skrivs efter uppdraget). */
   standardText?: string
   /** Mallens juridiska notis på svenska. */
   legalInfo?: string
-  /** Övriga ifyllda uppgifter, t.ex. barnets namn – etikett från mallen. */
-  extraDetails?: { label: string; labelEn?: string; value: string }[]
   /** Lägg till engelsk översättning som extra sida/sidor i samma PDF. */
   bilingual?: boolean
   en?: PdfTranslation
@@ -52,7 +53,7 @@ interface PdfData {
   /**
    * Framtidsfullmakt enligt lag (2017:310). När den är satt renderas en egen
    * layout med lagstadgade formuleringar och obligatoriskt vittnesavsnitt –
-   * fälten ovan (givare/havare/detaljer) används då inte.
+   * fälten ovan används då inte.
    */
   framtidsfullmakt?: FramtidsfullmaktData
 }
@@ -125,31 +126,30 @@ export function validateFramtidsfullmakt(ff: FramtidsfullmaktData): string[] {
    sjukvård, hotell). Endast standardtext översätts – aldrig användarens data.
    ────────────────────────────────────────────────────────────────────────── */
 
+type Heading = PdfRole | 'underskrifter'
+
+interface IntroParts {
+  /** Fullmaktsgivaren/-givarna, t.ex. "Anna (pnr)" eller "Bolag AB (orgnr) genom undertecknad Eva". */
+  principal: string
+  agent: string
+  plural: boolean
+  company: boolean
+}
+
 interface Strings {
   tagline: string
   defaultTitle: string
   categoryLabel: string
-  sectionGivare: string
-  sectionHavare: string
-  sectionExtra: string
-  sectionUppdrag: string
-  sectionGiltighet: string
-  sectionBegransningar: string
-  sectionUnderskrifter: string
-  labelNamn: string
-  labelPnr: string
-  labelPnrHavare: string
-  labelAdress: string
-  labelEpost: string
-  labelTelefon: string
-  labelRelation: string
+  headings: Record<Heading, string>
   validity: (from: string, to: string) => string
-  mandateIntro: (givare: string, givarePnr: string, havare: string, havarePnr: string) => string
-  mandateValidity: (from: string, to: string) => string
+  intro: (p: IntroParts) => string
+  consentIntro: (principal: string, plural: boolean) => string
+  companyBy: (company: string, signer: string) => string
+  and: string
+  genericScope: string
   mandateClosing: string
   legalNote: string
-  sigGivare: string
-  sigHavare: string
+  sigLabels: Record<'givare' | 'vardnadshavare' | 'havare', string>
   sigPlaceDate: string
   witnessHeader: string
   witness1: string
@@ -157,12 +157,16 @@ interface Strings {
   footer: (date: string) => string
   pageOf: (page: number, total: number) => string
   placeholder: string
-  purposePlaceholder: string
-  givarePlaceholder: string
-  havarePlaceholder: string
-  pnrPlaceholder: string
   watermark: string
   translationNotice: string
+}
+
+// Signaturetiketterna är tvåspråkiga på båda sidorna, så att en utländsk
+// mottagare ser vem som är vem även på den svenska originalsidan.
+const SIG_LABELS = {
+  givare: 'Fullmaktsgivare / Principal',
+  vardnadshavare: 'Vårdnadshavare / Parent or guardian',
+  havare: 'Fullmaktshavare / Attorney-in-fact',
 }
 
 const STRINGS: Record<PdfLang, Strings> = {
@@ -170,31 +174,37 @@ const STRINGS: Record<PdfLang, Strings> = {
     tagline: 'Din fullmakt – klar på 3 minuter',
     defaultTitle: 'FULLMAKT',
     categoryLabel: 'Kategori: ',
-    sectionGivare: 'FULLMAKTSGIVARE',
-    sectionHavare: 'FULLMAKTSHAVARE',
-    sectionExtra: 'ÖVRIGA UPPGIFTER',
-    sectionUppdrag: 'UPPDRAG OCH BEFOGENHET',
-    sectionGiltighet: 'GILTIGHETSTID',
-    sectionBegransningar: 'BEGRÄNSNINGAR',
-    sectionUnderskrifter: 'UNDERSKRIFTER',
-    labelNamn: 'Namn:',
-    labelPnr: 'Personnummer:',
-    labelPnrHavare: 'Personnummer/Org.nr:',
-    labelAdress: 'Adress:',
-    labelEpost: 'E-post:',
-    labelTelefon: 'Telefon:',
-    labelRelation: 'Relation:',
-    validity: (from, to) => `Denna handling gäller från ${from} till och med ${to}.`,
-    mandateIntro: (givare, givarePnr, havare, havarePnr) =>
-      `Härmed ger undertecknad ${givare} (${givarePnr}) fullmakt till ${havare} (${havarePnr}) att för min räkning och i mitt namn:`,
-    mandateValidity: (from, to) =>
-      `Denna handling gäller från och med ${from} till och med ${to}.`,
+    headings: {
+      givare: 'FULLMAKTSGIVARE',
+      vardnadshavare: 'VÅRDNADSHAVARE',
+      havare: 'FULLMAKTSHAVARE',
+      ersattare: 'ERSÄTTARE',
+      barn: 'BARNET',
+      avliden: 'DEN AVLIDNE',
+      forening: 'FÖRENING / ORGANISATION',
+      djur: 'DJURET',
+      resa: 'RESAN',
+      objekt: 'AVSER',
+      uppdrag: 'UPPDRAG OCH BEFOGENHET',
+      giltighet: 'GILTIGHETSTID',
+      begransning: 'BEGRÄNSNINGAR OCH VILLKOR',
+      ovrigt: 'ÖVRIGA UPPGIFTER',
+      underskrifter: 'UNDERSKRIFTER',
+    },
+    validity: (from, to) => `Denna handling gäller från och med ${from} till och med ${to}.`,
+    intro: ({ principal, agent, plural, company }) =>
+      company
+        ? `Härmed ger ${principal} fullmakt till ${agent} att för bolagets räkning och i bolagets namn:`
+        : `Härmed ger undertecknad${plural ? 'e' : ''} ${principal} fullmakt till ${agent} att för ${plural ? 'vår' : 'min'} räkning och i ${plural ? 'vårt' : 'mitt'} namn:`,
+    consentIntro: (principal, plural) => `Undertecknad${plural ? 'e' : ''} ${principal} lämnar härmed följande medgivande:`,
+    companyBy: (company, signer) => `${company} genom undertecknad ${signer}`,
+    and: ' och ',
+    genericScope: 'Företräda fullmaktsgivaren i de angelägenheter som anges i denna handling.',
     mandateClosing:
       'Fullmaktshavaren har rätt att vidta alla åtgärder som krävs för att utföra ovanstående uppdrag.',
     legalNote:
       'Denna handling är upprättad i enlighet med svensk avtalsrätt. Den kan återkallas när som helst genom skriftligt meddelande till fullmaktshavaren. Fullmaktsgivaren ansvarar för att fullmaktshavaren informeras om eventuella begränsningar.',
-    sigGivare: 'Fullmaktsgivare / Principal',
-    sigHavare: 'Fullmaktshavare / Attorney-in-fact',
+    sigLabels: SIG_LABELS,
     sigPlaceDate: 'Ort och datum',
     witnessHeader: 'VITTNEN (valfritt men rekommenderas)',
     witness1: 'Vittne 1: Namn, personnummer och underskrift',
@@ -202,42 +212,44 @@ const STRINGS: Record<PdfLang, Strings> = {
     footer: date => `Genererad via Fullmakt24.se • ${date}`,
     pageOf: (page, total) => `Sida ${page} av ${total}`,
     placeholder: '________________________________',
-    purposePlaceholder: '[uppdragsbeskrivning]',
-    givarePlaceholder: '[Fullmaktsgivarens namn]',
-    havarePlaceholder: '[Fullmaktshavarens namn]',
-    pnrPlaceholder: '[personnummer]',
-    watermark: 'FÖRHANDSGRANSKNING',
+    watermark: 'FÖRHANDSVISNING',
     translationNotice: '',
   },
   en: {
     tagline: 'Your document – ready in 3 minutes',
     defaultTitle: 'POWER OF ATTORNEY',
     categoryLabel: 'Category: ',
-    sectionGivare: 'PRINCIPAL / GUARDIAN',
-    sectionHavare: 'ATTORNEY-IN-FACT / AUTHORISED PERSON',
-    sectionExtra: 'ADDITIONAL DETAILS',
-    sectionUppdrag: 'AUTHORITY GRANTED',
-    sectionGiltighet: 'PERIOD OF VALIDITY',
-    sectionBegransningar: 'LIMITATIONS',
-    sectionUnderskrifter: 'SIGNATURES',
-    labelNamn: 'Name:',
-    labelPnr: 'Personal identity no.:',
-    labelPnrHavare: 'Personal identity no./Company reg. no.:',
-    labelAdress: 'Address:',
-    labelEpost: 'Email:',
-    labelTelefon: 'Phone:',
-    labelRelation: 'Relationship:',
+    headings: {
+      givare: 'PRINCIPAL / GUARDIAN',
+      vardnadshavare: 'PARENT(S) / GUARDIAN(S)',
+      havare: 'ATTORNEY-IN-FACT / AUTHORISED PERSON',
+      ersattare: 'SUBSTITUTE',
+      barn: 'CHILD',
+      avliden: 'DECEASED',
+      forening: 'ASSOCIATION / ORGANISATION',
+      djur: 'ANIMAL',
+      resa: 'TRAVEL',
+      objekt: 'CONCERNS',
+      uppdrag: 'AUTHORITY GRANTED',
+      giltighet: 'PERIOD OF VALIDITY',
+      begransning: 'LIMITATIONS AND CONDITIONS',
+      ovrigt: 'ADDITIONAL DETAILS',
+      underskrifter: 'SIGNATURES',
+    },
     validity: (from, to) => `This document is valid from ${from} up to and including ${to}.`,
-    mandateIntro: (givare, givarePnr, havare, havarePnr) =>
-      `The undersigned, ${givare} (${givarePnr}), hereby authorises ${havare} (${havarePnr}) to act on my behalf and in my name in order to:`,
-    mandateValidity: (from, to) =>
-      `This document is valid from ${from} up to and including ${to}.`,
+    intro: ({ principal, agent, plural, company }) =>
+      company
+        ? `${principal} hereby authorises ${agent} to act on the company’s behalf and in its name in order to:`
+        : `The undersigned, ${principal}, hereby authorise${plural ? '' : 's'} ${agent} to act on ${plural ? 'our' : 'my'} behalf and in ${plural ? 'our' : 'my'} name in order to:`,
+    consentIntro: (principal, plural) => `The undersigned, ${principal}, hereby give${plural ? '' : 's'} the following consent:`,
+    companyBy: (company, signer) => `${company}, represented by the undersigned ${signer}`,
+    and: ' and ',
+    genericScope: 'Represent the principal in the matters set out in this document.',
     mandateClosing:
       'The authorised person is entitled to take every measure required to carry out the assignment described above.',
     legalNote:
       'This document has been drawn up in accordance with Swedish contract law. It may be revoked at any time by written notice to the authorised person. The principal is responsible for informing the authorised person of any limitations. This English text is a translation provided for use abroad; the Swedish version is the original and prevails in the event of any discrepancy.',
-    sigGivare: 'Fullmaktsgivare / Principal',
-    sigHavare: 'Fullmaktshavare / Attorney-in-fact',
+    sigLabels: SIG_LABELS,
     sigPlaceDate: 'Place and date',
     witnessHeader: 'WITNESSES (optional but recommended)',
     witness1: 'Witness 1: name, identity number and signature',
@@ -245,19 +257,26 @@ const STRINGS: Record<PdfLang, Strings> = {
     footer: date => `Generated via Fullmakt24.se • ${date}`,
     pageOf: (page, total) => `Page ${page} of ${total}`,
     placeholder: '________________________________',
-    purposePlaceholder: '[description of the assignment]',
-    givarePlaceholder: '[name of the principal]',
-    havarePlaceholder: '[name of the authorised person]',
-    pnrPlaceholder: '[identity number]',
     watermark: 'PREVIEW',
     translationNotice:
       'English translation – for use abroad. The Swedish version is the original.',
   },
 }
 
+/** Rubriken för ett avsnitt. Används av testet för att dela upp PDF:en i avsnitt. */
+export function sectionHeading(role: Heading, lang: PdfLang): string {
+  return STRINGS[lang].headings[role]
+}
+
+/** Alla avsnittsrubriker på ett språk. */
+export function sectionHeadings(lang: PdfLang): string[] {
+  return Object.values(STRINGS[lang].headings)
+}
+
 const LOCALE: Record<PdfLang, string> = { sv: 'sv-SE', en: 'en-GB' }
 
-function formatDate(dateStr: string | undefined, lang: PdfLang): string {
+/** Datum som det skrivs i PDF:en, t.ex. "1 december 2026". */
+export function formatDate(dateStr: string | undefined, lang: PdfLang): string {
   if (!dateStr) return '________________'
   try {
     const d = new Date(dateStr)
@@ -388,68 +407,19 @@ function renderVersion(doc: jsPDF, data: PdfData, lang: PdfLang, pageLangs: PdfL
   doc.line(MARGIN_LEFT, y, PAGE_WIDTH - MARGIN_RIGHT, y)
   y += 10
 
-  // ─── SECTION: FULLMAKTSGIVARE / PRINCIPAL ───
-  y = drawSectionHeader(doc, s.sectionGivare, MARGIN_LEFT, y)
-  y += 2
+  // ─── AVSNITT PER ROLL ───
+  // Varje värde placeras enbart utifrån fältets roll, med mallens egen etikett.
+  for (const role of LEADING_ROLES) y = drawRoleSection(doc, data, role, lang, y, pageLangs)
 
-  doc.setFillColor(248, 249, 251) // surface color
-  doc.roundedRect(MARGIN_LEFT, y, CONTENT_WIDTH, 32, 2, 2, 'F')
-  y += 6
-
-  y = drawField(doc, s.labelNamn, data.givare.namn, MARGIN_LEFT + 5, y, s)
-  y = drawField(doc, s.labelPnr, data.givare.personnummer, MARGIN_LEFT + 5, y, s)
-  y = drawField(doc, s.labelAdress, data.givare.adress, MARGIN_LEFT + 5, y, s)
-  if (data.givare.epost) {
-    y = drawField(doc, s.labelEpost, data.givare.epost, MARGIN_LEFT + 5, y, s)
-  }
-  if (data.givare.telefon) {
-    y = drawField(doc, s.labelTelefon, data.givare.telefon, MARGIN_LEFT + 5, y, s)
-  }
-
-  y += 8
-
-  // ─── SECTION: FULLMAKTSHAVARE / ATTORNEY-IN-FACT ───
-  y = drawSectionHeader(doc, s.sectionHavare, MARGIN_LEFT, y)
-  y += 2
-
-  doc.setFillColor(248, 249, 251)
-  doc.roundedRect(MARGIN_LEFT, y, CONTENT_WIDTH, 26, 2, 2, 'F')
-  y += 6
-
-  y = drawField(doc, s.labelNamn, data.havare.namn, MARGIN_LEFT + 5, y, s)
-  y = drawField(doc, s.labelPnrHavare, data.havare.personnummer, MARGIN_LEFT + 5, y, s)
-  y = drawField(doc, s.labelRelation, data.havare.relation, MARGIN_LEFT + 5, y, s)
-  if (data.havare.adress) {
-    y = drawField(doc, s.labelAdress, data.havare.adress, MARGIN_LEFT + 5, y, s)
-  }
-
-  y += 8
-
-  // ─── SECTION: ÖVRIGA UPPGIFTER / ADDITIONAL DETAILS ───
-  const extras = (data.extraDetails || []).filter(e => e.value?.trim())
-  if (extras.length > 0) {
-    y = pageBreakIfNeeded(doc, y, 20 + extras.length * 7, pageLangs, lang)
-    y = drawSectionHeader(doc, s.sectionExtra, MARGIN_LEFT, y)
-    y += 2
-
-    doc.setFillColor(248, 249, 251)
-    doc.roundedRect(MARGIN_LEFT, y, CONTENT_WIDTH, extras.length * 7 + 5, 2, 2, 'F')
-    y += 6
-
-    for (const extra of extras) {
-      const label = lang === 'en' ? extra.labelEn || extra.label : extra.label
-      y = drawField(doc, `${label}:`, extra.value, MARGIN_LEFT + 5, y, s)
-    }
-    y += 5
-  }
-
-  // ─── SECTION: UPPDRAG / AUTHORITY GRANTED ───
+  // ─── UPPDRAG / AUTHORITY GRANTED ───
   const mandateText = buildMandateText(data, lang)
-  const splitMandate = doc.splitTextToSize(mandateText, CONTENT_WIDTH - 10)
+  doc.setFont('helvetica', 'normal')
+  doc.setFontSize(10)
+  const splitMandate: string[] = doc.splitTextToSize(mandateText, CONTENT_WIDTH - 10)
   const mandateHeight = splitMandate.length * 5 + 10
 
   y = pageBreakIfNeeded(doc, y, mandateHeight + 12, pageLangs, lang)
-  y = drawSectionHeader(doc, s.sectionUppdrag, MARGIN_LEFT, y)
+  y = drawSectionHeader(doc, s.headings.uppdrag, MARGIN_LEFT, y)
   y += 2
 
   // Gold-tinted background for the mandate text
@@ -468,42 +438,14 @@ function renderVersion(doc: jsPDF, data: PdfData, lang: PdfLang, pageLangs: PdfL
 
   y += 5
 
-  // ─── GILTIGHETSTID / PERIOD OF VALIDITY ───
-  if (data.detaljer.giltigFran || data.detaljer.giltigTill) {
-    y = pageBreakIfNeeded(doc, y, 20, pageLangs, lang)
-    y = drawSectionHeader(doc, s.sectionGiltighet, MARGIN_LEFT, y)
-    y += 4
-    doc.setFont('helvetica', 'normal')
-    doc.setFontSize(10)
-    doc.setTextColor(40, 45, 60)
-    const validity = s.validity(
-      formatDate(data.detaljer.giltigFran, lang),
-      formatDate(data.detaljer.giltigTill, lang),
-    )
-    const splitValidity = doc.splitTextToSize(validity, CONTENT_WIDTH)
-    doc.text(splitValidity, MARGIN_LEFT, y)
-    y += splitValidity.length * 5 + 5
-  }
-
-  // ─── BEGRÄNSNINGAR / LIMITATIONS ───
-  // Användarens egen text skrivs oförändrad – den översätts aldrig.
-  if (data.detaljer.begransningar) {
-    const splitBegr = doc.splitTextToSize(data.detaljer.begransningar, CONTENT_WIDTH)
-    y = pageBreakIfNeeded(doc, y, splitBegr.length * 5 + 15, pageLangs, lang)
-    y = drawSectionHeader(doc, s.sectionBegransningar, MARGIN_LEFT, y)
-    y += 4
-    doc.setFont('helvetica', 'normal')
-    doc.setFontSize(10)
-    doc.setTextColor(40, 45, 60)
-    doc.text(splitBegr, MARGIN_LEFT, y)
-    y += splitBegr.length * 5 + 5
-  }
+  // ─── GILTIGHETSTID, BEGRÄNSNINGAR, ÖVRIGT ───
+  for (const role of TRAILING_ROLES) y = drawRoleSection(doc, data, role, lang, y, pageLangs)
 
   // ─── LEGAL NOTICE ───
   const legalNote = legalInfo ? `${s.legalNote} ${legalInfo}` : s.legalNote
   doc.setFontSize(8)
   const splitLegal = doc.splitTextToSize(legalNote, CONTENT_WIDTH)
-  y = pageBreakIfNeeded(doc, y, splitLegal.length * 4 + 80, pageLangs, lang)
+  y = pageBreakIfNeeded(doc, y, splitLegal.length * 4 + 20, pageLangs, lang)
 
   y += 5
   doc.setDrawColor(200, 205, 215)
@@ -518,34 +460,32 @@ function renderVersion(doc: jsPDF, data: PdfData, lang: PdfLang, pageLangs: PdfL
   y += splitLegal.length * 4 + 8
 
   // ─── SIGNATURES ───
-  y = drawSectionHeader(doc, s.sectionUnderskrifter, MARGIN_LEFT, y)
+  // En underskrift per fullmaktsgivare/vårdnadshavare och per fullmaktshavare.
+  const signers = [
+    ...principalSigners(data, lang),
+    ...persons(data, 'havare').map(p => ({ label: s.sigLabels.havare, name: p.namn })),
+  ]
+  const sigWidth = (CONTENT_WIDTH - 15) / 2
+  const rows = Math.ceil(signers.length / 2)
+  y = pageBreakIfNeeded(doc, y, 14 + rows * 48, pageLangs, lang)
+  y = drawSectionHeader(doc, s.headings.underskrifter, MARGIN_LEFT, y)
   y += 8
 
-  const sigWidth = (CONTENT_WIDTH - 15) / 2
-  const sigX2 = MARGIN_LEFT + sigWidth + 15
-
-  // Signaturblocken är alltid tvåspråkiga så att en utländsk mottagare kan se
-  // vem som är vem även på den svenska originalsidan.
-  doc.setDrawColor(27, 43, 75)
-  doc.setLineWidth(0.4)
-  doc.line(MARGIN_LEFT, y + 15, MARGIN_LEFT + sigWidth, y + 15)
-  doc.setFont('helvetica', 'normal')
-  doc.setFontSize(9)
-  doc.setTextColor(80, 90, 110)
-  doc.text(s.sigGivare, MARGIN_LEFT, y + 20)
-  doc.text(data.givare.namn || s.placeholder, MARGIN_LEFT, y + 25)
-
-  doc.line(MARGIN_LEFT, y + 35, MARGIN_LEFT + sigWidth, y + 35)
-  doc.text(s.sigPlaceDate, MARGIN_LEFT, y + 40)
-
-  doc.line(sigX2, y + 15, sigX2 + sigWidth, y + 15)
-  doc.text(s.sigHavare, sigX2, y + 20)
-  doc.text(data.havare.namn || s.placeholder, sigX2, y + 25)
-
-  doc.line(sigX2, y + 35, sigX2 + sigWidth, y + 35)
-  doc.text(s.sigPlaceDate, sigX2, y + 40)
-
-  y += 50
+  signers.forEach((signer, i) => {
+    const x = i % 2 === 0 ? MARGIN_LEFT : MARGIN_LEFT + sigWidth + 15
+    const top = y + Math.floor(i / 2) * 48
+    doc.setDrawColor(27, 43, 75)
+    doc.setLineWidth(0.4)
+    doc.line(x, top + 15, x + sigWidth, top + 15)
+    doc.setFont('helvetica', 'normal')
+    doc.setFontSize(9)
+    doc.setTextColor(80, 90, 110)
+    doc.text(signer.label, x, top + 20)
+    doc.text(doc.splitTextToSize(signer.name || s.placeholder, sigWidth), x, top + 25)
+    doc.line(x, top + 35, x + sigWidth, top + 35)
+    doc.text(s.sigPlaceDate, x, top + 40)
+  })
+  y += rows * 48 + 2
 
   // ─── WITNESSES (optional) ───
   if (y < 250) {
@@ -560,6 +500,7 @@ function renderVersion(doc: jsPDF, data: PdfData, lang: PdfLang, pageLangs: PdfL
     doc.setLineWidth(0.3)
     doc.setDrawColor(180, 190, 200)
 
+    const sigX2 = MARGIN_LEFT + sigWidth + 15
     doc.line(MARGIN_LEFT, y + 8, MARGIN_LEFT + sigWidth, y + 8)
     doc.setFontSize(8)
     doc.text(s.witness1, MARGIN_LEFT, y + 13)
@@ -677,11 +618,11 @@ function renderFramtidsfullmaktDokument(
   }
   const personBox = (title: string, p: FramtidsfullmaktPerson) => {
     const rows: [string, string][] = [
-      [s.labelNamn, p.namn],
-      [s.labelPnr, p.personnummer],
+      ['Namn:', p.namn],
+      ['Personnummer:', p.personnummer],
     ]
-    if (p.relation?.trim()) rows.push([s.labelRelation, p.relation])
-    if (p.adress?.trim()) rows.push([s.labelAdress, p.adress])
+    if (p.relation?.trim()) rows.push(['Relation:', p.relation])
+    if (p.adress?.trim()) rows.push(['Adress:', p.adress])
     const h = rows.length * 7 + 4
     ensure(h + 10)
     y = drawSectionHeader(doc, title, MARGIN_LEFT, y) + 2
@@ -737,8 +678,8 @@ function renderFramtidsfullmaktDokument(
   y += 9
 
   // ─── Parter (5 § 2) ───
-  personBox(s.sectionGivare, d.givare)
-  personBox(s.sectionHavare, d.havare)
+  personBox(s.headings.givare, d.givare)
+  personBox(s.headings.havare, d.havare)
   if (ff.ersattare?.namn?.trim()) personBox('ERSÄTTARE FÖR FULLMAKTSHAVAREN', ff.ersattare)
 
   // ─── Förordnande (5 § 1) ───
@@ -898,6 +839,7 @@ function drawSectionHeader(doc: jsPDF, title: string, x: number, y: number): num
   return y + 6
 }
 
+/** En rad "etikett värde" utan radbrytning. Används av framtidsfullmaktens personrutor. */
 function drawField(doc: jsPDF, label: string, value: string, x: number, y: number, s: Strings): number {
   doc.setFont('helvetica', 'bold')
   doc.setFontSize(8)
@@ -913,33 +855,163 @@ function drawField(doc: jsPDF, label: string, value: string, x: number, y: numbe
   return y + 7
 }
 
+/* ─── Avsnitt och löptext utifrån fältens roller ───────────────────────── */
+
+/** Avsnitt före uppdragsrutan, i den ordning de skrivs ut. */
+const LEADING_ROLES: PdfRole[] = ['givare', 'vardnadshavare', 'barn', 'avliden', 'havare', 'ersattare', 'forening', 'djur', 'resa', 'objekt']
+/** Avsnitt efter uppdragsrutan. */
+const TRAILING_ROLES: PdfRole[] = ['giltighet', 'begransning', 'ovrigt']
+/** Partsavsnitt visar även tomma fält, med en linje att fylla i för hand. */
+const PARTY_ROLES = new Set<PdfRole>(['givare', 'vardnadshavare', 'havare', 'ersattare'])
+
+const filled = (f: PdfField) => !!f.value?.trim() && f.type !== 'checkbox'
+
+function labelFor(f: PdfField, lang: PdfLang): string {
+  return lang === 'en' && f.labelEn ? f.labelEn : f.label
+}
+
+function displayValue(f: PdfField, lang: PdfLang): string {
+  return f.type === 'date' ? formatDate(f.value, lang) : f.value.trim()
+}
+
+interface Person { namn: string; pnr: string; hasPnr: boolean; undertecknare: string }
+
+/** Personerna i en roll (person 1 och 2), med namn, personnummer och undertecknare. */
+function persons(data: PdfData, role: PdfRole): Person[] {
+  const byIndex = new Map<number, Person>()
+  for (const f of data.fields) {
+    if (f.role !== role || !f.key) continue
+    const p = byIndex.get(f.person || 1) || { namn: '', pnr: '', hasPnr: false, undertecknare: '' }
+    if (f.key === 'namn') p.namn = f.value.trim()
+    if (f.key === 'pnr') { p.pnr = f.value.trim(); p.hasPnr = true }
+    if (f.key === 'undertecknare') p.undertecknare = f.value.trim()
+    byIndex.set(f.person || 1, p)
+  }
+  // Person 2 är valfri (t.ex. vårdnadshavare 2) och tas bara med om den fyllts i.
+  return [...byIndex.entries()]
+    .sort((a, b) => a[0] - b[0])
+    .filter(([i, p]) => i === 1 || p.namn || p.pnr)
+    .map(([, p]) => p)
+}
+
+/** Fullmaktsgivarens roll: givare, annars vårdnadshavare. */
+function principalRole(data: PdfData): 'givare' | 'vardnadshavare' {
+  return data.fields.some(f => f.role === 'givare' && f.key === 'namn') ? 'givare' : 'vardnadshavare'
+}
+
+function personText(p: Person, s: Strings): string {
+  const name = p.namn || s.placeholder
+  if (!p.hasPnr) return name
+  return `${name} (${p.pnr || '________________'})`
+}
+
+function principalSigners(data: PdfData, lang: PdfLang): { label: string; name: string }[] {
+  const s = STRINGS[lang]
+  const role = principalRole(data)
+  return persons(data, role).map(p => ({
+    label: s.sigLabels[role],
+    name: p.undertecknare ? `${p.namn || s.placeholder}, ${p.undertecknare}` : p.namn,
+  }))
+}
+
 function buildMandateText(data: PdfData, lang: PdfLang): string {
   const s = STRINGS[lang]
+  const principals = persons(data, principalRole(data))
+  const agents = persons(data, 'havare')
+  const company = principals.some(p => p.undertecknare)
+
+  const principalText = company
+    ? principals.map(p => s.companyBy(personText(p, s), p.undertecknare)).join(s.and)
+    : principals.map(p => personText(p, s)).join(s.and)
+  const plural = principals.length > 1
+
+  let text = agents.length > 0
+    ? s.intro({ principal: principalText, agent: agents.map(p => personText(p, s)).join(s.and), plural, company })
+    : s.consentIntro(principalText, plural)
+
+  // Uppdraget: mallens uppdragsfält, annars mallens uppdragstext. Kundens egen
+  // text skrivs alltid oförändrad och översätts aldrig.
+  const uppdrag = data.fields.filter(f => f.role === 'uppdrag' && filled(f))
+  if (uppdrag.length === 1) text += `\n\n${displayValue(uppdrag[0], lang)}`
+  else if (uppdrag.length > 1) text += `\n\n${uppdrag.map(f => `${labelFor(f, lang)}: ${displayValue(f, lang)}`).join('\n')}`
+  else if (lang === 'sv' && data.uppdragText) text += `\n\n${data.uppdragText}`
+  else if (!(lang === 'en' ? data.en?.standardText : data.standardText)) text += `\n\n${s.genericScope}`
+
   const standardText = lang === 'en' ? data.en?.standardText : data.standardText
+  if (standardText) text += `\n\n${standardText}`
 
-  const givare = data.givare.namn || s.givarePlaceholder
-  const givarePnr = data.givare.personnummer || s.pnrPlaceholder
-  const havare = data.havare.namn || s.havarePlaceholder
-  const havarePnr = data.havare.personnummer || s.pnrPlaceholder
-  // Användarens egen uppdragsbeskrivning skrivs alltid oförändrad.
-  const syfte = data.detaljer.syfte || s.purposePlaceholder
-
-  let text = `${s.mandateIntro(givare, givarePnr, havare, havarePnr)}\n\n${syfte}`
-
-  if (standardText) {
-    text += `\n\n${standardText}`
-  }
-
-  if (data.detaljer.giltigFran && data.detaljer.giltigTill) {
-    text += `\n\n${s.mandateValidity(
-      formatDate(data.detaljer.giltigFran, lang),
-      formatDate(data.detaljer.giltigTill, lang),
-    )}`
-  }
-
-  text += `\n\n${s.mandateClosing}`
-
+  if (agents.length > 0) text += `\n\n${s.mandateClosing}`
   return text
+}
+
+/** Ett avsnitt med fälten i en roll. Returnerar ny y-position. */
+function drawRoleSection(doc: jsPDF, data: PdfData, role: PdfRole, lang: PdfLang, y: number, pageLangs: PdfLang[]): number {
+  const s = STRINGS[lang]
+  const inRole = data.fields.filter(f => f.role === role && f.type !== 'checkbox')
+  const shown = PARTY_ROLES.has(role) ? inRole : inRole.filter(filled)
+  if (shown.length === 0) return y
+
+  // Giltig från/till skrivs som en mening, övriga fält som etikett: värde.
+  const lines: { label: string; value: string }[] = []
+  let sentence = ''
+  if (role === 'giltighet') {
+    const from = shown.find(f => f.id === 'giltig_fran')
+    const to = shown.find(f => f.id === 'giltig_till')
+    if (from && to) sentence = s.validity(displayValue(from, lang), displayValue(to, lang))
+    for (const f of shown) if (!(sentence && (f === from || f === to))) lines.push({ label: `${labelFor(f, lang)}:`, value: displayValue(f, lang) })
+  } else {
+    for (const f of shown) lines.push({ label: `${labelFor(f, lang)}:`, value: filled(f) ? displayValue(f, lang) : s.placeholder })
+  }
+
+  // Mät raderna: värdet bryts inom bredden till höger om etiketten, eller på
+  // en egen rad under etiketten när etiketten är lång.
+  const innerX = MARGIN_LEFT + 5
+  const innerW = CONTENT_WIDTH - 10
+  const measured = lines.map(l => {
+    doc.setFont('helvetica', 'bold')
+    doc.setFontSize(8)
+    const labelW = doc.getTextWidth(l.label) + 2
+    const below = labelW > innerW * 0.45
+    doc.setFont('helvetica', 'normal')
+    doc.setFontSize(10)
+    const valueLines: string[] = doc.splitTextToSize(l.value, below ? innerW : innerW - labelW)
+    return { ...l, labelW, below, valueLines, height: (below ? 5 : 0) + valueLines.length * 5 + 2 }
+  })
+  doc.setFont('helvetica', 'normal')
+  doc.setFontSize(10)
+  const sentenceLines: string[] = sentence ? doc.splitTextToSize(sentence, innerW) : []
+  const boxH = 5 + sentenceLines.length * 5 + measured.reduce((h, m) => h + m.height, 0) + 2
+
+  y = pageBreakIfNeeded(doc, y, boxH + 10, pageLangs, lang)
+  y = drawSectionHeader(doc, s.headings[role], MARGIN_LEFT, y)
+  y += 2
+  doc.setFillColor(248, 249, 251)
+  doc.roundedRect(MARGIN_LEFT, y, CONTENT_WIDTH, boxH, 2, 2, 'F')
+  y += 6
+
+  if (sentenceLines.length) {
+    doc.setFont('helvetica', 'normal')
+    doc.setFontSize(10)
+    doc.setTextColor(30, 35, 50)
+    doc.text(sentenceLines, innerX, y)
+    y += sentenceLines.length * 5 + 2
+  }
+  for (const m of measured) {
+    doc.setFont('helvetica', 'bold')
+    doc.setFontSize(8)
+    doc.setTextColor(120, 130, 145)
+    doc.text(m.label, innerX, y)
+    doc.setFont('helvetica', 'normal')
+    doc.setFontSize(10)
+    doc.setTextColor(30, 35, 50)
+    if (m.below) {
+      doc.text(m.valueLines, innerX, y + 5)
+    } else {
+      doc.text(m.valueLines, innerX + m.labelW, y)
+    }
+    y += m.height
+  }
+  return y + 8
 }
 
 export function downloadPdf(data: PdfData, filename?: string) {

@@ -1,3 +1,5 @@
+import { fieldRoleFor, type FieldKey, type FieldRole } from './field-roles';
+
 export interface Template {
   id: number;
   slug: string;
@@ -30,6 +32,11 @@ export interface Template {
   groupLabels?: { givare: string; givareHelp: string; havare: string; havareHelp: string };
   /** Rättslig grund som visas i köprutan på mallsidan. Standard: "Enligt svensk avtalsrätt". */
   legalBasisLabel?: string;
+  /**
+   * Uppdragets innehåll i PDF:en för mallar som saknar ett eget uppdragsfält.
+   * Skrivs efter "att för min räkning och i mitt namn:".
+   */
+  uppdragText?: string;
 }
 
 /** Engelsk version av en malls standardtexter. Användarens egna uppgifter översätts aldrig. */
@@ -45,7 +52,8 @@ export interface TemplateTranslation {
   standardText: string;
 }
 
-export interface TemplateField {
+/** Ett formulärfält som det skrivs i malldatan nedan, före rolltilldelningen. */
+export interface TemplateFieldInput {
   id: string;
   label: string;
   type: 'text' | 'date' | 'textarea' | 'select' | 'checkbox' | 'personnummer' | 'email' | 'phone' | 'address';
@@ -54,6 +62,19 @@ export interface TemplateField {
   options?: string[];
   group?: 'givare' | 'havare' | 'detaljer';
   helpText?: string;
+}
+
+/** En mall som den skrivs i malldatan, före rolltilldelningen. */
+type TemplateInput = Omit<Template, 'fields'> & { fields: TemplateFieldInput[] };
+
+/** Ett formulärfält med uttrycklig roll (se data/field-roles.ts). */
+export interface TemplateField extends TemplateFieldInput {
+  /** Avsnittet i PDF:en. */
+  role: FieldRole;
+  /** Var värdet återges i löptext (uppdragsmeningen, underskrifter). */
+  key?: FieldKey;
+  /** Person 1 eller 2 när rollen har två personer. */
+  person?: 1 | 2;
 }
 
 export interface Category {
@@ -140,7 +161,7 @@ export const categories: Category[] = [
   },
 ];
 
-const commonGivareFields: TemplateField[] = [
+const commonGivareFields: TemplateFieldInput[] = [
   { id: 'givare_namn', label: 'Fullmaktsgivarens namn', type: 'text', placeholder: 'Anna Andersson', required: true, group: 'givare' },
   { id: 'givare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅÅÅMMDD-XXXX', required: true, group: 'givare' },
   { id: 'givare_adress', label: 'Adress', type: 'address', placeholder: 'Storgatan 1, 111 22 Stockholm', required: true, group: 'givare' },
@@ -148,23 +169,23 @@ const commonGivareFields: TemplateField[] = [
   { id: 'givare_telefon', label: 'Telefonnummer', type: 'phone', placeholder: '070-123 45 67', required: false, group: 'givare' },
 ];
 
-const commonHavareFields: TemplateField[] = [
+const commonHavareFields: TemplateFieldInput[] = [
   { id: 'havare_namn', label: 'Fullmaktstagarens namn', type: 'text', placeholder: 'Erik Eriksson', required: true, group: 'havare' },
   { id: 'havare_pnr', label: 'Personnummer/Org.nr', type: 'personnummer', placeholder: 'ÅÅÅÅMMDD-XXXX', required: true, group: 'havare' },
   { id: 'havare_relation', label: 'Relation till fullmaktsgivaren', type: 'select', options: ['Förälder', 'Make/Maka', 'Syskon', 'Annan släkting', 'Vän', 'Kollega', 'Juridiskt ombud', 'Annat'], required: true, group: 'havare' },
   { id: 'havare_adress', label: 'Adress', type: 'address', placeholder: 'Lillgatan 5, 222 33 Göteborg', required: false, group: 'havare' },
 ];
 
-const dateRangeFields: TemplateField[] = [
+const dateRangeFields: TemplateFieldInput[] = [
   { id: 'giltig_fran', label: 'Giltig från', type: 'date', required: true, group: 'detaljer' },
   { id: 'giltig_till', label: 'Giltig till', type: 'date', required: true, group: 'detaljer' },
 ];
 
-function generateTemplates(): Template[] {
-  const templates: Template[] = [];
+function generateTemplates(): TemplateInput[] {
+  const templates: TemplateInput[] = [];
 
   // === FÖRÄLDRAR & BARN (1-20) ===
-  const foraldrarTemplates: Partial<Template>[] = [
+  const foraldrarTemplates: Partial<TemplateInput>[] = [
     { id: 1, slug: 'foraldraredgivande-resa-annan-vuxen', name: 'Föräldramedgivande – resa med annan vuxen', description: 'Medgivande för barn att resa med annan vuxen än vårdnadshavare.' },
     { id: 2, slug: 'reseintyg-barn-internationell', name: 'Reseintyg för barn – internationell resa', description: 'Intyg som krävs vid internationella resor med barn.' },
     { id: 3, slug: 'resefullmakt-barn-eu', name: 'Resefullmakt för barn inom EU', description: 'Fullmakt specifikt anpassad för resor inom EU med barn.' },
@@ -209,11 +230,11 @@ function generateTemplates(): Template[] {
       relatedIds: [2, 3, 9, 11, 14],
       legalInfo: 'Denna fullmakt är utformad enligt svensk avtalsrätt och anpassad för kontakt med myndigheter, skolor och sjukvård i Sverige. Vid komplexa eller ovanliga ärenden rekommenderar vi att du kontaktar en jurist.',
       keywords: ['fullmakt barn', 'medgivande barn', 'föräldrafullmakt', 'resa med barn'],
-    } as Template);
+    } as TemplateInput);
   });
 
   // === RESA & TRANSPORT (21-35) ===
-  const resaTemplates: Partial<Template>[] = [
+  const resaTemplates: Partial<TemplateInput>[] = [
     { id: 21, slug: 'fullmakt-hamta-ut-fordon', name: 'Fullmakt att hämta ut fordon', description: 'Fullmakt för att hämta ut annans fordon från verkstad eller parkering.' },
     { id: 22, slug: 'fullmakt-bilforsakring', name: 'Fullmakt för bilförsäkring', description: 'Fullmakt att teckna eller ändra bilförsäkring.' },
     { id: 23, slug: 'fullmakt-besiktning', name: 'Fullmakt för besiktning', description: 'Fullmakt att besikta annans fordon.' },
@@ -251,11 +272,11 @@ function generateTemplates(): Template[] {
       relatedIds: [],
       legalInfo: 'Giltig enligt svensk avtals- och fullmaktsrätt.',
       keywords: ['fullmakt', 'resa', 'transport', 'fordon'],
-    } as Template);
+    } as TemplateInput);
   });
 
   // === VÅRD & OMSORG (36-50) ===
-  const vardTemplates: Partial<Template>[] = [
+  const vardTemplates: Partial<TemplateInput>[] = [
     { id: 36, slug: 'fullmakt-sjukvard', name: 'Fullmakt för sjukvård', description: 'Fullmakt att företräda person i sjukvårdskontakter.' },
     { id: 37, slug: 'fullmakt-apotek', name: 'Fullmakt för apotek', description: 'Fullmakt att hämta ut recept åt annan person.' },
     { id: 38, slug: 'fullmakt-hemtjanst', name: 'Fullmakt för hemtjänst', description: 'Fullmakt att ansöka om eller hantera hemtjänst.' },
@@ -292,11 +313,11 @@ function generateTemplates(): Template[] {
       relatedIds: [],
       legalInfo: 'Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.',
       keywords: ['fullmakt vård', 'sjukvård', 'apotek', 'medicinsk fullmakt'],
-    } as Template);
+    } as TemplateInput);
   });
 
   // === EKONOMI, BANK & MYNDIGHETER (51-70) ===
-  const ekonomiTemplates: Partial<Template>[] = [
+  const ekonomiTemplates: Partial<TemplateInput>[] = [
     { id: 51, slug: 'fullmakt-bank', name: 'Fullmakt för bankärenden', description: 'Generell fullmakt för bankärenden.' },
     { id: 52, slug: 'fullmakt-skatteverket', name: 'Fullmakt för Skatteverket', description: 'Fullmakt att företräda hos Skatteverket.' },
     { id: 53, slug: 'fullmakt-deklaration', name: 'Fullmakt för deklaration', description: 'Fullmakt att lämna in deklaration åt annan.' },
@@ -340,11 +361,11 @@ function generateTemplates(): Template[] {
       relatedIds: [],
       legalInfo: 'Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.',
       keywords: ['fullmakt bank', 'myndighet', 'ekonomi', 'skatteverket'],
-    } as Template);
+    } as TemplateInput);
   });
 
   // === BOENDE & VARDAG (71-85) ===
-  const boendeTemplates: Partial<Template>[] = [
+  const boendeTemplates: Partial<TemplateInput>[] = [
     { id: 71, slug: 'fullmakt-bostadskop', name: 'Fullmakt för bostadsköp', description: 'Fullmakt att köpa bostad för annans räkning.' },
     { id: 72, slug: 'fullmakt-bostadsforening', name: 'Fullmakt för bostadsförening', description: 'Fullmakt att företräda vid bostadsföreningsstämma.' },
     { id: 73, slug: 'fullmakt-hyreskontrakt', name: 'Fullmakt för hyreskontrakt', description: 'Fullmakt att teckna hyreskontrakt.' },
@@ -382,11 +403,11 @@ function generateTemplates(): Template[] {
       relatedIds: [],
       legalInfo: 'Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.',
       keywords: ['fullmakt bostad', 'hyreskontrakt', 'bostadsrätt', 'boende'],
-    } as Template);
+    } as TemplateInput);
   });
 
   // === FÖRENING, SKOLA & FRITID (86-100) ===
-  const foreningTemplates: Partial<Template>[] = [
+  const foreningTemplates: Partial<TemplateInput>[] = [
     { id: 86, slug: 'fullmakt-foreningsstamma', name: 'Fullmakt för föreningsstämma', description: 'Fullmakt att rösta vid föreningsstämma.' },
     { id: 87, slug: 'medgivande-skolaktivitet', name: 'Medgivande för skolaktivitet', description: 'Medgivande för barn att delta i skolaktivitet.' },
     { id: 88, slug: 'fullmakt-idrottsforening', name: 'Fullmakt för idrottsförening', description: 'Fullmakt att företräda i idrottsföreningsärenden.' },
@@ -424,11 +445,11 @@ function generateTemplates(): Template[] {
       relatedIds: [],
       legalInfo: 'Giltig för förenings- och skolverksamhet i Sverige.',
       keywords: ['fullmakt förening', 'medgivande skola', 'fritid'],
-    } as Template);
+    } as TemplateInput);
   });
 
   // === DJUR & HUSDJUR (101-108) ===
-  const djurTemplates: Partial<Template>[] = [
+  const djurTemplates: Partial<TemplateInput>[] = [
     { id: 101, slug: 'fullmakt-veterinarbesok', name: 'Fullmakt för veterinärbesök', description: 'Fullmakt att ta annans djur till veterinär.' },
     { id: 102, slug: 'medgivande-djurvard', name: 'Medgivande för tillfällig djurvård', description: 'Medgivande för hundvakt eller kattpassning.' },
     { id: 103, slug: 'fullmakt-kennelvistelse', name: 'Fullmakt för kennelvistelse', description: 'Fullmakt att lämna djur på kennel.' },
@@ -460,11 +481,11 @@ function generateTemplates(): Template[] {
       relatedIds: [],
       legalInfo: 'Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.',
       keywords: ['fullmakt djur', 'veterinär', 'husdjur'],
-    } as Template);
+    } as TemplateInput);
   });
 
   // === SENIORER & DIGITAL OMSORG (109-116) ===
-  const seniorTemplates: Partial<Template>[] = [
+  const seniorTemplates: Partial<TemplateInput>[] = [
     { id: 109, slug: 'fullmakt-internetbank-senior', name: 'Fullmakt för internetbanksärenden (senior)', description: 'Fullmakt att hjälpa äldre med internetbankärenden.' },
     { id: 110, slug: 'fullmakt-digital-brevlada', name: 'Fullmakt för digital brevlåda', description: 'Fullmakt att hantera Kivra/e-Boks åt annan.' },
     { id: 111, slug: 'fullmakt-god-man-komplement', name: 'Fullmakt god man-komplement', description: 'Kompletterande fullmakt för god man.' },
@@ -495,11 +516,11 @@ function generateTemplates(): Template[] {
       relatedIds: [],
       legalInfo: 'Giltig för digitala tjänster i Sverige. Ersätter inte godmanskap.',
       keywords: ['fullmakt senior', 'digital omsorg', 'äldre', 'internetbank'],
-    } as Template);
+    } as TemplateInput);
   });
 
   // === DIGITALT & DÖDSBO (117-124) ===
-  const digitaltTemplates: Partial<Template>[] = [
+  const digitaltTemplates: Partial<TemplateInput>[] = [
     { id: 117, slug: 'fullmakt-digital-dodsboforvaltning', name: 'Fullmakt för digital dödsboförvaltning', description: 'Fullmakt att hantera dödsboets digitala tillgångar.' },
     { id: 118, slug: 'medgivande-sociala-medier-dodsfall', name: 'Medgivande för sociala mediekonton (dödsfall)', description: 'Medgivande att hantera sociala mediekonton vid dödsfall.' },
     { id: 119, slug: 'fullmakt-domanhantering', name: 'Fullmakt för domänhantering', description: 'Fullmakt att hantera domännamn åt annan.' },
@@ -530,7 +551,7 @@ function generateTemplates(): Template[] {
       relatedIds: [],
       legalInfo: 'Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.',
       keywords: ['fullmakt dödsbo', 'digitalt arv', 'kryptovaluta', 'sociala medier'],
-    } as Template);
+    } as TemplateInput);
   });
 
 
@@ -544,6 +565,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'boende-vardag',
     description: 'Fullmakt för en ombud att sälja din bostadsrätt eller hyresrätt åt dig, inklusive signera köpekontrakt.',
     longDescription: 'Kan du inte närvara vid en bostadsrättsförsäljning? Denna fullmakt ger ditt ombud rätten att underteckna köpekontrakt, sköta kontakter med mäklare och köpare, och hantera allt kring försäljningen. Används vid sjukdom, utlandsvistelse eller om du av andra skäl inte kan vara på plats. Notera: mallen avser bostadsrätt. För fast egendom (villa) ska en fullmakt att sälja vara skriftlig (27 § andra stycket avtalslagen (1915:218)).',
+    uppdragText: 'Sälja den bostad som anges under Avser och i samband med försäljningen underteckna köpekontrakt och andra handlingar som behövs för att genomföra försäljningen.',
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
       { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
@@ -564,7 +586,7 @@ function generateTemplates(): Template[] {
     relatedIds: [126, 127],
     legalInfo: 'Gäller för bostadsrätt. Fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)).',
     keywords: ['fullmakt lägenhet', 'sälja bostadsrätt fullmakt', 'fullmakt mäklare', 'fullmakt bostad'],
-  } as Template);
+  } as TemplateInput);
 
   // Bankfullmakt 2026
   templates.push({
@@ -595,7 +617,7 @@ function generateTemplates(): Template[] {
     relatedIds: [126, 127, 128],
     legalInfo: 'Komplement till bankens egna blanketter. Varje bank har egna krav – kontakta banken i förväg.',
     keywords: ['bankfullmakt', 'fullmakt bank', 'uttag fullmakt', 'kontohantering fullmakt'],
-  } as Template);
+  } as TemplateInput);
 
   // Fordonsfullmakt 2026
   templates.push({
@@ -626,7 +648,7 @@ function generateTemplates(): Template[] {
     relatedIds: [126, 130],
     legalInfo: 'Avser lös egendom (fordon). Transportstyrelsen kan ha specifika krav – kontrollera på transportstyrelsen.se.',
     keywords: ['fordonsfullmakt', 'fullmakt sälja bil', 'ägarbyte fullmakt', 'transportstyrelsen fullmakt'],
-  } as Template);
+  } as TemplateInput);
 
   // Framtidsfullmakt 2026
   templates.push({
@@ -682,7 +704,7 @@ function generateTemplates(): Template[] {
     relatedIds: [126, 127],
     legalInfo: 'Lag (2017:310) om framtidsfullmakter. Ska undertecknas i två vittnens samtidiga närvaro (4 §).',
     keywords: ['framtidsfullmakt', 'fullmakt vid demens', 'fullmakt sjukdom', 'framtidsfullmakt mall', 'lagen om framtidsfullmakter'],
-  } as Template);
+  } as TemplateInput);
 
   // Generalfullmakt 2026
   templates.push({
@@ -693,6 +715,7 @@ function generateTemplates(): Template[] {
     categorySlug: 'ekonomi-myndigheter',
     description: 'Bred fullmakt som täcker de flesta rättshandlingar. Lämplig när du behöver en person att agera i ditt ställe.',
     longDescription: 'En generalfullmakt ger fullmaktshavaren befogenhet att agera på dina vägnar i de flesta situationer – bank, myndigheter, fastighetsaffärer och avtal. Till skillnad från specialfullmakter är den inte begränsad till ett specifikt ärende. Används ofta vid långvarig utlandsresa, sjukdom eller när du av praktiska skäl inte kan närvara.',
+    uppdragText: 'Företräda mig och för min räkning vidta alla rättshandlingar och andra åtgärder, med de undantag som anges under Begränsningar och villkor.',
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
       { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
@@ -712,7 +735,7 @@ function generateTemplates(): Template[] {
     relatedIds: [125, 127],
     legalInfo: 'Regleras av avtalslagen (1915:218). Bevittning rekommenderas men krävs ej i alla situationer.',
     keywords: ['generalfullmakt', 'fullmakt privatperson', 'bred fullmakt', 'fullmakt bank', 'fullmakt myndigheter'],
-  } as Template);
+  } as TemplateInput);
 
   // Dödsbo-fullmakt 2026
   templates.push({
@@ -724,6 +747,11 @@ function generateTemplates(): Template[] {
     description: 'Fullmakt som gör det möjligt för en arvinge att agera för dödsboets räkning i kontakter med banker, myndigheter och fastighetsbolag.',
     longDescription: 'När en närstående går bort behöver dödsboet ofta agera snabbt – avsluta hyresavtal, kontakta banken, avboka abonnemang och sköta fastighetsärenden. Denna fullmakt ger en utsedd arvinge eller anhörig rätt att agera på dödsboets vägnar. Den kräver att alla dödsbodelägare undertecknar om inget annat avtalas.',
     fields: [
+      // Fullmakten ges av dödsbodelägarna, inte av den avlidne (18 kap. 1 § ärvdabalken).
+      { id: 'dodsbodelagare1_namn', label: 'Dödsbodelägarens fullständiga namn', type: 'text', placeholder: 'Karin Svensson', required: true, group: 'givare' },
+      { id: 'dodsbodelagare1_pnr', label: 'Dödsbodelägarens personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
+      { id: 'dodsbodelagare2_namn', label: 'Dödsbodelägare 2 – namn (valfritt)', type: 'text', placeholder: 'Per Svensson', required: false, group: 'givare' },
+      { id: 'dodsbodelagare2_pnr', label: 'Dödsbodelägare 2 – personnummer (valfritt)', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: false, group: 'givare' },
       { id: 'avliden_namn', label: 'Den avlidnes fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
       { id: 'avliden_pnr', label: 'Personnummer (avliden)', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
       { id: 'dodsdatum', label: 'Dödsdatum', type: 'date', required: true, group: 'givare' },
@@ -743,7 +771,7 @@ function generateTemplates(): Template[] {
     relatedIds: [125, 126],
     legalInfo: 'Dödsbodelägarna förvaltar gemensamt den dödes egendom under boets utredning (18 kap. 1 § ärvdabalken (1958:637)).',
     keywords: ['dödsbo fullmakt', 'fullmakt arvinge', 'hantera dödsbo', 'dödsbodelägare fullmakt', 'arvinge fullmakt bank'],
-  } as Template);
+  } as TemplateInput);
 
   // === TILLAGDA 2026-05-06 ===
   templates.push({
@@ -771,7 +799,7 @@ function generateTemplates(): Template[] {
     relatedIds: [128, 130],
     legalInfo: 'Hyreslagen (12 kap. jordabalken (1970:994)) reglerar hyresgästens rättigheter.',
     keywords: ['fullmakt hyresrätt', 'lägenhetsbyte fullmakt', 'andrahandsuthyrning fullmakt'],
-  } as Template);
+  } as TemplateInput);
 
   templates.push({
     id: 132, slug: 'fullmakt-sjukvard-behandling-2026',
@@ -799,7 +827,7 @@ function generateTemplates(): Template[] {
     relatedIds: [125, 126],
     legalInfo: 'Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Patientdatalagen (2008:355) innehåller bestämmelser om skyldighet att föra patientjournal (1 kap. 1 §).',
     keywords: ['sjukvårdsfullmakt', 'fullmakt vård', 'fullmakt apotek'],
-  } as Template);
+  } as TemplateInput);
 
   templates.push({
     id: 133, slug: 'medgivande-barn-ensamresa-flyg-2026',
@@ -829,7 +857,7 @@ function generateTemplates(): Template[] {
     relatedIds: [1, 2, 14],
     legalInfo: 'Krav varierar per flygbolag. Kontrollera aktuell policy.',
     keywords: ['medgivande ensam resa barn', 'barn flyga ensamt', 'flygresemedgivande'],
-  } as Template);
+  } as TemplateInput);
 
   // Pensionsärenden fullmakt 2026
   templates.push({
@@ -857,7 +885,7 @@ function generateTemplates(): Template[] {
     relatedIds: [125, 126],
     legalInfo: 'Pensionsmyndigheten och Försäkringskassan kan ha specifika krav. Kontakta respektive myndighet.',
     keywords: ['pensionsfullmakt', 'fullmakt pensionsmyndigheten', 'fullmakt försäkringskassan'],
-  } as Template);
+  } as TemplateInput);
 
   // BRF-stämmefullmakt 2026
   templates.push({
@@ -866,6 +894,7 @@ function generateTemplates(): Template[] {
     category: 'Boende & Vardag', categorySlug: 'boende-vardag',
     description: 'Fullmakt för en representant att rösta och agera på bostadsrättsföreningens årliga eller extra stämma.',
     longDescription: 'Kan du inte delta på årsstämman eller extrastämman i din BRF? Denna fullmakt ger en annan bostadsrättshavare eller anhörig rätt att rösta och agera i ditt ställe. Bostadsrättslagen reglerar vem som kan vara fullmaktshavare.',
+    uppdragText: 'Företräda mig och rösta för min räkning vid den föreningsstämma som anges under Avser.',
     fields: [
       { id: 'fullmaktsgivare_namn', label: 'Bostadsrättshavaren (du)', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
       { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
@@ -885,7 +914,7 @@ function generateTemplates(): Template[] {
     relatedIds: [126, 131],
     legalInfo: 'Bostadsrättslagen (1991:614) 9 kap. 14 § reglerar rätten att använda ombud vid föreningsstämma.',
     keywords: ['fullmakt BRF stämma', 'årsstämma fullmakt', 'bostadsrättsförening fullmakt'],
-  } as Template);
+  } as TemplateInput);
 
   // Skatteverket fullmakt 2026
   templates.push({
@@ -913,7 +942,7 @@ function generateTemplates(): Template[] {
     relatedIds: [126, 129],
     legalInfo: 'Komplement till Skatteverkets ombudsregistrering. Kontakta Skatteverket för digital åtkomst via e-tjänster.',
     keywords: ['skattefullmakt', 'fullmakt skatteverket', 'deklaration fullmakt', 'redovisningskonsult fullmakt'],
-  } as Template);
+  } as TemplateInput);
 
 
   // ═══════════ NYA MALLAR 2026 (137–236) ═══════════
@@ -948,7 +977,7 @@ function generateTemplates(): Template[] {
     relatedIds: [138, 139, 144],
     legalInfo: "Regleras av aktiebolagslagen (2005:551) och prokuralagen (1974:158). Behörig företrädare ska utfärda fullmakten.",
     keywords: ["firmateckning", "fullmakt företag", "firmateckningsrätt", "aktiebolag fullmakt", "fullmakt VD"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt firmateckning i förening
   templates.push({
@@ -980,7 +1009,7 @@ function generateTemplates(): Template[] {
     relatedIds: [137, 139, 144],
     legalInfo: "Regleras av aktiebolagslagen (2005:551) och prokuralagen (1974:158). Behörig företrädare ska utfärda fullmakten.",
     keywords: ["firmateckning gemensam", "firmateckning i förening", "fullmakt aktiebolag", "fullmakt företag"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt till bolagsstämma
   templates.push({
@@ -1011,7 +1040,7 @@ function generateTemplates(): Template[] {
     relatedIds: [137, 138, 143],
     legalInfo: "Regleras av aktiebolagslagen (2005:551) 7 kap. om bolagsstämma och rösträtt.",
     keywords: ["fullmakt bolagsstämma", "fullmakt aktieägare", "årsstämma fullmakt", "rösta för aktier"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt till revisor
   templates.push({
@@ -1043,7 +1072,7 @@ function generateTemplates(): Template[] {
     relatedIds: [137, 140, 142],
     legalInfo: "Regleras av revisorslagen (2001:883) och Aktiebolagslagen (2005:551) 9 kap.",
     keywords: ["fullmakt revisor", "revisionsfullmakt", "fullmakt bolag", "auktoriserad revisor"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt handelsbolag
   templates.push({
@@ -1075,7 +1104,7 @@ function generateTemplates(): Template[] {
     relatedIds: [137, 142, 143],
     legalInfo: "Regleras av lagen om handelsbolag och enkla bolag (1980:1102).",
     keywords: ["fullmakt handelsbolag", "fullmakt HB", "bolagsman fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt enskild firma
   templates.push({
@@ -1106,7 +1135,7 @@ function generateTemplates(): Template[] {
     relatedIds: [141, 143, 144],
     legalInfo: "Enskild näringsverksamhet regleras av enskild näringsidkares ansvar – ingen separat juridisk person.",
     keywords: ["fullmakt enskild firma", "fullmakt EF", "fullmakt företagare"],
-  } as Template);
+  } as TemplateInput);
 
   // VD-fullmakt
   templates.push({
@@ -1138,7 +1167,7 @@ function generateTemplates(): Template[] {
     relatedIds: [137, 138, 142],
     legalInfo: "Aktiebolagslagen (2005:551) 8 kap. om bolagets ledning.",
     keywords: ["VD-fullmakt", "VD fullmakt", "fullmakt verkställande direktör"],
-  } as Template);
+  } as TemplateInput);
 
   // Prokura
   templates.push({
@@ -1170,7 +1199,7 @@ function generateTemplates(): Template[] {
     relatedIds: [137, 143, 145],
     legalInfo: "Regleras av prokuralagen (1974:158). Om registrering av prokura finns bestämmelser i handelsregisterlagen (1974:157) (1 § prokuralagen).",
     keywords: ["prokura", "fullmakt prokura", "näringsfullmakt", "prokuralagen"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt vid likvidation
   templates.push({
@@ -1202,7 +1231,7 @@ function generateTemplates(): Template[] {
     relatedIds: [144, 146, 147],
     legalInfo: "Aktiebolagslagen (2005:551) 25 kap. om likvidation och konkurs.",
     keywords: ["fullmakt likvidation", "likvidator fullmakt", "avveckling bolag"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt vid konkurs
   templates.push({
@@ -1234,7 +1263,7 @@ function generateTemplates(): Template[] {
     relatedIds: [145, 147, 148],
     legalInfo: "Konkurslagen (1987:672) reglerar konkursförfarandet.",
     keywords: ["fullmakt konkurs", "konkurs ombud", "konkursförvaltare fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt patentärende
   templates.push({
@@ -1266,7 +1295,7 @@ function generateTemplates(): Template[] {
     relatedIds: [148, 137, 142],
     legalInfo: "Regleras av patentlagen (2024:945) och Patent- och registreringsverkets (PRV) föreskrifter.",
     keywords: ["fullmakt patent", "patentombud", "PRV fullmakt", "patentansökan ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt varumärkesregistrering
   templates.push({
@@ -1298,7 +1327,7 @@ function generateTemplates(): Template[] {
     relatedIds: [147, 137, 142],
     legalInfo: "Varumärkeslagen (2010:1877) och PRV:s regelverk.",
     keywords: ["fullmakt varumärke", "varumärkesregistrering", "PRV varumärke", "EUIPO fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Ömsesidig framtidsfullmakt för makar
   templates.push({
@@ -1361,7 +1390,7 @@ function generateTemplates(): Template[] {
     relatedIds: [137, 138, 139],
     legalInfo: 'Lag (2017:310) om framtidsfullmakter. Varje dokument ska undertecknas i två vittnens samtidiga närvaro (4 §).',
     keywords: ['framtidsfullmakt makar', 'ömsesidig framtidsfullmakt', 'framtidsfullmakt äkta makar', 'framtidsfullmakt sambo'],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt begravning för anhörig
   templates.push({
@@ -1393,7 +1422,7 @@ function generateTemplates(): Template[] {
     relatedIds: [226, 227, 228],
     legalInfo: "Begravningslagen (1990:1144) och ärvdabalken (1958:637).",
     keywords: ["fullmakt begravning", "begravning anhörig", "fullmakt begravningsbyrå"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt skilsmässa
   templates.push({
@@ -1424,7 +1453,7 @@ function generateTemplates(): Template[] {
     relatedIds: [150, 151, 152],
     legalInfo: "Äktenskapsbalken (1987:230) reglerar skilsmässa och bodelning.",
     keywords: ["fullmakt skilsmässa", "fullmakt äktenskapsskillnad", "skilsmässa ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt adoption
   templates.push({
@@ -1455,7 +1484,7 @@ function generateTemplates(): Template[] {
     relatedIds: [151, 153, 154],
     legalInfo: "Föräldrabalken (1949:381) 4 kap. om adoption och lag (1997:191) med anledning av Sveriges tillträde till Haagkonventionen om skydd av barn och samarbete vid internationella adoptioner.",
     keywords: ["fullmakt adoption", "adoption ombud", "MFoF fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Medgivande för regelbunden barnpassning
   templates.push({
@@ -1488,7 +1517,7 @@ function generateTemplates(): Template[] {
     relatedIds: [149, 153, 154],
     legalInfo: "Vårdnadshavaren har rätt och skyldighet att bestämma i frågor som rör barnets personliga angelägenheter (6 kap. 11 § föräldrabalken (1949:381)).",
     keywords: ["medgivande barnpassning", "fullmakt barnvakt", "fullmakt mor-/farförälder barn"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt umgängesrätt
   templates.push({
@@ -1519,7 +1548,7 @@ function generateTemplates(): Template[] {
     relatedIds: [150, 151, 154],
     legalInfo: "Föräldrabalken (1949:381) 6 kap. om vårdnad, boende och umgänge.",
     keywords: ["fullmakt umgänge", "fullmakt vårdnadstvist", "umgängesrätt ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt vårdnadshavare bistånd
   templates.push({
@@ -1552,7 +1581,7 @@ function generateTemplates(): Template[] {
     relatedIds: [153, 152, 149],
     legalInfo: "Vårdnadshavaren har rätt och skyldighet att bestämma i frågor som rör barnets personliga angelägenheter (6 kap. 11 § föräldrabalken (1949:381)).",
     keywords: ["fullmakt vårdnadshavare", "tillfällig vårdnad fullmakt", "medgivande barn bistånd"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt sambo-avtal
   templates.push({
@@ -1583,7 +1612,7 @@ function generateTemplates(): Template[] {
     relatedIds: [150, 151, 152],
     legalInfo: "Sambolagen (2003:376) reglerar samboegendom och bodelning vid separation.",
     keywords: ["fullmakt sambo", "sambo-avtal ombud", "sambolagen fullmakt", "samboegendom fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt föräldraledighet myndighet
   templates.push({
@@ -1614,7 +1643,7 @@ function generateTemplates(): Template[] {
     relatedIds: [152, 153, 154],
     legalInfo: "Föräldraledighetslagen (1995:584) och socialförsäkringsbalken (2010:110).",
     keywords: ["fullmakt föräldraledighet", "fullmakt föräldrapenning", "försäkringskassan föräldraledighet"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt familjerådgivning
   templates.push({
@@ -1645,7 +1674,7 @@ function generateTemplates(): Template[] {
     relatedIds: [152, 150, 156],
     legalInfo: "Socialtjänstlagen (2025:400) 13 kap. 4 § reglerar familjerådgivning som kommunens ansvar.",
     keywords: ["fullmakt familjerådgivning", "kommunal familjerådgivning fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt kommunärende
   templates.push({
@@ -1676,7 +1705,7 @@ function generateTemplates(): Template[] {
     relatedIds: [158, 159, 160],
     legalInfo: "Kommunallagen (2017:725) och förvaltningslagen (2017:900) reglerar kommunens ärendehantering.",
     keywords: ["fullmakt kommun", "kommunärende ombud", "fullmakt kommunala myndigheter"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt Lantmäteriet
   templates.push({
@@ -1708,7 +1737,7 @@ function generateTemplates(): Template[] {
     relatedIds: [157, 171, 172],
     legalInfo: "Jordabalken (1970:994) och fastighetsbildningslagen (1970:988).",
     keywords: ["fullmakt Lantmäteriet", "lagfart fullmakt", "fastighetsbildning fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt polisanmälan
   templates.push({
@@ -1739,7 +1768,7 @@ function generateTemplates(): Template[] {
     relatedIds: [157, 160, 170],
     legalInfo: "Rättegångsbalken (1942:740) reglerar förundersökning och polisanmälan.",
     keywords: ["fullmakt polisanmälan", "polisanmälan ombud", "fullmakt polisen"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt passförnyelse vuxen
   templates.push({
@@ -1770,7 +1799,7 @@ function generateTemplates(): Template[] {
     relatedIds: [157, 160, 162],
     legalInfo: "Passlagen (1978:302). Observera: sökanden är skyldig att inställa sig personligen (6 §).",
     keywords: ["fullmakt pass vuxen", "passförnyelse fullmakt", "fullmakt passansökan vuxen"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt CSN-ärenden
   templates.push({
@@ -1801,7 +1830,7 @@ function generateTemplates(): Template[] {
     relatedIds: [157, 163, 164],
     legalInfo: "Studiestödslagen (1999:1395) reglerar CSN-stöd.",
     keywords: ["fullmakt CSN", "CSN ombud", "studielån fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt Försäkringskassan sjukpenning
   templates.push({
@@ -1832,7 +1861,7 @@ function generateTemplates(): Template[] {
     relatedIds: [162, 164, 178],
     legalInfo: "Socialförsäkringsbalken (2010:110) reglerar sjukpenning och Försäkringskassans handläggning.",
     keywords: ["fullmakt FK sjukpenning", "fullmakt försäkringskassan", "sjukpenning ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt arbetslöshet (a-kassa)
   templates.push({
@@ -1863,7 +1892,7 @@ function generateTemplates(): Template[] {
     relatedIds: [162, 163, 178],
     legalInfo: "Lag (2024:506) om arbetslöshetsförsäkring.",
     keywords: ["fullmakt a-kassa", "fullmakt arbetslöshet", "fullmakt arbetsförmedlingen"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt Jordbruksverket
   templates.push({
@@ -1894,7 +1923,7 @@ function generateTemplates(): Template[] {
     relatedIds: [165, 167, 168],
     legalInfo: "Den som är part i ett ärende får anlita ombud (14 § förvaltningslagen (2017:900)).",
     keywords: ["fullmakt Jordbruksverket", "lantbruksstöd fullmakt", "EU-stöd fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt Skogsstyrelsen
   templates.push({
@@ -1925,7 +1954,7 @@ function generateTemplates(): Template[] {
     relatedIds: [164, 166, 168],
     legalInfo: "Skogsvårdslagen (1979:429) och Skogsstyrelsens föreskrifter.",
     keywords: ["fullmakt Skogsstyrelsen", "avverkningsanmälan fullmakt", "skogsbruk ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt statlig tjänsteanvisning
   templates.push({
@@ -1956,7 +1985,7 @@ function generateTemplates(): Template[] {
     relatedIds: [162, 163, 168],
     legalInfo: "Lag (1994:260) om offentlig anställning.",
     keywords: ["fullmakt statlig anställning", "tjänsteanvisning fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt vapenlicens
   templates.push({
@@ -1987,7 +2016,7 @@ function generateTemplates(): Template[] {
     relatedIds: [159, 170, 178],
     legalInfo: "Vapenlagen (2026:408) reglerar vapentillstånd, och Polismyndigheten prövar frågor om tillstånd (1 kap. 11 §).",
     keywords: ["fullmakt vapenlicens", "fullmakt polisen vapen", "vapenlicens ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt hemvärnet anmälan
   templates.push({
@@ -2018,7 +2047,7 @@ function generateTemplates(): Template[] {
     relatedIds: [167, 170, 168],
     legalInfo: "Hemvärnsförordningen (1997:146).",
     keywords: ["fullmakt hemvärnet", "fullmakt Försvarsmakten", "hemvärnsärende ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt fastighetsförsäljning villa
   templates.push({
@@ -2050,7 +2079,7 @@ function generateTemplates(): Template[] {
     relatedIds: [170, 171, 172],
     legalInfo: "Fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)). Är säljarens underskrift på köpehandlingen inte bevittnad av två vittnen förklaras lagfartsansökan vilande (20 kap. 7 § 1 jordabalken (1970:994)).",
     keywords: ["fullmakt fastighetsförsäljning", "fullmakt sälja villa", "fastighetsförsäljning ombud", "fullmakt köpekontrakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt lagfart
   templates.push({
@@ -2082,7 +2111,7 @@ function generateTemplates(): Template[] {
     relatedIds: [169, 171, 172],
     legalInfo: "Jordabalken (1970:994) 20 kap. om lagfart.",
     keywords: ["fullmakt lagfart", "lagfart ombud", "fullmakt Lantmäteriet"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt inteckning och pantbrev
   templates.push({
@@ -2114,7 +2143,7 @@ function generateTemplates(): Template[] {
     relatedIds: [169, 170, 172],
     legalInfo: "Jordabalken (1970:994) 22 kap. om inteckning.",
     keywords: ["fullmakt inteckning", "fullmakt pantbrev", "bolån fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt tomträtt
   templates.push({
@@ -2146,7 +2175,7 @@ function generateTemplates(): Template[] {
     relatedIds: [171, 169, 170],
     legalInfo: "Jordabalken (1970:994) 13 kap. om tomträtt.",
     keywords: ["fullmakt tomträtt", "tomträtt ombud", "fullmakt kommun tomt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt arrende
   templates.push({
@@ -2177,7 +2206,7 @@ function generateTemplates(): Template[] {
     relatedIds: [173, 174, 175],
     legalInfo: "Jordabalken (1970:994) 8–11 kap. om arrende.",
     keywords: ["fullmakt arrende", "arrende ombud", "jordbruksarrende fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt servitut
   templates.push({
@@ -2209,7 +2238,7 @@ function generateTemplates(): Template[] {
     relatedIds: [169, 172, 174],
     legalInfo: "Jordabalken (1970:994) 14 kap. om servitut och fastighetsbildningslagen.",
     keywords: ["fullmakt servitut", "officialservitut fullmakt", "servitut Lantmäteriet"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt strandskyddsdispens
   templates.push({
@@ -2240,7 +2269,7 @@ function generateTemplates(): Template[] {
     relatedIds: [175, 172, 169],
     legalInfo: "Miljöbalken (1998:808) 7 kap. om strandskydd.",
     keywords: ["fullmakt strandskydd", "strandskyddsdispens ombud", "fullmakt länsstyrelsen miljö"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt bygglov
   templates.push({
@@ -2271,7 +2300,7 @@ function generateTemplates(): Template[] {
     relatedIds: [174, 169, 172],
     legalInfo: "Plan- och bygglagen (2010:900).",
     keywords: ["fullmakt bygglov", "bygglov ombud", "arkitekt fullmakt bygglov"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt fastighetsavstyckning
   templates.push({
@@ -2303,7 +2332,7 @@ function generateTemplates(): Template[] {
     relatedIds: [169, 172, 170],
     legalInfo: "Fastighetsbildningslagen (1970:988).",
     keywords: ["fullmakt avstyckning", "fastighetsbildning fullmakt", "fullmakt Lantmäteriet"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt försäljning lantbruksfastighet
   templates.push({
@@ -2335,7 +2364,7 @@ function generateTemplates(): Template[] {
     relatedIds: [167, 169, 170],
     legalInfo: "Jordabalken (1970:994) och jordförvärvslagen (1979:230) som reglerar förvärv av lantbruksfastighet.",
     keywords: ["fullmakt lantbruk", "fullmakt skogsfastighet", "försäljning lantbruk ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Livstestamente
   templates.push({
@@ -2367,7 +2396,7 @@ function generateTemplates(): Template[] {
     relatedIds: [179, 180, 181],
     legalInfo: "Patientlagen (2014:821) 4 kap. om samtycke och 5 kap. om delaktighet.",
     keywords: ["livstestamente", "fullmakt vård i livets slut", "palliativ vård fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt vårdönskemål
   templates.push({
@@ -2399,7 +2428,7 @@ function generateTemplates(): Template[] {
     relatedIds: [178, 180, 181],
     legalInfo: "Patientlagen (2014:821) reglerar samråd och samtycke.",
     keywords: ["fullmakt vårdönskemål", "vårddirektiv", "patient direktiv"],
-  } as Template);
+  } as TemplateInput);
 
   // Medgivande tandreglering barn
   templates.push({
@@ -2432,7 +2461,7 @@ function generateTemplates(): Template[] {
     relatedIds: [182, 184, 183],
     legalInfo: "Tandvårdslagen (1985:125) och patientlagen (2014:821).",
     keywords: ["medgivande tandreglering", "tandreglering barn fullmakt", "ortodonti barn samtycke"],
-  } as Template);
+  } as TemplateInput);
 
   // Medgivande blodprov barn
   templates.push({
@@ -2465,7 +2494,7 @@ function generateTemplates(): Template[] {
     relatedIds: [180, 182, 184],
     legalInfo: "Patientlagen (2014:821) 4 kap. och lag (2003:460) om etikprövning av forskning som avser människor.",
     keywords: ["medgivande blodprov barn", "provtagning barn samtycke", "forskning på barn medgivande"],
-  } as Template);
+  } as TemplateInput);
 
   // Medgivande fertilitetsbehandling
   templates.push({
@@ -2497,7 +2526,7 @@ function generateTemplates(): Template[] {
     relatedIds: [179, 183, 185],
     legalInfo: "Lag (2006:351) om genetisk integritet m.m. 6 kap. (insemination) och 7 kap. (befruktning utanför kroppen).",
     keywords: ["medgivande IVF", "medgivande fertilitetsbehandling", "assisterad befruktning samtycke"],
-  } as Template);
+  } as TemplateInput);
 
   // Medgivande organdonation levande
   templates.push({
@@ -2529,7 +2558,7 @@ function generateTemplates(): Template[] {
     relatedIds: [178, 179, 185],
     legalInfo: "Lag (1995:831) om transplantation m.m.",
     keywords: ["medgivande organdonation", "levande donator samtycke", "njurdonation fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Medgivande vaccination barn
   templates.push({
@@ -2562,7 +2591,7 @@ function generateTemplates(): Template[] {
     relatedIds: [181, 182, 184],
     legalInfo: "Smittskyddslagen (2004:168) och patientlagen (2014:821).",
     keywords: ["medgivande vaccin barn", "vaccination samtycke", "fullmakt vaccinera barn"],
-  } as Template);
+  } as TemplateInput);
 
   // Medgivande operation barn
   templates.push({
@@ -2595,7 +2624,7 @@ function generateTemplates(): Template[] {
     relatedIds: [179, 181, 184],
     legalInfo: "Patientlagen (2014:821) 4 kap. om samtycke och 5 kap. 1 § om samråd.",
     keywords: ["medgivande operation barn", "operation barn samtycke", "kirurgi barn fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Medgivande genetisk testning
   templates.push({
@@ -2627,7 +2656,7 @@ function generateTemplates(): Template[] {
     relatedIds: [181, 185, 186],
     legalInfo: "Lag (2006:351) om genetisk integritet m.m. 2 kap. om genetisk undersökning och information.",
     keywords: ["medgivande genetisk test", "DNA-test samtycke", "fosterdiagnostik samtycke"],
-  } as Template);
+  } as TemplateInput);
 
   // Medgivande estetisk behandling
   templates.push({
@@ -2659,7 +2688,7 @@ function generateTemplates(): Template[] {
     relatedIds: [178, 179, 184],
     legalInfo: "Patientsäkerhetslagen (2010:659) och Inspektionen för vård och omsorgs (IVO) tillsyn.",
     keywords: ["medgivande estetisk behandling", "samtycke skönhetsbehandling", "plastikkirurgi samtycke"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt MC ägarbyte
   templates.push({
@@ -2691,7 +2720,7 @@ function generateTemplates(): Template[] {
     relatedIds: [192, 193, 194],
     legalInfo: "Transportstyrelsen reglerar ägarbyte och registrering. Fullmakten kompletterar formell anmälan.",
     keywords: ["fullmakt MC", "motorcykel ägarbyte", "fullmakt sälja MC"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt husbil
   templates.push({
@@ -2723,7 +2752,7 @@ function generateTemplates(): Template[] {
     relatedIds: [191, 193, 194],
     legalInfo: "Transportstyrelsen reglerar ägarbyte och registrering. Fullmakten kompletterar formell anmälan.",
     keywords: ["fullmakt husbil", "husbil försäljning", "husbil registrering ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt husvagn försäljning
   templates.push({
@@ -2755,7 +2784,7 @@ function generateTemplates(): Template[] {
     relatedIds: [191, 192, 194],
     legalInfo: "Transportstyrelsen reglerar ägarbyte och registrering. Fullmakten kompletterar formell anmälan.",
     keywords: ["fullmakt husvagn", "husvagn försäljning", "husvagn ägarbyte"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt snöskoter ägarbyte
   templates.push({
@@ -2787,7 +2816,7 @@ function generateTemplates(): Template[] {
     relatedIds: [191, 195, 196],
     legalInfo: "Transportstyrelsen reglerar ägarbyte och registrering. Fullmakten kompletterar formell anmälan.",
     keywords: ["fullmakt snöskoter", "snöskoter ägarbyte", "fullmakt snowmobile"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt traktor registrering
   templates.push({
@@ -2819,7 +2848,7 @@ function generateTemplates(): Template[] {
     relatedIds: [195, 196, 190],
     legalInfo: "Transportstyrelsen reglerar ägarbyte och registrering. Fullmakten kompletterar formell anmälan.",
     keywords: ["fullmakt traktor", "traktor registrering", "traktor ägarbyte"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt EPA-traktor
   templates.push({
@@ -2851,7 +2880,7 @@ function generateTemplates(): Template[] {
     relatedIds: [194, 191, 190],
     legalInfo: "Transportstyrelsen reglerar ägarbyte och registrering. Fullmakten kompletterar formell anmälan.",
     keywords: ["fullmakt EPA-traktor", "A-traktor fullmakt", "EPA-traktor ägarbyte"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt båtregistrering 2026
   templates.push({
@@ -2883,7 +2912,7 @@ function generateTemplates(): Template[] {
     relatedIds: [193, 195, 194],
     legalInfo: "Lag (1979:377) om registrering av båtar.",
     keywords: ["fullmakt båt", "båtregistrering 2026", "båt ägarbyte"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt ATV
   templates.push({
@@ -2915,7 +2944,7 @@ function generateTemplates(): Template[] {
     relatedIds: [191, 193, 194],
     legalInfo: "Transportstyrelsen reglerar ägarbyte och registrering. Fullmakten kompletterar formell anmälan.",
     keywords: ["fullmakt ATV", "fullmakt terränghjuling", "ATV ägarbyte"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt lastbil företag
   templates.push({
@@ -2947,7 +2976,7 @@ function generateTemplates(): Template[] {
     relatedIds: [191, 141, 196],
     legalInfo: "Yrkestrafiklagen (2012:210) och Transportstyrelsens föreskrifter.",
     keywords: ["fullmakt lastbil", "lastbil företag", "tunga fordon ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt veteranfordon
   templates.push({
@@ -2979,7 +3008,7 @@ function generateTemplates(): Template[] {
     relatedIds: [191, 192, 193],
     legalInfo: "Transportstyrelsen reglerar ägarbyte och registrering. Fullmakten kompletterar formell anmälan.",
     keywords: ["fullmakt veteranfordon", "veteranbil ägarbyte", "historiskt fordon fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt Google-konto dödsbo
   templates.push({
@@ -3011,7 +3040,7 @@ function generateTemplates(): Template[] {
     relatedIds: [202, 203, 204],
     legalInfo: "Saknar enhetlig svensk reglering. Tjänsteleverantörers villkor och internationella riktlinjer gäller parallellt.",
     keywords: ["fullmakt Google", "Google-konto dödsbo", "Google legacy", "Gmail dödsbo"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt Apple ID dödsbo
   templates.push({
@@ -3043,7 +3072,7 @@ function generateTemplates(): Template[] {
     relatedIds: [201, 203, 204],
     legalInfo: "Saknar enhetlig svensk reglering. Tjänsteleverantörers villkor och internationella riktlinjer gäller parallellt.",
     keywords: ["fullmakt Apple ID", "Apple legacy contact", "iCloud dödsbo", "Apple konto avliden"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt Spotify-abonnemang
   templates.push({
@@ -3075,7 +3104,7 @@ function generateTemplates(): Template[] {
     relatedIds: [201, 202, 204],
     legalInfo: "Saknar enhetlig svensk reglering. Tjänsteleverantörers villkor och internationella riktlinjer gäller parallellt.",
     keywords: ["fullmakt Spotify", "Spotify dödsbo", "avsluta abonnemang fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt bankapp tillgång
   templates.push({
@@ -3107,7 +3136,7 @@ function generateTemplates(): Template[] {
     relatedIds: [204, 164, 145],
     legalInfo: "Avtalslagen (1915:218) och bankernas digitala tjänstevillkor.",
     keywords: ["fullmakt bankapp", "fullmakt internetbank", "digital bank fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt e-legitimation
   templates.push({
@@ -3139,7 +3168,7 @@ function generateTemplates(): Template[] {
     relatedIds: [204, 164, 169],
     legalInfo: "BankID-koden är personlig enligt avtal med utfärdaren. Fullmakter ersätter inte e-legitimation utan kompletterar.",
     keywords: ["fullmakt e-legitimation", "fullmakt BankID", "Freja eID fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt Microsoft-konto
   templates.push({
@@ -3171,7 +3200,7 @@ function generateTemplates(): Template[] {
     relatedIds: [201, 202, 207],
     legalInfo: "Saknar enhetlig svensk reglering. Tjänsteleverantörers villkor och internationella riktlinjer gäller parallellt.",
     keywords: ["fullmakt Microsoft", "Microsoft-konto fullmakt", "OneDrive dödsbo"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt sociala medier företag
   templates.push({
@@ -3203,7 +3232,7 @@ function generateTemplates(): Template[] {
     relatedIds: [137, 207, 142],
     legalInfo: "Regleras av aktiebolagslagen (2005:551) och prokuralagen (1974:158). Behörig företrädare ska utfärda fullmakten.",
     keywords: ["fullmakt sociala medier företag", "fullmakt Instagram företag", "fullmakt Facebook ads"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt molntjänst företag
   templates.push({
@@ -3235,7 +3264,7 @@ function generateTemplates(): Template[] {
     relatedIds: [206, 137, 142],
     legalInfo: "Regleras av aktiebolagslagen (2005:551) och prokuralagen (1974:158). Behörig företrädare ska utfärda fullmakten.",
     keywords: ["fullmakt molntjänst", "fullmakt AWS", "fullmakt Azure", "IT-admin fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt apostille
   templates.push({
@@ -3267,7 +3296,7 @@ function generateTemplates(): Template[] {
     relatedIds: [210, 211, 212],
     legalInfo: "Apostille regleras i Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar och används mellan anslutna länder. Notarius Publicus utfärdar apostille i Sverige.",
     keywords: ["fullmakt apostille", "apostille ombud", "Notarius Publicus fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt konsulat
   templates.push({
@@ -3299,7 +3328,7 @@ function generateTemplates(): Template[] {
     relatedIds: [209, 211, 212],
     legalInfo: "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.",
     keywords: ["fullmakt konsulat", "fullmakt ambassad", "konsulärt ärende ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt legalisering dokument
   templates.push({
@@ -3331,7 +3360,7 @@ function generateTemplates(): Template[] {
     relatedIds: [209, 210, 212],
     legalInfo: "Apostille regleras i Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar och används mellan anslutna länder. Notarius Publicus utfärdar apostille i Sverige.",
     keywords: ["fullmakt legalisering", "legalisering UD", "fullmakt ambassad legalisering"],
-  } as Template);
+  } as TemplateInput);
 
   // Översatt internationell fullmakt (Power of Attorney)
   templates.push({
@@ -3363,7 +3392,7 @@ function generateTemplates(): Template[] {
     relatedIds: [209, 210, 211],
     legalInfo: "Apostille regleras i Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar och används mellan anslutna länder. Notarius Publicus utfärdar apostille i Sverige.",
     keywords: ["Power of Attorney Swedish", "internationell fullmakt", "engelsk fullmakt", "bilingual fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt utlandsflytt
   templates.push({
@@ -3395,7 +3424,7 @@ function generateTemplates(): Template[] {
     relatedIds: [162, 178, 209],
     legalInfo: "Apostille regleras i Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar och används mellan anslutna länder. Notarius Publicus utfärdar apostille i Sverige.",
     keywords: ["fullmakt utlandsflytt", "fullmakt utvandring", "utflyttningsanmälan ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt EES-arbetstillstånd
   templates.push({
@@ -3427,7 +3456,7 @@ function generateTemplates(): Template[] {
     relatedIds: [213, 162, 142],
     legalInfo: "Utlänningslagen (2005:716) 6 kap. om arbetstillstånd och 6 a kap. om EU-blåkort.",
     keywords: ["fullmakt arbetstillstånd", "EU-blå kort ombud", "Migrationsverket fullmakt arbete"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt internationell adoption
   templates.push({
@@ -3459,7 +3488,7 @@ function generateTemplates(): Template[] {
     relatedIds: [150, 209, 212],
     legalInfo: "Lag (1997:191) med anledning av Sveriges tillträde till Haagkonventionen om skydd av barn och samarbete vid internationella adoptioner och lag (1997:192) om internationell adoptionsförmedling.",
     keywords: ["fullmakt internationell adoption", "utlandsadoption ombud", "MFoF fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt utländsk fastighet
   templates.push({
@@ -3491,7 +3520,7 @@ function generateTemplates(): Template[] {
     relatedIds: [209, 210, 167],
     legalInfo: "Apostille regleras i Haagkonventionen den 5 oktober 1961 om slopande av kravet på legalisering av utländska allmänna handlingar och används mellan anslutna länder. Notarius Publicus utfärdar apostille i Sverige.",
     keywords: ["fullmakt utländsk fastighet", "fastighet utomlands fullmakt", "köpa hus Spanien fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt aktiehandel
   templates.push({
@@ -3522,7 +3551,7 @@ function generateTemplates(): Template[] {
     relatedIds: [218, 219, 220],
     legalInfo: "Lag (2007:528) om värdepappersmarknaden.",
     keywords: ["fullmakt aktiehandel", "aktiefullmakt", "fullmakt Avanza Nordnet", "diskretionär förvaltning"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt fondbyten
   templates.push({
@@ -3553,7 +3582,7 @@ function generateTemplates(): Template[] {
     relatedIds: [217, 219, 220],
     legalInfo: "Lag (2004:46) om värdepappersfonder.",
     keywords: ["fullmakt fondbyte", "fondrörelse fullmakt", "PPM fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt bolåneansökan
   templates.push({
@@ -3584,7 +3613,7 @@ function generateTemplates(): Template[] {
     relatedIds: [220, 221, 222],
     legalInfo: "Konsumentkreditlagen (2010:1846), som ersätts av konsumentkreditlagen (2026:1011) den 20 november 2026, och lag (2016:1024) om verksamhet med bostadskrediter.",
     keywords: ["fullmakt bolån", "bolåneansökan ombud", "fullmakt bank lån"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt borgensåtagande
   templates.push({
@@ -3615,7 +3644,7 @@ function generateTemplates(): Template[] {
     relatedIds: [219, 221, 222],
     legalInfo: "Handelsbalken (1736:0123 2) 10 kap. om pant och borgen och avtalslagen (1915:218).",
     keywords: ["fullmakt borgen", "borgensåtagande ombud", "fullmakt bank borgen"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt skuldsanering
   templates.push({
@@ -3646,7 +3675,7 @@ function generateTemplates(): Template[] {
     relatedIds: [222, 224, 164],
     legalInfo: "Skuldsaneringslagen (2016:675).",
     keywords: ["fullmakt skuldsanering", "fullmakt Kronofogden skuldsanering", "skuldsanering ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt kreditupplysning
   templates.push({
@@ -3677,7 +3706,7 @@ function generateTemplates(): Template[] {
     relatedIds: [219, 221, 142],
     legalInfo: "Kreditupplysningslagen (1973:1173).",
     keywords: ["fullmakt kreditupplysning", "UC fullmakt", "fullmakt Bisnode"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt pensionssparande
   templates.push({
@@ -3708,7 +3737,7 @@ function generateTemplates(): Template[] {
     relatedIds: [218, 221, 142],
     legalInfo: "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.",
     keywords: ["fullmakt pension", "pensionssparande ombud", "PPM fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt sparkonto överföring
   templates.push({
@@ -3739,7 +3768,7 @@ function generateTemplates(): Template[] {
     relatedIds: [219, 220, 142],
     legalInfo: "Avtalslagen (1915:218) reglerar fullmakter. Banker och finansinstitut kan ha egna krav.",
     keywords: ["fullmakt sparkonto", "fullmakt överföring bank", "sparkonto ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt crowdfunding-investering
   templates.push({
@@ -3770,7 +3799,7 @@ function generateTemplates(): Template[] {
     relatedIds: [217, 219, 142],
     legalInfo: "Lag (2021:899) med kompletterande bestämmelser till EU:s förordning om gräsrotsfinansiering. Finansinspektionen är behörig myndighet (2 §).",
     keywords: ["fullmakt crowdfunding", "investering ombud", "fullmakt Kameo Tessin"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt privatlån
   templates.push({
@@ -3801,7 +3830,7 @@ function generateTemplates(): Template[] {
     relatedIds: [219, 221, 222],
     legalInfo: "Konsumentkreditlagen (2010:1846), som ersätts av konsumentkreditlagen (2026:1011) den 20 november 2026.",
     keywords: ["fullmakt privatlån", "fullmakt konsumentkredit", "privatlån ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt företagslån
   templates.push({
@@ -3833,7 +3862,7 @@ function generateTemplates(): Template[] {
     relatedIds: [137, 219, 141],
     legalInfo: "Regleras av aktiebolagslagen (2005:551) och prokuralagen (1974:158). Behörig företrädare ska utfärda fullmakten.",
     keywords: ["fullmakt företagslån", "företagsfullmakt lån", "företagslån ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt försäkringsärende utökad
   templates.push({
@@ -3864,7 +3893,7 @@ function generateTemplates(): Template[] {
     relatedIds: [219, 164, 142],
     legalInfo: "Försäkringsavtalslagen (2005:104).",
     keywords: ["fullmakt försäkring", "fullmakt försäkringsbolag", "försäkringsärende ombud"],
-  } as Template);
+  } as TemplateInput);
 
   // Begravningsönskemål
   templates.push({
@@ -3896,7 +3925,7 @@ function generateTemplates(): Template[] {
     relatedIds: [230, 231, 232],
     legalInfo: "Begravningslagen (1990:1144). Kan de efterlevande inte enas ska länsstyrelsen särskilt beakta önskemål som den avlidne kan ha haft (5 kap. 4 §).",
     keywords: ["begravningsönskemål", "fullmakt egen begravning", "min begravning vilja"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt testamentsexekutor
   templates.push({
@@ -3928,7 +3957,7 @@ function generateTemplates(): Template[] {
     relatedIds: [229, 231, 232],
     legalInfo: "Ärvdabalken (1958:637) 19 kap. om testamentsexekutor.",
     keywords: ["testamentsexekutor", "fullmakt verkställa testamente", "testamente exekutor"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt bouppteckningsförrättare
   templates.push({
@@ -3960,7 +3989,7 @@ function generateTemplates(): Template[] {
     relatedIds: [230, 229, 232],
     legalInfo: "Ärvdabalken (1958:637) 20 kap. om bouppteckning.",
     keywords: ["bouppteckningsförrättare", "fullmakt bouppteckning", "fullmakt Skatteverket bouppteckning"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt donation välgörenhet
   templates.push({
@@ -3992,7 +4021,7 @@ function generateTemplates(): Template[] {
     relatedIds: [229, 230, 232],
     legalInfo: "Ärvdabalken (1958:637). Testamente ska upprättas skriftligen med två vittnen (10 kap. 1 §).",
     keywords: ["fullmakt donation", "donera arv välgörenhet", "fullmakt välgörenhet"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt konstvärdering vid arvskifte
   templates.push({
@@ -4024,7 +4053,7 @@ function generateTemplates(): Template[] {
     relatedIds: [230, 231, 232],
     legalInfo: "Ärvdabalken (1958:637) 23 kap. om arvskifte.",
     keywords: ["fullmakt värdering konst", "arvskifte värderingsman", "fullmakt antikviteter"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt husdjur vid dödsfall
   templates.push({
@@ -4056,7 +4085,7 @@ function generateTemplates(): Template[] {
     relatedIds: [229, 230, 234],
     legalInfo: "Djurskyddslagen (2018:1192) och ärvdabalken (1958:637).",
     keywords: ["fullmakt husdjur dödsfall", "husdjur vid dödsfall", "fullmakt hund katt"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt begravningsbyrå
   templates.push({
@@ -4088,7 +4117,7 @@ function generateTemplates(): Template[] {
     relatedIds: [187, 229, 230],
     legalInfo: "Begravningslagen (1990:1144).",
     keywords: ["fullmakt begravningsbyrå", "begravningsbyrå ombud", "fullmakt begravning ordna"],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt andelar samfällighet
   templates.push({
@@ -4119,7 +4148,7 @@ function generateTemplates(): Template[] {
     relatedIds: [186, 139, 173],
     legalInfo: "Lag (1973:1150) om förvaltning av samfälligheter.",
     keywords: ["fullmakt samfällighet", "samfällighetsförening stämma", "andelsägare fullmakt"],
-  } as Template);
+  } as TemplateInput);
 
   // === TILLAGDA 2026-05-27 ===
 
@@ -4151,7 +4180,7 @@ function generateTemplates(): Template[] {
     relatedIds: [126, 136],
     legalInfo: 'Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.',
     keywords: ['fullmakt arbetsgivarintyg', 'hämta arbetsgivarintyg ombud', 'fullmakt löneinformation', 'arbetsgivarintyg bolån fullmakt'],
-  } as Template);
+  } as TemplateInput);
 
   // Fullmakt för försäkringsskadeanmälan
   templates.push({
@@ -4181,7 +4210,7 @@ function generateTemplates(): Template[] {
     relatedIds: [126, 131],
     legalInfo: 'Försäkringsavtalslagen (2005:104). Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap.',
     keywords: ['fullmakt försäkring', 'skadeanmälan fullmakt', 'fullmakt försäkringsbolag', 'ombud försäkringsskada'],
-  } as Template);
+  } as TemplateInput);
 
   // Medgivande för medicinsk behandling utomlands (minderårig)
   templates.push({
@@ -4190,6 +4219,7 @@ function generateTemplates(): Template[] {
     category: 'Föräldrar & Barn', categorySlug: 'foraldrar-barn',
     description: 'Medgivande från vårdnadshavare att annan vuxen kan ge tillstånd för medicinsk behandling av barn under 18 år vid akut behov utomlands.',
     longDescription: 'Detta medgivande ger en angiven vuxen person (t.ex. lärare, ledare eller annan anhörig) rätt att ge tillstånd för medicinsk behandling av ett minderårigt barn vid akut behov utomlands. Viktigt vid skolresor, lägerverksamhet och längre utlandsvistelse utan vårdnadshavare. Utländsk sjukvård kräver ofta skriftligt medgivande från vårdnadshavare vid behandling av minderåriga. Dokumentet är avfattat på svenska och engelska för att fungera i internationella sammanhang.',
+    uppdragText: 'Lämna samtycke till nödvändig medicinsk undersökning och behandling av barnet vid akut behov under den vistelse som anges under Resan, när vårdnadshavarna inte kan nås.',
     fields: [
       { id: 'barn_namn', label: 'Barnets fullständiga namn', type: 'text', placeholder: 'Maja Svensson', required: true, group: 'givare' },
       { id: 'barn_foddatum', label: 'Barnets födelsedatum', type: 'date', required: true, group: 'givare' },
@@ -4216,7 +4246,7 @@ function generateTemplates(): Template[] {
     relatedIds: [133, 132],
     legalInfo: 'Vårdnadshavaren har rätt och skyldighet att bestämma i frågor som rör barnets personliga angelägenheter (6 kap. 11 § föräldrabalken (1949:381)).',
     keywords: ['medgivande medicinsk behandling barn', 'tillstånd behandling utomlands minderårig', 'skolresa medgivande sjukvård', 'vårdnadshavare medgivande utomlands'],
-  } as Template);
+  } as TemplateInput);
 
   // Gemensamma FAQ-frågor som följer med kategorins forEach men inte gäller
   // mallens ämne (granskning 2026-11-02). Frågorna tas bort per mall.
@@ -4312,7 +4342,7 @@ function generateTemplates(): Template[] {
   }
 
   // Defensive dedup by slug — last write wins
-  const bySlug = new Map<string, Template>();
+  const bySlug = new Map<string, TemplateInput>();
   for (const t of templates) bySlug.set(t.slug, t);
   return Array.from(bySlug.values());
 }
@@ -4673,8 +4703,21 @@ const bilingualContent: Record<string, BilingualContent> = {
   },
 };
 
-/** Engelska etiketter för de fält som skrivs ut i PDF:ens detaljruta. */
+/** Engelska etiketter på PDF:ens översättningssida. Varje fält i en tvåspråkig mall måste ha en (testas). */
 export const fieldLabelsEn: Record<string, string> = {
+  givare_namn: 'Principal’s full name',
+  givare_pnr: 'Personal identity number',
+  givare_adress: 'Address',
+  givare_epost: 'Email',
+  givare_telefon: 'Phone',
+  havare_namn: 'Authorised person’s full name',
+  havare_pnr: 'Personal identity no./Company reg. no.',
+  havare_relation: 'Relationship to the principal',
+  havare_adress: 'Address',
+  giltig_fran: 'Valid from',
+  giltig_till: 'Valid until',
+  syfte: 'Purpose and assignment',
+  begransningar: 'Limitations',
   barn_namn: 'Child’s full name',
   barn_pnr: 'Child’s personal identity number',
   barn_foddatum: 'Child’s date of birth',
@@ -4702,7 +4745,7 @@ export function isBilingual(slug: string): boolean {
   return slug in bilingualContent;
 }
 
-function applyBilingual(list: Template[]): Template[] {
+function applyBilingual(list: TemplateInput[]): TemplateInput[] {
   for (const t of list) {
     const b = bilingualContent[t.slug];
     if (!b) continue;
@@ -4714,7 +4757,23 @@ function applyBilingual(list: Template[]): Template[] {
   return list;
 }
 
-export const templates = applyBilingual(generateTemplates());
+/**
+ * Lägger fältets uttryckliga roll på varje fält. Fälten kopieras, eftersom de
+ * delade fältlistorna (commonGivareFields m.fl.) är samma objekt i många mallar.
+ * Ett fält utan roll stoppar laddningen – det får aldrig gissas.
+ */
+function applyFieldRoles(list: TemplateInput[]): Template[] {
+  return list.map(t => ({
+    ...t,
+    fields: t.fields.map(f => {
+      const spec = fieldRoleFor(t.slug, f.id);
+      if (!spec) throw new Error(`Fältet "${f.id}" i mallen "${t.slug}" saknar roll i data/field-roles.ts`);
+      return { ...f, role: spec.role, key: spec.key, person: spec.person };
+    }),
+  }));
+}
+
+export const templates = applyFieldRoles(applyBilingual(generateTemplates()));
 
 export function getTemplateBySlug(slug: string): Template | undefined {
   return templates.find(t => t.slug === slug);

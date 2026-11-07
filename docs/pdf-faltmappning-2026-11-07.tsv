@@ -1,0 +1,717 @@
+slug	mall	dokumenttyp	allvarlighet	problem	falt_id	detalj
+begransad-fullmakt	Begränsad fullmakt	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+begransad-fullmakt	Begränsad fullmakt	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+dodsbo-fullmakt-arvinge-2026	Dödsbo – fullmakt för arvinge	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+dodsbo-fullmakt-arvinge-2026	Dödsbo – fullmakt för arvinge	FULLMAKT	kritisk	avsnittet Fullmaktshavare är tomt		inga ifyllda uppgifter under rubriken
+dodsbo-fullmakt-arvinge-2026	Dödsbo – fullmakt för arvinge	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktshavare_namn	Fullmaktshavarens fullständiga namn (roll havare)
+dodsbo-fullmakt-arvinge-2026	Dödsbo – fullmakt för arvinge	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktshavare_pnr	Personnummer (fullmaktshavare) (roll havare)
+dodsbo-fullmakt-arvinge-2026	Dödsbo – fullmakt för arvinge	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktshavare_relation	Relation till den avlidne (roll havare)
+dodsbo-fullmakt-arvinge-2026	Dödsbo – fullmakt för arvinge	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+dodsbo-fullmakt-arvinge-2026	Dödsbo – fullmakt för arvinge	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+dodsbo-fullmakt-arvinge-2026	Dödsbo – fullmakt för arvinge	FULLMAKT	kritisk	platshållare kvar		[Fullmaktshavarens namn]
+dodsbo-fullmakt-arvinge-2026	Dödsbo – fullmakt för arvinge	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_namn	Den avlidnes fullständiga namn (roll avliden)
+dodsbo-fullmakt-arvinge-2026	Dödsbo – fullmakt för arvinge	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_pnr	Personnummer (avliden) (roll avliden)
+dodsbo-fullmakt-arvinge-2026	Dödsbo – fullmakt för arvinge	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	dodsdatum	Dödsdatum (roll avliden)
+foraldraredgivande-resa-annan-vuxen	Föräldramedgivande – resa med annan vuxen	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+foraldraredgivande-resa-annan-vuxen	Föräldramedgivande – resa med annan vuxen	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+foraldraredgivande-resa-annan-vuxen	Föräldramedgivande – resa med annan vuxen	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+foraldraredgivande-resa-annan-vuxen	Föräldramedgivande – resa med annan vuxen	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+fullmakt-abonnemang	Fullmakt för abonnemang/prenumerationer	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-abonnemang	Fullmakt för abonnemang/prenumerationer	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-agarbyte-bil	Fullmakt för ägarbyte bil	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-agarbyte-bil	Fullmakt för ägarbyte bil	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-aktiebolag	Fullmakt för aktiebolagsärenden	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-aktiebolag	Fullmakt för aktiebolagsärenden	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-aldrevard	Fullmakt för äldreomsorg	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-aldrevard	Fullmakt för äldreomsorg	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-andrahandsuthyrning	Fullmakt för andrahandsuthyrning	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-andrahandsuthyrning	Fullmakt för andrahandsuthyrning	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-apostille-ansokan	Fullmakt apostille	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktsgivare_pass	Passnummer (roll givare)
+fullmakt-apotek	Fullmakt för apotek	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-apotek	Fullmakt för apotek	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-apple-id-dodsbo	Fullmakt Apple ID dödsbo	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-apple-id-dodsbo	Fullmakt Apple ID dödsbo	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_epost	E-postadress (kopplad till tjänsten) (roll givare)
+fullmakt-apple-id-dodsbo	Fullmakt Apple ID dödsbo	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_namn	Kontoinnehavarens namn (roll givare)
+fullmakt-apple-id-dodsbo	Fullmakt Apple ID dödsbo	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_pnr	Personnummer (roll givare)
+fullmakt-apple-id-dodsbo	Fullmakt Apple ID dödsbo	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-apple-id-dodsbo	Fullmakt Apple ID dödsbo	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-arbetsformedlingen	Fullmakt för Arbetsförmedlingen	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-arbetsformedlingen	Fullmakt för Arbetsförmedlingen	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-arvsarende	Fullmakt för arvsärende	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-arvsarende	Fullmakt för arvsärende	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-atv-arende	Fullmakt ATV	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-atv-arende	Fullmakt ATV	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fordonsägarens namn (roll givare)
+fullmakt-atv-arende	Fullmakt ATV	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-atv-arende	Fullmakt ATV	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-atv-arende	Fullmakt ATV	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-bank	Fullmakt för bankärenden	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-bank	Fullmakt för bankärenden	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-bankapp-tillgang	Fullmakt bankapp tillgång	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-bankapp-tillgang	Fullmakt bankapp tillgång	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_epost	E-postadress (kopplad till tjänsten) (roll givare)
+fullmakt-bankapp-tillgang	Fullmakt bankapp tillgång	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_namn	Kontoinnehavarens namn (roll givare)
+fullmakt-bankapp-tillgang	Fullmakt bankapp tillgång	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_pnr	Personnummer (roll givare)
+fullmakt-bankapp-tillgang	Fullmakt bankapp tillgång	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-bankapp-tillgang	Fullmakt bankapp tillgång	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-bankkonto-uttag-2026	Fullmakt för bankkonto och uttag	FULLMAKT	kritisk	avsnittet Fullmaktshavare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-bankkonto-uttag-2026	Fullmakt för bankkonto och uttag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktshavare_namn	Fullmaktshavarens fullständiga namn (roll havare)
+fullmakt-bankkonto-uttag-2026	Fullmakt för bankkonto och uttag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktshavare_pnr	Personnummer (fullmaktshavare) (roll havare)
+fullmakt-bankkonto-uttag-2026	Fullmakt för bankkonto och uttag	FULLMAKT	kritisk	platshållare kvar		[Fullmaktshavarens namn]
+fullmakt-bankkonto-uttag-2026	Fullmakt för bankkonto och uttag	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-bankkonto-uttag-2026	Fullmakt för bankkonto och uttag	FULLMAKT	kritisk	platshållare kvar		[uppdragsbeskrivning]
+fullmakt-barns-sjukvard	Fullmakt för barnets sjukvård	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-barns-sjukvard	Fullmakt för barnets sjukvård	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-barns-sjukvard	Fullmakt för barnets sjukvård	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+fullmakt-barns-sjukvard	Fullmakt för barnets sjukvård	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+fullmakt-bat-registrering	Fullmakt för båtregistrering	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-bat-registrering	Fullmakt för båtregistrering	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-bat-registrering-2026	Fullmakt båtregistrering 2026	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-bat-registrering-2026	Fullmakt båtregistrering 2026	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fordonsägarens namn (roll givare)
+fullmakt-bat-registrering-2026	Fullmakt båtregistrering 2026	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-bat-registrering-2026	Fullmakt båtregistrering 2026	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-bat-registrering-2026	Fullmakt båtregistrering 2026	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-begravning-anhorig	Fullmakt begravning för anhörig	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_namn	Den avlidnes namn (om relevant) (roll avliden)
+fullmakt-begravning-anhorig	Fullmakt begravning för anhörig	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_pnr	Avlidens personnummer (roll avliden)
+fullmakt-begravningsbyra-ombud	Fullmakt begravningsbyrå	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_namn	Den avlidnes namn (om relevant) (roll avliden)
+fullmakt-begravningsbyra-ombud	Fullmakt begravningsbyrå	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_pnr	Avlidens personnummer (roll avliden)
+fullmakt-begravningsonskemal	Begravningsönskemål	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_namn	Den avlidnes namn (om relevant) (roll avliden)
+fullmakt-begravningsonskemal	Begravningsönskemål	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_pnr	Avlidens personnummer (roll avliden)
+fullmakt-besiktning	Fullmakt för besiktning	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-besiktning	Fullmakt för besiktning	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-bilforsakring	Fullmakt för bilförsäkring	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-bilforsakring	Fullmakt för bilförsäkring	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-bilverkstad	Fullmakt för bilverkstad	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-bilverkstad	Fullmakt för bilverkstad	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-bolagsverket	Fullmakt för Bolagsverket	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-bolagsverket	Fullmakt för Bolagsverket	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-bonusforalder	Fullmakt till bonusförälder	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-bonusforalder	Fullmakt till bonusförälder	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-bonusforalder	Fullmakt till bonusförälder	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+fullmakt-bonusforalder	Fullmakt till bonusförälder	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+fullmakt-bostadsforening	Fullmakt för bostadsförening	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-bostadsforening	Fullmakt för bostadsförening	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-bostadsforsaljning	Fullmakt för bostadsförsäljning	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-bostadsforsaljning	Fullmakt för bostadsförsäljning	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-bostadskop	Fullmakt för bostadsköp	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-bostadskop	Fullmakt för bostadsköp	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-bostadsratt-stamma-2026	Fullmakt till BRF-stämma	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	lagenhet_nr	Lägenhetsnummer (roll givare)
+fullmakt-bostadsratt-stamma-2026	Fullmakt till BRF-stämma	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-bostadsratt-stamma-2026	Fullmakt till BRF-stämma	FULLMAKT	kritisk	platshållare kvar		[uppdragsbeskrivning]
+fullmakt-bostadsratt-stamma-2026	Fullmakt till BRF-stämma	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	forening	BRF:ens namn (roll forening)
+fullmakt-bouppteckning	Fullmakt för bouppteckning	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-bouppteckning	Fullmakt för bouppteckning	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-bouppteckningsforrattare	Fullmakt bouppteckningsförrättare	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_namn	Den avlidnes namn (om relevant) (roll avliden)
+fullmakt-bouppteckningsforrattare	Fullmakt bouppteckningsförrättare	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_pnr	Avlidens personnummer (roll avliden)
+fullmakt-bredbandsleverantor	Fullmakt för bredbandsleverantör	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-bredbandsleverantor	Fullmakt för bredbandsleverantör	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-csp-konto	Fullmakt för CSN-ärenden	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-csp-konto	Fullmakt för CSN-ärenden	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-deklaration	Fullmakt för deklaration	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-deklaration	Fullmakt för deklaration	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-digital-brevlada	Fullmakt för digital brevlåda	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-digital-brevlada	Fullmakt för digital brevlåda	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-digital-dodsboforvaltning	Fullmakt för digital dödsboförvaltning	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-digital-dodsboforvaltning	Fullmakt för digital dödsboförvaltning	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-djurforsakring	Fullmakt för djurförsäkring	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-djurforsakring	Fullmakt för djurförsäkring	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-djurtransport	Fullmakt för djurtransport	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-djurtransport	Fullmakt för djurtransport	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-domanhantering	Fullmakt för domänhantering	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-domanhantering	Fullmakt för domänhantering	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-donation-valgorenhet	Fullmakt donation välgörenhet	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_namn	Den avlidnes namn (om relevant) (roll avliden)
+fullmakt-donation-valgorenhet	Fullmakt donation välgörenhet	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_pnr	Avlidens personnummer (roll avliden)
+fullmakt-e-legitimation	Fullmakt e-legitimation	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-e-legitimation	Fullmakt e-legitimation	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_epost	E-postadress (kopplad till tjänsten) (roll givare)
+fullmakt-e-legitimation	Fullmakt e-legitimation	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_namn	Kontoinnehavarens namn (roll givare)
+fullmakt-e-legitimation	Fullmakt e-legitimation	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_pnr	Personnummer (roll givare)
+fullmakt-e-legitimation	Fullmakt e-legitimation	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-e-legitimation	Fullmakt e-legitimation	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-ees-arbete-tillstand	Fullmakt EES-arbetstillstånd	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktsgivare_pass	Passnummer (roll givare)
+fullmakt-elbolag	Fullmakt för elbolag	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-elbolag	Fullmakt för elbolag	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-epa-traktor	Fullmakt EPA-traktor	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-epa-traktor	Fullmakt EPA-traktor	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fordonsägarens namn (roll givare)
+fullmakt-epa-traktor	Fullmakt EPA-traktor	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-epa-traktor	Fullmakt EPA-traktor	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-epa-traktor	Fullmakt EPA-traktor	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-epostarkiv	Fullmakt för e-postarkiv/molntjänster	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-epostarkiv	Fullmakt för e-postarkiv/molntjänster	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-fastighetsavstyckning	Fullmakt fastighetsavstyckning	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-fastighetsavstyckning	Fullmakt fastighetsavstyckning	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fastighetsägarens namn (roll givare)
+fullmakt-fastighetsavstyckning	Fullmakt fastighetsavstyckning	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-fastighetsavstyckning	Fullmakt fastighetsavstyckning	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-fastighetsavstyckning	Fullmakt fastighetsavstyckning	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-fastighetsforsaljning-villa	Fullmakt fastighetsförsäljning villa	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-fastighetsforsaljning-villa	Fullmakt fastighetsförsäljning villa	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fastighetsägarens namn (roll givare)
+fullmakt-fastighetsforsaljning-villa	Fullmakt fastighetsförsäljning villa	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-fastighetsforsaljning-villa	Fullmakt fastighetsförsäljning villa	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-fastighetsforsaljning-villa	Fullmakt fastighetsförsäljning villa	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-firmateckning-ensam	Fullmakt firmateckning ensam	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-firmateckning-ensam	Fullmakt firmateckning ensam	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretag_namn	Företagets namn (roll givare)
+fullmakt-firmateckning-ensam	Fullmakt firmateckning ensam	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_namn	Behörig företrädares namn (roll givare)
+fullmakt-firmateckning-ensam	Fullmakt firmateckning ensam	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_pnr	Företrädarens personnummer (roll givare)
+fullmakt-firmateckning-ensam	Fullmakt firmateckning ensam	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_roll	Roll i bolaget (roll givare)
+fullmakt-firmateckning-ensam	Fullmakt firmateckning ensam	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	orgnr	Organisationsnummer (roll givare)
+fullmakt-firmateckning-ensam	Fullmakt firmateckning ensam	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-firmateckning-ensam	Fullmakt firmateckning ensam	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-firmateckning-gemensam	Fullmakt firmateckning i förening	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-firmateckning-gemensam	Fullmakt firmateckning i förening	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretag_namn	Företagets namn (roll givare)
+fullmakt-firmateckning-gemensam	Fullmakt firmateckning i förening	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_namn	Behörig företrädares namn (roll givare)
+fullmakt-firmateckning-gemensam	Fullmakt firmateckning i förening	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_pnr	Företrädarens personnummer (roll givare)
+fullmakt-firmateckning-gemensam	Fullmakt firmateckning i förening	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_roll	Roll i bolaget (roll givare)
+fullmakt-firmateckning-gemensam	Fullmakt firmateckning i förening	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	orgnr	Organisationsnummer (roll givare)
+fullmakt-firmateckning-gemensam	Fullmakt firmateckning i förening	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-firmateckning-gemensam	Fullmakt firmateckning i förening	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-flygbolag	Fullmakt gentemot flygbolag	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-flygbolag	Fullmakt gentemot flygbolag	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-foraldrautskott	Fullmakt för föräldraföreningens utskott	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-foraldrautskott	Fullmakt för föräldraföreningens utskott	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-foraldrautskott	Fullmakt för föräldraföreningens utskott	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	forening	Förening/Skola (roll forening)
+fullmakt-fordon-forsaljning-2026	Fullmakt för fordonsförsäljning	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-fordon-forsaljning-2026	Fullmakt för fordonsförsäljning	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fordonsägarens fullständiga namn (roll givare)
+fullmakt-fordon-forsaljning-2026	Fullmakt för fordonsförsäljning	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (ägaren) (roll givare)
+fullmakt-fordon-forsaljning-2026	Fullmakt för fordonsförsäljning	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-fordon-forsaljning-2026	Fullmakt för fordonsförsäljning	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-foreningsstamma	Fullmakt för föreningsstämma	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-foreningsstamma	Fullmakt för föreningsstämma	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-foreningsstamma	Fullmakt för föreningsstämma	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	forening	Förening/Skola (roll forening)
+fullmakt-foretagslan-ansokan	Fullmakt företagslån	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-foretagslan-ansokan	Fullmakt företagslån	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretag_namn	Företagets namn (roll givare)
+fullmakt-foretagslan-ansokan	Fullmakt företagslån	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_namn	Behörig företrädares namn (roll givare)
+fullmakt-foretagslan-ansokan	Fullmakt företagslån	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_pnr	Företrädarens personnummer (roll givare)
+fullmakt-foretagslan-ansokan	Fullmakt företagslån	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_roll	Roll i bolaget (roll givare)
+fullmakt-foretagslan-ansokan	Fullmakt företagslån	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	orgnr	Organisationsnummer (roll givare)
+fullmakt-foretagslan-ansokan	Fullmakt företagslån	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-foretagslan-ansokan	Fullmakt företagslån	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-forsakring	Fullmakt för försäkringsärenden	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-forsakring	Fullmakt för försäkringsärenden	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-forsakring-boende	Fullmakt för boendeförsäkring	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-forsakring-boende	Fullmakt för boendeförsäkring	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-forsaljning-lantbruk	Fullmakt försäljning lantbruksfastighet	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-forsaljning-lantbruk	Fullmakt försäljning lantbruksfastighet	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fastighetsägarens namn (roll givare)
+fullmakt-forsaljning-lantbruk	Fullmakt försäljning lantbruksfastighet	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-forsaljning-lantbruk	Fullmakt försäljning lantbruksfastighet	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-forsaljning-lantbruk	Fullmakt försäljning lantbruksfastighet	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-forsikringskassan	Fullmakt för Försäkringskassan	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-forsikringskassan	Fullmakt för Försäkringskassan	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-fritidsaktivitet	Fullmakt för fritidsaktivitet	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-fritidsaktivitet	Fullmakt för fritidsaktivitet	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-fritidsaktivitet	Fullmakt för fritidsaktivitet	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	forening	Förening/Skola (roll forening)
+fullmakt-fritidsgard	Fullmakt för fritidsgård	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-fritidsgard	Fullmakt för fritidsgård	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-fritidsgard	Fullmakt för fritidsgård	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	forening	Förening/Skola (roll forening)
+fullmakt-garage-parkering	Fullmakt för garage/parkering	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-garage-parkering	Fullmakt för garage/parkering	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-god-man-komplement	Fullmakt god man-komplement	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-god-man-komplement	Fullmakt god man-komplement	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-google-konto-dodsbo	Fullmakt Google-konto dödsbo	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-google-konto-dodsbo	Fullmakt Google-konto dödsbo	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_epost	E-postadress (kopplad till tjänsten) (roll givare)
+fullmakt-google-konto-dodsbo	Fullmakt Google-konto dödsbo	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_namn	Kontoinnehavarens namn (roll givare)
+fullmakt-google-konto-dodsbo	Fullmakt Google-konto dödsbo	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_pnr	Personnummer (roll givare)
+fullmakt-google-konto-dodsbo	Fullmakt Google-konto dödsbo	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-google-konto-dodsbo	Fullmakt Google-konto dödsbo	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-hamta-ut-fordon	Fullmakt att hämta ut fordon	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-hamta-ut-fordon	Fullmakt att hämta ut fordon	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-handelsbanken	Fullmakt specificerad för Handelsbanken	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-handelsbanken	Fullmakt specificerad för Handelsbanken	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-handelsbolag	Fullmakt handelsbolag	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-handelsbolag	Fullmakt handelsbolag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretag_namn	Företagets namn (roll givare)
+fullmakt-handelsbolag	Fullmakt handelsbolag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_namn	Behörig företrädares namn (roll givare)
+fullmakt-handelsbolag	Fullmakt handelsbolag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_pnr	Företrädarens personnummer (roll givare)
+fullmakt-handelsbolag	Fullmakt handelsbolag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_roll	Roll i bolaget (roll givare)
+fullmakt-handelsbolag	Fullmakt handelsbolag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	orgnr	Organisationsnummer (roll givare)
+fullmakt-handelsbolag	Fullmakt handelsbolag	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-handelsbolag	Fullmakt handelsbolag	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-hemtjanst	Fullmakt för hemtjänst	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-hemtjanst	Fullmakt för hemtjänst	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-hjalpmedel	Fullmakt för hjälpmedel	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-hjalpmedel	Fullmakt för hjälpmedel	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-husbil-arende	Fullmakt husbil	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-husbil-arende	Fullmakt husbil	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fordonsägarens namn (roll givare)
+fullmakt-husbil-arende	Fullmakt husbil	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-husbil-arende	Fullmakt husbil	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-husbil-arende	Fullmakt husbil	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-husdjur-dodsfall	Fullmakt husdjur vid dödsfall	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_namn	Den avlidnes namn (om relevant) (roll avliden)
+fullmakt-husdjur-dodsfall	Fullmakt husdjur vid dödsfall	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_pnr	Avlidens personnummer (roll avliden)
+fullmakt-husvagn-forsaljning	Fullmakt husvagn försäljning	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-husvagn-forsaljning	Fullmakt husvagn försäljning	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fordonsägarens namn (roll givare)
+fullmakt-husvagn-forsaljning	Fullmakt husvagn försäljning	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-husvagn-forsaljning	Fullmakt husvagn försäljning	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-husvagn-forsaljning	Fullmakt husvagn försäljning	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-hyreskontrakt	Fullmakt för hyreskontrakt	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-hyreskontrakt	Fullmakt för hyreskontrakt	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-hyreslagenh-forsalj-2026	Fullmakt för försäljning av lägenhet	FULLMAKT	kritisk	avsnittet Fullmaktshavare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-hyreslagenh-forsalj-2026	Fullmakt för försäljning av lägenhet	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktshavare_namn	Ombudets fullständiga namn (roll havare)
+fullmakt-hyreslagenh-forsalj-2026	Fullmakt för försäljning av lägenhet	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktshavare_pnr	Ombudets personnummer (roll havare)
+fullmakt-hyreslagenh-forsalj-2026	Fullmakt för försäljning av lägenhet	FULLMAKT	kritisk	platshållare kvar		[Fullmaktshavarens namn]
+fullmakt-hyreslagenh-forsalj-2026	Fullmakt för försäljning av lägenhet	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-hyreslagenh-forsalj-2026	Fullmakt för försäljning av lägenhet	FULLMAKT	kritisk	platshållare kvar		[uppdragsbeskrivning]
+fullmakt-idrottsforening	Fullmakt för idrottsförening	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-idrottsforening	Fullmakt för idrottsförening	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-idrottsforening	Fullmakt för idrottsförening	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	forening	Förening/Skola (roll forening)
+fullmakt-inkasso	Fullmakt gentemot inkassobolag	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-inkasso	Fullmakt gentemot inkassobolag	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-inteckning-pantbrev	Fullmakt inteckning och pantbrev	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-inteckning-pantbrev	Fullmakt inteckning och pantbrev	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fastighetsägarens namn (roll givare)
+fullmakt-inteckning-pantbrev	Fullmakt inteckning och pantbrev	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-inteckning-pantbrev	Fullmakt inteckning och pantbrev	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-inteckning-pantbrev	Fullmakt inteckning och pantbrev	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-internationell-adoption	Fullmakt internationell adoption	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktsgivare_pass	Passnummer (roll givare)
+fullmakt-internetbank-senior	Fullmakt för internetbanksärenden (senior)	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-internetbank-senior	Fullmakt för internetbanksärenden (senior)	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-journalhantering	Fullmakt för journalhantering	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-journalhantering	Fullmakt för journalhantering	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-kennelvistelse	Fullmakt för kennelvistelse	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-kennelvistelse	Fullmakt för kennelvistelse	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-konkurs-ombud	Fullmakt vid konkurs	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-konkurs-ombud	Fullmakt vid konkurs	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretag_namn	Företagets namn (roll givare)
+fullmakt-konkurs-ombud	Fullmakt vid konkurs	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_namn	Behörig företrädares namn (roll givare)
+fullmakt-konkurs-ombud	Fullmakt vid konkurs	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_pnr	Företrädarens personnummer (roll givare)
+fullmakt-konkurs-ombud	Fullmakt vid konkurs	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_roll	Roll i bolaget (roll givare)
+fullmakt-konkurs-ombud	Fullmakt vid konkurs	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	orgnr	Organisationsnummer (roll givare)
+fullmakt-konkurs-ombud	Fullmakt vid konkurs	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-konkurs-ombud	Fullmakt vid konkurs	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-konst-vardering-arvskifte	Fullmakt konstvärdering vid arvskifte	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_namn	Den avlidnes namn (om relevant) (roll avliden)
+fullmakt-konst-vardering-arvskifte	Fullmakt konstvärdering vid arvskifte	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_pnr	Avlidens personnummer (roll avliden)
+fullmakt-konsulat-arende	Fullmakt konsulat	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktsgivare_pass	Passnummer (roll givare)
+fullmakt-kontoutdrag	Fullmakt för kontoutdrag	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-kontoutdrag	Fullmakt för kontoutdrag	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-korkort-arende	Fullmakt för körkortsärende	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-korkort-arende	Fullmakt för körkortsärende	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-kronofogden	Fullmakt för Kronofogden	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-kronofogden	Fullmakt för Kronofogden	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-kryptovaluta	Fullmakt för kryptovaluta/digitala tillgångar	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-kryptovaluta	Fullmakt för kryptovaluta/digitala tillgångar	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-kulturskola	Fullmakt för kulturskola	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-kulturskola	Fullmakt för kulturskola	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-kulturskola	Fullmakt för kulturskola	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	forening	Förening/Skola (roll forening)
+fullmakt-lagenhetsbyte	Fullmakt vid lägenhetsbyte	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-lagenhetsbyte	Fullmakt vid lägenhetsbyte	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-lagfart-ansokan	Fullmakt lagfart	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-lagfart-ansokan	Fullmakt lagfart	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fastighetsägarens namn (roll givare)
+fullmakt-lagfart-ansokan	Fullmakt lagfart	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-lagfart-ansokan	Fullmakt lagfart	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-lagfart-ansokan	Fullmakt lagfart	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-lan-kredit	Fullmakt för lån och kredit	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-lan-kredit	Fullmakt för lån och kredit	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-lantmateriet	Fullmakt Lantmäteriet	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-lantmateriet	Fullmakt Lantmäteriet	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fastighetsägarens namn (roll givare)
+fullmakt-lantmateriet	Fullmakt Lantmäteriet	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-lantmateriet	Fullmakt Lantmäteriet	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-lantmateriet	Fullmakt Lantmäteriet	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-lastbil-foretag	Fullmakt lastbil företag	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-lastbil-foretag	Fullmakt lastbil företag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretag_namn	Företagets namn (roll givare)
+fullmakt-lastbil-foretag	Fullmakt lastbil företag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_namn	Behörig företrädares namn (roll givare)
+fullmakt-lastbil-foretag	Fullmakt lastbil företag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_pnr	Företrädarens personnummer (roll givare)
+fullmakt-lastbil-foretag	Fullmakt lastbil företag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_roll	Roll i bolaget (roll givare)
+fullmakt-lastbil-foretag	Fullmakt lastbil företag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	orgnr	Organisationsnummer (roll givare)
+fullmakt-lastbil-foretag	Fullmakt lastbil företag	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-lastbil-foretag	Fullmakt lastbil företag	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-legalisering-dokument	Fullmakt legalisering dokument	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktsgivare_pass	Passnummer (roll givare)
+fullmakt-likvidation	Fullmakt vid likvidation	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-likvidation	Fullmakt vid likvidation	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretag_namn	Företagets namn (roll givare)
+fullmakt-likvidation	Fullmakt vid likvidation	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_namn	Behörig företrädares namn (roll givare)
+fullmakt-likvidation	Fullmakt vid likvidation	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_pnr	Företrädarens personnummer (roll givare)
+fullmakt-likvidation	Fullmakt vid likvidation	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_roll	Roll i bolaget (roll givare)
+fullmakt-likvidation	Fullmakt vid likvidation	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	orgnr	Organisationsnummer (roll givare)
+fullmakt-likvidation	Fullmakt vid likvidation	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-likvidation	Fullmakt vid likvidation	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-livstestamente	Livstestamente	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-livstestamente	Livstestamente	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_adress	Patientens adress (roll givare)
+fullmakt-livstestamente	Livstestamente	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_namn	Patientens fullständiga namn (roll givare)
+fullmakt-livstestamente	Livstestamente	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_pnr	Patientens personnummer (roll givare)
+fullmakt-livstestamente	Livstestamente	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-livstestamente	Livstestamente	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-livstestamente	Livstestamente	FULLMAKT	kritisk	platshållare kvar		[uppdragsbeskrivning]
+fullmakt-mc-agarbyte	Fullmakt MC ägarbyte	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-mc-agarbyte	Fullmakt MC ägarbyte	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fordonsägarens namn (roll givare)
+fullmakt-mc-agarbyte	Fullmakt MC ägarbyte	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-mc-agarbyte	Fullmakt MC ägarbyte	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-mc-agarbyte	Fullmakt MC ägarbyte	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-microsoft-konto	Fullmakt Microsoft-konto	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-microsoft-konto	Fullmakt Microsoft-konto	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_epost	E-postadress (kopplad till tjänsten) (roll givare)
+fullmakt-microsoft-konto	Fullmakt Microsoft-konto	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_namn	Kontoinnehavarens namn (roll givare)
+fullmakt-microsoft-konto	Fullmakt Microsoft-konto	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_pnr	Personnummer (roll givare)
+fullmakt-microsoft-konto	Fullmakt Microsoft-konto	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-microsoft-konto	Fullmakt Microsoft-konto	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-migrationsverket	Fullmakt för Migrationsverket	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-migrationsverket	Fullmakt för Migrationsverket	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-mobiloperator-senior	Fullmakt för mobiloperatör (senior)	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-mobiloperator-senior	Fullmakt för mobiloperatör (senior)	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-molntjanst-foretag	Fullmakt molntjänst företag	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-molntjanst-foretag	Fullmakt molntjänst företag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretag_namn	Företagets namn (roll givare)
+fullmakt-molntjanst-foretag	Fullmakt molntjänst företag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_namn	Behörig företrädares namn (roll givare)
+fullmakt-molntjanst-foretag	Fullmakt molntjänst företag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_pnr	Företrädarens personnummer (roll givare)
+fullmakt-molntjanst-foretag	Fullmakt molntjänst företag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_roll	Roll i bolaget (roll givare)
+fullmakt-molntjanst-foretag	Fullmakt molntjänst företag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	orgnr	Organisationsnummer (roll givare)
+fullmakt-molntjanst-foretag	Fullmakt molntjänst företag	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-molntjanst-foretag	Fullmakt molntjänst företag	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-nycklar-tillgang	Fullmakt för nycklar och tillgång	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-nycklar-tillgang	Fullmakt för nycklar och tillgång	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-oversatt-internationell	Översatt internationell fullmakt (Power of Attorney)	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktsgivare_pass	Passnummer (roll givare)
+fullmakt-paket-post	Fullmakt för paket och post	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-paket-post	Fullmakt för paket och post	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-parkeringsbolag	Fullmakt gentemot parkeringsbolag	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-parkeringsbolag	Fullmakt gentemot parkeringsbolag	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-patent-arende	Fullmakt patentärende	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-patent-arende	Fullmakt patentärende	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretag_namn	Företagets namn (roll givare)
+fullmakt-patent-arende	Fullmakt patentärende	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_namn	Behörig företrädares namn (roll givare)
+fullmakt-patent-arende	Fullmakt patentärende	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_pnr	Företrädarens personnummer (roll givare)
+fullmakt-patent-arende	Fullmakt patentärende	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_roll	Roll i bolaget (roll givare)
+fullmakt-patent-arende	Fullmakt patentärende	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	orgnr	Organisationsnummer (roll givare)
+fullmakt-patent-arende	Fullmakt patentärende	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-patent-arende	Fullmakt patentärende	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-pension	Fullmakt för pensionsärenden	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-pension	Fullmakt för pensionsärenden	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-privat-vardgivare	Fullmakt för privat vårdgivare	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-privat-vardgivare	Fullmakt för privat vårdgivare	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-prokura	Prokura	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-prokura	Prokura	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretag_namn	Företagets namn (roll givare)
+fullmakt-prokura	Prokura	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_namn	Behörig företrädares namn (roll givare)
+fullmakt-prokura	Prokura	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_pnr	Företrädarens personnummer (roll givare)
+fullmakt-prokura	Prokura	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_roll	Roll i bolaget (roll givare)
+fullmakt-prokura	Prokura	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	orgnr	Organisationsnummer (roll givare)
+fullmakt-prokura	Prokura	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-prokura	Prokura	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-psykiatrisk-vard	Fullmakt för psykiatrisk vård	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-psykiatrisk-vard	Fullmakt för psykiatrisk vård	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-rehabilitering	Fullmakt för rehabilitering	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-rehabilitering	Fullmakt för rehabilitering	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-renovering	Fullmakt för renovering	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-renovering	Fullmakt för renovering	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-revisor	Fullmakt till revisor	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-revisor	Fullmakt till revisor	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretag_namn	Företagets namn (roll givare)
+fullmakt-revisor	Fullmakt till revisor	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_namn	Behörig företrädares namn (roll givare)
+fullmakt-revisor	Fullmakt till revisor	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_pnr	Företrädarens personnummer (roll givare)
+fullmakt-revisor	Fullmakt till revisor	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_roll	Roll i bolaget (roll givare)
+fullmakt-revisor	Fullmakt till revisor	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	orgnr	Organisationsnummer (roll givare)
+fullmakt-revisor	Fullmakt till revisor	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-revisor	Fullmakt till revisor	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-scouterna	Fullmakt för Scouterna	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-scouterna	Fullmakt för Scouterna	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-scouterna	Fullmakt för Scouterna	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	forening	Förening/Skola (roll forening)
+fullmakt-servitut-anlaggning	Fullmakt servitut	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-servitut-anlaggning	Fullmakt servitut	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fastighetsägarens namn (roll givare)
+fullmakt-servitut-anlaggning	Fullmakt servitut	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-servitut-anlaggning	Fullmakt servitut	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-servitut-anlaggning	Fullmakt servitut	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-sjukvard	Fullmakt för sjukvård	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-sjukvard	Fullmakt för sjukvård	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-sjukvard-behandling-2026	Fullmakt för sjukvård och behandling	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-sjukvard-behandling-2026	Fullmakt för sjukvård och behandling	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_namn	Patientens fullständiga namn (roll givare)
+fullmakt-sjukvard-behandling-2026	Fullmakt för sjukvård och behandling	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_pnr	Personnummer (roll givare)
+fullmakt-sjukvard-behandling-2026	Fullmakt för sjukvård och behandling	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-sjukvard-behandling-2026	Fullmakt för sjukvård och behandling	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-skatteverket	Fullmakt för Skatteverket	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-skatteverket	Fullmakt för Skatteverket	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-skolarenden	Fullmakt för skolärenden	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-skolarenden	Fullmakt för skolärenden	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-skolarenden	Fullmakt för skolärenden	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+fullmakt-skolarenden	Fullmakt för skolärenden	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+fullmakt-slakting-resa	Fullmakt till släkting vid resa	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-slakting-resa	Fullmakt till släkting vid resa	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-slakting-resa	Fullmakt till släkting vid resa	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+fullmakt-slakting-resa	Fullmakt till släkting vid resa	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+fullmakt-snoskoter-agarbyte	Fullmakt snöskoter ägarbyte	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-snoskoter-agarbyte	Fullmakt snöskoter ägarbyte	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fordonsägarens namn (roll givare)
+fullmakt-snoskoter-agarbyte	Fullmakt snöskoter ägarbyte	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-snoskoter-agarbyte	Fullmakt snöskoter ägarbyte	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-snoskoter-agarbyte	Fullmakt snöskoter ägarbyte	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-sociala-medier-foretag	Fullmakt sociala medier företag	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-sociala-medier-foretag	Fullmakt sociala medier företag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretag_namn	Företagets namn (roll givare)
+fullmakt-sociala-medier-foretag	Fullmakt sociala medier företag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_namn	Behörig företrädares namn (roll givare)
+fullmakt-sociala-medier-foretag	Fullmakt sociala medier företag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_pnr	Företrädarens personnummer (roll givare)
+fullmakt-sociala-medier-foretag	Fullmakt sociala medier företag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_roll	Roll i bolaget (roll givare)
+fullmakt-sociala-medier-foretag	Fullmakt sociala medier företag	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	orgnr	Organisationsnummer (roll givare)
+fullmakt-sociala-medier-foretag	Fullmakt sociala medier företag	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-sociala-medier-foretag	Fullmakt sociala medier företag	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-sophantering	Fullmakt för sophantering	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-sophantering	Fullmakt för sophantering	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-spotify-abonnemang	Fullmakt Spotify-abonnemang	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-spotify-abonnemang	Fullmakt Spotify-abonnemang	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_epost	E-postadress (kopplad till tjänsten) (roll givare)
+fullmakt-spotify-abonnemang	Fullmakt Spotify-abonnemang	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_namn	Kontoinnehavarens namn (roll givare)
+fullmakt-spotify-abonnemang	Fullmakt Spotify-abonnemang	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	kontoinnehavare_pnr	Personnummer (roll givare)
+fullmakt-spotify-abonnemang	Fullmakt Spotify-abonnemang	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-spotify-abonnemang	Fullmakt Spotify-abonnemang	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-styrelsearbete	Fullmakt för styrelsearbete	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-styrelsearbete	Fullmakt för styrelsearbete	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-styrelsearbete	Fullmakt för styrelsearbete	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	forening	Förening/Skola (roll forening)
+fullmakt-tandvard	Fullmakt för tandvård	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-tandvard	Fullmakt för tandvård	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-testamentsexekutor	Fullmakt testamentsexekutor	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_namn	Den avlidnes namn (om relevant) (roll avliden)
+fullmakt-testamentsexekutor	Fullmakt testamentsexekutor	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	avliden_pnr	Avlidens personnummer (roll avliden)
+fullmakt-tingsratten	Fullmakt för tingsrätten	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-tingsratten	Fullmakt för tingsrätten	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-tomtratt-ombud	Fullmakt tomträtt	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-tomtratt-ombud	Fullmakt tomträtt	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fastighetsägarens namn (roll givare)
+fullmakt-tomtratt-ombud	Fullmakt tomträtt	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-tomtratt-ombud	Fullmakt tomträtt	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-tomtratt-ombud	Fullmakt tomträtt	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-traktor-registrering	Fullmakt traktor registrering	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-traktor-registrering	Fullmakt traktor registrering	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fordonsägarens namn (roll givare)
+fullmakt-traktor-registrering	Fullmakt traktor registrering	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-traktor-registrering	Fullmakt traktor registrering	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-traktor-registrering	Fullmakt traktor registrering	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-transportstyrelsen	Fullmakt för Transportstyrelsen	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-transportstyrelsen	Fullmakt för Transportstyrelsen	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-tullarende	Fullmakt för tullärende	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-tullarende	Fullmakt för tullärende	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-utlandsflytt-myndighet	Fullmakt utlandsflytt	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktsgivare_pass	Passnummer (roll givare)
+fullmakt-utlandsk-fastighet	Fullmakt utländsk fastighet	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktsgivare_pass	Passnummer (roll givare)
+fullmakt-vaccin	Fullmakt för vaccination	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-vaccin	Fullmakt för vaccination	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-vardnadshavare-bistand	Fullmakt vårdnadshavare bistånd	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-vardnadshavare-bistand	Fullmakt vårdnadshavare bistånd	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh1_namn	Vårdnadshavare 1 (namn) (roll vardnadshavare)
+fullmakt-vardnadshavare-bistand	Fullmakt vårdnadshavare bistånd	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh1_pnr	Vårdnadshavare 1 (personnummer) (roll vardnadshavare)
+fullmakt-vardnadshavare-bistand	Fullmakt vårdnadshavare bistånd	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh2_namn	Vårdnadshavare 2 (om gemensam vårdnad) (roll vardnadshavare)
+fullmakt-vardnadshavare-bistand	Fullmakt vårdnadshavare bistånd	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh2_pnr	Vårdnadshavare 2 (personnummer) (roll vardnadshavare)
+fullmakt-vardnadshavare-bistand	Fullmakt vårdnadshavare bistånd	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-vardnadshavare-bistand	Fullmakt vårdnadshavare bistånd	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-vardnadshavare-bistand	Fullmakt vårdnadshavare bistånd	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets fullständiga namn (roll barn)
+fullmakt-vardnadshavare-bistand	Fullmakt vårdnadshavare bistånd	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+fullmakt-vardonskemal	Fullmakt vårdönskemål	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-vardonskemal	Fullmakt vårdönskemål	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_adress	Patientens adress (roll givare)
+fullmakt-vardonskemal	Fullmakt vårdönskemål	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_namn	Patientens fullständiga namn (roll givare)
+fullmakt-vardonskemal	Fullmakt vårdönskemål	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_pnr	Patientens personnummer (roll givare)
+fullmakt-vardonskemal	Fullmakt vårdönskemål	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-vardonskemal	Fullmakt vårdönskemål	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-vardonskemal	Fullmakt vårdönskemål	FULLMAKT	kritisk	platshållare kvar		[uppdragsbeskrivning]
+fullmakt-varumarke-registrering	Fullmakt varumärkesregistrering	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-varumarke-registrering	Fullmakt varumärkesregistrering	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretag_namn	Företagets namn (roll givare)
+fullmakt-varumarke-registrering	Fullmakt varumärkesregistrering	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_namn	Behörig företrädares namn (roll givare)
+fullmakt-varumarke-registrering	Fullmakt varumärkesregistrering	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_pnr	Företrädarens personnummer (roll givare)
+fullmakt-varumarke-registrering	Fullmakt varumärkesregistrering	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_roll	Roll i bolaget (roll givare)
+fullmakt-varumarke-registrering	Fullmakt varumärkesregistrering	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	orgnr	Organisationsnummer (roll givare)
+fullmakt-varumarke-registrering	Fullmakt varumärkesregistrering	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-varumarke-registrering	Fullmakt varumärkesregistrering	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-vattenavlasning	Fullmakt för vattenavläsning	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-vattenavlasning	Fullmakt för vattenavläsning	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+fullmakt-vd-arenden	VD-fullmakt	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-vd-arenden	VD-fullmakt	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretag_namn	Företagets namn (roll givare)
+fullmakt-vd-arenden	VD-fullmakt	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_namn	Behörig företrädares namn (roll givare)
+fullmakt-vd-arenden	VD-fullmakt	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_pnr	Företrädarens personnummer (roll givare)
+fullmakt-vd-arenden	VD-fullmakt	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	foretradare_roll	Roll i bolaget (roll givare)
+fullmakt-vd-arenden	VD-fullmakt	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	orgnr	Organisationsnummer (roll givare)
+fullmakt-vd-arenden	VD-fullmakt	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-vd-arenden	VD-fullmakt	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-veteranfordon-arende	Fullmakt veteranfordon	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+fullmakt-veteranfordon-arende	Fullmakt veteranfordon	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_namn	Fordonsägarens namn (roll givare)
+fullmakt-veteranfordon-arende	Fullmakt veteranfordon	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	agare_pnr	Personnummer (roll givare)
+fullmakt-veteranfordon-arende	Fullmakt veteranfordon	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+fullmakt-veteranfordon-arende	Fullmakt veteranfordon	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+fullmakt-veterinarbesok	Fullmakt för veterinärbesök	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+fullmakt-veterinarbesok	Fullmakt för veterinärbesök	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+generalfullmakt-privatperson-2026	Generalfullmakt för privatperson	FULLMAKT	kritisk	avsnittet Fullmaktshavare är tomt		inga ifyllda uppgifter under rubriken
+generalfullmakt-privatperson-2026	Generalfullmakt för privatperson	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktshavare_namn	Fullmaktshavarens fullständiga namn (roll havare)
+generalfullmakt-privatperson-2026	Generalfullmakt för privatperson	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	fullmaktshavare_pnr	Personnummer (roll havare)
+generalfullmakt-privatperson-2026	Generalfullmakt för privatperson	FULLMAKT	kritisk	platshållare kvar		[Fullmaktshavarens namn]
+generalfullmakt-privatperson-2026	Generalfullmakt för privatperson	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+generalfullmakt-privatperson-2026	Generalfullmakt för privatperson	FULLMAKT	kritisk	platshållare kvar		[uppdragsbeskrivning]
+generell-fullmakt	Generell fullmakt	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+generell-fullmakt	Generell fullmakt	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+intyg-digital-arvshandling	Intyg för digital arvshandling	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+intyg-digital-arvshandling	Intyg för digital arvshandling	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+intyg-digital-tillganglighet	Intyg om digital tillgänglighet	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+intyg-digital-tillganglighet	Intyg om digital tillgänglighet	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+intyg-djur-resa-utomlands	Intyg för djurets resa utomlands	INTYG	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+intyg-djur-resa-utomlands	Intyg för djurets resa utomlands	INTYG	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+intyg-ensam-vardnad	Intyg om ensam vårdnad	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+intyg-ensam-vardnad	Intyg om ensam vårdnad	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+intyg-ensam-vardnad	Intyg om ensam vårdnad	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+intyg-ensam-vardnad	Intyg om ensam vårdnad	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+intyg-gemensam-vardnad	Intyg om gemensam vårdnad	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+intyg-gemensam-vardnad	Intyg om gemensam vårdnad	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+intyg-gemensam-vardnad	Intyg om gemensam vårdnad	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+intyg-gemensam-vardnad	Intyg om gemensam vårdnad	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+medgivande-akut-vard	Medgivande vid akut vård	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-akut-vard	Medgivande vid akut vård	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-akut-vard	Medgivande vid akut vård	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+medgivande-akut-vard	Medgivande vid akut vård	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+medgivande-bankarenden-barn	Medgivande för bankärenden för barn	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-bankarenden-barn	Medgivande för bankärenden för barn	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-bankarenden-barn	Medgivande för bankärenden för barn	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+medgivande-bankarenden-barn	Medgivande för bankärenden för barn	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+medgivande-barn-bo-annan-vuxen	Medgivande för barn att bo hos annan vuxen	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-barn-bo-annan-vuxen	Medgivande för barn att bo hos annan vuxen	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-barn-bo-annan-vuxen	Medgivande för barn att bo hos annan vuxen	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+medgivande-barn-bo-annan-vuxen	Medgivande för barn att bo hos annan vuxen	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+medgivande-barn-ensamresa-flyg-2026	Medgivande barn ensam flyresa	MEDGIVANDE	kritisk	avsnittet Fullmaktshavare är tomt		inga ifyllda uppgifter under rubriken
+medgivande-barn-ensamresa-flyg-2026	Medgivande barn ensam flyresa	MEDGIVANDE	kritisk	partsuppgift under Övriga uppgifter	vardnadshavare2_namn	Vårdnadshavare 2 (valfritt) (roll vardnadshavare)
+medgivande-barn-ensamresa-flyg-2026	Medgivande barn ensam flyresa	MEDGIVANDE	kritisk	platshållare kvar		[personnummer]
+medgivande-barn-ensamresa-flyg-2026	Medgivande barn ensam flyresa	MEDGIVANDE	kritisk	platshållare kvar		[uppdragsbeskrivning]
+medgivande-barn-ensamresa-flyg-2026	Medgivande barn ensam flyresa	MEDGIVANDE	dubblett	värdet förekommer flera gånger	motande_vuxen	Mötande vuxen vid destination: 3 gånger
+medgivande-barn-ensamresa-flyg-2026	Medgivande barn ensam flyresa	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_foddatum	Barnets födelsedatum (roll barn)
+medgivande-barn-ensamresa-flyg-2026	Medgivande barn ensam flyresa	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets fullständiga namn (roll barn)
+medgivande-barnpassning-regelbunden	Medgivande för regelbunden barnpassning	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+medgivande-barnpassning-regelbunden	Medgivande för regelbunden barnpassning	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh1_namn	Vårdnadshavare 1 (namn) (roll vardnadshavare)
+medgivande-barnpassning-regelbunden	Medgivande för regelbunden barnpassning	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh1_pnr	Vårdnadshavare 1 (personnummer) (roll vardnadshavare)
+medgivande-barnpassning-regelbunden	Medgivande för regelbunden barnpassning	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh2_namn	Vårdnadshavare 2 (om gemensam vårdnad) (roll vardnadshavare)
+medgivande-barnpassning-regelbunden	Medgivande för regelbunden barnpassning	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh2_pnr	Vårdnadshavare 2 (personnummer) (roll vardnadshavare)
+medgivande-barnpassning-regelbunden	Medgivande för regelbunden barnpassning	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+medgivande-barnpassning-regelbunden	Medgivande för regelbunden barnpassning	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+medgivande-barnpassning-regelbunden	Medgivande för regelbunden barnpassning	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets fullständiga namn (roll barn)
+medgivande-barnpassning-regelbunden	Medgivande för regelbunden barnpassning	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+medgivande-blodprov-barn	Medgivande blodprov barn	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+medgivande-blodprov-barn	Medgivande blodprov barn	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh1_namn	Vårdnadshavare 1 (namn) (roll vardnadshavare)
+medgivande-blodprov-barn	Medgivande blodprov barn	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh1_pnr	Vårdnadshavare 1 (personnummer) (roll vardnadshavare)
+medgivande-blodprov-barn	Medgivande blodprov barn	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh2_namn	Vårdnadshavare 2 (om gemensam vårdnad) (roll vardnadshavare)
+medgivande-blodprov-barn	Medgivande blodprov barn	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh2_pnr	Vårdnadshavare 2 (personnummer) (roll vardnadshavare)
+medgivande-blodprov-barn	Medgivande blodprov barn	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+medgivande-blodprov-barn	Medgivande blodprov barn	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+medgivande-blodprov-barn	Medgivande blodprov barn	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets fullständiga namn (roll barn)
+medgivande-blodprov-barn	Medgivande blodprov barn	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+medgivande-byte-skola	Medgivande vid byte av skola	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-byte-skola	Medgivande vid byte av skola	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-byte-skola	Medgivande vid byte av skola	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+medgivande-byte-skola	Medgivande vid byte av skola	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+medgivande-delad-journalinfo	Medgivande för delad journalinformation	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-delad-journalinfo	Medgivande för delad journalinformation	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-digital-halsoapp	Medgivande för digital hälsoapp	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-digital-halsoapp	Medgivande för digital hälsoapp	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-digital-minnessida	Medgivande för digital minnessida	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-digital-minnessida	Medgivande för digital minnessida	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-djurvard	Medgivande för tillfällig djurvård	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-djurvard	Medgivande för tillfällig djurvård	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-ensam-resa-minderarig	Medgivande vid ensam resa för minderårig	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-ensam-resa-minderarig	Medgivande vid ensam resa för minderårig	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-ensam-resa-minderarig	Medgivande vid ensam resa för minderårig	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+medgivande-ensam-resa-minderarig	Medgivande vid ensam resa för minderårig	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+medgivande-estetisk-behandling	Medgivande estetisk behandling	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+medgivande-estetisk-behandling	Medgivande estetisk behandling	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_adress	Patientens adress (roll givare)
+medgivande-estetisk-behandling	Medgivande estetisk behandling	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_namn	Patientens fullständiga namn (roll givare)
+medgivande-estetisk-behandling	Medgivande estetisk behandling	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_pnr	Patientens personnummer (roll givare)
+medgivande-estetisk-behandling	Medgivande estetisk behandling	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+medgivande-estetisk-behandling	Medgivande estetisk behandling	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+medgivande-estetisk-behandling	Medgivande estetisk behandling	FULLMAKT	kritisk	platshållare kvar		[uppdragsbeskrivning]
+medgivande-fertilitetsbehandling	Medgivande fertilitetsbehandling	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+medgivande-fertilitetsbehandling	Medgivande fertilitetsbehandling	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_adress	Patientens adress (roll givare)
+medgivande-fertilitetsbehandling	Medgivande fertilitetsbehandling	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_namn	Patientens fullständiga namn (roll givare)
+medgivande-fertilitetsbehandling	Medgivande fertilitetsbehandling	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_pnr	Patientens personnummer (roll givare)
+medgivande-fertilitetsbehandling	Medgivande fertilitetsbehandling	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+medgivande-fertilitetsbehandling	Medgivande fertilitetsbehandling	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+medgivande-fertilitetsbehandling	Medgivande fertilitetsbehandling	FULLMAKT	kritisk	platshållare kvar		[uppdragsbeskrivning]
+medgivande-foreningsresa	Medgivande vid föreningsresa	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-foreningsresa	Medgivande vid föreningsresa	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-foreningsresa	Medgivande vid föreningsresa	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+medgivande-foreningsresa	Medgivande vid föreningsresa	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+medgivande-foto-film	Medgivande för foto och film	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-foto-film	Medgivande för foto och film	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-foto-film	Medgivande för foto och film	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	forening	Förening/Skola (roll forening)
+medgivande-genetisk-testning	Medgivande genetisk testning	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+medgivande-genetisk-testning	Medgivande genetisk testning	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_adress	Patientens adress (roll givare)
+medgivande-genetisk-testning	Medgivande genetisk testning	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_namn	Patientens fullständiga namn (roll givare)
+medgivande-genetisk-testning	Medgivande genetisk testning	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_pnr	Patientens personnummer (roll givare)
+medgivande-genetisk-testning	Medgivande genetisk testning	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+medgivande-genetisk-testning	Medgivande genetisk testning	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+medgivande-genetisk-testning	Medgivande genetisk testning	FULLMAKT	kritisk	platshållare kvar		[uppdragsbeskrivning]
+medgivande-hemtjanst-digital	Medgivande för hemtjänst digital kommunikation	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-hemtjanst-digital	Medgivande för hemtjänst digital kommunikation	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-hyrbil	Medgivande för hyrbil	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-hyrbil	Medgivande för hyrbil	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-idrottsstavling-utomlands	Medgivande vid idrottstävling utomlands	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-idrottsstavling-utomlands	Medgivande vid idrottstävling utomlands	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-idrottsstavling-utomlands	Medgivande vid idrottstävling utomlands	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+medgivande-idrottsstavling-utomlands	Medgivande vid idrottstävling utomlands	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+medgivande-inkop-djur	Medgivande vid inköp av djur	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-inkop-djur	Medgivande vid inköp av djur	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-kastration-djur	Medgivande för kastration/operation av djur	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-kastration-djur	Medgivande för kastration/operation av djur	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-lager-kollo	Medgivande vid läger / kollo	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-lager-kollo	Medgivande vid läger / kollo	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-lager-kollo	Medgivande vid läger / kollo	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+medgivande-lager-kollo	Medgivande vid läger / kollo	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+medgivande-medicinsk-behandling	Medgivande för medicinsk behandling	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-medicinsk-behandling	Medgivande för medicinsk behandling	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-medicinsk-behandling-utomlands-2026	Medgivande för medicinsk behandling utomlands (minderårig)	FULLMAKT	kritisk	avsnittet Fullmaktshavare är tomt		inga ifyllda uppgifter under rubriken
+medgivande-medicinsk-behandling-utomlands-2026	Medgivande för medicinsk behandling utomlands (minderårig)	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	ansvarig_vuxen_namn	Ansvarig vuxens fullständiga namn (roll havare)
+medgivande-medicinsk-behandling-utomlands-2026	Medgivande för medicinsk behandling utomlands (minderårig)	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	ansvarig_vuxen_pnr	Ansvarig vuxens personnummer (roll havare)
+medgivande-medicinsk-behandling-utomlands-2026	Medgivande för medicinsk behandling utomlands (minderårig)	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	ansvarig_vuxen_relation	Relation till barnet (roll havare)
+medgivande-medicinsk-behandling-utomlands-2026	Medgivande för medicinsk behandling utomlands (minderårig)	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vardnadshavare1_telefon	Vårdnadshavare 1 (telefon) (roll vardnadshavare)
+medgivande-medicinsk-behandling-utomlands-2026	Medgivande för medicinsk behandling utomlands (minderårig)	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vardnadshavare2_namn	Vårdnadshavare 2 (valfritt) (roll vardnadshavare)
+medgivande-medicinsk-behandling-utomlands-2026	Medgivande för medicinsk behandling utomlands (minderårig)	FULLMAKT	kritisk	platshållare kvar		[Fullmaktshavarens namn]
+medgivande-medicinsk-behandling-utomlands-2026	Medgivande för medicinsk behandling utomlands (minderårig)	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+medgivande-medicinsk-behandling-utomlands-2026	Medgivande för medicinsk behandling utomlands (minderårig)	FULLMAKT	kritisk	platshållare kvar		[uppdragsbeskrivning]
+medgivande-medicinsk-behandling-utomlands-2026	Medgivande för medicinsk behandling utomlands (minderårig)	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_foddatum	Barnets födelsedatum (roll barn)
+medgivande-medicinsk-behandling-utomlands-2026	Medgivande för medicinsk behandling utomlands (minderårig)	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets fullständiga namn (roll barn)
+medgivande-medicinsk-behandling-utomlands-2026	Medgivande för medicinsk behandling utomlands (minderårig)	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_personnummer	Barnets personnummer (roll barn)
+medgivande-musicerande	Medgivande för musicerande	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-musicerande	Medgivande för musicerande	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-musicerande	Medgivande för musicerande	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	forening	Förening/Skola (roll forening)
+medgivande-operation-barn	Medgivande operation barn	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+medgivande-operation-barn	Medgivande operation barn	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh1_namn	Vårdnadshavare 1 (namn) (roll vardnadshavare)
+medgivande-operation-barn	Medgivande operation barn	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh1_pnr	Vårdnadshavare 1 (personnummer) (roll vardnadshavare)
+medgivande-operation-barn	Medgivande operation barn	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh2_namn	Vårdnadshavare 2 (om gemensam vårdnad) (roll vardnadshavare)
+medgivande-operation-barn	Medgivande operation barn	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh2_pnr	Vårdnadshavare 2 (personnummer) (roll vardnadshavare)
+medgivande-operation-barn	Medgivande operation barn	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+medgivande-operation-barn	Medgivande operation barn	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+medgivande-operation-barn	Medgivande operation barn	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets fullständiga namn (roll barn)
+medgivande-operation-barn	Medgivande operation barn	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+medgivande-organdonation-levande	Medgivande organdonation levande	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+medgivande-organdonation-levande	Medgivande organdonation levande	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_adress	Patientens adress (roll givare)
+medgivande-organdonation-levande	Medgivande organdonation levande	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_namn	Patientens fullständiga namn (roll givare)
+medgivande-organdonation-levande	Medgivande organdonation levande	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	patient_pnr	Patientens personnummer (roll givare)
+medgivande-organdonation-levande	Medgivande organdonation levande	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+medgivande-organdonation-levande	Medgivande organdonation levande	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+medgivande-organdonation-levande	Medgivande organdonation levande	FULLMAKT	kritisk	platshållare kvar		[uppdragsbeskrivning]
+medgivande-overnattning-utomlands	Medgivande för övernattning utomlands	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-overnattning-utomlands	Medgivande för övernattning utomlands	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-overnattning-utomlands	Medgivande för övernattning utomlands	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+medgivande-overnattning-utomlands	Medgivande för övernattning utomlands	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+medgivande-passansokan	Medgivande för passansökan	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-passansokan	Medgivande för passansökan	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-passansokan	Medgivande för passansökan	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+medgivande-passansokan	Medgivande för passansökan	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+medgivande-prenumerationsavslut	Medgivande för prenumerationsavslut efter dödsfall	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-prenumerationsavslut	Medgivande för prenumerationsavslut efter dödsfall	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-samakande	Medgivande för samåkande	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-samakande	Medgivande för samåkande	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-simskola	Medgivande för simskola	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-simskola	Medgivande för simskola	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-simskola	Medgivande för simskola	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	forening	Förening/Skola (roll forening)
+medgivande-skidresa	Medgivande för skidresa	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-skidresa	Medgivande för skidresa	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-skidresa	Medgivande för skidresa	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	forening	Förening/Skola (roll forening)
+medgivande-skolaktivitet	Medgivande för skolaktivitet	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-skolaktivitet	Medgivande för skolaktivitet	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-skolaktivitet	Medgivande för skolaktivitet	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	forening	Förening/Skola (roll forening)
+medgivande-skolresa	Medgivande vid skolresa	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-skolresa	Medgivande vid skolresa	MEDGIVANDE	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-skolresa	Medgivande vid skolresa	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+medgivande-skolresa	Medgivande vid skolresa	MEDGIVANDE	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+medgivande-sociala-medier-dodsfall	Medgivande för sociala mediekonton (dödsfall)	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-sociala-medier-dodsfall	Medgivande för sociala mediekonton (dödsfall)	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-tandreglering-barn	Medgivande tandreglering barn	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+medgivande-tandreglering-barn	Medgivande tandreglering barn	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh1_namn	Vårdnadshavare 1 (namn) (roll vardnadshavare)
+medgivande-tandreglering-barn	Medgivande tandreglering barn	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh1_pnr	Vårdnadshavare 1 (personnummer) (roll vardnadshavare)
+medgivande-tandreglering-barn	Medgivande tandreglering barn	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh2_namn	Vårdnadshavare 2 (om gemensam vårdnad) (roll vardnadshavare)
+medgivande-tandreglering-barn	Medgivande tandreglering barn	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh2_pnr	Vårdnadshavare 2 (personnummer) (roll vardnadshavare)
+medgivande-tandreglering-barn	Medgivande tandreglering barn	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+medgivande-tandreglering-barn	Medgivande tandreglering barn	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+medgivande-tandreglering-barn	Medgivande tandreglering barn	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets fullständiga namn (roll barn)
+medgivande-tandreglering-barn	Medgivande tandreglering barn	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+medgivande-tavling	Medgivande vid tävling	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-tavling	Medgivande vid tävling	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-tavling	Medgivande vid tävling	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	forening	Förening/Skola (roll forening)
+medgivande-utflykt	Medgivande för utflykt	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+medgivande-utflykt	Medgivande för utflykt	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+medgivande-utflykt	Medgivande för utflykt	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	forening	Förening/Skola (roll forening)
+medgivande-vaccin-barn	Medgivande vaccination barn	FULLMAKT	kritisk	avsnittet Fullmaktsgivare är tomt		inga ifyllda uppgifter under rubriken
+medgivande-vaccin-barn	Medgivande vaccination barn	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh1_namn	Vårdnadshavare 1 (namn) (roll vardnadshavare)
+medgivande-vaccin-barn	Medgivande vaccination barn	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh1_pnr	Vårdnadshavare 1 (personnummer) (roll vardnadshavare)
+medgivande-vaccin-barn	Medgivande vaccination barn	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh2_namn	Vårdnadshavare 2 (om gemensam vårdnad) (roll vardnadshavare)
+medgivande-vaccin-barn	Medgivande vaccination barn	FULLMAKT	kritisk	partsuppgift under Övriga uppgifter	vh2_pnr	Vårdnadshavare 2 (personnummer) (roll vardnadshavare)
+medgivande-vaccin-barn	Medgivande vaccination barn	FULLMAKT	kritisk	platshållare kvar		[Fullmaktsgivarens namn]
+medgivande-vaccin-barn	Medgivande vaccination barn	FULLMAKT	kritisk	platshållare kvar		[personnummer]
+medgivande-vaccin-barn	Medgivande vaccination barn	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets fullständiga namn (roll barn)
+medgivande-vaccin-barn	Medgivande vaccination barn	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+resefullmakt-barn-eu	Resefullmakt för barn inom EU	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+resefullmakt-barn-eu	Resefullmakt för barn inom EU	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+resefullmakt-barn-eu	Resefullmakt för barn inom EU	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+resefullmakt-barn-eu	Resefullmakt för barn inom EU	FULLMAKT	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)
+resefullmakt-grupp	Resefullmakt för grupp	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+resefullmakt-grupp	Resefullmakt för grupp	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+resefullmakt-vuxen	Resefullmakt för vuxen	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+resefullmakt-vuxen	Resefullmakt för vuxen	FULLMAKT	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+reseintyg-barn-internationell	Reseintyg för barn – internationell resa	RESEINTYG	dubblett	värdet förekommer flera gånger	giltig_fran	Giltig från: 2 gånger
+reseintyg-barn-internationell	Reseintyg för barn – internationell resa	RESEINTYG	dubblett	värdet förekommer flera gånger	giltig_till	Giltig till: 2 gånger
+reseintyg-barn-internationell	Reseintyg för barn – internationell resa	RESEINTYG	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_namn	Barnets namn (roll barn)
+reseintyg-barn-internationell	Reseintyg för barn – internationell resa	RESEINTYG	struktur	eget avsnitt saknas (under Övriga uppgifter)	barn_pnr	Barnets personnummer (roll barn)

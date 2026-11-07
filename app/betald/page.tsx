@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { templates, categories, fieldLabelsEn } from '@/data/templates'
+import { templates, categories } from '@/data/templates'
 import { trackEvent } from '@/components/GoogleAnalytics'
 import { getPackage, getCredits, grantPackageCredits, getLastPackageSession } from '@/lib/packages'
 
@@ -90,104 +90,25 @@ function BetaldContent() {
     }
   }
 
-  // Mallarna använder olika fält-id:n för samma roll. Ta första ifyllda värdet.
-  const pick = (formData: Record<string, string>, ...ids: string[]) =>
-    ids.map(id => formData[id]).find(v => v?.trim()) || ''
-
   const handleDownload = async () => {
     if (!t || verify !== 'ok') return
     setDownloading(true)
 
     try {
       const { downloadPdf, PdfValidationError } = await import('@/lib/pdf-generator')
-      const formData = getFormData()
-
-      // Framtidsfullmakt (lag 2017:310) har en egen layout. Ömsesidig mall för
-      // makar/sambor ger två separata dokument – ett per fullmaktsgivare.
-      if (t.documentKind === 'framtidsfullmakt') {
-        const { buildFramtidsfullmaktData } = await import('@/lib/framtidsfullmakt-data')
-        try {
-          downloadPdf({
-            templateName: t.name,
-            categoryName: cat?.name || '',
-            givare: { namn: '', personnummer: '', adress: '' },
-            havare: { namn: '', personnummer: '', relation: '' },
-            detaljer: {},
-            framtidsfullmakt: buildFramtidsfullmaktData(t, formData),
-            watermark: false,
-          }, `framtidsfullmakt-${t.slug}.pdf`)
-          setMissingFields([])
-          setDownloaded(true)
-        } catch (err) {
-          if (err instanceof PdfValidationError) {
-            setMissingFields(err.missing)
-            return
-          }
-          throw err
+      const { buildPaidDocument, paidFilename } = await import('@/lib/document-data')
+      // Samma underlag som förhandsvisningen på /skapa, men utan vattenstämpel.
+      try {
+        downloadPdf(buildPaidDocument(t, getFormData(), isBilingualDownload), paidFilename(t, isBilingualDownload))
+        setMissingFields([])
+      } catch (err) {
+        // Framtidsfullmakt: obligatoriska uppgifter saknas – ingen PDF skapas.
+        if (err instanceof PdfValidationError) {
+          setMissingFields(err.missing)
+          return
         }
-        return
+        throw err
       }
-
-      // Fält som redan skrivs ut på egen plats i PDF:en ska inte upprepas.
-      const rendered = new Set([
-        'givare_namn', 'givare_pnr', 'givare_adress', 'givare_epost', 'givare_telefon',
-        'fullmaktsgivare_namn', 'fullmaktsgivare_pnr', 'fullmaktsgivare_adress',
-        'utstallare_namn', 'utstallare_pnr', 'vardnadshavare1_namn', 'vardnadshavare1_pnr',
-        'havare_namn', 'havare_pnr', 'havare_relation', 'havare_adress',
-        'ombud_namn', 'ombud_pnr', 'ombud_relation', 'motande_vuxen',
-        'giltig_fran', 'giltig_till', 'syfte', 'uppdrag', 'befogenheter', 'begransningar',
-      ])
-
-      // Övriga ifyllda uppgifter (barnets namn, flygbolag, djurets art …) med
-      // mallens egna etiketter – och engelska etiketter för den engelska sidan.
-      const extraDetails = t.fields
-        .filter(f => !rendered.has(f.id) && formData[f.id]?.trim())
-        .map(f => ({
-          label: f.label,
-          labelEn: fieldLabelsEn[f.id],
-          value: formData[f.id],
-        }))
-
-      downloadPdf({
-        templateName: t.name,
-        documentTitle: t.documentTitle,
-        categoryName: cat?.name || '',
-        givare: {
-          namn: pick(formData, 'givare_namn', 'fullmaktsgivare_namn', 'utstallare_namn', 'vardnadshavare1_namn'),
-          personnummer: pick(formData, 'givare_pnr', 'fullmaktsgivare_pnr', 'utstallare_pnr', 'vardnadshavare1_pnr'),
-          adress: pick(formData, 'givare_adress', 'fullmaktsgivare_adress'),
-          epost: formData.givare_epost,
-          telefon: formData.givare_telefon,
-        },
-        havare: {
-          namn: pick(formData, 'havare_namn', 'ombud_namn', 'motande_vuxen'),
-          personnummer: pick(formData, 'havare_pnr', 'ombud_pnr'),
-          relation: pick(formData, 'havare_relation', 'ombud_relation'),
-          adress: formData.havare_adress,
-        },
-        detaljer: {
-          giltigFran: formData.giltig_fran,
-          giltigTill: formData.giltig_till,
-          syfte: pick(formData, 'syfte', 'uppdrag', 'befogenheter'),
-          begransningar: formData.begransningar,
-        },
-        extraDetails,
-        standardText: t.standardText,
-        // Mallens juridiska notis skrivs ut för de tvåspråkiga mallarna, där
-        // den har en engelsk motsvarighet på översättningssidan.
-        legalInfo: t.bilingual ? t.legalInfo : undefined,
-        bilingual: isBilingualDownload,
-        en: t.en
-          ? {
-              templateName: t.en.name,
-              documentTitle: t.en.documentTitle,
-              categoryName: t.en.category,
-              standardText: t.en.standardText,
-              legalInfo: t.en.legalInfo,
-            }
-          : undefined,
-        watermark: false, // NO watermark - paid version!
-      }, `fullmakt-${t.slug}${isBilingualDownload ? '-sv-en' : ''}.pdf`)
 
       setDownloaded(true)
     } catch (err) {

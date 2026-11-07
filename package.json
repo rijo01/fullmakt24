@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run test:pdf",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:pdf": "tsx --test tests/pdf/templates.test.ts"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.6",
@@ -14,6 +16,7 @@
     "jspdf": "^2.5.2",
     "lucide-react": "^0.468.0",
     "next": "^15.1.0",
+    "pdfjs-dist": "4.10.38",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "stripe": "^17.5.0"
@@ -26,6 +29,7 @@
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.0",
     "tailwindcss": "^3.4.0",
+    "tsx": "4.19.2",
     "typescript": "^5.7.0"
   }
 }
