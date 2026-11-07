@@ -36,20 +36,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  const templatePages: MetadataRoute.Sitemap = templates.flatMap(t => [
-    {
-      url: `${baseUrl}/mallar/${t.categorySlug}/${t.slug}`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/skapa/${t.slug}`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-  ])
+  // /skapa-sidorna har noindex och hör inte hemma i sitemapen.
+  const templatePages: MetadataRoute.Sitemap = templates.map(t => ({
+    url: `${baseUrl}/mallar/${t.categorySlug}/${t.slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  }))
 
   return [...staticPages, ...categoryPages, ...templatePages, ...blogPages]
 }

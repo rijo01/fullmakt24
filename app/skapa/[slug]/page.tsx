@@ -7,6 +7,21 @@ import { templates, categories } from '@/data/templates'
 import type { TemplateField } from '@/data/templates'
 import { trackEvent } from '@/components/GoogleAnalytics'
 import { getCredits, useCredit, PACKAGES } from '@/lib/packages'
+import DocumentPreview from '@/components/DocumentPreview'
+import PreviewSheet from '@/components/PreviewSheet'
+
+/** Sant från 1024 px (Tailwinds lg), där förhandsvisningen visas som sidopanel. */
+function useIsDesktop() {
+  const [isDesktop, setIsDesktop] = useState(false)
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)')
+    const update = () => setIsDesktop(mq.matches)
+    update()
+    mq.addEventListener('change', update)
+    return () => mq.removeEventListener('change', update)
+  }, [])
+  return isDesktop
+}
 
 function FormField({ field, value, onChange }: { field: TemplateField; value: string; onChange: (v: string) => void }) {
   const base = "input-field text-sm"
@@ -45,6 +60,10 @@ export default function SkapaPage() {
   const [credits, setCreditsState] = useState(0)
   // Tvåspråkiga mallar kan köpas med engelsk översättning i samma PDF.
   const [packageType, setPackageType] = useState<'single' | 'bilingual'>('single')
+  // Förhandsvisningen: sidopanel på desktop, helskärmsvy på mindre skärmar.
+  const isDesktop = useIsDesktop()
+  const [previewOpen, setPreviewOpen] = useState(false)
+  const closePreview = useCallback(() => setPreviewOpen(false), [])
 
   useEffect(() => {
     setCreditsState(getCredits())
@@ -301,6 +320,15 @@ export default function SkapaPage() {
                       </div>
                     </div>
                   </div>
+                  {/* Förhandsvisning på mindre skärmar (desktop har sidopanelen) */}
+                  <button
+                    onClick={() => setPreviewOpen(true)}
+                    className="lg:hidden w-full flex items-center justify-center gap-2 rounded-xl border-2 border-navy-200 bg-white py-4 font-semibold text-navy-600 hover:border-navy-300"
+                  >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    Förhandsgranska dokumentet
+                  </button>
+
                   {/* Språkval – endast för mallar som finns som tvåspråkig PDF */}
                   {t.bilingual && (
                     <div className="card p-6">
@@ -438,6 +466,23 @@ export default function SkapaPage() {
                       )}
                     </div>
 
+                    {/* Kompakt förhandsvisning ovanför Betala (desktop har sidopanelen) */}
+                    {!isDesktop && (
+                      <button
+                        onClick={() => setPreviewOpen(true)}
+                        className="lg:hidden w-full max-w-sm mx-auto mb-4 flex items-center gap-4 rounded-xl border border-navy-200 bg-white p-3 text-left hover:border-navy-300"
+                      >
+                        <span className="block w-16 shrink-0 overflow-hidden rounded border border-navy-100">
+                          <DocumentPreview template={t} formData={formData} bilingual={isBilingual} firstPageOnly className="pointer-events-none" />
+                        </span>
+                        <span className="flex-1">
+                          <span className="block text-sm font-semibold text-navy-600">Förhandsgranska dokumentet</span>
+                          <span className="block text-xs text-navy-400 mt-0.5">Se hela fullmakten med dina uppgifter innan du betalar.</span>
+                        </span>
+                        <span className="text-navy-400" aria-hidden="true">→</span>
+                      </button>
+                    )}
+
                     <button
                       onClick={handlePayment}
                       disabled={paying}
@@ -501,45 +546,13 @@ export default function SkapaPage() {
               <div className="sticky top-40">
                 <div className="bg-white rounded-xl border border-navy-200 shadow-lg overflow-hidden">
                   <div className="bg-navy-500 px-4 py-3 flex items-center justify-between">
-                    <span className="text-xs font-semibold text-white">Förhandsgranskning</span>
+                    <span className="text-xs font-semibold text-white">Förhandsvisning</span>
                     <span className="text-[10px] text-navy-200">PDF</span>
                   </div>
-                  <div className="p-5 font-mono text-[10px] text-navy-500 leading-relaxed space-y-3 max-h-[500px] overflow-y-auto">
-                    <div className="text-center font-bold text-xs uppercase tracking-wider mb-4">{t.documentTitle || 'FULLMAKT'}</div>
-                    <div className="text-center text-navy-400 mb-4">{t.name}</div>
-                    <hr className="border-navy-100" />
-                    {formData.givare_namn && (
-                      <div>
-                        <div className="font-bold text-[9px] uppercase text-navy-400">Fullmaktsgivare</div>
-                        <div>{formData.givare_namn}</div>
-                        {formData.givare_pnr && <div className="text-navy-400">{formData.givare_pnr}</div>}
-                        {formData.givare_adress && <div className="text-navy-400">{formData.givare_adress}</div>}
-                      </div>
+                  <div className="max-h-[calc(100vh-16rem)] overflow-y-auto bg-navy-50 p-3">
+                    {isDesktop && (
+                      <DocumentPreview template={t} formData={formData} bilingual={isBilingual} />
                     )}
-                    {formData.havare_namn && (
-                      <div>
-                        <div className="font-bold text-[9px] uppercase text-navy-400">Fullmaktshavare</div>
-                        <div>{formData.havare_namn}</div>
-                        {formData.havare_pnr && <div className="text-navy-400">{formData.havare_pnr}</div>}
-                      </div>
-                    )}
-                    {formData.syfte && (
-                      <div>
-                        <div className="font-bold text-[9px] uppercase text-navy-400">Uppdrag</div>
-                        <div className="text-navy-500">{formData.syfte}</div>
-                      </div>
-                    )}
-                    {(formData.giltig_fran || formData.giltig_till) && (
-                      <div className="text-navy-400">
-                        Giltighetstid: {formData.giltig_fran || '____'} – {formData.giltig_till || '____'}
-                      </div>
-                    )}
-                    <hr className="border-navy-100" />
-                    <div className="flex justify-between pt-2">
-                      <div><div className="w-20 h-4 bg-navy-100 rounded mb-1" /><div className="text-[8px] text-navy-300">Underskrift</div></div>
-                      <div className="text-right"><div className="text-navy-400">Datum: ________</div></div>
-                    </div>
-                    <div className="text-center pt-4 text-[8px] text-navy-300">Genererad via Fullmakt24.se</div>
                   </div>
                 </div>
 
@@ -560,6 +573,10 @@ export default function SkapaPage() {
           </div>
         </div>
       </div>
+
+      {!isDesktop && (
+        <PreviewSheet open={previewOpen} onClose={closePreview} template={t} formData={formData} bilingual={isBilingual} />
+      )}
     </div>
   )
 }
