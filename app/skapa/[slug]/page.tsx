@@ -7,6 +7,7 @@ import { templates, categories } from '@/data/templates'
 import type { TemplateField } from '@/data/templates'
 import { trackEvent } from '@/components/GoogleAnalytics'
 import { getCredits, useCredit, PACKAGES } from '@/lib/packages'
+import { SESSION_ID_RE } from '@/lib/verify-session'
 import DocumentPreview from '@/components/DocumentPreview'
 import PreviewSheet from '@/components/PreviewSheet'
 
@@ -65,9 +66,50 @@ export default function SkapaPage() {
   const [previewOpen, setPreviewOpen] = useState(false)
   const closePreview = useCallback(() => setPreviewOpen(false), [])
 
+  // Tidigare köpare kan få en rättad PDF utan ny betalning via
+  // /skapa/[slug]?kvitto=<checkout_session_id>. Sessionen kontrolleras mot
+  // Stripe (betald och samma mall); inga personuppgifter läses därifrån.
+  const [receipt, setReceipt] = useState<{ id: string; status: 'checking' | 'ok' | 'fail'; paidType?: 'single' | 'bilingual' } | null>(null)
+
   useEffect(() => {
     setCreditsState(getCredits())
   }, [])
+
+  useEffect(() => {
+    if (!slug) return
+    const id = new URLSearchParams(window.location.search).get('kvitto') || ''
+    if (!id) return
+    if (!SESSION_ID_RE.test(id)) {
+      setReceipt({ id, status: 'fail' })
+      return
+    }
+    let cancelled = false
+    setReceipt({ id, status: 'checking' })
+    fetch(`/api/verify-session?session_id=${encodeURIComponent(id)}&slug=${encodeURIComponent(slug)}`, { cache: 'no-store' })
+      .then(async res => {
+        const data = await res.json().catch(() => ({}))
+        if (cancelled) return
+        if (res.ok && data.ok) {
+          const paidType = data.packageType === 'bilingual' ? 'bilingual' : 'single'
+          // Språkvalet följer det som betalades.
+          setPackageType(paidType)
+          setReceipt({ id, status: 'ok', paidType })
+        } else {
+          setReceipt({ id, status: 'fail' })
+        }
+      })
+      .catch(() => { if (!cancelled) setReceipt({ id, status: 'fail' }) })
+    return () => { cancelled = true }
+  }, [slug])
+
+  // Verifierat kvitto: samma nedladdningssida som efter betalning, som
+  // kontrollerar sessionen mot Stripe igen innan PDF:en skapas.
+  const handleReceiptDownload = useCallback(() => {
+    if (!t || receipt?.status !== 'ok') return
+    localStorage.setItem(`draft_${slug}`, JSON.stringify(formData))
+    const lang = receipt.paidType === 'bilingual' ? '&lang=bilingual' : ''
+    router.push(`/betald?session_id=${encodeURIComponent(receipt.id)}&slug=${slug}${lang}&omleverans=1`)
+  }, [t, slug, formData, receipt, router])
 
   // Använd en paketkredit istället för ny betalning. Drar av en credit,
   // sparar formuläret och går vidare till nedladdningssidan.
@@ -160,7 +202,8 @@ export default function SkapaPage() {
     setFormData(prev => ({ ...prev, [id]: value }))
   }
 
-  const stepTitles = ['Parter', 'Detaljer', 'Granska', 'Betala & Ladda ner']
+  const receiptOk = receipt?.status === 'ok'
+  const stepTitles = ['Parter', 'Detaljer', 'Granska', receiptOk ? 'Ladda ner' : 'Betala & Ladda ner']
 
   // Tvåspråkig PDF är ett tillval; endast svenska är förvalt.
   const isBilingual = !!t.bilingual && packageType === 'bilingual'
@@ -197,6 +240,24 @@ export default function SkapaPage() {
         <div className="max-w-4xl mx-auto">
           <div className="lg:grid lg:grid-cols-[1fr_340px] gap-8">
             <div>
+              {receipt && receipt.status !== 'checking' && (
+                <div
+                  role="status"
+                  className={`mb-6 rounded-xl border p-4 text-sm ${receipt.status === 'ok' ? 'bg-success/10 border-success/30 text-navy-600' : 'bg-red-50 border-red-200 text-red-800'}`}
+                >
+                  {receipt.status === 'ok' ? (
+                    <>
+                      <strong>Ditt köp är verifierat.</strong> Fyll i uppgifterna igen så får du en rättad PDF. Det kostar ingenting.
+                    </>
+                  ) : (
+                    <>
+                      Vi kunde inte verifiera köpet i länken för just den här mallen. Mejla{' '}
+                      <a href="mailto:support@fullmakt24.se" className="font-semibold underline">support@fullmakt24.se</a>{' '}
+                      och skicka med länken, så hjälper vi dig.
+                    </>
+                  )}
+                </div>
+              )}
               {/* Step 1 */}
               {step === 1 && (
                 <div className="space-y-8">
@@ -329,8 +390,9 @@ export default function SkapaPage() {
                     Förhandsgranska dokumentet
                   </button>
 
-                  {/* Språkval – endast för mallar som finns som tvåspråkig PDF */}
-                  {t.bilingual && (
+                  {/* Språkval – endast för mallar som finns som tvåspråkig PDF.
+                      Vid verifierat kvitto följer språket det som betalades. */}
+                  {t.bilingual && !receiptOk && (
                     <div className="card p-6">
                       <h2 className="font-heading font-bold text-navy-500 text-lg mb-1">Språk</h2>
                       <p className="text-sm text-navy-400 mb-5">
@@ -401,14 +463,47 @@ export default function SkapaPage() {
                     <button onClick={() => setStep(2)} className="btn-secondary flex-1">← Ändra</button>
                     <button onClick={() => setStep(4)} disabled={!requiredGivare || !requiredHavare || !requiredDetaljer}
                       className={`flex-1 ${requiredGivare && requiredHavare && requiredDetaljer ? 'btn-gold' : 'py-3 rounded-xl font-semibold bg-navy-100 text-navy-300 cursor-not-allowed'}`}>
-                      Bekräfta & Betala →
+                      {receiptOk ? 'Gå vidare →' : 'Bekräfta & Betala →'}
                     </button>
                   </div>
                 </div>
               )}
 
               {/* Step 4: Pay & Download */}
-              {step === 4 && (
+              {step === 4 && receiptOk && (
+                <div className="space-y-6">
+                  <div className="card p-8 text-center">
+                    <h2 className="font-heading font-bold text-navy-500 text-2xl mb-2">Ladda ner din rättade PDF</h2>
+                    <p className="text-navy-400 mb-6">
+                      Ditt tidigare köp av den här mallen är verifierat, så du betalar inget nu.
+                      {receipt?.paidType === 'bilingual' ? ' PDF:en blir tvåspråkig, som i ditt köp.' : ''}
+                    </p>
+                    {!isDesktop && (
+                      <button
+                        onClick={() => setPreviewOpen(true)}
+                        className="lg:hidden w-full max-w-sm mx-auto mb-4 flex items-center gap-4 rounded-xl border border-navy-200 bg-white p-3 text-left hover:border-navy-300"
+                      >
+                        <span className="block w-16 shrink-0 overflow-hidden rounded border border-navy-100">
+                          <DocumentPreview template={t} formData={formData} bilingual={isBilingual} firstPageOnly className="pointer-events-none" />
+                        </span>
+                        <span className="flex-1">
+                          <span className="block text-sm font-semibold text-navy-600">Förhandsgranska dokumentet</span>
+                          <span className="block text-xs text-navy-400 mt-0.5">Se hela fullmakten med dina uppgifter.</span>
+                        </span>
+                        <span className="text-navy-400" aria-hidden="true">→</span>
+                      </button>
+                    )}
+                    <button onClick={handleReceiptDownload} className="btn-gold w-full max-w-sm mx-auto !py-4 text-lg">
+                      Ladda ner rättad PDF →
+                    </button>
+                  </div>
+                  <button onClick={() => setStep(3)} className="btn-secondary w-full">
+                    ← Gå tillbaka och ändra
+                  </button>
+                </div>
+              )}
+
+              {step === 4 && !receiptOk && (
                 <div className="space-y-6">
                   <div className="card p-8 text-center">
                     <div className="w-16 h-16 bg-navy-50 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -556,7 +651,8 @@ export default function SkapaPage() {
                   </div>
                 </div>
 
-                {/* Price reminder */}
+                {/* Price reminder – inte vid verifierat kvitto, då kostar det inget */}
+                {!receiptOk && (
                 <div className="mt-4 bg-gold-50 border border-gold-200 rounded-xl p-4 text-center">
                   <div className="text-2xl font-heading font-bold text-navy-600 mb-1">{price} kr</div>
                   <div className="text-xs text-gold-700">
@@ -568,6 +664,7 @@ export default function SkapaPage() {
                     </div>
                   )}
                 </div>
+                )}
               </div>
             </div>
           </div>

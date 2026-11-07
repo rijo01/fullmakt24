@@ -15,6 +15,9 @@ function BetaldContent() {
   const sessionId = searchParams.get('session_id')
   const packageParam = searchParams.get('package')
   const usedCredit = searchParams.get('credit') === 'used'
+  // Rättad PDF till en tidigare köpare via /skapa/[slug]?kvitto=… – köpet är
+  // redan räknat, så inget nytt purchase-event skickas.
+  const isReissue = searchParams.get('omleverans') === '1'
   // Ingen PDF och inga krediter förrän betalningen är kontrollerad mot Stripe.
   const [verify, setVerify] = useState<'pending' | 'ok' | 'fail'>('pending')
   // Pakettypen som faktiskt betalades (single, bilingual, family, estate).
@@ -124,7 +127,7 @@ function BetaldContent() {
     if (verify === 'ok' && !isPackagePurchase && t && (sessionId || usedCredit)) {
       // Köpet via Stripe ska räknas som purchase. Kreditnedladdning räknades
       // redan vid paketköpet, så då skickas inget nytt purchase-event.
-      if (sessionId && !usedCredit) {
+      if (sessionId && !usedCredit && !isReissue) {
         const value = isBilingualDownload ? 149 : 99
         trackEvent('purchase', {
           transaction_id: sessionId,
@@ -229,7 +232,7 @@ function BetaldContent() {
         </div>
 
         <h1 className="text-3xl font-heading font-bold text-navy-500 mb-3">
-          {usedCredit ? 'Din fullmakt är klar!' : 'Tack för ditt köp!'}
+          {usedCredit ? 'Din fullmakt är klar!' : isReissue ? 'Din rättade fullmakt är klar!' : 'Tack för ditt köp!'}
         </h1>
         <p className="text-navy-400 text-lg mb-2">
           Din fullmakt laddas ner automatiskt.
