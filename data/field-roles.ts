@@ -150,6 +150,8 @@ export const FIELD_ROLES: Record<string, FieldRoleSpec> = {
   stamma_datum: r('objekt'),
   stammatyp: r('objekt'),
   arstal: r('objekt'),
+  overlatelsetyp: r('objekt'),
+  ny_hyresgast: r('objekt'),
 
   // Uppdraget
   syfte: r('uppdrag'),

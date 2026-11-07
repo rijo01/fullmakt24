@@ -183,12 +183,12 @@ const faq = [
 
 const relatedTemplates = [
   { name: 'Fullmakt för bostadsförsäljning', href: '/mallar/boende-vardag/fullmakt-bostadsforsaljning', note: 'Generell säljfullmakt för bostad.' },
-  { name: 'Fullmakt för försäljning av lägenhet', href: '/mallar/boende-vardag/fullmakt-hyreslagenh-forsalj-2026', note: 'Skriven för bostadsrätt och lägenhet.' },
   { name: 'Fullmakt fastighetsförsäljning villa', href: '/mallar/boende-vardag/fullmakt-fastighetsforsaljning-villa', note: 'För villa, tomt och fritidshus.' },
   { name: 'Fullmakt för bostadsköp', href: '/mallar/boende-vardag/fullmakt-bostadskop', note: 'När ombudet ska köpa i stället för sälja.' },
   { name: 'Fullmakt till BRF-stämma', href: '/mallar/boende-vardag/fullmakt-bostadsratt-stamma-2026', note: 'Företräda dig på föreningsstämman.' },
   { name: 'Fullmakt vid lägenhetsbyte', href: '/mallar/boende-vardag/fullmakt-lagenhetsbyte', note: 'För byte i stället för försäljning.' },
   { name: 'Fullmakt hyresrätt överlåtelse', href: '/mallar/boende-vardag/fullmakt-hyresratt-overlatelse-2026', note: 'Hyresrätter säljs inte – de överlåts.' },
+  { name: 'Fullmakt för överlåtelse eller byte av hyreslägenhet', href: '/mallar/boende-vardag/fullmakt-hyreslagenh-forsalj-2026', note: 'Hyresvärdens samtycke eller hyresnämndens tillstånd.' },
   { name: 'Fullmakt försäljning lantbruksfastighet', href: '/mallar/boende-vardag/fullmakt-forsaljning-lantbruk', note: 'Gård, skog och jordbruksmark.' },
   { name: 'Fullmakt tomträtt', href: '/mallar/boende-vardag/fullmakt-tomtratt-ombud', note: 'Tomträtt har egna regler.' },
   { name: 'Fullmakt fastighetsavstyckning', href: '/mallar/boende-vardag/fullmakt-fastighetsavstyckning', note: 'När en del av fastigheten ska styckas av.' },
@@ -317,8 +317,8 @@ export default function FullmaktSaljaBostadsrattPage() {
             Vi har mallar för både bostadsrätt och fast egendom, med fälten ovan förifyllda. Du anger
             objekt, pris och befogenheter, laddar ner som PDF och skriver under. 99 kr per dokument.
           </p>
-          <Link href="/mallar/boende-vardag/fullmakt-hyreslagenh-forsalj-2026" className="btn-gold inline-flex items-center gap-2">
-            Fullmakt för försäljning av lägenhet
+          <Link href="/mallar/boende-vardag/fullmakt-bostadsforsaljning" className="btn-gold inline-flex items-center gap-2">
+            Fullmakt för bostadsförsäljning
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6"/></svg>
           </Link>
         </div>

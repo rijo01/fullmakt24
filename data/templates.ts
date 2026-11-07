@@ -556,36 +556,41 @@ function generateTemplates(): TemplateInput[] {
 
 
 
-  // Fullmakt för lägenhetförsäljning 2026
+  // Fullmakt för överlåtelse eller byte av hyreslägenhet. Sluggen är kvar från
+  // den tidigare mallen "försäljning av lägenhet" (betalda köp och länkar).
+  // En hyresrätt kan inte säljas: överlåtelse kräver hyresvärdens samtycke eller
+  // hyresnämndens tillstånd (12 kap. 32–35 §§ jordabalken), och ersättning för
+  // överlåtelsen är straffbar (12 kap. 65 §). Kontrollerat på riksdagen.se 2026-11-07.
   templates.push({
     id: 128,
     slug: 'fullmakt-hyreslagenh-forsalj-2026',
-    name: 'Fullmakt för försäljning av lägenhet',
+    name: 'Fullmakt för överlåtelse eller byte av hyreslägenhet',
     category: 'Boende & Vardag',
     categorySlug: 'boende-vardag',
-    description: 'Fullmakt för en ombud att sälja din bostadsrätt eller hyresrätt åt dig, inklusive signera köpekontrakt.',
-    longDescription: 'Kan du inte närvara vid en bostadsrättsförsäljning? Denna fullmakt ger ditt ombud rätten att underteckna köpekontrakt, sköta kontakter med mäklare och köpare, och hantera allt kring försäljningen. Används vid sjukdom, utlandsvistelse eller om du av andra skäl inte kan vara på plats. Notera: mallen avser bostadsrätt. För fast egendom (villa) ska en fullmakt att sälja vara skriftlig (27 § andra stycket avtalslagen (1915:218)).',
-    uppdragText: 'Sälja den bostad som anges under Avser och i samband med försäljningen underteckna köpekontrakt och andra handlingar som behövs för att genomföra försäljningen.',
+    description: 'Fullmakt för ett ombud att söka hyresvärdens samtycke eller hyresnämndens tillstånd och genomföra överlåtelse eller byte av din hyreslägenhet.',
+    longDescription: 'En hyresrätt kan inte säljas. Den kan överlåtas med hyresvärdens samtycke (12 kap. 32 § jordabalken) eller, med hyresnämndens tillstånd, till en närstående som varaktigt bor med dig (34 §) eller genom byte mot en annan bostadslägenhet (35 §). Med den här fullmakten sköter ett ombud ansökan, kontakterna med hyresvärden och hyresnämnden och undertecknar överlåtelse- eller bytesavtalet åt dig, till exempel om du är utomlands eller sjuk. Det är straffbart att begära, avtala om eller ta emot ersättning för att överlåta en hyresrätt (12 kap. 65 §), och fullmakten ger ingen rätt till det.',
+    uppdragText: 'Företräda mig i ärendet om överlåtelse eller byte av den hyresrätt som anges under Avser. Ombudet får begära hyresvärdens samtycke, ansöka om tillstånd hos hyresnämnden och företräda mig där i ärendet, samt underteckna överlåtelse- eller bytesavtal och andra handlingar som behövs för att genomföra överlåtelsen eller bytet. Fullmakten ger inte rätt att begära, avtala om eller ta emot någon ersättning för överlåtelsen eller bytet (12 kap. 65 § jordabalken).',
     fields: [
-      { id: 'fullmaktsgivare_namn', label: 'Fullmaktsgivarens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
+      { id: 'fullmaktsgivare_namn', label: 'Hyresgästens fullständiga namn', type: 'text', placeholder: 'Anna Svensson', required: true, group: 'givare' },
       { id: 'fullmaktsgivare_pnr', label: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'givare' },
       { id: 'fullmaktsgivare_adress', label: 'Din nuvarande adress', type: 'address', placeholder: 'Gatuadress, postnummer, ort', required: true, group: 'givare' },
       { id: 'fullmaktshavare_namn', label: 'Ombudets fullständiga namn', type: 'text', placeholder: 'Erik Svensson', required: true, group: 'havare' },
       { id: 'fullmaktshavare_pnr', label: 'Ombudets personnummer', type: 'personnummer', placeholder: 'ÅÅMMDD-XXXX', required: true, group: 'havare' },
-      { id: 'objekt', label: 'Bostaden som ska säljas', type: 'textarea', placeholder: 'T.ex. Bostadsrätt lägenhet nr 42, BRF Solsidan, Storgatan 5, 111 22 Stockholm', required: true, group: 'detaljer' },
-      { id: 'pris_min', label: 'Lägsta accepterade pris (kr)', type: 'text', placeholder: 'T.ex. 3 500 000', required: false, group: 'detaljer' },
-      { id: 'giltighetstid', label: 'Fullmaktens giltighetstid', type: 'select', options: ['3 månader', '6 månader', '1 år', 'Till försäljning genomförd'], required: true, group: 'detaljer' },
+      { id: 'objekt', label: 'Hyreslägenheten och hyresvärden', type: 'textarea', placeholder: 'T.ex. Lägenhet nr 1102, Storgatan 5, 111 22 Stockholm. Hyresvärd: Bostadsbolaget AB', required: true, group: 'detaljer' },
+      { id: 'overlatelsetyp', label: 'Vad gäller ärendet', type: 'select', options: ['Byte mot en annan bostadslägenhet (12 kap. 35 § jordabalken)', 'Överlåtelse till närstående som varaktigt bor med mig (12 kap. 34 § jordabalken)', 'Överlåtelse med hyresvärdens samtycke (12 kap. 32 § jordabalken)'], required: true, group: 'detaljer' },
+      { id: 'ny_hyresgast', label: 'Den som ska ta över lägenheten (om känt)', type: 'text', placeholder: 'T.ex. Maria Svensson, eller bytespartens namn och lägenhet', required: false, group: 'detaljer' },
+      { id: 'giltighetstid', label: 'Fullmaktens giltighetstid', type: 'select', options: ['3 månader', '6 månader', '1 år', 'Tills överlåtelsen eller bytet är genomfört'], required: true, group: 'detaljer' },
     ],
     faq: [
-      { q: 'Kan jag ge någon fullmakt att sälja min bostadsrätt?', a: 'Ja. Fullmakt för bostadsrättsförsäljning är juridiskt giltig. Ombudet kan underteckna köpekontrakt och överlåtelsehandlingar. Mäklaren och BRF:en måste godkänna fullmakten och ombudet.' },
-      { q: 'Krävs notarie för säljfullmakt?', a: 'Inte enligt jordabalken. För fast egendom (villa, tomt) ska en fullmakt att sälja vara skriftlig (27 § andra stycket avtalslagen (1915:218)), och är säljarens underskrift på köpehandlingen inte bevittnad av två vittnen förklaras lagfartsansökan vilande (20 kap. 7 § 1 jordabalken (1970:994)). För bostadsrätt avgör mäklaren, köparen och föreningen vilka krav de har på fullmakten, så kontrollera med dem i förväg.' },
-      { q: 'Kan jag ange ett lägsta pris i fullmakten?', a: 'Ja, och det rekommenderas. Ange ett minimipris – ombudet kan inte acceptera ett bud under det utan att kontakta dig. Det skyddar dig mot oönskad försäljning till underpris.' },
-      { q: 'Hur lång ska fullmaktens giltighetstid vara?', a: 'Välj "Till försäljning genomförd" om du inte vet hur lång tid det tar. Välj en fast period om du vill ha kontroll – då löper uppdraget ut om försäljningen inte genomförts.' },
-      { q: 'Vad händer om ombudet missköter sig?', a: 'Ombudet ansvarar för handlingar utförda med stöd av fullmakten. Har ombudet handlat utanför fullmaktens befogenhet kan du bestrida handlingen. Anlita alltid någon du litar på.' },
+      { q: 'Kan man sälja en hyresrätt?', a: 'Nej. Den som begär, avtalar om eller tar emot särskild ersättning för att överlåta hyresrätten till en bostadslägenhet kan dömas till fängelse i högst två år, och ett avtalsvillkor om sådan ersättning är ogiltigt (12 kap. 65 § jordabalken). Även den som betalar kan dömas (65 b §). Det som går är att överlåta hyresrätten med hyresvärdens samtycke eller hyresnämndens tillstånd.' },
+      { q: 'När får jag överlåta min hyresrätt?', a: 'Med hyresvärdens samtycke (12 kap. 32 § jordabalken). Utan samtycke kan hyresnämnden ge tillstånd till överlåtelse till en närstående som varaktigt bor med dig, om du själv inte ska använda lägenheten (34 §), och till byte mot en annan bostadslägenhet om du har beaktansvärda skäl och bytet kan ske utan påtaglig olägenhet för hyresvärden (35 §).' },
+      { q: 'Vad får ombudet göra?', a: 'Begära hyresvärdens samtycke, ansöka om tillstånd hos hyresnämnden och företräda dig där, och underteckna överlåtelse- eller bytesavtalet. Ombudet får inte begära, avtala om eller ta emot någon ersättning för överlåtelsen.' },
+      { q: 'Vad händer om hyresvärden säger nej?', a: 'Vid byte och vid överlåtelse till en närstående som bor med dig kan du ansöka om tillstånd hos hyresnämnden. Vägrar hyresvärden samtycke utan skälig anledning, eller lämnar inget besked inom tre veckor, får du säga upp hyresavtalet (12 kap. 32 § andra stycket jordabalken).' },
+      { q: 'Gäller mallen för bostadsrätt?', a: 'Nej. Mallen gäller hyreslägenheter. För att sälja en bostadsrätt behövs en säljfullmakt, till exempel Fullmakt för bostadsförsäljning.' },
     ],
-    relatedIds: [126, 127],
-    legalInfo: 'Gäller för bostadsrätt. Fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)).',
-    keywords: ['fullmakt lägenhet', 'sälja bostadsrätt fullmakt', 'fullmakt mäklare', 'fullmakt bostad'],
+    relatedIds: [77, 131, 80],
+    legalInfo: 'Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Överlåtelse av hyresrätt kräver hyresvärdens samtycke eller hyresnämndens tillstånd (12 kap. 32–35 §§ jordabalken (1970:994)). Ersättning för överlåtelse av hyresrätt är förbjuden (12 kap. 65 §).',
+    keywords: ['fullmakt överlåtelse hyresrätt', 'fullmakt lägenhetsbyte', 'fullmakt byte hyreslägenhet', 'fullmakt hyresnämnden'],
   } as TemplateInput);
 
   // Bankfullmakt 2026
