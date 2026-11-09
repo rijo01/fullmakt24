@@ -4,6 +4,7 @@ import { useState, type ReactNode } from 'react'
 import Link from 'next/link'
 import { templates, categories, getTemplatesByCategory } from '@/data/templates'
 import type { TemplateContent } from '@/lib/template-seo'
+import { PACKAGES } from '@/lib/packages'
 
 // FAQ-svar i mall-JSON får innehålla länkar som [text](https://…). De visas som
 // klickbara länkar i FAQ-listan och som "text (url)" i FAQPage-schemat.
@@ -81,61 +82,31 @@ export default function TemplateDetail({ slug, seoContent }: { slug: string; seo
     })),
   } : null
 
+  // Produkten är en digital PDF som levereras direkt efter betalning: ingen
+  // frakt och ingen fysisk retur. Beskrivningen byggs här i stället för att
+  // hämtas från malltexten, så att schemat inte påstår något om mottagare.
   const productUrl = `https://fullmakt24.se/mallar/${t.categorySlug}/${t.slug}`
+  const offer = (name: string, price: number) => ({
+    '@type': 'Offer',
+    name,
+    price: String(price),
+    priceCurrency: 'SEK',
+    availability: 'https://schema.org/InStock',
+    url: productUrl,
+    seller: { '@type': 'Organization', name: 'Fullmakt24.se' },
+  })
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: t.name,
-    description: t.description,
+    description: `${t.name} – mall som du fyller i på webbplatsen och laddar ner som PDF direkt efter betalning.${t.bilingual ? ' Finns som PDF på svenska eller på svenska och engelska.' : ''}`,
     category: t.category,
     image: 'https://fullmakt24.se/og-image.png',
     sku: `mall-${t.id}`,
     brand: { '@type': 'Brand', name: 'Fullmakt24.se' },
-    offers: {
-      '@type': 'Offer',
-      price: '99',
-      priceCurrency: 'SEK',
-      availability: 'https://schema.org/InStock',
-      itemCondition: 'https://schema.org/NewCondition',
-      url: productUrl,
-      priceValidUntil: '2026-12-31',
-      seller: { '@type': 'Organization', name: 'Fullmakt24.se' },
-      shippingDetails: {
-        '@type': 'OfferShippingDetails',
-        shippingRate: {
-          '@type': 'MonetaryAmount',
-          value: '0',
-          currency: 'SEK',
-        },
-        shippingDestination: {
-          '@type': 'DefinedRegion',
-          addressCountry: 'SE',
-        },
-        deliveryTime: {
-          '@type': 'ShippingDeliveryTime',
-          handlingTime: {
-            '@type': 'QuantitativeValue',
-            minValue: 0,
-            maxValue: 0,
-            unitCode: 'DAY',
-          },
-          transitTime: {
-            '@type': 'QuantitativeValue',
-            minValue: 0,
-            maxValue: 0,
-            unitCode: 'DAY',
-          },
-        },
-      },
-      hasMerchantReturnPolicy: {
-        '@type': 'MerchantReturnPolicy',
-        applicableCountry: 'SE',
-        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
-        merchantReturnDays: 14,
-        returnMethod: 'https://schema.org/ReturnByMail',
-        returnFees: 'https://schema.org/FreeReturn',
-      },
-    },
+    offers: t.bilingual
+      ? [offer('PDF på svenska', PACKAGES.single.price), offer('PDF på svenska och engelska', PACKAGES.bilingual.price)]
+      : offer('PDF', PACKAGES.single.price),
   }
 
   return (
