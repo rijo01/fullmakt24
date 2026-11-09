@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Om Fullmakt24.se – digital tjänst för fullmakter och medgivanden',
+  alternates: { canonical: '/om' },
   description: 'Fullmakt24.se gör det enkelt att skapa fullmakter och medgivanden utformade enligt svensk avtalsrätt. Läs mer om oss och vår vision.',
 }
 

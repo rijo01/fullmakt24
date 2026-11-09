@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { Suspense } from 'react'
 import Link from 'next/link'
 import { categories, templates } from '@/data/templates'
@@ -10,6 +11,14 @@ const breadcrumbSchema = {
     { '@type': 'ListItem', position: 1, name: 'Hem', item: 'https://fullmakt24.se' },
     { '@type': 'ListItem', position: 2, name: 'Alla mallar', item: 'https://fullmakt24.se/mallar' },
   ],
+}
+
+// Självrefererande canonical: /mallar, eller /mallar?category=<slug> för en
+// känd kategori (de nio kategorisidorna i sitemapen).
+export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
+  const raw = (await searchParams).category
+  const category = typeof raw === 'string' && categories.some(c => c.slug === raw) ? raw : null
+  return { alternates: { canonical: category ? `/mallar?category=${category}` : '/mallar' } }
 }
 
 export default function MallarPage() {

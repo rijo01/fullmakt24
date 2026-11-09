@@ -6,6 +6,8 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import { templates } from '@/data/templates'
 
 export const metadata: Metadata = {
+  // Relativa canonical-adresser i sidornas metadata löses mot den här basen.
+  metadataBase: new URL('https://fullmakt24.se'),
   title: {
     default: 'Fullmakt24.se – Din fullmakt klar på 3 minuter',
     template: '%s | Fullmakt24.se',
@@ -39,7 +41,9 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
-  alternates: { canonical: 'https://fullmakt24.se' },
+  // Ingen canonical här: den ärvs av alla sidor som inte sätter en egen, och
+  // pekade därför tidigare på startsidan från t.ex. /mallar och /priser. Varje
+  // indexerbar sida sätter sin egen självrefererande canonical.
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

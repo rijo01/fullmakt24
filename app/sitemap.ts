@@ -12,10 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/priser`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/om`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/kontakt`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/villkor`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
-    { url: `${baseUrl}/integritet`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
-    { url: `${baseUrl}/cookies`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
-    { url: `${baseUrl}/api-docs`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${baseUrl}/blogg`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${baseUrl}/fullmakt-salja-bostadsratt`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/generalfullmakt`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
@@ -36,7 +32,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // /skapa-sidorna har noindex och hör inte hemma i sitemapen.
+  // /skapa-sidorna, villkor, integritet, cookies och api-docs har noindex och
+  // hör inte hemma i sitemapen.
   const templatePages: MetadataRoute.Sitemap = templates.map(t => ({
     url: `${baseUrl}/mallar/${t.categorySlug}/${t.slug}`,
     lastModified: now,

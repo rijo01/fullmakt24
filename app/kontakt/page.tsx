@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Kontakta oss – Fullmakt24.se',
+  alternates: { canonical: '/kontakt' },
   description: 'Har du frågor om fullmakter eller behöver hjälp med vår tjänst? Kontakta Fullmakt24.se via e-post. Vi svarar normalt inom 24 timmar.',
 }
 
