@@ -58,6 +58,8 @@ export default function SkapaPage() {
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState<Record<string, string>>({})
   const [paying, setPaying] = useState(false)
+  // Uttryckligt samtycke till direkt leverans och att ångerrätten upphör (2 kap. 11 § 11 distansavtalslagen).
+  const [consent, setConsent] = useState(false)
   const [credits, setCreditsState] = useState(0)
   // Tvåspråkiga mallar kan köpas med engelsk översättning i samma PDF.
   const [packageType, setPackageType] = useState<'single' | 'bilingual'>('single')
@@ -148,7 +150,7 @@ export default function SkapaPage() {
   }, [formData, slug])
 
   const handlePayment = useCallback(async () => {
-    if (!t) return
+    if (!t || !consent) return
     setPaying(true)
 
     // Tvåspråkig PDF kan bara väljas för mallar som har en engelsk version.
@@ -169,6 +171,7 @@ export default function SkapaPage() {
           templateSlug: t.slug,
           templateName: t.name,
           packageType: type,
+          consent: true,
         }),
       })
 
@@ -187,7 +190,7 @@ export default function SkapaPage() {
     } finally {
       setPaying(false)
     }
-  }, [t, formData, slug, packageType])
+  }, [t, formData, slug, packageType, consent])
 
   if (!t) {
     return (
@@ -583,10 +586,36 @@ export default function SkapaPage() {
                       </button>
                     )}
 
+                    {/* Information före beställning: 11 § lag (2002:562) om elektronisk handel */}
+                    <div className="max-w-sm mx-auto mb-4 text-left text-xs text-navy-500 bg-white border border-navy-100 rounded-xl p-4">
+                      <p className="font-semibold text-navy-600 mb-2">Så går köpet till</p>
+                      <ol className="list-decimal pl-4 space-y-1">
+                        <li>Granska dokumentet i förhandsvisningen. Fel rättar du genom att gå tillbaka och ändra innan du betalar.</li>
+                        <li>Kryssa i rutan nedan och betala via vår betalningsleverantör Stripe.</li>
+                        <li>Direkt efter betalningen laddar du ner PDF:en.</li>
+                      </ol>
+                      <p className="mt-2">Avtalet ingås på svenska. Vi sparar inte avtalet eller dokumentet hos oss: dina uppgifter finns bara i din webbläsare och betalningen registreras hos Stripe. Spara PDF:en och <Link href="/villkor" target="_blank" className="underline hover:text-navy-700">villkoren</Link> själv.</p>
+                    </div>
+
+                    {/* Samtycke: 2 kap. 11 § 11 lag (2005:59) om distansavtal */}
+                    <label className="max-w-sm mx-auto mb-4 flex items-start gap-3 text-left text-sm text-navy-600 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={consent}
+                        onChange={e => setConsent(e.target.checked)}
+                        required
+                        className="mt-1 h-4 w-4 shrink-0 accent-gold-600"
+                      />
+                      <span>
+                        Jag samtycker uttryckligen till att leveransen av dokumentet påbörjas direkt efter betalningen och godtar att jag därmed förlorar min ångerrätt.{' '}
+                        <Link href="/villkor" target="_blank" className="text-gold-700 underline hover:text-gold-800">Läs villkoren</Link>
+                      </span>
+                    </label>
+
                     <button
                       onClick={handlePayment}
-                      disabled={paying}
-                      className={`w-full max-w-sm mx-auto !py-4 text-lg ${credits > 0 ? 'btn-secondary' : 'btn-gold'}`}
+                      disabled={paying || !consent}
+                      className={`w-full max-w-sm mx-auto !py-4 text-lg ${credits > 0 ? 'btn-secondary' : 'btn-gold'} disabled:opacity-50 disabled:cursor-not-allowed`}
                     >
                       {paying ? (
                         <span className="flex items-center justify-center gap-2">

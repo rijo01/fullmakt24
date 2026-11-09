@@ -12,13 +12,13 @@ export default function VillkorPage() {
     <div className="section-padding py-12 lg:py-20">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl lg:text-4xl font-heading font-bold text-navy-500 mb-2">Allmänna villkor</h1>
-        <p className="text-sm text-navy-400 mb-10">Senast uppdaterade: 1 mars 2026</p>
+        <p className="text-sm text-navy-400 mb-10">Senast uppdaterade: 9 november 2026</p>
 
         <div className="space-y-8 text-navy-500">
           <section>
             <h2 className="font-heading font-bold text-navy-500 text-xl mb-3">1. Allmänt</h2>
             <p className="text-navy-400 leading-relaxed">
-              Dessa allmänna villkor gäller för alla tjänster som tillhandahålls av Fullmakt24 via webbplatsen fullmakt24.se. Genom att använda tjänsten godkänner du dessa villkor.
+              Dessa villkor gäller för tjänsterna på webbplatsen fullmakt24.se. Kontakt: support@fullmakt24.se. Säljarens fullständiga uppgifter framgår av betalningskvittot. Genom att använda tjänsten godkänner du dessa villkor.
             </p>
           </section>
 
@@ -45,10 +45,10 @@ export default function VillkorPage() {
           <section>
             <h2 className="font-heading font-bold text-navy-500 text-xl mb-3">4. Ångerrätt</h2>
             <p className="text-navy-400 leading-relaxed">
-              Enligt distansavtalslagen har du som konsument 14 dagars ångerrätt. Eftersom tjänsten avser digitalt innehåll som levereras omedelbart efter köp, samtycker du vid köpet till att ångerrätten upphör när dokumentet görs tillgängligt för nedladdning.
+              Dokumentet är digitalt innehåll som inte levereras på ett fysiskt medium och som du laddar ner direkt efter betalningen. Innan du betalar ber vi dig samtycka till att leveransen påbörjas direkt och att du därmed avstår från ångerrätten.
             </p>
             <p className="text-navy-400 leading-relaxed mt-2">
-              Trots detta erbjuder vi full återbetalning inom 14 dagar om du inte är nöjd med dokumentet. Kontakta support@fullmakt24.se med ditt betalnings-ID.
+              Oavsett ångerrätt ger vi full återbetalning inom 14 dagar från köpet om du inte är nöjd: mejla support@fullmakt24.se och ange ditt betalnings-ID.
             </p>
           </section>
 
@@ -99,9 +99,7 @@ export default function VillkorPage() {
           <section>
             <h2 className="font-heading font-bold text-navy-500 text-xl mb-3">10. Kontakt</h2>
             <div className="bg-navy-50 rounded-xl p-6 text-sm text-navy-500 space-y-1">
-              <p><strong>Företag:</strong> Fullmakt24</p>
-                            <p><strong>E-post:</strong> info@fullmakt24.se</p>
-              <p><strong>Support:</strong> support@fullmakt24.se</p>
+              <p><strong>E-post:</strong> support@fullmakt24.se</p>
             </div>
           </section>
         </div>

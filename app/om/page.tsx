@@ -43,14 +43,8 @@ export default function OmPage() {
           <div className="bg-gold-50 border border-gold-200 rounded-xl p-6 my-8">
             <h3 className="font-semibold text-gold-800 mb-2">Kontakta oss</h3>
             <p className="text-gold-700 text-sm mb-3">Har du frågor, förslag eller behöver hjälp? Vi finns här för dig.</p>
-            <p className="text-sm text-gold-700">E-post: <a href="mailto:support@fullmakt24.se" className="font-semibold hover:underline">support@fullmakt24.se</a></p>
-          </div>
-
-          <h2 className="font-heading font-bold text-navy-500 text-xl mt-10 mb-4">Företagsinformation</h2>
-          <div className="bg-navy-50 rounded-xl p-6 text-sm text-navy-500 space-y-1">
-            <p><strong>Företag:</strong> Fullmakt24</p>
-                        <p><strong>Webbplats:</strong> fullmakt24.se</p>
-            <p><strong>E-post:</strong> info@fullmakt24.se</p>
+            <p className="text-sm text-gold-700">Support: <a href="mailto:support@fullmakt24.se" className="font-semibold hover:underline">support@fullmakt24.se</a></p>
+            <p className="text-sm text-gold-700">Övriga frågor: <a href="mailto:info@fullmakt24.se" className="font-semibold hover:underline">info@fullmakt24.se</a></p>
           </div>
         </div>
       </div>

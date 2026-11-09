@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
     // Formulärdata (namn, personnummer m.m.) tas aldrig emot här. Den stannar i
     // webbläsaren och PDF:en skapas där, enligt integritetspolicyn. Skickar en
     // äldre klient ändå med den ignoreras den.
-    const { templateSlug, templateName, packageType = 'single' } = body
+    const { templateSlug, templateName, packageType = 'single', consent } = body
 
     const pkg = getPackage(packageType)
     // Både 'single' och 'bilingual' avser en specifik mall; paketköp gör det inte.
@@ -23,6 +23,14 @@ export async function POST(req: NextRequest) {
     if (isSingle && (!templateSlug || !templateName)) {
       return NextResponse.json({ error: 'Template info required' }, { status: 400 })
     }
+
+    // Varje köp (enskilt dokument och paket) kräver kundens uttryckliga samtycke
+    // till direkt leverans och att ångerrätten därmed upphör. Bara att samtycket
+    // gavs och när (servertid) sparas, i Stripe-metadata. Inga personuppgifter.
+    if (consent !== true) {
+      return NextResponse.json({ error: 'Consent required' }, { status: 400 })
+    }
+    const consentMetadata = { consent: 'true', consentAt: new Date().toISOString() }
 
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fullmakt24.se'
 
@@ -70,7 +78,9 @@ export async function POST(req: NextRequest) {
         credits: String(pkg.credits),
         templateSlug: templateSlug || '',
         templateName: templateName || '',
+        ...consentMetadata,
       },
+      payment_intent_data: { metadata: consentMetadata },
     })
 
     return NextResponse.json({ url: session.url })

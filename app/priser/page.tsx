@@ -21,6 +21,8 @@ interface Plan {
 
 export default function PriserPage() {
   const [loading, setLoading] = useState<PackageType | null>(null)
+  // Samtycke till direkt leverans och att ångerrätten därmed upphör, per paket.
+  const [consent, setConsent] = useState<Partial<Record<PackageType, boolean>>>({})
 
   const plans: Plan[] = [
     {
@@ -80,12 +82,13 @@ export default function PriserPage() {
   ]
 
   const buyPackage = async (type: PackageType) => {
+    if (!consent[type]) return
     setLoading(type)
     try {
       const res = await fetch('/api/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ packageType: type }),
+        body: JSON.stringify({ packageType: type, consent: true }),
       })
       const data = await res.json()
       if (data.url) {
@@ -154,13 +157,28 @@ export default function PriserPage() {
                 {plan.cta}
               </Link>
             ) : (
-              <button
-                onClick={() => buyPackage(plan.type)}
-                disabled={loading !== null}
-                className={`${plan.ctaStyle} w-full text-center text-sm disabled:opacity-60`}
-              >
-                {loading === plan.type ? 'Omdirigerar…' : plan.cta}
-              </button>
+              <>
+                <label className="mb-4 flex items-start gap-3 text-left text-xs text-navy-600 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={!!consent[plan.type]}
+                    onChange={e => setConsent(c => ({ ...c, [plan.type]: e.target.checked }))}
+                    required
+                    className="mt-0.5 h-4 w-4 shrink-0 accent-gold-600"
+                  />
+                  <span>
+                    Jag samtycker uttryckligen till att leveransen av dokumentet påbörjas direkt efter betalningen och godtar att jag därmed förlorar min ångerrätt.{' '}
+                    <Link href="/villkor" target="_blank" className="text-gold-700 underline hover:text-gold-800">Läs villkoren</Link>
+                  </span>
+                </label>
+                <button
+                  onClick={() => buyPackage(plan.type)}
+                  disabled={loading !== null || !consent[plan.type]}
+                  className={`${plan.ctaStyle} w-full text-center text-sm disabled:opacity-50 disabled:cursor-not-allowed`}
+                >
+                  {loading === plan.type ? 'Omdirigerar…' : plan.cta}
+                </button>
+              </>
             )}
           </div>
         ))}
