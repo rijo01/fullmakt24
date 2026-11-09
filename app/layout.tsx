@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://fullmakt24.se'),
   title: {
     default: 'Fullmakt24.se – Din fullmakt klar på 3 minuter',
+    // Enda stället där varumärket läggs till. Undersidornas titlar ska inte
+    // själva sluta med "Fullmakt24.se" (då blev det dubbelt), och sidor där
+    // varumärket redan står i titeln använder title.absolute.
     template: '%s | Fullmakt24.se',
   },
   description: `${templates.length} mallar för fullmakter och medgivanden, utformade enligt svensk avtalsrätt. Anpassade för svenska förhållanden. Klara att skriva ut och skriva under.`,

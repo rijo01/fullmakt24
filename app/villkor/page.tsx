@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Allmänna villkor – Fullmakt24.se',
+  title: 'Allmänna villkor',
   robots: { index: false, follow: true },
   alternates: { canonical: null },
   description: 'Läs våra allmänna villkor för användning av Fullmakt24.se. Här beskrivs dina rättigheter, priser, ångerrätt och ansvarsbegränsningar.',

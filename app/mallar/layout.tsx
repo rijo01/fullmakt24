@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { templates } from '@/data/templates'
 
 export const metadata: Metadata = {
-  title: `Alla fullmaktsmallar – ${templates.length} mallar enligt svensk avtalsrätt | Fullmakt24.se`,
+  title: `Alla fullmaktsmallar – ${templates.length} mallar enligt svensk avtalsrätt`,
   description: `Bläddra bland ${templates.length} fullmaktsmallar och medgivanden. Kategorier: Föräldrar & Barn, Bank & Myndigheter, Vård, Resa, Boende med mera. Skapa och ladda ner som PDF för 99 kr.`,
 }
 

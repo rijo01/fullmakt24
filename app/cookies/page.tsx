@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Cookiepolicy – Fullmakt24.se',
+  title: 'Cookiepolicy',
   robots: { index: false, follow: true },
   alternates: { canonical: null },
   description: 'Information om hur Fullmakt24.se använder cookies och liknande teknik. Läs om vilka cookies vi använder och hur du hanterar dem.',

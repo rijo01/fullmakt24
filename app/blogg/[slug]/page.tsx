@@ -14,11 +14,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const post = getBlogPost(slug)
-  if (!post) return { title: 'Guiden hittades inte | Fullmakt24.se' }
+  if (!post) return { title: 'Guiden hittades inte' }
 
   const canonical = `https://fullmakt24.se/blogg/${post.slug}`
   return {
-    title: `${post.metaTitle} | Fullmakt24.se`,
+    title: post.metaTitle,
     description: post.metaDescription,
     keywords: post.keywords,
     alternates: { canonical },

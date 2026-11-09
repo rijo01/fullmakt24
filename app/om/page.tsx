@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Om Fullmakt24.se – digital tjänst för fullmakter och medgivanden',
+  // Varumärket står redan i titeln, så titelmallen ska inte lägga till det igen.
+  title: { absolute: 'Om Fullmakt24.se – digital tjänst för fullmakter och medgivanden' },
   alternates: { canonical: '/om' },
   description: 'Fullmakt24.se gör det enkelt att skapa fullmakter och medgivanden utformade enligt svensk avtalsrätt. Läs mer om oss och vår vision.',
 }
