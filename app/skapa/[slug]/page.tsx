@@ -75,6 +75,11 @@ export default function SkapaPage() {
     setCreditsState(getCredits())
   }, [])
 
+  // Språkvalet från mallsidan (?sprak=sv-en). Kan ändras i steg 3.
+  useEffect(() => {
+    if (t?.bilingual && new URLSearchParams(window.location.search).get('sprak') === 'sv-en') setPackageType('bilingual')
+  }, [t])
+
   useEffect(() => {
     if (!slug) return
     const id = new URLSearchParams(window.location.search).get('kvitto') || ''

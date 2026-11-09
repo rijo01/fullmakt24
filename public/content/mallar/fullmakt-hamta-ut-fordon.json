@@ -2,23 +2,53 @@
   "slug": "fullmakt-hamta-ut-fordon",
   "seo": {
     "title": "Fullmakt att hämta ut fordon – Mall & Guide 2026 | Fullmakt24.se",
-    "metaDescription": "Fullmakt för att låta någon annan hämta ut ditt fordon från verkstad, parkering eller bärgare. Utformad enligt svensk lag. Klar på 3 minuter – ladda ner som PDF.",
+    "metaDescription": "Fullmakt för att låta någon annan hämta ut ditt fordon från verkstad, bärgningsföretag eller förvaring. Fyll i och ladda ner som PDF. Kontrollera mottagarens krav i förväg.",
     "h1": "Fullmakt att hämta ut fordon – Mall & Guide 2026",
-    "keywords": ["fullmakt hämta fordon", "fullmakt hämta bil verkstad", "fullmakt hämta bil parkering", "hämta ut bil åt annan", "fullmakt fordon mall"]
+    "keywords": [
+      "fullmakt hämta fordon",
+      "fullmakt hämta bil verkstad",
+      "fullmakt hämta bil parkering",
+      "hämta ut bil åt annan",
+      "fullmakt fordon mall"
+    ]
   },
   "content": {
-    "introduction": "En fullmakt att hämta ut fordon ger en annan person rätt att kvittera ut din bil, motorcykel eller annat fordon i ditt ställe – exempelvis från en verkstad efter reparation, från ett bärgnings- eller inlösenföretag eller från en bevakad parkering. Eftersom verkstäder och parkeringsbolag normalt bara lämnar ut ett fordon till den registrerade ägaren krävs ett skriftligt mandat när någon annan ska hämta det.\n\nMallen anger tydligt vem som får hämta ut fordonet, vilket fordon det gäller (registreringsnummer) och varifrån det ska hämtas. Du fyller i uppgifterna, laddar ner dokumentet som PDF och låter ombudet ta med det tillsammans med legitimation.",
-    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. och ger ombudet behörighet att kvittera ut fordonet i ditt namn. Observera att en verkstad enligt sin retentionsrätt får hålla kvar fordonet tills reparationen är betald – ombudet kan därför behöva reglera eventuella avgifter vid uthämtningen. Verkstaden eller parkeringsbolaget kräver vanligtvis att ombudet visar både fullmakten och giltig legitimation.",
-    "howToGuide": "Steg 1: Ange dina uppgifter som fordonsägare och fullmaktsgivare – namn, personnummer och adress.\nSteg 2: Fyll i ombudets namn och personnummer – den person som ska hämta fordonet.\nSteg 3: Specificera fordonet med registreringsnummer, märke och modell så att det inte kan förväxlas.\nSteg 4: Ange varifrån fordonet ska hämtas, t.ex. verkstadens eller parkeringens namn och adress.\nSteg 5: Avgränsa uppdraget – får ombudet enbart hämta fordonet, eller även betala reparation och kvittera handlingar?\nSteg 6: Skriv under fullmakten och låt ombudet ta med den tillsammans med sin legitimation.",
-    "commonMistakes": "1. Saknar registreringsnummer – Utan tydlig identifikation av fordonet kan verkstaden vägra att lämna ut det.\n\n2. Otydligt om betalning – Ange om ombudet får betala obetald reparation, annars kan fordonet hållas kvar enligt verkstadens retentionsrätt.\n\n3. Ombudet glömmer legitimation – Fullmakten ensam räcker sällan; den som hämtar måste kunna styrka sin identitet.\n\n4. Fel ägaruppgift – Den som ger fullmakten bör vara registrerad ägare, annars kan utlämnaren ifrågasätta behörigheten.\n\n5. Ingen tidsangivelse – En odaterad fullmakt skapar osäkerhet; ange datum och gärna en sista giltighetsdag.",
+    "introduction": "En fullmakt att hämta ut fordon ger en annan person rätt att hämta din bil, motorcykel eller ditt andra fordon i ditt ställe. Vad som gäller beror på var fordonet står:\n\nVerkstad: efter en reparation eller service. Verkstaden kan ha rätt att hålla kvar fordonet tills arbetet är betalt, så ange i fullmakten om ombudet får betala.\n\nBärgningsföretag: när fordonet har bärgats efter ett haveri eller en olycka. Bärgaren kan vilja att kostnaden för bärgningen är betald eller att försäkringsbolaget har godkänt den innan fordonet lämnas ut.\n\nFörvaring eller uppställningsplats: när fordonet står förvarat, till exempel efter att det har flyttats av kommunen, Polisen eller väghållaren. Fråga den som har flyttat eller förvarar fordonet vad som krävs för att det ska lämnas ut och vilka avgifter som ska betalas.\n\nVarje verkstad, bärgare och förvaringsplats avgör själv om den godtar fullmakten och vad den kräver utöver den, till exempel legitimation eller en egen blankett. Kontakta därför mottagaren innan ombudet åker dit. I mallen anger du vem som får hämta ut fordonet, vilket fordon det gäller och varifrån det ska hämtas.",
+    "legalValidity": "Fullmakten bygger på fullmaktsreglerna i avtalslagen (1915:218) 2 kap. Den visar att ombudet har din behörighet att hämta ut fordonet, men mottagaren avgör själv om den godtar fullmakten. En verkstad, en bärgare eller den som förvarar fordonet kan ha rätt att hålla kvar det tills kostnaderna är betalda, så ange om ombudet får betala och kontrollera mottagarens krav i förväg.",
+    "howToGuide": "Steg 1: Ange dina uppgifter som fordonsägare och fullmaktsgivare – namn, personnummer och adress.\nSteg 2: Fyll i ombudets namn och personnummer – den person som ska hämta fordonet.\nSteg 3: Ange fordonet med registreringsnummer, märke och modell så att det inte kan förväxlas.\nSteg 4: Ange varifrån fordonet ska hämtas: verkstad, bärgningsföretag eller förvaringsplats, med namn och adress.\nSteg 5: Avgränsa uppdraget – får ombudet bara hämta fordonet, eller också betala kostnader och kvittera handlingar?\nSteg 6: Kontakta mottagaren och fråga vad den kräver, skriv sedan under och ge fullmakten till ombudet.",
+    "commonMistakes": "1. Saknar registreringsnummer – utan tydlig identifiering av fordonet kan mottagaren vägra att lämna ut det.\n\n2. Otydligt om betalning – ange om ombudet får betala reparation, bärgning eller förvaring, annars kan fordonet hållas kvar.\n\n3. Inte kontrollerat mottagarens krav – verkstäder, bärgare och förvaringsplatser kan ha olika krav, till exempel legitimation eller egen blankett.\n\n4. Fel ägaruppgift – den som ger fullmakten bör vara registrerad ägare, annars kan mottagaren ifrågasätta behörigheten.\n\n5. Ingen tidsangivelse – ange datum och gärna en sista giltighetsdag.",
     "faq": [
-      {"question": "Måste jag vara registrerad ägare för att ge fullmakten?", "answer": "Normalt ja. Verkstäder och parkeringsbolag lämnar ut fordonet mot fullmakt från den som står som ägare. Är du inte ägare bör ägaren skriva under."},
-      {"question": "Kan ombudet betala reparationen åt mig?", "answer": "Bara om fullmakten uttryckligen ger den rätten. Eftersom verkstaden får hålla kvar fordonet tills skulden är betald bör du ange om ombudet får reglera avgiften."},
-      {"question": "Behöver ombudet ta med legitimation?", "answer": "Ja. De flesta verkstäder och parkeringsbolag kräver giltig legitimation utöver fullmakten innan de lämnar ut ett fordon."},
-      {"question": "Gäller fullmakten för hämtning från Kronofogden eller inlösen?", "answer": "Vid utmätning eller inlösen kan särskilda krav gälla. Kontakta den aktuella myndigheten eller företaget i förväg och ange ärendet tydligt i fullmakten."},
-      {"question": "Hur länge gäller fullmakten?", "answer": "Den gäller tills den återkallas eller tills angivet slutdatum. För en enstaka uthämtning är det lämpligt att sätta en kort giltighetstid."}
+      {
+        "question": "Måste jag vara registrerad ägare för att ge fullmakten?",
+        "answer": "Det är tryggast. Är du inte registrerad ägare bör ägaren skriva under, eftersom mottagaren kan vilja se att fullmakten kommer från ägaren."
+      },
+      {
+        "question": "Vad är skillnaden mellan att hämta från verkstad, bärgare och förvaring?",
+        "answer": "Verkstaden har utfört ett arbete och kan hålla kvar fordonet tills det är betalt. Bärgaren har transporterat fordonet och kan vilja ha bärgningen betald eller godkänd av försäkringsbolaget. Vid förvaring, till exempel efter att fordonet har flyttats av kommunen eller Polisen, är det den som förvarar fordonet som avgör vad som krävs för utlämning."
+      },
+      {
+        "question": "Kan ombudet betala kostnaderna åt mig?",
+        "answer": "Bara om fullmakten ger den rätten. Ange om ombudet får betala reparation, bärgning eller förvaringsavgift."
+      },
+      {
+        "question": "Behöver ombudet ta med legitimation?",
+        "answer": "Räkna med det. Mottagaren kan vilja kontrollera ombudets identitet innan fordonet lämnas ut, så fråga i förväg."
+      },
+      {
+        "question": "Godtar alla verkstäder och bärgare fullmakten?",
+        "answer": "Det avgör varje mottagare. Vissa har egna blanketter eller rutiner, så kontakta dem innan ombudet åker dit."
+      },
+      {
+        "question": "Hur länge gäller fullmakten?",
+        "answer": "Den gäller tills den återkallas eller tills angivet slutdatum. För en enstaka uthämtning är det lämpligt att sätta en kort giltighetstid."
+      }
     ],
-    "relatedSearchTerms": ["fullmakt hämta fordon", "fullmakt hämta bil verkstad", "fullmakt hämta bil parkering", "fullmakt fordon pdf", "fullmakt hämta ut fordon mall"]
+    "relatedSearchTerms": [
+      "fullmakt hämta fordon",
+      "fullmakt hämta bil verkstad",
+      "fullmakt hämta bil bärgning",
+      "fullmakt hämta ut fordon mall"
+    ]
   },
   "schema": {
     "faqSchema": true,
@@ -26,8 +56,14 @@
     "breadcrumbSchema": true
   },
   "internalLinks": [
-    {"text": "Alla mallar", "href": "/mallar"},
-    {"text": "Mallar i Resa & Transport", "href": "/mallar?category=resa-transport"}
+    {
+      "text": "Alla mallar",
+      "href": "/mallar"
+    },
+    {
+      "text": "Mallar i Resa & Transport",
+      "href": "/mallar?category=resa-transport"
+    }
   ],
-  "lastUpdated": "2026-05-29"
+  "lastUpdated": "2026-11-09"
 }

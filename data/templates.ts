@@ -235,7 +235,7 @@ function generateTemplates(): TemplateInput[] {
 
   // === RESA & TRANSPORT (21-35) ===
   const resaTemplates: Partial<TemplateInput>[] = [
-    { id: 21, slug: 'fullmakt-hamta-ut-fordon', name: 'Fullmakt att hämta ut fordon', description: 'Fullmakt för att hämta ut annans fordon från verkstad eller parkering.' },
+    { id: 21, slug: 'fullmakt-hamta-ut-fordon', name: 'Fullmakt att hämta ut fordon', description: 'Fullmakt för att hämta ut någon annans fordon från verkstad, bärgningsföretag eller förvaring.' },
     { id: 22, slug: 'fullmakt-bilforsakring', name: 'Fullmakt för bilförsäkring', description: 'Fullmakt att teckna eller ändra bilförsäkring.' },
     { id: 23, slug: 'fullmakt-besiktning', name: 'Fullmakt för besiktning', description: 'Fullmakt att besikta annans fordon.' },
     { id: 24, slug: 'resefullmakt-vuxen', name: 'Resefullmakt för vuxen', description: 'Generell resefullmakt för vuxen person.' },
@@ -336,7 +336,7 @@ function generateTemplates(): TemplateInput[] {
     { id: 66, slug: 'fullmakt-migrationsverket', name: 'Fullmakt för Migrationsverket', description: 'Fullmakt att företräda hos Migrationsverket.' },
     { id: 67, slug: 'fullmakt-tingsratten', name: 'Fullmakt för tingsrätten', description: 'Fullmakt att företräda vid tingsrätten.' },
     { id: 68, slug: 'fullmakt-aktiebolag', name: 'Fullmakt för aktiebolagsärenden', description: 'Fullmakt att agera för aktiebolag.' },
-    { id: 69, slug: 'fullmakt-handelsbanken', name: 'Fullmakt specificerad för Handelsbanken', description: 'Fullmakt anpassad för Handelsbankens krav.' },
+    { id: 69, slug: 'fullmakt-handelsbanken', name: 'Fullmakt för ärenden hos Handelsbanken', description: 'Fullmakt där du ger ett ombud rätt att sköta avgränsade ärenden åt dig hos Handelsbanken. Banken har egna rutiner och blanketter.' },
     { id: 70, slug: 'fullmakt-csp-konto', name: 'Fullmakt för CSN-ärenden', description: 'Fullmakt att företräda hos CSN.' },
   ];
 

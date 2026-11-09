@@ -31,11 +31,45 @@ function renderFaqAnswer(text: string) {
   return parts
 }
 
+type Lang = 'single' | 'bilingual'
+
+/** Val mellan svensk och tvåspråkig PDF, med totalpris, innan ifyllningen. */
+function LanguageChoice({ name, lang, onChange }: { name: string; lang: Lang; onChange: (l: Lang) => void }) {
+  const options: { value: Lang; title: string; desc: string }[] = [
+    { value: 'single', title: 'Svenska', desc: 'PDF på svenska.' },
+    { value: 'bilingual', title: 'Svenska + engelska', desc: 'Svensk original och engelsk översättning i samma PDF.' },
+  ]
+  return (
+    <fieldset className="space-y-2">
+      <legend className="text-sm font-semibold text-navy-600 mb-2">Välj språk</legend>
+      {options.map(o => (
+        <label
+          key={o.value}
+          className={`flex items-start gap-3 p-3 rounded-xl border-2 cursor-pointer transition-colors ${lang === o.value ? 'border-gold-400 bg-gold-50' : 'border-navy-100 hover:border-navy-200'}`}
+        >
+          <input type="radio" name={name} value={o.value} checked={lang === o.value} onChange={() => onChange(o.value)} className="mt-1 accent-gold-500" />
+          <span className="flex-1">
+            <span className="flex items-center justify-between gap-2">
+              <span className="text-sm font-semibold text-navy-600">{o.title}</span>
+              <span className="text-sm font-bold text-navy-600">{PACKAGES[o.value].price} kr</span>
+            </span>
+            <span className="block text-xs text-navy-400 mt-0.5">{o.desc}</span>
+          </span>
+        </label>
+      ))}
+      <p className="text-sm text-navy-600 pt-1">
+        Totalt: <strong>{PACKAGES[lang].price} kr</strong> <span className="text-xs text-navy-400">· engångsbetalning, du kan ändra valet i steg 3</span>
+      </p>
+    </fieldset>
+  )
+}
+
 // seoContent läses på servern (page.tsx) och skickas hit, så att den synliga
 // FAQ:n och FAQPage-schemat byggs från exakt samma lista redan i server-HTML:en.
 export default function TemplateDetail({ slug, seoContent }: { slug: string; seoContent: TemplateContent | null }) {
   const t = templates.find(tp => tp.slug === slug)
   const [faqOpen, setFaqOpen] = useState<number | null>(null)
+  const [lang, setLang] = useState<Lang>('single')
 
   if (!t) {
     return (
@@ -47,6 +81,8 @@ export default function TemplateDetail({ slug, seoContent }: { slug: string; seo
   }
 
   const cat = categories.find(c => c.slug === t.categorySlug)
+  // Språkvalet följer med till /skapa, där det kan ändras i steg 3.
+  const skapaHref = `/skapa/${t.slug}${t.bilingual && lang === 'bilingual' ? '?sprak=sv-en' : ''}`
   const related = getTemplatesByCategory(t.categorySlug).filter(r => r.id !== t.id).slice(0, 4)
   const baseFaqs = (seoContent?.content?.faq || t?.faq || []) as Array<Record<string, string>>
   // Tvåspråkiga mallar får en egen fråga om engelsk version – både i listan och
@@ -56,7 +92,7 @@ export default function TemplateDetail({ slug, seoContent }: { slug: string; seo
         ...baseFaqs.filter(f => !/engelska/i.test(('question' in f ? f.question : f.q) || '')),
         {
           question: 'Kan jag få fullmakten på engelska?',
-          answer: `Ja. ${t.name} finns som tvåspråkig PDF för 149 kr: den svenska originalversionen först och en engelsk översättning som extra sida i samma dokument. Du väljer språk i steg 3 när du skapar dokumentet. Det är den versionen du vill ha om handlingen ska visas upp för gränskontroll, flygbolag, sjukvård eller hotell utomlands.`,
+          answer: `Ja. ${t.name} finns som tvåspråkig PDF för 149 kr: den svenska originalversionen först och en engelsk översättning som extra sida i samma dokument. Du väljer språk innan du fyller i, och kan ändra valet i steg 3 när du skapar dokumentet. Det är den versionen du vill ha om handlingen ska visas upp för gränskontroll, flygbolag, sjukvård eller hotell utomlands.`,
         },
       ]
     : baseFaqs
@@ -135,6 +171,12 @@ export default function TemplateDetail({ slug, seoContent }: { slug: string; seo
             {seoContent?.seo?.h1 || t.name}
           </h1>
 
+          {t.bilingual && (
+            <div className="lg:hidden card p-4 mb-6">
+              <LanguageChoice name="sprak-mobil" lang={lang} onChange={setLang} />
+            </div>
+          )}
+
           {/* Steps indicator */}
           <div className="flex items-center gap-4 mb-10 p-4 bg-navy-50 rounded-xl">
             {['Fyll i', 'Granska', 'Ladda ner'].map((s, i) => (
@@ -149,9 +191,9 @@ export default function TemplateDetail({ slug, seoContent }: { slug: string; seo
           {/* ═══ SEO CONTENT: Introduction ═══ */}
           {seoContent?.content?.introduction ? (
             <div className="card p-6 mb-8">
-              <h2 className="font-heading font-bold text-navy-500 text-xl mb-4">Vad är {t.name.toLowerCase()}?</h2>
+              <h2 className="font-heading font-bold text-navy-500 text-xl mb-4">Vad är {t.name.charAt(0).toLowerCase() + t.name.slice(1)}?</h2>
               {seoContent?.content?.introduction?.split('\n').filter(Boolean).map((p, i) => (
-                <p key={i} className="text-navy-500 leading-relaxed mb-3 last:mb-0">{p}</p>
+                <p key={i} className="text-navy-500 leading-relaxed mb-3 last:mb-0">{renderFaqAnswer(p)}</p>
               ))}
             </div>
           ) : (
@@ -168,7 +210,7 @@ export default function TemplateDetail({ slug, seoContent }: { slug: string; seo
               <div>
                 <h3 className="font-semibold text-emerald-800 mb-2">Juridisk giltighet</h3>
                 <p className="text-sm text-emerald-700 leading-relaxed">
-                  {seoContent?.content?.legalValidity || t?.legalInfo || ''}
+                  {renderFaqAnswer(seoContent?.content?.legalValidity || t?.legalInfo || '')}
                 </p>
               </div>
             </div>
@@ -263,7 +305,12 @@ export default function TemplateDetail({ slug, seoContent }: { slug: string; seo
             <div className="card p-6 border-gold-200 border-2">
               <h3 className="font-heading font-bold text-navy-500 text-lg mb-3">Skapa denna fullmakt</h3>
               <p className="text-sm text-navy-400 mb-6">Fyll i dina uppgifter och ladda ner som PDF direkt. Det tar bara 3 minuter.</p>
-              <Link href={`/skapa/${t.slug}`} className="btn-gold w-full text-center">
+              {t.bilingual && (
+                <div className="mb-5">
+                  <LanguageChoice name="sprak-desktop" lang={lang} onChange={setLang} />
+                </div>
+              )}
+              <Link href={skapaHref} className="btn-gold w-full text-center">
                 Skapa nu →
               </Link>
               <div className="mt-4 space-y-2 text-xs text-navy-400">
@@ -274,23 +321,14 @@ export default function TemplateDetail({ slug, seoContent }: { slug: string; seo
                   </div>
                 ))}
               </div>
-              <div className="mt-5 pt-4 border-t border-navy-100">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-navy-400">Pris:</span>
-                  <div>
-                    <span className="font-bold text-navy-600">99 kr</span>
+              {!t.bilingual && (
+                <div className="mt-5 pt-4 border-t border-navy-100">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-navy-400">Pris:</span>
+                    <span className="font-bold text-navy-600">{PACKAGES.single.price} kr</span>
                   </div>
                 </div>
-                {t.bilingual && (
-                  <div className="mt-3 flex items-start gap-2 text-xs text-navy-500">
-                    <span aria-hidden="true">🌍</span>
-                    <span>
-                      Finns även som tvåspråkig PDF (svenska + engelska) –{' '}
-                      <span className="font-semibold text-navy-600">149 kr</span>
-                    </span>
-                  </div>
-                )}
-              </div>
+              )}
 
               {/* Paketbanner – diskret tips om paketpris */}
               <Link
@@ -324,8 +362,8 @@ export default function TemplateDetail({ slug, seoContent }: { slug: string; seo
 
       {/* Mobile sticky CTA */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-xl border-t border-navy-100 z-40">
-        <Link href={`/skapa/${t.slug}`} className="btn-gold w-full text-center">
-          Skapa {t.name} →
+        <Link href={skapaHref} className="btn-gold w-full text-center">
+          {t.bilingual ? `Skapa – ${PACKAGES[lang].price} kr →` : `Skapa ${t.name} →`}
         </Link>
       </div>
     </div>
