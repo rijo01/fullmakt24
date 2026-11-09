@@ -3,6 +3,7 @@ import { Suspense } from 'react'
 import Link from 'next/link'
 import { categories, templates } from '@/data/templates'
 import { MallarBrowser } from './MallarBrowser'
+import { canonicalWithOg } from '@/lib/og'
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -13,12 +14,12 @@ const breadcrumbSchema = {
   ],
 }
 
-// Självrefererande canonical: /mallar, eller /mallar?category=<slug> för en
+// Självrefererande canonical och og:url: /mallar, eller /mallar?category=<slug> för en
 // känd kategori (de nio kategorisidorna i sitemapen).
 export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const raw = (await searchParams).category
   const category = typeof raw === 'string' && categories.some(c => c.slug === raw) ? raw : null
-  return { alternates: { canonical: category ? `/mallar?category=${category}` : '/mallar' } }
+  return canonicalWithOg(category ? `/mallar?category=${category}` : '/mallar')
 }
 
 export default function MallarPage() {

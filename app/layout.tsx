@@ -4,6 +4,7 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { templates } from '@/data/templates'
+import { baseOpenGraph } from '@/lib/og'
 
 export const metadata: Metadata = {
   // Relativa canonical-adresser i sidornas metadata löses mot den här basen.
@@ -25,15 +26,8 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-icon.png',
   },
-  openGraph: {
-    type: 'website',
-    locale: 'sv_SE',
-    url: 'https://fullmakt24.se',
-    siteName: 'Fullmakt24.se',
-    title: 'Fullmakt24.se – Din fullmakt klar på 3 minuter',
-    description: 'Över 200 mallar för fullmakter och medgivanden, utformade enligt svensk avtalsrätt.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
-  },
+  // Utan og:url, så att ingen sida ärver startsidans adress (se lib/og.ts).
+  openGraph: baseOpenGraph,
   twitter: {
     card: 'summary_large_image',
     title: 'Fullmakt24.se – Din fullmakt klar på 3 minuter',

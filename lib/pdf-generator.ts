@@ -30,6 +30,8 @@ export interface PdfField {
   label: string
   /** Etikett på den engelska översättningssidan. Saknas den används den svenska. */
   labelEn?: string
+  /** Obligatoriskt i formuläret. Ett tomt frivilligt personnummer lämnar ingen linje i löptexten. */
+  required?: boolean
   value: string
 }
 
@@ -883,7 +885,7 @@ function persons(data: PdfData, role: PdfRole): Person[] {
     if (f.role !== role || !f.key) continue
     const p = byIndex.get(f.person || 1) || { namn: '', pnr: '', hasPnr: false, undertecknare: '' }
     if (f.key === 'namn') p.namn = f.value.trim()
-    if (f.key === 'pnr') { p.pnr = f.value.trim(); p.hasPnr = true }
+    if (f.key === 'pnr') { p.pnr = f.value.trim(); p.hasPnr = f.required !== false || !!p.pnr }
     if (f.key === 'undertecknare') p.undertecknare = f.value.trim()
     byIndex.set(f.person || 1, p)
   }

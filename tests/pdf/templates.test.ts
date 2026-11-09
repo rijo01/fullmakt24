@@ -113,7 +113,7 @@ async function checkTemplate(t: Template): Promise<Problem[]> {
       checkVersion(t, values, pages.slice(0, firstEn).flat(), 'sv', problems)
       checkVersion(t, values, pages.slice(firstEn).flat(), 'en', problems)
     }
-    for (const f of t.fields) if (!fieldLabelsEn[f.id]) problems.push({ slug: t.slug, problem: 'engelsk etikett saknas', field: f.id, detail: f.label })
+    for (const f of t.fields) if (!(f.labelEn ?? fieldLabelsEn[f.id])) problems.push({ slug: t.slug, problem: 'engelsk etikett saknas', field: f.id, detail: f.label })
   }
   return problems
 }
@@ -140,4 +140,21 @@ test('förhandsvisningen har vattenstämpel, den betalda PDF:en inte', async () 
   const paid = (await pdfTextItems(generatePdf(buildPaidDocument(t, values, false)).output('arraybuffer'))).flat()
   assert.ok(preview.includes('FÖRHANDSVISNING'))
   assert.ok(!paid.includes('FÖRHANDSVISNING'))
+})
+
+test('resefullmakt-barn-eu: personnummer är frivilligt och kan utelämnas', async () => {
+  const t = templates.find(x => x.slug === 'resefullmakt-barn-eu')!
+  for (const id of ['givare_pnr', 'havare_pnr', 'barn_pnr']) assert.equal(t.fields.find(f => f.id === id)!.required, false, id)
+  const values = fillTemplate(t)
+  for (const id of ['givare_pnr', 'havare_pnr', 'barn_pnr']) values[id] = ''
+  for (const bilingual of [false, true]) {
+    const text = (await pdfTextItems(generatePdf(buildPaidDocument(t, values, bilingual)).output('arraybuffer'))).flat().join(' ')
+    // Namnen står i uppdragsmeningen utan en tom personnummerlinje efter.
+    assert.ok(!text.includes(`${values.givare_namn} (`), 'tom personnummerlinje efter fullmaktsgivaren')
+    assert.ok(!text.includes(`${values.havare_namn} (`), 'tom personnummerlinje efter den medföljande vuxna')
+    // Formulärets anvisning "(frivilligt)" hör inte hemma i dokumentet.
+    assert.ok(!text.includes('frivilligt'), 'anvisningen (frivilligt) står i PDF:en')
+    assert.ok(text.includes('Medföljande vuxen'))
+    for (const id of ['givare_pass', 'havare_pass', 'barn_pass']) assert.ok(text.includes(values[id]), id)
+  }
 })

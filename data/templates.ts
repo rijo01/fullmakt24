@@ -62,6 +62,10 @@ export interface TemplateFieldInput {
   options?: string[];
   group?: 'givare' | 'havare' | 'detaljer';
   helpText?: string;
+  /** Etikett i PDF:en när formulärets etikett har en ifyllnadsanvisning, t.ex. "(frivilligt)". */
+  pdfLabel?: string;
+  /** Engelsk etikett för just den här mallen, i stället för fieldLabelsEn. */
+  labelEn?: string;
 }
 
 /** En mall som den skrivs i malldatan, före rolltilldelningen. */
@@ -181,14 +185,38 @@ const dateRangeFields: TemplateFieldInput[] = [
   { id: 'giltig_till', label: 'Giltig till', type: 'date', required: true, group: 'detaljer' },
 ];
 
+// Resefullmakt för barn inom EU: Polisen anger att namn och kontaktuppgifter är
+// det viktiga och nämner inte personnummer. Personnummer är därför frivilligt
+// för barnet och de vuxna, med födelsedatum och passnummer som alternativ.
+const identityHelp = 'Saknas personnummer kan du ange födelsedatum eller passnummer i stället.';
+const resefullmaktBarnEuFields: TemplateFieldInput[] = [
+  commonGivareFields[0],
+  { id: 'givare_pnr', label: 'Personnummer (frivilligt)', pdfLabel: 'Personnummer', type: 'personnummer', placeholder: 'ÅÅÅÅMMDD-XXXX', required: false, group: 'givare', helpText: identityHelp },
+  { id: 'givare_fodelsedatum', label: 'Födelsedatum (frivilligt)', pdfLabel: 'Födelsedatum', type: 'date', required: false, group: 'givare' },
+  { id: 'givare_pass', label: 'Passnummer (frivilligt)', pdfLabel: 'Passnummer', type: 'text', placeholder: 'AA1234567', required: false, group: 'givare' },
+  ...commonGivareFields.slice(2),
+  { id: 'havare_namn', label: 'Medföljande vuxen', labelEn: 'Accompanying adult', type: 'text', placeholder: 'Erik Eriksson', required: true, group: 'havare' },
+  { id: 'havare_pnr', label: 'Personnummer (frivilligt)', pdfLabel: 'Personnummer', labelEn: 'Personal identity number', type: 'personnummer', placeholder: 'ÅÅÅÅMMDD-XXXX', required: false, group: 'havare', helpText: identityHelp },
+  { id: 'havare_fodelsedatum', label: 'Födelsedatum (frivilligt)', pdfLabel: 'Födelsedatum', type: 'date', required: false, group: 'havare' },
+  { id: 'havare_pass', label: 'Passnummer (frivilligt)', pdfLabel: 'Passnummer', type: 'text', placeholder: 'AA1234567', required: false, group: 'havare' },
+  ...commonHavareFields.slice(2),
+  ...dateRangeFields,
+  { id: 'barn_namn', label: 'Barnets namn', type: 'text', placeholder: 'Lisa Andersson', required: true, group: 'detaljer' },
+  { id: 'barn_pnr', label: 'Barnets personnummer (frivilligt)', pdfLabel: 'Barnets personnummer', type: 'personnummer', placeholder: 'ÅÅÅÅMMDD-XXXX', required: false, group: 'detaljer', helpText: identityHelp },
+  { id: 'barn_foddatum', label: 'Barnets födelsedatum (frivilligt)', pdfLabel: 'Barnets födelsedatum', type: 'date', required: false, group: 'detaljer' },
+  { id: 'barn_pass', label: 'Barnets passnummer (frivilligt)', pdfLabel: 'Barnets passnummer', type: 'text', placeholder: 'AA1234567', required: false, group: 'detaljer' },
+  { id: 'syfte', label: 'Syfte med fullmakten', type: 'textarea', placeholder: 'Beskriv syftet...', required: true, group: 'detaljer' },
+  { id: 'begransningar', label: 'Eventuella begränsningar', type: 'textarea', placeholder: 'Ange eventuella begränsningar...', required: false, group: 'detaljer' },
+];
+
 function generateTemplates(): TemplateInput[] {
   const templates: TemplateInput[] = [];
 
   // === FÖRÄLDRAR & BARN (1-20) ===
   const foraldrarTemplates: Partial<TemplateInput>[] = [
     { id: 1, slug: 'foraldraredgivande-resa-annan-vuxen', name: 'Föräldramedgivande – resa med annan vuxen', description: 'Medgivande för barn att resa med annan vuxen än vårdnadshavare.' },
-    { id: 2, slug: 'reseintyg-barn-internationell', name: 'Reseintyg för barn – internationell resa', description: 'Intyg som krävs vid internationella resor med barn.' },
-    { id: 3, slug: 'resefullmakt-barn-eu', name: 'Resefullmakt för barn inom EU', description: 'Fullmakt specifikt anpassad för resor inom EU med barn.' },
+    { id: 2, slug: 'reseintyg-barn-internationell', name: 'Reseintyg för barn – internationell resa', description: 'Intyg från vårdnadshavare inför ett barns internationella resa.' },
+    { id: 3, slug: 'resefullmakt-barn-eu', name: 'Resefullmakt för barn inom EU', description: 'Fullmakt för en annan vuxen som reser med ditt barn inom EU.' },
     { id: 4, slug: 'medgivande-skolresa', name: 'Medgivande vid skolresa', description: 'Medgivande för barn att delta i skolresa.' },
     { id: 5, slug: 'medgivande-lager-kollo', name: 'Medgivande vid läger / kollo', description: 'Medgivande för barn att delta i läger eller kolloverksamhet.' },
     { id: 6, slug: 'medgivande-foreningsresa', name: 'Medgivande vid föreningsresa', description: 'Medgivande för barn att resa med förening eller lag.' },
@@ -214,7 +242,7 @@ function generateTemplates(): TemplateInput[] {
       category: 'Föräldrar & Barn',
       categorySlug: 'foraldrar-barn',
       longDescription: `Denna mall hjälper dig att snabbt och enkelt skapa ${t.name?.toLowerCase()}. Dokumentet är utformat enligt svensk avtalsrätt och anpassat för svenska förhållanden och de situationer där myndigheter och institutioner vanligtvis efterfrågar en fullmakt.`,
-      fields: [...commonGivareFields, ...commonHavareFields, ...dateRangeFields,
+      fields: t.slug === 'resefullmakt-barn-eu' ? resefullmaktBarnEuFields : [...commonGivareFields, ...commonHavareFields, ...dateRangeFields,
         { id: 'barn_namn', label: 'Barnets namn', type: 'text', placeholder: 'Lisa Andersson', required: true, group: 'detaljer' },
         { id: 'barn_pnr', label: 'Barnets personnummer', type: 'personnummer', placeholder: 'ÅÅÅÅMMDD-XXXX', required: true, group: 'detaljer' },
         { id: 'syfte', label: 'Syfte med fullmakten', type: 'textarea', placeholder: 'Beskriv syftet...', required: true, group: 'detaljer' },
@@ -4407,9 +4435,9 @@ const bilingualContent: Record<string, BilingualContent> = {
       name: 'Travel certificate for a child – international travel',
       documentTitle: 'PARENTAL CONSENT FOR TRAVEL',
       category: 'Parents & Children',
-      description: 'The certificate required when a child travels internationally.',
+      description: 'A guardian’s certificate for a child’s international journey.',
       longDescription:
-        'A travel certificate for a child on an international journey. It is presented together with the child’s passport at check-in and at border control, and the English page makes it usable at any border.',
+        'A travel certificate for a child on an international journey. It can be shown together with the child’s passport at check-in and at border control, and the English page helps staff abroad read it. Each airline and country decides which documents it accepts.',
       legalInfo: EN_LEGAL_CHILD,
       standardText:
         'This certificate is issued to confirm that the undersigned guardian is aware of and approves the child’s international journey. It is intended to be presented to airlines, border control authorities and other authorities in the countries of departure and arrival, together with the child’s passport or national identity document.',
@@ -4426,7 +4454,7 @@ const bilingualContent: Record<string, BilingualContent> = {
       category: 'Parents & Children',
       description: 'A power of attorney written for travel with a child inside the EU.',
       longDescription:
-        'A power of attorney for travelling with a child inside the EU and the EEA. Free movement does not remove the need to show that the accompanying adult has the guardian’s permission.',
+        'A power of attorney for travelling with a child inside the EU and the EEA. Even within the EU, the accompanying adult may be asked to show that the guardian has given permission.',
       legalInfo: EN_LEGAL_CHILD,
       standardText:
         'This power of attorney authorises the attorney-in-fact to travel with the child within the EU and the EEA and to represent the child in practical matters during the journey, such as check-in, accommodation, transport and contact with local authorities. It confers no right to change the child’s habitual residence.',
@@ -4726,6 +4754,11 @@ export const fieldLabelsEn: Record<string, string> = {
   barn_namn: 'Child’s full name',
   barn_pnr: 'Child’s personal identity number',
   barn_foddatum: 'Child’s date of birth',
+  barn_pass: 'Child’s passport number',
+  givare_fodelsedatum: 'Date of birth',
+  givare_pass: 'Passport number',
+  havare_fodelsedatum: 'Date of birth',
+  havare_pass: 'Passport number',
   vardnadshavare1_namn: 'Guardian 1 – full name',
   vardnadshavare1_pnr: 'Guardian 1 – personal identity number',
   vardnadshavare2_namn: 'Guardian 2 – full name',

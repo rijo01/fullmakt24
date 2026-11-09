@@ -14,7 +14,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const post = getBlogPost(slug)
-  if (!post) return { title: 'Guiden hittades inte' }
+  if (!post) return { title: 'Guiden hittades inte', robots: null }
 
   const canonical = `https://fullmakt24.se/blogg/${post.slug}`
   return {

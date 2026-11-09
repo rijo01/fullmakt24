@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
+import { canonicalWithOg } from '@/lib/og'
 
 export const metadata: Metadata = {
   title: 'Kontakta oss',
-  alternates: { canonical: '/kontakt' },
+  ...canonicalWithOg('/kontakt'),
   description: 'Har du frågor om fullmakter eller behöver hjälp med vår tjänst? Kontakta Fullmakt24.se via e-post. Vi svarar normalt inom 24 timmar.',
 }
 

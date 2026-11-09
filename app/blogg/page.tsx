@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
+import { canonicalWithOg } from '@/lib/og'
 import Link from 'next/link'
 import { blogPosts } from '@/data/blog'
 
 export const metadata: Metadata = {
   title: 'Guider & juridisk vägledning – Blogg',
   description: 'Tydliga guider om fullmakter och medgivanden – resa med barn inom EU, hämta ut fordon åt någon annan och foto och film på barn i förening. Utformat enligt svensk rätt.',
-  alternates: { canonical: 'https://fullmakt24.se/blogg' },
+  ...canonicalWithOg('/blogg'),
 }
 
 export default function BloggPage() {

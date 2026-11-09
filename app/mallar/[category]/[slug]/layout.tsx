@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = templates.find(tp => tp.slug === slug)
 
   if (!t) {
-    return { title: 'Mall hittades inte' }
+    return { title: 'Mall hittades inte', robots: null }
   }
 
   const seo = await loadTemplateSeo(slug)
