@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { templates, categories } from '@/data/templates'
 import { trackEvent } from '@/components/GoogleAnalytics'
-import { getPackage, getCredits, grantPackageCredits, getLastPackageSession } from '@/lib/packages'
+import { getPackage, getCredits, grantPackageCredits, getLastPackageSession, settleCreditPending, refundPendingCredits, creditWasRefunded } from '@/lib/packages'
 
 import { Suspense } from 'react'
 
@@ -25,8 +25,10 @@ function BetaldContent() {
   const [downloading, setDownloading] = useState(false)
   const [downloaded, setDownloaded] = useState(false)
   const [credits, setCreditsState] = useState(0)
-  // Obligatoriska uppgifter som saknas – då skapas ingen PDF alls.
-  const [missingFields, setMissingFields] = useState<string[]>([])
+  // Uppgifterna saknas i webbläsaren eller är ofullständiga – då skapas ingen
+  // PDF alls. noDraft: inget utkast alls (t.ex. betalningen avslutades i en
+  // annan webbläsare). refunded: den dragna paketkrediten har lagts tillbaka.
+  const [incomplete, setIncomplete] = useState<{ noDraft: boolean; missing: string[]; refunded: boolean } | null>(null)
 
   const isPackagePurchase = !!packageParam
   const t = templates.find(tp => tp.slug === slug)
@@ -82,15 +84,23 @@ function BetaldContent() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // Retrieve saved form data from localStorage
-  const getFormData = () => {
-    if (typeof window === 'undefined' || !slug) return {}
+  // Utkastet som /skapa sparade i webbläsaren, eller null om det saknas.
+  const getFormData = (): Record<string, string> | null => {
+    if (typeof window === 'undefined' || !slug) return null
     try {
       const saved = localStorage.getItem(`draft_${slug}`)
-      return saved ? JSON.parse(saved) : {}
+      const data: unknown = saved ? JSON.parse(saved) : null
+      return data && typeof data === 'object' && !Array.isArray(data) ? (data as Record<string, string>) : null
     } catch {
-      return {}
+      return null
     }
+  }
+
+  // Ingen PDF: visa vad som saknas och lägg tillbaka en dragen paketkredit.
+  const stopIncomplete = (noDraft: boolean, missing: string[]) => {
+    if (usedCredit && slug) refundPendingCredits(slug)
+    setCreditsState(getCredits())
+    setIncomplete({ noDraft, missing, refunded: !!(usedCredit && slug && creditWasRefunded(slug)) })
   }
 
   const handleDownload = async () => {
@@ -99,20 +109,28 @@ function BetaldContent() {
 
     try {
       const { downloadPdf, PdfValidationError } = await import('@/lib/pdf-generator')
-      const { buildPaidDocument, paidFilename } = await import('@/lib/document-data')
+      const { buildPaidDocument, paidFilename, missingRequiredFields } = await import('@/lib/document-data')
+      // Aldrig en PDF med tomma fält: samma krav som formuläret före betalning.
+      const formData = getFormData()
+      const missing = missingRequiredFields(t, formData || {})
+      if (!formData || missing.length > 0) {
+        stopIncomplete(!formData, missing.map(f => f.label))
+        return
+      }
       // Samma underlag som förhandsvisningen på /skapa, men utan vattenstämpel.
       try {
-        downloadPdf(buildPaidDocument(t, getFormData(), isBilingualDownload), paidFilename(t, isBilingualDownload))
-        setMissingFields([])
+        downloadPdf(buildPaidDocument(t, formData, isBilingualDownload), paidFilename(t, isBilingualDownload))
       } catch (err) {
-        // Framtidsfullmakt: obligatoriska uppgifter saknas – ingen PDF skapas.
+        // Framtidsfullmakt: lagens obligatoriska uppgifter saknas – ingen PDF skapas.
         if (err instanceof PdfValidationError) {
-          setMissingFields(err.missing)
+          stopIncomplete(false, err.missing)
           return
         }
         throw err
       }
 
+      if (usedCredit) settleCreditPending(t.slug)
+      setIncomplete(null)
       setDownloaded(true)
     } catch (err) {
       console.error('PDF generation failed:', err)
@@ -223,20 +241,36 @@ function BetaldContent() {
   return (
     <div className="section-padding py-16 lg:py-24">
       <div className="max-w-lg mx-auto text-center">
-        {/* Success animation */}
-        <div className="w-24 h-24 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-8">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" className="text-success">
-            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" strokeWidth="2"/>
-            <path d="M22 4L12 14.01l-3-3" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </div>
+        {incomplete ? (
+          /* Ingen PDF: neutral dokumentikon, ingen bock. */
+          <div className="w-24 h-24 bg-navy-50 rounded-full flex items-center justify-center mx-auto mb-8" aria-hidden="true">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-navy-400">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="9" y1="13" x2="15" y2="13"/>
+              <line x1="9" y1="17" x2="13" y2="17"/>
+            </svg>
+          </div>
+        ) : (
+          /* Success animation */
+          <div className="w-24 h-24 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-8">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" className="text-success">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" strokeWidth="2"/>
+              <path d="M22 4L12 14.01l-3-3" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+        )}
 
         <h1 className="text-3xl font-heading font-bold text-navy-500 mb-3">
-          {usedCredit ? 'Din fullmakt är klar!' : isReissue ? 'Din rättade fullmakt är klar!' : 'Tack för ditt köp!'}
+          {incomplete
+            ? usedCredit || isReissue ? 'Din fullmakt kunde inte skapas' : 'Tack för ditt köp!'
+            : usedCredit ? 'Din fullmakt är klar!' : isReissue ? 'Din rättade fullmakt är klar!' : 'Tack för ditt köp!'}
         </h1>
-        <p className="text-navy-400 text-lg mb-2">
-          Din fullmakt laddas ner automatiskt.
-        </p>
+        {!incomplete && (
+          <p className="text-navy-400 text-lg mb-2">
+            Din fullmakt laddas ner automatiskt.
+          </p>
+        )}
         {isBilingualDownload && (
           <p className="text-sm text-navy-500 mb-2">
             🌍 PDF:en innehåller den svenska originalversionen följd av den engelska
@@ -248,52 +282,78 @@ function BetaldContent() {
             Betalnings-ID: {sessionId?.slice(0, 20)}...
           </p>
         )}
-        {usedCredit && (
+        {usedCredit && !incomplete && (
           <p className="text-sm text-gold-700 mb-2">
             En paketkredit användes. Du har <strong>{credits}</strong> nedladdningar kvar.
           </p>
         )}
         <div className="mb-8" />
 
-        {missingFields.length > 0 && (
+        {incomplete ? (
           <div className="bg-red-50 border border-red-200 rounded-xl p-5 text-left mb-8" role="alert">
-            <h3 className="font-semibold text-red-800 text-sm mb-2">Dokumentet kunde inte skapas</h3>
-            <p className="text-sm text-red-700 mb-2">
-              En framtidsfullmakt måste innehålla följande uppgifter, som saknas i formuläret:
+            <h2 className="font-semibold text-red-800 mb-2">Ingen PDF har skapats</h2>
+            {usedCredit ? (
+              incomplete.refunded && (
+                <p className="text-sm font-semibold text-red-800 mb-3">
+                  Paketkrediten har lagts tillbaka. Du har {credits} {credits === 1 ? 'nedladdning' : 'nedladdningar'} kvar.
+                </p>
+              )
+            ) : (
+              <p className="text-sm font-semibold text-red-800 mb-3">
+                Betalningen är genomförd och du behöver inte betala igen.
+              </p>
+            )}
+            {incomplete.noDraft ? (
+              <p className="text-sm text-red-700 mb-3">
+                Uppgifterna du fyllde i finns inte i den här webbläsaren, till exempel om
+                betalningen avslutades i en annan webbläsare eller app.
+              </p>
+            ) : (
+              <>
+                <p className="text-sm text-red-700 mb-2">Följande obligatoriska uppgifter saknas:</p>
+                <ul className="text-sm text-red-700 list-disc list-inside mb-3">
+                  {incomplete.missing.map(m => <li key={m}>{m}</li>)}
+                </ul>
+              </>
+            )}
+            <p className="text-sm text-red-700 mb-4">
+              {usedCredit
+                ? incomplete.refunded
+                  ? 'Fyll i uppgifterna och använd krediten igen.'
+                  : 'Fyll i uppgifterna och ladda ner igen.'
+                : 'Fyll i uppgifterna igen så laddar du ner PDF:en direkt.'}
             </p>
-            <ul className="text-sm text-red-700 list-disc list-inside mb-3">
-              {missingFields.map(m => <li key={m}>{m}</li>)}
-            </ul>
-            <Link href={`/skapa/${t.slug}`} className="text-sm font-semibold text-red-800 underline">
-              Fyll i uppgifterna och ladda ner igen →
+            <Link
+              href={sessionId && !usedCredit ? `/skapa/${t.slug}?kvitto=${encodeURIComponent(sessionId)}` : `/skapa/${t.slug}`}
+              className="btn-primary inline-block"
+            >
+              Fyll i uppgifterna →
             </Link>
-            <p className="text-xs text-red-600 mt-2">Ditt köp finns kvar – du behöver inte betala igen på den här enheten.</p>
+          </div>
+        ) : (
+          <div className="space-y-3 max-w-sm mx-auto mb-10">
+            <button
+              onClick={handleDownload}
+              disabled={downloading}
+              className="btn-gold w-full !py-4 text-lg"
+            >
+              {downloading ? (
+                <span className="flex items-center justify-center gap-2">
+                  <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/></svg>
+                  Genererar PDF...
+                </span>
+              ) : downloaded ? (
+                '✓ Nedladdad! Klicka för att ladda ner igen'
+              ) : (
+                '↓ Ladda ner din fullmakt (PDF)'
+              )}
+            </button>
+
+            <button onClick={() => window.print()} className="btn-secondary w-full">
+              🖨️ Skriv ut direkt
+            </button>
           </div>
         )}
-
-        {/* Download button */}
-        <div className="space-y-3 max-w-sm mx-auto mb-10">
-          <button
-            onClick={handleDownload}
-            disabled={downloading}
-            className="btn-gold w-full !py-4 text-lg"
-          >
-            {downloading ? (
-              <span className="flex items-center justify-center gap-2">
-                <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/></svg>
-                Genererar PDF...
-              </span>
-            ) : downloaded ? (
-              '✓ Nedladdad! Klicka för att ladda ner igen'
-            ) : (
-              '↓ Ladda ner din fullmakt (PDF)'
-            )}
-          </button>
-
-          <button onClick={() => window.print()} className="btn-secondary w-full">
-            🖨️ Skriv ut direkt
-          </button>
-        </div>
 
         {/* Info */}
         <div className="card p-6 text-left mb-8">
@@ -329,6 +389,7 @@ function BetaldContent() {
         )}
 
         {/* Tips */}
+        {!incomplete && (
         <div className="bg-gold-50 border border-gold-200 rounded-xl p-5 text-left mb-8">
           <h3 className="font-semibold text-gold-800 text-sm mb-2">💡 Nästa steg</h3>
           {isFramtidsfullmakt ? (
@@ -347,6 +408,7 @@ function BetaldContent() {
             </ol>
           )}
         </div>
+        )}
 
         {/* Create another */}
         <div className="flex flex-col sm:flex-row gap-3 justify-center">

@@ -6,7 +6,8 @@ import { useParams, useRouter } from 'next/navigation'
 import { templates, categories } from '@/data/templates'
 import type { TemplateField } from '@/data/templates'
 import { trackEvent } from '@/components/GoogleAnalytics'
-import { getCredits, useCredit, PACKAGES } from '@/lib/packages'
+import { getCredits, useCredit, markCreditPending, PACKAGES } from '@/lib/packages'
+import { missingRequiredFields } from '@/lib/document-data'
 import { SESSION_ID_RE } from '@/lib/verify-session'
 import DocumentPreview from '@/components/DocumentPreview'
 import PreviewSheet from '@/components/PreviewSheet'
@@ -126,6 +127,8 @@ export default function SkapaPage() {
       localStorage.setItem(`draft_${slug}`, JSON.stringify(formData))
     }
     if (useCredit()) {
+      // /betald lägger tillbaka krediten om ingen PDF kan skapas.
+      markCreditPending(slug)
       trackEvent('select_content', { content_type: 'package_credit', item_id: t.slug })
       // Paketkrediter gäller den svenska versionen; tvåspråkig PDF köps separat.
       router.push(`/betald?slug=${slug}&credit=used`)
@@ -217,9 +220,11 @@ export default function SkapaPage() {
   const isBilingual = !!t.bilingual && packageType === 'bilingual'
   const price = PACKAGES[isBilingual ? 'bilingual' : 'single'].price
 
-  const requiredGivare = givareFields.filter(f => f.required).every(f => formData[f.id]?.trim())
-  const requiredHavare = havareFields.filter(f => f.required).every(f => formData[f.id]?.trim())
-  const requiredDetaljer = detaljFields.filter(f => f.required).every(f => formData[f.id]?.trim())
+  // Samma krav som /betald ställer innan PDF:en skapas (missingRequiredFields).
+  const missing = missingRequiredFields(t, formData)
+  const requiredGivare = !missing.some(f => f.group === 'givare')
+  const requiredHavare = !missing.some(f => f.group === 'havare')
+  const requiredDetaljer = !missing.some(f => f.group === 'detaljer')
 
   return (
     <div className="min-h-screen bg-surface">

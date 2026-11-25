@@ -3,7 +3,7 @@
 // att förhandsvisningen visar exakt samma dokument som levereras – bara med
 // vattenstämpel.
 
-import { categories, fieldLabelsEn, type Template } from '@/data/templates'
+import { categories, fieldLabelsEn, type Template, type TemplateField } from '@/data/templates'
 import type { PdfData } from '@/lib/pdf-generator'
 import { buildFramtidsfullmaktData } from '@/lib/framtidsfullmakt-data'
 
@@ -55,6 +55,15 @@ function build(t: Template, formData: FormData, bilingual: boolean, watermark: b
         }
       : undefined,
   }
+}
+
+/**
+ * Obligatoriska fält som inte är ifyllda. Formuläret på /skapa släpper inte
+ * vidare till betalning förrän listan är tom, och /betald skapar ingen PDF
+ * förrän den är tom.
+ */
+export function missingRequiredFields(t: Template, formData: FormData): TemplateField[] {
+  return t.fields.filter(f => f.required && !formData[f.id]?.trim())
 }
 
 /** Tvåspråkig PDF bara om mallen har en engelsk version. */

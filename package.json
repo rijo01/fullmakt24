@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "npm run test:pdf",
+    "prebuild": "npm run test:pdf && npm run test:betald",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:pdf": "tsx --test tests/pdf/templates.test.ts"
+    "test:pdf": "tsx --test tests/pdf/templates.test.ts",
+    "test:betald": "tsx --test tests/betald/betald.test.ts"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.6",

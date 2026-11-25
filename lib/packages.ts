@@ -126,6 +126,89 @@ export function grantPackageCredits(sessionId: string | null, credits: number): 
   return true
 }
 
+/* Krediter som dragits för en mall men ännu inte gett någon PDF. /skapa drar
+   krediten innan kunden skickas till /betald. Saknas uppgifterna där läggs
+   krediten tillbaka, men bara de krediter som faktiskt dragits: en omladdning
+   av /betald ska inte kunna ge nya krediter. */
+const PENDING_KEY = 'package_pending_credits'
+// Mallar vars dragna kredit lagts tillbaka, så att /betald kan säga det även
+// efter en omladdning. Rensas när en ny kredit dras eller en PDF skapas.
+const REFUNDED_KEY = 'package_refunded_credits'
+
+function readRefunded(): string[] {
+  try {
+    const raw: unknown = JSON.parse(localStorage.getItem(REFUNDED_KEY) || '[]')
+    return Array.isArray(raw) ? raw.filter((s): s is string => typeof s === 'string') : []
+  } catch {
+    return []
+  }
+}
+
+function setRefunded(slug: string, refunded: boolean): void {
+  const list = readRefunded().filter(s => s !== slug)
+  if (refunded) list.push(slug)
+  if (list.length === 0) localStorage.removeItem(REFUNDED_KEY)
+  else localStorage.setItem(REFUNDED_KEY, JSON.stringify(list))
+}
+
+/** Har en dragen kredit för mallen lagts tillbaka (och inte dragits på nytt)? */
+export function creditWasRefunded(slug: string): boolean {
+  if (typeof window === 'undefined') return false
+  return readRefunded().includes(slug)
+}
+
+function readPending(): Record<string, number> {
+  try {
+    const raw: unknown = JSON.parse(localStorage.getItem(PENDING_KEY) || '{}')
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return {}
+    const out: Record<string, number> = {}
+    for (const [slug, n] of Object.entries(raw)) {
+      if (typeof n === 'number' && Number.isFinite(n) && n > 0) out[slug] = Math.floor(n)
+    }
+    return out
+  } catch {
+    return {}
+  }
+}
+
+function writePending(pending: Record<string, number>): void {
+  if (Object.keys(pending).length === 0) localStorage.removeItem(PENDING_KEY)
+  else localStorage.setItem(PENDING_KEY, JSON.stringify(pending))
+}
+
+/** Noterar att en kredit dragits för mallen och väntar på en PDF. */
+export function markCreditPending(slug: string): void {
+  if (typeof window === 'undefined') return
+  const pending = readPending()
+  pending[slug] = (pending[slug] || 0) + 1
+  writePending(pending)
+  setRefunded(slug, false)
+}
+
+/** PDF:en skapades: en dragen kredit för mallen är förbrukad. */
+export function settleCreditPending(slug: string): void {
+  if (typeof window === 'undefined') return
+  setRefunded(slug, false)
+  const pending = readPending()
+  if (!pending[slug]) return
+  pending[slug] -= 1
+  if (pending[slug] <= 0) delete pending[slug]
+  writePending(pending)
+}
+
+/** Ingen PDF kunde skapas: lägger tillbaka dragna krediter för mallen. Returnerar antalet. */
+export function refundPendingCredits(slug: string): number {
+  if (typeof window === 'undefined') return 0
+  const pending = readPending()
+  const n = pending[slug] || 0
+  if (n === 0) return 0
+  delete pending[slug]
+  writePending(pending)
+  setCredits(getCredits() + n)
+  setRefunded(slug, true)
+  return n
+}
+
 /** Senast kontrollerade paketsession i den här webbläsaren, eller null. */
 export function getLastPackageSession(): string | null {
   if (typeof window === 'undefined') return null
