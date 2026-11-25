@@ -12,7 +12,7 @@ export default function IntegritetPage() {
     <div className="section-padding py-12 lg:py-20">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl lg:text-4xl font-heading font-bold text-navy-500 mb-2">Integritetspolicy</h1>
-        <p className="text-sm text-navy-400 mb-10">Senast uppdaterad: 1 mars 2026</p>
+        <p className="text-sm text-navy-400 mb-10">Senast uppdaterad: 25 november 2026</p>
 
         <div className="space-y-8 text-navy-500">
           <section>
@@ -71,6 +71,15 @@ export default function IntegritetPage() {
             </p>
             <p className="text-navy-400 leading-relaxed mt-2">
               <strong>Vercel:</strong> Hosting av webbplatsen. Vercel behandlar teknisk data (IP-adresser, förfrågningsloggar) i enlighet med sin integritetspolicy.
+            </p>
+            <p className="text-navy-400 leading-relaxed mt-2">
+              <strong>Google (Google Analytics):</strong> Statistik över hur webbplatsen används, och bara om du har
+              godkänt det. Google Ireland Limited får då uppgifter om ditt besök: vilka sidor du besöker, din enhet
+              och webbläsare, ungefärlig plats, hur många träffar en sökning gav, vilka mallar du väljer och att ett
+              köp har genomförts med belopp och betalningsreferens. Det du fyller i och det du söker efter skickas
+              aldrig. Uppgifterna kan behandlas i USA, där Google omfattas av EU:s och USA:s ramverk för dataskydd
+              (EU-U.S. Data Privacy Framework). Utan ditt godkännande laddas ingenting från Google. Du kan ändra
+              ditt val när som helst i vår <a href="/cookies#statistik" className="text-gold-600 font-semibold hover:underline">cookiepolicy</a>.
             </p>
           </section>
 

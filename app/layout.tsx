@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { Samtycke } from '@/components/Samtycke'
 import { templates } from '@/data/templates'
 import { baseOpenGraph } from '@/lib/og'
 import { SITE_URL } from '@/lib/site'
@@ -51,7 +51,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-        <GoogleAnalytics gaId="G-K5Y04XM2VE" />
+        {/* Google Analytics laddas bara efter godkänt samtycke (lib/analytics.ts). */}
+        <Samtycke />
       </body>
     </html>
   )

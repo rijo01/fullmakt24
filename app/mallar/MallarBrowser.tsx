@@ -4,7 +4,8 @@ import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { categories, templates, searchTemplates } from '@/data/templates'
-import { trackEvent } from '@/components/GoogleAnalytics'
+import { trackEvent } from '@/lib/analytics'
+import { moveSearchParamToStash, takeSearch } from '@/lib/search-handoff'
 
 export function MallarBrowser() {
   const searchParams = useSearchParams()
@@ -12,10 +13,16 @@ export function MallarBrowser() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [sortBy, setSortBy] = useState<'az' | 'new'>('az')
 
+  // Sökordet står aldrig i adressen (lib/search-handoff.ts). Gamla länkar med
+  // ?search= flyttas dit innan det läses.
   useEffect(() => {
-    const urlSearch = searchParams.get('search')
+    moveSearchParamToStash()
+    const term = takeSearch()
+    if (term) setSearch(term)
+  }, [])
+
+  useEffect(() => {
     const urlCategory = searchParams.get('category')
-    if (urlSearch) setSearch(urlSearch)
     if (urlCategory) setSelectedCategory(urlCategory)
   }, [searchParams])
 
@@ -32,7 +39,8 @@ export function MallarBrowser() {
   useEffect(() => {
     if (search.length < 2) return
     const handle = setTimeout(() => {
-      trackEvent('search', { search_term: search })
+      // Bara antalet träffar skickas, aldrig sökorden.
+      trackEvent('search', { result_count: searchTemplates(search).length })
     }, 500)
     return () => clearTimeout(handle)
   }, [search])
@@ -138,7 +146,7 @@ export function MallarBrowser() {
             <Link
               key={t.id}
               href={`/mallar/${t.categorySlug}/${t.slug}`}
-              onClick={() => trackEvent('select_content', { content_type: 'template', item_id: t.slug, item_name: t.name, item_category: t.category })}
+              onClick={() => trackEvent('select_content', { content_type: 'template', item_id: t.slug, item_name: t.name, item_category: t.category, ...(search.length > 1 ? { method: 'search' } : {}) })}
               className="card-interactive p-5 group flex flex-col"
             >
               <div className="flex items-center gap-2 mb-3">

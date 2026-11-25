@@ -4,15 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "npm run test:pdf && npm run test:betald",
+    "prebuild": "npm run test:pdf && npm run test:betald && npm run test:analytics",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "test:pdf": "tsx --test tests/pdf/templates.test.ts",
-    "test:betald": "tsx --test tests/betald/betald.test.ts"
+    "test:betald": "tsx --test tests/betald/betald.test.ts",
+    "test:analytics": "tsx --test tests/analytics/analytics.test.ts"
   },
   "dependencies": {
-    "@next/third-parties": "^16.2.6",
     "framer-motion": "^11.15.0",
     "jspdf": "^2.5.2",
     "lucide-react": "^0.468.0",

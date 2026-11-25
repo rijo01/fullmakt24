@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { templates, categories } from '@/data/templates'
-import { trackEvent } from '@/components/GoogleAnalytics'
+import { trackEvent } from '@/lib/analytics'
 import { getPackage, getCredits, grantPackageCredits, getLastPackageSession, settleCreditPending, refundPendingCredits, creditWasRefunded } from '@/lib/packages'
 
 import { Suspense } from 'react'

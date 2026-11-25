@@ -4,7 +4,8 @@ import Link from 'next/link'
 import { useState, useMemo, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { categories, templates, searchTemplates } from '@/data/templates'
-import { trackEvent } from '@/components/GoogleAnalytics'
+import { trackEvent } from '@/lib/analytics'
+import { stashSearch } from '@/lib/search-handoff'
 import { SITE_URL } from '@/lib/site'
 
 function FAQItem({ q, a }: { q: string; a: string }) {
@@ -35,7 +36,9 @@ function HeroSearch() {
 
   useEffect(() => {
     if (query.length < 2) return
-    const handle = setTimeout(() => trackEvent('search', { search_term: query }), 600)
+    // Bara antalet träffar skickas, aldrig sökorden: en besökare kan skriva namn
+    // eller personnummer i rutan.
+    const handle = setTimeout(() => trackEvent('search', { result_count: searchTemplates(query).length }), 600)
     return () => clearTimeout(handle)
   }, [query])
 
@@ -49,7 +52,11 @@ function HeroSearch() {
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (query.trim()) router.push(`/mallar?search=${encodeURIComponent(query.trim())}`)
+    // Sökordet lämnas över utan att stå i adressen (lib/search-handoff.ts).
+    if (query.trim()) {
+      stashSearch(query.trim())
+      router.push('/mallar')
+    }
   }
 
   return (
@@ -80,7 +87,7 @@ function HeroSearch() {
               <li key={t.id}>
                 <Link
                   href={`/mallar/${t.categorySlug}/${t.slug}`}
-                  onClick={() => trackEvent('select_content', { content_type: 'template', item_id: t.slug, item_name: t.name, item_category: t.category })}
+                  onClick={() => trackEvent('select_content', { content_type: 'template', item_id: t.slug, item_name: t.name, item_category: t.category, method: 'search' })}
                   className="flex items-start gap-3 px-4 py-3 hover:bg-navy-50 transition-colors border-b border-navy-50 last:border-0"
                 >
                   <span className="text-xl shrink-0 mt-0.5">{categories.find(c => c.slug === t.categorySlug)?.icon}</span>
@@ -94,7 +101,8 @@ function HeroSearch() {
             ))}
           </ul>
           <Link
-            href={`/mallar?search=${encodeURIComponent(query.trim())}`}
+            href="/mallar"
+            onClick={() => stashSearch(query.trim())}
             className="block text-center text-sm font-semibold text-gold-600 py-3 bg-navy-50 hover:bg-navy-100 transition-colors"
           >
             Visa alla resultat för &ldquo;{query}&rdquo; →
