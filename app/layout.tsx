@@ -3,6 +3,7 @@ import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { Samtycke } from '@/components/Samtycke'
+import { DraftCleanup } from '@/components/DraftCleanup'
 import { templates } from '@/data/templates'
 import { baseOpenGraph } from '@/lib/og'
 import { SITE_URL } from '@/lib/site'
@@ -53,6 +54,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         {/* Google Analytics laddas bara efter godkänt samtycke (lib/analytics.ts). */}
         <Samtycke />
+        {/* Utkast som inte ändrats på 30 dagar tas bort (lib/drafts.ts). */}
+        <DraftCleanup />
       </body>
     </html>
   )

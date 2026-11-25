@@ -32,7 +32,7 @@ export default function CookiesPage() {
                 Dessa cookies krävs för att webbplatsen ska fungera korrekt. De hanterar bland annat sessionsdata och formulärinmatning. Dessa cookies kan inte stängas av.
               </p>
               <div className="mt-3 bg-navy-50 rounded-lg p-3 text-xs text-navy-500 space-y-1">
-                <p><strong>localStorage (draft_*):</strong> Sparar dina formulärdata lokalt så att du inte förlorar dem om du lämnar sidan. Lagras enbart på din enhet.</p>
+                <p><strong>localStorage (draft_*):</strong> Sparar dina formulärdata lokalt så att du inte förlorar dem om du lämnar sidan och kan ladda ner dokumentet efter betalningen. Lagras enbart på din enhet. Tas bort automatiskt när de inte har ändrats på 30 dagar, vid ditt nästa besök, eller direkt med knappen &rdquo;Rensa mina uppgifter på den här enheten&rdquo; i formuläret.</p>
                 <p><strong>localStorage (fm24-samtycke):</strong> Ditt val om statistik, så att vi inte frågar på varje sida. Lagras enbart på din enhet.</p>
               </div>
             </div>

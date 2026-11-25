@@ -27,7 +27,7 @@ export default function IntegritetPage() {
             <h2 className="font-heading font-bold text-navy-500 text-xl mb-3">2. Vilka uppgifter vi samlar in</h2>
             <p className="text-navy-400 leading-relaxed">Vi samlar in följande typer av personuppgifter:</p>
             <p className="text-navy-400 leading-relaxed mt-2">
-              <strong>Dokumentdata:</strong> De uppgifter du fyller i när du skapar ett dokument, såsom namn, personnummer och adresser. Dessa uppgifter behandlas enbart för att generera ditt dokument och lagras inte på våra servrar efter att PDF:en har genererats.
+              <strong>Dokumentdata:</strong> De uppgifter du fyller i när du skapar ett dokument, såsom namn, personnummer och adresser. De används enbart för att skapa ditt dokument i din webbläsare och skickas aldrig till våra servrar. Se avsnitt 4 om hur länge de sparas i din webbläsare.
             </p>
             <p className="text-navy-400 leading-relaxed mt-2">
               <strong>Betalningsuppgifter:</strong> Betalningar hanteras av vår betalningsleverantör Stripe. Vi har aldrig tillgång till dina kortuppgifter. Stripe lagrar betalningsinformation i enlighet med PCI DSS-standarden.
@@ -55,6 +55,13 @@ export default function IntegritetPage() {
             <h2 className="font-heading font-bold text-navy-500 text-xl mb-3">4. Lagring och säkerhet</h2>
             <p className="text-navy-400 leading-relaxed">
               Dokumentdata genereras lokalt i din webbläsare och skickas inte till våra servrar. PDF-filen skapas på klientsidan och laddas ner direkt till din enhet. Vi lagrar inga kopior av dina färdiga dokument.
+            </p>
+            <p className="text-navy-400 leading-relaxed mt-2">
+              Medan du fyller i sparas uppgifterna som ett utkast i din webbläsare (localStorage), så att du kan
+              fortsätta senare och ladda ner dokumentet efter betalningen. Utkastet finns bara på din enhet. Det tas
+              bort automatiskt när det inte har ändrats på 30 dagar, nästa gång du besöker webbplatsen. Du kan också
+              ta bort det själv när som helst med knappen &rdquo;Rensa mina uppgifter på den här enheten&rdquo; i
+              formuläret. Använder du en delad dator bör du rensa uppgifterna när du är klar.
             </p>
             <p className="text-navy-400 leading-relaxed mt-2">
               All kommunikation med vår webbplats sker via HTTPS-kryptering. Betalningsdata skyddas av Stripes PCI DSS Level 1-certifiering.
@@ -93,7 +100,7 @@ export default function IntegritetPage() {
               <strong>Rätt till rättelse:</strong> Du har rätt att begära rättelse av felaktiga uppgifter.
             </p>
             <p className="text-navy-400 leading-relaxed mt-2">
-              <strong>Rätt till radering:</strong> Du har rätt att begära att vi raderar dina personuppgifter.
+              <strong>Rätt till radering:</strong> Du har rätt att begära att vi raderar dina personuppgifter. Uppgifterna i dina utkast finns bara i din webbläsare och når aldrig oss. Dem tar du bort själv med knappen &rdquo;Rensa mina uppgifter på den här enheten&rdquo; i formuläret, eller genom att rensa webbplatsdata i webbläsaren.
             </p>
             <p className="text-navy-400 leading-relaxed mt-2">
               <strong>Rätt att klaga:</strong> Du har rätt att lämna klagomål till Integritetsskyddsmyndigheten (IMY).

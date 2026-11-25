@@ -1,10 +1,11 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { templates, categories } from '@/data/templates'
 import { trackEvent } from '@/lib/analytics'
+import { readDraft, clearDrafts, purgeOldDrafts, DRAFT_MAX_AGE_DAYS, type DraftData } from '@/lib/drafts'
 import { getPackage, getCredits, grantPackageCredits, getLastPackageSession, settleCreditPending, refundPendingCredits, creditWasRefunded } from '@/lib/packages'
 
 import { Suspense } from 'react'
@@ -84,16 +85,24 @@ function BetaldContent() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // Utkastet som /skapa sparade i webbläsaren, eller null om det saknas.
-  const getFormData = (): Record<string, string> | null => {
+  // Utkastet som /skapa sparade i webbläsaren, eller null om det saknas. Det
+  // hålls kvar i minnet, så att "ladda ner igen" fungerar så länge sidan är
+  // öppen, även efter att kunden rensat sina uppgifter.
+  const draftRef = useRef<DraftData | null>(null)
+  const [cleared, setCleared] = useState(false)
+  const getFormData = (): DraftData | null => {
     if (typeof window === 'undefined' || !slug) return null
-    try {
-      const saved = localStorage.getItem(`draft_${slug}`)
-      const data: unknown = saved ? JSON.parse(saved) : null
-      return data && typeof data === 'object' && !Array.isArray(data) ? (data as Record<string, string>) : null
-    } catch {
-      return null
+    if (!draftRef.current) {
+      purgeOldDrafts()
+      draftRef.current = readDraft(slug)
     }
+    return draftRef.current
+  }
+
+  const handleClearDrafts = () => {
+    if (!window.confirm('Vill du ta bort alla uppgifter du har fyllt i på Fullmakt24 från den här webbläsaren? Det går inte att ångra. Paketkrediter påverkas inte.')) return
+    clearDrafts()
+    setCleared(true)
   }
 
   // Ingen PDF: visa vad som saknas och lägg tillbaka en dragen paketkredit.
@@ -352,6 +361,29 @@ function BetaldContent() {
             <button onClick={() => window.print()} className="btn-secondary w-full">
               🖨️ Skriv ut direkt
             </button>
+
+            {/* Var uppgifterna sparas, och hur de tas bort (lib/drafts.ts). */}
+            {downloaded && (
+              <div className="rounded-xl border border-navy-100 bg-white p-4 text-left text-sm text-navy-500" role="status">
+                {cleared ? (
+                  <p>
+                    Dina uppgifter är borttagna från den här webbläsaren. Du kan ladda ner PDF:en igen så
+                    länge den här sidan är öppen.
+                  </p>
+                ) : (
+                  <>
+                    <p className="mb-2">
+                      Uppgifterna du fyllde i sparas bara i den här webbläsaren. Om de inte har ändrats på{' '}
+                      {DRAFT_MAX_AGE_DAYS} dagar tas de bort nästa gång webbplatsen öppnas i den här
+                      webbläsaren, inte dessförinnan. Är du klar kan du ta bort dem nu, särskilt på en delad dator.
+                    </p>
+                    <button type="button" onClick={handleClearDrafts} className="font-semibold text-navy-600 underline hover:text-navy-800">
+                      Rensa mina uppgifter på den här enheten
+                    </button>
+                  </>
+                )}
+              </div>
+            )}
           </div>
         )}
 

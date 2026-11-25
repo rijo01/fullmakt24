@@ -25,7 +25,7 @@ export default function MinaDokumentPage() {
         <div className="mt-16 grid sm:grid-cols-2 gap-6 text-left">
           {[
             { title: 'Ladda ner direkt', desc: 'Efter betalning får du din PDF på en gång – ingen inloggning krävs.' },
-            { title: 'Utkast sparas lokalt', desc: 'Medan du fyller i sparas dina uppgifter i din webbläsare så att du kan fortsätta senare.' },
+            { title: 'Utkast sparas lokalt', desc: 'Medan du fyller i sparas dina uppgifter i din webbläsare så att du kan fortsätta senare. Om de inte har ändrats på 30 dagar tas de bort nästa gång webbplatsen öppnas i den webbläsaren. Du kan också ta bort dem själv i formuläret.' },
           ].map(f => (
             <div key={f.title} className="card p-5">
               <h3 className="font-heading font-bold text-navy-500 text-sm mb-1">{f.title}</h3>

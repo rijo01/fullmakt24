@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "npm run test:pdf && npm run test:betald && npm run test:analytics",
+    "prebuild": "npm run test:pdf && npm run test:betald && npm run test:analytics && npm run test:drafts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "test:pdf": "tsx --test tests/pdf/templates.test.ts",
     "test:betald": "tsx --test tests/betald/betald.test.ts",
-    "test:analytics": "tsx --test tests/analytics/analytics.test.ts"
+    "test:analytics": "tsx --test tests/analytics/analytics.test.ts",
+    "test:drafts": "tsx --test tests/drafts/drafts.test.ts"
   },
   "dependencies": {
     "framer-motion": "^11.15.0",

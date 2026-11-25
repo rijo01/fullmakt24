@@ -8,6 +8,7 @@ import type { TemplateField } from '@/data/templates'
 import { trackEvent } from '@/lib/analytics'
 import { getCredits, useCredit, markCreditPending, PACKAGES } from '@/lib/packages'
 import { missingRequiredFields } from '@/lib/document-data'
+import { readDraft, writeDraft, clearDrafts, hasDrafts, purgeOldDrafts, DRAFT_MAX_AGE_DAYS } from '@/lib/drafts'
 import { SESSION_ID_RE } from '@/lib/verify-session'
 import DocumentPreview from '@/components/DocumentPreview'
 import PreviewSheet from '@/components/PreviewSheet'
@@ -67,6 +68,8 @@ export default function SkapaPage() {
   // Förhandsvisningen: sidopanel på desktop, helskärmsvy på mindre skärmar.
   const isDesktop = useIsDesktop()
   const [previewOpen, setPreviewOpen] = useState(false)
+  // Finns något utkast i webbläsaren? Styr knappen "Rensa mina uppgifter".
+  const [hasStored, setHasStored] = useState(false)
   const closePreview = useCallback(() => setPreviewOpen(false), [])
 
   // Tidigare köpare kan få en rättad PDF utan ny betalning via
@@ -114,7 +117,7 @@ export default function SkapaPage() {
   // kontrollerar sessionen mot Stripe igen innan PDF:en skapas.
   const handleReceiptDownload = useCallback(() => {
     if (!t || receipt?.status !== 'ok') return
-    localStorage.setItem(`draft_${slug}`, JSON.stringify(formData))
+    writeDraft(slug, formData, { touch: true })
     const lang = receipt.paidType === 'bilingual' ? '&lang=bilingual' : ''
     router.push(`/betald?session_id=${encodeURIComponent(receipt.id)}&slug=${slug}${lang}&omleverans=1`)
   }, [t, slug, formData, receipt, router])
@@ -124,7 +127,7 @@ export default function SkapaPage() {
   const handleUseCredit = useCallback(() => {
     if (!t) return
     if (typeof window !== 'undefined' && slug) {
-      localStorage.setItem(`draft_${slug}`, JSON.stringify(formData))
+      writeDraft(slug, formData, { touch: true })
     }
     if (useCredit()) {
       // /betald lägger tillbaka krediten om ingen PDF kan skapas.
@@ -137,20 +140,32 @@ export default function SkapaPage() {
     }
   }, [t, slug, formData, router])
 
+  // Utkastet läses efter att gamla utkast rensats bort (lib/drafts.ts), så att
+  // ett utgånget utkast inte läses in och sparas på nytt.
   useEffect(() => {
     if (typeof window !== 'undefined' && slug) {
-      const saved = localStorage.getItem(`draft_${slug}`)
-      if (saved) {
-        try { setFormData(JSON.parse(saved)) } catch { /* ignore */ }
-      }
+      purgeOldDrafts()
+      const saved = readDraft(slug)
+      if (saved) setFormData(saved)
+      setHasStored(hasDrafts())
     }
   }, [slug])
 
   useEffect(() => {
     if (typeof window !== 'undefined' && slug && Object.keys(formData).length > 0) {
-      localStorage.setItem(`draft_${slug}`, JSON.stringify(formData))
+      writeDraft(slug, formData)
+      setHasStored(true)
     }
   }, [formData, slug])
+
+  // Tar bort alla utkast i den här webbläsaren och tömmer formuläret.
+  // Formuläret töms i samma steg, annars sparar autosparningen tillbaka det.
+  const handleClearDrafts = useCallback(() => {
+    if (!window.confirm('Vill du ta bort alla uppgifter du har fyllt i på Fullmakt24 från den här webbläsaren? Det går inte att ångra. Paketkrediter påverkas inte.')) return
+    clearDrafts()
+    setFormData({})
+    setHasStored(false)
+  }, [])
 
   const handlePayment = useCallback(async () => {
     if (!t || !consent) return
@@ -181,8 +196,8 @@ export default function SkapaPage() {
       const data = await res.json()
 
       if (data.url) {
-        // Save form data before redirecting
-        localStorage.setItem(`draft_${slug}`, JSON.stringify(formData))
+        // Utkastet sparas med ny tidsstämpel innan kunden lämnar för Stripe.
+        writeDraft(slug, formData, { touch: true })
         window.location.href = data.url
       } else {
         alert('Något gick fel. Försök igen.')
@@ -271,6 +286,19 @@ export default function SkapaPage() {
                   )}
                 </div>
               )}
+              {/* Var uppgifterna sparas, och hur de tas bort (lib/drafts.ts). */}
+              <div className="mb-6 flex flex-col gap-2 rounded-xl border border-navy-100 bg-white p-4 text-sm text-navy-500 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+                <p>
+                  Uppgifterna sparas bara i den här webbläsaren. Om de inte har ändrats på {DRAFT_MAX_AGE_DAYS} dagar
+                  tas de bort nästa gång webbplatsen öppnas i den här webbläsaren, inte dessförinnan. Rensa dem
+                  därför när du är klar, särskilt på en delad dator.
+                </p>
+                {hasStored && (
+                  <button type="button" onClick={handleClearDrafts} className="shrink-0 self-start text-left font-semibold text-navy-600 underline hover:text-navy-800 sm:self-center">
+                    Rensa mina uppgifter på den här enheten
+                  </button>
+                )}
+              </div>
               {/* Step 1 */}
               {step === 1 && (
                 <div className="space-y-8">
