@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import { templates, categories } from '@/data/templates'
 
 const NOINDEX: Metadata['robots'] = { index: false, follow: true }
@@ -37,6 +38,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function SkapaLayout({ children }: { children: React.ReactNode }) {
+export default async function SkapaLayout({ children, params }: Props & { children: React.ReactNode }) {
+  const { slug } = await params
+  // Okänd mall: riktig 404, inte ett tomt formulär med status 200.
+  if (!templates.some(tp => tp.slug === slug)) notFound()
   return <>{children}</>
 }
