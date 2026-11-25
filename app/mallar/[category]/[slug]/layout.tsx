@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { templates } from '@/data/templates'
 import { loadTemplateSeo } from '@/lib/template-seo'
+import { SITE_URL } from '@/lib/site'
 
 interface Props {
   params: Promise<{ category: string; slug: string }>
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // Canonical URL – the single authoritative URL for each mall (template's true
   // category), so duplicate/cross-category paths point back here and Google
   // indexes only one version.
-  const canonical = `https://fullmakt24.se/mallar/${t.categorySlug}/${t.slug}`
+  const canonical = `${SITE_URL}/mallar/${t.categorySlug}/${t.slug}`
 
   return {
     title: { absolute: title },
@@ -50,7 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       url: canonical,
-      images: [{ url: 'https://fullmakt24.se/og-image.png', width: 1200, height: 630 }],
+      images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',

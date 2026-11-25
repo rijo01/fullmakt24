@@ -19,6 +19,7 @@ import fs from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { SITE_URL } from '../lib/site.ts'
 
 const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const key = process.env.STRIPE_KEY
@@ -60,7 +61,7 @@ try {
   console.log('Stripe-konto: kunde inte läsas med nyckeln (kräver läsrätt på kontot). Kontrollera i Dashboard att det är rätt konto.')
 }
 
-const site = 'https://fullmakt24.se'
+const site = SITE_URL
 const clean = s => String(s ?? '').replace(/[\t\r\n]+/g, ' ')
 const rows = []
 let total = 0

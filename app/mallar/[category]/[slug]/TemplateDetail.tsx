@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { templates, categories, getTemplatesByCategory } from '@/data/templates'
 import type { TemplateContent } from '@/lib/template-seo'
 import { PACKAGES } from '@/lib/packages'
+import { SITE_URL } from '@/lib/site'
 
 // FAQ-svar i mall-JSON får innehålla länkar som [text](https://…). De visas som
 // klickbara länkar i FAQ-listan och som "text (url)" i FAQPage-schemat.
@@ -101,10 +102,10 @@ export default function TemplateDetail({ slug, seoContent }: { slug: string; seo
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Hem', item: 'https://fullmakt24.se' },
-      { '@type': 'ListItem', position: 2, name: 'Mallar', item: 'https://fullmakt24.se/mallar' },
-      { '@type': 'ListItem', position: 3, name: cat?.name || '', item: `https://fullmakt24.se/mallar?category=${t.categorySlug}` },
-      { '@type': 'ListItem', position: 4, name: t.name, item: `https://fullmakt24.se/mallar/${t.categorySlug}/${t.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Hem', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Mallar', item: `${SITE_URL}/mallar` },
+      { '@type': 'ListItem', position: 3, name: cat?.name || '', item: `${SITE_URL}/mallar?category=${t.categorySlug}` },
+      { '@type': 'ListItem', position: 4, name: t.name, item: `${SITE_URL}/mallar/${t.categorySlug}/${t.slug}` },
     ],
   }
 
@@ -121,7 +122,7 @@ export default function TemplateDetail({ slug, seoContent }: { slug: string; seo
   // Produkten är en digital PDF som levereras direkt efter betalning: ingen
   // frakt och ingen fysisk retur. Beskrivningen byggs här i stället för att
   // hämtas från malltexten, så att schemat inte påstår något om mottagare.
-  const productUrl = `https://fullmakt24.se/mallar/${t.categorySlug}/${t.slug}`
+  const productUrl = `${SITE_URL}/mallar/${t.categorySlug}/${t.slug}`
   const offer = (name: string, price: number) => ({
     '@type': 'Offer',
     name,
@@ -137,7 +138,7 @@ export default function TemplateDetail({ slug, seoContent }: { slug: string; seo
     name: t.name,
     description: `${t.name} – mall som du fyller i på webbplatsen och laddar ner som PDF direkt efter betalning.${t.bilingual ? ' Finns som PDF på svenska eller på svenska och engelska.' : ''}`,
     category: t.category,
-    image: 'https://fullmakt24.se/og-image.png',
+    image: `${SITE_URL}/og-image.png`,
     sku: `mall-${t.id}`,
     brand: { '@type': 'Brand', name: 'Fullmakt24.se' },
     offers: t.bilingual

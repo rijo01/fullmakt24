@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import Link from 'next/link'
+import { SITE_URL } from '@/lib/site'
 
-const URL = 'https://fullmakt24.se/generalfullmakt'
+const URL = `${SITE_URL}/generalfullmakt`
 const TITLE = 'Generalfullmakt – mall och guide 2026'
 const DESCRIPTION =
   'Vad en generalfullmakt omfattar, vad banken faktiskt godtar och när du i stället behöver en framtidsfullmakt. Guide plus färdig mall – 99 kr, PDF direkt.'
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     type: 'article',
     locale: 'sv_SE',
     siteName: 'Fullmakt24.se',
-    images: [{ url: 'https://fullmakt24.se/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -198,7 +199,7 @@ export default function GeneralfullmaktPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Hem', item: 'https://fullmakt24.se' },
+      { '@type': 'ListItem', position: 1, name: 'Hem', item: SITE_URL },
       { '@type': 'ListItem', position: 2, name: 'Generalfullmakt', item: URL },
     ],
   }
@@ -212,7 +213,7 @@ export default function GeneralfullmaktPage() {
     dateModified: '2026-09-02',
     inLanguage: 'sv-SE',
     author: { '@type': 'Organization', name: 'Fullmakt24.se' },
-    publisher: { '@type': 'Organization', name: 'Fullmakt24.se', url: 'https://fullmakt24.se' },
+    publisher: { '@type': 'Organization', name: 'Fullmakt24.se', url: SITE_URL },
     mainEntityOfPage: URL,
   }
 

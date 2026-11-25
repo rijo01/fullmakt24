@@ -5,6 +5,7 @@ import { useState, useMemo, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { categories, templates, searchTemplates } from '@/data/templates'
 import { trackEvent } from '@/components/GoogleAnalytics'
+import { SITE_URL } from '@/lib/site'
 
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false)
@@ -154,8 +155,8 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Fullmakt24.se',
-    url: 'https://fullmakt24.se',
-    logo: 'https://fullmakt24.se/icon.png',
+    url: SITE_URL,
+    logo: `${SITE_URL}/icon.png`,
     description: 'Digital tjänst för fullmakter och medgivanden, utformade enligt svensk avtalsrätt. Skapa din PDF på 3 minuter.',
     sameAs: [],
     contactPoint: {
@@ -170,10 +171,10 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Fullmakt24.se',
-    url: 'https://fullmakt24.se',
+    url: SITE_URL,
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://fullmakt24.se/mallar?search={search_term_string}',
+      target: `${SITE_URL}/mallar?search={search_term_string}`,
       'query-input': 'required name=search_term_string',
     },
   }

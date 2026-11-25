@@ -1,4 +1,5 @@
 import { fieldRoleFor, type FieldKey, type FieldRole } from './field-roles';
+import { SITE_URL } from '../lib/site';
 
 export interface Template {
   id: number;
@@ -423,7 +424,7 @@ function generateTemplates(): TemplateInput[] {
       ],
       faq: [
         { q: 'Behöver fullmakten registreras?', a: 'Nej, en fullmakt för boende behöver inte registreras men bör förvaras säkert.' },
-        { q: 'Gäller denna för bostadsförsäljning?', a: 'En fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)). Gäller det en bostadsrätt kan du läsa mer om [fullmakt för att sälja bostadsrätt](https://fullmakt24.se/fullmakt-salja-bostadsratt). Mäklaren, köparen och föreningen avgör själva om de godtar fullmakten, så kontrollera med dem i förväg.' },
+        { q: 'Gäller denna för bostadsförsäljning?', a: `En fullmakt att sluta avtal om köp, byte eller gåva av fast egendom ska vara skriftlig (27 § andra stycket avtalslagen (1915:218)). Gäller det en bostadsrätt kan du läsa mer om [fullmakt för att sälja bostadsrätt](${SITE_URL}/fullmakt-salja-bostadsratt). Mäklaren, köparen och föreningen avgör själva om de godtar fullmakten, så kontrollera med dem i förväg.` },
         { q: 'Kan hyresvärden neka?', a: 'Det avgör hyresvärden. Många hyresvärdar har egna rutiner eller blanketter för ombud, så kontrollera med hyresvärden i förväg.' },
         { q: 'Behöver den bevittnas?', a: 'Rekommenderas, särskilt vid fastighetsaffärer.' },
         { q: 'Kan jag ändra fullmakten i efterhand?', a: 'Ja, du kan alltid upprätta en ny fullmakt som ersätter den tidigare.' },

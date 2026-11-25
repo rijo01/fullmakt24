@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { blogPosts, getBlogPost } from '@/data/blog'
+import { SITE_URL } from '@/lib/site'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPost(slug)
   if (!post) return { title: 'Guiden hittades inte', robots: null }
 
-  const canonical = `https://fullmakt24.se/blogg/${post.slug}`
+  const canonical = `${SITE_URL}/blogg/${post.slug}`
   return {
     title: post.metaTitle,
     description: post.metaDescription,
@@ -38,14 +39,14 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getBlogPost(slug)
   if (!post) notFound()
 
-  const url = `https://fullmakt24.se/blogg/${post.slug}`
+  const url = `${SITE_URL}/blogg/${post.slug}`
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Hem', item: 'https://fullmakt24.se' },
-      { '@type': 'ListItem', position: 2, name: 'Blogg', item: 'https://fullmakt24.se/blogg' },
+      { '@type': 'ListItem', position: 1, name: 'Hem', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Blogg', item: `${SITE_URL}/blogg` },
       { '@type': 'ListItem', position: 3, name: post.title, item: url },
     ],
   }
@@ -58,7 +59,7 @@ export default async function BlogPostPage({ params }: Props) {
     datePublished: post.datePublished,
     dateModified: post.dateUpdated,
     author: { '@type': 'Organization', name: 'Fullmakt24.se' },
-    publisher: { '@type': 'Organization', name: 'Fullmakt24.se', url: 'https://fullmakt24.se' },
+    publisher: { '@type': 'Organization', name: 'Fullmakt24.se', url: SITE_URL },
     mainEntityOfPage: url,
   }
 

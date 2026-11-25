@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { getPackage, isTemplatePackage } from '@/lib/packages'
+import { SITE_URL } from '@/lib/site'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2025-02-24.acacia',
@@ -32,7 +33,7 @@ export async function POST(req: NextRequest) {
     }
     const consentMetadata = { consent: 'true', consentAt: new Date().toISOString() }
 
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fullmakt24.se'
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || SITE_URL
 
     // Produktnamn och beskrivning per pakettyp.
     const productName = isSingle

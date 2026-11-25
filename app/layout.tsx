@@ -5,10 +5,11 @@ import { Footer } from '@/components/layout/Footer'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { templates } from '@/data/templates'
 import { baseOpenGraph } from '@/lib/og'
+import { SITE_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
   // Relativa canonical-adresser i sidornas metadata löses mot den här basen.
-  metadataBase: new URL('https://fullmakt24.se'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Fullmakt24.se – Din fullmakt klar på 3 minuter',
     // Enda stället där varumärket läggs till. Undersidornas titlar ska inte

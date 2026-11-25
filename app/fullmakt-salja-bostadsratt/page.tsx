@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { SITE_URL } from '@/lib/site'
 
-const URL = 'https://fullmakt24.se/fullmakt-salja-bostadsratt'
+const URL = `${SITE_URL}/fullmakt-salja-bostadsratt`
 const TITLE = 'Fullmakt sälja bostadsrätt, lägenhet eller hus – mall 2026'
 const DESCRIPTION =
   'Så skriver du en fullmakt för att sälja bostadsrätt, lägenhet eller hus: vad den måste innehålla, bevittning, lägsta pris och vad mäklaren kontrollerar. Mall 99 kr, PDF direkt.'
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     type: 'article',
     locale: 'sv_SE',
     siteName: 'Fullmakt24.se',
-    images: [{ url: 'https://fullmakt24.se/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -208,7 +209,7 @@ export default function FullmaktSaljaBostadsrattPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Hem', item: 'https://fullmakt24.se' },
+      { '@type': 'ListItem', position: 1, name: 'Hem', item: SITE_URL },
       { '@type': 'ListItem', position: 2, name: 'Fullmakt vid bostadsförsäljning', item: URL },
     ],
   }
@@ -222,7 +223,7 @@ export default function FullmaktSaljaBostadsrattPage() {
     dateModified: '2026-09-02',
     inLanguage: 'sv-SE',
     author: { '@type': 'Organization', name: 'Fullmakt24.se' },
-    publisher: { '@type': 'Organization', name: 'Fullmakt24.se', url: 'https://fullmakt24.se' },
+    publisher: { '@type': 'Organization', name: 'Fullmakt24.se', url: SITE_URL },
     mainEntityOfPage: URL,
   }
 

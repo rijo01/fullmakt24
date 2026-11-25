@@ -4,13 +4,14 @@ import Link from 'next/link'
 import { categories, templates } from '@/data/templates'
 import { MallarBrowser } from './MallarBrowser'
 import { canonicalWithOg } from '@/lib/og'
+import { SITE_URL } from '@/lib/site'
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Hem', item: 'https://fullmakt24.se' },
-    { '@type': 'ListItem', position: 2, name: 'Alla mallar', item: 'https://fullmakt24.se/mallar' },
+    { '@type': 'ListItem', position: 1, name: 'Hem', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Alla mallar', item: `${SITE_URL}/mallar` },
   ],
 }
 

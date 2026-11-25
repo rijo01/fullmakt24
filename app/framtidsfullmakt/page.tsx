@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import Link from 'next/link'
+import { SITE_URL } from '@/lib/site'
 
-const URL = 'https://fullmakt24.se/framtidsfullmakt'
+const URL = `${SITE_URL}/framtidsfullmakt`
 const TITLE = 'Framtidsfullmakt – mall och guide 2026'
 const DESCRIPTION =
   'Så fungerar en framtidsfullmakt: formkrav, vem som får vara vittne, när den träder i kraft och vad banken kräver i praktiken. Guide plus mall – 99 kr, PDF direkt.'
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     type: 'article',
     locale: 'sv_SE',
     siteName: 'Fullmakt24.se',
-    images: [{ url: 'https://fullmakt24.se/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -220,7 +221,7 @@ export default function FramtidsfullmaktPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Hem', item: 'https://fullmakt24.se' },
+      { '@type': 'ListItem', position: 1, name: 'Hem', item: SITE_URL },
       { '@type': 'ListItem', position: 2, name: 'Framtidsfullmakt', item: URL },
     ],
   }
@@ -234,7 +235,7 @@ export default function FramtidsfullmaktPage() {
     dateModified: '2026-11-01',
     inLanguage: 'sv-SE',
     author: { '@type': 'Organization', name: 'Fullmakt24.se' },
-    publisher: { '@type': 'Organization', name: 'Fullmakt24.se', url: 'https://fullmakt24.se' },
+    publisher: { '@type': 'Organization', name: 'Fullmakt24.se', url: SITE_URL },
     mainEntityOfPage: URL,
   }
 

@@ -1,9 +1,10 @@
 import { templates, categories } from '@/data/templates'
 import { blogPosts } from '@/data/blog'
 import { MetadataRoute } from 'next'
+import { SITE_URL } from '@/lib/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://fullmakt24.se'
+  const baseUrl = SITE_URL
   const now = new Date()
 
   const staticPages: MetadataRoute.Sitemap = [
